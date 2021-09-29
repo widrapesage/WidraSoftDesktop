@@ -21,7 +21,7 @@ namespace WidraSoft.BL
             }
 
         }
-        public DataTable GetById(Int16 Id)
+        public DataTable GetById(Int32 Id)
         {
             try
             {
@@ -40,6 +40,34 @@ namespace WidraSoft.BL
             {
                 UtilisateurDA utilisateur = new UtilisateurDA();
                 return utilisateur.CanConnect(Login, Password);
+            }
+            catch
+            {
+                throw;
+            }
+        }
+
+        public Int32 GetUserIdByLoginAndPassword(string Login, string Password)
+        {
+            try
+            {
+                UtilisateurDA utilisateur = new UtilisateurDA();
+                Int32 Id = utilisateur.GetUserIdByLoginAndPassword(Login, Password);
+                return Id;
+            }
+            catch
+            {
+                throw;
+            }
+        }
+
+        public string GetFullUsername(Int32 Id)
+        {
+            try
+            {
+                UtilisateurDA utilisateur = new UtilisateurDA();
+                string username = utilisateur.GetFullUsername(Id);
+                return username;
             }
             catch
             {

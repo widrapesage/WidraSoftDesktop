@@ -28,11 +28,13 @@ namespace WidraSoft.UI
                 try
                 {
                     Boolean CanConnect = false;
+                    Int32 UtilisateurId = 0;
                     Utilisateur utilisateur = new Utilisateur();
-                    CanConnect = utilisateur.CanConnect(txtLogin.Text, txtPassword.Text);
+                    CanConnect = utilisateur.CanConnect(txtLogin.Text, txtPassword.Text);                    
                     if (CanConnect == true)
                     {
-                        MenuGeneral form = new MenuGeneral();
+                        UtilisateurId = utilisateur.GetUserIdByLoginAndPassword(txtLogin.Text, txtPassword.Text);
+                        MenuGeneral form = new MenuGeneral(UtilisateurId);
                         form.Show();
 
                         txtLogin.Text = "";

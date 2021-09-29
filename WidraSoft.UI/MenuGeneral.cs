@@ -5,19 +5,22 @@ using System.Data;
 using System.Drawing;
 using System.Text;
 using System.Windows.Forms;
+using WidraSoft.BL;
 
 namespace WidraSoft.UI
 {
     public partial class MenuGeneral : Form
     {
-        public MenuGeneral()
+        public MenuGeneral(Int32 UtilisateurId)
         {
             InitializeComponent();
+            Utilisateur utilisateur = new Utilisateur();
+            lblusername.Text = utilisateur.GetFullUsername(UtilisateurId);
         }
 
         private void MenuGeneral_Load(object sender, EventArgs e)
         {
-            this.CenterToScreen();
+            this.CenterToScreen();                       
         }
 
         private void btCamions_MouseEnter(object sender, EventArgs e)
@@ -48,6 +51,46 @@ namespace WidraSoft.UI
         private void btChauffeurs_MouseLeave(object sender, EventArgs e)
         {
             this.btChauffeurs.BackColor = Color.MediumSeaGreen;
+        }
+
+        private void btTransporteurs_MouseEnter(object sender, EventArgs e)
+        {
+            this.btTransporteurs.BackColor = Color.MintCream;
+        }
+
+        private void btTransporteurs_MouseLeave(object sender, EventArgs e)
+        {
+            this.btTransporteurs.BackColor = Color.MediumSeaGreen;
+        }
+
+        private void btOriginDestination_MouseEnter(object sender, EventArgs e)
+        {
+            this.btOriginDestination.BackColor = Color.MintCream;
+        }
+
+        private void btOriginDestination_MouseLeave(object sender, EventArgs e)
+        {
+            this.btOriginDestination.BackColor = Color.MediumSeaGreen;
+        }
+
+        private void btClients_MouseEnter(object sender, EventArgs e)
+        {
+            this.btClients.BackColor = Color.MintCream;
+        }
+
+        private void btClients_MouseLeave(object sender, EventArgs e)
+        {
+            this.btClients.BackColor = Color.MediumSeaGreen;
+        }
+
+        private void btPesees_MouseEnter(object sender, EventArgs e)
+        {
+            this.btPesees.BackColor = Color.MintCream;
+        }
+
+        private void btPesees_MouseLeave(object sender, EventArgs e)
+        {
+            this.btPesees.BackColor = Color.MediumSeaGreen;
         }
     }
 }

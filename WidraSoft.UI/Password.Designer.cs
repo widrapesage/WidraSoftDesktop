@@ -38,6 +38,8 @@ namespace WidraSoft.UI
             this.btConnecter = new System.Windows.Forms.Button();
             this.btQuitter = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
+            this.splitter1 = new System.Windows.Forms.Splitter();
+            this.splitter2 = new System.Windows.Forms.Splitter();
             this.SuspendLayout();
             // 
             // label1
@@ -45,7 +47,7 @@ namespace WidraSoft.UI
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Condiment", 65F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label1.ForeColor = System.Drawing.Color.MediumSeaGreen;
-            this.label1.Location = new System.Drawing.Point(43, 30);
+            this.label1.Location = new System.Drawing.Point(73, 30);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(598, 198);
             this.label1.TabIndex = 1;
@@ -120,20 +122,43 @@ namespace WidraSoft.UI
             // label4
             // 
             this.label4.AutoSize = true;
+            this.label4.BackColor = System.Drawing.Color.Transparent;
             this.label4.Font = new System.Drawing.Font("Arial", 7F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point);
             this.label4.ForeColor = System.Drawing.Color.MediumSeaGreen;
-            this.label4.Location = new System.Drawing.Point(290, 515);
+            this.label4.Location = new System.Drawing.Point(302, 515);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(143, 16);
             this.label4.TabIndex = 9;
             this.label4.Text = "Propulsé par WIDRA";
             // 
+            // splitter1
+            // 
+            this.splitter1.BackColor = System.Drawing.Color.MediumSeaGreen;
+            this.splitter1.Enabled = false;
+            this.splitter1.Location = new System.Drawing.Point(0, 0);
+            this.splitter1.Name = "splitter1";
+            this.splitter1.Size = new System.Drawing.Size(40, 540);
+            this.splitter1.TabIndex = 10;
+            this.splitter1.TabStop = false;
+            // 
+            // splitter2
+            // 
+            this.splitter2.BackColor = System.Drawing.Color.Gray;
+            this.splitter2.Enabled = false;
+            this.splitter2.Location = new System.Drawing.Point(40, 0);
+            this.splitter2.Name = "splitter2";
+            this.splitter2.Size = new System.Drawing.Size(10, 540);
+            this.splitter2.TabIndex = 11;
+            this.splitter2.TabStop = false;
+            // 
             // Password
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(746, 540);
+            this.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.ClientSize = new System.Drawing.Size(726, 540);
+            this.Controls.Add(this.splitter2);
+            this.Controls.Add(this.splitter1);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.btQuitter);
             this.Controls.Add(this.btConnecter);
@@ -162,5 +187,7 @@ namespace WidraSoft.UI
         private System.Windows.Forms.Button btConnecter;
         private System.Windows.Forms.Button btQuitter;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Splitter splitter1;
+        private System.Windows.Forms.Splitter splitter2;
     }
 }
