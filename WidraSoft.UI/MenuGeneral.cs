@@ -92,5 +92,36 @@ namespace WidraSoft.UI
         {
             this.btPesees.BackColor = Color.MediumSeaGreen;
         }
+
+        private void quitterToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void camionsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Form form = new UtilisateursList();
+            form.Show();
+        }
+
+        private void btFirmes_MouseEnter(object sender, EventArgs e)
+        {
+            this.btFirmes.BackColor = Color.MintCream;
+        }
+
+        private void btPonts_MouseLeave(object sender, EventArgs e)
+        {
+            this.btPonts.BackColor = Color.MediumSeaGreen;
+        }
+
+        private void btFirmes_MouseLeave(object sender, EventArgs e)
+        {
+            this.btFirmes.BackColor = Color.MediumSeaGreen;
+        }
+
+        private void btPonts_MouseEnter(object sender, EventArgs e)
+        {
+            this.btPonts.BackColor = Color.MintCream;
+        }
     }
 }

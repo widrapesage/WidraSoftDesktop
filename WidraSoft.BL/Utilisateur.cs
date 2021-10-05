@@ -74,17 +74,45 @@ namespace WidraSoft.BL
                 throw;
             }
         }
-        public void Add(string Nom, string Prenom, string Login, string Password, Int16 IsAdmin, Int16 PontDefaultId,DateTime DateCreation, DateTime DateInvalide, String Profil, String PeseeManuel)
+        public void Add(string Nom, string Prenom, string Login, string Password, Int32 GroupeId)
         {
             try
-            {
+            {   
                 UtilisateurDA utilisateur = new UtilisateurDA();
-                utilisateur.Add(Nom, Prenom, Login, Password, IsAdmin, PontDefaultId, DateCreation, DateInvalide, Profil, PeseeManuel);
+                utilisateur.Add(Nom, Prenom, Login, Password, GroupeId);
             }
             catch
             {
                 throw;
             }
+
+        }
+        public void Update(Int32 Id,string Nom, string Prenom, string Login, string Password, Int32 GroupeId)
+        {
+            try
+            {
+                UtilisateurDA utilisateur = new UtilisateurDA();
+                utilisateur.Update(Id, Nom, Prenom, Login, Password, GroupeId);
+            }
+            catch
+            {
+                throw;
+            }
+            
+        }
+
+        public void Delete(Int32 Id)
+        {
+            try
+            {
+                UtilisateurDA utilisateur = new UtilisateurDA();
+                utilisateur.Delete(Id);
+            }
+            catch
+            {
+                throw;
+            } 
+            
 
         }
     }
