@@ -105,6 +105,7 @@ namespace WidraSoft.UI
             this.chauffeursToolStripMenuItem.Name = "chauffeursToolStripMenuItem";
             this.chauffeursToolStripMenuItem.Size = new System.Drawing.Size(146, 36);
             this.chauffeursToolStripMenuItem.Text = "Groupes";
+            this.chauffeursToolStripMenuItem.Click += new System.EventHandler(this.chauffeursToolStripMenuItem_Click);
             // 
             // paramètresToolStripMenuItem
             // 
@@ -408,7 +409,7 @@ namespace WidraSoft.UI
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1312, 950);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label3);

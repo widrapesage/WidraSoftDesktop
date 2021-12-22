@@ -155,7 +155,7 @@ namespace WidraSoft.UI
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(726, 540);
             this.Controls.Add(this.splitter2);
             this.Controls.Add(this.splitter1);

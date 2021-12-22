@@ -100,7 +100,7 @@ namespace WidraSoft.UI
 
         private void camionsToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Form form = new UtilisateursList();
+            Form form = new UtilisateursList("1=1");
             form.Show();
         }
 
@@ -122,6 +122,12 @@ namespace WidraSoft.UI
         private void btPonts_MouseEnter(object sender, EventArgs e)
         {
             this.btPonts.BackColor = Color.MintCream;
+        }
+
+        private void chauffeursToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Form form = new GroupesList("1=1");
+            form.Show();
         }
     }
 }

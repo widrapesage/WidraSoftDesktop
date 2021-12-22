@@ -9,16 +9,16 @@ using WidraSoft.BL;
 
 namespace WidraSoft.UI
 {
-    public partial class UtilisateursList : Form
+    public partial class GroupesList : Form
     {
         string vg_filter = "";
-        public UtilisateursList(string filter)
+        public GroupesList(string filter)
         {
             InitializeComponent();
             vg_filter = filter;
         }
 
-        private void UtilisateursList_Load(object sender, EventArgs e)
+        private void GroupesList_Load(object sender, EventArgs e)
         {
             this.CenterToScreen();
             Bind_Dgv();
@@ -26,33 +26,24 @@ namespace WidraSoft.UI
 
         private void Bind_Dgv()
         {
-            Utilisateur utilisateur = new Utilisateur();
-            DgvList.DataSource = utilisateur.List(vg_filter);
+            Groupe groupe = new Groupe();
+            DgvList.DataSource = groupe.List(vg_filter);
             DgvList.Columns[0].Visible = false;
-            DgvList.Columns["GROUPEID"].Visible = false;
             DgvList.ReadOnly = true;
-            
-        }
 
-        private void ajouterToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            Form form = new UtilisateurDetail("Add",0);
-            form.Show();
         }
-
-        private Int32 GetId()
+       private Int32 GetId()
         {
             try
             {
-                return  (int)DgvList[0, DgvList.CurrentCell.RowIndex].Value;
-                
+                return (int)DgvList[0, DgvList.CurrentCell.RowIndex].Value;
+
             }
             catch
             {
                 throw;
             }
         }
-
         private Int32[] GetSelectedRowsId()
         {
             try
@@ -61,12 +52,12 @@ namespace WidraSoft.UI
                 Int32[] Selected = new Int32[SelectedRowsCount];
                 if (SelectedRowsCount > 1)
                 {
-                    
-                    for (int i = 0; i <SelectedRowsCount; i++ )
+
+                    for (int i = 0; i < SelectedRowsCount; i++)
                     {
-                        Selected[i] = Int32.Parse(DgvList.SelectedRows[i].Cells[0].Value.ToString()) ; 
+                        Selected[i] = Int32.Parse(DgvList.SelectedRows[i].Cells[0].Value.ToString());
                     }
-                    
+
                 }
                 return Selected;
             }
@@ -78,13 +69,13 @@ namespace WidraSoft.UI
 
         private void ouvrirToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Form form = new UtilisateurDetail("Edit", GetId());
+            Form form = new GroupeDetail("Edit", GetId());
             form.Show();
         }
 
         private void modifierToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Form form = new UtilisateurDetail("Edit", GetId());
+            Form form = new GroupeDetail("Edit", GetId());
             form.Show();
         }
 
@@ -94,9 +85,9 @@ namespace WidraSoft.UI
             Bind_Dgv();
         }
 
-        private void DgvList_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        private void ajouterToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Form form = new UtilisateurDetail("Edit", GetId());
+            Form form = new GroupeDetail("Add", GetId());
             form.Show();
         }
 
@@ -109,30 +100,15 @@ namespace WidraSoft.UI
                 for (int i = 0; i < GetSelectedRowsId().Length; i++)
                 {
                     //MessageBox.Show(selectedIds[i].ToString());
-                    Utilisateur utilisateur = new Utilisateur();
-                    utilisateur.Delete(selectedIds[i]);
+                    Groupe groupe = new Groupe();
+                    groupe.Delete(selectedIds[i]);
                 }
-                MessageBox.Show(GetSelectedRowsId().Length + " utilisateur(s) supprimé(s)");
+                MessageBox.Show(GetSelectedRowsId().Length + " groupe(s) supprimé(s)");
             }
             else
             {
                 MessageBox.Show("Vous n'avez selectionné aucun enregistrement à supprimer");
             }
-            
-        }
-
-        private void rechercherToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            FormCollection fc = Application.OpenForms;
-            foreach (Form f in fc)
-                if (f.Name == "UtilisateurSearch")
-                {
-                    f.Close();
-                }
-            Form form = new UtilisateurSearch();
-            form.Show();
-            Close();
-            
         }
     }
 }

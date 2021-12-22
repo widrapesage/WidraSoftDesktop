@@ -6,15 +6,15 @@ using System.Text;
 
 namespace WidraSoft.DA
 {
-    public class GroupeDA
+    public class GroupeModuleDA
     {
         public string connString = ConnStrings.MainDb;
         SqlConnection conn = new SqlConnection();
         DataTable dt = new DataTable();
 
-        public DataTable List(string filter)
+        public DataTable List()
         {
-            String sql = "SELECT * FROM GROUPE WHERE " + filter;
+            String sql = "SELECT * FROM GROUPEMODULE";
             conn.ConnectionString = connString;
             if (conn.State == ConnectionState.Closed)
                 conn.Open();
@@ -31,9 +31,9 @@ namespace WidraSoft.DA
             }
         }
 
-        public DataTable FindById(Int32 Id)
+        public DataTable FindByGroupeId(Int32 Id)
         {
-            String sql = "SELECT * FROM GROUPE WHERE GROUPEID=" + Id;
+            String sql = "SELECT * FROM GROUPEMODULE WHERE GROUPEID=" + Id;
             conn.ConnectionString = connString;
             if (conn.State == ConnectionState.Closed)
                 conn.Open();
@@ -50,18 +50,18 @@ namespace WidraSoft.DA
             }
         }
 
-        public string GetName(Int32 Id)
+        public DataTable FindByModuleId(Int32 Id)
         {
-
-            String sql = "SELECT DESIGNATION FROM GROUPE WHERE GroupeId=" + Id;
+            String sql = "SELECT * FROM GROUPEMODULE WHERE MODULEID=" + Id;
             conn.ConnectionString = connString;
             if (conn.State == ConnectionState.Closed)
                 conn.Open();
             SqlCommand cmd = new SqlCommand(sql, conn);
             try
             {
-                String name = (string)cmd.ExecuteScalar();
-                return name;
+                SqlDataReader reader = cmd.ExecuteReader();
+                dt.Load(reader);
+                return dt;
             }
             catch
             {
@@ -69,19 +69,37 @@ namespace WidraSoft.DA
             }
         }
 
-        public void Add(String Designation, String Code, String Limiter, Int32 NbLimite)
+        public int Get_Max_Id()
+        {
+            String sql = "SELECT ISNULL(MAX(GROUPEMODULEID),0) FROM GROUPEMODULE";
+            int max = 0;
+            conn.ConnectionString = connString;
+            if (conn.State == ConnectionState.Closed)
+                conn.Open();
+            SqlCommand cmd = new SqlCommand(sql, conn);
+            try
+            {
+                max = (int)cmd.ExecuteScalar();
+            }
+            catch
+            {
+                throw;
+            }
+            return max;
+        }
+        public void Add(Int32 GroupeId, Int32 ModuleId, Int32 Access, String TypeAcess)
         {
             using (conn)
             {
                 conn.ConnectionString = connString;
                 if (conn.State == ConnectionState.Closed)
                     conn.Open();
-                SqlCommand cmd = new SqlCommand("PS_ADD_GROUPE", conn);
+                SqlCommand cmd = new SqlCommand("PS_ADD_GROUPEMODULE", conn);
                 cmd.CommandType = CommandType.StoredProcedure;
-                cmd.Parameters.Add("@DESIGNATION", SqlDbType.VarChar).Value = Designation;
-                cmd.Parameters.Add("@CODE", SqlDbType.VarChar).Value = Code;
-                cmd.Parameters.Add("@LIMITER", SqlDbType.VarChar).Value = Limiter;
-                cmd.Parameters.Add("@NBLIMITE", SqlDbType.Int).Value = NbLimite;
+                cmd.Parameters.Add("@GROUPEID", SqlDbType.Int).Value = GroupeId;
+                cmd.Parameters.Add("@MODULEID", SqlDbType.Int).Value = ModuleId;
+                cmd.Parameters.Add("@ACCES", SqlDbType.Int).Value = Access;
+                cmd.Parameters.Add("@TYPEACESS", SqlDbType.VarChar).Value = TypeAcess;
 
                 try
                 {
@@ -94,20 +112,20 @@ namespace WidraSoft.DA
             }
         }
 
-        public void Update(Int32 Id, String Designation, String Code, String Limiter, Int32 NbLimite)
+        public void Update(Int32 Id, Int32 GroupeId, Int32 ModuleId, Int32 Access, String TypeAcess)
         {
             using (conn)
             {
                 conn.ConnectionString = connString;
                 if (conn.State == ConnectionState.Closed)
                     conn.Open();
-                SqlCommand cmd = new SqlCommand("PS_UPDATE_GROUPE", conn);
+                SqlCommand cmd = new SqlCommand("PS_UPDATE_GROUPEMODULE", conn);
                 cmd.CommandType = CommandType.StoredProcedure;
                 cmd.Parameters.Add("@ID", SqlDbType.Int).Value = Id;
-                cmd.Parameters.Add("@DESIGNATION", SqlDbType.VarChar).Value = Designation;
-                cmd.Parameters.Add("@CODE", SqlDbType.VarChar).Value = Code;
-                cmd.Parameters.Add("@LIMITER", SqlDbType.VarChar).Value = Limiter;
-                cmd.Parameters.Add("@NBLIMITE", SqlDbType.Int).Value = NbLimite;
+                cmd.Parameters.Add("@GROUPEID", SqlDbType.Int).Value = GroupeId;
+                cmd.Parameters.Add("@MODULEID", SqlDbType.Int).Value = ModuleId;
+                cmd.Parameters.Add("@ACCES", SqlDbType.Int).Value = Access;
+                cmd.Parameters.Add("@TYPEACESS", SqlDbType.VarChar).Value = TypeAcess;
 
                 try
                 {
@@ -118,8 +136,8 @@ namespace WidraSoft.DA
                     throw;
                 }
             }
-
         }
+
         public void Delete(Int32 Id)
         {
             using (conn)
@@ -127,7 +145,7 @@ namespace WidraSoft.DA
                 conn.ConnectionString = connString;
                 if (conn.State == ConnectionState.Closed)
                     conn.Open();
-                SqlCommand cmd = new SqlCommand("PS_DELETE_GROUPE", conn);
+                SqlCommand cmd = new SqlCommand("PS_DELETE_GROUPEMODULE", conn);
                 cmd.CommandType = CommandType.StoredProcedure;
                 cmd.Parameters.Add("@ID", SqlDbType.Int).Value = Id;
 
@@ -142,5 +160,7 @@ namespace WidraSoft.DA
 
             }
         }
+
+
     }
 }

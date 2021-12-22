@@ -1,0 +1,371 @@
+﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Text;
+using System.Windows.Forms;
+using WidraSoft.BL;
+
+namespace WidraSoft.UI
+{
+    public partial class GroupeDetail : Form
+    {
+        String vg_Mode = "";
+        Int32 vg_Id = 0;
+        Boolean vg_IsEnabled = true;
+        Boolean vg_Update = false;
+        public GroupeDetail(String Mode, Int32 Id)
+        {
+            InitializeComponent();
+            vg_Mode = Mode;
+            vg_Id = Id;
+        }
+
+        private void GroupeDetail_Load(object sender, EventArgs e)
+        {
+                this.CenterToParent();
+
+            Bind_Dgv();
+
+            if (vg_Mode == "Add")
+            {
+                try
+                {
+                    Clear();
+                    Add_Item();
+                }
+                catch
+                {
+                    throw;
+                }
+            }
+            else
+            {
+                if (vg_Mode == "Edit")
+                {
+                    try
+                    {
+                        Edit_Item();
+                    }
+                    catch
+                    {
+                        throw;
+                    }
+                }
+            }
+
+        }
+
+        private void Add_Item()
+        {
+            if (txtId.Text=="" && txtDateCreation.Text == "" && txtDesignation.Text == "" && txtCode.Text == "" && cbLimite.Text == "" && txtNbLimite.Text == "")
+            {
+                btModifier.Enabled = false;
+                btModifier.BackColor = Color.Transparent;
+                btSupprimer.Enabled = false;
+                btSupprimer.BackColor = Color.Transparent;
+            }
+        }
+
+        private void Edit_Item()
+        {
+            btAjouter.Enabled = false;
+            btAjouter.BackColor = Color.Transparent;
+            Disable();
+            Bind_Fields();
+
+        }
+
+        private void Bind_Fields()
+        {
+            DataTable dt = new DataTable();
+            Groupe groupe = new Groupe();
+            dt = groupe.FindById(vg_Id);
+            foreach (DataRow row in dt.Rows)
+            {
+                int Id = (int)row["GROUPEID"];
+                txtId.Text = Id.ToString();
+                txtDateCreation.Text = row["DATECREATION"].ToString();
+                txtDesignation.Text = row["DESIGNATION"].ToString();
+                txtCode.Text = row["CODE"].ToString();
+                cbLimite.Text = row["LIMITER"].ToString();
+                txtNbLimite.Text = row["NBLIMITE"].ToString();
+            }
+        }
+
+        private void Bind_Dgv()
+        {
+            //Definit la source du Dgv 
+            dgvGroupeDroits.AutoGenerateColumns = false;
+            GroupeModule groupemodule = new GroupeModule();
+            dgvGroupeDroits.DataSource = groupemodule.List();
+ 
+            //Crée et ajoute le textbox pour le champ GROUPEMODULEID  (Masqué)
+            DataGridViewTextBoxColumn txt_GroupeModuleId = new DataGridViewTextBoxColumn();
+            txt_GroupeModuleId.HeaderText = "ID";
+            txt_GroupeModuleId.DataPropertyName = "GROUPEMODULEID";
+            txt_GroupeModuleId.Name = "GROUPEMODULEID";
+            dgvGroupeDroits.Columns.Add(txt_GroupeModuleId);
+            txt_GroupeModuleId.Visible = false;
+            // Crrée et ajoute la combo pour le champ GROUPEID
+            DataGridViewComboBoxColumn cbx_GroupeId = new DataGridViewComboBoxColumn();
+            cbx_GroupeId.HeaderText = "GROUPE";
+            Groupe groupe = new Groupe();
+            cbx_GroupeId.DataSource = groupe.List("1=1");
+            cbx_GroupeId.DisplayMember = "DESIGNATION";
+            cbx_GroupeId.ValueMember = "GROUPEID";
+            cbx_GroupeId.DataPropertyName = "GROUPEID";
+            cbx_GroupeId.Name = "GROUPEID";
+            dgvGroupeDroits.Columns.Add(cbx_GroupeId);
+            cbx_GroupeId.Visible = false;
+            //Crée et ajoute la combo pour le champ MODULEID 
+            DataGridViewComboBoxColumn cbx_ModuleId = new DataGridViewComboBoxColumn();
+            cbx_ModuleId.HeaderText = "MODULE";
+            Module module = new Module();
+            cbx_ModuleId.DataSource = module.List();
+            cbx_ModuleId.DisplayMember = "DESIGNATION"; 
+            cbx_ModuleId.ValueMember = "MODULEID";
+            cbx_ModuleId.DataPropertyName = "MODULEID";
+            cbx_ModuleId.Name = "MODULEID";
+            dgvGroupeDroits.Columns.Add(cbx_ModuleId);
+            //Crée et ajoute le checkBox pour le champ ACCES
+            DataGridViewCheckBoxColumn chx_Acces = new DataGridViewCheckBoxColumn();
+            chx_Acces.HeaderText = "ACCES";
+            chx_Acces.DataPropertyName = "ACCES";
+            chx_Acces.Name = "ACCES";
+            chx_Acces.TrueValue = 1;
+            chx_Acces.FalseValue = 0;
+            dgvGroupeDroits.Columns.Add(chx_Acces);
+            // Crée et ajoute la combo pour le champ TYPEACESS
+            DataGridViewComboBoxColumn cbx_TypeAcess = new DataGridViewComboBoxColumn();
+            cbx_TypeAcess.HeaderText = "TYPE ACCES";
+            cbx_TypeAcess.DataPropertyName = "TYPEACESS";
+            cbx_TypeAcess.Name = "TYPEACESS";
+            cbx_TypeAcess.Items.AddRange(new string[] { "RW", "RO" });
+            dgvGroupeDroits.Columns.Add(cbx_TypeAcess);
+        }
+
+        private void Clear()
+        {
+            txtId.Text = "";
+            txtDateCreation.Text = "";
+            txtDesignation.Text = "";
+            txtCode.Text = "";
+            cbLimite.Text = "";
+            txtNbLimite.Text = "";
+        }
+
+        private void Enable()
+        {
+            txtDateCreation.Enabled = true;
+            txtDesignation.Enabled = true;
+            txtCode.Enabled = true;
+            cbLimite.Enabled = true;
+            txtNbLimite.Enabled = true;
+            dgvGroupeDroits.Enabled = true;
+
+            vg_IsEnabled = true;
+        }
+
+        private void Disable()
+        {
+            txtDateCreation.Enabled = false;
+            txtDesignation.Enabled = false;
+            txtCode.Enabled = false;
+            cbLimite.Enabled = false;
+            txtNbLimite.Enabled = false;
+            dgvGroupeDroits.Enabled = false;
+
+            vg_IsEnabled = false;
+        }
+        private void btAjouter_MouseEnter(object sender, EventArgs e)
+        {
+            if (btAjouter.Enabled == true)
+                btAjouter.BackColor = Color.MintCream;
+        }
+
+        private void btAjouter_MouseLeave(object sender, EventArgs e)
+        {
+            if (btAjouter.Enabled == true)
+                btAjouter.BackColor = Color.MediumSeaGreen;
+        }
+
+        private void btModifier_MouseEnter(object sender, EventArgs e)
+        {
+            if (btModifier.Enabled == true)
+                btModifier.BackColor = Color.MintCream;
+        }
+
+        private void btModifier_MouseLeave(object sender, EventArgs e)
+        {
+            if (btModifier.Enabled == true)
+                btModifier.BackColor = Color.MediumSeaGreen;
+        }
+
+        private void btSupprimer_MouseEnter(object sender, EventArgs e)
+        {
+            if (btSupprimer.Enabled == true)
+                btSupprimer.BackColor = Color.MintCream;
+        }
+
+        private void btSupprimer_MouseLeave(object sender, EventArgs e)
+        {
+            if (btSupprimer.Enabled == true)
+                btSupprimer.BackColor = Color.MediumSeaGreen;
+        }
+
+        private void btAjouter_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (txtId.Text == "" && txtDateCreation.Text == "" && txtDesignation.Text != "" && txtCode.Text != "" && cbLimite.Text != "" && txtNbLimite.Text != "")
+                {
+                    int NbLimite;
+                    bool IsParsableNbLimite;
+                    IsParsableNbLimite = Int32.TryParse(txtNbLimite.Text, out NbLimite);
+                    if (IsParsableNbLimite)
+                    {
+                        Groupe groupe = new Groupe();
+                        groupe.Add(txtDesignation.Text, txtCode.Text, cbLimite.Text, NbLimite);
+                        MessageBox.Show("Groupe ajouté avec succès");
+                        Close();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Nombre limite d'utiilisateurs doit etre un nombre entier");
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("Informations incomplètes");
+                }
+            }
+            catch
+            {
+                throw;
+            }
+        }
+
+        private void btModifier_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (vg_Update == false && vg_IsEnabled == false)
+                {
+                    Enable();
+                    btModifier.Text = "Valider";
+                    vg_Update = true;
+                }
+                else
+                {
+                    try
+                    {
+                        if(txtId.Text != "" && txtDateCreation.Text != "" && txtDesignation.Text != "" && txtCode.Text != "" && cbLimite.Text != "" && txtNbLimite.Text != "")
+                        {
+                            Groupe groupe = new Groupe();
+                            int Id;
+                            int NbLimite;
+                            bool IsParsableId;
+                            bool IsParsableNbLimite;
+                            IsParsableId = Int32.TryParse(txtId.Text, out Id);
+                            IsParsableNbLimite = Int32.TryParse(txtNbLimite.Text, out NbLimite);
+                            if (IsParsableId && IsParsableNbLimite)
+                            { 
+                                groupe.Update(Id, txtDesignation.Text, txtCode.Text, cbLimite.Text, NbLimite);
+                                MessageBox.Show("Groupe modifié avec succès");
+                                btModifier.Text = "Modifier";
+                                vg_Update = false;
+                                Disable();
+                                Bind_Fields();
+                            }
+                        }
+                        else
+                        {
+                            MessageBox.Show("Informations incomplètes");
+                        }
+                    }
+                    catch
+                    {
+                        throw;
+                    }
+                }
+            }
+            catch
+            {
+                throw;
+            }
+        }
+
+        private void btSupprimer_Click(object sender, EventArgs e)
+        {
+            if (vg_Update)
+            {
+                MessageBox.Show("Vous ne pouvez pas supprimer l'enregistrement terminez d'abord la modification");
+            }
+            else
+            {
+                try
+                {
+                    Groupe groupe = new Groupe();
+                    int Id;
+                    bool IsParsableId;
+                    IsParsableId = Int32.TryParse(txtId.Text, out Id);
+                    if (IsParsableId)
+                    {
+                        groupe.Delete(Id);
+                        MessageBox.Show("Groupe supprimé avec succès");
+                        Close();
+                    }
+                }
+                catch
+                {
+                    throw;
+                }
+            }
+        }
+
+        private void dgvGroupeDroits_DefaultValuesNeeded(object sender, DataGridViewRowEventArgs e)
+        {
+            try
+            {
+                GroupeModule groupemodule = new GroupeModule();
+                e.Row.Cells["GROUPEMODULEID"].Value = 0;
+                e.Row.Cells["GROUPEID"].Value = txtId.Text;
+            }
+            catch
+            {
+                throw;
+            }
+        }
+
+        private void dgvGroupeDroits_CellEndEdit(object sender, DataGridViewCellEventArgs e)
+        {
+            if ((int)dgvGroupeDroits[0, e.RowIndex].Value == 0 && (int)dgvGroupeDroits[1, e.RowIndex].Value > 0 && !string.IsNullOrEmpty(dgvGroupeDroits[2, e.RowIndex].Value.ToString()) && !string.IsNullOrEmpty(dgvGroupeDroits[3, e.RowIndex].Value.ToString()) && !string.IsNullOrEmpty(dgvGroupeDroits[4, e.RowIndex].Value.ToString()))
+            {
+                try
+                {
+                    GroupeModule groupemodule = new GroupeModule();
+                    groupemodule.Add((int)dgvGroupeDroits[1, e.RowIndex].Value, (int)dgvGroupeDroits[2, e.RowIndex].Value, (int)dgvGroupeDroits[3, e.RowIndex].Value, dgvGroupeDroits[4, e.RowIndex].Value.ToString());
+                }
+                catch
+                {
+                    throw;
+                }
+            }
+
+            if ((int)dgvGroupeDroits[0, e.RowIndex].Value > 0 && (int)dgvGroupeDroits[1, e.RowIndex].Value > 0 && !string.IsNullOrEmpty(dgvGroupeDroits[2, e.RowIndex].Value.ToString()) && !string.IsNullOrEmpty(dgvGroupeDroits[3, e.RowIndex].Value.ToString()) && !string.IsNullOrEmpty(dgvGroupeDroits[4, e.RowIndex].Value.ToString()))
+            {
+                try
+                {
+                    GroupeModule groupemodule = new GroupeModule();
+                    groupemodule.Update((int)dgvGroupeDroits[0, e.RowIndex].Value, (int)dgvGroupeDroits[1, e.RowIndex].Value, (int)dgvGroupeDroits[2, e.RowIndex].Value, (int)dgvGroupeDroits[3, e.RowIndex].Value, dgvGroupeDroits[4, e.RowIndex].Value.ToString());
+                }
+                catch
+                {
+                    throw;
+                }
+            } 
+        }
+    }
+}

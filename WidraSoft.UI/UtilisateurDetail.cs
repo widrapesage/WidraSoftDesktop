@@ -27,7 +27,7 @@ namespace WidraSoft.UI
             this.CenterToParent();
             
             Groupe groupe = new Groupe();
-            cbGroupeId.DataSource = groupe.List();
+            cbGroupeId.DataSource = groupe.List("1=1");
             cbGroupeId.DisplayMember = "DESIGNATION";
             cbGroupeId.ValueMember = "GROUPEID";
             
@@ -263,16 +263,24 @@ namespace WidraSoft.UI
             }
             else
             {
-                Utilisateur utilisateur = new Utilisateur();
-                Int32 Id;
-                bool IsParsableId;
-                IsParsableId = Int32.TryParse(txtId.Text, out Id);
-                if (IsParsableId)
+                try
                 {
-                    utilisateur.Delete(Id);
-                    MessageBox.Show("Utilisateur supprimé avec succès");
-                    Close();
+                    Utilisateur utilisateur = new Utilisateur();
+                    Int32 Id;
+                    bool IsParsableId;
+                    IsParsableId = Int32.TryParse(txtId.Text, out Id);
+                    if (IsParsableId)
+                    {
+                        utilisateur.Delete(Id);
+                        MessageBox.Show("Utilisateur supprimé avec succès");
+                        Close();
+                    }
                 }
+                catch
+                {
+                    throw;
+                }
+               
             }
         }
     }

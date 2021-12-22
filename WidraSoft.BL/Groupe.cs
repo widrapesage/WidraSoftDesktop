@@ -8,12 +8,12 @@ namespace WidraSoft.BL
 {
     public class Groupe
     {
-        public DataTable List()
+        public DataTable List(string filter)
         {
             try
             {
                 GroupeDA groupe = new GroupeDA();
-                return  groupe.List();               
+                return  groupe.List(filter);               
             }
             catch 
             {
@@ -48,12 +48,37 @@ namespace WidraSoft.BL
             }
         }
 
-        public void Add(String Designation, String Code, Int32 Limiter, Int32 NbLimite)
+        public void Add(String Designation, String Code, String Limiter, Int32 NbLimite)
         {
             try
             {
                 GroupeDA groupe = new GroupeDA();
                 groupe.Add(Designation, Code, Limiter, NbLimite);
+            }
+            catch
+            {
+                throw;
+            }
+        }
+
+        public void Update(Int32 Id, String Designation, String Code, String Limiter, Int32 NbLimite)
+        {
+            try
+            {
+                GroupeDA groupe = new GroupeDA();
+                groupe.Update(Id, Designation, Code, Limiter, NbLimite);
+            }
+            catch
+            {
+                throw;
+            }
+        }
+        public void Delete(Int32 Id)
+        {
+            try
+            {
+                GroupeDA groupe = new GroupeDA();
+                groupe.Delete(Id);
             }
             catch
             {

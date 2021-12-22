@@ -13,9 +13,9 @@ namespace WidraSoft.DA
         SqlConnection conn = new SqlConnection();
         DataTable dt = new DataTable(); 
 
-        public DataTable List()
+        public DataTable List(string filter)
         {
-            String sql = "SELECT * FROM VW_UTILISATEUR";
+            String sql = "SELECT * FROM VW_UTILISATEUR WHERE " + filter ;
             conn.ConnectionString = connString;
             using (conn)
             {

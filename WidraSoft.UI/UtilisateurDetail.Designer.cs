@@ -44,12 +44,12 @@ namespace WidraSoft.UI
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
-            this.splitter1 = new System.Windows.Forms.Splitter();
-            this.splitter2 = new System.Windows.Forms.Splitter();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.btSupprimer = new System.Windows.Forms.Button();
             this.btModifier = new System.Windows.Forms.Button();
             this.btAjouter = new System.Windows.Forms.Button();
+            this.splitter2 = new System.Windows.Forms.Splitter();
+            this.splitter1 = new System.Windows.Forms.Splitter();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -168,26 +168,6 @@ namespace WidraSoft.UI
             this.label7.TabIndex = 13;
             this.label7.Text = "Groupe";
             // 
-            // splitter1
-            // 
-            this.splitter1.BackColor = System.Drawing.Color.MediumSeaGreen;
-            this.splitter1.Enabled = false;
-            this.splitter1.Location = new System.Drawing.Point(0, 0);
-            this.splitter1.Name = "splitter1";
-            this.splitter1.Size = new System.Drawing.Size(24, 678);
-            this.splitter1.TabIndex = 14;
-            this.splitter1.TabStop = false;
-            // 
-            // splitter2
-            // 
-            this.splitter2.BackColor = System.Drawing.Color.Gray;
-            this.splitter2.Enabled = false;
-            this.splitter2.Location = new System.Drawing.Point(24, 0);
-            this.splitter2.Name = "splitter2";
-            this.splitter2.Size = new System.Drawing.Size(10, 678);
-            this.splitter2.TabIndex = 15;
-            this.splitter2.TabStop = false;
-            // 
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.btSupprimer);
@@ -263,11 +243,31 @@ namespace WidraSoft.UI
             this.btAjouter.MouseEnter += new System.EventHandler(this.btAjouter_MouseEnter);
             this.btAjouter.MouseLeave += new System.EventHandler(this.btAjouter_MouseLeave);
             // 
+            // splitter2
+            // 
+            this.splitter2.BackColor = System.Drawing.Color.Gray;
+            this.splitter2.Enabled = false;
+            this.splitter2.Location = new System.Drawing.Point(24, 0);
+            this.splitter2.Name = "splitter2";
+            this.splitter2.Size = new System.Drawing.Size(10, 678);
+            this.splitter2.TabIndex = 15;
+            this.splitter2.TabStop = false;
+            // 
+            // splitter1
+            // 
+            this.splitter1.BackColor = System.Drawing.Color.MediumSeaGreen;
+            this.splitter1.Enabled = false;
+            this.splitter1.Location = new System.Drawing.Point(0, 0);
+            this.splitter1.Name = "splitter1";
+            this.splitter1.Size = new System.Drawing.Size(24, 678);
+            this.splitter1.TabIndex = 14;
+            this.splitter1.TabStop = false;
+            // 
             // UtilisateurDetail
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1034, 678);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.splitter2);
@@ -313,11 +313,11 @@ namespace WidraSoft.UI
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Splitter splitter1;
-        private System.Windows.Forms.Splitter splitter2;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Button btAjouter;
         private System.Windows.Forms.Button btSupprimer;
         private System.Windows.Forms.Button btModifier;
+        private System.Windows.Forms.Splitter splitter2;
+        private System.Windows.Forms.Splitter splitter1;
     }
 }

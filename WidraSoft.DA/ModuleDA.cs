@@ -6,15 +6,15 @@ using System.Text;
 
 namespace WidraSoft.DA
 {
-    public class GroupeDA
+    public class ModuleDA
     {
         public string connString = ConnStrings.MainDb;
         SqlConnection conn = new SqlConnection();
         DataTable dt = new DataTable();
 
-        public DataTable List(string filter)
+        public DataTable List()
         {
-            String sql = "SELECT * FROM GROUPE WHERE " + filter;
+            String sql = "SELECT * FROM MODULE";
             conn.ConnectionString = connString;
             if (conn.State == ConnectionState.Closed)
                 conn.Open();
@@ -33,7 +33,7 @@ namespace WidraSoft.DA
 
         public DataTable FindById(Int32 Id)
         {
-            String sql = "SELECT * FROM GROUPE WHERE GROUPEID=" + Id;
+            String sql = "SELECT * FROM MODULE WHERE MODULEID=" + Id;
             conn.ConnectionString = connString;
             if (conn.State == ConnectionState.Closed)
                 conn.Open();
@@ -52,8 +52,7 @@ namespace WidraSoft.DA
 
         public string GetName(Int32 Id)
         {
-
-            String sql = "SELECT DESIGNATION FROM GROUPE WHERE GroupeId=" + Id;
+            String sql = "SELECT DESIGNATION FROM MODULE WHERE ModuleId=" + Id;
             conn.ConnectionString = connString;
             if (conn.State == ConnectionState.Closed)
                 conn.Open();
@@ -69,20 +68,35 @@ namespace WidraSoft.DA
             }
         }
 
-        public void Add(String Designation, String Code, String Limiter, Int32 NbLimite)
+        public string GetNameByCode(String Code)
+        {
+            String sql = "SELECT DESIGNATION FROM MODULE WHERE CODE='" + Code + "'";
+            conn.ConnectionString = connString;
+            if (conn.State == ConnectionState.Closed)
+                conn.Open();
+            SqlCommand cmd = new SqlCommand(sql, conn);
+            try
+            {
+                String name = (string)cmd.ExecuteScalar();
+                return name;
+            }
+            catch
+            {
+                throw;
+            }
+        }
+
+        public void Add(String Designation, String Code)
         {
             using (conn)
             {
                 conn.ConnectionString = connString;
                 if (conn.State == ConnectionState.Closed)
                     conn.Open();
-                SqlCommand cmd = new SqlCommand("PS_ADD_GROUPE", conn);
+                SqlCommand cmd = new SqlCommand("PS_ADD_MODULE", conn);
                 cmd.CommandType = CommandType.StoredProcedure;
                 cmd.Parameters.Add("@DESIGNATION", SqlDbType.VarChar).Value = Designation;
                 cmd.Parameters.Add("@CODE", SqlDbType.VarChar).Value = Code;
-                cmd.Parameters.Add("@LIMITER", SqlDbType.VarChar).Value = Limiter;
-                cmd.Parameters.Add("@NBLIMITE", SqlDbType.Int).Value = NbLimite;
-
                 try
                 {
                     cmd.ExecuteNonQuery();
@@ -94,21 +108,18 @@ namespace WidraSoft.DA
             }
         }
 
-        public void Update(Int32 Id, String Designation, String Code, String Limiter, Int32 NbLimite)
+        public void Update(Int32 Id, String Designation, String Code)
         {
             using (conn)
             {
                 conn.ConnectionString = connString;
                 if (conn.State == ConnectionState.Closed)
                     conn.Open();
-                SqlCommand cmd = new SqlCommand("PS_UPDATE_GROUPE", conn);
+                SqlCommand cmd = new SqlCommand("PS_UPDATE_MODULE", conn);
                 cmd.CommandType = CommandType.StoredProcedure;
                 cmd.Parameters.Add("@ID", SqlDbType.Int).Value = Id;
                 cmd.Parameters.Add("@DESIGNATION", SqlDbType.VarChar).Value = Designation;
                 cmd.Parameters.Add("@CODE", SqlDbType.VarChar).Value = Code;
-                cmd.Parameters.Add("@LIMITER", SqlDbType.VarChar).Value = Limiter;
-                cmd.Parameters.Add("@NBLIMITE", SqlDbType.Int).Value = NbLimite;
-
                 try
                 {
                     cmd.ExecuteNonQuery();
@@ -118,19 +129,18 @@ namespace WidraSoft.DA
                     throw;
                 }
             }
-
         }
-        public void Delete(Int32 Id)
+
+        public void Delete(Int32 Id) 
         {
             using (conn)
             {
                 conn.ConnectionString = connString;
                 if (conn.State == ConnectionState.Closed)
                     conn.Open();
-                SqlCommand cmd = new SqlCommand("PS_DELETE_GROUPE", conn);
+                SqlCommand cmd = new SqlCommand("PS_DELETE_MODULE", conn);
                 cmd.CommandType = CommandType.StoredProcedure;
                 cmd.Parameters.Add("@ID", SqlDbType.Int).Value = Id;
-
                 try
                 {
                     cmd.ExecuteNonQuery();
@@ -139,8 +149,8 @@ namespace WidraSoft.DA
                 {
                     throw;
                 }
-
             }
         }
+
     }
 }

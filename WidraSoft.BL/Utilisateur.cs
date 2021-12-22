@@ -8,12 +8,12 @@ namespace WidraSoft.BL
 {
     public class Utilisateur
     {
-        public DataTable List()
+        public DataTable List(string filter)
         {
             try
             {
                 UtilisateurDA utilisateur = new UtilisateurDA();
-                return utilisateur.List();
+                return utilisateur.List(filter);
             }
             catch
             {
