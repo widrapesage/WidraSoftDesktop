@@ -103,6 +103,16 @@ namespace WidraSoft.UI.Properties {
         /// <summary>
         ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap delete_button {
+            get {
+                object obj = ResourceManager.GetObject("delete-button", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Groupes {
             get {
                 object obj = ResourceManager.GetObject("Groupes", resourceCulture);
@@ -126,6 +136,16 @@ namespace WidraSoft.UI.Properties {
         internal static System.Drawing.Bitmap Quitter {
             get {
                 object obj = ResourceManager.GetObject("Quitter", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap remove {
+            get {
+                object obj = ResourceManager.GetObject("remove", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

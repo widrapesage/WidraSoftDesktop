@@ -49,6 +49,7 @@ namespace WidraSoft.UI
             this.label5 = new System.Windows.Forms.Label();
             this.txtNbLimite = new System.Windows.Forms.TextBox();
             this.dgvGroupeDroits = new System.Windows.Forms.DataGridView();
+            this.btSupprimerDgv = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvGroupeDroits)).BeginInit();
             this.SuspendLayout();
@@ -59,7 +60,7 @@ namespace WidraSoft.UI
             this.splitter2.Enabled = false;
             this.splitter2.Location = new System.Drawing.Point(24, 0);
             this.splitter2.Name = "splitter2";
-            this.splitter2.Size = new System.Drawing.Size(10, 903);
+            this.splitter2.Size = new System.Drawing.Size(10, 932);
             this.splitter2.TabIndex = 17;
             this.splitter2.TabStop = false;
             // 
@@ -69,7 +70,7 @@ namespace WidraSoft.UI
             this.splitter1.Enabled = false;
             this.splitter1.Location = new System.Drawing.Point(0, 0);
             this.splitter1.Name = "splitter1";
-            this.splitter1.Size = new System.Drawing.Size(24, 903);
+            this.splitter1.Size = new System.Drawing.Size(24, 932);
             this.splitter1.TabIndex = 16;
             this.splitter1.TabStop = false;
             // 
@@ -248,7 +249,7 @@ namespace WidraSoft.UI
             // 
             this.dgvGroupeDroits.BackgroundColor = System.Drawing.Color.GhostWhite;
             this.dgvGroupeDroits.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvGroupeDroits.Location = new System.Drawing.Point(72, 483);
+            this.dgvGroupeDroits.Location = new System.Drawing.Point(72, 515);
             this.dgvGroupeDroits.Name = "dgvGroupeDroits";
             this.dgvGroupeDroits.RowHeadersWidth = 62;
             this.dgvGroupeDroits.RowTemplate.Height = 33;
@@ -257,12 +258,29 @@ namespace WidraSoft.UI
             this.dgvGroupeDroits.CellEndEdit += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvGroupeDroits_CellEndEdit);
             this.dgvGroupeDroits.DefaultValuesNeeded += new System.Windows.Forms.DataGridViewRowEventHandler(this.dgvGroupeDroits_DefaultValuesNeeded);
             // 
+            // btSupprimerDgv
+            // 
+            this.btSupprimerDgv.BackColor = System.Drawing.Color.MediumSeaGreen;
+            this.btSupprimerDgv.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btSupprimerDgv.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btSupprimerDgv.ForeColor = System.Drawing.Color.Black;
+            this.btSupprimerDgv.Image = global::WidraSoft.UI.Properties.Resources.delete_button;
+            this.btSupprimerDgv.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btSupprimerDgv.Location = new System.Drawing.Point(72, 447);
+            this.btSupprimerDgv.Name = "btSupprimerDgv";
+            this.btSupprimerDgv.Padding = new System.Windows.Forms.Padding(0, 18, 0, 6);
+            this.btSupprimerDgv.Size = new System.Drawing.Size(47, 62);
+            this.btSupprimerDgv.TabIndex = 3;
+            this.btSupprimerDgv.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btSupprimerDgv.UseVisualStyleBackColor = false;
+            // 
             // GroupeDetail
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1034, 903);
+            this.ClientSize = new System.Drawing.Size(1034, 932);
+            this.Controls.Add(this.btSupprimerDgv);
             this.Controls.Add(this.dgvGroupeDroits);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.txtNbLimite);
@@ -312,5 +330,6 @@ namespace WidraSoft.UI
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox txtNbLimite;
         private System.Windows.Forms.DataGridView dgvGroupeDroits;
+        private System.Windows.Forms.Button btSupprimerDgv;
     }
 }

@@ -24,10 +24,8 @@ namespace WidraSoft.UI
 
         private void GroupeDetail_Load(object sender, EventArgs e)
         {
-                this.CenterToParent();
-
-            Bind_Dgv();
-
+            this.CenterToParent();
+          
             if (vg_Mode == "Add")
             {
                 try
@@ -54,6 +52,7 @@ namespace WidraSoft.UI
                     }
                 }
             }
+            Bind_Dgv();
 
         }
 
@@ -99,8 +98,18 @@ namespace WidraSoft.UI
             //Definit la source du Dgv 
             dgvGroupeDroits.AutoGenerateColumns = false;
             GroupeModule groupemodule = new GroupeModule();
-            dgvGroupeDroits.DataSource = groupemodule.List();
- 
+            if (txtId.Text == "")
+            {
+                dgvGroupeDroits.DataSource = groupemodule.FindByGroupeId(-1);
+            }
+            else
+            {
+                int Id;
+                bool IsParsableId;
+                IsParsableId = Int32.TryParse(txtId.Text, out Id);
+                dgvGroupeDroits.DataSource = groupemodule.FindByGroupeId(Id);
+            }
+
             //Crée et ajoute le textbox pour le champ GROUPEMODULEID  (Masqué)
             DataGridViewTextBoxColumn txt_GroupeModuleId = new DataGridViewTextBoxColumn();
             txt_GroupeModuleId.HeaderText = "ID";
@@ -108,7 +117,7 @@ namespace WidraSoft.UI
             txt_GroupeModuleId.Name = "GROUPEMODULEID";
             dgvGroupeDroits.Columns.Add(txt_GroupeModuleId);
             txt_GroupeModuleId.Visible = false;
-            // Crrée et ajoute la combo pour le champ GROUPEID
+            // Crée et ajoute la combo pour le champ GROUPEID (Masqué)
             DataGridViewComboBoxColumn cbx_GroupeId = new DataGridViewComboBoxColumn();
             cbx_GroupeId.HeaderText = "GROUPE";
             Groupe groupe = new Groupe();
