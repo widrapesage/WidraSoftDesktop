@@ -93,6 +93,15 @@ namespace WidraSoft.UI
             }
         }
 
+        private void Refresh_Dgv()
+        {
+            int Id;
+            bool IsParsableId;
+            GroupeModule groupemodule = new GroupeModule();
+            IsParsableId = Int32.TryParse(txtId.Text, out Id);
+            dgvGroupeDroits.DataSource = groupemodule.FindByGroupeId(Id);
+        }
+
         private void Bind_Dgv()
         {
             //Definit la source du Dgv 
@@ -137,6 +146,7 @@ namespace WidraSoft.UI
             cbx_ModuleId.ValueMember = "MODULEID";
             cbx_ModuleId.DataPropertyName = "MODULEID";
             cbx_ModuleId.Name = "MODULEID";
+            cbx_ModuleId.Width = 450;
             dgvGroupeDroits.Columns.Add(cbx_ModuleId);
             //Crée et ajoute le checkBox pour le champ ACCES
             DataGridViewCheckBoxColumn chx_Acces = new DataGridViewCheckBoxColumn();
@@ -145,12 +155,15 @@ namespace WidraSoft.UI
             chx_Acces.Name = "ACCES";
             chx_Acces.TrueValue = 1;
             chx_Acces.FalseValue = 0;
+            chx_Acces.Width = 150;
             dgvGroupeDroits.Columns.Add(chx_Acces);
+            chx_Acces.Visible = false;
             // Crée et ajoute la combo pour le champ TYPEACESS
             DataGridViewComboBoxColumn cbx_TypeAcess = new DataGridViewComboBoxColumn();
             cbx_TypeAcess.HeaderText = "TYPE ACCES";
             cbx_TypeAcess.DataPropertyName = "TYPEACESS";
             cbx_TypeAcess.Name = "TYPEACESS";
+            cbx_TypeAcess.Width = 250;
             cbx_TypeAcess.Items.AddRange(new string[] { "RW", "RO" });
             dgvGroupeDroits.Columns.Add(cbx_TypeAcess);
         }
@@ -173,6 +186,7 @@ namespace WidraSoft.UI
             cbLimite.Enabled = true;
             txtNbLimite.Enabled = true;
             dgvGroupeDroits.Enabled = true;
+            btSupprimerDgv.Enabled = true;
 
             vg_IsEnabled = true;
         }
@@ -185,6 +199,7 @@ namespace WidraSoft.UI
             cbLimite.Enabled = false;
             txtNbLimite.Enabled = false;
             dgvGroupeDroits.Enabled = false;
+            btSupprimerDgv.Enabled= false;
 
             vg_IsEnabled = false;
         }
@@ -228,6 +243,10 @@ namespace WidraSoft.UI
         {
             try
             {
+                if (string.IsNullOrEmpty(txtNbLimite.Text))
+                {
+                    txtNbLimite.Text = "0";
+                }
                 if (txtId.Text == "" && txtDateCreation.Text == "" && txtDesignation.Text != "" && txtCode.Text != "" && cbLimite.Text != "" && txtNbLimite.Text != "")
                 {
                     int NbLimite;
@@ -270,7 +289,11 @@ namespace WidraSoft.UI
                 {
                     try
                     {
-                        if(txtId.Text != "" && txtDateCreation.Text != "" && txtDesignation.Text != "" && txtCode.Text != "" && cbLimite.Text != "" && txtNbLimite.Text != "")
+                        if (string.IsNullOrEmpty(txtNbLimite.Text))
+                        {
+                            txtNbLimite.Text = "0";
+                        }
+                        if (txtId.Text != "" && txtDateCreation.Text != "" && txtDesignation.Text != "" && txtCode.Text != "" && cbLimite.Text != "" && txtNbLimite.Text != "")
                         {
                             Groupe groupe = new Groupe();
                             int Id;
@@ -287,6 +310,7 @@ namespace WidraSoft.UI
                                 vg_Update = false;
                                 Disable();
                                 Bind_Fields();
+                                Refresh_Dgv();
                             }
                         }
                         else
@@ -341,6 +365,8 @@ namespace WidraSoft.UI
                 GroupeModule groupemodule = new GroupeModule();
                 e.Row.Cells["GROUPEMODULEID"].Value = 0;
                 e.Row.Cells["GROUPEID"].Value = txtId.Text;
+                e.Row.Cells["ACCES"].Value = 1;
+                e.Row.Cells["TYPEACESS"].Value = "RO";
             }
             catch
             {
@@ -350,12 +376,13 @@ namespace WidraSoft.UI
 
         private void dgvGroupeDroits_CellEndEdit(object sender, DataGridViewCellEventArgs e)
         {
-            if ((int)dgvGroupeDroits[0, e.RowIndex].Value == 0 && (int)dgvGroupeDroits[1, e.RowIndex].Value > 0 && !string.IsNullOrEmpty(dgvGroupeDroits[2, e.RowIndex].Value.ToString()) && !string.IsNullOrEmpty(dgvGroupeDroits[3, e.RowIndex].Value.ToString()) && !string.IsNullOrEmpty(dgvGroupeDroits[4, e.RowIndex].Value.ToString()))
+            if ((int)dgvGroupeDroits[0, e.RowIndex].Value == 0 && (int)dgvGroupeDroits[1, e.RowIndex].Value > 0 && !string.IsNullOrEmpty(dgvGroupeDroits[2, e.RowIndex].Value.ToString()) && !string.IsNullOrEmpty(dgvGroupeDroits[4, e.RowIndex].Value.ToString()))
             {
                 try
                 {
                     GroupeModule groupemodule = new GroupeModule();
                     groupemodule.Add((int)dgvGroupeDroits[1, e.RowIndex].Value, (int)dgvGroupeDroits[2, e.RowIndex].Value, (int)dgvGroupeDroits[3, e.RowIndex].Value, dgvGroupeDroits[4, e.RowIndex].Value.ToString());
+
                 }
                 catch
                 {
@@ -363,18 +390,82 @@ namespace WidraSoft.UI
                 }
             }
 
-            if ((int)dgvGroupeDroits[0, e.RowIndex].Value > 0 && (int)dgvGroupeDroits[1, e.RowIndex].Value > 0 && !string.IsNullOrEmpty(dgvGroupeDroits[2, e.RowIndex].Value.ToString()) && !string.IsNullOrEmpty(dgvGroupeDroits[3, e.RowIndex].Value.ToString()) && !string.IsNullOrEmpty(dgvGroupeDroits[4, e.RowIndex].Value.ToString()))
+            if ((int)dgvGroupeDroits[0, e.RowIndex].Value > 0 && (int)dgvGroupeDroits[1, e.RowIndex].Value > 0 && !string.IsNullOrEmpty(dgvGroupeDroits[2, e.RowIndex].Value.ToString()) && !string.IsNullOrEmpty(dgvGroupeDroits[4, e.RowIndex].Value.ToString()))
             {
                 try
                 {
                     GroupeModule groupemodule = new GroupeModule();
                     groupemodule.Update((int)dgvGroupeDroits[0, e.RowIndex].Value, (int)dgvGroupeDroits[1, e.RowIndex].Value, (int)dgvGroupeDroits[2, e.RowIndex].Value, (int)dgvGroupeDroits[3, e.RowIndex].Value, dgvGroupeDroits[4, e.RowIndex].Value.ToString());
+
                 }
                 catch
                 {
                     throw;
                 }
-            } 
+            }
+            Refresh_Dgv();
+        }
+
+        private Int32[] GetSelectedRowsId()
+        {
+            try
+            {
+                Int32 SelectedRowsCount = dgvGroupeDroits.Rows.GetRowCount(DataGridViewElementStates.Selected);
+                Int32[] Selected = new Int32[SelectedRowsCount];
+                if (SelectedRowsCount > 0)
+                {
+
+                    for (int i = 0; i < SelectedRowsCount; i++)
+                    {
+                        Selected[i] = Int32.Parse(dgvGroupeDroits.SelectedRows[i].Cells[0].Value.ToString());
+                    }
+
+                }
+                return Selected;
+            }
+            catch
+            {
+                throw;
+            }
+        }
+
+        private void btSupprimerDgv_Click(object sender, EventArgs e)
+        {
+            Int32[] selectedIds = new Int32[GetSelectedRowsId().Length];
+            selectedIds = GetSelectedRowsId();
+            if (GetSelectedRowsId().Length > 0)
+            {
+                for (int i = 0; i < GetSelectedRowsId().Length; i++)
+                {
+                    //MessageBox.Show(selectedIds[i].ToString());
+
+                    try
+                    {
+                        GroupeModule groupemodule = new GroupeModule();
+                        groupemodule.Delete(selectedIds[i]);
+                    }
+                    catch
+                    {
+                        throw;
+                    }
+                }
+                MessageBox.Show(GetSelectedRowsId().Length + " droit(s) supprimé(s)");
+                Refresh_Dgv();
+            }
+            else
+            {
+                MessageBox.Show("Vous n'avez selectionné aucun enregistrement à supprimer");
+            }
+        
+        }
+
+        private void dgvGroupeDroits_CellLeave(object sender, DataGridViewCellEventArgs e)
+        {
+        }
+
+        private void dgvGroupeDroits_CellValueChanged(object sender, DataGridViewCellEventArgs e)
+        {
+   
         }
     }
 }

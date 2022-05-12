@@ -60,7 +60,7 @@ namespace WidraSoft.UI
             this.splitter2.Enabled = false;
             this.splitter2.Location = new System.Drawing.Point(24, 0);
             this.splitter2.Name = "splitter2";
-            this.splitter2.Size = new System.Drawing.Size(10, 932);
+            this.splitter2.Size = new System.Drawing.Size(10, 1033);
             this.splitter2.TabIndex = 17;
             this.splitter2.TabStop = false;
             // 
@@ -70,7 +70,7 @@ namespace WidraSoft.UI
             this.splitter1.Enabled = false;
             this.splitter1.Location = new System.Drawing.Point(0, 0);
             this.splitter1.Name = "splitter1";
-            this.splitter1.Size = new System.Drawing.Size(24, 932);
+            this.splitter1.Size = new System.Drawing.Size(24, 1033);
             this.splitter1.TabIndex = 16;
             this.splitter1.TabStop = false;
             // 
@@ -253,9 +253,11 @@ namespace WidraSoft.UI
             this.dgvGroupeDroits.Name = "dgvGroupeDroits";
             this.dgvGroupeDroits.RowHeadersWidth = 62;
             this.dgvGroupeDroits.RowTemplate.Height = 33;
-            this.dgvGroupeDroits.Size = new System.Drawing.Size(926, 408);
+            this.dgvGroupeDroits.Size = new System.Drawing.Size(926, 499);
             this.dgvGroupeDroits.TabIndex = 31;
             this.dgvGroupeDroits.CellEndEdit += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvGroupeDroits_CellEndEdit);
+            this.dgvGroupeDroits.CellLeave += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvGroupeDroits_CellLeave);
+            this.dgvGroupeDroits.CellValueChanged += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvGroupeDroits_CellValueChanged);
             this.dgvGroupeDroits.DefaultValuesNeeded += new System.Windows.Forms.DataGridViewRowEventHandler(this.dgvGroupeDroits_DefaultValuesNeeded);
             // 
             // btSupprimerDgv
@@ -266,20 +268,21 @@ namespace WidraSoft.UI
             this.btSupprimerDgv.ForeColor = System.Drawing.Color.Black;
             this.btSupprimerDgv.Image = global::WidraSoft.UI.Properties.Resources.delete_button;
             this.btSupprimerDgv.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btSupprimerDgv.Location = new System.Drawing.Point(72, 447);
+            this.btSupprimerDgv.Location = new System.Drawing.Point(72, 446);
             this.btSupprimerDgv.Name = "btSupprimerDgv";
             this.btSupprimerDgv.Padding = new System.Windows.Forms.Padding(0, 18, 0, 6);
-            this.btSupprimerDgv.Size = new System.Drawing.Size(47, 62);
+            this.btSupprimerDgv.Size = new System.Drawing.Size(47, 63);
             this.btSupprimerDgv.TabIndex = 3;
             this.btSupprimerDgv.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btSupprimerDgv.UseVisualStyleBackColor = false;
+            this.btSupprimerDgv.Click += new System.EventHandler(this.btSupprimerDgv_Click);
             // 
             // GroupeDetail
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1034, 932);
+            this.ClientSize = new System.Drawing.Size(1034, 1033);
             this.Controls.Add(this.btSupprimerDgv);
             this.Controls.Add(this.dgvGroupeDroits);
             this.Controls.Add(this.label5);

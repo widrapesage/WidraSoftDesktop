@@ -29,6 +29,11 @@ namespace WidraSoft.UI
             Groupe groupe = new Groupe();
             DgvList.DataSource = groupe.List(vg_filter);
             DgvList.Columns[0].Visible = false;
+            DgvList.Columns["DESIGNATION"].Width = 250;
+            DgvList.Columns["CODE"].Width = 120;
+            DgvList.Columns["LIMITER"].Width = 100;
+            DgvList.Columns["NBLIMITE"].Visible= false;
+            DgvList.Columns["DATECREATION"].Width = 250;
             DgvList.ReadOnly = true;
 
         }
@@ -87,7 +92,7 @@ namespace WidraSoft.UI
 
         private void ajouterToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Form form = new GroupeDetail("Add", GetId());
+            Form form = new GroupeDetail("Add", 0);
             form.Show();
         }
 

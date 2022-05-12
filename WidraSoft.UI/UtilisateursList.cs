@@ -30,6 +30,13 @@ namespace WidraSoft.UI
             DgvList.DataSource = utilisateur.List(vg_filter);
             DgvList.Columns[0].Visible = false;
             DgvList.Columns["GROUPEID"].Visible = false;
+            DgvList.Columns["NOM"].Width = 250;
+            DgvList.Columns["PRENOM"].Width = 250;
+            DgvList.Columns["LOGIN"].Width = 200;
+            DgvList.Columns["GROUPE"].Width = 200;
+            DgvList.Columns["DATECREATION"].Width = 200;
+            DgvList.Columns["DATECREATION"].HeaderText = "DATE CREATION";
+            
             DgvList.ReadOnly = true;
             
         }
@@ -59,7 +66,7 @@ namespace WidraSoft.UI
             {
                 Int32 SelectedRowsCount = DgvList.Rows.GetRowCount(DataGridViewElementStates.Selected);
                 Int32[] Selected = new Int32[SelectedRowsCount];
-                if (SelectedRowsCount > 1)
+                if (SelectedRowsCount > 0)
                 {
                     
                     for (int i = 0; i <SelectedRowsCount; i++ )
@@ -113,6 +120,8 @@ namespace WidraSoft.UI
                     utilisateur.Delete(selectedIds[i]);
                 }
                 MessageBox.Show(GetSelectedRowsId().Length + " utilisateur(s) supprimé(s)");
+                Bind_Dgv();
+
             }
             else
             {
