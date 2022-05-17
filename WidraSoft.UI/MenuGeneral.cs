@@ -129,5 +129,11 @@ namespace WidraSoft.UI
             Form form = new GroupesList("1=1");
             form.Show();
         }
+
+        private void btFirmes_Click(object sender, EventArgs e)
+        {
+            Form form = new FirmesList("1=1");
+            form.Show();
+        }
     }
 }

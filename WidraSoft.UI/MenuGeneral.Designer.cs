@@ -402,6 +402,7 @@ namespace WidraSoft.UI
             this.btFirmes.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.btFirmes.TabIndex = 19;
             this.btFirmes.TabStop = false;
+            this.btFirmes.Click += new System.EventHandler(this.btFirmes_Click);
             this.btFirmes.MouseEnter += new System.EventHandler(this.btFirmes_MouseEnter);
             this.btFirmes.MouseLeave += new System.EventHandler(this.btFirmes_MouseLeave);
             // 
