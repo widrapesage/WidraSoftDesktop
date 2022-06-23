@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 using WidraSoft.BL;
@@ -14,15 +15,15 @@ namespace WidraSoft.UI
         public Password()
         {
             InitializeComponent();
+
         }
         private void Password_Load(object sender, EventArgs e)
         {
-            this.CenterToScreen();
-
+            this.CenterToScreen();           
         }
 
         private void btConnecter_Click(object sender, EventArgs e)
-        {
+        {    
             if (txtLogin.Text != "" && txtPassword.Text != "")
             {
                 try

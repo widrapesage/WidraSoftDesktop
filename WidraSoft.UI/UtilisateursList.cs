@@ -15,9 +15,13 @@ namespace WidraSoft.UI
         public UtilisateursList(string filter)
         {
             InitializeComponent();
+            menuStrip1.Renderer = new MyRenderer();
             vg_filter = filter;
         }
-
+        private class MyRenderer : ToolStripProfessionalRenderer
+        {
+            public MyRenderer() : base(new MyMenuColors()) { }
+        }
         private void UtilisateursList_Load(object sender, EventArgs e)
         {
             this.CenterToScreen();
@@ -143,5 +147,9 @@ namespace WidraSoft.UI
             Close();
             
         }
+
+
+
+
     }
 }

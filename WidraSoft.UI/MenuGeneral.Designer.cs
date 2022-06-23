@@ -30,427 +30,392 @@ namespace WidraSoft.UI
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MenuGeneral));
-            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.menuStrip = new System.Windows.Forms.MenuStrip();
+            this.homeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.camionsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.chauffeursToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.pontsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.pToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.gérerToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.camionsToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.produitsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.chauffeursToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.firmesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.transporteursToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.destinationsProvenancesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.clientsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.BorneToolpStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.paramètresToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.reportingToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.synchronisationToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.aideToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.aIIIToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.quitterToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.btCamions = new System.Windows.Forms.PictureBox();
-            this.btProduits = new System.Windows.Forms.PictureBox();
-            this.btChauffeurs = new System.Windows.Forms.PictureBox();
-            this.btTransporteurs = new System.Windows.Forms.PictureBox();
-            this.btOriginDestination = new System.Windows.Forms.PictureBox();
-            this.btClients = new System.Windows.Forms.PictureBox();
-            this.splitter1 = new System.Windows.Forms.Splitter();
-            this.splitter2 = new System.Windows.Forms.Splitter();
-            this.lblCamions_tag = new System.Windows.Forms.Label();
-            this.lblProduits_tag = new System.Windows.Forms.Label();
-            this.lblChauffeurs_tag = new System.Windows.Forms.Label();
-            this.lblTransporteurs = new System.Windows.Forms.Label();
-            this.lblDestiProven_tag = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
             this.lblusername = new System.Windows.Forms.Label();
-            this.lblPesees = new System.Windows.Forms.Label();
-            this.btPesees = new System.Windows.Forms.PictureBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.btPonts = new System.Windows.Forms.PictureBox();
-            this.btFirmes = new System.Windows.Forms.PictureBox();
-            this.menuStrip1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.btCamions)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btProduits)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btChauffeurs)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btTransporteurs)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btOriginDestination)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btClients)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btPesees)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btPonts)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btFirmes)).BeginInit();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.lblChangerMdp = new System.Windows.Forms.LinkLabel();
+            this.lblMonCompte = new System.Windows.Forms.LinkLabel();
+            this.panelUserInfo = new System.Windows.Forms.Panel();
+            this.Spain_flag = new System.Windows.Forms.PictureBox();
+            this.England_flag = new System.Windows.Forms.PictureBox();
+            this.France_flag = new System.Windows.Forms.PictureBox();
+            this.cbLang = new System.Windows.Forms.ComboBox();
+            this.panelLayout = new System.Windows.Forms.Panel();
+            this.panelFooter = new System.Windows.Forms.Panel();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.menuStrip.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.panelUserInfo.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.Spain_flag)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.England_flag)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.France_flag)).BeginInit();
+            this.panelLayout.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
-            // menuStrip1
+            // menuStrip
             // 
-            this.menuStrip1.BackColor = System.Drawing.Color.MediumSeaGreen;
-            this.menuStrip1.Font = new System.Drawing.Font("Corbel", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.menuStrip1.ImageScalingSize = new System.Drawing.Size(24, 24);
-            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.menuStrip.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(62)))), ((int)(((byte)(60)))));
+            resources.ApplyResources(this.menuStrip, "menuStrip");
+            this.menuStrip.ImageScalingSize = new System.Drawing.Size(24, 24);
+            this.menuStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.homeToolStripMenuItem,
             this.camionsToolStripMenuItem,
             this.chauffeursToolStripMenuItem,
+            this.pontsToolStripMenuItem,
+            this.pToolStripMenuItem,
+            this.gérerToolStripMenuItem,
+            this.BorneToolpStripMenuItem,
             this.paramètresToolStripMenuItem,
             this.reportingToolStripMenuItem,
+            this.synchronisationToolStripMenuItem,
             this.aideToolStripMenuItem,
             this.quitterToolStripMenuItem});
-            this.menuStrip1.LayoutStyle = System.Windows.Forms.ToolStripLayoutStyle.HorizontalStackWithOverflow;
-            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
-            this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(1312, 40);
-            this.menuStrip1.TabIndex = 0;
-            this.menuStrip1.Text = "menuStrip1";
+            this.menuStrip.Name = "menuStrip";
+            this.menuStrip.RenderMode = System.Windows.Forms.ToolStripRenderMode.Professional;
+            // 
+            // homeToolStripMenuItem
+            // 
+            this.homeToolStripMenuItem.Image = global::WidraSoft.UI.Properties.Resources.Balance;
+            resources.ApplyResources(this.homeToolStripMenuItem, "homeToolStripMenuItem");
+            this.homeToolStripMenuItem.Name = "homeToolStripMenuItem";
+            this.homeToolStripMenuItem.Padding = new System.Windows.Forms.Padding(0, 0, 0, 50);
             // 
             // camionsToolStripMenuItem
             // 
-            this.camionsToolStripMenuItem.ForeColor = System.Drawing.Color.Black;
-            this.camionsToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("camionsToolStripMenuItem.Image")));
+            this.camionsToolStripMenuItem.BackColor = System.Drawing.Color.Transparent;
+            resources.ApplyResources(this.camionsToolStripMenuItem, "camionsToolStripMenuItem");
+            this.camionsToolStripMenuItem.ForeColor = System.Drawing.Color.White;
+            this.camionsToolStripMenuItem.Image = global::WidraSoft.UI.Properties.Resources.Users1;
+            this.camionsToolStripMenuItem.Margin = new System.Windows.Forms.Padding(0, 4, 0, 0);
             this.camionsToolStripMenuItem.Name = "camionsToolStripMenuItem";
-            this.camionsToolStripMenuItem.Size = new System.Drawing.Size(182, 36);
-            this.camionsToolStripMenuItem.Text = "Utilisateurs";
+            this.camionsToolStripMenuItem.Padding = new System.Windows.Forms.Padding(4, 1, 4, 3);
             this.camionsToolStripMenuItem.Click += new System.EventHandler(this.camionsToolStripMenuItem_Click);
             // 
             // chauffeursToolStripMenuItem
             // 
-            this.chauffeursToolStripMenuItem.ForeColor = System.Drawing.Color.Black;
-            this.chauffeursToolStripMenuItem.Image = global::WidraSoft.UI.Properties.Resources.Groupes;
+            this.chauffeursToolStripMenuItem.BackColor = System.Drawing.Color.Transparent;
+            resources.ApplyResources(this.chauffeursToolStripMenuItem, "chauffeursToolStripMenuItem");
+            this.chauffeursToolStripMenuItem.ForeColor = System.Drawing.Color.White;
+            this.chauffeursToolStripMenuItem.Image = global::WidraSoft.UI.Properties.Resources.group1;
+            this.chauffeursToolStripMenuItem.Margin = new System.Windows.Forms.Padding(0, 4, 0, 0);
             this.chauffeursToolStripMenuItem.Name = "chauffeursToolStripMenuItem";
-            this.chauffeursToolStripMenuItem.Size = new System.Drawing.Size(146, 36);
-            this.chauffeursToolStripMenuItem.Text = "Groupes";
+            this.chauffeursToolStripMenuItem.Padding = new System.Windows.Forms.Padding(4, 1, 4, 3);
             this.chauffeursToolStripMenuItem.Click += new System.EventHandler(this.chauffeursToolStripMenuItem_Click);
+            // 
+            // pontsToolStripMenuItem
+            // 
+            resources.ApplyResources(this.pontsToolStripMenuItem, "pontsToolStripMenuItem");
+            this.pontsToolStripMenuItem.ForeColor = System.Drawing.Color.White;
+            this.pontsToolStripMenuItem.Image = global::WidraSoft.UI.Properties.Resources.scale;
+            this.pontsToolStripMenuItem.Margin = new System.Windows.Forms.Padding(0, 4, 0, 0);
+            this.pontsToolStripMenuItem.Name = "pontsToolStripMenuItem";
+            this.pontsToolStripMenuItem.Padding = new System.Windows.Forms.Padding(4, 1, 4, 3);
+            // 
+            // pToolStripMenuItem
+            // 
+            resources.ApplyResources(this.pToolStripMenuItem, "pToolStripMenuItem");
+            this.pToolStripMenuItem.ForeColor = System.Drawing.Color.White;
+            this.pToolStripMenuItem.Image = global::WidraSoft.UI.Properties.Resources.device1;
+            this.pToolStripMenuItem.Margin = new System.Windows.Forms.Padding(0, 4, 0, 0);
+            this.pToolStripMenuItem.Name = "pToolStripMenuItem";
+            this.pToolStripMenuItem.Padding = new System.Windows.Forms.Padding(4, 1, 4, 3);
+            // 
+            // gérerToolStripMenuItem
+            // 
+            this.gérerToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.camionsToolStripMenuItem1,
+            this.produitsToolStripMenuItem,
+            this.chauffeursToolStripMenuItem1,
+            this.firmesToolStripMenuItem,
+            this.transporteursToolStripMenuItem,
+            this.destinationsProvenancesToolStripMenuItem,
+            this.clientsToolStripMenuItem});
+            resources.ApplyResources(this.gérerToolStripMenuItem, "gérerToolStripMenuItem");
+            this.gérerToolStripMenuItem.ForeColor = System.Drawing.Color.White;
+            this.gérerToolStripMenuItem.Image = global::WidraSoft.UI.Properties.Resources.organize;
+            this.gérerToolStripMenuItem.Margin = new System.Windows.Forms.Padding(0, 4, 0, 0);
+            this.gérerToolStripMenuItem.Name = "gérerToolStripMenuItem";
+            this.gérerToolStripMenuItem.Padding = new System.Windows.Forms.Padding(4, 1, 4, 3);
+            // 
+            // camionsToolStripMenuItem1
+            // 
+            this.camionsToolStripMenuItem1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(62)))), ((int)(((byte)(60)))));
+            this.camionsToolStripMenuItem1.ForeColor = System.Drawing.Color.White;
+            this.camionsToolStripMenuItem1.Image = global::WidraSoft.UI.Properties.Resources.cargo_truck;
+            this.camionsToolStripMenuItem1.Name = "camionsToolStripMenuItem1";
+            resources.ApplyResources(this.camionsToolStripMenuItem1, "camionsToolStripMenuItem1");
+            this.camionsToolStripMenuItem1.Click += new System.EventHandler(this.camionsToolStripMenuItem1_Click);
+            // 
+            // produitsToolStripMenuItem
+            // 
+            this.produitsToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(62)))), ((int)(((byte)(60)))));
+            this.produitsToolStripMenuItem.ForeColor = System.Drawing.Color.White;
+            this.produitsToolStripMenuItem.Image = global::WidraSoft.UI.Properties.Resources.cubes1;
+            this.produitsToolStripMenuItem.Name = "produitsToolStripMenuItem";
+            resources.ApplyResources(this.produitsToolStripMenuItem, "produitsToolStripMenuItem");
+            // 
+            // chauffeursToolStripMenuItem1
+            // 
+            this.chauffeursToolStripMenuItem1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(62)))), ((int)(((byte)(60)))));
+            this.chauffeursToolStripMenuItem1.ForeColor = System.Drawing.Color.White;
+            this.chauffeursToolStripMenuItem1.Image = global::WidraSoft.UI.Properties.Resources.driver1;
+            this.chauffeursToolStripMenuItem1.Name = "chauffeursToolStripMenuItem1";
+            resources.ApplyResources(this.chauffeursToolStripMenuItem1, "chauffeursToolStripMenuItem1");
+            // 
+            // firmesToolStripMenuItem
+            // 
+            this.firmesToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(62)))), ((int)(((byte)(60)))));
+            this.firmesToolStripMenuItem.ForeColor = System.Drawing.Color.White;
+            this.firmesToolStripMenuItem.Image = global::WidraSoft.UI.Properties.Resources.industry;
+            this.firmesToolStripMenuItem.Name = "firmesToolStripMenuItem";
+            resources.ApplyResources(this.firmesToolStripMenuItem, "firmesToolStripMenuItem");
+            this.firmesToolStripMenuItem.Click += new System.EventHandler(this.firmesToolStripMenuItem_Click);
+            // 
+            // transporteursToolStripMenuItem
+            // 
+            this.transporteursToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(62)))), ((int)(((byte)(60)))));
+            this.transporteursToolStripMenuItem.ForeColor = System.Drawing.Color.White;
+            this.transporteursToolStripMenuItem.Image = global::WidraSoft.UI.Properties.Resources.Carriers;
+            this.transporteursToolStripMenuItem.Name = "transporteursToolStripMenuItem";
+            resources.ApplyResources(this.transporteursToolStripMenuItem, "transporteursToolStripMenuItem");
+            // 
+            // destinationsProvenancesToolStripMenuItem
+            // 
+            this.destinationsProvenancesToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(62)))), ((int)(((byte)(60)))));
+            this.destinationsProvenancesToolStripMenuItem.ForeColor = System.Drawing.Color.White;
+            this.destinationsProvenancesToolStripMenuItem.Image = global::WidraSoft.UI.Properties.Resources.destination1;
+            this.destinationsProvenancesToolStripMenuItem.Name = "destinationsProvenancesToolStripMenuItem";
+            resources.ApplyResources(this.destinationsProvenancesToolStripMenuItem, "destinationsProvenancesToolStripMenuItem");
+            // 
+            // clientsToolStripMenuItem
+            // 
+            this.clientsToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(62)))), ((int)(((byte)(60)))));
+            this.clientsToolStripMenuItem.ForeColor = System.Drawing.Color.White;
+            this.clientsToolStripMenuItem.Image = global::WidraSoft.UI.Properties.Resources.Customers;
+            this.clientsToolStripMenuItem.Name = "clientsToolStripMenuItem";
+            resources.ApplyResources(this.clientsToolStripMenuItem, "clientsToolStripMenuItem");
+            // 
+            // BorneToolpStripMenuItem
+            // 
+            this.BorneToolpStripMenuItem.BackColor = System.Drawing.Color.Transparent;
+            resources.ApplyResources(this.BorneToolpStripMenuItem, "BorneToolpStripMenuItem");
+            this.BorneToolpStripMenuItem.ForeColor = System.Drawing.Color.White;
+            this.BorneToolpStripMenuItem.Image = global::WidraSoft.UI.Properties.Resources.atm;
+            this.BorneToolpStripMenuItem.Margin = new System.Windows.Forms.Padding(0, 4, 0, 0);
+            this.BorneToolpStripMenuItem.Name = "BorneToolpStripMenuItem";
+            this.BorneToolpStripMenuItem.Padding = new System.Windows.Forms.Padding(4, 1, 4, 3);
             // 
             // paramètresToolStripMenuItem
             // 
-            this.paramètresToolStripMenuItem.ForeColor = System.Drawing.Color.Black;
-            this.paramètresToolStripMenuItem.Image = global::WidraSoft.UI.Properties.Resources.Settings;
+            this.paramètresToolStripMenuItem.BackColor = System.Drawing.Color.Transparent;
+            resources.ApplyResources(this.paramètresToolStripMenuItem, "paramètresToolStripMenuItem");
+            this.paramètresToolStripMenuItem.ForeColor = System.Drawing.Color.White;
+            this.paramètresToolStripMenuItem.Image = global::WidraSoft.UI.Properties.Resources.Settings1;
+            this.paramètresToolStripMenuItem.Margin = new System.Windows.Forms.Padding(0, 4, 0, 0);
             this.paramètresToolStripMenuItem.Name = "paramètresToolStripMenuItem";
-            this.paramètresToolStripMenuItem.Size = new System.Drawing.Size(183, 36);
-            this.paramètresToolStripMenuItem.Text = "Paramètres";
+            this.paramètresToolStripMenuItem.Padding = new System.Windows.Forms.Padding(4, 1, 4, 3);
             // 
             // reportingToolStripMenuItem
             // 
-            this.reportingToolStripMenuItem.ForeColor = System.Drawing.Color.Black;
-            this.reportingToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("reportingToolStripMenuItem.Image")));
+            this.reportingToolStripMenuItem.BackColor = System.Drawing.Color.Transparent;
+            resources.ApplyResources(this.reportingToolStripMenuItem, "reportingToolStripMenuItem");
+            this.reportingToolStripMenuItem.ForeColor = System.Drawing.Color.White;
+            this.reportingToolStripMenuItem.Image = global::WidraSoft.UI.Properties.Resources.profit_report1;
+            this.reportingToolStripMenuItem.Margin = new System.Windows.Forms.Padding(0, 4, 0, 0);
             this.reportingToolStripMenuItem.Name = "reportingToolStripMenuItem";
-            this.reportingToolStripMenuItem.Size = new System.Drawing.Size(163, 36);
-            this.reportingToolStripMenuItem.Text = "Reporting";
+            this.reportingToolStripMenuItem.Padding = new System.Windows.Forms.Padding(4, 1, 4, 3);
+            // 
+            // synchronisationToolStripMenuItem
+            // 
+            resources.ApplyResources(this.synchronisationToolStripMenuItem, "synchronisationToolStripMenuItem");
+            this.synchronisationToolStripMenuItem.ForeColor = System.Drawing.Color.White;
+            this.synchronisationToolStripMenuItem.Image = global::WidraSoft.UI.Properties.Resources.synchronize;
+            this.synchronisationToolStripMenuItem.Name = "synchronisationToolStripMenuItem";
             // 
             // aideToolStripMenuItem
             // 
-            this.aideToolStripMenuItem.ForeColor = System.Drawing.Color.Black;
-            this.aideToolStripMenuItem.Image = global::WidraSoft.UI.Properties.Resources.Aide;
+            this.aideToolStripMenuItem.BackColor = System.Drawing.Color.Transparent;
+            this.aideToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.aIIIToolStripMenuItem});
+            resources.ApplyResources(this.aideToolStripMenuItem, "aideToolStripMenuItem");
+            this.aideToolStripMenuItem.ForeColor = System.Drawing.Color.White;
+            this.aideToolStripMenuItem.Image = global::WidraSoft.UI.Properties.Resources.help_web_button;
+            this.aideToolStripMenuItem.Margin = new System.Windows.Forms.Padding(0, 4, 0, 0);
             this.aideToolStripMenuItem.Name = "aideToolStripMenuItem";
-            this.aideToolStripMenuItem.Size = new System.Drawing.Size(110, 36);
-            this.aideToolStripMenuItem.Text = "Aide ";
+            this.aideToolStripMenuItem.Padding = new System.Windows.Forms.Padding(4, 1, 4, 3);
+            // 
+            // aIIIToolStripMenuItem
+            // 
+            this.aIIIToolStripMenuItem.Name = "aIIIToolStripMenuItem";
+            resources.ApplyResources(this.aIIIToolStripMenuItem, "aIIIToolStripMenuItem");
             // 
             // quitterToolStripMenuItem
             // 
-            this.quitterToolStripMenuItem.ForeColor = System.Drawing.Color.Black;
-            this.quitterToolStripMenuItem.Image = global::WidraSoft.UI.Properties.Resources.Quitter;
+            this.quitterToolStripMenuItem.BackColor = System.Drawing.Color.Transparent;
+            resources.ApplyResources(this.quitterToolStripMenuItem, "quitterToolStripMenuItem");
+            this.quitterToolStripMenuItem.ForeColor = System.Drawing.Color.White;
+            this.quitterToolStripMenuItem.Image = global::WidraSoft.UI.Properties.Resources.close;
+            this.quitterToolStripMenuItem.Margin = new System.Windows.Forms.Padding(0, 4, 0, 0);
             this.quitterToolStripMenuItem.Name = "quitterToolStripMenuItem";
-            this.quitterToolStripMenuItem.Size = new System.Drawing.Size(136, 36);
-            this.quitterToolStripMenuItem.Text = "Quitter";
+            this.quitterToolStripMenuItem.Padding = new System.Windows.Forms.Padding(4, 1, 4, 3);
             this.quitterToolStripMenuItem.Click += new System.EventHandler(this.quitterToolStripMenuItem_Click);
-            // 
-            // btCamions
-            // 
-            this.btCamions.BackColor = System.Drawing.Color.MediumSeaGreen;
-            this.btCamions.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.btCamions.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btCamions.Image = global::WidraSoft.UI.Properties.Resources.Trucks;
-            this.btCamions.Location = new System.Drawing.Point(114, 500);
-            this.btCamions.Name = "btCamions";
-            this.btCamions.Size = new System.Drawing.Size(241, 182);
-            this.btCamions.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.btCamions.TabIndex = 1;
-            this.btCamions.TabStop = false;
-            this.btCamions.MouseEnter += new System.EventHandler(this.btCamions_MouseEnter);
-            this.btCamions.MouseLeave += new System.EventHandler(this.btCamions_MouseLeave);
-            // 
-            // btProduits
-            // 
-            this.btProduits.BackColor = System.Drawing.Color.MediumSeaGreen;
-            this.btProduits.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.btProduits.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btProduits.Image = ((System.Drawing.Image)(resources.GetObject("btProduits.Image")));
-            this.btProduits.Location = new System.Drawing.Point(404, 500);
-            this.btProduits.Name = "btProduits";
-            this.btProduits.Size = new System.Drawing.Size(241, 182);
-            this.btProduits.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.btProduits.TabIndex = 2;
-            this.btProduits.TabStop = false;
-            this.btProduits.MouseEnter += new System.EventHandler(this.btProduits_MouseEnter);
-            this.btProduits.MouseLeave += new System.EventHandler(this.btProduits_MouseLeave);
-            // 
-            // btChauffeurs
-            // 
-            this.btChauffeurs.BackColor = System.Drawing.Color.MediumSeaGreen;
-            this.btChauffeurs.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.btChauffeurs.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btChauffeurs.Image = ((System.Drawing.Image)(resources.GetObject("btChauffeurs.Image")));
-            this.btChauffeurs.Location = new System.Drawing.Point(694, 500);
-            this.btChauffeurs.Name = "btChauffeurs";
-            this.btChauffeurs.Size = new System.Drawing.Size(241, 182);
-            this.btChauffeurs.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.btChauffeurs.TabIndex = 3;
-            this.btChauffeurs.TabStop = false;
-            this.btChauffeurs.MouseEnter += new System.EventHandler(this.btChauffeurs_MouseEnter);
-            this.btChauffeurs.MouseLeave += new System.EventHandler(this.btChauffeurs_MouseLeave);
-            // 
-            // btTransporteurs
-            // 
-            this.btTransporteurs.BackColor = System.Drawing.Color.MediumSeaGreen;
-            this.btTransporteurs.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.btTransporteurs.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btTransporteurs.Image = ((System.Drawing.Image)(resources.GetObject("btTransporteurs.Image")));
-            this.btTransporteurs.Location = new System.Drawing.Point(114, 737);
-            this.btTransporteurs.Name = "btTransporteurs";
-            this.btTransporteurs.Size = new System.Drawing.Size(241, 182);
-            this.btTransporteurs.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.btTransporteurs.TabIndex = 4;
-            this.btTransporteurs.TabStop = false;
-            this.btTransporteurs.MouseEnter += new System.EventHandler(this.btTransporteurs_MouseEnter);
-            this.btTransporteurs.MouseLeave += new System.EventHandler(this.btTransporteurs_MouseLeave);
-            // 
-            // btOriginDestination
-            // 
-            this.btOriginDestination.BackColor = System.Drawing.Color.MediumSeaGreen;
-            this.btOriginDestination.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.btOriginDestination.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btOriginDestination.Image = ((System.Drawing.Image)(resources.GetObject("btOriginDestination.Image")));
-            this.btOriginDestination.Location = new System.Drawing.Point(404, 737);
-            this.btOriginDestination.Name = "btOriginDestination";
-            this.btOriginDestination.Size = new System.Drawing.Size(241, 182);
-            this.btOriginDestination.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.btOriginDestination.TabIndex = 5;
-            this.btOriginDestination.TabStop = false;
-            this.btOriginDestination.MouseEnter += new System.EventHandler(this.btOriginDestination_MouseEnter);
-            this.btOriginDestination.MouseLeave += new System.EventHandler(this.btOriginDestination_MouseLeave);
-            // 
-            // btClients
-            // 
-            this.btClients.BackColor = System.Drawing.Color.MediumSeaGreen;
-            this.btClients.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.btClients.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btClients.Image = ((System.Drawing.Image)(resources.GetObject("btClients.Image")));
-            this.btClients.Location = new System.Drawing.Point(694, 737);
-            this.btClients.Name = "btClients";
-            this.btClients.Size = new System.Drawing.Size(241, 182);
-            this.btClients.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.btClients.TabIndex = 6;
-            this.btClients.TabStop = false;
-            this.btClients.MouseEnter += new System.EventHandler(this.btClients_MouseEnter);
-            this.btClients.MouseLeave += new System.EventHandler(this.btClients_MouseLeave);
-            // 
-            // splitter1
-            // 
-            this.splitter1.BackColor = System.Drawing.Color.MediumSeaGreen;
-            this.splitter1.Enabled = false;
-            this.splitter1.Location = new System.Drawing.Point(0, 40);
-            this.splitter1.Name = "splitter1";
-            this.splitter1.Size = new System.Drawing.Size(40, 910);
-            this.splitter1.TabIndex = 7;
-            this.splitter1.TabStop = false;
-            // 
-            // splitter2
-            // 
-            this.splitter2.BackColor = System.Drawing.Color.Gray;
-            this.splitter2.Enabled = false;
-            this.splitter2.Location = new System.Drawing.Point(40, 40);
-            this.splitter2.Name = "splitter2";
-            this.splitter2.Size = new System.Drawing.Size(10, 910);
-            this.splitter2.TabIndex = 8;
-            this.splitter2.TabStop = false;
-            // 
-            // lblCamions_tag
-            // 
-            this.lblCamions_tag.AutoSize = true;
-            this.lblCamions_tag.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.lblCamions_tag.ForeColor = System.Drawing.Color.Black;
-            this.lblCamions_tag.Location = new System.Drawing.Point(114, 460);
-            this.lblCamions_tag.Name = "lblCamions_tag";
-            this.lblCamions_tag.Size = new System.Drawing.Size(110, 24);
-            this.lblCamions_tag.TabIndex = 9;
-            this.lblCamions_tag.Text = "Camions | ";
-            // 
-            // lblProduits_tag
-            // 
-            this.lblProduits_tag.AutoSize = true;
-            this.lblProduits_tag.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.lblProduits_tag.ForeColor = System.Drawing.Color.Black;
-            this.lblProduits_tag.Location = new System.Drawing.Point(404, 460);
-            this.lblProduits_tag.Name = "lblProduits_tag";
-            this.lblProduits_tag.Size = new System.Drawing.Size(108, 24);
-            this.lblProduits_tag.TabIndex = 10;
-            this.lblProduits_tag.Text = "Produits | ";
-            // 
-            // lblChauffeurs_tag
-            // 
-            this.lblChauffeurs_tag.AutoSize = true;
-            this.lblChauffeurs_tag.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.lblChauffeurs_tag.ForeColor = System.Drawing.Color.Black;
-            this.lblChauffeurs_tag.Location = new System.Drawing.Point(694, 460);
-            this.lblChauffeurs_tag.Name = "lblChauffeurs_tag";
-            this.lblChauffeurs_tag.Size = new System.Drawing.Size(133, 24);
-            this.lblChauffeurs_tag.TabIndex = 11;
-            this.lblChauffeurs_tag.Text = "Chauffeurs | ";
-            // 
-            // lblTransporteurs
-            // 
-            this.lblTransporteurs.AutoSize = true;
-            this.lblTransporteurs.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.lblTransporteurs.ForeColor = System.Drawing.Color.Black;
-            this.lblTransporteurs.Location = new System.Drawing.Point(114, 700);
-            this.lblTransporteurs.Name = "lblTransporteurs";
-            this.lblTransporteurs.Size = new System.Drawing.Size(163, 24);
-            this.lblTransporteurs.TabIndex = 12;
-            this.lblTransporteurs.Text = "Transporteurs | ";
-            // 
-            // lblDestiProven_tag
-            // 
-            this.lblDestiProven_tag.AutoSize = true;
-            this.lblDestiProven_tag.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.lblDestiProven_tag.ForeColor = System.Drawing.Color.Black;
-            this.lblDestiProven_tag.Location = new System.Drawing.Point(404, 700);
-            this.lblDestiProven_tag.Name = "lblDestiProven_tag";
-            this.lblDestiProven_tag.Size = new System.Drawing.Size(136, 24);
-            this.lblDestiProven_tag.TabIndex = 13;
-            this.lblDestiProven_tag.Text = "Localisation |";
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label1.ForeColor = System.Drawing.Color.Black;
-            this.label1.Location = new System.Drawing.Point(694, 700);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(87, 24);
-            this.label1.TabIndex = 14;
-            this.label1.Text = "Clients |";
             // 
             // lblusername
             // 
-            this.lblusername.AutoSize = true;
-            this.lblusername.Font = new System.Drawing.Font("Capriola", 22F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.lblusername.ForeColor = System.Drawing.Color.MediumSeaGreen;
-            this.lblusername.Location = new System.Drawing.Point(110, 55);
+            resources.ApplyResources(this.lblusername, "lblusername");
+            this.lblusername.BackColor = System.Drawing.Color.Transparent;
+            this.lblusername.ForeColor = System.Drawing.Color.White;
             this.lblusername.Name = "lblusername";
-            this.lblusername.Size = new System.Drawing.Size(60, 55);
-            this.lblusername.TabIndex = 15;
-            this.lblusername.Text = "...";
             // 
-            // lblPesees
+            // pictureBox1
             // 
-            this.lblPesees.AutoSize = true;
-            this.lblPesees.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.lblPesees.ForeColor = System.Drawing.Color.Black;
-            this.lblPesees.Location = new System.Drawing.Point(114, 174);
-            this.lblPesees.Name = "lblPesees";
-            this.lblPesees.Size = new System.Drawing.Size(96, 24);
-            this.lblPesees.TabIndex = 17;
-            this.lblPesees.Text = "Pesees | ";
+            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pictureBox1.Image = global::WidraSoft.UI.Properties.Resources.check1;
+            resources.ApplyResources(this.pictureBox1, "pictureBox1");
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.TabStop = false;
             // 
-            // btPesees
+            // lblChangerMdp
             // 
-            this.btPesees.BackColor = System.Drawing.Color.MediumSeaGreen;
-            this.btPesees.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.btPesees.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btPesees.Image = global::WidraSoft.UI.Properties.Resources.Weighing;
-            this.btPesees.Location = new System.Drawing.Point(114, 209);
-            this.btPesees.Name = "btPesees";
-            this.btPesees.Size = new System.Drawing.Size(241, 182);
-            this.btPesees.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.btPesees.TabIndex = 18;
-            this.btPesees.TabStop = false;
-            this.btPesees.MouseEnter += new System.EventHandler(this.btPesees_MouseEnter);
-            this.btPesees.MouseLeave += new System.EventHandler(this.btPesees_MouseLeave);
+            this.lblChangerMdp.ActiveLinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(190)))), ((int)(((byte)(117)))));
+            resources.ApplyResources(this.lblChangerMdp, "lblChangerMdp");
+            this.lblChangerMdp.BackColor = System.Drawing.Color.Transparent;
+            this.lblChangerMdp.ForeColor = System.Drawing.Color.White;
+            this.lblChangerMdp.LinkColor = System.Drawing.Color.White;
+            this.lblChangerMdp.Name = "lblChangerMdp";
+            this.lblChangerMdp.TabStop = true;
             // 
-            // label2
+            // lblMonCompte
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label2.ForeColor = System.Drawing.Color.Black;
-            this.label2.Location = new System.Drawing.Point(979, 700);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(77, 24);
-            this.label2.TabIndex = 22;
-            this.label2.Text = "Ponts |";
+            this.lblMonCompte.ActiveLinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(190)))), ((int)(((byte)(117)))));
+            resources.ApplyResources(this.lblMonCompte, "lblMonCompte");
+            this.lblMonCompte.BackColor = System.Drawing.Color.Transparent;
+            this.lblMonCompte.ForeColor = System.Drawing.Color.White;
+            this.lblMonCompte.LinkColor = System.Drawing.Color.White;
+            this.lblMonCompte.Name = "lblMonCompte";
+            this.lblMonCompte.TabStop = true;
             // 
-            // label3
+            // panelUserInfo
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label3.ForeColor = System.Drawing.Color.Black;
-            this.label3.Location = new System.Drawing.Point(979, 460);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(92, 24);
-            this.label3.TabIndex = 21;
-            this.label3.Text = "Firmes | ";
+            this.panelUserInfo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(62)))), ((int)(((byte)(60)))));
+            this.panelUserInfo.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panelUserInfo.Controls.Add(this.Spain_flag);
+            this.panelUserInfo.Controls.Add(this.England_flag);
+            this.panelUserInfo.Controls.Add(this.France_flag);
+            this.panelUserInfo.Controls.Add(this.cbLang);
+            this.panelUserInfo.Controls.Add(this.pictureBox1);
+            this.panelUserInfo.Controls.Add(this.lblMonCompte);
+            this.panelUserInfo.Controls.Add(this.lblusername);
+            this.panelUserInfo.Controls.Add(this.lblChangerMdp);
+            resources.ApplyResources(this.panelUserInfo, "panelUserInfo");
+            this.panelUserInfo.Name = "panelUserInfo";
+            this.panelUserInfo.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panelUserInfo_MouseDown);
             // 
-            // btPonts
+            // Spain_flag
             // 
-            this.btPonts.BackColor = System.Drawing.Color.MediumSeaGreen;
-            this.btPonts.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.btPonts.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btPonts.Image = ((System.Drawing.Image)(resources.GetObject("btPonts.Image")));
-            this.btPonts.Location = new System.Drawing.Point(979, 737);
-            this.btPonts.Name = "btPonts";
-            this.btPonts.Size = new System.Drawing.Size(241, 182);
-            this.btPonts.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.btPonts.TabIndex = 20;
-            this.btPonts.TabStop = false;
-            this.btPonts.MouseEnter += new System.EventHandler(this.btPonts_MouseEnter);
-            this.btPonts.MouseLeave += new System.EventHandler(this.btPonts_MouseLeave);
+            resources.ApplyResources(this.Spain_flag, "Spain_flag");
+            this.Spain_flag.BackColor = System.Drawing.Color.Transparent;
+            this.Spain_flag.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.Spain_flag.Image = global::WidraSoft.UI.Properties.Resources.spain;
+            this.Spain_flag.Name = "Spain_flag";
+            this.Spain_flag.TabStop = false;
             // 
-            // btFirmes
+            // England_flag
             // 
-            this.btFirmes.BackColor = System.Drawing.Color.MediumSeaGreen;
-            this.btFirmes.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.btFirmes.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btFirmes.Image = ((System.Drawing.Image)(resources.GetObject("btFirmes.Image")));
-            this.btFirmes.Location = new System.Drawing.Point(979, 500);
-            this.btFirmes.Name = "btFirmes";
-            this.btFirmes.Size = new System.Drawing.Size(241, 182);
-            this.btFirmes.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.btFirmes.TabIndex = 19;
-            this.btFirmes.TabStop = false;
-            this.btFirmes.Click += new System.EventHandler(this.btFirmes_Click);
-            this.btFirmes.MouseEnter += new System.EventHandler(this.btFirmes_MouseEnter);
-            this.btFirmes.MouseLeave += new System.EventHandler(this.btFirmes_MouseLeave);
+            resources.ApplyResources(this.England_flag, "England_flag");
+            this.England_flag.BackColor = System.Drawing.Color.Transparent;
+            this.England_flag.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.England_flag.Image = global::WidraSoft.UI.Properties.Resources.united_kingdom;
+            this.England_flag.Name = "England_flag";
+            this.England_flag.TabStop = false;
+            // 
+            // France_flag
+            // 
+            resources.ApplyResources(this.France_flag, "France_flag");
+            this.France_flag.BackColor = System.Drawing.Color.Transparent;
+            this.France_flag.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.France_flag.Image = global::WidraSoft.UI.Properties.Resources.france;
+            this.France_flag.Name = "France_flag";
+            this.France_flag.TabStop = false;
+            // 
+            // cbLang
+            // 
+            resources.ApplyResources(this.cbLang, "cbLang");
+            this.cbLang.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(62)))), ((int)(((byte)(60)))));
+            this.cbLang.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbLang.ForeColor = System.Drawing.Color.White;
+            this.cbLang.FormattingEnabled = true;
+            this.cbLang.Name = "cbLang";
+            this.cbLang.SelectedIndexChanged += new System.EventHandler(this.cbLang_SelectedIndexChanged);
+            // 
+            // panelLayout
+            // 
+            this.panelLayout.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(86)))), ((int)(((byte)(77)))));
+            this.panelLayout.Controls.Add(this.panelFooter);
+            this.panelLayout.Controls.Add(this.pictureBox2);
+            resources.ApplyResources(this.panelLayout, "panelLayout");
+            this.panelLayout.Name = "panelLayout";
+            // 
+            // panelFooter
+            // 
+            this.panelFooter.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(62)))), ((int)(((byte)(60)))));
+            this.panelFooter.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            resources.ApplyResources(this.panelFooter, "panelFooter");
+            this.panelFooter.Name = "panelFooter";
+            // 
+            // pictureBox2
+            // 
+            resources.ApplyResources(this.pictureBox2, "pictureBox2");
+            this.pictureBox2.Image = global::WidraSoft.UI.Properties.Resources.logo_Widra_2501;
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.TabStop = false;
             // 
             // MenuGeneral
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 25F);
+            resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1312, 950);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.btPonts);
-            this.Controls.Add(this.btFirmes);
-            this.Controls.Add(this.btPesees);
-            this.Controls.Add(this.lblPesees);
-            this.Controls.Add(this.lblusername);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.lblDestiProven_tag);
-            this.Controls.Add(this.lblTransporteurs);
-            this.Controls.Add(this.lblChauffeurs_tag);
-            this.Controls.Add(this.lblProduits_tag);
-            this.Controls.Add(this.lblCamions_tag);
-            this.Controls.Add(this.splitter2);
-            this.Controls.Add(this.splitter1);
-            this.Controls.Add(this.btClients);
-            this.Controls.Add(this.btOriginDestination);
-            this.Controls.Add(this.btTransporteurs);
-            this.Controls.Add(this.btChauffeurs);
-            this.Controls.Add(this.btProduits);
-            this.Controls.Add(this.btCamions);
-            this.Controls.Add(this.menuStrip1);
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(62)))), ((int)(((byte)(60)))));
+            this.Controls.Add(this.panelLayout);
+            this.Controls.Add(this.panelUserInfo);
+            this.Controls.Add(this.menuStrip);
             this.ForeColor = System.Drawing.Color.Black;
-            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.MainMenuStrip = this.menuStrip1;
+            this.MainMenuStrip = this.menuStrip;
             this.Name = "MenuGeneral";
-            this.Text = "Menu General";
+            this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide;
             this.Load += new System.EventHandler(this.MenuGeneral_Load);
-            this.menuStrip1.ResumeLayout(false);
-            this.menuStrip1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.btCamions)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btProduits)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btChauffeurs)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btTransporteurs)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btOriginDestination)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btClients)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btPesees)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btPonts)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btFirmes)).EndInit();
+            this.SizeChanged += new System.EventHandler(this.MenuGeneral_SizeChanged);
+            this.menuStrip.ResumeLayout(false);
+            this.menuStrip.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.panelUserInfo.ResumeLayout(false);
+            this.panelUserInfo.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.Spain_flag)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.England_flag)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.France_flag)).EndInit();
+            this.panelLayout.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -458,34 +423,39 @@ namespace WidraSoft.UI
 
         #endregion
 
-        private System.Windows.Forms.MenuStrip menuStrip1;
+        private System.Windows.Forms.MenuStrip menuStrip;
         private System.Windows.Forms.ToolStripMenuItem camionsToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem chauffeursToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem paramètresToolStripMenuItem;
-        private System.Windows.Forms.PictureBox btCamions;
-        private System.Windows.Forms.PictureBox btProduits;
-        private System.Windows.Forms.PictureBox btChauffeurs;
-        private System.Windows.Forms.PictureBox btTransporteurs;
-        private System.Windows.Forms.PictureBox btOriginDestination;
-        private System.Windows.Forms.PictureBox btClients;
         private System.Windows.Forms.ToolStripMenuItem reportingToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem aideToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem quitterToolStripMenuItem;
-        private System.Windows.Forms.Splitter splitter1;
-        private System.Windows.Forms.Splitter splitter2;
-        private System.Windows.Forms.Label lblCamions_tag;
-        private System.Windows.Forms.Label lblProduits_tag;
-        private System.Windows.Forms.Label lblChauffeurs_tag;
-        private System.Windows.Forms.Label lblTransporteurs;
-        private System.Windows.Forms.Label lblDestiProven_tag;
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label lblusername;
-        private System.Windows.Forms.Label lblPesees;
-        private System.Windows.Forms.PictureBox btPesees;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.PictureBox btPonts;
-        private System.Windows.Forms.PictureBox btFirmes;
+        private System.Windows.Forms.ToolStripMenuItem aIIIToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem gérerToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem pontsToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem camionsToolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem produitsToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem chauffeursToolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem firmesToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem transporteursToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem destinationsProvenancesToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem clientsToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem pToolStripMenuItem;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.LinkLabel lblChangerMdp;
+        private System.Windows.Forms.LinkLabel lblMonCompte;
+        private System.Windows.Forms.Panel panelUserInfo;
+        private System.Windows.Forms.Panel panelLayout;
+        private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.Panel panelFooter;
+        private System.Windows.Forms.ToolStripMenuItem synchronisationToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem BorneToolpStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem homeToolStripMenuItem;
+        private System.Windows.Forms.ComboBox cbLang;
+        private System.Windows.Forms.PictureBox Spain_flag;
+        private System.Windows.Forms.PictureBox England_flag;
+        private System.Windows.Forms.PictureBox France_flag;
         //private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

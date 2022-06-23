@@ -15,7 +15,13 @@ namespace WidraSoft.UI
         public GroupesList(string filter)
         {
             InitializeComponent();
+            menuStrip1.Renderer = new MyRenderer();
             vg_filter = filter;
+        }
+
+        private class MyRenderer : ToolStripProfessionalRenderer
+        {
+            public MyRenderer() : base(new MyMenuColors()) { }
         }
 
         private void GroupesList_Load(object sender, EventArgs e)

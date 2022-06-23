@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FirmeDetail));
-            this.splitter2 = new System.Windows.Forms.Splitter();
             this.splitter1 = new System.Windows.Forms.Splitter();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.btSupprimer = new System.Windows.Forms.Button();
@@ -71,20 +70,12 @@
             this.txtValide = new System.Windows.Forms.TextBox();
             this.txtBloque = new System.Windows.Forms.TextBox();
             this.txtAttention = new System.Windows.Forms.TextBox();
-            this.label16 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
-            // splitter2
-            // 
-            this.splitter2.BackColor = System.Drawing.Color.Gray;
-            resources.ApplyResources(this.splitter2, "splitter2");
-            this.splitter2.Name = "splitter2";
-            this.splitter2.TabStop = false;
-            // 
             // splitter1
             // 
-            this.splitter1.BackColor = System.Drawing.Color.MediumSeaGreen;
+            this.splitter1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(190)))), ((int)(((byte)(117)))));
             resources.ApplyResources(this.splitter1, "splitter1");
             this.splitter1.Name = "splitter1";
             this.splitter1.TabStop = false;
@@ -94,15 +85,14 @@
             this.groupBox1.Controls.Add(this.btSupprimer);
             this.groupBox1.Controls.Add(this.btModifier);
             this.groupBox1.Controls.Add(this.btAjouter);
-            this.groupBox1.Cursor = System.Windows.Forms.Cursors.Default;
             resources.ApplyResources(this.groupBox1, "groupBox1");
-            this.groupBox1.ForeColor = System.Drawing.Color.MediumSeaGreen;
+            this.groupBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(190)))), ((int)(((byte)(117)))));
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.TabStop = false;
             // 
             // btSupprimer
             // 
-            this.btSupprimer.BackColor = System.Drawing.Color.MediumSeaGreen;
+            this.btSupprimer.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(190)))), ((int)(((byte)(117)))));
             this.btSupprimer.Cursor = System.Windows.Forms.Cursors.Hand;
             resources.ApplyResources(this.btSupprimer, "btSupprimer");
             this.btSupprimer.ForeColor = System.Drawing.Color.Black;
@@ -115,7 +105,7 @@
             // 
             // btModifier
             // 
-            this.btModifier.BackColor = System.Drawing.Color.MediumSeaGreen;
+            this.btModifier.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(190)))), ((int)(((byte)(117)))));
             this.btModifier.Cursor = System.Windows.Forms.Cursors.Hand;
             resources.ApplyResources(this.btModifier, "btModifier");
             this.btModifier.ForeColor = System.Drawing.Color.Black;
@@ -128,7 +118,7 @@
             // 
             // btAjouter
             // 
-            this.btAjouter.BackColor = System.Drawing.Color.MediumSeaGreen;
+            this.btAjouter.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(190)))), ((int)(((byte)(117)))));
             this.btAjouter.Cursor = System.Windows.Forms.Cursors.Hand;
             resources.ApplyResources(this.btAjouter, "btAjouter");
             this.btAjouter.ForeColor = System.Drawing.Color.Black;
@@ -142,11 +132,13 @@
             // label3
             // 
             resources.ApplyResources(this.label3, "label3");
+            this.label3.ForeColor = System.Drawing.Color.White;
             this.label3.Name = "label3";
             // 
             // label2
             // 
             resources.ApplyResources(this.label2, "label2");
+            this.label2.ForeColor = System.Drawing.Color.White;
             this.label2.Name = "label2";
             // 
             // txtDateCreation
@@ -163,6 +155,7 @@
             // label1
             // 
             resources.ApplyResources(this.label1, "label1");
+            this.label1.ForeColor = System.Drawing.Color.White;
             this.label1.Name = "label1";
             // 
             // txtId
@@ -173,6 +166,7 @@
             // label4
             // 
             resources.ApplyResources(this.label4, "label4");
+            this.label4.ForeColor = System.Drawing.Color.White;
             this.label4.Name = "label4";
             // 
             // txtDesignation
@@ -183,6 +177,7 @@
             // label5
             // 
             resources.ApplyResources(this.label5, "label5");
+            this.label5.ForeColor = System.Drawing.Color.White;
             this.label5.Name = "label5";
             // 
             // txtAdresse
@@ -193,6 +188,7 @@
             // label6
             // 
             resources.ApplyResources(this.label6, "label6");
+            this.label6.ForeColor = System.Drawing.Color.White;
             this.label6.Name = "label6";
             // 
             // txtCodePostal
@@ -203,6 +199,7 @@
             // label7
             // 
             resources.ApplyResources(this.label7, "label7");
+            this.label7.ForeColor = System.Drawing.Color.White;
             this.label7.Name = "label7";
             // 
             // txtLocalite
@@ -213,6 +210,7 @@
             // label8
             // 
             resources.ApplyResources(this.label8, "label8");
+            this.label8.ForeColor = System.Drawing.Color.White;
             this.label8.Name = "label8";
             // 
             // txtPays
@@ -223,6 +221,7 @@
             // label9
             // 
             resources.ApplyResources(this.label9, "label9");
+            this.label9.ForeColor = System.Drawing.Color.White;
             this.label9.Name = "label9";
             // 
             // txtTelephone
@@ -233,6 +232,7 @@
             // label10
             // 
             resources.ApplyResources(this.label10, "label10");
+            this.label10.ForeColor = System.Drawing.Color.White;
             this.label10.Name = "label10";
             // 
             // txtEmail
@@ -243,6 +243,7 @@
             // label11
             // 
             resources.ApplyResources(this.label11, "label11");
+            this.label11.ForeColor = System.Drawing.Color.White;
             this.label11.Name = "label11";
             // 
             // txtNumTVA
@@ -253,6 +254,7 @@
             // label12
             // 
             resources.ApplyResources(this.label12, "label12");
+            this.label12.ForeColor = System.Drawing.Color.White;
             this.label12.Name = "label12";
             // 
             // txtSiteWebUrl
@@ -263,6 +265,7 @@
             // chx_Valide
             // 
             resources.ApplyResources(this.chx_Valide, "chx_Valide");
+            this.chx_Valide.ForeColor = System.Drawing.Color.White;
             this.chx_Valide.Name = "chx_Valide";
             this.chx_Valide.UseVisualStyleBackColor = true;
             this.chx_Valide.CheckedChanged += new System.EventHandler(this.chx_Valide_CheckedChanged);
@@ -270,6 +273,7 @@
             // chx_Bloque
             // 
             resources.ApplyResources(this.chx_Bloque, "chx_Bloque");
+            this.chx_Bloque.ForeColor = System.Drawing.Color.White;
             this.chx_Bloque.Name = "chx_Bloque";
             this.chx_Bloque.UseVisualStyleBackColor = true;
             this.chx_Bloque.CheckedChanged += new System.EventHandler(this.chx_Bloque_CheckedChanged);
@@ -282,11 +286,13 @@
             // label13
             // 
             resources.ApplyResources(this.label13, "label13");
+            this.label13.ForeColor = System.Drawing.Color.White;
             this.label13.Name = "label13";
             // 
             // chx_Attention
             // 
             resources.ApplyResources(this.chx_Attention, "chx_Attention");
+            this.chx_Attention.ForeColor = System.Drawing.Color.White;
             this.chx_Attention.Name = "chx_Attention";
             this.chx_Attention.UseVisualStyleBackColor = true;
             this.chx_Attention.CheckedChanged += new System.EventHandler(this.chx_Attention_CheckedChanged);
@@ -294,6 +300,7 @@
             // label14
             // 
             resources.ApplyResources(this.label14, "label14");
+            this.label14.ForeColor = System.Drawing.Color.White;
             this.label14.Name = "label14";
             // 
             // txtAlerte
@@ -304,6 +311,7 @@
             // label15
             // 
             resources.ApplyResources(this.label15, "label15");
+            this.label15.ForeColor = System.Drawing.Color.White;
             this.label15.Name = "label15";
             // 
             // txtObservations
@@ -326,17 +334,11 @@
             resources.ApplyResources(this.txtAttention, "txtAttention");
             this.txtAttention.Name = "txtAttention";
             // 
-            // label16
-            // 
-            resources.ApplyResources(this.label16, "label16");
-            this.label16.Name = "label16";
-            // 
             // FirmeDetail
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.White;
-            this.Controls.Add(this.label16);
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(86)))), ((int)(((byte)(77)))));
             this.Controls.Add(this.txtAttention);
             this.Controls.Add(this.txtBloque);
             this.Controls.Add(this.txtValide);
@@ -374,8 +376,8 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.txtId);
             this.Controls.Add(this.groupBox1);
-            this.Controls.Add(this.splitter2);
             this.Controls.Add(this.splitter1);
+            this.ForeColor = System.Drawing.Color.White;
             this.MaximizeBox = false;
             this.Name = "FirmeDetail";
             this.Load += new System.EventHandler(this.FirmeDetail_Load);
@@ -386,8 +388,6 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.Splitter splitter2;
         private System.Windows.Forms.Splitter splitter1;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Button btSupprimer;
@@ -429,6 +429,5 @@
         private System.Windows.Forms.TextBox txtValide;
         private System.Windows.Forms.TextBox txtBloque;
         private System.Windows.Forms.TextBox txtAttention;
-        private System.Windows.Forms.Label label16;
     }
 }

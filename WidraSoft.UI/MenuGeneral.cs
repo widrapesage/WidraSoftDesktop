@@ -3,9 +3,13 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Drawing.Drawing2D;
+using System.Runtime.InteropServices;
 using System.Text;
 using System.Windows.Forms;
 using WidraSoft.BL;
+using System.Globalization;
+using System.Threading;
 
 namespace WidraSoft.UI
 {
@@ -14,85 +18,35 @@ namespace WidraSoft.UI
         public MenuGeneral(Int32 UtilisateurId)
         {
             InitializeComponent();
+            menuStrip.Renderer = new MyRenderer();
+            //MyBackgroundColors myBackgroundColors = new MyBackgroundColors(panelLayout.Width, panelLayout.Height);
+            //panelLayout.Paint += new PaintEventHandler(myBackgroundColors.set_Background);
             Utilisateur utilisateur = new Utilisateur();
             lblusername.Text = utilisateur.GetFullUsername(UtilisateurId);
         }
 
+
+        private class MyRenderer : ToolStripProfessionalRenderer
+        {
+            public MyRenderer() : base(new MyMenuColors()) { }
+        }
+
+
+
         private void MenuGeneral_Load(object sender, EventArgs e)
         {
-            this.CenterToScreen();                       
+            this.CenterToScreen();
+            WindowState = FormWindowState.Maximized;
+            this.MaximizedBounds = Screen.FromHandle(this.Handle).WorkingArea;
+            cbLang.DataSource = Language.Languages;
+            cbLang.ValueMember = null;
+            cbLang.DisplayMember = Language.Languages[0];
+            cbLang.SelectedItem =null;
         }
-
-        private void btCamions_MouseEnter(object sender, EventArgs e)
-        {
-            this.btCamions.BackColor = Color.MintCream;
-        }
-
-        private void btCamions_MouseLeave(object sender, EventArgs e)
-        {
-            this.btCamions.BackColor = Color.MediumSeaGreen;
-        }
-
-        private void btProduits_MouseEnter(object sender, EventArgs e)
-        {
-            this.btProduits.BackColor = Color.MintCream;
-        }
-
-        private void btProduits_MouseLeave(object sender, EventArgs e)
-        {
-            this.btProduits.BackColor = Color.MediumSeaGreen;
-        }
-
-        private void btChauffeurs_MouseEnter(object sender, EventArgs e)
-        {
-            this.btChauffeurs.BackColor = Color.MintCream;
-        }
-
-        private void btChauffeurs_MouseLeave(object sender, EventArgs e)
-        {
-            this.btChauffeurs.BackColor = Color.MediumSeaGreen;
-        }
-
-        private void btTransporteurs_MouseEnter(object sender, EventArgs e)
-        {
-            this.btTransporteurs.BackColor = Color.MintCream;
-        }
-
-        private void btTransporteurs_MouseLeave(object sender, EventArgs e)
-        {
-            this.btTransporteurs.BackColor = Color.MediumSeaGreen;
-        }
-
-        private void btOriginDestination_MouseEnter(object sender, EventArgs e)
-        {
-            this.btOriginDestination.BackColor = Color.MintCream;
-        }
-
-        private void btOriginDestination_MouseLeave(object sender, EventArgs e)
-        {
-            this.btOriginDestination.BackColor = Color.MediumSeaGreen;
-        }
-
-        private void btClients_MouseEnter(object sender, EventArgs e)
-        {
-            this.btClients.BackColor = Color.MintCream;
-        }
-
-        private void btClients_MouseLeave(object sender, EventArgs e)
-        {
-            this.btClients.BackColor = Color.MediumSeaGreen;
-        }
-
-        private void btPesees_MouseEnter(object sender, EventArgs e)
-        {
-            this.btPesees.BackColor = Color.MintCream;
-        }
-
-        private void btPesees_MouseLeave(object sender, EventArgs e)
-        {
-            this.btPesees.BackColor = Color.MediumSeaGreen;
-        }
-
+        [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
+        private extern static void ReleaseCapture();
+        [DllImport("user32.DLL", EntryPoint = "SendMessage")]
+        private extern static void  SendMessage(System.IntPtr hWnd, int Msg, int wParam, int lParam);
         private void quitterToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Application.Exit();
@@ -104,25 +58,7 @@ namespace WidraSoft.UI
             form.Show();
         }
 
-        private void btFirmes_MouseEnter(object sender, EventArgs e)
-        {
-            this.btFirmes.BackColor = Color.MintCream;
-        }
 
-        private void btPonts_MouseLeave(object sender, EventArgs e)
-        {
-            this.btPonts.BackColor = Color.MediumSeaGreen;
-        }
-
-        private void btFirmes_MouseLeave(object sender, EventArgs e)
-        {
-            this.btFirmes.BackColor = Color.MediumSeaGreen;
-        }
-
-        private void btPonts_MouseEnter(object sender, EventArgs e)
-        {
-            this.btPonts.BackColor = Color.MintCream;
-        }
 
         private void chauffeursToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -134,6 +70,88 @@ namespace WidraSoft.UI
         {
             Form form = new FirmesList("1=1");
             form.Show();
+        }
+
+        private void btCamions_Click(object sender, EventArgs e)
+        {
+            Form form = new CamionsListe("1=1");
+            form.Show();
+        }
+
+        private void MenuGeneral_SizeChanged(object sender, EventArgs e)
+        {
+
+            //MyBackgroundColors myBackgroundColors = new MyBackgroundColors(panelLayout.Width, panelLayout.Height);
+            //panelLayout.Paint += new PaintEventHandler(myBackgroundColors.set_Background);
+        }
+
+        private void firmesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Form form = new FirmesList("1=1");
+            form.Show();
+        }
+
+        private void camionsToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            Form form = new CamionsListe("1=1");
+            form.Show();
+        }
+
+        private void panelUserInfo_MouseDown(object sender, MouseEventArgs e)
+        {
+            ReleaseCapture();
+            SendMessage(this.Handle, 0x112, 0xf012, 0);
+        }
+
+
+
+        private void cbLang_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (cbLang.Text == "Francais(FR)")
+            {
+                France_flag.Visible = true;
+                England_flag.Visible = false;
+                Spain_flag.Visible = false;
+                ChangeLanguage("fr");
+            }
+
+            if (cbLang.Text == "Anglais(ANG)")
+            {
+                France_flag.Visible = false;
+                England_flag.Visible = true;
+                Spain_flag.Visible = false;
+                ChangeLanguage("en");
+            }
+
+            if (cbLang.Text == "Espagnol(ESP)")
+            {
+                France_flag.Visible = false;
+                England_flag.Visible = false;
+                Spain_flag.Visible = true;
+            }
+
+
+        }
+
+        private void ChangeLanguage(string lang)
+        {
+            foreach (Control c in this.Controls)
+            {
+                Type controlType = c.GetType();
+                String controlName = controlType.Name;
+                ComponentResourceManager resources = new ComponentResourceManager(typeof(MenuGeneral));
+                if (controlName == "Panel")
+                {
+                    foreach (Control cc in c.Controls) 
+                    {
+                        resources.ApplyResources(cc, cc.Name, new CultureInfo(lang));
+                    }
+                }
+                else
+                {
+                    resources.ApplyResources(c, c.Name, new CultureInfo(lang));
+                }
+            }
         }
     }
 }

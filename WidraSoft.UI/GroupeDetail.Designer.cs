@@ -30,7 +30,8 @@ namespace WidraSoft.UI
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(GroupeDetail));
-            this.splitter2 = new System.Windows.Forms.Splitter();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.splitter1 = new System.Windows.Forms.Splitter();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.btSupprimer = new System.Windows.Forms.Button();
@@ -54,24 +55,11 @@ namespace WidraSoft.UI
             ((System.ComponentModel.ISupportInitialize)(this.dgvGroupeDroits)).BeginInit();
             this.SuspendLayout();
             // 
-            // splitter2
-            // 
-            this.splitter2.BackColor = System.Drawing.Color.Gray;
-            this.splitter2.Enabled = false;
-            this.splitter2.Location = new System.Drawing.Point(24, 0);
-            this.splitter2.Name = "splitter2";
-            this.splitter2.Size = new System.Drawing.Size(10, 1033);
-            this.splitter2.TabIndex = 17;
-            this.splitter2.TabStop = false;
-            // 
             // splitter1
             // 
-            this.splitter1.BackColor = System.Drawing.Color.MediumSeaGreen;
-            this.splitter1.Enabled = false;
-            this.splitter1.Location = new System.Drawing.Point(0, 0);
+            this.splitter1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(190)))), ((int)(((byte)(117)))));
+            resources.ApplyResources(this.splitter1, "splitter1");
             this.splitter1.Name = "splitter1";
-            this.splitter1.Size = new System.Drawing.Size(24, 1033);
-            this.splitter1.TabIndex = 16;
             this.splitter1.TabStop = false;
             // 
             // groupBox1
@@ -79,182 +67,138 @@ namespace WidraSoft.UI
             this.groupBox1.Controls.Add(this.btSupprimer);
             this.groupBox1.Controls.Add(this.btModifier);
             this.groupBox1.Controls.Add(this.btAjouter);
-            this.groupBox1.Cursor = System.Windows.Forms.Cursors.Default;
-            this.groupBox1.Font = new System.Drawing.Font("Corbel", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.groupBox1.ForeColor = System.Drawing.Color.MediumSeaGreen;
-            this.groupBox1.Location = new System.Drawing.Point(41, 11);
+            resources.ApplyResources(this.groupBox1, "groupBox1");
+            this.groupBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(190)))), ((int)(((byte)(117)))));
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(982, 133);
-            this.groupBox1.TabIndex = 18;
             this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Actions";
             // 
             // btSupprimer
             // 
-            this.btSupprimer.BackColor = System.Drawing.Color.MediumSeaGreen;
+            this.btSupprimer.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(190)))), ((int)(((byte)(117)))));
             this.btSupprimer.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btSupprimer.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            resources.ApplyResources(this.btSupprimer, "btSupprimer");
             this.btSupprimer.ForeColor = System.Drawing.Color.Black;
             this.btSupprimer.Image = global::WidraSoft.UI.Properties.Resources.button_delete;
-            this.btSupprimer.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btSupprimer.Location = new System.Drawing.Point(603, 28);
             this.btSupprimer.Name = "btSupprimer";
-            this.btSupprimer.Padding = new System.Windows.Forms.Padding(0, 18, 0, 6);
-            this.btSupprimer.Size = new System.Drawing.Size(112, 86);
-            this.btSupprimer.TabIndex = 2;
-            this.btSupprimer.Text = "Supprimer";
-            this.btSupprimer.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btSupprimer.UseVisualStyleBackColor = false;
             this.btSupprimer.Click += new System.EventHandler(this.btSupprimer_Click);
             // 
             // btModifier
             // 
-            this.btModifier.BackColor = System.Drawing.Color.MediumSeaGreen;
+            this.btModifier.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(190)))), ((int)(((byte)(117)))));
             this.btModifier.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btModifier.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            resources.ApplyResources(this.btModifier, "btModifier");
             this.btModifier.ForeColor = System.Drawing.Color.Black;
             this.btModifier.Image = global::WidraSoft.UI.Properties.Resources.button_edit;
-            this.btModifier.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btModifier.Location = new System.Drawing.Point(419, 28);
             this.btModifier.Name = "btModifier";
-            this.btModifier.Padding = new System.Windows.Forms.Padding(0, 18, 0, 6);
-            this.btModifier.Size = new System.Drawing.Size(112, 86);
-            this.btModifier.TabIndex = 1;
-            this.btModifier.Text = "Modifier";
-            this.btModifier.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btModifier.UseVisualStyleBackColor = false;
             this.btModifier.Click += new System.EventHandler(this.btModifier_Click);
             // 
             // btAjouter
             // 
-            this.btAjouter.BackColor = System.Drawing.Color.MediumSeaGreen;
+            this.btAjouter.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(190)))), ((int)(((byte)(117)))));
             this.btAjouter.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btAjouter.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            resources.ApplyResources(this.btAjouter, "btAjouter");
             this.btAjouter.ForeColor = System.Drawing.Color.Black;
             this.btAjouter.Image = global::WidraSoft.UI.Properties.Resources.button_add;
-            this.btAjouter.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btAjouter.Location = new System.Drawing.Point(233, 28);
             this.btAjouter.Name = "btAjouter";
-            this.btAjouter.Padding = new System.Windows.Forms.Padding(0, 18, 0, 6);
-            this.btAjouter.Size = new System.Drawing.Size(112, 86);
-            this.btAjouter.TabIndex = 0;
-            this.btAjouter.Text = "Ajouter";
-            this.btAjouter.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btAjouter.UseVisualStyleBackColor = false;
             this.btAjouter.Click += new System.EventHandler(this.btAjouter_Click);
             // 
             // label2
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(72, 227);
+            resources.ApplyResources(this.label2, "label2");
+            this.label2.ForeColor = System.Drawing.Color.White;
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(117, 25);
-            this.label2.TabIndex = 22;
-            this.label2.Text = "Date création";
             // 
             // txtDateCreation
             // 
-            this.txtDateCreation.Location = new System.Drawing.Point(219, 224);
+            resources.ApplyResources(this.txtDateCreation, "txtDateCreation");
             this.txtDateCreation.Name = "txtDateCreation";
             this.txtDateCreation.ReadOnly = true;
-            this.txtDateCreation.Size = new System.Drawing.Size(370, 31);
-            this.txtDateCreation.TabIndex = 21;
             // 
             // label1
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(72, 180);
+            resources.ApplyResources(this.label1, "label1");
+            this.label1.ForeColor = System.Drawing.Color.White;
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(28, 25);
-            this.label1.TabIndex = 20;
-            this.label1.Text = "Id";
             // 
             // txtId
             // 
-            this.txtId.Enabled = false;
-            this.txtId.Location = new System.Drawing.Point(219, 177);
+            resources.ApplyResources(this.txtId, "txtId");
             this.txtId.Name = "txtId";
-            this.txtId.Size = new System.Drawing.Size(150, 31);
-            this.txtId.TabIndex = 19;
             // 
             // label3
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(72, 271);
+            resources.ApplyResources(this.label3, "label3");
+            this.label3.ForeColor = System.Drawing.Color.White;
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(107, 25);
-            this.label3.TabIndex = 24;
-            this.label3.Text = "Désignation";
             // 
             // txtDesignation
             // 
-            this.txtDesignation.Location = new System.Drawing.Point(219, 268);
+            resources.ApplyResources(this.txtDesignation, "txtDesignation");
             this.txtDesignation.Name = "txtDesignation";
-            this.txtDesignation.Size = new System.Drawing.Size(370, 31);
-            this.txtDesignation.TabIndex = 23;
             // 
             // label4
             // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(72, 316);
+            resources.ApplyResources(this.label4, "label4");
+            this.label4.ForeColor = System.Drawing.Color.White;
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(117, 25);
-            this.label4.TabIndex = 26;
-            this.label4.Text = "Code groupe";
             // 
             // txtCode
             // 
-            this.txtCode.Location = new System.Drawing.Point(219, 313);
+            resources.ApplyResources(this.txtCode, "txtCode");
             this.txtCode.Name = "txtCode";
-            this.txtCode.Size = new System.Drawing.Size(150, 31);
-            this.txtCode.TabIndex = 25;
             // 
             // label7
             // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(72, 361);
+            resources.ApplyResources(this.label7, "label7");
+            this.label7.ForeColor = System.Drawing.Color.White;
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(133, 25);
-            this.label7.TabIndex = 28;
-            this.label7.Text = "Limiter nombre";
             // 
             // cbLimite
             // 
+            resources.ApplyResources(this.cbLimite, "cbLimite");
             this.cbLimite.FormattingEnabled = true;
             this.cbLimite.Items.AddRange(new object[] {
-            "Oui",
-            "Non\t"});
-            this.cbLimite.Location = new System.Drawing.Point(219, 358);
+            resources.GetString("cbLimite.Items"),
+            resources.GetString("cbLimite.Items1")});
             this.cbLimite.Name = "cbLimite";
-            this.cbLimite.Size = new System.Drawing.Size(150, 33);
-            this.cbLimite.TabIndex = 27;
             // 
             // label5
             // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(72, 407);
+            resources.ApplyResources(this.label5, "label5");
+            this.label5.ForeColor = System.Drawing.Color.White;
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(131, 25);
-            this.label5.TabIndex = 30;
-            this.label5.Text = "Nombre limite ";
             // 
             // txtNbLimite
             // 
-            this.txtNbLimite.Location = new System.Drawing.Point(219, 405);
+            resources.ApplyResources(this.txtNbLimite, "txtNbLimite");
             this.txtNbLimite.Name = "txtNbLimite";
-            this.txtNbLimite.Size = new System.Drawing.Size(150, 31);
-            this.txtNbLimite.TabIndex = 29;
             // 
             // dgvGroupeDroits
             // 
-            this.dgvGroupeDroits.BackgroundColor = System.Drawing.Color.GhostWhite;
+            this.dgvGroupeDroits.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(86)))), ((int)(((byte)(77)))));
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Corbel", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(190)))), ((int)(((byte)(117)))));
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvGroupeDroits.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvGroupeDroits.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvGroupeDroits.Location = new System.Drawing.Point(72, 515);
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Corbel", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(86)))), ((int)(((byte)(77)))));
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvGroupeDroits.DefaultCellStyle = dataGridViewCellStyle2;
+            resources.ApplyResources(this.dgvGroupeDroits, "dgvGroupeDroits");
             this.dgvGroupeDroits.Name = "dgvGroupeDroits";
-            this.dgvGroupeDroits.RowHeadersWidth = 62;
             this.dgvGroupeDroits.RowTemplate.Height = 33;
-            this.dgvGroupeDroits.Size = new System.Drawing.Size(926, 499);
-            this.dgvGroupeDroits.TabIndex = 31;
             this.dgvGroupeDroits.CellEndEdit += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvGroupeDroits_CellEndEdit);
             this.dgvGroupeDroits.CellLeave += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvGroupeDroits_CellLeave);
             this.dgvGroupeDroits.CellValueChanged += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvGroupeDroits_CellValueChanged);
@@ -262,27 +206,20 @@ namespace WidraSoft.UI
             // 
             // btSupprimerDgv
             // 
-            this.btSupprimerDgv.BackColor = System.Drawing.Color.MediumSeaGreen;
+            this.btSupprimerDgv.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(190)))), ((int)(((byte)(117)))));
             this.btSupprimerDgv.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btSupprimerDgv.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            resources.ApplyResources(this.btSupprimerDgv, "btSupprimerDgv");
             this.btSupprimerDgv.ForeColor = System.Drawing.Color.Black;
             this.btSupprimerDgv.Image = global::WidraSoft.UI.Properties.Resources.delete_button;
-            this.btSupprimerDgv.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btSupprimerDgv.Location = new System.Drawing.Point(72, 446);
             this.btSupprimerDgv.Name = "btSupprimerDgv";
-            this.btSupprimerDgv.Padding = new System.Windows.Forms.Padding(0, 18, 0, 6);
-            this.btSupprimerDgv.Size = new System.Drawing.Size(47, 63);
-            this.btSupprimerDgv.TabIndex = 3;
-            this.btSupprimerDgv.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btSupprimerDgv.UseVisualStyleBackColor = false;
             this.btSupprimerDgv.Click += new System.EventHandler(this.btSupprimerDgv_Click);
             // 
             // GroupeDetail
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 25F);
+            resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1034, 1033);
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(86)))), ((int)(((byte)(77)))));
             this.Controls.Add(this.btSupprimerDgv);
             this.Controls.Add(this.dgvGroupeDroits);
             this.Controls.Add(this.label5);
@@ -298,12 +235,9 @@ namespace WidraSoft.UI
             this.Controls.Add(this.label1);
             this.Controls.Add(this.txtId);
             this.Controls.Add(this.groupBox1);
-            this.Controls.Add(this.splitter2);
             this.Controls.Add(this.splitter1);
-            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.Name = "GroupeDetail";
-            this.Text = "Groupe";
             this.Load += new System.EventHandler(this.GroupeDetail_Load);
             this.groupBox1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvGroupeDroits)).EndInit();
@@ -313,8 +247,6 @@ namespace WidraSoft.UI
         }
 
         #endregion
-
-        private System.Windows.Forms.Splitter splitter2;
         private System.Windows.Forms.Splitter splitter1;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Button btSupprimer;

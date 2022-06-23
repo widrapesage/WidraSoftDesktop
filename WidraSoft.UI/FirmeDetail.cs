@@ -246,10 +246,7 @@ namespace WidraSoft.UI
                 btSupprimer.BackColor = Color.MediumSeaGreen;
         }
 
-        
-
-
-
+       
         private void chx_Valide_CheckedChanged(object sender, EventArgs e)
         {
             if (chx_Valide.Checked)
