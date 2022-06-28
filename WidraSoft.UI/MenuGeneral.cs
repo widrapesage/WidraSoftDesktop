@@ -15,14 +15,12 @@ namespace WidraSoft.UI
 {
     public partial class MenuGeneral : Form
     {
+        int vg_UtilisateurId;
         public MenuGeneral(Int32 UtilisateurId)
         {
             InitializeComponent();
             menuStrip.Renderer = new MyRenderer();
-            //MyBackgroundColors myBackgroundColors = new MyBackgroundColors(panelLayout.Width, panelLayout.Height);
-            //panelLayout.Paint += new PaintEventHandler(myBackgroundColors.set_Background);
-            Utilisateur utilisateur = new Utilisateur();
-            lblusername.Text = utilisateur.GetFullUsername(UtilisateurId);
+            vg_UtilisateurId = UtilisateurId;
         }
 
 
@@ -41,7 +39,10 @@ namespace WidraSoft.UI
             cbLang.DataSource = Language.Languages;
             cbLang.ValueMember = null;
             cbLang.DisplayMember = Language.Languages[0];
-            cbLang.SelectedItem =null;
+            cbLang.SelectedIndex = 0;
+
+            Utilisateur utilisateur = new Utilisateur();
+            lblusername.Text = utilisateur.GetFullUsername(vg_UtilisateurId);
         }
         [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
         private extern static void ReleaseCapture();
@@ -57,8 +58,6 @@ namespace WidraSoft.UI
             Form form = new UtilisateursList("1=1");
             form.Show();
         }
-
-
 
         private void chauffeursToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -76,13 +75,6 @@ namespace WidraSoft.UI
         {
             Form form = new CamionsListe("1=1");
             form.Show();
-        }
-
-        private void MenuGeneral_SizeChanged(object sender, EventArgs e)
-        {
-
-            //MyBackgroundColors myBackgroundColors = new MyBackgroundColors(panelLayout.Width, panelLayout.Height);
-            //panelLayout.Paint += new PaintEventHandler(myBackgroundColors.set_Background);
         }
 
         private void firmesToolStripMenuItem_Click(object sender, EventArgs e)
@@ -103,24 +95,25 @@ namespace WidraSoft.UI
             SendMessage(this.Handle, 0x112, 0xf012, 0);
         }
 
-
-
         private void cbLang_SelectedIndexChanged(object sender, EventArgs e)
         {
+         
             if (cbLang.Text == "Francais(FR)")
             {
                 France_flag.Visible = true;
                 England_flag.Visible = false;
                 Spain_flag.Visible = false;
-                ChangeLanguage("fr");
-            }
+                Language_Manager language_Manager = new Language_Manager();
+                language_Manager.ChangeLanguage("fr", this, typeof(MenuGeneral));
+             }
 
             if (cbLang.Text == "Anglais(ANG)")
             {
                 France_flag.Visible = false;
                 England_flag.Visible = true;
                 Spain_flag.Visible = false;
-                ChangeLanguage("en");
+                Language_Manager language_Manager = new Language_Manager();
+                language_Manager.ChangeLanguage("en", this, typeof(MenuGeneral));
             }
 
             if (cbLang.Text == "Espagnol(ESP)")
@@ -128,30 +121,10 @@ namespace WidraSoft.UI
                 France_flag.Visible = false;
                 England_flag.Visible = false;
                 Spain_flag.Visible = true;
+              
             }
-
-
-        }
-
-        private void ChangeLanguage(string lang)
-        {
-            foreach (Control c in this.Controls)
-            {
-                Type controlType = c.GetType();
-                String controlName = controlType.Name;
-                ComponentResourceManager resources = new ComponentResourceManager(typeof(MenuGeneral));
-                if (controlName == "Panel")
-                {
-                    foreach (Control cc in c.Controls) 
-                    {
-                        resources.ApplyResources(cc, cc.Name, new CultureInfo(lang));
-                    }
-                }
-                else
-                {
-                    resources.ApplyResources(c, c.Name, new CultureInfo(lang));
-                }
-            }
-        }
+            Utilisateur utilisateur = new Utilisateur();
+            lblusername.Text = utilisateur.GetFullUsername(vg_UtilisateurId);
+        }     
     }
 }

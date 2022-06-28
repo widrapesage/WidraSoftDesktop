@@ -63,10 +63,12 @@
             // 
             // btSupprimer
             // 
-            this.btSupprimer.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(190)))), ((int)(((byte)(117)))));
+            this.btSupprimer.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(62)))), ((int)(((byte)(60)))));
             this.btSupprimer.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btSupprimer.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(190)))), ((int)(((byte)(117)))));
+            this.btSupprimer.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btSupprimer.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btSupprimer.ForeColor = System.Drawing.Color.Black;
+            this.btSupprimer.ForeColor = System.Drawing.Color.White;
             this.btSupprimer.Image = global::WidraSoft.UI.Properties.Resources.button_delete;
             this.btSupprimer.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
             this.btSupprimer.ImeMode = System.Windows.Forms.ImeMode.NoControl;
@@ -84,10 +86,12 @@
             // 
             // btModifier
             // 
-            this.btModifier.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(190)))), ((int)(((byte)(117)))));
+            this.btModifier.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(62)))), ((int)(((byte)(60)))));
             this.btModifier.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btModifier.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(190)))), ((int)(((byte)(117)))));
+            this.btModifier.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btModifier.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btModifier.ForeColor = System.Drawing.Color.Black;
+            this.btModifier.ForeColor = System.Drawing.Color.White;
             this.btModifier.Image = global::WidraSoft.UI.Properties.Resources.button_edit;
             this.btModifier.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
             this.btModifier.ImeMode = System.Windows.Forms.ImeMode.NoControl;
@@ -105,10 +109,12 @@
             // 
             // btAjouter
             // 
-            this.btAjouter.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(190)))), ((int)(((byte)(117)))));
+            this.btAjouter.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(62)))), ((int)(((byte)(60)))));
             this.btAjouter.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btAjouter.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(190)))), ((int)(((byte)(117)))));
+            this.btAjouter.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btAjouter.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btAjouter.ForeColor = System.Drawing.Color.Black;
+            this.btAjouter.ForeColor = System.Drawing.Color.White;
             this.btAjouter.Image = global::WidraSoft.UI.Properties.Resources.button_add;
             this.btAjouter.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
             this.btAjouter.ImeMode = System.Windows.Forms.ImeMode.NoControl;
@@ -129,11 +135,12 @@
             this.groupBox1.Controls.Add(this.btSupprimer);
             this.groupBox1.Controls.Add(this.btModifier);
             this.groupBox1.Controls.Add(this.btAjouter);
+            this.groupBox1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.groupBox1.Font = new System.Drawing.Font("Corbel", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.groupBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(190)))), ((int)(((byte)(117)))));
-            this.groupBox1.Location = new System.Drawing.Point(32, 9);
+            this.groupBox1.Location = new System.Drawing.Point(36, 9);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(937, 116);
+            this.groupBox1.Size = new System.Drawing.Size(909, 116);
             this.groupBox1.TabIndex = 20;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Actions";
@@ -152,7 +159,9 @@
             // 
             // txtPlaque
             // 
+            this.txtPlaque.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(62)))), ((int)(((byte)(60)))));
             this.txtPlaque.Font = new System.Drawing.Font("Corbel", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.txtPlaque.ForeColor = System.Drawing.Color.White;
             this.txtPlaque.Location = new System.Drawing.Point(169, 243);
             this.txtPlaque.Name = "txtPlaque";
             this.txtPlaque.Size = new System.Drawing.Size(296, 25);
@@ -184,7 +193,9 @@
             // 
             // txtDateCreation
             // 
+            this.txtDateCreation.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(62)))), ((int)(((byte)(60)))));
             this.txtDateCreation.Font = new System.Drawing.Font("Corbel", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.txtDateCreation.ForeColor = System.Drawing.Color.White;
             this.txtDateCreation.Location = new System.Drawing.Point(169, 180);
             this.txtDateCreation.Name = "txtDateCreation";
             this.txtDateCreation.ReadOnly = true;
@@ -193,7 +204,9 @@
             // 
             // txtBadge
             // 
+            this.txtBadge.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(62)))), ((int)(((byte)(60)))));
             this.txtBadge.Font = new System.Drawing.Font("Corbel", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.txtBadge.ForeColor = System.Drawing.Color.White;
             this.txtBadge.Location = new System.Drawing.Point(169, 211);
             this.txtBadge.Name = "txtBadge";
             this.txtBadge.Size = new System.Drawing.Size(296, 25);
@@ -213,8 +226,10 @@
             // 
             // txtId
             // 
+            this.txtId.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(62)))), ((int)(((byte)(60)))));
             this.txtId.Enabled = false;
             this.txtId.Font = new System.Drawing.Font("Corbel", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.txtId.ForeColor = System.Drawing.Color.White;
             this.txtId.Location = new System.Drawing.Point(169, 145);
             this.txtId.Name = "txtId";
             this.txtId.Size = new System.Drawing.Size(120, 25);
@@ -234,7 +249,9 @@
             // 
             // txtCode
             // 
+            this.txtCode.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(62)))), ((int)(((byte)(60)))));
             this.txtCode.Font = new System.Drawing.Font("Corbel", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.txtCode.ForeColor = System.Drawing.Color.White;
             this.txtCode.Location = new System.Drawing.Point(169, 275);
             this.txtCode.Name = "txtCode";
             this.txtCode.Size = new System.Drawing.Size(296, 25);
@@ -254,7 +271,9 @@
             // 
             // txtTare
             // 
+            this.txtTare.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(62)))), ((int)(((byte)(60)))));
             this.txtTare.Font = new System.Drawing.Font("Corbel", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.txtTare.ForeColor = System.Drawing.Color.White;
             this.txtTare.Location = new System.Drawing.Point(169, 309);
             this.txtTare.Name = "txtTare";
             this.txtTare.Size = new System.Drawing.Size(120, 25);
@@ -298,7 +317,9 @@
             // 
             // txtObservations
             // 
+            this.txtObservations.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(62)))), ((int)(((byte)(60)))));
             this.txtObservations.Font = new System.Drawing.Font("Corbel", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.txtObservations.ForeColor = System.Drawing.Color.White;
             this.txtObservations.Location = new System.Drawing.Point(169, 495);
             this.txtObservations.Multiline = true;
             this.txtObservations.Name = "txtObservations";
@@ -319,7 +340,9 @@
             // 
             // txtAlerte
             // 
+            this.txtAlerte.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(62)))), ((int)(((byte)(60)))));
             this.txtAlerte.Font = new System.Drawing.Font("Corbel", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.txtAlerte.ForeColor = System.Drawing.Color.White;
             this.txtAlerte.Location = new System.Drawing.Point(648, 414);
             this.txtAlerte.Multiline = true;
             this.txtAlerte.Name = "txtAlerte";
@@ -354,7 +377,9 @@
             // 
             // txtBlocage
             // 
+            this.txtBlocage.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(62)))), ((int)(((byte)(60)))));
             this.txtBlocage.Font = new System.Drawing.Font("Corbel", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.txtBlocage.ForeColor = System.Drawing.Color.White;
             this.txtBlocage.Location = new System.Drawing.Point(169, 414);
             this.txtBlocage.Multiline = true;
             this.txtBlocage.Name = "txtBlocage";
@@ -395,7 +420,7 @@
             this.splitter1.Enabled = false;
             this.splitter1.Location = new System.Drawing.Point(0, 0);
             this.splitter1.Name = "splitter1";
-            this.splitter1.Size = new System.Drawing.Size(20, 653);
+            this.splitter1.Size = new System.Drawing.Size(10, 653);
             this.splitter1.TabIndex = 67;
             this.splitter1.TabStop = false;
             // 

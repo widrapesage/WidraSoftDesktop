@@ -121,6 +121,9 @@
   <data name="quitterToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
     <value>160, 56</value>
   </data>
+  <data name="quitterToolStripMenuItem.Text" xml:space="preserve">
+    <value>Exit</value>
+  </data>
   <data name="menuStrip.Size" type="System.Drawing.Size, System.Drawing">
     <value>161, 755</value>
   </data>
@@ -182,40 +185,22 @@
     <value>161, 0</value>
   </data>
   <data name="panelUserInfo.Size" type="System.Drawing.Size, System.Drawing">
-    <value>862, 118</value>
-  </data>
-  <data name="Spain_flag.Location" type="System.Drawing.Point, System.Drawing">
-    <value>673, 24</value>
-  </data>
-  <data name="England_flag.Location" type="System.Drawing.Point, System.Drawing">
-    <value>673, 24</value>
-  </data>
-  <data name="France_flag.Location" type="System.Drawing.Point, System.Drawing">
-    <value>673, 24</value>
-  </data>
-  <data name="cbLang.Location" type="System.Drawing.Point, System.Drawing">
-    <value>703, 26</value>
+    <value>1052, 146</value>
   </data>
   <data name="panelLayout.Location" type="System.Drawing.Point, System.Drawing">
-    <value>161, 118</value>
+    <value>161, 146</value>
   </data>
   <data name="panelLayout.Size" type="System.Drawing.Size, System.Drawing">
-    <value>862, 637</value>
+    <value>1052, 609</value>
   </data>
   <data name="panelFooter.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 596</value>
+    <value>0, 568</value>
   </data>
   <data name="panelFooter.Size" type="System.Drawing.Size, System.Drawing">
-    <value>862, 41</value>
+    <value>1052, 41</value>
   </data>
   <data name="pictureBox2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>862, 637</value>
-  </data>
-  <data name="label1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>31, 15</value>
-  </data>
-  <data name="label1.Text" xml:space="preserve">
-    <value>Man</value>
+    <value>1052, 609</value>
   </data>
   <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>

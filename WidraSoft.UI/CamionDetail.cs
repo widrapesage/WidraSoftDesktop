@@ -174,37 +174,37 @@ namespace WidraSoft.UI
         private void btAjouter_MouseEnter(object sender, EventArgs e)
         {
             if (btAjouter.Enabled == true)
-                btAjouter.BackColor = Color.MintCream;
+                btAjouter.BackColor = Color.FromArgb(72, 86, 77);
         }
 
         private void btAjouter_MouseLeave(object sender, EventArgs e)
         {
             if (btAjouter.Enabled == true)
-                btAjouter.BackColor = Color.MediumSeaGreen;
+                btAjouter.BackColor = Color.FromArgb(58, 62 ,60) ;
         }
 
         private void btModifier_MouseEnter(object sender, EventArgs e)
         {
             if (btModifier.Enabled == true)
-                btModifier.BackColor = Color.MintCream;
+                btModifier.BackColor = Color.FromArgb(72, 86, 77);
         }
 
         private void btModifier_MouseLeave(object sender, EventArgs e)
         {
             if (btModifier.Enabled == true)
-                btModifier.BackColor = Color.MediumSeaGreen;
+                btModifier.BackColor = Color.FromArgb(58, 62, 60);
         }
 
         private void btSupprimer_MouseEnter(object sender, EventArgs e)
         {
             if (btSupprimer.Enabled == true)
-                btSupprimer.BackColor = Color.MintCream;
+                btSupprimer.BackColor = Color.FromArgb(72, 86, 77);
         }
 
         private void btSupprimer_MouseLeave(object sender, EventArgs e)
         {
             if (btSupprimer.Enabled == true)
-                btSupprimer.BackColor = Color.MediumSeaGreen;
+                btSupprimer.BackColor = Color.FromArgb(58, 62, 60);
         }
 
         private void chx_Valide_CheckedChanged(object sender, EventArgs e)

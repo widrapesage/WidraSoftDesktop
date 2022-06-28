@@ -56,6 +56,13 @@ namespace WidraSoft.UI
             this.lblChangerMdp = new System.Windows.Forms.LinkLabel();
             this.lblMonCompte = new System.Windows.Forms.LinkLabel();
             this.panelUserInfo = new System.Windows.Forms.Panel();
+            this.panelLicenceInfo = new System.Windows.Forms.Panel();
+            this.txtValidite = new System.Windows.Forms.TextBox();
+            this.txtTypeAbonnement = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.txtEntreprise = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
             this.Spain_flag = new System.Windows.Forms.PictureBox();
             this.England_flag = new System.Windows.Forms.PictureBox();
             this.France_flag = new System.Windows.Forms.PictureBox();
@@ -66,6 +73,7 @@ namespace WidraSoft.UI
             this.menuStrip.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panelUserInfo.SuspendLayout();
+            this.panelLicenceInfo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Spain_flag)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.England_flag)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.France_flag)).BeginInit();
@@ -96,10 +104,11 @@ namespace WidraSoft.UI
             // 
             // homeToolStripMenuItem
             // 
+            this.homeToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(86)))), ((int)(((byte)(77)))));
             this.homeToolStripMenuItem.Image = global::WidraSoft.UI.Properties.Resources.Balance;
             resources.ApplyResources(this.homeToolStripMenuItem, "homeToolStripMenuItem");
             this.homeToolStripMenuItem.Name = "homeToolStripMenuItem";
-            this.homeToolStripMenuItem.Padding = new System.Windows.Forms.Padding(0, 0, 0, 50);
+            this.homeToolStripMenuItem.Padding = new System.Windows.Forms.Padding(0, 0, 0, 85);
             // 
             // camionsToolStripMenuItem
             // 
@@ -321,6 +330,7 @@ namespace WidraSoft.UI
             // 
             this.panelUserInfo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(62)))), ((int)(((byte)(60)))));
             this.panelUserInfo.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panelUserInfo.Controls.Add(this.panelLicenceInfo);
             this.panelUserInfo.Controls.Add(this.Spain_flag);
             this.panelUserInfo.Controls.Add(this.England_flag);
             this.panelUserInfo.Controls.Add(this.France_flag);
@@ -333,38 +343,88 @@ namespace WidraSoft.UI
             this.panelUserInfo.Name = "panelUserInfo";
             this.panelUserInfo.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panelUserInfo_MouseDown);
             // 
+            // panelLicenceInfo
+            // 
+            this.panelLicenceInfo.Controls.Add(this.txtValidite);
+            this.panelLicenceInfo.Controls.Add(this.txtTypeAbonnement);
+            this.panelLicenceInfo.Controls.Add(this.label1);
+            this.panelLicenceInfo.Controls.Add(this.txtEntreprise);
+            this.panelLicenceInfo.Controls.Add(this.label2);
+            this.panelLicenceInfo.Controls.Add(this.label3);
+            resources.ApplyResources(this.panelLicenceInfo, "panelLicenceInfo");
+            this.panelLicenceInfo.Name = "panelLicenceInfo";
+            // 
+            // txtValidite
+            // 
+            resources.ApplyResources(this.txtValidite, "txtValidite");
+            this.txtValidite.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(62)))), ((int)(((byte)(60)))));
+            this.txtValidite.ForeColor = System.Drawing.Color.White;
+            this.txtValidite.Name = "txtValidite";
+            // 
+            // txtTypeAbonnement
+            // 
+            resources.ApplyResources(this.txtTypeAbonnement, "txtTypeAbonnement");
+            this.txtTypeAbonnement.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(62)))), ((int)(((byte)(60)))));
+            this.txtTypeAbonnement.ForeColor = System.Drawing.Color.White;
+            this.txtTypeAbonnement.Name = "txtTypeAbonnement";
+            // 
+            // label1
+            // 
+            resources.ApplyResources(this.label1, "label1");
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Name = "label1";
+            // 
+            // txtEntreprise
+            // 
+            resources.ApplyResources(this.txtEntreprise, "txtEntreprise");
+            this.txtEntreprise.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(62)))), ((int)(((byte)(60)))));
+            this.txtEntreprise.ForeColor = System.Drawing.Color.White;
+            this.txtEntreprise.Name = "txtEntreprise";
+            // 
+            // label2
+            // 
+            resources.ApplyResources(this.label2, "label2");
+            this.label2.ForeColor = System.Drawing.Color.White;
+            this.label2.Name = "label2";
+            // 
+            // label3
+            // 
+            resources.ApplyResources(this.label3, "label3");
+            this.label3.ForeColor = System.Drawing.Color.White;
+            this.label3.Name = "label3";
+            // 
             // Spain_flag
             // 
-            resources.ApplyResources(this.Spain_flag, "Spain_flag");
             this.Spain_flag.BackColor = System.Drawing.Color.Transparent;
             this.Spain_flag.Cursor = System.Windows.Forms.Cursors.Hand;
             this.Spain_flag.Image = global::WidraSoft.UI.Properties.Resources.spain;
+            resources.ApplyResources(this.Spain_flag, "Spain_flag");
             this.Spain_flag.Name = "Spain_flag";
             this.Spain_flag.TabStop = false;
             // 
             // England_flag
             // 
-            resources.ApplyResources(this.England_flag, "England_flag");
             this.England_flag.BackColor = System.Drawing.Color.Transparent;
             this.England_flag.Cursor = System.Windows.Forms.Cursors.Hand;
             this.England_flag.Image = global::WidraSoft.UI.Properties.Resources.united_kingdom;
+            resources.ApplyResources(this.England_flag, "England_flag");
             this.England_flag.Name = "England_flag";
             this.England_flag.TabStop = false;
             // 
             // France_flag
             // 
-            resources.ApplyResources(this.France_flag, "France_flag");
             this.France_flag.BackColor = System.Drawing.Color.Transparent;
             this.France_flag.Cursor = System.Windows.Forms.Cursors.Hand;
             this.France_flag.Image = global::WidraSoft.UI.Properties.Resources.france;
+            resources.ApplyResources(this.France_flag, "France_flag");
             this.France_flag.Name = "France_flag";
             this.France_flag.TabStop = false;
             // 
             // cbLang
             // 
-            resources.ApplyResources(this.cbLang, "cbLang");
             this.cbLang.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(62)))), ((int)(((byte)(60)))));
             this.cbLang.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            resources.ApplyResources(this.cbLang, "cbLang");
             this.cbLang.ForeColor = System.Drawing.Color.White;
             this.cbLang.FormattingEnabled = true;
             this.cbLang.Name = "cbLang";
@@ -405,12 +465,13 @@ namespace WidraSoft.UI
             this.Name = "MenuGeneral";
             this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide;
             this.Load += new System.EventHandler(this.MenuGeneral_Load);
-            this.SizeChanged += new System.EventHandler(this.MenuGeneral_SizeChanged);
             this.menuStrip.ResumeLayout(false);
             this.menuStrip.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panelUserInfo.ResumeLayout(false);
             this.panelUserInfo.PerformLayout();
+            this.panelLicenceInfo.ResumeLayout(false);
+            this.panelLicenceInfo.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Spain_flag)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.England_flag)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.France_flag)).EndInit();
@@ -456,6 +517,13 @@ namespace WidraSoft.UI
         private System.Windows.Forms.PictureBox Spain_flag;
         private System.Windows.Forms.PictureBox England_flag;
         private System.Windows.Forms.PictureBox France_flag;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox txtTypeAbonnement;
+        private System.Windows.Forms.TextBox txtEntreprise;
+        private System.Windows.Forms.TextBox txtValidite;
+        private System.Windows.Forms.Panel panelLicenceInfo;
         //private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

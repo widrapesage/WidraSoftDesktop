@@ -60,8 +60,9 @@ namespace WidraSoft.UI
             // 
             // txtLogin
             // 
-            this.txtLogin.BackColor = System.Drawing.Color.MintCream;
+            this.txtLogin.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(62)))), ((int)(((byte)(60)))));
             this.txtLogin.Font = new System.Drawing.Font("Corbel", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.txtLogin.ForeColor = System.Drawing.Color.White;
             this.txtLogin.Location = new System.Drawing.Point(615, 192);
             this.txtLogin.Name = "txtLogin";
             this.txtLogin.Size = new System.Drawing.Size(339, 25);
@@ -93,8 +94,9 @@ namespace WidraSoft.UI
             // 
             // txtPassword
             // 
-            this.txtPassword.BackColor = System.Drawing.Color.MintCream;
+            this.txtPassword.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(62)))), ((int)(((byte)(60)))));
             this.txtPassword.Font = new System.Drawing.Font("Corbel", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.txtPassword.ForeColor = System.Drawing.Color.White;
             this.txtPassword.Location = new System.Drawing.Point(615, 229);
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.PasswordChar = '*';
@@ -103,8 +105,11 @@ namespace WidraSoft.UI
             // 
             // btConnecter
             // 
-            this.btConnecter.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(190)))), ((int)(((byte)(117)))));
+            this.btConnecter.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(62)))), ((int)(((byte)(60)))));
+            this.btConnecter.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(190)))), ((int)(((byte)(117)))));
+            this.btConnecter.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btConnecter.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btConnecter.ForeColor = System.Drawing.Color.White;
             this.btConnecter.Location = new System.Drawing.Point(615, 271);
             this.btConnecter.Name = "btConnecter";
             this.btConnecter.Size = new System.Drawing.Size(181, 45);
@@ -115,8 +120,11 @@ namespace WidraSoft.UI
             // 
             // btQuitter
             // 
-            this.btQuitter.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(190)))), ((int)(((byte)(117)))));
+            this.btQuitter.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(62)))), ((int)(((byte)(60)))));
+            this.btQuitter.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(190)))), ((int)(((byte)(117)))));
+            this.btQuitter.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btQuitter.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btQuitter.ForeColor = System.Drawing.Color.White;
             this.btQuitter.Location = new System.Drawing.Point(801, 271);
             this.btQuitter.Name = "btQuitter";
             this.btQuitter.Size = new System.Drawing.Size(152, 45);
