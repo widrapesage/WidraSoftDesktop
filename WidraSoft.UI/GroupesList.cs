@@ -28,6 +28,10 @@ namespace WidraSoft.UI
         {
             this.CenterToScreen();
             Bind_Dgv();
+            cbLang.DataSource = Language.Languages;
+            cbLang.ValueMember = null;
+            cbLang.DisplayMember = Language.Languages[0];
+            cbLang.SelectedIndex = 0;
         }
 
         private void Bind_Dgv()
@@ -40,6 +44,8 @@ namespace WidraSoft.UI
             DgvList.Columns["LIMITER"].Width = 100;
             DgvList.Columns["NBLIMITE"].Visible= false;
             DgvList.Columns["DATECREATION"].Width = 250;
+
+            DgvList.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             DgvList.ReadOnly = true;
 
         }
@@ -119,6 +125,42 @@ namespace WidraSoft.UI
             else
             {
                 MessageBox.Show("Vous n'avez selectionné aucun enregistrement à supprimer");
+            }
+        }
+
+        private void txtSearchBox_TextChanged(object sender, EventArgs e)
+        {
+            Groupe groupe = new Groupe();
+            DgvList.DataSource = groupe.SearchBox(txtSearchBox.Text);
+        }
+
+        private void cbLang_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (cbLang.Text == "Francais(FR)")
+            {
+                France_flag.Visible = true;
+                England_flag.Visible = false;
+                Spain_flag.Visible = false;
+                /*Language_Manager language_Manager = new Language_Manager();
+                language_Manager.ChangeLanguage("fr", this, typeof(CamionsListe));
+                Localize_Dgv("fr"); */
+            }
+
+            if (cbLang.Text == "Anglais(ANG)")
+            {
+                France_flag.Visible = false;
+                England_flag.Visible = true;
+                Spain_flag.Visible = false;
+                /*Language_Manager language_Manager = new Language_Manager();
+                language_Manager.ChangeLanguage("en", this, typeof(CamionsListe));
+                Localize_Dgv("en"); */
+            }
+
+            if (cbLang.Text == "Espagnol(ESP)")
+            {
+                France_flag.Visible = false;
+                England_flag.Visible = false;
+                Spain_flag.Visible = true;
             }
         }
     }

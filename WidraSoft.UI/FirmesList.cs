@@ -17,13 +17,22 @@ namespace WidraSoft.UI
         public FirmesList(string filter)
         {
             InitializeComponent();
+            menuStrip1.Renderer = new MyRenderer();
             vg_filter = filter; 
         }
 
+        private class MyRenderer : ToolStripProfessionalRenderer
+        {
+            public MyRenderer() : base(new MyMenuColors()) { }
+        }
         private void FirmesList_Load(object sender, EventArgs e)
         {
             this.CenterToScreen();
             Bind_Dgv();
+            cbLang.DataSource = Language.Languages;
+            cbLang.ValueMember = null;
+            cbLang.DisplayMember = Language.Languages[0];
+            cbLang.SelectedIndex = 0;
         }
 
         private void Bind_Dgv()
@@ -51,7 +60,7 @@ namespace WidraSoft.UI
             DgvList.Columns["DATECREATION"].Width = 200;
             DgvList.Columns["DATECREATION"].HeaderText = "DATE CREATION";
 
-
+            DgvList.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             DgvList.ReadOnly = true;
 
         }
@@ -135,6 +144,52 @@ namespace WidraSoft.UI
                 MessageBox.Show("Vous n'avez selectionné aucun enregistrement à supprimer");
             }
         
+        }
+
+        private void rechercherToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void menuStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
+        {
+
+        }
+
+        private void txtSearchBox_TextChanged(object sender, EventArgs e)
+        {
+            Firme firme = new Firme();
+            DgvList.DataSource = firme.SearchBox(txtSearchBox.Text);
+        }
+
+        private void cbLang_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (cbLang.Text == "Francais(FR)")
+            {
+                France_flag.Visible = true;
+                England_flag.Visible = false;
+                Spain_flag.Visible = false;
+                /*Language_Manager language_Manager = new Language_Manager();
+                language_Manager.ChangeLanguage("fr", this, typeof(CamionsListe));
+                Localize_Dgv("fr"); */
+            }
+
+            if (cbLang.Text == "Anglais(ANG)")
+            {
+                France_flag.Visible = false;
+                England_flag.Visible = true;
+                Spain_flag.Visible = false;
+                /*Language_Manager language_Manager = new Language_Manager();
+                language_Manager.ChangeLanguage("en", this, typeof(CamionsListe));
+                Localize_Dgv("en"); */
+            }
+
+            if (cbLang.Text == "Espagnol(ESP)")
+            {
+                France_flag.Visible = false;
+                England_flag.Visible = false;
+                Spain_flag.Visible = true;
+            }
         }
     }
 }
