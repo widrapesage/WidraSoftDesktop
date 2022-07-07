@@ -19,11 +19,19 @@ namespace WidraSoft.UI
                 Type controlType = c.GetType();
                 String controlName = controlType.Name;
                 ComponentResourceManager resources = new ComponentResourceManager(typeOfForm);
-                if (controlName == "Panel")
+                if (controlName == "Panel" || controlName == "GroupBox")
                 {
                     foreach (Control cc in c.Controls)
                     {
-                        resources.ApplyResources(cc, cc.Name, new CultureInfo(lang));
+                        if (cc.GetType().Name == controlName)
+                        {
+                            foreach (Control sc in cc.Controls)
+                            {
+                                resources.ApplyResources(sc, sc.Name, new CultureInfo(lang));
+                            }
+                        }
+                        else
+                            resources.ApplyResources(cc, cc.Name, new CultureInfo(lang));
                     }
                 }
                 else if (controlName == "MenuStrip")
@@ -55,6 +63,31 @@ namespace WidraSoft.UI
 
                 res.ApplyResources(item, item.Name, lang);
             }
+        }
+
+        public static String Localize(String text, string lang)
+        {
+            String return_Value = "";
+            if (text == "Valider")
+            {
+                if (lang == "Francais(FR)")
+                    return_Value = "Valider";
+                else if (lang == "Anglais(ANG)")
+                    return_Value = "Save";
+                else
+                    return_Value = "Valider";
+            }
+            if (text == "Modifier")
+            {
+                if (lang == "Francais(FR)")
+                    return_Value = "Modifier";
+                else if (lang == "Anglais(ANG)")
+                    return_Value = "Edit";
+                else
+                    return_Value = "Modifier";
+            }
+
+            return return_Value;
         }
     }
 }

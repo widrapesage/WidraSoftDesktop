@@ -59,7 +59,7 @@
   </resheader>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="homeToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>160, 118</value>
+    <value>160, 153</value>
   </data>
   <data name="camionsToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
     <value>160, 56</value>
@@ -185,22 +185,49 @@
     <value>161, 0</value>
   </data>
   <data name="panelUserInfo.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1052, 146</value>
+    <value>1134, 154</value>
+  </data>
+  <data name="panelLicenceInfo.Location" type="System.Drawing.Point, System.Drawing">
+    <value>625, 0</value>
+  </data>
+  <data name="panelLicenceInfo.Size" type="System.Drawing.Size, System.Drawing">
+    <value>507, 152</value>
+  </data>
+  <data name="label1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>62, 58</value>
+  </data>
+  <data name="label1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>101, 17</value>
+  </data>
+  <data name="label1.Text" xml:space="preserve">
+    <value>Subscription : </value>
+  </data>
+  <data name="label2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>64, 17</value>
+  </data>
+  <data name="label2.Text" xml:space="preserve">
+    <value>Validity : </value>
+  </data>
+  <data name="label3.Size" type="System.Drawing.Size, System.Drawing">
+    <value>79, 17</value>
+  </data>
+  <data name="label3.Text" xml:space="preserve">
+    <value>Company :</value>
   </data>
   <data name="panelLayout.Location" type="System.Drawing.Point, System.Drawing">
-    <value>161, 146</value>
+    <value>161, 154</value>
   </data>
   <data name="panelLayout.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1052, 609</value>
+    <value>1134, 601</value>
   </data>
   <data name="panelFooter.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 568</value>
+    <value>0, 560</value>
   </data>
   <data name="panelFooter.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1052, 41</value>
+    <value>1134, 41</value>
   </data>
   <data name="pictureBox2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1052, 609</value>
+    <value>1134, 601</value>
   </data>
   <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>

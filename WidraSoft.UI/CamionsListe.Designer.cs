@@ -43,9 +43,22 @@
             this.excelToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.pDFToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.panelTitleBar = new System.Windows.Forms.Panel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.txtSearchBox = new System.Windows.Forms.TextBox();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.Spain_flag = new System.Windows.Forms.PictureBox();
+            this.England_flag = new System.Windows.Forms.PictureBox();
+            this.France_flag = new System.Windows.Forms.PictureBox();
+            this.cbLang = new System.Windows.Forms.ComboBox();
             this.DgvList = new System.Windows.Forms.DataGridView();
             this.panelList = new System.Windows.Forms.Panel();
             this.menuStrip1.SuspendLayout();
+            this.panelTitleBar.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.Spain_flag)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.England_flag)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.France_flag)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.DgvList)).BeginInit();
             this.panelList.SuspendLayout();
             this.SuspendLayout();
@@ -128,28 +141,95 @@
             // panelTitleBar
             // 
             this.panelTitleBar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(86)))), ((int)(((byte)(77)))));
+            this.panelTitleBar.Controls.Add(this.pictureBox1);
+            this.panelTitleBar.Controls.Add(this.txtSearchBox);
+            this.panelTitleBar.Controls.Add(this.panel1);
             resources.ApplyResources(this.panelTitleBar, "panelTitleBar");
             this.panelTitleBar.Name = "panelTitleBar";
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pictureBox1.Image = global::WidraSoft.UI.Properties.Resources.search;
+            resources.ApplyResources(this.pictureBox1, "pictureBox1");
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.TabStop = false;
+            // 
+            // txtSearchBox
+            // 
+            this.txtSearchBox.BackColor = System.Drawing.Color.Honeydew;
+            resources.ApplyResources(this.txtSearchBox, "txtSearchBox");
+            this.txtSearchBox.ForeColor = System.Drawing.Color.Black;
+            this.txtSearchBox.Name = "txtSearchBox";
+            this.txtSearchBox.TextChanged += new System.EventHandler(this.txtSearchBox_TextChanged);
+            // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.Spain_flag);
+            this.panel1.Controls.Add(this.England_flag);
+            this.panel1.Controls.Add(this.France_flag);
+            this.panel1.Controls.Add(this.cbLang);
+            resources.ApplyResources(this.panel1, "panel1");
+            this.panel1.Name = "panel1";
+            // 
+            // Spain_flag
+            // 
+            this.Spain_flag.BackColor = System.Drawing.Color.Transparent;
+            this.Spain_flag.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.Spain_flag.Image = global::WidraSoft.UI.Properties.Resources.spain;
+            resources.ApplyResources(this.Spain_flag, "Spain_flag");
+            this.Spain_flag.Name = "Spain_flag";
+            this.Spain_flag.TabStop = false;
+            // 
+            // England_flag
+            // 
+            this.England_flag.BackColor = System.Drawing.Color.Transparent;
+            this.England_flag.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.England_flag.Image = global::WidraSoft.UI.Properties.Resources.united_kingdom;
+            resources.ApplyResources(this.England_flag, "England_flag");
+            this.England_flag.Name = "England_flag";
+            this.England_flag.TabStop = false;
+            // 
+            // France_flag
+            // 
+            this.France_flag.BackColor = System.Drawing.Color.Transparent;
+            this.France_flag.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.France_flag.Image = global::WidraSoft.UI.Properties.Resources.france;
+            resources.ApplyResources(this.France_flag, "France_flag");
+            this.France_flag.Name = "France_flag";
+            this.France_flag.TabStop = false;
+            // 
+            // cbLang
+            // 
+            this.cbLang.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(86)))), ((int)(((byte)(77)))));
+            this.cbLang.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            resources.ApplyResources(this.cbLang, "cbLang");
+            this.cbLang.ForeColor = System.Drawing.Color.White;
+            this.cbLang.FormattingEnabled = true;
+            this.cbLang.Name = "cbLang";
+            this.cbLang.SelectedIndexChanged += new System.EventHandler(this.cbLang_SelectedIndexChanged);
             // 
             // DgvList
             // 
             this.DgvList.AllowUserToAddRows = false;
             this.DgvList.AllowUserToDeleteRows = false;
             this.DgvList.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(86)))), ((int)(((byte)(77)))));
+            this.DgvList.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.Sunken;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Corbel", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(86)))), ((int)(((byte)(77)))));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Corbel", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
             dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(190)))), ((int)(((byte)(117)))));
             dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.DgvList.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.DgvList.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.Honeydew;
             dataGridViewCellStyle2.Font = new System.Drawing.Font("Corbel", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(86)))), ((int)(((byte)(77)))));
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(190)))), ((int)(((byte)(117)))));
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.White;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.DgvList.DefaultCellStyle = dataGridViewCellStyle2;
@@ -157,8 +237,8 @@
             this.DgvList.Name = "DgvList";
             this.DgvList.ReadOnly = true;
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.Honeydew;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Corbel", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
             dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.MediumSeaGreen;
             dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.Black;
@@ -184,6 +264,14 @@
             this.Load += new System.EventHandler(this.CamionsListe_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
+            this.panelTitleBar.ResumeLayout(false);
+            this.panelTitleBar.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.Spain_flag)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.England_flag)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.France_flag)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.DgvList)).EndInit();
             this.panelList.ResumeLayout(false);
             this.ResumeLayout(false);
@@ -205,5 +293,12 @@
         private System.Windows.Forms.Panel panelTitleBar;
         private System.Windows.Forms.DataGridView DgvList;
         private System.Windows.Forms.Panel panelList;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.PictureBox Spain_flag;
+        private System.Windows.Forms.PictureBox England_flag;
+        private System.Windows.Forms.PictureBox France_flag;
+        private System.Windows.Forms.ComboBox cbLang;
+        private System.Windows.Forms.TextBox txtSearchBox;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

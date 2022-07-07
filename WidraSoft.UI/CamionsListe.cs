@@ -17,13 +17,22 @@ namespace WidraSoft.UI
         public CamionsListe(string filter)
         {
             InitializeComponent();
+            menuStrip1.Renderer = new MyRenderer();
             vg_filter = filter;
+        }
+        private class MyRenderer : ToolStripProfessionalRenderer
+        {
+            public MyRenderer() : base(new MyMenuColors()) { }
         }
 
         private void CamionsListe_Load(object sender, EventArgs e)
         {
             this.CenterToScreen();
             Bind_Dgv();
+            cbLang.DataSource = Language.Languages;
+            cbLang.ValueMember = null;
+            cbLang.DisplayMember = Language.Languages[0];
+            cbLang.SelectedIndex = 0;
         }
 
 
@@ -46,7 +55,36 @@ namespace WidraSoft.UI
             DgvList.Columns["DATECREATION"].HeaderText = "DATE CREATION";
             DgvList.Columns["OBSERVATIONS"].Visible = false;
 
+            DgvList.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             DgvList.ReadOnly = true;
+        }
+
+        private void Localize_Dgv(string lang)
+        {
+            if (lang == "fr")
+            {
+                DgvList.Columns["CODE"].HeaderText = "CODE";
+                DgvList.Columns["PLAQUE"].HeaderText = "PLAQUE";
+                DgvList.Columns["BADGE"].HeaderText = "N° BADGE";
+                DgvList.Columns["TARE"].HeaderText = "TARE (KG)";
+                DgvList.Columns["VALIDE"].HeaderText = "VALIDE";
+                DgvList.Columns["BLOQUE"].HeaderText = "BLOQUE";
+                DgvList.Columns["ATTENTION"].HeaderText = "ATTENTION";
+                DgvList.Columns["DATECREATION"].HeaderText = "DATE CREATION";
+            }
+
+            if (lang== "en")
+            {
+                DgvList.Columns["CODE"].HeaderText = "CODE";
+                DgvList.Columns["PLAQUE"].HeaderText = "LICENSE PLATE";
+                DgvList.Columns["BADGE"].HeaderText = "BADGE N°";
+                DgvList.Columns["TARE"].HeaderText = "TARE (KG)";
+                DgvList.Columns["VALIDE"].HeaderText = "VALID";
+                DgvList.Columns["BLOQUE"].HeaderText = "BLOCKED";
+                DgvList.Columns["ATTENTION"].HeaderText = "WARNING";
+                DgvList.Columns["DATECREATION"].HeaderText = "CREATION DATE";
+            }
+            
         }
 
         private Int32 GetId()
@@ -126,6 +164,42 @@ namespace WidraSoft.UI
             {
                 MessageBox.Show("Vous n'avez selectionné aucun enregistrement à supprimer");
             }
+        }
+
+        private void cbLang_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (cbLang.Text == "Francais(FR)")
+            {
+                France_flag.Visible = true;
+                England_flag.Visible = false;
+                Spain_flag.Visible = false;
+                Language_Manager language_Manager = new Language_Manager();
+                language_Manager.ChangeLanguage("fr", this, typeof(CamionsListe));
+                Localize_Dgv("fr");
+            }
+
+            if (cbLang.Text == "Anglais(ANG)")
+            {
+                France_flag.Visible = false;
+                England_flag.Visible = true;
+                Spain_flag.Visible = false;
+                Language_Manager language_Manager = new Language_Manager();
+                language_Manager.ChangeLanguage("en", this, typeof(CamionsListe));
+                Localize_Dgv("en");
+            }
+
+            if (cbLang.Text == "Espagnol(ESP)")
+            {
+                France_flag.Visible = false;
+                England_flag.Visible = false;
+                Spain_flag.Visible = true;
+            }
+        }
+
+        private void txtSearchBox_TextChanged(object sender, EventArgs e)
+        {
+            Camion camion = new Camion();
+            DgvList.DataSource = camion.SearchBox(txtSearchBox.Text);
         }
     }
 }

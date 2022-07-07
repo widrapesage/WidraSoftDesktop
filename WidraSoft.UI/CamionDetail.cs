@@ -27,6 +27,10 @@ namespace WidraSoft.UI
         private void CamionDetail_Load(object sender, EventArgs e)
         {
             this.CenterToParent();
+            cbLang.DataSource = Language.Languages;
+            cbLang.ValueMember = null;
+            cbLang.DisplayMember = Language.Languages[0];
+            cbLang.SelectedIndex = 0;
             if (vg_Mode == "Add")
             {
                 try
@@ -96,6 +100,7 @@ namespace WidraSoft.UI
                 txtDateCreation.Text = row["DATECREATION"].ToString();
                 txtBadge.Text = row["BADGE"].ToString();
                 txtPlaque.Text = row["PLAQUE"].ToString();
+                txtCode.Text = row["CODE"].ToString();
                 txtTare.Text = row["TARE"].ToString();
                 txtValide.Text = row["VALIDE"].ToString();
                 txtValide.Visible = false;
@@ -130,7 +135,7 @@ namespace WidraSoft.UI
             txtTare.Enabled = false;
             chx_Valide.Enabled = false;
             chx_Bloque.Enabled = false;
-            txtBlocage.Enabled = false;
+            txtBlocage.Enabled  = false;
             chx_Attention.Enabled = false;
             txtAlerte.Enabled = false;
             txtObservations.Enabled = false;
@@ -174,37 +179,37 @@ namespace WidraSoft.UI
         private void btAjouter_MouseEnter(object sender, EventArgs e)
         {
             if (btAjouter.Enabled == true)
-                btAjouter.BackColor = Color.FromArgb(72, 86, 77);
+                btAjouter.BackColor = Color.Honeydew;
         }
 
         private void btAjouter_MouseLeave(object sender, EventArgs e)
         {
             if (btAjouter.Enabled == true)
-                btAjouter.BackColor = Color.FromArgb(58, 62 ,60) ;
+                btAjouter.BackColor = Color.FromArgb(72,190,117) ;
         }
 
         private void btModifier_MouseEnter(object sender, EventArgs e)
         {
             if (btModifier.Enabled == true)
-                btModifier.BackColor = Color.FromArgb(72, 86, 77);
+                btModifier.BackColor = Color.Honeydew;
         }
 
         private void btModifier_MouseLeave(object sender, EventArgs e)
         {
             if (btModifier.Enabled == true)
-                btModifier.BackColor = Color.FromArgb(58, 62, 60);
+                btModifier.BackColor = Color.FromArgb(72, 190, 117);
         }
 
         private void btSupprimer_MouseEnter(object sender, EventArgs e)
         {
             if (btSupprimer.Enabled == true)
-                btSupprimer.BackColor = Color.FromArgb(72, 86, 77);
+                btSupprimer.BackColor = Color.Honeydew;
         }
 
         private void btSupprimer_MouseLeave(object sender, EventArgs e)
         {
             if (btSupprimer.Enabled == true)
-                btSupprimer.BackColor = Color.FromArgb(58, 62, 60);
+                btSupprimer.BackColor = Color.FromArgb(72, 190, 117);
         }
 
         private void chx_Valide_CheckedChanged(object sender, EventArgs e)
@@ -284,7 +289,7 @@ namespace WidraSoft.UI
                 if (vg_Update == false && vg_IsEnabled == false)
                 {
                     Enable();
-                    btModifier.Text = "Valider";
+                    btModifier.Text = Language_Manager.Localize("Valider", cbLang.Text);
                     vg_Update = true;
                 }
                 else
@@ -316,7 +321,7 @@ namespace WidraSoft.UI
                                     camion.Update(Id, txtCode.Text, txtPlaque.Text, txtBadge.Text, Tare, Valide, Bloque, txtBlocage.Text,
                                        Attention, txtAlerte.Text, txtObservations.Text) ;
                                     MessageBox.Show("Camion modifié avec succès");
-                                    btModifier.Text = "Modifier";
+                                    btModifier.Text = Language_Manager.Localize("Modifier", cbLang.Text);
                                     vg_Update = false;
                                     Disable();
                                     Bind_Fields();
@@ -370,6 +375,34 @@ namespace WidraSoft.UI
                     throw;
                 }
 
+            }
+        }
+
+        private void cbLang_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (cbLang.Text == "Francais(FR)")
+            {
+                France_flag.Visible = true;
+                England_flag.Visible = false;
+                Spain_flag.Visible = false;
+                Language_Manager language_Manager = new Language_Manager();
+                language_Manager.ChangeLanguage("fr", this, typeof(CamionDetail));
+            }
+
+            if (cbLang.Text == "Anglais(ANG)")
+            {
+                France_flag.Visible = false;
+                England_flag.Visible = true;
+                Spain_flag.Visible = false;
+                Language_Manager language_Manager = new Language_Manager();
+                language_Manager.ChangeLanguage("en", this, typeof(CamionDetail));
+            }
+
+            if (cbLang.Text == "Espagnol(ESP)")
+            {
+                France_flag.Visible = false;
+                England_flag.Visible = false;
+                Spain_flag.Visible = true;
             }
         }
     }
