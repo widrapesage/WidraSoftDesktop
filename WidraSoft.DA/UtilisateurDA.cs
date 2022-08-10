@@ -35,7 +35,24 @@ namespace WidraSoft.DA
             }
            
         }
-
+       public DataTable SearchBox(string filter)
+        {
+            String sql = "SELECT * FROM VW_UTILISATEUR WHERE NOM LIKE '%" + filter + "%' OR PRENOM LIKE '%" + filter + "%' OR GROUPE LIKE '%" + filter + "%'";
+            conn.ConnectionString = connString;
+            if (conn.State == ConnectionState.Closed)
+                conn.Open();
+            SqlCommand cmd = new SqlCommand(sql, conn);
+            try
+            {
+                SqlDataReader reader = cmd.ExecuteReader();
+                dt.Load(reader);
+                return dt;
+            }
+            catch
+            {
+                throw;
+            }
+        }
         public DataTable FindById(Int32 Id)
         {
             String sql = "SELECT * FROM UTILISATEUR WHERE UTILISATEURID=" + Id;

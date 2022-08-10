@@ -392,7 +392,7 @@
     <value>1016, 496</value>
   </data>
   <data name="DgvList.TabIndex" type="System.Int32, mscorlib">
-    <value>6</value>
+    <value>8</value>
   </data>
   <data name="&gt;&gt;DgvList.Name" xml:space="preserve">
     <value>DgvList</value>

@@ -21,6 +21,19 @@ namespace WidraSoft.BL
             }
 
         }
+
+        public DataTable SearchBox(string Filter)
+        {
+            try
+            {
+                UtilisateurDA utilisateur = new UtilisateurDA();
+                return utilisateur.SearchBox(Filter);
+            }
+            catch
+            {
+                throw;
+            }
+        }
         public DataTable GetById(Int32 Id)
         {
             try

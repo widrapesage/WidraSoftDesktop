@@ -387,6 +387,7 @@ namespace WidraSoft.UI
                 Spain_flag.Visible = false;
                 Language_Manager language_Manager = new Language_Manager();
                 language_Manager.ChangeLanguage("fr", this, typeof(CamionDetail));
+
             }
 
             if (cbLang.Text == "Anglais(ANG)")

@@ -49,7 +49,29 @@ namespace WidraSoft.UI
             DgvList.ReadOnly = true;
 
         }
-       private Int32 GetId()
+
+        private void Localize_Dgv(string lang)
+        {
+            if (lang == "fr")
+            {
+                DgvList.Columns["DESIGNATION"].HeaderText = "DESIGNATION";
+                DgvList.Columns["CODE"].HeaderText = "CODE";
+                DgvList.Columns["LIMITER"].HeaderText = "LIMITER";
+                DgvList.Columns["NBLIMITE"].HeaderText = "NOMBRE LIMITE";
+                DgvList.Columns["DATECREATION"].HeaderText = "DATE CREATION";
+            }
+
+            if (lang == "en")
+            {
+                DgvList.Columns["DESIGNATION"].HeaderText = "NAME";
+                DgvList.Columns["CODE"].HeaderText = "CODE";
+                DgvList.Columns["LIMITER"].HeaderText = "LIMIT";
+                DgvList.Columns["NBLIMITE"].HeaderText = "LIMIT NUMBER";
+                DgvList.Columns["DATECREATION"].HeaderText = "CREATION DATE";
+            }
+
+        }
+        private Int32 GetId()
         {
             try
             {
@@ -141,9 +163,9 @@ namespace WidraSoft.UI
                 France_flag.Visible = true;
                 England_flag.Visible = false;
                 Spain_flag.Visible = false;
-                /*Language_Manager language_Manager = new Language_Manager();
-                language_Manager.ChangeLanguage("fr", this, typeof(CamionsListe));
-                Localize_Dgv("fr"); */
+                Language_Manager language_Manager = new Language_Manager();
+                language_Manager.ChangeLanguage("fr", this, typeof(GroupesList));
+                Localize_Dgv("fr"); 
             }
 
             if (cbLang.Text == "Anglais(ANG)")
@@ -151,9 +173,9 @@ namespace WidraSoft.UI
                 France_flag.Visible = false;
                 England_flag.Visible = true;
                 Spain_flag.Visible = false;
-                /*Language_Manager language_Manager = new Language_Manager();
-                language_Manager.ChangeLanguage("en", this, typeof(CamionsListe));
-                Localize_Dgv("en"); */
+                Language_Manager language_Manager = new Language_Manager();
+                language_Manager.ChangeLanguage("en", this, typeof(GroupesList));
+                Localize_Dgv("en"); 
             }
 
             if (cbLang.Text == "Espagnol(ESP)")

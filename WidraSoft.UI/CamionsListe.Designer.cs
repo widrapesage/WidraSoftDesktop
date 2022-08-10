@@ -50,8 +50,8 @@
             this.England_flag = new System.Windows.Forms.PictureBox();
             this.France_flag = new System.Windows.Forms.PictureBox();
             this.cbLang = new System.Windows.Forms.ComboBox();
-            this.DgvList = new System.Windows.Forms.DataGridView();
             this.panelList = new System.Windows.Forms.Panel();
+            this.DgvList = new System.Windows.Forms.DataGridView();
             this.menuStrip1.SuspendLayout();
             this.panelTitleBar.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -59,8 +59,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.Spain_flag)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.England_flag)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.France_flag)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.DgvList)).BeginInit();
             this.panelList.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.DgvList)).BeginInit();
             this.SuspendLayout();
             // 
             // menuStrip1
@@ -210,11 +210,17 @@
             this.cbLang.Name = "cbLang";
             this.cbLang.SelectedIndexChanged += new System.EventHandler(this.cbLang_SelectedIndexChanged);
             // 
+            // panelList
+            // 
+            this.panelList.Controls.Add(this.DgvList);
+            resources.ApplyResources(this.panelList, "panelList");
+            this.panelList.Name = "panelList";
+            // 
             // DgvList
             // 
             this.DgvList.AllowUserToAddRows = false;
             this.DgvList.AllowUserToDeleteRows = false;
-            this.DgvList.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(86)))), ((int)(((byte)(77)))));
+            this.DgvList.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(62)))), ((int)(((byte)(60)))));
             this.DgvList.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.Sunken;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(86)))), ((int)(((byte)(77)))));
@@ -229,7 +235,7 @@
             dataGridViewCellStyle2.BackColor = System.Drawing.Color.Honeydew;
             dataGridViewCellStyle2.Font = new System.Drawing.Font("Corbel", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(190)))), ((int)(((byte)(117)))));
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(86)))), ((int)(((byte)(77)))));
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.White;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.DgvList.DefaultCellStyle = dataGridViewCellStyle2;
@@ -245,12 +251,6 @@
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.DgvList.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.DgvList.RowTemplate.Height = 33;
-            // 
-            // panelList
-            // 
-            this.panelList.Controls.Add(this.DgvList);
-            resources.ApplyResources(this.panelList, "panelList");
-            this.panelList.Name = "panelList";
             // 
             // CamionsListe
             // 
@@ -272,8 +272,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.Spain_flag)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.England_flag)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.France_flag)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.DgvList)).EndInit();
             this.panelList.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.DgvList)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -291,7 +291,6 @@
         private System.Windows.Forms.ToolStripMenuItem excelToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem pDFToolStripMenuItem;
         private System.Windows.Forms.Panel panelTitleBar;
-        private System.Windows.Forms.DataGridView DgvList;
         private System.Windows.Forms.Panel panelList;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.PictureBox Spain_flag;
@@ -300,5 +299,6 @@
         private System.Windows.Forms.ComboBox cbLang;
         private System.Windows.Forms.TextBox txtSearchBox;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.DataGridView DgvList;
     }
 }

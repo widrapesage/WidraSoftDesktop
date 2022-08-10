@@ -28,10 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FirmesList));
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FirmesList));
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.ouvrirToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.modifierToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -65,8 +65,8 @@
             // 
             // menuStrip1
             // 
+            resources.ApplyResources(this.menuStrip1, "menuStrip1");
             this.menuStrip1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(62)))), ((int)(((byte)(60)))));
-            this.menuStrip1.Font = new System.Drawing.Font("Corbel", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.menuStrip1.ImageScalingSize = new System.Drawing.Size(24, 24);
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.ouvrirToolStripMenuItem,
@@ -76,208 +76,152 @@
             this.ActualiserToolStripMenuItem,
             this.rechercherToolStripMenuItem,
             this.exporterVersToolStripMenuItem});
-            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Padding = new System.Windows.Forms.Padding(4, 1, 0, 1);
-            this.menuStrip1.Size = new System.Drawing.Size(1011, 25);
-            this.menuStrip1.TabIndex = 3;
-            this.menuStrip1.Text = "menuStrip1";
-            this.menuStrip1.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.menuStrip1_ItemClicked);
             // 
             // ouvrirToolStripMenuItem
             // 
-            this.ouvrirToolStripMenuItem.Font = new System.Drawing.Font("Corbel", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            resources.ApplyResources(this.ouvrirToolStripMenuItem, "ouvrirToolStripMenuItem");
             this.ouvrirToolStripMenuItem.ForeColor = System.Drawing.Color.White;
             this.ouvrirToolStripMenuItem.Name = "ouvrirToolStripMenuItem";
-            this.ouvrirToolStripMenuItem.Size = new System.Drawing.Size(66, 23);
-            this.ouvrirToolStripMenuItem.Text = "Ouvrir";
             this.ouvrirToolStripMenuItem.Click += new System.EventHandler(this.ouvrirToolStripMenuItem_Click);
             // 
             // modifierToolStripMenuItem
             // 
-            this.modifierToolStripMenuItem.Font = new System.Drawing.Font("Corbel", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            resources.ApplyResources(this.modifierToolStripMenuItem, "modifierToolStripMenuItem");
             this.modifierToolStripMenuItem.ForeColor = System.Drawing.Color.White;
             this.modifierToolStripMenuItem.Name = "modifierToolStripMenuItem";
-            this.modifierToolStripMenuItem.Size = new System.Drawing.Size(79, 23);
-            this.modifierToolStripMenuItem.Text = "Modifier";
             this.modifierToolStripMenuItem.Click += new System.EventHandler(this.modifierToolStripMenuItem_Click);
             // 
             // ajouterToolStripMenuItem
             // 
-            this.ajouterToolStripMenuItem.Font = new System.Drawing.Font("Corbel", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            resources.ApplyResources(this.ajouterToolStripMenuItem, "ajouterToolStripMenuItem");
             this.ajouterToolStripMenuItem.ForeColor = System.Drawing.Color.White;
             this.ajouterToolStripMenuItem.Name = "ajouterToolStripMenuItem";
-            this.ajouterToolStripMenuItem.Size = new System.Drawing.Size(74, 23);
-            this.ajouterToolStripMenuItem.Text = "Ajouter";
             this.ajouterToolStripMenuItem.Click += new System.EventHandler(this.ajouterToolStripMenuItem_Click);
             // 
             // supprimerToolStripMenuItem
             // 
-            this.supprimerToolStripMenuItem.Font = new System.Drawing.Font("Corbel", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            resources.ApplyResources(this.supprimerToolStripMenuItem, "supprimerToolStripMenuItem");
             this.supprimerToolStripMenuItem.ForeColor = System.Drawing.Color.White;
             this.supprimerToolStripMenuItem.Name = "supprimerToolStripMenuItem";
-            this.supprimerToolStripMenuItem.Size = new System.Drawing.Size(95, 23);
-            this.supprimerToolStripMenuItem.Text = "Supprimer";
             this.supprimerToolStripMenuItem.Click += new System.EventHandler(this.supprimerToolStripMenuItem_Click);
             // 
             // ActualiserToolStripMenuItem
             // 
-            this.ActualiserToolStripMenuItem.Font = new System.Drawing.Font("Corbel", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            resources.ApplyResources(this.ActualiserToolStripMenuItem, "ActualiserToolStripMenuItem");
             this.ActualiserToolStripMenuItem.ForeColor = System.Drawing.Color.White;
             this.ActualiserToolStripMenuItem.Name = "ActualiserToolStripMenuItem";
-            this.ActualiserToolStripMenuItem.Size = new System.Drawing.Size(91, 23);
-            this.ActualiserToolStripMenuItem.Text = "Actualiser";
             this.ActualiserToolStripMenuItem.Click += new System.EventHandler(this.ActualiserToolStripMenuItem_Click);
             // 
             // rechercherToolStripMenuItem
             // 
-            this.rechercherToolStripMenuItem.Font = new System.Drawing.Font("Corbel", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            resources.ApplyResources(this.rechercherToolStripMenuItem, "rechercherToolStripMenuItem");
             this.rechercherToolStripMenuItem.ForeColor = System.Drawing.Color.White;
             this.rechercherToolStripMenuItem.Name = "rechercherToolStripMenuItem";
-            this.rechercherToolStripMenuItem.Size = new System.Drawing.Size(99, 23);
-            this.rechercherToolStripMenuItem.Text = "Rechercher";
-            this.rechercherToolStripMenuItem.Click += new System.EventHandler(this.rechercherToolStripMenuItem_Click);
             // 
             // exporterVersToolStripMenuItem
             // 
+            resources.ApplyResources(this.exporterVersToolStripMenuItem, "exporterVersToolStripMenuItem");
             this.exporterVersToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.excelToolStripMenuItem,
             this.pDFToolStripMenuItem});
-            this.exporterVersToolStripMenuItem.Font = new System.Drawing.Font("Corbel", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.exporterVersToolStripMenuItem.ForeColor = System.Drawing.Color.White;
             this.exporterVersToolStripMenuItem.Name = "exporterVersToolStripMenuItem";
-            this.exporterVersToolStripMenuItem.Size = new System.Drawing.Size(114, 23);
-            this.exporterVersToolStripMenuItem.Text = "Exporter vers";
             // 
             // excelToolStripMenuItem
             // 
+            resources.ApplyResources(this.excelToolStripMenuItem, "excelToolStripMenuItem");
             this.excelToolStripMenuItem.Name = "excelToolStripMenuItem";
-            this.excelToolStripMenuItem.Size = new System.Drawing.Size(114, 24);
-            this.excelToolStripMenuItem.Text = "Excel";
             // 
             // pDFToolStripMenuItem
             // 
+            resources.ApplyResources(this.pDFToolStripMenuItem, "pDFToolStripMenuItem");
             this.pDFToolStripMenuItem.Name = "pDFToolStripMenuItem";
-            this.pDFToolStripMenuItem.Size = new System.Drawing.Size(114, 24);
-            this.pDFToolStripMenuItem.Text = "PDF";
             // 
             // panelTitleBar
             // 
+            resources.ApplyResources(this.panelTitleBar, "panelTitleBar");
             this.panelTitleBar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(86)))), ((int)(((byte)(77)))));
             this.panelTitleBar.Controls.Add(this.pictureBox1);
             this.panelTitleBar.Controls.Add(this.txtSearchBox);
             this.panelTitleBar.Controls.Add(this.panel1);
-            this.panelTitleBar.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelTitleBar.Location = new System.Drawing.Point(0, 25);
-            this.panelTitleBar.Margin = new System.Windows.Forms.Padding(4);
             this.panelTitleBar.Name = "panelTitleBar";
-            this.panelTitleBar.Size = new System.Drawing.Size(1011, 38);
-            this.panelTitleBar.TabIndex = 5;
             // 
             // pictureBox1
             // 
+            resources.ApplyResources(this.pictureBox1, "pictureBox1");
             this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBox1.Image = global::WidraSoft.UI.Properties.Resources.search;
-            this.pictureBox1.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.pictureBox1.Location = new System.Drawing.Point(33, 6);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(24, 24);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.pictureBox1.TabIndex = 34;
             this.pictureBox1.TabStop = false;
             // 
             // txtSearchBox
             // 
+            resources.ApplyResources(this.txtSearchBox, "txtSearchBox");
             this.txtSearchBox.BackColor = System.Drawing.Color.Honeydew;
-            this.txtSearchBox.Font = new System.Drawing.Font("Arial", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.txtSearchBox.ForeColor = System.Drawing.Color.Black;
-            this.txtSearchBox.Location = new System.Drawing.Point(61, 7);
             this.txtSearchBox.Name = "txtSearchBox";
-            this.txtSearchBox.Size = new System.Drawing.Size(388, 24);
-            this.txtSearchBox.TabIndex = 33;
             this.txtSearchBox.TextChanged += new System.EventHandler(this.txtSearchBox_TextChanged);
             // 
             // panel1
             // 
+            resources.ApplyResources(this.panel1, "panel1");
             this.panel1.Controls.Add(this.Spain_flag);
             this.panel1.Controls.Add(this.England_flag);
             this.panel1.Controls.Add(this.France_flag);
             this.panel1.Controls.Add(this.cbLang);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel1.Location = new System.Drawing.Point(731, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(280, 38);
-            this.panel1.TabIndex = 32;
             // 
             // Spain_flag
             // 
+            resources.ApplyResources(this.Spain_flag, "Spain_flag");
             this.Spain_flag.BackColor = System.Drawing.Color.Transparent;
             this.Spain_flag.Cursor = System.Windows.Forms.Cursors.Hand;
             this.Spain_flag.Image = global::WidraSoft.UI.Properties.Resources.spain;
-            this.Spain_flag.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.Spain_flag.Location = new System.Drawing.Point(81, 7);
             this.Spain_flag.Name = "Spain_flag";
-            this.Spain_flag.Size = new System.Drawing.Size(24, 24);
-            this.Spain_flag.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.Spain_flag.TabIndex = 30;
             this.Spain_flag.TabStop = false;
             // 
             // England_flag
             // 
+            resources.ApplyResources(this.England_flag, "England_flag");
             this.England_flag.BackColor = System.Drawing.Color.Transparent;
             this.England_flag.Cursor = System.Windows.Forms.Cursors.Hand;
             this.England_flag.Image = global::WidraSoft.UI.Properties.Resources.united_kingdom;
-            this.England_flag.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.England_flag.Location = new System.Drawing.Point(81, 7);
             this.England_flag.Name = "England_flag";
-            this.England_flag.Size = new System.Drawing.Size(24, 24);
-            this.England_flag.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.England_flag.TabIndex = 29;
             this.England_flag.TabStop = false;
             // 
             // France_flag
             // 
+            resources.ApplyResources(this.France_flag, "France_flag");
             this.France_flag.BackColor = System.Drawing.Color.Transparent;
             this.France_flag.Cursor = System.Windows.Forms.Cursors.Hand;
             this.France_flag.Image = global::WidraSoft.UI.Properties.Resources.france;
-            this.France_flag.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.France_flag.Location = new System.Drawing.Point(81, 7);
             this.France_flag.Name = "France_flag";
-            this.France_flag.Size = new System.Drawing.Size(24, 24);
-            this.France_flag.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.France_flag.TabIndex = 28;
             this.France_flag.TabStop = false;
             // 
             // cbLang
             // 
+            resources.ApplyResources(this.cbLang, "cbLang");
             this.cbLang.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(86)))), ((int)(((byte)(77)))));
             this.cbLang.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbLang.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.cbLang.Font = new System.Drawing.Font("Corbel", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.cbLang.ForeColor = System.Drawing.Color.White;
             this.cbLang.FormattingEnabled = true;
-            this.cbLang.Location = new System.Drawing.Point(111, 9);
             this.cbLang.Name = "cbLang";
-            this.cbLang.Size = new System.Drawing.Size(158, 22);
-            this.cbLang.TabIndex = 27;
             this.cbLang.SelectedIndexChanged += new System.EventHandler(this.cbLang_SelectedIndexChanged);
             // 
             // panelList
             // 
+            resources.ApplyResources(this.panelList, "panelList");
             this.panelList.Controls.Add(this.DgvList);
-            this.panelList.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelList.Location = new System.Drawing.Point(0, 63);
-            this.panelList.Margin = new System.Windows.Forms.Padding(4);
             this.panelList.Name = "panelList";
-            this.panelList.Size = new System.Drawing.Size(1011, 498);
-            this.panelList.TabIndex = 6;
             // 
             // DgvList
             // 
+            resources.ApplyResources(this.DgvList, "DgvList");
             this.DgvList.AllowUserToAddRows = false;
             this.DgvList.AllowUserToDeleteRows = false;
-            this.DgvList.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(86)))), ((int)(((byte)(77)))));
+            this.DgvList.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(62)))), ((int)(((byte)(60)))));
             this.DgvList.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.Sunken;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(86)))), ((int)(((byte)(77)))));
@@ -292,12 +236,10 @@
             dataGridViewCellStyle2.BackColor = System.Drawing.Color.Honeydew;
             dataGridViewCellStyle2.Font = new System.Drawing.Font("Corbel", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(190)))), ((int)(((byte)(117)))));
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(86)))), ((int)(((byte)(77)))));
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.White;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.DgvList.DefaultCellStyle = dataGridViewCellStyle2;
-            this.DgvList.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.DgvList.Location = new System.Drawing.Point(0, 0);
             this.DgvList.Name = "DgvList";
             this.DgvList.ReadOnly = true;
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
@@ -308,24 +250,17 @@
             dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.Black;
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.DgvList.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
-            this.DgvList.RowHeadersWidth = 62;
             this.DgvList.RowTemplate.Height = 33;
-            this.DgvList.Size = new System.Drawing.Size(1011, 498);
-            this.DgvList.TabIndex = 7;
             // 
             // FirmesList
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 18F);
+            resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(62)))), ((int)(((byte)(60)))));
-            this.ClientSize = new System.Drawing.Size(1011, 561);
             this.Controls.Add(this.panelList);
             this.Controls.Add(this.panelTitleBar);
             this.Controls.Add(this.menuStrip1);
-            this.Font = new System.Drawing.Font("Corbel", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FirmesList";
-            this.Text = "Liste des firmes";
             this.Load += new System.EventHandler(this.FirmesList_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();

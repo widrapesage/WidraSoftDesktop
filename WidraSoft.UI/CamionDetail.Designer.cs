@@ -57,7 +57,6 @@
             this.txtBlocage = new System.Windows.Forms.TextBox();
             this.chx_Bloque = new System.Windows.Forms.CheckBox();
             this.chx_Valide = new System.Windows.Forms.CheckBox();
-            this.splitter1 = new System.Windows.Forms.Splitter();
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
@@ -75,11 +74,11 @@
             // 
             // btSupprimer
             // 
-            resources.ApplyResources(this.btSupprimer, "btSupprimer");
             this.btSupprimer.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(190)))), ((int)(((byte)(117)))));
             this.btSupprimer.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btSupprimer.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(62)))), ((int)(((byte)(60)))));
             this.btSupprimer.FlatAppearance.BorderSize = 2;
+            resources.ApplyResources(this.btSupprimer, "btSupprimer");
             this.btSupprimer.ForeColor = System.Drawing.Color.Black;
             this.btSupprimer.Image = global::WidraSoft.UI.Properties.Resources.button_delete;
             this.btSupprimer.Name = "btSupprimer";
@@ -90,11 +89,11 @@
             // 
             // btModifier
             // 
-            resources.ApplyResources(this.btModifier, "btModifier");
             this.btModifier.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(190)))), ((int)(((byte)(117)))));
             this.btModifier.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btModifier.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(62)))), ((int)(((byte)(60)))));
             this.btModifier.FlatAppearance.BorderSize = 2;
+            resources.ApplyResources(this.btModifier, "btModifier");
             this.btModifier.ForeColor = System.Drawing.Color.Black;
             this.btModifier.Image = global::WidraSoft.UI.Properties.Resources.button_edit;
             this.btModifier.Name = "btModifier";
@@ -105,11 +104,11 @@
             // 
             // btAjouter
             // 
-            resources.ApplyResources(this.btAjouter, "btAjouter");
             this.btAjouter.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(190)))), ((int)(((byte)(117)))));
             this.btAjouter.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btAjouter.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(62)))), ((int)(((byte)(60)))));
             this.btAjouter.FlatAppearance.BorderSize = 2;
+            resources.ApplyResources(this.btAjouter, "btAjouter");
             this.btAjouter.ForeColor = System.Drawing.Color.Black;
             this.btAjouter.Image = global::WidraSoft.UI.Properties.Resources.button_add;
             this.btAjouter.Name = "btAjouter";
@@ -120,11 +119,11 @@
             // 
             // groupBox1
             // 
-            resources.ApplyResources(this.groupBox1, "groupBox1");
             this.groupBox1.Controls.Add(this.btSupprimer);
             this.groupBox1.Controls.Add(this.btModifier);
             this.groupBox1.Controls.Add(this.btAjouter);
             this.groupBox1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            resources.ApplyResources(this.groupBox1, "groupBox1");
             this.groupBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(190)))), ((int)(((byte)(117)))));
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.TabStop = false;
@@ -137,8 +136,8 @@
             // 
             // txtPlaque
             // 
-            resources.ApplyResources(this.txtPlaque, "txtPlaque");
             this.txtPlaque.BackColor = System.Drawing.Color.Honeydew;
+            resources.ApplyResources(this.txtPlaque, "txtPlaque");
             this.txtPlaque.ForeColor = System.Drawing.Color.Black;
             this.txtPlaque.Name = "txtPlaque";
             // 
@@ -156,16 +155,16 @@
             // 
             // txtDateCreation
             // 
-            resources.ApplyResources(this.txtDateCreation, "txtDateCreation");
             this.txtDateCreation.BackColor = System.Drawing.Color.Honeydew;
+            resources.ApplyResources(this.txtDateCreation, "txtDateCreation");
             this.txtDateCreation.ForeColor = System.Drawing.Color.Black;
             this.txtDateCreation.Name = "txtDateCreation";
             this.txtDateCreation.ReadOnly = true;
             // 
             // txtBadge
             // 
-            resources.ApplyResources(this.txtBadge, "txtBadge");
             this.txtBadge.BackColor = System.Drawing.Color.Honeydew;
+            resources.ApplyResources(this.txtBadge, "txtBadge");
             this.txtBadge.ForeColor = System.Drawing.Color.Black;
             this.txtBadge.Name = "txtBadge";
             // 
@@ -177,8 +176,8 @@
             // 
             // txtId
             // 
-            resources.ApplyResources(this.txtId, "txtId");
             this.txtId.BackColor = System.Drawing.Color.Honeydew;
+            resources.ApplyResources(this.txtId, "txtId");
             this.txtId.ForeColor = System.Drawing.Color.Black;
             this.txtId.Name = "txtId";
             // 
@@ -190,8 +189,8 @@
             // 
             // txtCode
             // 
-            resources.ApplyResources(this.txtCode, "txtCode");
             this.txtCode.BackColor = System.Drawing.Color.Honeydew;
+            resources.ApplyResources(this.txtCode, "txtCode");
             this.txtCode.ForeColor = System.Drawing.Color.Black;
             this.txtCode.Name = "txtCode";
             // 
@@ -203,8 +202,8 @@
             // 
             // txtTare
             // 
-            resources.ApplyResources(this.txtTare, "txtTare");
             this.txtTare.BackColor = System.Drawing.Color.Honeydew;
+            resources.ApplyResources(this.txtTare, "txtTare");
             this.txtTare.ForeColor = System.Drawing.Color.Black;
             this.txtTare.Name = "txtTare";
             // 
@@ -231,8 +230,8 @@
             // 
             // txtObservations
             // 
-            resources.ApplyResources(this.txtObservations, "txtObservations");
             this.txtObservations.BackColor = System.Drawing.Color.Honeydew;
+            resources.ApplyResources(this.txtObservations, "txtObservations");
             this.txtObservations.ForeColor = System.Drawing.Color.Black;
             this.txtObservations.Name = "txtObservations";
             // 
@@ -244,8 +243,8 @@
             // 
             // txtAlerte
             // 
-            resources.ApplyResources(this.txtAlerte, "txtAlerte");
             this.txtAlerte.BackColor = System.Drawing.Color.Honeydew;
+            resources.ApplyResources(this.txtAlerte, "txtAlerte");
             this.txtAlerte.ForeColor = System.Drawing.Color.Black;
             this.txtAlerte.Name = "txtAlerte";
             // 
@@ -265,8 +264,8 @@
             // 
             // txtBlocage
             // 
-            resources.ApplyResources(this.txtBlocage, "txtBlocage");
             this.txtBlocage.BackColor = System.Drawing.Color.Honeydew;
+            resources.ApplyResources(this.txtBlocage, "txtBlocage");
             this.txtBlocage.ForeColor = System.Drawing.Color.Black;
             this.txtBlocage.Name = "txtBlocage";
             // 
@@ -285,13 +284,6 @@
             this.chx_Valide.Name = "chx_Valide";
             this.chx_Valide.UseVisualStyleBackColor = true;
             this.chx_Valide.CheckedChanged += new System.EventHandler(this.chx_Valide_CheckedChanged);
-            // 
-            // splitter1
-            // 
-            resources.ApplyResources(this.splitter1, "splitter1");
-            this.splitter1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(190)))), ((int)(((byte)(117)))));
-            this.splitter1.Name = "splitter1";
-            this.splitter1.TabStop = false;
             // 
             // label7
             // 
@@ -313,45 +305,46 @@
             // 
             // panelLang
             // 
-            resources.ApplyResources(this.panelLang, "panelLang");
+            this.panelLang.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(86)))), ((int)(((byte)(77)))));
             this.panelLang.Controls.Add(this.Spain_flag);
             this.panelLang.Controls.Add(this.England_flag);
             this.panelLang.Controls.Add(this.France_flag);
             this.panelLang.Controls.Add(this.cbLang);
+            resources.ApplyResources(this.panelLang, "panelLang");
             this.panelLang.Name = "panelLang";
             // 
             // Spain_flag
             // 
-            resources.ApplyResources(this.Spain_flag, "Spain_flag");
             this.Spain_flag.BackColor = System.Drawing.Color.Transparent;
             this.Spain_flag.Cursor = System.Windows.Forms.Cursors.Hand;
             this.Spain_flag.Image = global::WidraSoft.UI.Properties.Resources.spain;
+            resources.ApplyResources(this.Spain_flag, "Spain_flag");
             this.Spain_flag.Name = "Spain_flag";
             this.Spain_flag.TabStop = false;
             // 
             // England_flag
             // 
-            resources.ApplyResources(this.England_flag, "England_flag");
             this.England_flag.BackColor = System.Drawing.Color.Transparent;
             this.England_flag.Cursor = System.Windows.Forms.Cursors.Hand;
             this.England_flag.Image = global::WidraSoft.UI.Properties.Resources.united_kingdom;
+            resources.ApplyResources(this.England_flag, "England_flag");
             this.England_flag.Name = "England_flag";
             this.England_flag.TabStop = false;
             // 
             // France_flag
             // 
-            resources.ApplyResources(this.France_flag, "France_flag");
             this.France_flag.BackColor = System.Drawing.Color.Transparent;
             this.France_flag.Cursor = System.Windows.Forms.Cursors.Hand;
             this.France_flag.Image = global::WidraSoft.UI.Properties.Resources.france;
+            resources.ApplyResources(this.France_flag, "France_flag");
             this.France_flag.Name = "France_flag";
             this.France_flag.TabStop = false;
             // 
             // cbLang
             // 
-            resources.ApplyResources(this.cbLang, "cbLang");
             this.cbLang.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(86)))), ((int)(((byte)(77)))));
             this.cbLang.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            resources.ApplyResources(this.cbLang, "cbLang");
             this.cbLang.ForeColor = System.Drawing.Color.White;
             this.cbLang.FormattingEnabled = true;
             this.cbLang.Name = "cbLang";
@@ -361,12 +354,11 @@
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(86)))), ((int)(((byte)(77)))));
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(62)))), ((int)(((byte)(60)))));
             this.Controls.Add(this.txtPlaque);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.panelLang);
             this.Controls.Add(this.label9);
-            this.Controls.Add(this.splitter1);
             this.Controls.Add(this.txtId);
             this.Controls.Add(this.txtAlerte);
             this.Controls.Add(this.label8);
@@ -436,7 +428,6 @@
         private System.Windows.Forms.TextBox txtBlocage;
         private System.Windows.Forms.CheckBox chx_Bloque;
         private System.Windows.Forms.CheckBox chx_Valide;
-        private System.Windows.Forms.Splitter splitter1;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label9;

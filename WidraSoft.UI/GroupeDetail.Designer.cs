@@ -32,7 +32,7 @@ namespace WidraSoft.UI
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(GroupeDetail));
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            this.splitter1 = new System.Windows.Forms.Splitter();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.btSupprimer = new System.Windows.Forms.Button();
             this.btModifier = new System.Windows.Forms.Button();
@@ -49,18 +49,26 @@ namespace WidraSoft.UI
             this.cbLimite = new System.Windows.Forms.ComboBox();
             this.label5 = new System.Windows.Forms.Label();
             this.txtNbLimite = new System.Windows.Forms.TextBox();
+            this.panelLang = new System.Windows.Forms.Panel();
+            this.Spain_flag = new System.Windows.Forms.PictureBox();
+            this.England_flag = new System.Windows.Forms.PictureBox();
+            this.France_flag = new System.Windows.Forms.PictureBox();
+            this.cbLang = new System.Windows.Forms.ComboBox();
             this.dgvGroupeDroits = new System.Windows.Forms.DataGridView();
-            this.btSupprimerDgv = new System.Windows.Forms.Button();
+            this.lblRetirerDgv = new System.Windows.Forms.LinkLabel();
+            this.lblEnregistrerDgv = new System.Windows.Forms.LinkLabel();
+            this.pbAddRow = new System.Windows.Forms.PictureBox();
+            this.pbRemoveRow = new System.Windows.Forms.PictureBox();
+            this.lvGroupUsers = new System.Windows.Forms.ListView();
             this.groupBox1.SuspendLayout();
+            this.panelLang.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.Spain_flag)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.England_flag)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.France_flag)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvGroupeDroits)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbAddRow)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbRemoveRow)).BeginInit();
             this.SuspendLayout();
-            // 
-            // splitter1
-            // 
-            this.splitter1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(190)))), ((int)(((byte)(117)))));
-            resources.ApplyResources(this.splitter1, "splitter1");
-            this.splitter1.Name = "splitter1";
-            this.splitter1.TabStop = false;
             // 
             // groupBox1
             // 
@@ -82,6 +90,8 @@ namespace WidraSoft.UI
             this.btSupprimer.Name = "btSupprimer";
             this.btSupprimer.UseVisualStyleBackColor = false;
             this.btSupprimer.Click += new System.EventHandler(this.btSupprimer_Click);
+            this.btSupprimer.MouseEnter += new System.EventHandler(this.btSupprimer_MouseEnter);
+            this.btSupprimer.MouseLeave += new System.EventHandler(this.btSupprimer_MouseLeave);
             // 
             // btModifier
             // 
@@ -93,6 +103,8 @@ namespace WidraSoft.UI
             this.btModifier.Name = "btModifier";
             this.btModifier.UseVisualStyleBackColor = false;
             this.btModifier.Click += new System.EventHandler(this.btModifier_Click);
+            this.btModifier.MouseEnter += new System.EventHandler(this.btModifier_MouseEnter);
+            this.btModifier.MouseLeave += new System.EventHandler(this.btModifier_MouseLeave);
             // 
             // btAjouter
             // 
@@ -104,6 +116,8 @@ namespace WidraSoft.UI
             this.btAjouter.Name = "btAjouter";
             this.btAjouter.UseVisualStyleBackColor = false;
             this.btAjouter.Click += new System.EventHandler(this.btAjouter_Click);
+            this.btAjouter.MouseEnter += new System.EventHandler(this.btAjouter_MouseEnter);
+            this.btAjouter.MouseLeave += new System.EventHandler(this.btAjouter_MouseLeave);
             // 
             // label2
             // 
@@ -113,6 +127,7 @@ namespace WidraSoft.UI
             // 
             // txtDateCreation
             // 
+            this.txtDateCreation.BackColor = System.Drawing.Color.Honeydew;
             resources.ApplyResources(this.txtDateCreation, "txtDateCreation");
             this.txtDateCreation.Name = "txtDateCreation";
             this.txtDateCreation.ReadOnly = true;
@@ -125,6 +140,7 @@ namespace WidraSoft.UI
             // 
             // txtId
             // 
+            this.txtId.BackColor = System.Drawing.Color.Honeydew;
             resources.ApplyResources(this.txtId, "txtId");
             this.txtId.Name = "txtId";
             // 
@@ -136,6 +152,7 @@ namespace WidraSoft.UI
             // 
             // txtDesignation
             // 
+            this.txtDesignation.BackColor = System.Drawing.Color.Honeydew;
             resources.ApplyResources(this.txtDesignation, "txtDesignation");
             this.txtDesignation.Name = "txtDesignation";
             // 
@@ -147,6 +164,7 @@ namespace WidraSoft.UI
             // 
             // txtCode
             // 
+            this.txtCode.BackColor = System.Drawing.Color.Honeydew;
             resources.ApplyResources(this.txtCode, "txtCode");
             this.txtCode.Name = "txtCode";
             // 
@@ -158,6 +176,7 @@ namespace WidraSoft.UI
             // 
             // cbLimite
             // 
+            this.cbLimite.BackColor = System.Drawing.Color.Honeydew;
             resources.ApplyResources(this.cbLimite, "cbLimite");
             this.cbLimite.FormattingEnabled = true;
             this.cbLimite.Items.AddRange(new object[] {
@@ -173,23 +192,74 @@ namespace WidraSoft.UI
             // 
             // txtNbLimite
             // 
+            this.txtNbLimite.BackColor = System.Drawing.Color.Honeydew;
             resources.ApplyResources(this.txtNbLimite, "txtNbLimite");
             this.txtNbLimite.Name = "txtNbLimite";
             // 
+            // panelLang
+            // 
+            this.panelLang.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(86)))), ((int)(((byte)(77)))));
+            this.panelLang.Controls.Add(this.Spain_flag);
+            this.panelLang.Controls.Add(this.England_flag);
+            this.panelLang.Controls.Add(this.France_flag);
+            this.panelLang.Controls.Add(this.cbLang);
+            resources.ApplyResources(this.panelLang, "panelLang");
+            this.panelLang.Name = "panelLang";
+            // 
+            // Spain_flag
+            // 
+            this.Spain_flag.BackColor = System.Drawing.Color.Transparent;
+            this.Spain_flag.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.Spain_flag.Image = global::WidraSoft.UI.Properties.Resources.spain;
+            resources.ApplyResources(this.Spain_flag, "Spain_flag");
+            this.Spain_flag.Name = "Spain_flag";
+            this.Spain_flag.TabStop = false;
+            // 
+            // England_flag
+            // 
+            this.England_flag.BackColor = System.Drawing.Color.Transparent;
+            this.England_flag.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.England_flag.Image = global::WidraSoft.UI.Properties.Resources.united_kingdom;
+            resources.ApplyResources(this.England_flag, "England_flag");
+            this.England_flag.Name = "England_flag";
+            this.England_flag.TabStop = false;
+            // 
+            // France_flag
+            // 
+            this.France_flag.BackColor = System.Drawing.Color.Transparent;
+            this.France_flag.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.France_flag.Image = global::WidraSoft.UI.Properties.Resources.france;
+            resources.ApplyResources(this.France_flag, "France_flag");
+            this.France_flag.Name = "France_flag";
+            this.France_flag.TabStop = false;
+            // 
+            // cbLang
+            // 
+            this.cbLang.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(86)))), ((int)(((byte)(77)))));
+            this.cbLang.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            resources.ApplyResources(this.cbLang, "cbLang");
+            this.cbLang.ForeColor = System.Drawing.Color.White;
+            this.cbLang.FormattingEnabled = true;
+            this.cbLang.Name = "cbLang";
+            this.cbLang.SelectedIndexChanged += new System.EventHandler(this.cbLang_SelectedIndexChanged);
+            // 
             // dgvGroupeDroits
             // 
-            this.dgvGroupeDroits.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(86)))), ((int)(((byte)(77)))));
+            this.dgvGroupeDroits.AllowUserToAddRows = false;
+            this.dgvGroupeDroits.AllowUserToDeleteRows = false;
+            this.dgvGroupeDroits.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(62)))), ((int)(((byte)(60)))));
+            this.dgvGroupeDroits.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.Sunken;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Corbel", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(86)))), ((int)(((byte)(77)))));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Corbel", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
             dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(190)))), ((int)(((byte)(117)))));
             dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.dgvGroupeDroits.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvGroupeDroits.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.Honeydew;
             dataGridViewCellStyle2.Font = new System.Drawing.Font("Corbel", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
             dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(86)))), ((int)(((byte)(77)))));
@@ -198,30 +268,77 @@ namespace WidraSoft.UI
             this.dgvGroupeDroits.DefaultCellStyle = dataGridViewCellStyle2;
             resources.ApplyResources(this.dgvGroupeDroits, "dgvGroupeDroits");
             this.dgvGroupeDroits.Name = "dgvGroupeDroits";
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.Honeydew;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Corbel", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.MediumSeaGreen;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvGroupeDroits.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.dgvGroupeDroits.RowTemplate.Height = 33;
             this.dgvGroupeDroits.CellEndEdit += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvGroupeDroits_CellEndEdit);
-            this.dgvGroupeDroits.CellLeave += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvGroupeDroits_CellLeave);
-            this.dgvGroupeDroits.CellValueChanged += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvGroupeDroits_CellValueChanged);
-            this.dgvGroupeDroits.DefaultValuesNeeded += new System.Windows.Forms.DataGridViewRowEventHandler(this.dgvGroupeDroits_DefaultValuesNeeded);
             // 
-            // btSupprimerDgv
+            // lblRetirerDgv
             // 
-            this.btSupprimerDgv.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(190)))), ((int)(((byte)(117)))));
-            this.btSupprimerDgv.Cursor = System.Windows.Forms.Cursors.Hand;
-            resources.ApplyResources(this.btSupprimerDgv, "btSupprimerDgv");
-            this.btSupprimerDgv.ForeColor = System.Drawing.Color.Black;
-            this.btSupprimerDgv.Image = global::WidraSoft.UI.Properties.Resources.delete_button;
-            this.btSupprimerDgv.Name = "btSupprimerDgv";
-            this.btSupprimerDgv.UseVisualStyleBackColor = false;
-            this.btSupprimerDgv.Click += new System.EventHandler(this.btSupprimerDgv_Click);
+            this.lblRetirerDgv.ActiveLinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(190)))), ((int)(((byte)(117)))));
+            resources.ApplyResources(this.lblRetirerDgv, "lblRetirerDgv");
+            this.lblRetirerDgv.BackColor = System.Drawing.Color.Transparent;
+            this.lblRetirerDgv.ForeColor = System.Drawing.Color.White;
+            this.lblRetirerDgv.LinkColor = System.Drawing.Color.White;
+            this.lblRetirerDgv.Name = "lblRetirerDgv";
+            this.lblRetirerDgv.TabStop = true;
+            this.lblRetirerDgv.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lblRetirerDgv_LinkClicked);
+            // 
+            // lblEnregistrerDgv
+            // 
+            this.lblEnregistrerDgv.ActiveLinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(190)))), ((int)(((byte)(117)))));
+            resources.ApplyResources(this.lblEnregistrerDgv, "lblEnregistrerDgv");
+            this.lblEnregistrerDgv.BackColor = System.Drawing.Color.Transparent;
+            this.lblEnregistrerDgv.ForeColor = System.Drawing.Color.White;
+            this.lblEnregistrerDgv.LinkColor = System.Drawing.Color.White;
+            this.lblEnregistrerDgv.Name = "lblEnregistrerDgv";
+            this.lblEnregistrerDgv.TabStop = true;
+            this.lblEnregistrerDgv.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lblEnregistrerDgv_LinkClicked);
+            // 
+            // pbAddRow
+            // 
+            this.pbAddRow.BackColor = System.Drawing.Color.Transparent;
+            this.pbAddRow.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pbAddRow.Image = global::WidraSoft.UI.Properties.Resources.plus;
+            resources.ApplyResources(this.pbAddRow, "pbAddRow");
+            this.pbAddRow.Name = "pbAddRow";
+            this.pbAddRow.TabStop = false;
+            // 
+            // pbRemoveRow
+            // 
+            this.pbRemoveRow.BackColor = System.Drawing.Color.Transparent;
+            this.pbRemoveRow.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pbRemoveRow.Image = global::WidraSoft.UI.Properties.Resources.delete;
+            resources.ApplyResources(this.pbRemoveRow, "pbRemoveRow");
+            this.pbRemoveRow.Name = "pbRemoveRow";
+            this.pbRemoveRow.TabStop = false;
+            // 
+            // lvGroupUsers
+            // 
+            this.lvGroupUsers.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(62)))), ((int)(((byte)(60)))));
+            resources.ApplyResources(this.lvGroupUsers, "lvGroupUsers");
+            this.lvGroupUsers.ForeColor = System.Drawing.Color.White;
+            this.lvGroupUsers.Name = "lvGroupUsers";
+            this.lvGroupUsers.UseCompatibleStateImageBehavior = false;
             // 
             // GroupeDetail
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(86)))), ((int)(((byte)(77)))));
-            this.Controls.Add(this.btSupprimerDgv);
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(62)))), ((int)(((byte)(60)))));
+            this.Controls.Add(this.lvGroupUsers);
+            this.Controls.Add(this.pbRemoveRow);
+            this.Controls.Add(this.pbAddRow);
+            this.Controls.Add(this.lblEnregistrerDgv);
+            this.Controls.Add(this.lblRetirerDgv);
             this.Controls.Add(this.dgvGroupeDroits);
+            this.Controls.Add(this.panelLang);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.txtNbLimite);
             this.Controls.Add(this.label7);
@@ -235,19 +352,24 @@ namespace WidraSoft.UI
             this.Controls.Add(this.label1);
             this.Controls.Add(this.txtId);
             this.Controls.Add(this.groupBox1);
-            this.Controls.Add(this.splitter1);
             this.MaximizeBox = false;
             this.Name = "GroupeDetail";
             this.Load += new System.EventHandler(this.GroupeDetail_Load);
             this.groupBox1.ResumeLayout(false);
+            this.panelLang.ResumeLayout(false);
+            this.panelLang.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.Spain_flag)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.England_flag)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.France_flag)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvGroupeDroits)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbAddRow)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbRemoveRow)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-        private System.Windows.Forms.Splitter splitter1;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Button btSupprimer;
         private System.Windows.Forms.Button btModifier;
@@ -264,7 +386,16 @@ namespace WidraSoft.UI
         private System.Windows.Forms.ComboBox cbLimite;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox txtNbLimite;
+        private System.Windows.Forms.Panel panelLang;
+        private System.Windows.Forms.PictureBox Spain_flag;
+        private System.Windows.Forms.PictureBox England_flag;
+        private System.Windows.Forms.PictureBox France_flag;
+        private System.Windows.Forms.ComboBox cbLang;
         private System.Windows.Forms.DataGridView dgvGroupeDroits;
-        private System.Windows.Forms.Button btSupprimerDgv;
+        private System.Windows.Forms.LinkLabel lblRetirerDgv;
+        private System.Windows.Forms.LinkLabel lblEnregistrerDgv;
+        private System.Windows.Forms.PictureBox pbAddRow;
+        private System.Windows.Forms.PictureBox pbRemoveRow;
+        private System.Windows.Forms.ListView lvGroupUsers;
     }
 }

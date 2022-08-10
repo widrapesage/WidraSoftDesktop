@@ -65,6 +65,46 @@ namespace WidraSoft.UI
 
         }
 
+        private void Localize_Dgv(string lang)
+        {
+            if (lang == "fr")
+            {
+                DgvList.Columns["BADGE"].HeaderText = "N° BADGE";
+                DgvList.Columns["DESIGNATION"].HeaderText = "DESIGNATION";
+                DgvList.Columns["ADRESSE"].HeaderText = "ADRESSE";
+                DgvList.Columns["CODEPOSTAL"].HeaderText = "CODE POSTAL";
+                DgvList.Columns["LOCALITE"].HeaderText = "LOCALITE";
+                DgvList.Columns["PAYS"].HeaderText = "PAYS";
+                DgvList.Columns["TELEPHONE"].HeaderText = "N° TELEPHONE";
+                DgvList.Columns["EMAIL"].HeaderText = "EMAIL";
+                DgvList.Columns["NUMTVA"].HeaderText = "N° TVA";
+                DgvList.Columns["SITEWEB_URL"].HeaderText = "URL SITE WEB";
+                DgvList.Columns["VALIDE"].HeaderText = "VALIDE";
+                DgvList.Columns["BLOQUE"].HeaderText = "BLOQUE";
+                DgvList.Columns["ATTENTION"].HeaderText = "ATTENTION";
+                DgvList.Columns["DATECREATION"].HeaderText = "DATE CREATION";
+            }
+
+            if (lang == "en")
+            {
+                DgvList.Columns["BADGE"].HeaderText = "BADGE N°";
+                DgvList.Columns["DESIGNATION"].HeaderText = "NAME";
+                DgvList.Columns["ADRESSE"].HeaderText = "ADRESS";
+                DgvList.Columns["CODEPOSTAL"].HeaderText = "POSTAL CODE";
+                DgvList.Columns["LOCALITE"].HeaderText = "LOCALITY";
+                DgvList.Columns["PAYS"].HeaderText = "COUNTRY";
+                DgvList.Columns["TELEPHONE"].HeaderText = "PHONE N°";
+                DgvList.Columns["EMAIL"].HeaderText = "EMAIL";
+                DgvList.Columns["NUMTVA"].HeaderText = "VAT N°";
+                DgvList.Columns["SITEWEB_URL"].HeaderText = "WEBSITE URL";
+                DgvList.Columns["VALIDE"].HeaderText = "VALID";
+                DgvList.Columns["BLOQUE"].HeaderText = "BLOCKED";
+                DgvList.Columns["ATTENTION"].HeaderText = "WARNING";
+                DgvList.Columns["DATECREATION"].HeaderText = "CREATION DATE";
+            }
+
+        }
+
         private Int32 GetId()
         {
             try
@@ -146,16 +186,6 @@ namespace WidraSoft.UI
         
         }
 
-        private void rechercherToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void menuStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
-        {
-
-        }
-
         private void txtSearchBox_TextChanged(object sender, EventArgs e)
         {
             Firme firme = new Firme();
@@ -169,9 +199,9 @@ namespace WidraSoft.UI
                 France_flag.Visible = true;
                 England_flag.Visible = false;
                 Spain_flag.Visible = false;
-                /*Language_Manager language_Manager = new Language_Manager();
-                language_Manager.ChangeLanguage("fr", this, typeof(CamionsListe));
-                Localize_Dgv("fr"); */
+                Language_Manager language_Manager = new Language_Manager();
+                language_Manager.ChangeLanguage("fr", this, typeof(FirmesList));
+                Localize_Dgv("fr"); 
             }
 
             if (cbLang.Text == "Anglais(ANG)")
@@ -179,9 +209,9 @@ namespace WidraSoft.UI
                 France_flag.Visible = false;
                 England_flag.Visible = true;
                 Spain_flag.Visible = false;
-                /*Language_Manager language_Manager = new Language_Manager();
-                language_Manager.ChangeLanguage("en", this, typeof(CamionsListe));
-                Localize_Dgv("en"); */
+                Language_Manager language_Manager = new Language_Manager();
+                language_Manager.ChangeLanguage("en", this, typeof(FirmesList));
+                Localize_Dgv("en"); 
             }
 
             if (cbLang.Text == "Espagnol(ESP)")

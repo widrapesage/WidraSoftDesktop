@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FirmeDetail));
-            this.splitter1 = new System.Windows.Forms.Splitter();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.btSupprimer = new System.Windows.Forms.Button();
             this.btModifier = new System.Windows.Forms.Button();
@@ -70,31 +69,36 @@
             this.txtValide = new System.Windows.Forms.TextBox();
             this.txtBloque = new System.Windows.Forms.TextBox();
             this.txtAttention = new System.Windows.Forms.TextBox();
+            this.panelLang = new System.Windows.Forms.Panel();
+            this.Spain_flag = new System.Windows.Forms.PictureBox();
+            this.England_flag = new System.Windows.Forms.PictureBox();
+            this.France_flag = new System.Windows.Forms.PictureBox();
+            this.cbLang = new System.Windows.Forms.ComboBox();
+            this.label16 = new System.Windows.Forms.Label();
+            this.label17 = new System.Windows.Forms.Label();
+            this.label18 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
+            this.panelLang.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.Spain_flag)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.England_flag)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.France_flag)).BeginInit();
             this.SuspendLayout();
-            // 
-            // splitter1
-            // 
-            this.splitter1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(190)))), ((int)(((byte)(117)))));
-            resources.ApplyResources(this.splitter1, "splitter1");
-            this.splitter1.Name = "splitter1";
-            this.splitter1.TabStop = false;
             // 
             // groupBox1
             // 
+            resources.ApplyResources(this.groupBox1, "groupBox1");
             this.groupBox1.Controls.Add(this.btSupprimer);
             this.groupBox1.Controls.Add(this.btModifier);
             this.groupBox1.Controls.Add(this.btAjouter);
-            resources.ApplyResources(this.groupBox1, "groupBox1");
             this.groupBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(190)))), ((int)(((byte)(117)))));
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.TabStop = false;
             // 
             // btSupprimer
             // 
+            resources.ApplyResources(this.btSupprimer, "btSupprimer");
             this.btSupprimer.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(190)))), ((int)(((byte)(117)))));
             this.btSupprimer.Cursor = System.Windows.Forms.Cursors.Hand;
-            resources.ApplyResources(this.btSupprimer, "btSupprimer");
             this.btSupprimer.ForeColor = System.Drawing.Color.Black;
             this.btSupprimer.Image = global::WidraSoft.UI.Properties.Resources.button_delete;
             this.btSupprimer.Name = "btSupprimer";
@@ -105,9 +109,9 @@
             // 
             // btModifier
             // 
+            resources.ApplyResources(this.btModifier, "btModifier");
             this.btModifier.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(190)))), ((int)(((byte)(117)))));
             this.btModifier.Cursor = System.Windows.Forms.Cursors.Hand;
-            resources.ApplyResources(this.btModifier, "btModifier");
             this.btModifier.ForeColor = System.Drawing.Color.Black;
             this.btModifier.Image = global::WidraSoft.UI.Properties.Resources.button_edit;
             this.btModifier.Name = "btModifier";
@@ -118,9 +122,9 @@
             // 
             // btAjouter
             // 
+            resources.ApplyResources(this.btAjouter, "btAjouter");
             this.btAjouter.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(190)))), ((int)(((byte)(117)))));
             this.btAjouter.Cursor = System.Windows.Forms.Cursors.Hand;
-            resources.ApplyResources(this.btAjouter, "btAjouter");
             this.btAjouter.ForeColor = System.Drawing.Color.Black;
             this.btAjouter.Image = global::WidraSoft.UI.Properties.Resources.button_add;
             this.btAjouter.Name = "btAjouter";
@@ -144,12 +148,14 @@
             // txtDateCreation
             // 
             resources.ApplyResources(this.txtDateCreation, "txtDateCreation");
+            this.txtDateCreation.BackColor = System.Drawing.Color.Honeydew;
             this.txtDateCreation.Name = "txtDateCreation";
             this.txtDateCreation.ReadOnly = true;
             // 
             // txtBadge
             // 
             resources.ApplyResources(this.txtBadge, "txtBadge");
+            this.txtBadge.BackColor = System.Drawing.Color.Honeydew;
             this.txtBadge.Name = "txtBadge";
             // 
             // label1
@@ -161,6 +167,7 @@
             // txtId
             // 
             resources.ApplyResources(this.txtId, "txtId");
+            this.txtId.BackColor = System.Drawing.Color.Honeydew;
             this.txtId.Name = "txtId";
             // 
             // label4
@@ -172,6 +179,7 @@
             // txtDesignation
             // 
             resources.ApplyResources(this.txtDesignation, "txtDesignation");
+            this.txtDesignation.BackColor = System.Drawing.Color.Honeydew;
             this.txtDesignation.Name = "txtDesignation";
             // 
             // label5
@@ -183,6 +191,7 @@
             // txtAdresse
             // 
             resources.ApplyResources(this.txtAdresse, "txtAdresse");
+            this.txtAdresse.BackColor = System.Drawing.Color.Honeydew;
             this.txtAdresse.Name = "txtAdresse";
             // 
             // label6
@@ -194,6 +203,7 @@
             // txtCodePostal
             // 
             resources.ApplyResources(this.txtCodePostal, "txtCodePostal");
+            this.txtCodePostal.BackColor = System.Drawing.Color.Honeydew;
             this.txtCodePostal.Name = "txtCodePostal";
             // 
             // label7
@@ -205,6 +215,7 @@
             // txtLocalite
             // 
             resources.ApplyResources(this.txtLocalite, "txtLocalite");
+            this.txtLocalite.BackColor = System.Drawing.Color.Honeydew;
             this.txtLocalite.Name = "txtLocalite";
             // 
             // label8
@@ -216,6 +227,7 @@
             // txtPays
             // 
             resources.ApplyResources(this.txtPays, "txtPays");
+            this.txtPays.BackColor = System.Drawing.Color.Honeydew;
             this.txtPays.Name = "txtPays";
             // 
             // label9
@@ -227,6 +239,7 @@
             // txtTelephone
             // 
             resources.ApplyResources(this.txtTelephone, "txtTelephone");
+            this.txtTelephone.BackColor = System.Drawing.Color.Honeydew;
             this.txtTelephone.Name = "txtTelephone";
             // 
             // label10
@@ -238,6 +251,7 @@
             // txtEmail
             // 
             resources.ApplyResources(this.txtEmail, "txtEmail");
+            this.txtEmail.BackColor = System.Drawing.Color.Honeydew;
             this.txtEmail.Name = "txtEmail";
             // 
             // label11
@@ -249,6 +263,7 @@
             // txtNumTVA
             // 
             resources.ApplyResources(this.txtNumTVA, "txtNumTVA");
+            this.txtNumTVA.BackColor = System.Drawing.Color.Honeydew;
             this.txtNumTVA.Name = "txtNumTVA";
             // 
             // label12
@@ -260,6 +275,7 @@
             // txtSiteWebUrl
             // 
             resources.ApplyResources(this.txtSiteWebUrl, "txtSiteWebUrl");
+            this.txtSiteWebUrl.BackColor = System.Drawing.Color.Honeydew;
             this.txtSiteWebUrl.Name = "txtSiteWebUrl";
             // 
             // chx_Valide
@@ -281,6 +297,7 @@
             // txtBlocage
             // 
             resources.ApplyResources(this.txtBlocage, "txtBlocage");
+            this.txtBlocage.BackColor = System.Drawing.Color.Honeydew;
             this.txtBlocage.Name = "txtBlocage";
             // 
             // label13
@@ -306,6 +323,7 @@
             // txtAlerte
             // 
             resources.ApplyResources(this.txtAlerte, "txtAlerte");
+            this.txtAlerte.BackColor = System.Drawing.Color.Honeydew;
             this.txtAlerte.Name = "txtAlerte";
             // 
             // label15
@@ -317,6 +335,7 @@
             // txtObservations
             // 
             resources.ApplyResources(this.txtObservations, "txtObservations");
+            this.txtObservations.BackColor = System.Drawing.Color.Honeydew;
             this.txtObservations.Name = "txtObservations";
             // 
             // txtValide
@@ -334,11 +353,80 @@
             resources.ApplyResources(this.txtAttention, "txtAttention");
             this.txtAttention.Name = "txtAttention";
             // 
+            // panelLang
+            // 
+            resources.ApplyResources(this.panelLang, "panelLang");
+            this.panelLang.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(86)))), ((int)(((byte)(77)))));
+            this.panelLang.Controls.Add(this.Spain_flag);
+            this.panelLang.Controls.Add(this.England_flag);
+            this.panelLang.Controls.Add(this.France_flag);
+            this.panelLang.Controls.Add(this.cbLang);
+            this.panelLang.Name = "panelLang";
+            // 
+            // Spain_flag
+            // 
+            resources.ApplyResources(this.Spain_flag, "Spain_flag");
+            this.Spain_flag.BackColor = System.Drawing.Color.Transparent;
+            this.Spain_flag.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.Spain_flag.Image = global::WidraSoft.UI.Properties.Resources.spain;
+            this.Spain_flag.Name = "Spain_flag";
+            this.Spain_flag.TabStop = false;
+            // 
+            // England_flag
+            // 
+            resources.ApplyResources(this.England_flag, "England_flag");
+            this.England_flag.BackColor = System.Drawing.Color.Transparent;
+            this.England_flag.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.England_flag.Image = global::WidraSoft.UI.Properties.Resources.united_kingdom;
+            this.England_flag.Name = "England_flag";
+            this.England_flag.TabStop = false;
+            // 
+            // France_flag
+            // 
+            resources.ApplyResources(this.France_flag, "France_flag");
+            this.France_flag.BackColor = System.Drawing.Color.Transparent;
+            this.France_flag.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.France_flag.Image = global::WidraSoft.UI.Properties.Resources.france;
+            this.France_flag.Name = "France_flag";
+            this.France_flag.TabStop = false;
+            // 
+            // cbLang
+            // 
+            resources.ApplyResources(this.cbLang, "cbLang");
+            this.cbLang.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(86)))), ((int)(((byte)(77)))));
+            this.cbLang.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbLang.ForeColor = System.Drawing.Color.White;
+            this.cbLang.FormattingEnabled = true;
+            this.cbLang.Name = "cbLang";
+            this.cbLang.SelectedIndexChanged += new System.EventHandler(this.cbLang_SelectedIndexChanged);
+            // 
+            // label16
+            // 
+            resources.ApplyResources(this.label16, "label16");
+            this.label16.ForeColor = System.Drawing.Color.White;
+            this.label16.Name = "label16";
+            // 
+            // label17
+            // 
+            resources.ApplyResources(this.label17, "label17");
+            this.label17.ForeColor = System.Drawing.Color.White;
+            this.label17.Name = "label17";
+            // 
+            // label18
+            // 
+            resources.ApplyResources(this.label18, "label18");
+            this.label18.ForeColor = System.Drawing.Color.White;
+            this.label18.Name = "label18";
+            // 
             // FirmeDetail
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(86)))), ((int)(((byte)(77)))));
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(62)))), ((int)(((byte)(60)))));
+            this.Controls.Add(this.label18);
+            this.Controls.Add(this.label17);
+            this.Controls.Add(this.label16);
+            this.Controls.Add(this.panelLang);
             this.Controls.Add(this.txtAttention);
             this.Controls.Add(this.txtBloque);
             this.Controls.Add(this.txtValide);
@@ -376,19 +464,22 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.txtId);
             this.Controls.Add(this.groupBox1);
-            this.Controls.Add(this.splitter1);
             this.ForeColor = System.Drawing.Color.White;
             this.MaximizeBox = false;
             this.Name = "FirmeDetail";
             this.Load += new System.EventHandler(this.FirmeDetail_Load);
             this.groupBox1.ResumeLayout(false);
+            this.panelLang.ResumeLayout(false);
+            this.panelLang.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.Spain_flag)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.England_flag)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.France_flag)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-        private System.Windows.Forms.Splitter splitter1;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Button btSupprimer;
         private System.Windows.Forms.Button btModifier;
@@ -429,5 +520,13 @@
         private System.Windows.Forms.TextBox txtValide;
         private System.Windows.Forms.TextBox txtBloque;
         private System.Windows.Forms.TextBox txtAttention;
+        private System.Windows.Forms.Panel panelLang;
+        private System.Windows.Forms.PictureBox Spain_flag;
+        private System.Windows.Forms.PictureBox England_flag;
+        private System.Windows.Forms.PictureBox France_flag;
+        private System.Windows.Forms.ComboBox cbLang;
+        private System.Windows.Forms.Label label16;
+        private System.Windows.Forms.Label label17;
+        private System.Windows.Forms.Label label18;
     }
 }

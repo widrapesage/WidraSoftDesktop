@@ -27,7 +27,10 @@ namespace WidraSoft.UI
         private void FirmeDetail_Load(object sender, EventArgs e)
         {
             this.CenterToParent();
-
+            cbLang.DataSource = Language.Languages;
+            cbLang.ValueMember = null;
+            cbLang.DisplayMember = Language.Languages[0];
+            cbLang.SelectedIndex = 0;
             if (vg_Mode == "Add")
             {
                 try
@@ -213,40 +216,40 @@ namespace WidraSoft.UI
         private void btAjouter_MouseEnter(object sender, EventArgs e)
         {
             if (btAjouter.Enabled == true)
-                btAjouter.BackColor = Color.MintCream;
+                btAjouter.BackColor = Color.Honeydew;
         }
 
         private void btAjouter_MouseLeave(object sender, EventArgs e)
         {
             if (btAjouter.Enabled == true)
-                btAjouter.BackColor = Color.MediumSeaGreen;
+                btAjouter.BackColor = Color.FromArgb(72, 190, 117);
         }
 
         private void btModifier_MouseEnter(object sender, EventArgs e)
         {
             if (btModifier.Enabled == true)
-                btModifier.BackColor = Color.MintCream;
+                btModifier.BackColor = Color.Honeydew;
         }
 
         private void btModifier_MouseLeave(object sender, EventArgs e)
         {
             if (btModifier.Enabled == true)
-                btModifier.BackColor = Color.MediumSeaGreen;
+                btModifier.BackColor = Color.FromArgb(72, 190, 117);
         }
 
         private void btSupprimer_MouseEnter(object sender, EventArgs e)
         {
             if (btSupprimer.Enabled == true)
-                btSupprimer.BackColor = Color.MintCream;
+                btSupprimer.BackColor = Color.Honeydew;
         }
 
         private void btSupprimer_MouseLeave(object sender, EventArgs e)
         {
             if (btSupprimer.Enabled == true)
-                btSupprimer.BackColor = Color.MediumSeaGreen;
+                btSupprimer.BackColor = Color.FromArgb(72, 190, 117);
         }
 
-       
+
         private void chx_Valide_CheckedChanged(object sender, EventArgs e)
         {
             if (chx_Valide.Checked)
@@ -322,7 +325,7 @@ namespace WidraSoft.UI
                 if (vg_Update == false && vg_IsEnabled == false)
                 {
                     Enable();
-                    btModifier.Text = "Valider";
+                    btModifier.Text = Language_Manager.Localize("Valider", cbLang.Text);
                     vg_Update = true;
                 }
                 else
@@ -352,7 +355,7 @@ namespace WidraSoft.UI
                                     firme.Update(Id, txtBadge.Text, txtDesignation.Text, txtAdresse.Text, txtCodePostal.Text, txtLocalite.Text, txtPays.Text, txtTelephone.Text, txtEmail.Text,
                                             txtNumTVA.Text, txtSiteWebUrl.Text, txtObservations.Text, Valide, Bloque, txtBlocage.Text, Attention, txtAlerte.Text);
                                     MessageBox.Show("Firme modifiée avec succès");
-                                    btModifier.Text = "Modifier";
+                                    btModifier.Text = Language_Manager.Localize("Modifier", cbLang.Text);
                                     vg_Update = false;
                                     Disable();
                                     Bind_Fields();
@@ -363,7 +366,6 @@ namespace WidraSoft.UI
                             {
                                 throw;
                             }
-
                         }
                         else
                         {
@@ -408,7 +410,35 @@ namespace WidraSoft.UI
                     throw;
                 }
                 
+            }
+        }
 
+        private void cbLang_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (cbLang.Text == "Francais(FR)")
+            {
+                France_flag.Visible = true;
+                England_flag.Visible = false;
+                Spain_flag.Visible = false;
+                Language_Manager language_Manager = new Language_Manager();
+                language_Manager.ChangeLanguage("fr", this, typeof(FirmeDetail));
+
+            }
+
+            if (cbLang.Text == "Anglais(ANG)")
+            {
+                France_flag.Visible = false;
+                England_flag.Visible = true;
+                Spain_flag.Visible = false;
+                Language_Manager language_Manager = new Language_Manager();
+                language_Manager.ChangeLanguage("en", this, typeof(FirmeDetail));
+            }
+
+            if (cbLang.Text == "Espagnol(ESP)")
+            {
+                France_flag.Visible = false;
+                England_flag.Visible = false;
+                Spain_flag.Visible = true;
             }
         }
     }

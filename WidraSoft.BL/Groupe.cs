@@ -48,6 +48,19 @@ namespace WidraSoft.BL
             }
         }
 
+        public DataTable FindUsersById(Int32 Id)
+        {
+            try
+            {
+                GroupeDA groupe = new GroupeDA();
+                return groupe.FindUsersById(Id);
+            }
+            catch
+            {
+                throw;
+            }
+        }
+
         public string GetName(Int32 Id)
         {
             try

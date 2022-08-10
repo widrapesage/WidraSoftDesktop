@@ -25,11 +25,11 @@ namespace WidraSoft.UI
         private void GroupeDetail_Load(object sender, EventArgs e)
         {
             this.CenterToParent();
-          
+            
             if (vg_Mode == "Add")
             {
                 try
-                {
+                { 
                     Clear();
                     Add_Item();
                 }
@@ -52,7 +52,13 @@ namespace WidraSoft.UI
                     }
                 }
             }
+            Bind_LvGroupUsers();
             Bind_Dgv();
+            cbLang.DataSource = Language.Languages;
+            cbLang.ValueMember = null;
+            cbLang.DisplayMember = Language.Languages[0];
+            cbLang.SelectedIndex = 0;
+            
 
         }
 
@@ -102,6 +108,23 @@ namespace WidraSoft.UI
             dgvGroupeDroits.DataSource = groupemodule.FindByGroupeId(Id);
         }
 
+        private void Bind_LvGroupUsers ()
+        {
+            DataTable dt = new DataTable();
+            Groupe groupe = new Groupe();
+            dt = groupe.FindUsersById(vg_Id);
+
+            for (int i = 0; i < dt.Rows.Count; i++)
+            {
+                DataRow dr = dt.Rows[i];
+                ListViewItem listitem = new ListViewItem(dr["ID"].ToString());
+                listitem.SubItems.Add(dr["NOM"].ToString());
+                listitem.SubItems.Add(dr["PRENOM"].ToString());
+                listitem.SubItems.Add(dr["lOGIN"].ToString());
+                lvGroupUsers.Items.Add(listitem);
+            }
+        }
+
         private void Bind_Dgv()
         {
             //Definit la source du Dgv 
@@ -146,7 +169,7 @@ namespace WidraSoft.UI
             cbx_ModuleId.ValueMember = "MODULEID";
             cbx_ModuleId.DataPropertyName = "MODULEID";
             cbx_ModuleId.Name = "MODULEID";
-            cbx_ModuleId.Width = 450;
+            cbx_ModuleId.Width = 850;
             dgvGroupeDroits.Columns.Add(cbx_ModuleId);
             //Crée et ajoute le checkBox pour le champ ACCES
             DataGridViewCheckBoxColumn chx_Acces = new DataGridViewCheckBoxColumn();
@@ -155,7 +178,7 @@ namespace WidraSoft.UI
             chx_Acces.Name = "ACCES";
             chx_Acces.TrueValue = 1;
             chx_Acces.FalseValue = 0;
-            chx_Acces.Width = 150;
+            chx_Acces.Width = 50;
             dgvGroupeDroits.Columns.Add(chx_Acces);
             chx_Acces.Visible = false;
             // Crée et ajoute la combo pour le champ TYPEACESS
@@ -163,9 +186,28 @@ namespace WidraSoft.UI
             cbx_TypeAcess.HeaderText = "TYPE ACCES";
             cbx_TypeAcess.DataPropertyName = "TYPEACESS";
             cbx_TypeAcess.Name = "TYPEACESS";
-            cbx_TypeAcess.Width = 250;
+            cbx_TypeAcess.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
             cbx_TypeAcess.Items.AddRange(new string[] { "RW", "RO" });
             dgvGroupeDroits.Columns.Add(cbx_TypeAcess);
+        }
+
+        private void Localize_Dgv(string lang)
+        {
+            if (lang == "fr")
+            {
+                dgvGroupeDroits.Columns["GROUPEID"].HeaderText = "GROUPE";
+                dgvGroupeDroits.Columns["MODULEID"].HeaderText = "MODULE";
+                dgvGroupeDroits.Columns["ACCES"].HeaderText = "ACCES";
+                dgvGroupeDroits.Columns["TYPEACESS"].HeaderText = "TYPE ACCES";
+            }
+
+            if (lang == "en")
+            {
+                dgvGroupeDroits.Columns["GROUPEID"].HeaderText = "GROUP";
+                dgvGroupeDroits.Columns["MODULEID"].HeaderText = "MODULE";
+                dgvGroupeDroits.Columns["ACCES"].HeaderText = "ACCESS";
+                dgvGroupeDroits.Columns["TYPEACESS"].HeaderText = "ACCESS TYPE";
+            }
         }
 
         private void Clear()
@@ -186,7 +228,8 @@ namespace WidraSoft.UI
             cbLimite.Enabled = true;
             txtNbLimite.Enabled = true;
             dgvGroupeDroits.Enabled = true;
-            btSupprimerDgv.Enabled = true;
+            lblEnregistrerDgv.Enabled = true;
+            lblRetirerDgv.Enabled = true;
 
             vg_IsEnabled = true;
         }
@@ -199,44 +242,45 @@ namespace WidraSoft.UI
             cbLimite.Enabled = false;
             txtNbLimite.Enabled = false;
             dgvGroupeDroits.Enabled = false;
-            btSupprimerDgv.Enabled= false;
+            lblEnregistrerDgv.Enabled = false;
+            lblRetirerDgv.Enabled = false;
 
             vg_IsEnabled = false;
         }
         private void btAjouter_MouseEnter(object sender, EventArgs e)
         {
             if (btAjouter.Enabled == true)
-                btAjouter.BackColor = Color.MintCream;
+                btAjouter.BackColor = Color.Honeydew;
         }
 
         private void btAjouter_MouseLeave(object sender, EventArgs e)
         {
             if (btAjouter.Enabled == true)
-                btAjouter.BackColor = Color.MediumSeaGreen;
+                btAjouter.BackColor = Color.FromArgb(72, 190, 117);
         }
 
         private void btModifier_MouseEnter(object sender, EventArgs e)
         {
             if (btModifier.Enabled == true)
-                btModifier.BackColor = Color.MintCream;
+                btModifier.BackColor = Color.Honeydew;
         }
 
         private void btModifier_MouseLeave(object sender, EventArgs e)
         {
             if (btModifier.Enabled == true)
-                btModifier.BackColor = Color.MediumSeaGreen;
+                btModifier.BackColor = Color.FromArgb(72, 190, 117);
         }
 
         private void btSupprimer_MouseEnter(object sender, EventArgs e)
         {
             if (btSupprimer.Enabled == true)
-                btSupprimer.BackColor = Color.MintCream;
+                btSupprimer.BackColor = Color.Honeydew;
         }
 
         private void btSupprimer_MouseLeave(object sender, EventArgs e)
         {
             if (btSupprimer.Enabled == true)
-                btSupprimer.BackColor = Color.MediumSeaGreen;
+                btSupprimer.BackColor = Color.FromArgb(72, 190, 117);
         }
 
         private void btAjouter_Click(object sender, EventArgs e)
@@ -282,7 +326,7 @@ namespace WidraSoft.UI
                 if (vg_Update == false && vg_IsEnabled == false)
                 {
                     Enable();
-                    btModifier.Text = "Valider";
+                    btModifier.Text = Language_Manager.Localize("Valider", cbLang.Text);
                     vg_Update = true;
                 }
                 else
@@ -306,7 +350,7 @@ namespace WidraSoft.UI
                             { 
                                 groupe.Update(Id, txtDesignation.Text, txtCode.Text, cbLimite.Text, NbLimite);
                                 MessageBox.Show("Groupe modifié avec succès");
-                                btModifier.Text = "Modifier";
+                                btModifier.Text = Language_Manager.Localize("Modifier", cbLang.Text);
                                 vg_Update = false;
                                 Disable();
                                 Bind_Fields();
@@ -399,7 +443,7 @@ namespace WidraSoft.UI
 
                 }
                 catch
-                {
+                { 
                     throw;
                 }
             }
@@ -431,6 +475,53 @@ namespace WidraSoft.UI
 
         private void btSupprimerDgv_Click(object sender, EventArgs e)
         {
+
+        }
+
+        private void dgvGroupeDroits_CellLeave(object sender, DataGridViewCellEventArgs e)
+        {
+        }
+
+        private void dgvGroupeDroits_CellValueChanged(object sender, DataGridViewCellEventArgs e)
+        {
+   
+        }
+
+        private void cbLang_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (cbLang.Text == "Francais(FR)")
+            {
+                France_flag.Visible = true;
+                England_flag.Visible = false;
+                Spain_flag.Visible = false;
+                Language_Manager language_Manager = new Language_Manager();
+                language_Manager.ChangeLanguage("fr", this, typeof(GroupeDetail));
+                Localize_Dgv("fr");
+            }
+
+            if (cbLang.Text == "Anglais(ANG)")
+            {
+                France_flag.Visible = false;
+                England_flag.Visible = true;
+                Spain_flag.Visible = false;
+                Language_Manager language_Manager = new Language_Manager();
+                language_Manager.ChangeLanguage("en", this, typeof(GroupeDetail));
+                Localize_Dgv("en");
+            }
+
+            if (cbLang.Text == "Espagnol(ESP)")
+            {
+                France_flag.Visible = false;
+                England_flag.Visible = false;
+                Spain_flag.Visible = true;
+                /*Language_Manager language_Manager= new Language_Manager();
+                language_Manager.ChangeLanguage("es", this, typeof(GroupeDetail));
+                Localize_Dgv("es"); */
+            }
+        }
+
+        private void lblRetirerDgv_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
             Int32[] selectedIds = new Int32[GetSelectedRowsId().Length];
             selectedIds = GetSelectedRowsId();
             if (GetSelectedRowsId().Length > 0)
@@ -451,21 +542,20 @@ namespace WidraSoft.UI
                 }
                 MessageBox.Show(GetSelectedRowsId().Length + " droit(s) supprimé(s)");
                 Refresh_Dgv();
+                 vbbn
             }
             else
             {
                 MessageBox.Show("Vous n'avez selectionné aucun enregistrement à supprimer");
             }
-        
+
         }
 
-        private void dgvGroupeDroits_CellLeave(object sender, DataGridViewCellEventArgs e)
+        private void lblEnregistrerDgv_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
+            
         }
 
-        private void dgvGroupeDroits_CellValueChanged(object sender, DataGridViewCellEventArgs e)
-        {
-   
-        }
+
     }
 }
