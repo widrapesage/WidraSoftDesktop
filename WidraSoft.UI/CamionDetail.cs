@@ -380,7 +380,7 @@ namespace WidraSoft.UI
 
         private void cbLang_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (cbLang.Text == "Francais(FR)")
+            if (cbLang.Text == "FR")
             {
                 France_flag.Visible = true;
                 England_flag.Visible = false;
@@ -390,7 +390,7 @@ namespace WidraSoft.UI
 
             }
 
-            if (cbLang.Text == "Anglais(ANG)")
+            if (cbLang.Text == "EN")
             {
                 France_flag.Visible = false;
                 England_flag.Visible = true;
@@ -399,7 +399,7 @@ namespace WidraSoft.UI
                 language_Manager.ChangeLanguage("en", this, typeof(CamionDetail));
             }
 
-            if (cbLang.Text == "Espagnol(ESP)")
+            if (cbLang.Text == "ES")
             {
                 France_flag.Visible = false;
                 England_flag.Visible = false;

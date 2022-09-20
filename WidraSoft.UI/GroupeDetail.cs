@@ -6,6 +6,7 @@ using System.Drawing;
 using System.Text;
 using System.Windows.Forms;
 using WidraSoft.BL;
+using CustomMessageBox;
 
 namespace WidraSoft.UI
 {
@@ -52,14 +53,12 @@ namespace WidraSoft.UI
                     }
                 }
             }
-            Bind_LvGroupUsers();
+            Bind_DgvUsersList();
             Bind_Dgv();
             cbLang.DataSource = Language.Languages;
             cbLang.ValueMember = null;
             cbLang.DisplayMember = Language.Languages[0];
-            cbLang.SelectedIndex = 0;
-            
-
+            cbLang.SelectedIndex = 0;           
         }
 
         private void Add_Item()
@@ -108,22 +107,56 @@ namespace WidraSoft.UI
             dgvGroupeDroits.DataSource = groupemodule.FindByGroupeId(Id);
         }
 
-        private void Bind_LvGroupUsers ()
+        private void Bind_DgvUsersList()
         {
-            DataTable dt = new DataTable();
             Groupe groupe = new Groupe();
-            dt = groupe.FindUsersById(vg_Id);
-
-            for (int i = 0; i < dt.Rows.Count; i++)
+            if (txtId.Text == "")
             {
-                DataRow dr = dt.Rows[i];
-                ListViewItem listitem = new ListViewItem(dr["ID"].ToString());
-                listitem.SubItems.Add(dr["NOM"].ToString());
-                listitem.SubItems.Add(dr["PRENOM"].ToString());
-                listitem.SubItems.Add(dr["lOGIN"].ToString());
-                lvGroupUsers.Items.Add(listitem);
+                DgvUsersList.DataSource = groupe.FindUsersById(-1);
+            }
+            else
+            {
+                int Id;
+                bool IsParsableId;
+                IsParsableId = Int32.TryParse(txtId.Text, out Id);
+                DgvUsersList.DataSource = groupe.FindUsersById(Id);
+            }
+
+            DgvUsersList.Columns[0].Visible = false;
+            DgvUsersList.Columns["LOGIN"].Width = 100;
+            DgvUsersList.Columns["PRENOM"].Width = 100;
+            DgvUsersList.Columns["NOM"].Width = 100;
+            DgvUsersList.Columns["GROUPEID"].Visible = false;
+            DgvUsersList.Columns["GROUPE"].Visible = false;
+            DgvUsersList.Columns["DATECREATION"].Visible = false;
+
+            DgvUsersList.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            DgvUsersList.ReadOnly = true;
+            DgvUsersList.RowHeadersVisible = false;
+            
+        }
+
+        private void Localize_DgvUsersList(string lang)
+        {
+            if (lang == "fr")
+            {
+                DgvUsersList.Columns["LOGIN"].HeaderText = "LOGIN";
+                DgvUsersList.Columns["PRENOM"].HeaderText = "PRENOM";
+                DgvUsersList.Columns["NOM"].HeaderText = "NOM";
+                DgvUsersList.Columns["GROUPE"].HeaderText = "GROUPE";
+                DgvUsersList.Columns["DATECREATION"].HeaderText = "DATE CREATION";
+            }
+
+            if (lang == "en")
+            {
+                DgvUsersList.Columns["LOGIN"].HeaderText = "LOGIN";
+                DgvUsersList.Columns["PRENOM"].HeaderText = "FIRST NAME";
+                DgvUsersList.Columns["NOM"].HeaderText = "LAST NAME";
+                DgvUsersList.Columns["GROUPE"].HeaderText = "GROUP";
+                DgvUsersList.Columns["DATECREATION"].HeaderText = "CREATION DATE";
             }
         }
+
 
         private void Bind_Dgv()
         {
@@ -189,6 +222,8 @@ namespace WidraSoft.UI
             cbx_TypeAcess.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
             cbx_TypeAcess.Items.AddRange(new string[] { "RW", "RO" });
             dgvGroupeDroits.Columns.Add(cbx_TypeAcess);
+
+            dgvGroupeDroits.RowHeadersWidthSizeMode = DataGridViewRowHeadersWidthSizeMode.AutoSizeToFirstHeader;
         }
 
         private void Localize_Dgv(string lang)
@@ -228,8 +263,10 @@ namespace WidraSoft.UI
             cbLimite.Enabled = true;
             txtNbLimite.Enabled = true;
             dgvGroupeDroits.Enabled = true;
+            DgvUsersList.Enabled = true;
             lblEnregistrerDgv.Enabled = true;
             lblRetirerDgv.Enabled = true;
+            pbLocked.Visible = false;
 
             vg_IsEnabled = true;
         }
@@ -242,8 +279,10 @@ namespace WidraSoft.UI
             cbLimite.Enabled = false;
             txtNbLimite.Enabled = false;
             dgvGroupeDroits.Enabled = false;
+            DgvUsersList.Enabled=false;
             lblEnregistrerDgv.Enabled = false;
             lblRetirerDgv.Enabled = false;
+            pbLocked.Visible = true;
 
             vg_IsEnabled = false;
         }
@@ -300,17 +339,33 @@ namespace WidraSoft.UI
                     {
                         Groupe groupe = new Groupe();
                         groupe.Add(txtDesignation.Text, txtCode.Text, cbLimite.Text, NbLimite);
-                        MessageBox.Show("Groupe ajouté avec succès");
+                        if (cbLang.Text == "FR")
+                            Custom_MessageBox.Show("FR", "Groupe ajouté avec succès", "Groupe", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        else if (cbLang.Text == "EN")
+                            Custom_MessageBox.Show("EN", "Group added successfully", "Group", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        else
+                            Custom_MessageBox.Show("FR", "Groupe ajouté avec succès", "Groupe", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
                         Close();
                     }
                     else
                     {
-                        MessageBox.Show("Nombre limite d'utiilisateurs doit etre un nombre entier");
+                        if (cbLang.Text == "FR")
+                            Custom_MessageBox.Show("FR", "Le nombre limite d'utiilisateurs doit etre un nombre entier", "Groupe", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        else if (cbLang.Text == "EN")
+                            Custom_MessageBox.Show("EN", "The limit number of users must be a valid number", "Group", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        else
+                            Custom_MessageBox.Show("FR", "Nombre limite d'utiilisateurs doit etre un nombre entier", "Groupe", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     }
                 }
                 else
                 {
-                    MessageBox.Show("Informations incomplètes");
+                    if (cbLang.Text == "FR")
+                        Custom_MessageBox.Show("FR", "Informations incomplètes", "Groupe", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    else if (cbLang.Text == "EN")
+                        Custom_MessageBox.Show("EN", "Incomplete informations", "Group", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    else
+                        Custom_MessageBox.Show("FR", "Informations incomplètes", "Groupe", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
             }
             catch
@@ -349,7 +404,13 @@ namespace WidraSoft.UI
                             if (IsParsableId && IsParsableNbLimite)
                             { 
                                 groupe.Update(Id, txtDesignation.Text, txtCode.Text, cbLimite.Text, NbLimite);
-                                MessageBox.Show("Groupe modifié avec succès");
+                                if (cbLang.Text == "FR")
+                                    Custom_MessageBox.Show("FR", "Groupe modifié avec succès", "Groupe", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                else if (cbLang.Text == "EN")
+                                    Custom_MessageBox.Show("EN", "Group updated successfully", "Group", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                else
+                                    Custom_MessageBox.Show("FR", "Groupe modifié avec succès", "Groupe", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
                                 btModifier.Text = Language_Manager.Localize("Modifier", cbLang.Text);
                                 vg_Update = false;
                                 Disable();
@@ -359,7 +420,12 @@ namespace WidraSoft.UI
                         }
                         else
                         {
-                            MessageBox.Show("Informations incomplètes");
+                            if (cbLang.Text == "FR")
+                                Custom_MessageBox.Show("FR", "Informations incomplètes", "Groupe", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            else if (cbLang.Text == "EN")
+                                Custom_MessageBox.Show("EN", "Incomplete informations", "Group", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            else
+                                Custom_MessageBox.Show("FR", "Informations incomplètes", "Groupe", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         }
                     }
                     catch
@@ -378,7 +444,12 @@ namespace WidraSoft.UI
         {
             if (vg_Update)
             {
-                MessageBox.Show("Vous ne pouvez pas supprimer l'enregistrement terminez d'abord la modification");
+                if (cbLang.Text == "FR")
+                    Custom_MessageBox.Show("FR", "Vous ne pouvez pas supprimer l'enregistrement tant que la modification n'est pas validée", "Groupe", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                else if (cbLang.Text == "EN")
+                    Custom_MessageBox.Show("EN", "You can't delete this record before the update is completed", "Group", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                else
+                    Custom_MessageBox.Show("FR", "Vous ne pouvez pas supprimer l'enregistrement tant que la modification n'est pas validée", "Groupe", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             else
             {
@@ -390,9 +461,24 @@ namespace WidraSoft.UI
                     IsParsableId = Int32.TryParse(txtId.Text, out Id);
                     if (IsParsableId)
                     {
-                        groupe.Delete(Id);
-                        MessageBox.Show("Groupe supprimé avec succès");
-                        Close();
+                        DialogResult result;
+                        if (cbLang.Text == "FR")
+                            result = Custom_MessageBox.Show("FR", "Etes vous sur de vouloir supprimer cet enregistrement?", "Groupe", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                        else if (cbLang.Text == "EN")
+                            result = Custom_MessageBox.Show("EN", "Are you sure you want to delete this record?", "Group", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                        else
+                            result = Custom_MessageBox.Show("FR", "Etes vous sur de vouloir supprimer cet enregistrement?", "Groupe", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                        if (result == DialogResult.Yes)
+                        {
+                            groupe.Delete(Id);
+                            if (cbLang.Text == "FR")
+                                Custom_MessageBox.Show("FR", "Groupe supprimé avec succès", "Groupe", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            else if (cbLang.Text == "EN")
+                                Custom_MessageBox.Show("EN", "Group deleted successfully", "Group", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            else
+                                Custom_MessageBox.Show("FR", "Groupe supprimé avec succès", "Groupe", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            Close();
+                        }                      
                     }
                 }
                 catch
@@ -473,23 +559,9 @@ namespace WidraSoft.UI
             }
         }
 
-        private void btSupprimerDgv_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void dgvGroupeDroits_CellLeave(object sender, DataGridViewCellEventArgs e)
-        {
-        }
-
-        private void dgvGroupeDroits_CellValueChanged(object sender, DataGridViewCellEventArgs e)
-        {
-   
-        }
-
         private void cbLang_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (cbLang.Text == "Francais(FR)")
+            if (cbLang.Text == "FR")
             {
                 France_flag.Visible = true;
                 England_flag.Visible = false;
@@ -497,9 +569,10 @@ namespace WidraSoft.UI
                 Language_Manager language_Manager = new Language_Manager();
                 language_Manager.ChangeLanguage("fr", this, typeof(GroupeDetail));
                 Localize_Dgv("fr");
+                Localize_DgvUsersList("fr");
             }
 
-            if (cbLang.Text == "Anglais(ANG)")
+            if (cbLang.Text == "EN")
             {
                 France_flag.Visible = false;
                 England_flag.Visible = true;
@@ -507,9 +580,10 @@ namespace WidraSoft.UI
                 Language_Manager language_Manager = new Language_Manager();
                 language_Manager.ChangeLanguage("en", this, typeof(GroupeDetail));
                 Localize_Dgv("en");
+                Localize_DgvUsersList("en");
             }
 
-            if (cbLang.Text == "Espagnol(ESP)")
+            if (cbLang.Text == "ES")
             {
                 France_flag.Visible = false;
                 England_flag.Visible = false;
@@ -542,18 +616,12 @@ namespace WidraSoft.UI
                 }
                 MessageBox.Show(GetSelectedRowsId().Length + " droit(s) supprimé(s)");
                 Refresh_Dgv();
-                 vbbn
             }
             else
             {
                 MessageBox.Show("Vous n'avez selectionné aucun enregistrement à supprimer");
             }
 
-        }
-
-        private void lblEnregistrerDgv_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
-        {
-            
         }
 
 

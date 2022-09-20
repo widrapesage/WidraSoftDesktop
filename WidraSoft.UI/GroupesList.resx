@@ -118,18 +118,6 @@
   <data name="rechercherToolStripMenuItem.Text" xml:space="preserve">
     <value>Rechercher</value>
   </data>
-  <data name="excelToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>114, 24</value>
-  </data>
-  <data name="excelToolStripMenuItem.Text" xml:space="preserve">
-    <value>Excel</value>
-  </data>
-  <data name="pDFToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>114, 24</value>
-  </data>
-  <data name="pDFToolStripMenuItem.Text" xml:space="preserve">
-    <value>PDF</value>
-  </data>
   <data name="exporterVersToolStripMenuItem.Font" type="System.Drawing.Font, System.Drawing">
     <value>Corbel, 12pt, style=Bold</value>
   </data>
@@ -168,12 +156,24 @@
   <data name="&gt;&gt;menuStrip1.ZOrder" xml:space="preserve">
     <value>2</value>
   </data>
+  <data name="excelToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>114, 24</value>
+  </data>
+  <data name="excelToolStripMenuItem.Text" xml:space="preserve">
+    <value>Excel</value>
+  </data>
+  <data name="pDFToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>114, 24</value>
+  </data>
+  <data name="pDFToolStripMenuItem.Text" xml:space="preserve">
+    <value>PDF</value>
+  </data>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="pictureBox1.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
   <data name="pictureBox1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>33, 6</value>
+    <value>14, 6</value>
   </data>
   <data name="pictureBox1.Size" type="System.Drawing.Size, System.Drawing">
     <value>24, 24</value>
@@ -197,13 +197,13 @@
     <value>0</value>
   </data>
   <data name="txtSearchBox.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Arial, 11pt</value>
+    <value>Calibri, 12pt</value>
   </data>
   <data name="txtSearchBox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>61, 7</value>
+    <value>42, 6</value>
   </data>
   <data name="txtSearchBox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>388, 24</value>
+    <value>357, 27</value>
   </data>
   <data name="txtSearchBox.TabIndex" type="System.Int32, mscorlib">
     <value>33</value>
@@ -305,13 +305,13 @@
     <value>Flat</value>
   </data>
   <data name="cbLang.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Corbel, 9pt, style=Bold</value>
+    <value>Calibri, 11pt, style=Bold</value>
   </data>
   <data name="cbLang.Location" type="System.Drawing.Point, System.Drawing">
-    <value>111, 9</value>
+    <value>111, 6</value>
   </data>
   <data name="cbLang.Size" type="System.Drawing.Size, System.Drawing">
-    <value>158, 22</value>
+    <value>158, 26</value>
   </data>
   <data name="cbLang.TabIndex" type="System.Int32, mscorlib">
     <value>27</value>
@@ -379,21 +379,6 @@
   <data name="&gt;&gt;panelTitleBar.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
-  <data name="DgvList.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Fill</value>
-  </data>
-  <data name="DgvList.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 0</value>
-  </data>
-  <data name="DgvList.RowHeadersWidth" type="System.Int32, mscorlib">
-    <value>62</value>
-  </data>
-  <data name="DgvList.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1052, 518</value>
-  </data>
-  <data name="DgvList.TabIndex" type="System.Int32, mscorlib">
-    <value>9</value>
-  </data>
   <data name="&gt;&gt;DgvList.Name" xml:space="preserve">
     <value>DgvList</value>
   </data>
@@ -431,6 +416,33 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;panelList.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="DgvList.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="DgvList.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="DgvList.RowHeadersWidth" type="System.Int32, mscorlib">
+    <value>62</value>
+  </data>
+  <data name="DgvList.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1052, 518</value>
+  </data>
+  <data name="DgvList.TabIndex" type="System.Int32, mscorlib">
+    <value>9</value>
+  </data>
+  <data name="&gt;&gt;DgvList.Name" xml:space="preserve">
+    <value>DgvList</value>
+  </data>
+  <data name="&gt;&gt;DgvList.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridView, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;DgvList.Parent" xml:space="preserve">
+    <value>panelList</value>
+  </data>
+  <data name="&gt;&gt;DgvList.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">

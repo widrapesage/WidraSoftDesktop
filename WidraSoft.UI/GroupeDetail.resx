@@ -59,7 +59,7 @@
   </resheader>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="btSupprimer.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Segoe UI, 9pt, style=Bold</value>
+    <value>Corbel, 11pt, style=Bold</value>
   </data>
   <data name="btSupprimer.ImageAlign" type="System.Drawing.ContentAlignment, System.Drawing">
     <value>TopCenter</value>
@@ -100,7 +100,7 @@
     <value>0</value>
   </data>
   <data name="btModifier.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Segoe UI, 9pt, style=Bold</value>
+    <value>Corbel, 11pt, style=Bold</value>
   </data>
   <data name="btModifier.ImageAlign" type="System.Drawing.ContentAlignment, System.Drawing">
     <value>TopCenter</value>
@@ -139,7 +139,7 @@
     <value>1</value>
   </data>
   <data name="btAjouter.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Segoe UI, 9pt, style=Bold</value>
+    <value>Corbel, 11pt, style=Bold</value>
   </data>
   <data name="btAjouter.ImageAlign" type="System.Drawing.ContentAlignment, System.Drawing">
     <value>TopCenter</value>
@@ -208,22 +208,22 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;groupBox1.ZOrder" xml:space="preserve">
-    <value>19</value>
+    <value>20</value>
   </data>
   <data name="label2.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
   <data name="label2.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Arial, 11pt</value>
+    <value>Calibri, 12pt</value>
   </data>
   <data name="label2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>57, 226</value>
+    <value>57, 228</value>
   </data>
   <data name="label2.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>2, 0, 2, 0</value>
   </data>
   <data name="label2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>95, 17</value>
+    <value>97, 19</value>
   </data>
   <data name="label2.TabIndex" type="System.Int32, mscorlib">
     <value>22</value>
@@ -241,19 +241,19 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;label2.ZOrder" xml:space="preserve">
-    <value>15</value>
+    <value>16</value>
   </data>
   <data name="txtDateCreation.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Arial, 11pt</value>
+    <value>Calibri, 12pt</value>
   </data>
   <data name="txtDateCreation.Location" type="System.Drawing.Point, System.Drawing">
-    <value>175, 224</value>
+    <value>175, 225</value>
   </data>
   <data name="txtDateCreation.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>2, 2, 2, 2</value>
   </data>
   <data name="txtDateCreation.Size" type="System.Drawing.Size, System.Drawing">
-    <value>295, 24</value>
+    <value>295, 27</value>
   </data>
   <data name="txtDateCreation.TabIndex" type="System.Int32, mscorlib">
     <value>21</value>
@@ -268,13 +268,13 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;txtDateCreation.ZOrder" xml:space="preserve">
-    <value>16</value>
+    <value>17</value>
   </data>
   <data name="label1.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
   <data name="label1.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Arial, 11pt</value>
+    <value>Calibri, 12pt</value>
   </data>
   <data name="label1.Location" type="System.Drawing.Point, System.Drawing">
     <value>57, 188</value>
@@ -283,7 +283,7 @@
     <value>2, 0, 2, 0</value>
   </data>
   <data name="label1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>19, 17</value>
+    <value>21, 19</value>
   </data>
   <data name="label1.TabIndex" type="System.Int32, mscorlib">
     <value>20</value>
@@ -301,13 +301,13 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;label1.ZOrder" xml:space="preserve">
-    <value>17</value>
+    <value>18</value>
   </data>
   <data name="txtId.Enabled" type="System.Boolean, mscorlib">
     <value>False</value>
   </data>
   <data name="txtId.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Arial, 11pt</value>
+    <value>Calibri, 12pt</value>
   </data>
   <data name="txtId.Location" type="System.Drawing.Point, System.Drawing">
     <value>175, 185</value>
@@ -316,7 +316,7 @@
     <value>2, 2, 2, 2</value>
   </data>
   <data name="txtId.Size" type="System.Drawing.Size, System.Drawing">
-    <value>121, 24</value>
+    <value>121, 27</value>
   </data>
   <data name="txtId.TabIndex" type="System.Int32, mscorlib">
     <value>19</value>
@@ -331,22 +331,22 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;txtId.ZOrder" xml:space="preserve">
-    <value>18</value>
+    <value>19</value>
   </data>
   <data name="label3.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
   <data name="label3.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Arial, 11pt</value>
+    <value>Calibri, 12pt</value>
   </data>
   <data name="label3.Location" type="System.Drawing.Point, System.Drawing">
-    <value>57, 260</value>
+    <value>57, 261</value>
   </data>
   <data name="label3.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>2, 0, 2, 0</value>
   </data>
   <data name="label3.Size" type="System.Drawing.Size, System.Drawing">
-    <value>85, 17</value>
+    <value>87, 19</value>
   </data>
   <data name="label3.TabIndex" type="System.Int32, mscorlib">
     <value>24</value>
@@ -364,19 +364,19 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;label3.ZOrder" xml:space="preserve">
-    <value>13</value>
+    <value>14</value>
   </data>
   <data name="txtDesignation.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Arial, 11pt</value>
+    <value>Calibri, 12pt</value>
   </data>
   <data name="txtDesignation.Location" type="System.Drawing.Point, System.Drawing">
-    <value>175, 257</value>
+    <value>175, 258</value>
   </data>
   <data name="txtDesignation.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>2, 2, 2, 2</value>
   </data>
   <data name="txtDesignation.Size" type="System.Drawing.Size, System.Drawing">
-    <value>295, 24</value>
+    <value>295, 27</value>
   </data>
   <data name="txtDesignation.TabIndex" type="System.Int32, mscorlib">
     <value>23</value>
@@ -391,13 +391,13 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;txtDesignation.ZOrder" xml:space="preserve">
-    <value>14</value>
+    <value>15</value>
   </data>
   <data name="label4.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
   <data name="label4.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Arial, 11pt</value>
+    <value>Calibri, 12pt</value>
   </data>
   <data name="label4.Location" type="System.Drawing.Point, System.Drawing">
     <value>57, 294</value>
@@ -406,7 +406,7 @@
     <value>2, 0, 2, 0</value>
   </data>
   <data name="label4.Size" type="System.Drawing.Size, System.Drawing">
-    <value>92, 17</value>
+    <value>91, 19</value>
   </data>
   <data name="label4.TabIndex" type="System.Int32, mscorlib">
     <value>26</value>
@@ -424,10 +424,10 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;label4.ZOrder" xml:space="preserve">
-    <value>11</value>
+    <value>12</value>
   </data>
   <data name="txtCode.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Arial, 11pt</value>
+    <value>Calibri, 12pt</value>
   </data>
   <data name="txtCode.Location" type="System.Drawing.Point, System.Drawing">
     <value>175, 291</value>
@@ -436,7 +436,7 @@
     <value>2, 2, 2, 2</value>
   </data>
   <data name="txtCode.Size" type="System.Drawing.Size, System.Drawing">
-    <value>121, 24</value>
+    <value>121, 27</value>
   </data>
   <data name="txtCode.TabIndex" type="System.Int32, mscorlib">
     <value>25</value>
@@ -451,13 +451,13 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;txtCode.ZOrder" xml:space="preserve">
-    <value>12</value>
+    <value>13</value>
   </data>
   <data name="label7.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
   <data name="label7.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Arial, 11pt</value>
+    <value>Calibri, 12pt</value>
   </data>
   <data name="label7.Location" type="System.Drawing.Point, System.Drawing">
     <value>57, 327</value>
@@ -466,7 +466,7 @@
     <value>2, 0, 2, 0</value>
   </data>
   <data name="label7.Size" type="System.Drawing.Size, System.Drawing">
-    <value>106, 17</value>
+    <value>107, 19</value>
   </data>
   <data name="label7.TabIndex" type="System.Int32, mscorlib">
     <value>28</value>
@@ -484,10 +484,10 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;label7.ZOrder" xml:space="preserve">
-    <value>9</value>
+    <value>10</value>
   </data>
   <data name="cbLimite.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Arial, 11pt</value>
+    <value>Calibri, 12pt</value>
   </data>
   <data name="cbLimite.Items" xml:space="preserve">
     <value>Oui</value>
@@ -502,7 +502,7 @@
     <value>2, 2, 2, 2</value>
   </data>
   <data name="cbLimite.Size" type="System.Drawing.Size, System.Drawing">
-    <value>121, 25</value>
+    <value>121, 27</value>
   </data>
   <data name="cbLimite.TabIndex" type="System.Int32, mscorlib">
     <value>27</value>
@@ -517,13 +517,13 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;cbLimite.ZOrder" xml:space="preserve">
-    <value>10</value>
+    <value>11</value>
   </data>
   <data name="label5.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
   <data name="label5.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Arial, 11pt</value>
+    <value>Calibri, 12pt</value>
   </data>
   <data name="label5.Location" type="System.Drawing.Point, System.Drawing">
     <value>57, 359</value>
@@ -532,7 +532,7 @@
     <value>2, 0, 2, 0</value>
   </data>
   <data name="label5.Size" type="System.Drawing.Size, System.Drawing">
-    <value>102, 17</value>
+    <value>105, 19</value>
   </data>
   <data name="label5.TabIndex" type="System.Int32, mscorlib">
     <value>30</value>
@@ -550,10 +550,10 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;label5.ZOrder" xml:space="preserve">
-    <value>7</value>
+    <value>8</value>
   </data>
   <data name="txtNbLimite.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Arial, 11pt</value>
+    <value>Calibri, 12pt</value>
   </data>
   <data name="txtNbLimite.Location" type="System.Drawing.Point, System.Drawing">
     <value>175, 358</value>
@@ -562,7 +562,7 @@
     <value>2, 2, 2, 2</value>
   </data>
   <data name="txtNbLimite.Size" type="System.Drawing.Size, System.Drawing">
-    <value>121, 24</value>
+    <value>121, 27</value>
   </data>
   <data name="txtNbLimite.TabIndex" type="System.Int32, mscorlib">
     <value>29</value>
@@ -577,9 +577,60 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;txtNbLimite.ZOrder" xml:space="preserve">
-    <value>8</value>
+    <value>9</value>
   </data>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="pbTracking.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="pbTracking.Location" type="System.Drawing.Point, System.Drawing">
+    <value>1127, 5</value>
+  </data>
+  <data name="pbTracking.Size" type="System.Drawing.Size, System.Drawing">
+    <value>24, 24</value>
+  </data>
+  <data name="pbTracking.SizeMode" type="System.Windows.Forms.PictureBoxSizeMode, System.Windows.Forms">
+    <value>AutoSize</value>
+  </data>
+  <data name="pbTracking.TabIndex" type="System.Int32, mscorlib">
+    <value>28</value>
+  </data>
+  <data name="&gt;&gt;pbTracking.Name" xml:space="preserve">
+    <value>pbTracking</value>
+  </data>
+  <data name="&gt;&gt;pbTracking.Type" xml:space="preserve">
+    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;pbTracking.Parent" xml:space="preserve">
+    <value>panelLang</value>
+  </data>
+  <data name="&gt;&gt;pbTracking.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="pbLocked.Location" type="System.Drawing.Point, System.Drawing">
+    <value>1157, 5</value>
+  </data>
+  <data name="pbLocked.Size" type="System.Drawing.Size, System.Drawing">
+    <value>24, 24</value>
+  </data>
+  <data name="pbLocked.SizeMode" type="System.Windows.Forms.PictureBoxSizeMode, System.Windows.Forms">
+    <value>AutoSize</value>
+  </data>
+  <data name="pbLocked.TabIndex" type="System.Int32, mscorlib">
+    <value>27</value>
+  </data>
+  <data name="&gt;&gt;pbLocked.Name" xml:space="preserve">
+    <value>pbLocked</value>
+  </data>
+  <data name="&gt;&gt;pbLocked.Type" xml:space="preserve">
+    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;pbLocked.Parent" xml:space="preserve">
+    <value>panelLang</value>
+  </data>
+  <data name="&gt;&gt;pbLocked.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
   <data name="Spain_flag.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
@@ -605,7 +656,7 @@
     <value>panelLang</value>
   </data>
   <data name="&gt;&gt;Spain_flag.ZOrder" xml:space="preserve">
-    <value>0</value>
+    <value>2</value>
   </data>
   <data name="England_flag.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
@@ -632,7 +683,7 @@
     <value>panelLang</value>
   </data>
   <data name="&gt;&gt;England_flag.ZOrder" xml:space="preserve">
-    <value>1</value>
+    <value>3</value>
   </data>
   <data name="France_flag.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
@@ -659,19 +710,19 @@
     <value>panelLang</value>
   </data>
   <data name="&gt;&gt;France_flag.ZOrder" xml:space="preserve">
-    <value>2</value>
+    <value>4</value>
   </data>
   <data name="cbLang.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
     <value>Flat</value>
   </data>
   <data name="cbLang.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Corbel, 9pt, style=Bold</value>
+    <value>Calibri, 11pt, style=Bold</value>
   </data>
   <data name="cbLang.Location" type="System.Drawing.Point, System.Drawing">
-    <value>60, 7</value>
+    <value>60, 4</value>
   </data>
   <data name="cbLang.Size" type="System.Drawing.Size, System.Drawing">
-    <value>158, 22</value>
+    <value>158, 26</value>
   </data>
   <data name="cbLang.TabIndex" type="System.Int32, mscorlib">
     <value>23</value>
@@ -686,7 +737,7 @@
     <value>panelLang</value>
   </data>
   <data name="&gt;&gt;cbLang.ZOrder" xml:space="preserve">
-    <value>3</value>
+    <value>5</value>
   </data>
   <data name="panelLang.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Top</value>
@@ -710,10 +761,10 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;panelLang.ZOrder" xml:space="preserve">
-    <value>6</value>
+    <value>7</value>
   </data>
   <data name="dgvGroupeDroits.Location" type="System.Drawing.Point, System.Drawing">
-    <value>57, 451</value>
+    <value>-148, 217</value>
   </data>
   <data name="dgvGroupeDroits.RowHeadersWidth" type="System.Int32, mscorlib">
     <value>62</value>
@@ -734,13 +785,13 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;dgvGroupeDroits.ZOrder" xml:space="preserve">
-    <value>5</value>
+    <value>6</value>
   </data>
   <data name="lblRetirerDgv.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
   <data name="lblRetirerDgv.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Corbel, 10pt, style=Bold</value>
+    <value>Calibri, 11pt, style=Bold</value>
   </data>
   <data name="lblRetirerDgv.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
@@ -749,7 +800,7 @@
     <value>176, 424</value>
   </data>
   <data name="lblRetirerDgv.Size" type="System.Drawing.Size, System.Drawing">
-    <value>49, 17</value>
+    <value>51, 18</value>
   </data>
   <data name="lblRetirerDgv.TabIndex" type="System.Int32, mscorlib">
     <value>74</value>
@@ -767,13 +818,13 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;lblRetirerDgv.ZOrder" xml:space="preserve">
-    <value>4</value>
+    <value>5</value>
   </data>
   <data name="lblEnregistrerDgv.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
   <data name="lblEnregistrerDgv.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Corbel, 10pt, style=Bold</value>
+    <value>Calibri, 11pt, style=Bold</value>
   </data>
   <data name="lblEnregistrerDgv.ImageAlign" type="System.Drawing.ContentAlignment, System.Drawing">
     <value>MiddleLeft</value>
@@ -785,7 +836,7 @@
     <value>74, 424</value>
   </data>
   <data name="lblEnregistrerDgv.Size" type="System.Drawing.Size, System.Drawing">
-    <value>75, 17</value>
+    <value>76, 18</value>
   </data>
   <data name="lblEnregistrerDgv.TabIndex" type="System.Int32, mscorlib">
     <value>75</value>
@@ -806,7 +857,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;lblEnregistrerDgv.ZOrder" xml:space="preserve">
-    <value>3</value>
+    <value>4</value>
   </data>
   <data name="pbAddRow.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
@@ -833,7 +884,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;pbAddRow.ZOrder" xml:space="preserve">
-    <value>2</value>
+    <value>3</value>
   </data>
   <data name="pbRemoveRow.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
@@ -860,30 +911,66 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;pbRemoveRow.ZOrder" xml:space="preserve">
-    <value>1</value>
+    <value>2</value>
   </data>
-  <data name="lvGroupUsers.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Arial, 11pt</value>
+  <data name="DgvUsersList.Location" type="System.Drawing.Point, System.Drawing">
+    <value>649, 224</value>
   </data>
-  <data name="lvGroupUsers.Location" type="System.Drawing.Point, System.Drawing">
-    <value>649, 185</value>
+  <data name="DgvUsersList.RowHeadersWidth" type="System.Int32, mscorlib">
+    <value>62</value>
   </data>
-  <data name="lvGroupUsers.Size" type="System.Drawing.Size, System.Drawing">
-    <value>482, 197</value>
+  <data name="DgvUsersList.Size" type="System.Drawing.Size, System.Drawing">
+    <value>482, 215</value>
   </data>
-  <data name="lvGroupUsers.TabIndex" type="System.Int32, mscorlib">
+  <data name="DgvUsersList.TabIndex" type="System.Int32, mscorlib">
     <value>78</value>
   </data>
-  <data name="&gt;&gt;lvGroupUsers.Name" xml:space="preserve">
-    <value>lvGroupUsers</value>
+  <data name="&gt;&gt;DgvUsersList.Name" xml:space="preserve">
+    <value>DgvUsersList</value>
   </data>
-  <data name="&gt;&gt;lvGroupUsers.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ListView, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="&gt;&gt;DgvUsersList.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridView, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;lvGroupUsers.Parent" xml:space="preserve">
+  <data name="&gt;&gt;DgvUsersList.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
-  <data name="&gt;&gt;lvGroupUsers.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;DgvUsersList.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="label6.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label6.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Calibri, 12pt, style=Underline</value>
+  </data>
+  <data name="label6.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="label6.Location" type="System.Drawing.Point, System.Drawing">
+    <value>649, 202</value>
+  </data>
+  <data name="label6.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>2, 0, 2, 0</value>
+  </data>
+  <data name="label6.Size" type="System.Drawing.Size, System.Drawing">
+    <value>172, 19</value>
+  </data>
+  <data name="label6.TabIndex" type="System.Int32, mscorlib">
+    <value>79</value>
+  </data>
+  <data name="label6.Text" xml:space="preserve">
+    <value>Utilisateurs de ce groupe</value>
+  </data>
+  <data name="&gt;&gt;label6.Name" xml:space="preserve">
+    <value>label6</value>
+  </data>
+  <data name="&gt;&gt;label6.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label6.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;label6.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">

@@ -46,6 +46,7 @@ namespace WidraSoft.UI
             DgvList.Columns["DATECREATION"].Width = 250;
 
             DgvList.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            DgvList.RowHeadersWidthSizeMode = DataGridViewRowHeadersWidthSizeMode.AutoSizeToFirstHeader;
             DgvList.ReadOnly = true;
 
         }
@@ -158,7 +159,7 @@ namespace WidraSoft.UI
 
         private void cbLang_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (cbLang.Text == "Francais(FR)")
+            if (cbLang.Text == "FR")
             {
                 France_flag.Visible = true;
                 England_flag.Visible = false;
@@ -168,7 +169,7 @@ namespace WidraSoft.UI
                 Localize_Dgv("fr"); 
             }
 
-            if (cbLang.Text == "Anglais(ANG)")
+            if (cbLang.Text == "EN")
             {
                 France_flag.Visible = false;
                 England_flag.Visible = true;
@@ -178,7 +179,7 @@ namespace WidraSoft.UI
                 Localize_Dgv("en"); 
             }
 
-            if (cbLang.Text == "Espagnol(ESP)")
+            if (cbLang.Text == "ES")
             {
                 France_flag.Visible = false;
                 England_flag.Visible = false;

@@ -33,6 +33,9 @@ namespace WidraSoft.UI
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.btSupprimer = new System.Windows.Forms.Button();
             this.btModifier = new System.Windows.Forms.Button();
@@ -50,6 +53,8 @@ namespace WidraSoft.UI
             this.label5 = new System.Windows.Forms.Label();
             this.txtNbLimite = new System.Windows.Forms.TextBox();
             this.panelLang = new System.Windows.Forms.Panel();
+            this.pbTracking = new System.Windows.Forms.PictureBox();
+            this.pbLocked = new System.Windows.Forms.PictureBox();
             this.Spain_flag = new System.Windows.Forms.PictureBox();
             this.England_flag = new System.Windows.Forms.PictureBox();
             this.France_flag = new System.Windows.Forms.PictureBox();
@@ -59,15 +64,19 @@ namespace WidraSoft.UI
             this.lblEnregistrerDgv = new System.Windows.Forms.LinkLabel();
             this.pbAddRow = new System.Windows.Forms.PictureBox();
             this.pbRemoveRow = new System.Windows.Forms.PictureBox();
-            this.lvGroupUsers = new System.Windows.Forms.ListView();
+            this.DgvUsersList = new System.Windows.Forms.DataGridView();
+            this.label6 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.panelLang.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbTracking)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbLocked)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Spain_flag)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.England_flag)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.France_flag)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvGroupeDroits)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbAddRow)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbRemoveRow)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DgvUsersList)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
@@ -199,12 +208,29 @@ namespace WidraSoft.UI
             // panelLang
             // 
             this.panelLang.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(86)))), ((int)(((byte)(77)))));
+            this.panelLang.Controls.Add(this.pbTracking);
+            this.panelLang.Controls.Add(this.pbLocked);
             this.panelLang.Controls.Add(this.Spain_flag);
             this.panelLang.Controls.Add(this.England_flag);
             this.panelLang.Controls.Add(this.France_flag);
             this.panelLang.Controls.Add(this.cbLang);
             resources.ApplyResources(this.panelLang, "panelLang");
             this.panelLang.Name = "panelLang";
+            // 
+            // pbTracking
+            // 
+            this.pbTracking.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pbTracking.Image = global::WidraSoft.UI.Properties.Resources.view;
+            resources.ApplyResources(this.pbTracking, "pbTracking");
+            this.pbTracking.Name = "pbTracking";
+            this.pbTracking.TabStop = false;
+            // 
+            // pbLocked
+            // 
+            this.pbLocked.Image = global::WidraSoft.UI.Properties.Resources._lock;
+            resources.ApplyResources(this.pbLocked, "pbLocked");
+            this.pbLocked.Name = "pbLocked";
+            this.pbLocked.TabStop = false;
             // 
             // Spain_flag
             // 
@@ -260,7 +286,7 @@ namespace WidraSoft.UI
             this.dgvGroupeDroits.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = System.Drawing.Color.Honeydew;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Corbel", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
             dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(86)))), ((int)(((byte)(77)))));
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.White;
@@ -299,7 +325,6 @@ namespace WidraSoft.UI
             this.lblEnregistrerDgv.LinkColor = System.Drawing.Color.White;
             this.lblEnregistrerDgv.Name = "lblEnregistrerDgv";
             this.lblEnregistrerDgv.TabStop = true;
-            this.lblEnregistrerDgv.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lblEnregistrerDgv_LinkClicked);
             // 
             // pbAddRow
             // 
@@ -319,20 +344,55 @@ namespace WidraSoft.UI
             this.pbRemoveRow.Name = "pbRemoveRow";
             this.pbRemoveRow.TabStop = false;
             // 
-            // lvGroupUsers
+            // DgvUsersList
             // 
-            this.lvGroupUsers.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(62)))), ((int)(((byte)(60)))));
-            resources.ApplyResources(this.lvGroupUsers, "lvGroupUsers");
-            this.lvGroupUsers.ForeColor = System.Drawing.Color.White;
-            this.lvGroupUsers.Name = "lvGroupUsers";
-            this.lvGroupUsers.UseCompatibleStateImageBehavior = false;
+            this.DgvUsersList.AllowUserToAddRows = false;
+            this.DgvUsersList.AllowUserToDeleteRows = false;
+            this.DgvUsersList.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(62)))), ((int)(((byte)(60)))));
+            this.DgvUsersList.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.Sunken;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(86)))), ((int)(((byte)(77)))));
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Corbel", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(190)))), ((int)(((byte)(117)))));
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.DgvUsersList.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            this.DgvUsersList.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.Honeydew;
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Calibri", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(86)))), ((int)(((byte)(77)))));
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.DgvUsersList.DefaultCellStyle = dataGridViewCellStyle5;
+            resources.ApplyResources(this.DgvUsersList, "DgvUsersList");
+            this.DgvUsersList.Name = "DgvUsersList";
+            this.DgvUsersList.ReadOnly = true;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.Honeydew;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Corbel", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.MediumSeaGreen;
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.DgvUsersList.RowHeadersDefaultCellStyle = dataGridViewCellStyle6;
+            this.DgvUsersList.RowTemplate.Height = 33;
+            // 
+            // label6
+            // 
+            resources.ApplyResources(this.label6, "label6");
+            this.label6.ForeColor = System.Drawing.Color.White;
+            this.label6.Name = "label6";
             // 
             // GroupeDetail
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(62)))), ((int)(((byte)(60)))));
-            this.Controls.Add(this.lvGroupUsers);
+            this.Controls.Add(this.label6);
+            this.Controls.Add(this.DgvUsersList);
             this.Controls.Add(this.pbRemoveRow);
             this.Controls.Add(this.pbAddRow);
             this.Controls.Add(this.lblEnregistrerDgv);
@@ -358,12 +418,15 @@ namespace WidraSoft.UI
             this.groupBox1.ResumeLayout(false);
             this.panelLang.ResumeLayout(false);
             this.panelLang.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbTracking)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbLocked)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Spain_flag)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.England_flag)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.France_flag)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvGroupeDroits)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbAddRow)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbRemoveRow)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DgvUsersList)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -396,6 +459,9 @@ namespace WidraSoft.UI
         private System.Windows.Forms.LinkLabel lblEnregistrerDgv;
         private System.Windows.Forms.PictureBox pbAddRow;
         private System.Windows.Forms.PictureBox pbRemoveRow;
-        private System.Windows.Forms.ListView lvGroupUsers;
+        private System.Windows.Forms.DataGridView DgvUsersList;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.PictureBox pbLocked;
+        private System.Windows.Forms.PictureBox pbTracking;
     }
 }

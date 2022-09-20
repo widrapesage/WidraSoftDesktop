@@ -14,11 +14,15 @@ namespace WidraSoft.UI
   
         public void ChangeLanguage(string lang, Form form, Type typeOfForm)
         {
+            ComponentResourceManager resources = new ComponentResourceManager(typeOfForm);
+
+            resources.ApplyResources(form, form.Name, new CultureInfo(lang));
+
             foreach (Control c in form.Controls)
             {
                 Type controlType = c.GetType();
                 String controlName = controlType.Name;
-                ComponentResourceManager resources = new ComponentResourceManager(typeOfForm);
+                
                 if (controlName == "Panel" || controlName == "GroupBox")
                 {
                     foreach (Control cc in c.Controls)
@@ -70,21 +74,57 @@ namespace WidraSoft.UI
             String return_Value = "";
             if (text == "Valider")
             {
-                if (lang == "Francais(FR)")
-                    return_Value = "Valider";
-                else if (lang == "Anglais(ANG)")
-                    return_Value = "Save";
-                else
-                    return_Value = "Valider";
+                if (lang == "FR") return_Value = "Valider";
+                else if (lang == "EN") return_Value = "Save";
+                else return_Value = "Valider";
             }
             if (text == "Modifier")
             {
-                if (lang == "Francais(FR)")
-                    return_Value = "Modifier";
-                else if (lang == "Anglais(ANG)")
-                    return_Value = "Edit";
-                else
-                    return_Value = "Modifier";
+                if (lang == "FR") return_Value = "Modifier";
+                else if (lang == "EN") return_Value = "Edit";
+                else return_Value = "Modifier";
+            }
+            if (text == "OK")
+            {
+                if (lang == "FR") return_Value = "OK";
+                else if (lang == "EN")  return_Value = "OK";
+                else return_Value = "OK";
+            }
+            if (text == "Annuler")
+            {
+                if (lang == "FR") return_Value = "Annuler";
+                else if (lang == "EN") return_Value = "Cancel";
+                else return_Value = "Annuler";
+            }           
+            if (text == "Recommencer")
+            {
+                if (lang == "FR") return_Value = "Recommencer";
+                else if (lang == "EN") return_Value = "Retry";
+                else return_Value = "Recommencer";
+            }
+            if (text == "Oui")
+            {
+                if (lang == "FR") return_Value = "Oui";
+                else if (lang == "EN") return_Value = "Yes";
+                else return_Value = "Oui";
+            }
+            if (text == "Non")
+            {
+                if (lang == "FR") return_Value = "Non";
+                else if (lang == "EN") return_Value = "No";
+                else return_Value = "Non";
+            }
+            if (text == "Abandonner")
+            {
+                if (lang == "FR") return_Value = "Abandonner";
+                else if (lang == "EN") return_Value = "Abort";
+                else return_Value = "Abandonner";
+            } 
+            if (text == "Ignorer")
+            {
+                if (lang == "FR") return_Value = "Ignorer";
+                else if (lang == "EN") return_Value = "Ignore";
+                else return_Value = "Ignorer";
             }
 
             return return_Value;

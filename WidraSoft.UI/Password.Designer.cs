@@ -58,9 +58,9 @@ namespace WidraSoft.UI
             // 
             // panelLogo
             // 
-            resources.ApplyResources(this.panelLogo, "panelLogo");
             this.panelLogo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(62)))), ((int)(((byte)(60)))));
             this.panelLogo.Controls.Add(this.pictureBox1);
+            resources.ApplyResources(this.panelLogo, "panelLogo");
             this.panelLogo.Name = "panelLogo";
             // 
             // pictureBox1
@@ -72,8 +72,8 @@ namespace WidraSoft.UI
             // 
             // txtPassword
             // 
-            resources.ApplyResources(this.txtPassword, "txtPassword");
             this.txtPassword.BackColor = System.Drawing.Color.Honeydew;
+            resources.ApplyResources(this.txtPassword, "txtPassword");
             this.txtPassword.ForeColor = System.Drawing.Color.Black;
             this.txtPassword.Name = "txtPassword";
             // 
@@ -93,9 +93,9 @@ namespace WidraSoft.UI
             // 
             // btConnecter
             // 
-            resources.ApplyResources(this.btConnecter, "btConnecter");
             this.btConnecter.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(190)))), ((int)(((byte)(117)))));
             this.btConnecter.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(190)))), ((int)(((byte)(117)))));
+            resources.ApplyResources(this.btConnecter, "btConnecter");
             this.btConnecter.ForeColor = System.Drawing.Color.Black;
             this.btConnecter.Name = "btConnecter";
             this.btConnecter.UseVisualStyleBackColor = false;
@@ -105,16 +105,16 @@ namespace WidraSoft.UI
             // 
             // txtLogin
             // 
-            resources.ApplyResources(this.txtLogin, "txtLogin");
             this.txtLogin.BackColor = System.Drawing.Color.Honeydew;
+            resources.ApplyResources(this.txtLogin, "txtLogin");
             this.txtLogin.ForeColor = System.Drawing.Color.Black;
             this.txtLogin.Name = "txtLogin";
             // 
             // btQuitter
             // 
-            resources.ApplyResources(this.btQuitter, "btQuitter");
             this.btQuitter.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(190)))), ((int)(((byte)(117)))));
             this.btQuitter.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(190)))), ((int)(((byte)(117)))));
+            resources.ApplyResources(this.btQuitter, "btQuitter");
             this.btQuitter.ForeColor = System.Drawing.Color.Black;
             this.btQuitter.Name = "btQuitter";
             this.btQuitter.UseVisualStyleBackColor = false;
@@ -131,16 +131,15 @@ namespace WidraSoft.UI
             // 
             // pictureBox2
             // 
-            resources.ApplyResources(this.pictureBox2, "pictureBox2");
             this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox2.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBox2.Image = global::WidraSoft.UI.Properties.Resources.Balance;
+            resources.ApplyResources(this.pictureBox2, "pictureBox2");
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.TabStop = false;
             // 
             // PanelLayout
             // 
-            resources.ApplyResources(this.PanelLayout, "PanelLayout");
             this.PanelLayout.Controls.Add(this.panelLang);
             this.PanelLayout.Controls.Add(this.pictureBox2);
             this.PanelLayout.Controls.Add(this.label1);
@@ -150,49 +149,50 @@ namespace WidraSoft.UI
             this.PanelLayout.Controls.Add(this.label2);
             this.PanelLayout.Controls.Add(this.label3);
             this.PanelLayout.Controls.Add(this.txtPassword);
+            resources.ApplyResources(this.PanelLayout, "PanelLayout");
             this.PanelLayout.Name = "PanelLayout";
             // 
             // panelLang
             // 
-            resources.ApplyResources(this.panelLang, "panelLang");
             this.panelLang.Controls.Add(this.Spain_flag);
             this.panelLang.Controls.Add(this.England_flag);
             this.panelLang.Controls.Add(this.France_flag);
             this.panelLang.Controls.Add(this.cbLang);
+            resources.ApplyResources(this.panelLang, "panelLang");
             this.panelLang.Name = "panelLang";
             // 
             // Spain_flag
             // 
-            resources.ApplyResources(this.Spain_flag, "Spain_flag");
             this.Spain_flag.BackColor = System.Drawing.Color.Transparent;
             this.Spain_flag.Cursor = System.Windows.Forms.Cursors.Hand;
             this.Spain_flag.Image = global::WidraSoft.UI.Properties.Resources.spain;
+            resources.ApplyResources(this.Spain_flag, "Spain_flag");
             this.Spain_flag.Name = "Spain_flag";
             this.Spain_flag.TabStop = false;
             // 
             // England_flag
             // 
-            resources.ApplyResources(this.England_flag, "England_flag");
             this.England_flag.BackColor = System.Drawing.Color.Transparent;
             this.England_flag.Cursor = System.Windows.Forms.Cursors.Hand;
             this.England_flag.Image = global::WidraSoft.UI.Properties.Resources.united_kingdom;
+            resources.ApplyResources(this.England_flag, "England_flag");
             this.England_flag.Name = "England_flag";
             this.England_flag.TabStop = false;
             // 
             // France_flag
             // 
-            resources.ApplyResources(this.France_flag, "France_flag");
             this.France_flag.BackColor = System.Drawing.Color.Transparent;
             this.France_flag.Cursor = System.Windows.Forms.Cursors.Hand;
             this.France_flag.Image = global::WidraSoft.UI.Properties.Resources.france;
+            resources.ApplyResources(this.France_flag, "France_flag");
             this.France_flag.Name = "France_flag";
             this.France_flag.TabStop = false;
             // 
             // cbLang
             // 
-            resources.ApplyResources(this.cbLang, "cbLang");
             this.cbLang.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(86)))), ((int)(((byte)(77)))));
             this.cbLang.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            resources.ApplyResources(this.cbLang, "cbLang");
             this.cbLang.ForeColor = System.Drawing.Color.White;
             this.cbLang.FormattingEnabled = true;
             this.cbLang.Name = "cbLang";

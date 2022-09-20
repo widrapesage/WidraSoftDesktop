@@ -68,31 +68,31 @@
   </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="label2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>60, 17</value>
+    <value>60, 19</value>
   </data>
   <data name="label2.Text" xml:space="preserve">
     <value>Created</value>
   </data>
   <data name="label3.Size" type="System.Drawing.Size, System.Drawing">
-    <value>47, 17</value>
+    <value>47, 19</value>
   </data>
   <data name="label3.Text" xml:space="preserve">
     <value>Name</value>
   </data>
   <data name="label4.Size" type="System.Drawing.Size, System.Drawing">
-    <value>84, 17</value>
+    <value>83, 19</value>
   </data>
   <data name="label4.Text" xml:space="preserve">
     <value>Group code</value>
   </data>
   <data name="label7.Size" type="System.Drawing.Size, System.Drawing">
-    <value>93, 17</value>
+    <value>94, 19</value>
   </data>
   <data name="label7.Text" xml:space="preserve">
     <value>Limit number</value>
   </data>
   <data name="label5.Size" type="System.Drawing.Size, System.Drawing">
-    <value>88, 17</value>
+    <value>90, 19</value>
   </data>
   <data name="label5.Text" xml:space="preserve">
     <value>Max number</value>
@@ -101,19 +101,25 @@
     <value>134, 424</value>
   </data>
   <data name="lblRetirerDgv.Size" type="System.Drawing.Size, System.Drawing">
-    <value>58, 17</value>
+    <value>59, 18</value>
   </data>
   <data name="lblRetirerDgv.Text" xml:space="preserve">
     <value>Remove</value>
   </data>
   <data name="lblEnregistrerDgv.Size" type="System.Drawing.Size, System.Drawing">
-    <value>37, 17</value>
+    <value>37, 18</value>
   </data>
   <data name="lblEnregistrerDgv.Text" xml:space="preserve">
     <value>Save</value>
   </data>
   <data name="pbRemoveRow.Location" type="System.Drawing.Point, System.Drawing">
     <value>118, 425</value>
+  </data>
+  <data name="label6.Size" type="System.Drawing.Size, System.Drawing">
+    <value>132, 19</value>
+  </data>
+  <data name="label6.Text" xml:space="preserve">
+    <value>Users of this group</value>
   </data>
   <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>

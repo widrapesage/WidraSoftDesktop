@@ -368,13 +368,13 @@
     <value>True</value>
   </data>
   <data name="lblChangerMdp.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Corbel, 10pt, style=Bold</value>
+    <value>Calibri, 10pt, style=Bold</value>
   </data>
   <data name="lblChangerMdp.Location" type="System.Drawing.Point, System.Drawing">
-    <value>76, 85</value>
+    <value>76, 82</value>
   </data>
   <data name="lblChangerMdp.Size" type="System.Drawing.Size, System.Drawing">
-    <value>142, 17</value>
+    <value>139, 17</value>
   </data>
   <data name="lblChangerMdp.TabIndex" type="System.Int32, mscorlib">
     <value>17</value>
@@ -398,13 +398,13 @@
     <value>True</value>
   </data>
   <data name="lblMonCompte.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Corbel, 10pt, style=Bold</value>
+    <value>Calibri, 10pt, style=Bold</value>
   </data>
   <data name="lblMonCompte.Location" type="System.Drawing.Point, System.Drawing">
-    <value>76, 63</value>
+    <value>76, 60</value>
   </data>
   <data name="lblMonCompte.Size" type="System.Drawing.Size, System.Drawing">
-    <value>85, 17</value>
+    <value>84, 17</value>
   </data>
   <data name="lblMonCompte.TabIndex" type="System.Int32, mscorlib">
     <value>18</value>
@@ -428,13 +428,13 @@
     <value>Top, Right</value>
   </data>
   <data name="txtValidite.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Arial, 11pt</value>
+    <value>Calibri, 12pt</value>
   </data>
   <data name="txtValidite.Location" type="System.Drawing.Point, System.Drawing">
     <value>167, 86</value>
   </data>
   <data name="txtValidite.Size" type="System.Drawing.Size, System.Drawing">
-    <value>318, 24</value>
+    <value>318, 27</value>
   </data>
   <data name="txtValidite.TabIndex" type="System.Int32, mscorlib">
     <value>28</value>
@@ -455,13 +455,13 @@
     <value>Top, Right</value>
   </data>
   <data name="txtTypeAbonnement.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Arial, 11pt</value>
+    <value>Calibri, 12pt</value>
   </data>
   <data name="txtTypeAbonnement.Location" type="System.Drawing.Point, System.Drawing">
     <value>167, 55</value>
   </data>
   <data name="txtTypeAbonnement.Size" type="System.Drawing.Size, System.Drawing">
-    <value>318, 24</value>
+    <value>318, 27</value>
   </data>
   <data name="txtTypeAbonnement.TabIndex" type="System.Int32, mscorlib">
     <value>27</value>
@@ -485,13 +485,13 @@
     <value>True</value>
   </data>
   <data name="label1.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Arial, 11pt</value>
+    <value>Calibri, 12pt</value>
   </data>
   <data name="label1.Location" type="System.Drawing.Point, System.Drawing">
     <value>22, 59</value>
   </data>
   <data name="label1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>147, 17</value>
+    <value>148, 19</value>
   </data>
   <data name="label1.TabIndex" type="System.Int32, mscorlib">
     <value>23</value>
@@ -518,13 +518,13 @@
     <value>Top, Right</value>
   </data>
   <data name="txtEntreprise.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Arial, 11pt</value>
+    <value>Calibri, 12pt</value>
   </data>
   <data name="txtEntreprise.Location" type="System.Drawing.Point, System.Drawing">
     <value>167, 24</value>
   </data>
   <data name="txtEntreprise.Size" type="System.Drawing.Size, System.Drawing">
-    <value>318, 24</value>
+    <value>318, 27</value>
   </data>
   <data name="txtEntreprise.TabIndex" type="System.Int32, mscorlib">
     <value>26</value>
@@ -548,7 +548,7 @@
     <value>True</value>
   </data>
   <data name="label2.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Arial, 11pt</value>
+    <value>Calibri, 12pt</value>
   </data>
   <data name="label2.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
@@ -557,7 +557,7 @@
     <value>97, 91</value>
   </data>
   <data name="label2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>65, 17</value>
+    <value>70, 19</value>
   </data>
   <data name="label2.TabIndex" type="System.Int32, mscorlib">
     <value>24</value>
@@ -587,7 +587,7 @@
     <value>True</value>
   </data>
   <data name="label3.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Arial, 11pt</value>
+    <value>Calibri, 12pt</value>
   </data>
   <data name="label3.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
@@ -596,7 +596,7 @@
     <value>84, 29</value>
   </data>
   <data name="label3.Size" type="System.Drawing.Size, System.Drawing">
-    <value>83, 17</value>
+    <value>83, 19</value>
   </data>
   <data name="label3.TabIndex" type="System.Int32, mscorlib">
     <value>25</value>
@@ -644,7 +644,7 @@
     <value>0</value>
   </data>
   <data name="Spain_flag.Location" type="System.Drawing.Point, System.Drawing">
-    <value>46, 108</value>
+    <value>46, 109</value>
   </data>
   <data name="Spain_flag.Size" type="System.Drawing.Size, System.Drawing">
     <value>24, 24</value>
@@ -668,7 +668,7 @@
     <value>1</value>
   </data>
   <data name="England_flag.Location" type="System.Drawing.Point, System.Drawing">
-    <value>46, 108</value>
+    <value>46, 109</value>
   </data>
   <data name="England_flag.Size" type="System.Drawing.Size, System.Drawing">
     <value>24, 24</value>
@@ -692,7 +692,7 @@
     <value>2</value>
   </data>
   <data name="France_flag.Location" type="System.Drawing.Point, System.Drawing">
-    <value>46, 108</value>
+    <value>46, 109</value>
   </data>
   <data name="France_flag.Size" type="System.Drawing.Size, System.Drawing">
     <value>24, 24</value>
@@ -719,13 +719,13 @@
     <value>Flat</value>
   </data>
   <data name="cbLang.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Corbel, 9pt, style=Bold</value>
+    <value>Calibri, 11pt, style=Bold</value>
   </data>
   <data name="cbLang.Location" type="System.Drawing.Point, System.Drawing">
-    <value>76, 110</value>
+    <value>76, 108</value>
   </data>
   <data name="cbLang.Size" type="System.Drawing.Size, System.Drawing">
-    <value>158, 22</value>
+    <value>158, 26</value>
   </data>
   <data name="cbLang.TabIndex" type="System.Int32, mscorlib">
     <value>19</value>
