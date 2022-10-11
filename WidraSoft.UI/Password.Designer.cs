@@ -37,7 +37,6 @@ namespace WidraSoft.UI
             this.label2 = new System.Windows.Forms.Label();
             this.btConnecter = new System.Windows.Forms.Button();
             this.txtLogin = new System.Windows.Forms.TextBox();
-            this.btQuitter = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.PanelLayout = new System.Windows.Forms.Panel();
@@ -93,8 +92,9 @@ namespace WidraSoft.UI
             // 
             // btConnecter
             // 
-            this.btConnecter.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(190)))), ((int)(((byte)(117)))));
-            this.btConnecter.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(190)))), ((int)(((byte)(117)))));
+            this.btConnecter.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(110)))), ((int)(((byte)(230)))), ((int)(((byte)(130)))));
+            this.btConnecter.FlatAppearance.BorderColor = System.Drawing.Color.WhiteSmoke;
+            this.btConnecter.FlatAppearance.BorderSize = 0;
             resources.ApplyResources(this.btConnecter, "btConnecter");
             this.btConnecter.ForeColor = System.Drawing.Color.Black;
             this.btConnecter.Name = "btConnecter";
@@ -109,18 +109,6 @@ namespace WidraSoft.UI
             resources.ApplyResources(this.txtLogin, "txtLogin");
             this.txtLogin.ForeColor = System.Drawing.Color.Black;
             this.txtLogin.Name = "txtLogin";
-            // 
-            // btQuitter
-            // 
-            this.btQuitter.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(190)))), ((int)(((byte)(117)))));
-            this.btQuitter.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(190)))), ((int)(((byte)(117)))));
-            resources.ApplyResources(this.btQuitter, "btQuitter");
-            this.btQuitter.ForeColor = System.Drawing.Color.Black;
-            this.btQuitter.Name = "btQuitter";
-            this.btQuitter.UseVisualStyleBackColor = false;
-            this.btQuitter.Click += new System.EventHandler(this.btQuitter_Click);
-            this.btQuitter.MouseEnter += new System.EventHandler(this.btQuitter_MouseEnter);
-            this.btQuitter.MouseLeave += new System.EventHandler(this.btQuitter_MouseLeave);
             // 
             // label1
             // 
@@ -143,7 +131,6 @@ namespace WidraSoft.UI
             this.PanelLayout.Controls.Add(this.panelLang);
             this.PanelLayout.Controls.Add(this.pictureBox2);
             this.PanelLayout.Controls.Add(this.label1);
-            this.PanelLayout.Controls.Add(this.btQuitter);
             this.PanelLayout.Controls.Add(this.txtLogin);
             this.PanelLayout.Controls.Add(this.btConnecter);
             this.PanelLayout.Controls.Add(this.label2);
@@ -230,7 +217,6 @@ namespace WidraSoft.UI
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button btConnecter;
         private System.Windows.Forms.TextBox txtLogin;
-        private System.Windows.Forms.Button btQuitter;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Panel PanelLayout;

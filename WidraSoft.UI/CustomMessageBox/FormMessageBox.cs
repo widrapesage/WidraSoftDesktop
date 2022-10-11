@@ -298,9 +298,5 @@ public partial class FormMessageBox : Form
 
         #endregion
 
-        private void FormMessageBox_Load(object sender, EventArgs e)
-        {
-
-        }
     }
 }

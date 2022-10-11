@@ -16,6 +16,7 @@ namespace WidraSoft.UI
         Int32 vg_Id = 0;
         Boolean vg_IsEnabled = true;
         Boolean vg_Update = false;
+        Boolean vg_Add = false;
         public GroupeDetail(String Mode, Int32 Id)
         {
             InitializeComponent();
@@ -263,6 +264,8 @@ namespace WidraSoft.UI
             cbLimite.Enabled = true;
             txtNbLimite.Enabled = true;
             dgvGroupeDroits.Enabled = true;
+            dgvGroupeDroits.AllowUserToAddRows = true;
+            dgvGroupeDroits.AllowUserToDeleteRows = true;
             DgvUsersList.Enabled = true;
             lblEnregistrerDgv.Enabled = true;
             lblRetirerDgv.Enabled = true;
@@ -279,6 +282,8 @@ namespace WidraSoft.UI
             cbLimite.Enabled = false;
             txtNbLimite.Enabled = false;
             dgvGroupeDroits.Enabled = false;
+            dgvGroupeDroits.AllowUserToAddRows = false;
+            dgvGroupeDroits.AllowUserToDeleteRows = false;
             DgvUsersList.Enabled=false;
             lblEnregistrerDgv.Enabled = false;
             lblRetirerDgv.Enabled = false;
@@ -295,7 +300,7 @@ namespace WidraSoft.UI
         private void btAjouter_MouseLeave(object sender, EventArgs e)
         {
             if (btAjouter.Enabled == true)
-                btAjouter.BackColor = Color.FromArgb(72, 190, 117);
+                btAjouter.BackColor = Color.FromArgb(110, 230, 130);
         }
 
         private void btModifier_MouseEnter(object sender, EventArgs e)
@@ -307,7 +312,7 @@ namespace WidraSoft.UI
         private void btModifier_MouseLeave(object sender, EventArgs e)
         {
             if (btModifier.Enabled == true)
-                btModifier.BackColor = Color.FromArgb(72, 190, 117);
+                btModifier.BackColor = Color.FromArgb(110, 230, 130);
         }
 
         private void btSupprimer_MouseEnter(object sender, EventArgs e)
@@ -319,7 +324,7 @@ namespace WidraSoft.UI
         private void btSupprimer_MouseLeave(object sender, EventArgs e)
         {
             if (btSupprimer.Enabled == true)
-                btSupprimer.BackColor = Color.FromArgb(72, 190, 117);
+                btSupprimer.BackColor = Color.FromArgb(110, 230, 130);
         }
 
         private void btAjouter_Click(object sender, EventArgs e)
@@ -488,53 +493,6 @@ namespace WidraSoft.UI
             }
         }
 
-        private void dgvGroupeDroits_DefaultValuesNeeded(object sender, DataGridViewRowEventArgs e)
-        {
-            try
-            {
-                GroupeModule groupemodule = new GroupeModule();
-                e.Row.Cells["GROUPEMODULEID"].Value = 0;
-                e.Row.Cells["GROUPEID"].Value = txtId.Text;
-                e.Row.Cells["ACCES"].Value = 1;
-                e.Row.Cells["TYPEACESS"].Value = "RO";
-            }
-            catch
-            {
-                throw;
-            }
-        }
-
-        private void dgvGroupeDroits_CellEndEdit(object sender, DataGridViewCellEventArgs e)
-        {
-            if ((int)dgvGroupeDroits[0, e.RowIndex].Value == 0 && (int)dgvGroupeDroits[1, e.RowIndex].Value > 0 && !string.IsNullOrEmpty(dgvGroupeDroits[2, e.RowIndex].Value.ToString()) && !string.IsNullOrEmpty(dgvGroupeDroits[4, e.RowIndex].Value.ToString()))
-            {
-                try
-                {
-                    GroupeModule groupemodule = new GroupeModule();
-                    groupemodule.Add((int)dgvGroupeDroits[1, e.RowIndex].Value, (int)dgvGroupeDroits[2, e.RowIndex].Value, (int)dgvGroupeDroits[3, e.RowIndex].Value, dgvGroupeDroits[4, e.RowIndex].Value.ToString());
-
-                }
-                catch
-                {
-                    throw;
-                }
-            }
-
-            if ((int)dgvGroupeDroits[0, e.RowIndex].Value > 0 && (int)dgvGroupeDroits[1, e.RowIndex].Value > 0 && !string.IsNullOrEmpty(dgvGroupeDroits[2, e.RowIndex].Value.ToString()) && !string.IsNullOrEmpty(dgvGroupeDroits[4, e.RowIndex].Value.ToString()))
-            {
-                try
-                {
-                    GroupeModule groupemodule = new GroupeModule();
-                    groupemodule.Update((int)dgvGroupeDroits[0, e.RowIndex].Value, (int)dgvGroupeDroits[1, e.RowIndex].Value, (int)dgvGroupeDroits[2, e.RowIndex].Value, (int)dgvGroupeDroits[3, e.RowIndex].Value, dgvGroupeDroits[4, e.RowIndex].Value.ToString());
-
-                }
-                catch
-                { 
-                    throw;
-                }
-            }
-            Refresh_Dgv();
-        }
 
         private Int32[] GetSelectedRowsId()
         {
@@ -624,6 +582,52 @@ namespace WidraSoft.UI
 
         }
 
+        private void dgvGroupeDroits_CellEndEdit(object sender, DataGridViewCellEventArgs e)
+        {
+            if ((int)dgvGroupeDroits[0, e.RowIndex].Value == 0 && (int)dgvGroupeDroits[1, e.RowIndex].Value > 0 && !string.IsNullOrEmpty(dgvGroupeDroits[2, e.RowIndex].Value.ToString()) && !string.IsNullOrEmpty(dgvGroupeDroits[4, e.RowIndex].Value.ToString()))
+            {
+                try
+                {
+                    GroupeModule groupemodule = new GroupeModule();
+                    groupemodule.Add((int)dgvGroupeDroits[1, e.RowIndex].Value, (int)dgvGroupeDroits[2, e.RowIndex].Value, (int)dgvGroupeDroits[3, e.RowIndex].Value, dgvGroupeDroits[4, e.RowIndex].Value.ToString());
 
+                }
+                catch
+                {
+                    throw;
+                }
+            }
+
+            if ((int)dgvGroupeDroits[0, e.RowIndex].Value > 0 && (int)dgvGroupeDroits[1, e.RowIndex].Value > 0 && !string.IsNullOrEmpty(dgvGroupeDroits[2, e.RowIndex].Value.ToString()) && !string.IsNullOrEmpty(dgvGroupeDroits[4, e.RowIndex].Value.ToString()))
+            {
+                try
+                {
+                    GroupeModule groupemodule = new GroupeModule();
+                    groupemodule.Update((int)dgvGroupeDroits[0, e.RowIndex].Value, (int)dgvGroupeDroits[1, e.RowIndex].Value, (int)dgvGroupeDroits[2, e.RowIndex].Value, (int)dgvGroupeDroits[3, e.RowIndex].Value, dgvGroupeDroits[4, e.RowIndex].Value.ToString());
+
+                }
+                catch
+                {
+                    throw;
+                }
+            }
+            Refresh_Dgv();
+        }
+
+        private void dgvGroupeDroits_DefaultValuesNeeded(object sender, DataGridViewRowEventArgs e)
+        {
+            try
+            {
+                GroupeModule groupemodule = new GroupeModule();
+                e.Row.Cells["GROUPEMODULEID"].Value = 0;
+                e.Row.Cells["GROUPEID"].Value = txtId.Text;
+                e.Row.Cells["ACCES"].Value = 1;
+                e.Row.Cells["TYPEACESS"].Value = "RO";
+            }
+            catch
+            {
+                throw;
+            }
+        }
     }
 }

@@ -50,8 +50,6 @@ namespace WidraSoft.UI
                         txtPassword.Enabled = false;
                         btConnecter.Enabled = false;
                         btConnecter.BackColor = Color.Transparent;
-                        btQuitter.Enabled = false;
-                        btQuitter.BackColor = Color.Transparent;
                     }
                     else
                         MessageBox.Show("Aucun utilisateur ne correspond aux identifiants fournis");
@@ -67,27 +65,11 @@ namespace WidraSoft.UI
             }
         }
 
-        private void btQuitter_MouseLeave(object sender, EventArgs e)
-        {
-            if (btQuitter.Enabled == true)
-                btQuitter.BackColor = Color.FromArgb(72, 190, 117);
-        }
-
-        private void btQuitter_MouseEnter(object sender, EventArgs e)
-        {
-            if (btQuitter.Enabled == true)
-                btQuitter.BackColor = Color.Honeydew;
-        }
-
-        private void btQuitter_Click(object sender, EventArgs e)
-        {
-            Application.Exit();
-        }
 
         private void btConnecter_MouseLeave(object sender, EventArgs e)
         {
             if (btConnecter.Enabled == true)
-                btConnecter.BackColor = Color.FromArgb(72, 190, 117);
+                btConnecter.BackColor = Color.FromArgb(110, 230, 130);
         }
 
         private void btConnecter_MouseEnter(object sender, EventArgs e)

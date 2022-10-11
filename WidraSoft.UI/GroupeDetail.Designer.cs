@@ -91,8 +91,10 @@ namespace WidraSoft.UI
             // 
             // btSupprimer
             // 
-            this.btSupprimer.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(190)))), ((int)(((byte)(117)))));
+            this.btSupprimer.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(110)))), ((int)(((byte)(230)))), ((int)(((byte)(130)))));
             this.btSupprimer.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btSupprimer.FlatAppearance.BorderColor = System.Drawing.Color.WhiteSmoke;
+            this.btSupprimer.FlatAppearance.BorderSize = 0;
             resources.ApplyResources(this.btSupprimer, "btSupprimer");
             this.btSupprimer.ForeColor = System.Drawing.Color.Black;
             this.btSupprimer.Image = global::WidraSoft.UI.Properties.Resources.button_delete;
@@ -104,8 +106,10 @@ namespace WidraSoft.UI
             // 
             // btModifier
             // 
-            this.btModifier.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(190)))), ((int)(((byte)(117)))));
+            this.btModifier.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(110)))), ((int)(((byte)(230)))), ((int)(((byte)(130)))));
             this.btModifier.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btModifier.FlatAppearance.BorderColor = System.Drawing.Color.WhiteSmoke;
+            this.btModifier.FlatAppearance.BorderSize = 0;
             resources.ApplyResources(this.btModifier, "btModifier");
             this.btModifier.ForeColor = System.Drawing.Color.Black;
             this.btModifier.Image = global::WidraSoft.UI.Properties.Resources.button_edit;
@@ -117,8 +121,10 @@ namespace WidraSoft.UI
             // 
             // btAjouter
             // 
-            this.btAjouter.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(190)))), ((int)(((byte)(117)))));
+            this.btAjouter.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(110)))), ((int)(((byte)(230)))), ((int)(((byte)(130)))));
             this.btAjouter.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btAjouter.FlatAppearance.BorderColor = System.Drawing.Color.WhiteSmoke;
+            this.btAjouter.FlatAppearance.BorderSize = 0;
             resources.ApplyResources(this.btAjouter, "btAjouter");
             this.btAjouter.ForeColor = System.Drawing.Color.Black;
             this.btAjouter.Image = global::WidraSoft.UI.Properties.Resources.button_add;
@@ -274,6 +280,7 @@ namespace WidraSoft.UI
             this.dgvGroupeDroits.AllowUserToAddRows = false;
             this.dgvGroupeDroits.AllowUserToDeleteRows = false;
             this.dgvGroupeDroits.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(62)))), ((int)(((byte)(60)))));
+            this.dgvGroupeDroits.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgvGroupeDroits.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.Sunken;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(86)))), ((int)(((byte)(77)))));
@@ -304,6 +311,7 @@ namespace WidraSoft.UI
             this.dgvGroupeDroits.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.dgvGroupeDroits.RowTemplate.Height = 33;
             this.dgvGroupeDroits.CellEndEdit += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvGroupeDroits_CellEndEdit);
+            this.dgvGroupeDroits.DefaultValuesNeeded += new System.Windows.Forms.DataGridViewRowEventHandler(this.dgvGroupeDroits_DefaultValuesNeeded);
             // 
             // lblRetirerDgv
             // 
@@ -349,6 +357,7 @@ namespace WidraSoft.UI
             this.DgvUsersList.AllowUserToAddRows = false;
             this.DgvUsersList.AllowUserToDeleteRows = false;
             this.DgvUsersList.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(62)))), ((int)(((byte)(60)))));
+            this.DgvUsersList.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.DgvUsersList.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.Sunken;
             dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(86)))), ((int)(((byte)(77)))));
