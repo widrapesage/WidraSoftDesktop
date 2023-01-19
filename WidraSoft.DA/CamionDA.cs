@@ -122,8 +122,8 @@ namespace WidraSoft.DA
             }
         }
 
-        public void Update(Int32 Id,String Code, String Plaque, String Badge, Int32 Tare, Int32 Valide,
-   Int32 Bloque, String TexteBloque, Int32 Attention, String TexteAttention, String Observations)
+        public void Update(Int32 Id, String Code, String Plaque, String Badge, Int32 Tare, Int32 Valide,
+                           Int32 Bloque, String TexteBloque, Int32 Attention, String TexteAttention, String Observations)
         {
             using (conn)
             {

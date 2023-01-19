@@ -16,7 +16,6 @@ namespace WidraSoft.UI
         Int32 vg_Id = 0;
         Boolean vg_IsEnabled = true;
         Boolean vg_Update = false;
-        Boolean vg_Add = false;
         public GroupeDetail(String Mode, Int32 Id)
         {
             InitializeComponent();
@@ -66,17 +65,17 @@ namespace WidraSoft.UI
         {
             if (txtId.Text=="" && txtDateCreation.Text == "" && txtDesignation.Text == "" && txtCode.Text == "" && cbLimite.Text == "" && txtNbLimite.Text == "")
             {
-                btModifier.Enabled = false;
-                btModifier.BackColor = Color.Transparent;
-                btSupprimer.Enabled = false;
-                btSupprimer.BackColor = Color.Transparent;
+                lbModifier.Enabled = false;
+                lbModifier.BackColor = Color.Transparent;
+                lbSupprimer.Enabled = false;
+                lbSupprimer.BackColor = Color.Transparent;
             }
         }
 
         private void Edit_Item()
         {
-            btAjouter.Enabled = false;
-            btAjouter.BackColor = Color.Transparent;
+            lbAjouter.Enabled = false;
+            lbAjouter.BackColor = Color.Transparent;
             Disable();
             Bind_Fields();
 
@@ -156,6 +155,15 @@ namespace WidraSoft.UI
                 DgvUsersList.Columns["GROUPE"].HeaderText = "GROUP";
                 DgvUsersList.Columns["DATECREATION"].HeaderText = "CREATION DATE";
             }
+
+            if (lang == "es")
+            {
+                DgvUsersList.Columns["LOGIN"].HeaderText = "ACCESO";
+                DgvUsersList.Columns["PRENOM"].HeaderText = "PRIMER NOMBRE";
+                DgvUsersList.Columns["NOM"].HeaderText = "APELLIDO";
+                DgvUsersList.Columns["GROUPE"].HeaderText = "GRUPO";
+                DgvUsersList.Columns["DATECREATION"].HeaderText = "FECHA DE CREACIÓN";
+            }
         }
 
 
@@ -163,6 +171,7 @@ namespace WidraSoft.UI
         {
             //Definit la source du Dgv 
             dgvGroupeDroits.AutoGenerateColumns = false;
+            
             GroupeModule groupemodule = new GroupeModule();
             if (txtId.Text == "")
             {
@@ -192,6 +201,7 @@ namespace WidraSoft.UI
             cbx_GroupeId.ValueMember = "GROUPEID";
             cbx_GroupeId.DataPropertyName = "GROUPEID";
             cbx_GroupeId.Name = "GROUPEID";
+
             dgvGroupeDroits.Columns.Add(cbx_GroupeId);
             cbx_GroupeId.Visible = false;
             //Crée et ajoute la combo pour le champ MODULEID 
@@ -204,6 +214,7 @@ namespace WidraSoft.UI
             cbx_ModuleId.DataPropertyName = "MODULEID";
             cbx_ModuleId.Name = "MODULEID";
             cbx_ModuleId.Width = 850;
+            cbx_ModuleId.FlatStyle = FlatStyle.Flat;
             dgvGroupeDroits.Columns.Add(cbx_ModuleId);
             //Crée et ajoute le checkBox pour le champ ACCES
             DataGridViewCheckBoxColumn chx_Acces = new DataGridViewCheckBoxColumn();
@@ -222,6 +233,7 @@ namespace WidraSoft.UI
             cbx_TypeAcess.Name = "TYPEACESS";
             cbx_TypeAcess.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
             cbx_TypeAcess.Items.AddRange(new string[] { "RW", "RO" });
+            cbx_TypeAcess.FlatStyle = FlatStyle.Flat;
             dgvGroupeDroits.Columns.Add(cbx_TypeAcess);
 
             dgvGroupeDroits.RowHeadersWidthSizeMode = DataGridViewRowHeadersWidthSizeMode.AutoSizeToFirstHeader;
@@ -244,6 +256,14 @@ namespace WidraSoft.UI
                 dgvGroupeDroits.Columns["ACCES"].HeaderText = "ACCESS";
                 dgvGroupeDroits.Columns["TYPEACESS"].HeaderText = "ACCESS TYPE";
             }
+
+            if (lang == "es")
+            {
+                dgvGroupeDroits.Columns["GROUPEID"].HeaderText = "GRUPO";
+                dgvGroupeDroits.Columns["MODULEID"].HeaderText = "MÓDULO";
+                dgvGroupeDroits.Columns["ACCES"].HeaderText = "ACCESO";
+                dgvGroupeDroits.Columns["TYPEACESS"].HeaderText = "TYPO DE ACCESO";
+            }
         }
 
         private void Clear()
@@ -263,13 +283,12 @@ namespace WidraSoft.UI
             txtCode.Enabled = true;
             cbLimite.Enabled = true;
             txtNbLimite.Enabled = true;
-            dgvGroupeDroits.Enabled = true;
-            dgvGroupeDroits.AllowUserToAddRows = true;
-            dgvGroupeDroits.AllowUserToDeleteRows = true;
+            dgvGroupeDroits.Enabled = true;            
             DgvUsersList.Enabled = true;
-            lblEnregistrerDgv.Enabled = true;
+            lblAddDgv.Enabled = true;
             lblRetirerDgv.Enabled = true;
-            pbLocked.Visible = false;
+            lbActualiserDgv.Enabled = true;
+            pbUpdating.Visible = true;
 
             vg_IsEnabled = true;
         }
@@ -282,218 +301,15 @@ namespace WidraSoft.UI
             cbLimite.Enabled = false;
             txtNbLimite.Enabled = false;
             dgvGroupeDroits.Enabled = false;
-            dgvGroupeDroits.AllowUserToAddRows = false;
-            dgvGroupeDroits.AllowUserToDeleteRows = false;
             DgvUsersList.Enabled=false;
-            lblEnregistrerDgv.Enabled = false;
+            lblAddDgv.Enabled = false;
             lblRetirerDgv.Enabled = false;
-            pbLocked.Visible = true;
+            lbActualiserDgv.Enabled = false;
+            pbUpdating.Visible = false;
 
             vg_IsEnabled = false;
         }
-        private void btAjouter_MouseEnter(object sender, EventArgs e)
-        {
-            if (btAjouter.Enabled == true)
-                btAjouter.BackColor = Color.Honeydew;
-        }
-
-        private void btAjouter_MouseLeave(object sender, EventArgs e)
-        {
-            if (btAjouter.Enabled == true)
-                btAjouter.BackColor = Color.FromArgb(110, 230, 130);
-        }
-
-        private void btModifier_MouseEnter(object sender, EventArgs e)
-        {
-            if (btModifier.Enabled == true)
-                btModifier.BackColor = Color.Honeydew;
-        }
-
-        private void btModifier_MouseLeave(object sender, EventArgs e)
-        {
-            if (btModifier.Enabled == true)
-                btModifier.BackColor = Color.FromArgb(110, 230, 130);
-        }
-
-        private void btSupprimer_MouseEnter(object sender, EventArgs e)
-        {
-            if (btSupprimer.Enabled == true)
-                btSupprimer.BackColor = Color.Honeydew;
-        }
-
-        private void btSupprimer_MouseLeave(object sender, EventArgs e)
-        {
-            if (btSupprimer.Enabled == true)
-                btSupprimer.BackColor = Color.FromArgb(110, 230, 130);
-        }
-
-        private void btAjouter_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                if (string.IsNullOrEmpty(txtNbLimite.Text))
-                {
-                    txtNbLimite.Text = "0";
-                }
-                if (txtId.Text == "" && txtDateCreation.Text == "" && txtDesignation.Text != "" && txtCode.Text != "" && cbLimite.Text != "" && txtNbLimite.Text != "")
-                {
-                    int NbLimite;
-                    bool IsParsableNbLimite;
-                    IsParsableNbLimite = Int32.TryParse(txtNbLimite.Text, out NbLimite);
-                    if (IsParsableNbLimite)
-                    {
-                        Groupe groupe = new Groupe();
-                        groupe.Add(txtDesignation.Text, txtCode.Text, cbLimite.Text, NbLimite);
-                        if (cbLang.Text == "FR")
-                            Custom_MessageBox.Show("FR", "Groupe ajouté avec succès", "Groupe", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        else if (cbLang.Text == "EN")
-                            Custom_MessageBox.Show("EN", "Group added successfully", "Group", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        else
-                            Custom_MessageBox.Show("FR", "Groupe ajouté avec succès", "Groupe", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
-                        Close();
-                    }
-                    else
-                    {
-                        if (cbLang.Text == "FR")
-                            Custom_MessageBox.Show("FR", "Le nombre limite d'utiilisateurs doit etre un nombre entier", "Groupe", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        else if (cbLang.Text == "EN")
-                            Custom_MessageBox.Show("EN", "The limit number of users must be a valid number", "Group", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        else
-                            Custom_MessageBox.Show("FR", "Nombre limite d'utiilisateurs doit etre un nombre entier", "Groupe", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    }
-                }
-                else
-                {
-                    if (cbLang.Text == "FR")
-                        Custom_MessageBox.Show("FR", "Informations incomplètes", "Groupe", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    else if (cbLang.Text == "EN")
-                        Custom_MessageBox.Show("EN", "Incomplete informations", "Group", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    else
-                        Custom_MessageBox.Show("FR", "Informations incomplètes", "Groupe", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                }
-            }
-            catch
-            {
-                throw;
-            }
-        }
-
-        private void btModifier_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                if (vg_Update == false && vg_IsEnabled == false)
-                {
-                    Enable();
-                    btModifier.Text = Language_Manager.Localize("Valider", cbLang.Text);
-                    vg_Update = true;
-                }
-                else
-                {
-                    try
-                    {
-                        if (string.IsNullOrEmpty(txtNbLimite.Text))
-                        {
-                            txtNbLimite.Text = "0";
-                        }
-                        if (txtId.Text != "" && txtDateCreation.Text != "" && txtDesignation.Text != "" && txtCode.Text != "" && cbLimite.Text != "" && txtNbLimite.Text != "")
-                        {
-                            Groupe groupe = new Groupe();
-                            int Id;
-                            int NbLimite;
-                            bool IsParsableId;
-                            bool IsParsableNbLimite;
-                            IsParsableId = Int32.TryParse(txtId.Text, out Id);
-                            IsParsableNbLimite = Int32.TryParse(txtNbLimite.Text, out NbLimite);
-                            if (IsParsableId && IsParsableNbLimite)
-                            { 
-                                groupe.Update(Id, txtDesignation.Text, txtCode.Text, cbLimite.Text, NbLimite);
-                                if (cbLang.Text == "FR")
-                                    Custom_MessageBox.Show("FR", "Groupe modifié avec succès", "Groupe", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                                else if (cbLang.Text == "EN")
-                                    Custom_MessageBox.Show("EN", "Group updated successfully", "Group", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                                else
-                                    Custom_MessageBox.Show("FR", "Groupe modifié avec succès", "Groupe", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
-                                btModifier.Text = Language_Manager.Localize("Modifier", cbLang.Text);
-                                vg_Update = false;
-                                Disable();
-                                Bind_Fields();
-                                Refresh_Dgv();
-                            }
-                        }
-                        else
-                        {
-                            if (cbLang.Text == "FR")
-                                Custom_MessageBox.Show("FR", "Informations incomplètes", "Groupe", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                            else if (cbLang.Text == "EN")
-                                Custom_MessageBox.Show("EN", "Incomplete informations", "Group", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                            else
-                                Custom_MessageBox.Show("FR", "Informations incomplètes", "Groupe", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        }
-                    }
-                    catch
-                    {
-                        throw;
-                    }
-                }
-            }
-            catch
-            {
-                throw;
-            }
-        }
-
-        private void btSupprimer_Click(object sender, EventArgs e)
-        {
-            if (vg_Update)
-            {
-                if (cbLang.Text == "FR")
-                    Custom_MessageBox.Show("FR", "Vous ne pouvez pas supprimer l'enregistrement tant que la modification n'est pas validée", "Groupe", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                else if (cbLang.Text == "EN")
-                    Custom_MessageBox.Show("EN", "You can't delete this record before the update is completed", "Group", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                else
-                    Custom_MessageBox.Show("FR", "Vous ne pouvez pas supprimer l'enregistrement tant que la modification n'est pas validée", "Groupe", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            }
-            else
-            {
-                try
-                {
-                    Groupe groupe = new Groupe();
-                    int Id;
-                    bool IsParsableId;
-                    IsParsableId = Int32.TryParse(txtId.Text, out Id);
-                    if (IsParsableId)
-                    {
-                        DialogResult result;
-                        if (cbLang.Text == "FR")
-                            result = Custom_MessageBox.Show("FR", "Etes vous sur de vouloir supprimer cet enregistrement?", "Groupe", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-                        else if (cbLang.Text == "EN")
-                            result = Custom_MessageBox.Show("EN", "Are you sure you want to delete this record?", "Group", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-                        else
-                            result = Custom_MessageBox.Show("FR", "Etes vous sur de vouloir supprimer cet enregistrement?", "Groupe", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-                        if (result == DialogResult.Yes)
-                        {
-                            groupe.Delete(Id);
-                            if (cbLang.Text == "FR")
-                                Custom_MessageBox.Show("FR", "Groupe supprimé avec succès", "Groupe", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                            else if (cbLang.Text == "EN")
-                                Custom_MessageBox.Show("EN", "Group deleted successfully", "Group", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                            else
-                                Custom_MessageBox.Show("FR", "Groupe supprimé avec succès", "Groupe", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                            Close();
-                        }                      
-                    }
-                }
-                catch
-                {
-                    throw;
-                }
-            }
-        }
-
-
+    
         private Int32[] GetSelectedRowsId()
         {
             try
@@ -546,9 +362,10 @@ namespace WidraSoft.UI
                 France_flag.Visible = false;
                 England_flag.Visible = false;
                 Spain_flag.Visible = true;
-                /*Language_Manager language_Manager= new Language_Manager();
+                Language_Manager language_Manager= new Language_Manager();
                 language_Manager.ChangeLanguage("es", this, typeof(GroupeDetail));
-                Localize_Dgv("es"); */
+                Localize_Dgv("es");
+                Localize_DgvUsersList("es");
             }
         }
 
@@ -572,62 +389,247 @@ namespace WidraSoft.UI
                         throw;
                     }
                 }
-                MessageBox.Show(GetSelectedRowsId().Length + " droit(s) supprimé(s)");
+                if (cbLang.Text == "FR")
+                    Custom_MessageBox.Show("FR", GetSelectedRowsId().Length + " droit(s) supprimé(s)", "Groupe", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                else if (cbLang.Text == "EN")
+                    Custom_MessageBox.Show("EN", GetSelectedRowsId().Length + " Permission(s) deleted", "Group", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                else
+                    Custom_MessageBox.Show("ES", GetSelectedRowsId().Length + " derecho(s) añadido(s)", "Grupo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
                 Refresh_Dgv();
             }
             else
             {
-                MessageBox.Show("Vous n'avez selectionné aucun enregistrement à supprimer");
+                
+                if (cbLang.Text == "FR")
+                    Custom_MessageBox.Show("FR", "Aucun enregistrement sélectionné", "Groupe", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                else if (cbLang.Text == "EN")
+                    Custom_MessageBox.Show("EN", "No rows selected", "Group", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                else
+                    Custom_MessageBox.Show("ES", "Ningún registro seleccionado", "Grupo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
             }
 
         }
 
         private void dgvGroupeDroits_CellEndEdit(object sender, DataGridViewCellEventArgs e)
         {
-            if ((int)dgvGroupeDroits[0, e.RowIndex].Value == 0 && (int)dgvGroupeDroits[1, e.RowIndex].Value > 0 && !string.IsNullOrEmpty(dgvGroupeDroits[2, e.RowIndex].Value.ToString()) && !string.IsNullOrEmpty(dgvGroupeDroits[4, e.RowIndex].Value.ToString()))
-            {
-                try
+            
+                if ((int)dgvGroupeDroits[0, e.RowIndex].Value > 0 && (int)dgvGroupeDroits[1, e.RowIndex].Value > 0 && !string.IsNullOrEmpty(dgvGroupeDroits[2, e.RowIndex].Value.ToString()) && !string.IsNullOrEmpty(dgvGroupeDroits[4, e.RowIndex].Value.ToString()))
                 {
-                    GroupeModule groupemodule = new GroupeModule();
-                    groupemodule.Add((int)dgvGroupeDroits[1, e.RowIndex].Value, (int)dgvGroupeDroits[2, e.RowIndex].Value, (int)dgvGroupeDroits[3, e.RowIndex].Value, dgvGroupeDroits[4, e.RowIndex].Value.ToString());
-
-                }
-                catch
-                {
-                    throw;
-                }
-            }
-
-            if ((int)dgvGroupeDroits[0, e.RowIndex].Value > 0 && (int)dgvGroupeDroits[1, e.RowIndex].Value > 0 && !string.IsNullOrEmpty(dgvGroupeDroits[2, e.RowIndex].Value.ToString()) && !string.IsNullOrEmpty(dgvGroupeDroits[4, e.RowIndex].Value.ToString()))
-            {
-                try
-                {
-                    GroupeModule groupemodule = new GroupeModule();
-                    groupemodule.Update((int)dgvGroupeDroits[0, e.RowIndex].Value, (int)dgvGroupeDroits[1, e.RowIndex].Value, (int)dgvGroupeDroits[2, e.RowIndex].Value, (int)dgvGroupeDroits[3, e.RowIndex].Value, dgvGroupeDroits[4, e.RowIndex].Value.ToString());
-
-                }
-                catch
-                {
-                    throw;
-                }
-            }
-            Refresh_Dgv();
+                    try
+                    {
+                        GroupeModule groupemodule = new GroupeModule();
+                        groupemodule.Update((int)dgvGroupeDroits[0, e.RowIndex].Value, (int)dgvGroupeDroits[1, e.RowIndex].Value, (int)dgvGroupeDroits[2, e.RowIndex].Value, (int)dgvGroupeDroits[3, e.RowIndex].Value, dgvGroupeDroits[4, e.RowIndex].Value.ToString());
+                    }
+                    catch
+                    {
+                        throw;
+                    }
+                }          
         }
 
-        private void dgvGroupeDroits_DefaultValuesNeeded(object sender, DataGridViewRowEventArgs e)
+        private void lbAjouter_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             try
             {
-                GroupeModule groupemodule = new GroupeModule();
-                e.Row.Cells["GROUPEMODULEID"].Value = 0;
-                e.Row.Cells["GROUPEID"].Value = txtId.Text;
-                e.Row.Cells["ACCES"].Value = 1;
-                e.Row.Cells["TYPEACESS"].Value = "RO";
+                if (string.IsNullOrEmpty(txtNbLimite.Text))
+                {
+                    txtNbLimite.Text = "0";
+                }
+                if (txtId.Text == "" && txtDateCreation.Text == "" && txtDesignation.Text != "" && txtCode.Text != "" && cbLimite.Text != "" && txtNbLimite.Text != "")
+                {
+                    int NbLimite;
+                    bool IsParsableNbLimite;
+                    IsParsableNbLimite = Int32.TryParse(txtNbLimite.Text, out NbLimite);
+                    if (IsParsableNbLimite)
+                    {
+                        Groupe groupe = new Groupe();
+                        groupe.Add(txtDesignation.Text, txtCode.Text, cbLimite.Text, NbLimite);
+                        if (cbLang.Text == "FR")
+                            Custom_MessageBox.Show("FR", "Groupe ajouté avec succès", "Groupe", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        else if (cbLang.Text == "EN")
+                            Custom_MessageBox.Show("EN", "Group added successfully", "Group", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        else
+                            Custom_MessageBox.Show("ES", "Grupo agregado", "Grupo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                        Close();
+                    }
+                    else
+                    {
+                        if (cbLang.Text == "FR")
+                            Custom_MessageBox.Show("FR", "Le nombre limite d'utiilisateurs doit etre un nombre entier", "Groupe", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        else if (cbLang.Text == "EN")
+                            Custom_MessageBox.Show("EN", "The limit number of users must be a valid number", "Group", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        else
+                            Custom_MessageBox.Show("ES", "El límite de usuarios debe ser un número entero", "Grupo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
+                }
+                else
+                {
+                    if (cbLang.Text == "FR")
+                        Custom_MessageBox.Show("FR", "Informations incomplètes", "Groupe", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    else if (cbLang.Text == "EN")
+                        Custom_MessageBox.Show("EN", "Incomplete informations", "Group", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    else
+                        Custom_MessageBox.Show("ES", "Información incompleta", "Grupo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
             }
             catch
             {
                 throw;
             }
         }
+
+        private void lbModifier_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            try
+            {
+                if (vg_Update == false && vg_IsEnabled == false)
+                {
+                    Enable();
+                    lbModifier.Text = Language_Manager.Localize("Valider", cbLang.Text);
+                    vg_Update = true;
+                }
+                else
+                {
+                    try
+                    {
+                        if (string.IsNullOrEmpty(txtNbLimite.Text))
+                        {
+                            txtNbLimite.Text = "0";
+                        }
+                        if (txtId.Text != "" && txtDateCreation.Text != "" && txtDesignation.Text != "" && txtCode.Text != "" && cbLimite.Text != "" && txtNbLimite.Text != "")
+                        {
+                            Groupe groupe = new Groupe();
+                            int Id;
+                            int NbLimite;
+                            bool IsParsableId;
+                            bool IsParsableNbLimite;
+                            IsParsableId = Int32.TryParse(txtId.Text, out Id);
+                            IsParsableNbLimite = Int32.TryParse(txtNbLimite.Text, out NbLimite);
+                            if (IsParsableId && IsParsableNbLimite)
+                            {
+                                groupe.Update(Id, txtDesignation.Text, txtCode.Text, cbLimite.Text, NbLimite);
+                                if (cbLang.Text == "FR")
+                                    Custom_MessageBox.Show("FR", "Groupe modifié avec succès", "Groupe", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                else if (cbLang.Text == "EN")
+                                    Custom_MessageBox.Show("EN", "Group updated successfully", "Group", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                else
+                                    Custom_MessageBox.Show("ES", "Grupo alterado", "Grupo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                                lbModifier.Text = Language_Manager.Localize("Modifier", cbLang.Text);
+                                vg_Update = false;
+                                Disable();
+                                Bind_Fields();
+                                Refresh_Dgv();
+                            }
+                        }
+                        else
+                        {
+                            if (cbLang.Text == "FR")
+                                Custom_MessageBox.Show("FR", "Informations incomplètes", "Groupe", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            else if (cbLang.Text == "EN")
+                                Custom_MessageBox.Show("EN", "Incomplete informations", "Group", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            else
+                                Custom_MessageBox.Show("ES", "Información incompleta", "Grupo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        }
+                    }
+                    catch
+                    {
+                        throw;
+                    }
+                }
+            }
+            catch
+            {
+                throw;
+            }
+        }
+
+        private void lbSupprimer_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            if (vg_Update)
+            {
+                if (cbLang.Text == "FR")
+                    Custom_MessageBox.Show("FR", "Vous ne pouvez pas supprimer l'enregistrement tant que la modification n'est pas validée", "Groupe", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                else if (cbLang.Text == "EN")
+                    Custom_MessageBox.Show("EN", "You can't delete this record before the update is completed", "Group", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                else
+                    Custom_MessageBox.Show("ES", "No puede eliminar el registro hasta que se confirme el cambio", "Grupo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            else
+            {
+                try
+                {
+                    Groupe groupe = new Groupe();
+                    int Id;
+                    bool IsParsableId;
+                    IsParsableId = Int32.TryParse(txtId.Text, out Id);
+                    if (IsParsableId)
+                    {
+                        DialogResult result;
+                        if (cbLang.Text == "FR")
+                            result = Custom_MessageBox.Show("FR", "Etes vous sur de vouloir supprimer cet enregistrement?", "Groupe", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                        else if (cbLang.Text == "EN")
+                            result = Custom_MessageBox.Show("EN", "Are you sure you want to delete this record?", "Group", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                        else
+                            result = Custom_MessageBox.Show("ES", "¿Está seguro de que desea eliminar este registro?", "Grupo", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                        if (result == DialogResult.Yes)
+                        {
+                            groupe.Delete(Id);
+                            if (cbLang.Text == "FR")
+                                Custom_MessageBox.Show("FR", "Groupe supprimé avec succès", "Groupe", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            else if (cbLang.Text == "EN")
+                                Custom_MessageBox.Show("EN", "Group deleted successfully", "Group", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            else
+                                Custom_MessageBox.Show("ES", "Grupo eliminado", "Grupo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            Close();
+                        }
+                    }
+                }
+                catch
+                {
+                    throw;
+                }
+            }
+        }
+
+        private void lblEnregistrerDgv_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            try
+            {
+                Form form = new GroupeDetailDroits(vg_Id);
+                form.Show();
+            }
+            catch
+            {
+                throw;
+            }
+        }
+
+        private void lbValiderDgv_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            Refresh_Dgv();
+        }
+
+        private void GroupeDetail_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            if (vg_Mode == "Edit")
+            {
+                if (pbUpdating.Visible)
+                {
+                    if (cbLang.Text == "FR")
+                        Custom_MessageBox.Show("FR", "Vous ne pouvez pas fermer la fenetre tant que la modification n'est pas validée", "Groupe", MessageBoxButtons.OK, MessageBoxIcon.Stop);
+                    else if (cbLang.Text == "EN")
+                        Custom_MessageBox.Show("EN", "You can't close this window before the update is completed", "Group", MessageBoxButtons.OK, MessageBoxIcon.Stop);
+                    else
+                        Custom_MessageBox.Show("ES", "No puede cerrar la página hasta que se valide el cambio", "Grupo", MessageBoxButtons.OK, MessageBoxIcon.Stop);
+                    e.Cancel = true;
+                }
+            }                
+        }
+
+
     }
 }

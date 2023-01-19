@@ -30,6 +30,9 @@ namespace WidraSoft.UI
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UtilisateurDetail));
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.txtId = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.txtNom = new System.Windows.Forms.TextBox();
@@ -44,286 +47,341 @@ namespace WidraSoft.UI
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.btSupprimer = new System.Windows.Forms.Button();
-            this.btModifier = new System.Windows.Forms.Button();
-            this.btAjouter = new System.Windows.Forms.Button();
-            this.splitter1 = new System.Windows.Forms.Splitter();
-            this.groupBox1.SuspendLayout();
+            this.panelLang = new System.Windows.Forms.Panel();
+            this.pbUpdating = new System.Windows.Forms.PictureBox();
+            this.Spain_flag = new System.Windows.Forms.PictureBox();
+            this.England_flag = new System.Windows.Forms.PictureBox();
+            this.France_flag = new System.Windows.Forms.PictureBox();
+            this.cbLang = new System.Windows.Forms.ComboBox();
+            this.panelNavigation = new System.Windows.Forms.Panel();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.lbModifier = new System.Windows.Forms.LinkLabel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.lbAjouter = new System.Windows.Forms.LinkLabel();
+            this.lbSupprimer = new System.Windows.Forms.LinkLabel();
+            this.label8 = new System.Windows.Forms.Label();
+            this.DgvAuthorizationList = new System.Windows.Forms.DataGridView();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.panelLang.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbUpdating)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Spain_flag)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.England_flag)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.France_flag)).BeginInit();
+            this.panelNavigation.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DgvAuthorizationList)).BeginInit();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // txtId
             // 
-            this.txtId.Enabled = false;
-            this.txtId.Font = new System.Drawing.Font("Corbel", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.txtId.Location = new System.Drawing.Point(150, 132);
-            this.txtId.Margin = new System.Windows.Forms.Padding(2);
+            this.txtId.BackColor = System.Drawing.Color.Honeydew;
+            resources.ApplyResources(this.txtId, "txtId");
             this.txtId.Name = "txtId";
-            this.txtId.Size = new System.Drawing.Size(106, 25);
-            this.txtId.TabIndex = 0;
             // 
             // label1
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Corbel", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            resources.ApplyResources(this.label1, "label1");
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(48, 134);
-            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(20, 18);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "Id";
             // 
             // txtNom
             // 
-            this.txtNom.Font = new System.Drawing.Font("Corbel", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.txtNom.Location = new System.Drawing.Point(150, 186);
-            this.txtNom.Margin = new System.Windows.Forms.Padding(2);
+            this.txtNom.BackColor = System.Drawing.Color.Honeydew;
+            resources.ApplyResources(this.txtNom, "txtNom");
             this.txtNom.Name = "txtNom";
-            this.txtNom.Size = new System.Drawing.Size(313, 25);
-            this.txtNom.TabIndex = 2;
             // 
             // txtPrenom
             // 
-            this.txtPrenom.Font = new System.Drawing.Font("Corbel", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.txtPrenom.Location = new System.Drawing.Point(150, 212);
-            this.txtPrenom.Margin = new System.Windows.Forms.Padding(2);
+            this.txtPrenom.BackColor = System.Drawing.Color.Honeydew;
+            resources.ApplyResources(this.txtPrenom, "txtPrenom");
             this.txtPrenom.Name = "txtPrenom";
-            this.txtPrenom.Size = new System.Drawing.Size(313, 25);
-            this.txtPrenom.TabIndex = 3;
             // 
             // txtLogin
             // 
-            this.txtLogin.Font = new System.Drawing.Font("Corbel", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.txtLogin.Location = new System.Drawing.Point(150, 239);
-            this.txtLogin.Margin = new System.Windows.Forms.Padding(2);
+            this.txtLogin.BackColor = System.Drawing.Color.Honeydew;
+            resources.ApplyResources(this.txtLogin, "txtLogin");
             this.txtLogin.Name = "txtLogin";
-            this.txtLogin.Size = new System.Drawing.Size(313, 25);
-            this.txtLogin.TabIndex = 4;
             // 
             // txtPassword
             // 
-            this.txtPassword.Font = new System.Drawing.Font("Corbel", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.txtPassword.Location = new System.Drawing.Point(150, 265);
-            this.txtPassword.Margin = new System.Windows.Forms.Padding(2);
+            this.txtPassword.BackColor = System.Drawing.Color.Honeydew;
+            resources.ApplyResources(this.txtPassword, "txtPassword");
             this.txtPassword.Name = "txtPassword";
-            this.txtPassword.Size = new System.Drawing.Size(313, 25);
-            this.txtPassword.TabIndex = 5;
             // 
             // cbGroupeId
             // 
-            this.cbGroupeId.Font = new System.Drawing.Font("Corbel", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.cbGroupeId.BackColor = System.Drawing.Color.Honeydew;
+            resources.ApplyResources(this.cbGroupeId, "cbGroupeId");
             this.cbGroupeId.FormattingEnabled = true;
-            this.cbGroupeId.Location = new System.Drawing.Point(150, 291);
-            this.cbGroupeId.Margin = new System.Windows.Forms.Padding(2);
             this.cbGroupeId.Name = "cbGroupeId";
-            this.cbGroupeId.Size = new System.Drawing.Size(313, 26);
-            this.cbGroupeId.TabIndex = 6;
             // 
             // txtDateCreation
             // 
-            this.txtDateCreation.Font = new System.Drawing.Font("Corbel", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.txtDateCreation.Location = new System.Drawing.Point(150, 160);
-            this.txtDateCreation.Margin = new System.Windows.Forms.Padding(2);
+            this.txtDateCreation.BackColor = System.Drawing.Color.Honeydew;
+            resources.ApplyResources(this.txtDateCreation, "txtDateCreation");
             this.txtDateCreation.Name = "txtDateCreation";
             this.txtDateCreation.ReadOnly = true;
-            this.txtDateCreation.Size = new System.Drawing.Size(313, 25);
-            this.txtDateCreation.TabIndex = 7;
             // 
             // label2
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Corbel", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            resources.ApplyResources(this.label2, "label2");
             this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(48, 162);
-            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(90, 18);
-            this.label2.TabIndex = 8;
-            this.label2.Text = "Date création";
             // 
             // label3
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Corbel", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            resources.ApplyResources(this.label3, "label3");
             this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(48, 188);
-            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(38, 18);
-            this.label3.TabIndex = 9;
-            this.label3.Text = "Nom";
             // 
             // label4
             // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Corbel", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            resources.ApplyResources(this.label4, "label4");
             this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(48, 214);
-            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(57, 18);
-            this.label4.TabIndex = 10;
-            this.label4.Text = "Prénom";
             // 
             // label5
             // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Corbel", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            resources.ApplyResources(this.label5, "label5");
             this.label5.ForeColor = System.Drawing.Color.White;
-            this.label5.Location = new System.Drawing.Point(48, 240);
-            this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(43, 18);
-            this.label5.TabIndex = 11;
-            this.label5.Text = "Login";
             // 
             // label6
             // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Corbel", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            resources.ApplyResources(this.label6, "label6");
             this.label6.ForeColor = System.Drawing.Color.White;
-            this.label6.Location = new System.Drawing.Point(48, 267);
-            this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(88, 18);
-            this.label6.TabIndex = 12;
-            this.label6.Text = "Mot de passe";
             // 
             // label7
             // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Corbel", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            resources.ApplyResources(this.label7, "label7");
             this.label7.ForeColor = System.Drawing.Color.White;
-            this.label7.Location = new System.Drawing.Point(48, 292);
-            this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(54, 18);
-            this.label7.TabIndex = 13;
-            this.label7.Text = "Groupe";
             // 
-            // groupBox1
+            // panelLang
             // 
-            this.groupBox1.Controls.Add(this.btSupprimer);
-            this.groupBox1.Controls.Add(this.btModifier);
-            this.groupBox1.Controls.Add(this.btAjouter);
-            this.groupBox1.Font = new System.Drawing.Font("Corbel", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.groupBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(190)))), ((int)(((byte)(117)))));
-            this.groupBox1.Location = new System.Drawing.Point(28, 6);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(2);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(2);
-            this.groupBox1.Size = new System.Drawing.Size(730, 102);
-            this.groupBox1.TabIndex = 16;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Actions";
+            this.panelLang.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(86)))), ((int)(((byte)(81)))));
+            this.panelLang.Controls.Add(this.pbUpdating);
+            this.panelLang.Controls.Add(this.Spain_flag);
+            this.panelLang.Controls.Add(this.England_flag);
+            this.panelLang.Controls.Add(this.France_flag);
+            this.panelLang.Controls.Add(this.cbLang);
+            resources.ApplyResources(this.panelLang, "panelLang");
+            this.panelLang.Name = "panelLang";
             // 
-            // btSupprimer
+            // pbUpdating
             // 
-            this.btSupprimer.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(190)))), ((int)(((byte)(117)))));
-            this.btSupprimer.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btSupprimer.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btSupprimer.ForeColor = System.Drawing.Color.Black;
-            this.btSupprimer.Image = global::WidraSoft.UI.Properties.Resources.button_delete;
-            this.btSupprimer.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btSupprimer.Location = new System.Drawing.Point(430, 22);
-            this.btSupprimer.Margin = new System.Windows.Forms.Padding(2);
-            this.btSupprimer.Name = "btSupprimer";
-            this.btSupprimer.Padding = new System.Windows.Forms.Padding(0, 11, 0, 4);
-            this.btSupprimer.Size = new System.Drawing.Size(78, 66);
-            this.btSupprimer.TabIndex = 2;
-            this.btSupprimer.Text = "Supprimer";
-            this.btSupprimer.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.btSupprimer.UseVisualStyleBackColor = false;
-            this.btSupprimer.Click += new System.EventHandler(this.btSupprimer_Click);
-            this.btSupprimer.MouseEnter += new System.EventHandler(this.btSupprimer_MouseEnter);
-            this.btSupprimer.MouseLeave += new System.EventHandler(this.btSupprimer_MouseLeave);
+            this.pbUpdating.Image = global::WidraSoft.UI.Properties.Resources.pencil;
+            resources.ApplyResources(this.pbUpdating, "pbUpdating");
+            this.pbUpdating.Name = "pbUpdating";
+            this.pbUpdating.TabStop = false;
             // 
-            // btModifier
+            // Spain_flag
             // 
-            this.btModifier.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(190)))), ((int)(((byte)(117)))));
-            this.btModifier.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btModifier.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btModifier.ForeColor = System.Drawing.Color.Black;
-            this.btModifier.Image = global::WidraSoft.UI.Properties.Resources.button_edit;
-            this.btModifier.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btModifier.Location = new System.Drawing.Point(301, 22);
-            this.btModifier.Margin = new System.Windows.Forms.Padding(2);
-            this.btModifier.Name = "btModifier";
-            this.btModifier.Padding = new System.Windows.Forms.Padding(0, 11, 0, 4);
-            this.btModifier.Size = new System.Drawing.Size(78, 66);
-            this.btModifier.TabIndex = 1;
-            this.btModifier.Text = "Modifier";
-            this.btModifier.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.btModifier.UseVisualStyleBackColor = false;
-            this.btModifier.Click += new System.EventHandler(this.btModifier_Click);
-            this.btModifier.MouseEnter += new System.EventHandler(this.btModifier_MouseEnter);
-            this.btModifier.MouseLeave += new System.EventHandler(this.btModifier_MouseLeave);
+            this.Spain_flag.BackColor = System.Drawing.Color.Transparent;
+            this.Spain_flag.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.Spain_flag.Image = global::WidraSoft.UI.Properties.Resources.spain;
+            resources.ApplyResources(this.Spain_flag, "Spain_flag");
+            this.Spain_flag.Name = "Spain_flag";
+            this.Spain_flag.TabStop = false;
             // 
-            // btAjouter
+            // England_flag
             // 
-            this.btAjouter.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(190)))), ((int)(((byte)(117)))));
-            this.btAjouter.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btAjouter.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btAjouter.ForeColor = System.Drawing.Color.Black;
-            this.btAjouter.Image = global::WidraSoft.UI.Properties.Resources.button_add;
-            this.btAjouter.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btAjouter.Location = new System.Drawing.Point(172, 22);
-            this.btAjouter.Margin = new System.Windows.Forms.Padding(2);
-            this.btAjouter.Name = "btAjouter";
-            this.btAjouter.Padding = new System.Windows.Forms.Padding(0, 11, 0, 4);
-            this.btAjouter.Size = new System.Drawing.Size(78, 66);
-            this.btAjouter.TabIndex = 0;
-            this.btAjouter.Text = "Ajouter";
-            this.btAjouter.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.btAjouter.UseVisualStyleBackColor = false;
-            this.btAjouter.Click += new System.EventHandler(this.btAjouter_Click);
-            this.btAjouter.MouseEnter += new System.EventHandler(this.btAjouter_MouseEnter);
-            this.btAjouter.MouseLeave += new System.EventHandler(this.btAjouter_MouseLeave);
+            this.England_flag.BackColor = System.Drawing.Color.Transparent;
+            this.England_flag.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.England_flag.Image = global::WidraSoft.UI.Properties.Resources.united_kingdom;
+            resources.ApplyResources(this.England_flag, "England_flag");
+            this.England_flag.Name = "England_flag";
+            this.England_flag.TabStop = false;
             // 
-            // splitter1
+            // France_flag
             // 
-            this.splitter1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(190)))), ((int)(((byte)(117)))));
-            this.splitter1.Enabled = false;
-            this.splitter1.Location = new System.Drawing.Point(0, 0);
-            this.splitter1.Margin = new System.Windows.Forms.Padding(2);
-            this.splitter1.Name = "splitter1";
-            this.splitter1.Size = new System.Drawing.Size(18, 453);
-            this.splitter1.TabIndex = 14;
-            this.splitter1.TabStop = false;
+            this.France_flag.BackColor = System.Drawing.Color.Transparent;
+            this.France_flag.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.France_flag.Image = global::WidraSoft.UI.Properties.Resources.france;
+            resources.ApplyResources(this.France_flag, "France_flag");
+            this.France_flag.Name = "France_flag";
+            this.France_flag.TabStop = false;
+            // 
+            // cbLang
+            // 
+            this.cbLang.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(86)))), ((int)(((byte)(77)))));
+            this.cbLang.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            resources.ApplyResources(this.cbLang, "cbLang");
+            this.cbLang.ForeColor = System.Drawing.Color.White;
+            this.cbLang.FormattingEnabled = true;
+            this.cbLang.Name = "cbLang";
+            this.cbLang.SelectedIndexChanged += new System.EventHandler(this.cbLang_SelectedIndexChanged);
+            // 
+            // panelNavigation
+            // 
+            this.panelNavigation.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(62)))), ((int)(((byte)(60)))));
+            this.panelNavigation.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panelNavigation.Controls.Add(this.pictureBox3);
+            this.panelNavigation.Controls.Add(this.lbModifier);
+            this.panelNavigation.Controls.Add(this.pictureBox1);
+            this.panelNavigation.Controls.Add(this.pictureBox2);
+            this.panelNavigation.Controls.Add(this.lbAjouter);
+            this.panelNavigation.Controls.Add(this.lbSupprimer);
+            resources.ApplyResources(this.panelNavigation, "panelNavigation");
+            this.panelNavigation.Name = "panelNavigation";
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox3.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pictureBox3.Image = global::WidraSoft.UI.Properties.Resources.update;
+            resources.ApplyResources(this.pictureBox3, "pictureBox3");
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.TabStop = false;
+            // 
+            // lbModifier
+            // 
+            this.lbModifier.ActiveLinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(190)))), ((int)(((byte)(117)))));
+            resources.ApplyResources(this.lbModifier, "lbModifier");
+            this.lbModifier.BackColor = System.Drawing.Color.Transparent;
+            this.lbModifier.ForeColor = System.Drawing.Color.White;
+            this.lbModifier.LinkColor = System.Drawing.Color.White;
+            this.lbModifier.Name = "lbModifier";
+            this.lbModifier.TabStop = true;
+            this.lbModifier.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lbModifier_LinkClicked);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pictureBox1.Image = global::WidraSoft.UI.Properties.Resources.remove;
+            resources.ApplyResources(this.pictureBox1, "pictureBox1");
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.TabStop = false;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox2.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pictureBox2.Image = global::WidraSoft.UI.Properties.Resources.add;
+            resources.ApplyResources(this.pictureBox2, "pictureBox2");
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.TabStop = false;
+            // 
+            // lbAjouter
+            // 
+            this.lbAjouter.ActiveLinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(190)))), ((int)(((byte)(117)))));
+            resources.ApplyResources(this.lbAjouter, "lbAjouter");
+            this.lbAjouter.BackColor = System.Drawing.Color.Transparent;
+            this.lbAjouter.ForeColor = System.Drawing.Color.White;
+            this.lbAjouter.LinkColor = System.Drawing.Color.White;
+            this.lbAjouter.Name = "lbAjouter";
+            this.lbAjouter.TabStop = true;
+            this.lbAjouter.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lbAjouter_LinkClicked);
+            // 
+            // lbSupprimer
+            // 
+            this.lbSupprimer.ActiveLinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(190)))), ((int)(((byte)(117)))));
+            resources.ApplyResources(this.lbSupprimer, "lbSupprimer");
+            this.lbSupprimer.BackColor = System.Drawing.Color.Transparent;
+            this.lbSupprimer.ForeColor = System.Drawing.Color.White;
+            this.lbSupprimer.LinkColor = System.Drawing.Color.White;
+            this.lbSupprimer.Name = "lbSupprimer";
+            this.lbSupprimer.TabStop = true;
+            this.lbSupprimer.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lbSupprimer_LinkClicked);
+            // 
+            // label8
+            // 
+            resources.ApplyResources(this.label8, "label8");
+            this.label8.ForeColor = System.Drawing.Color.White;
+            this.label8.Name = "label8";
+            // 
+            // DgvAuthorizationList
+            // 
+            this.DgvAuthorizationList.AllowUserToAddRows = false;
+            this.DgvAuthorizationList.AllowUserToDeleteRows = false;
+            this.DgvAuthorizationList.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(86)))), ((int)(((byte)(81)))));
+            this.DgvAuthorizationList.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.DgvAuthorizationList.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.Sunken;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.Honeydew;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Corbel", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(86)))), ((int)(((byte)(81)))));
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.DgvAuthorizationList.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            this.DgvAuthorizationList.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.Honeydew;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Corbel", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(86)))), ((int)(((byte)(77)))));
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.DgvAuthorizationList.DefaultCellStyle = dataGridViewCellStyle2;
+            resources.ApplyResources(this.DgvAuthorizationList, "DgvAuthorizationList");
+            this.DgvAuthorizationList.Name = "DgvAuthorizationList";
+            this.DgvAuthorizationList.ReadOnly = true;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.Honeydew;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Corbel", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.MediumSeaGreen;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.DgvAuthorizationList.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            this.DgvAuthorizationList.RowTemplate.Height = 33;
+            // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(86)))), ((int)(((byte)(81)))));
+            this.panel1.Controls.Add(this.txtId);
+            this.panel1.Controls.Add(this.label8);
+            this.panel1.Controls.Add(this.label1);
+            this.panel1.Controls.Add(this.DgvAuthorizationList);
+            this.panel1.Controls.Add(this.txtNom);
+            this.panel1.Controls.Add(this.txtPrenom);
+            this.panel1.Controls.Add(this.txtLogin);
+            this.panel1.Controls.Add(this.label7);
+            this.panel1.Controls.Add(this.txtPassword);
+            this.panel1.Controls.Add(this.label6);
+            this.panel1.Controls.Add(this.cbGroupeId);
+            this.panel1.Controls.Add(this.label5);
+            this.panel1.Controls.Add(this.txtDateCreation);
+            this.panel1.Controls.Add(this.label4);
+            this.panel1.Controls.Add(this.label2);
+            this.panel1.Controls.Add(this.label3);
+            resources.ApplyResources(this.panel1, "panel1");
+            this.panel1.Name = "panel1";
             // 
             // UtilisateurDetail
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
+            resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(86)))), ((int)(((byte)(77)))));
-            this.ClientSize = new System.Drawing.Size(769, 453);
-            this.Controls.Add(this.groupBox1);
-            this.Controls.Add(this.splitter1);
-            this.Controls.Add(this.label7);
-            this.Controls.Add(this.label6);
-            this.Controls.Add(this.label5);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.txtDateCreation);
-            this.Controls.Add(this.cbGroupeId);
-            this.Controls.Add(this.txtPassword);
-            this.Controls.Add(this.txtLogin);
-            this.Controls.Add(this.txtPrenom);
-            this.Controls.Add(this.txtNom);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.txtId);
-            this.Font = new System.Drawing.Font("Corbel", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(2);
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(62)))), ((int)(((byte)(60)))));
+            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.panelNavigation);
+            this.Controls.Add(this.panelLang);
             this.MaximizeBox = false;
             this.Name = "UtilisateurDetail";
-            this.Text = "Utilisateur";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.UtilisateurDetail_FormClosing);
             this.Load += new System.EventHandler(this.UtilisateurDetail_Load);
-            this.groupBox1.ResumeLayout(false);
+            this.panelLang.ResumeLayout(false);
+            this.panelLang.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbUpdating)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Spain_flag)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.England_flag)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.France_flag)).EndInit();
+            this.panelNavigation.ResumeLayout(false);
+            this.panelNavigation.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DgvAuthorizationList)).EndInit();
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -343,10 +401,21 @@ namespace WidraSoft.UI
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.Button btAjouter;
-        private System.Windows.Forms.Button btSupprimer;
-        private System.Windows.Forms.Button btModifier;
-        private System.Windows.Forms.Splitter splitter1;
+        private System.Windows.Forms.Panel panelLang;
+        private System.Windows.Forms.PictureBox pbUpdating;
+        private System.Windows.Forms.PictureBox Spain_flag;
+        private System.Windows.Forms.PictureBox England_flag;
+        private System.Windows.Forms.PictureBox France_flag;
+        private System.Windows.Forms.ComboBox cbLang;
+        private System.Windows.Forms.Panel panelNavigation;
+        private System.Windows.Forms.PictureBox pictureBox3;
+        private System.Windows.Forms.LinkLabel lbModifier;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.LinkLabel lbAjouter;
+        private System.Windows.Forms.LinkLabel lbSupprimer;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.DataGridView DgvAuthorizationList;
+        private System.Windows.Forms.Panel panel1;
     }
 }

@@ -76,54 +76,63 @@ namespace WidraSoft.UI
             {
                 if (lang == "FR") return_Value = "Valider";
                 else if (lang == "EN") return_Value = "Save";
+                else if (lang == "ES") return_Value = "Validar";
                 else return_Value = "Valider";
             }
             if (text == "Modifier")
             {
                 if (lang == "FR") return_Value = "Modifier";
                 else if (lang == "EN") return_Value = "Edit";
+                else if (lang == "ES") return_Value = "Editar";
                 else return_Value = "Modifier";
             }
             if (text == "OK")
             {
                 if (lang == "FR") return_Value = "OK";
                 else if (lang == "EN")  return_Value = "OK";
+                else if (lang == "ES") return_Value = "OK";
                 else return_Value = "OK";
             }
             if (text == "Annuler")
             {
                 if (lang == "FR") return_Value = "Annuler";
                 else if (lang == "EN") return_Value = "Cancel";
+                else if (lang == "ES") return_Value = "Anular";
                 else return_Value = "Annuler";
             }           
             if (text == "Recommencer")
             {
                 if (lang == "FR") return_Value = "Recommencer";
                 else if (lang == "EN") return_Value = "Retry";
+                else if (lang == "ES") return_Value = "Reiniciar";
                 else return_Value = "Recommencer";
             }
             if (text == "Oui")
             {
                 if (lang == "FR") return_Value = "Oui";
                 else if (lang == "EN") return_Value = "Yes";
+                else if (lang == "ES") return_Value = "Sí";
                 else return_Value = "Oui";
             }
             if (text == "Non")
             {
                 if (lang == "FR") return_Value = "Non";
                 else if (lang == "EN") return_Value = "No";
+                else if (lang == "ES") return_Value = "No";
                 else return_Value = "Non";
             }
             if (text == "Abandonner")
             {
                 if (lang == "FR") return_Value = "Abandonner";
                 else if (lang == "EN") return_Value = "Abort";
+                else if (lang == "ES") return_Value = "Abandonar";
                 else return_Value = "Abandonner";
             } 
             if (text == "Ignorer")
             {
                 if (lang == "FR") return_Value = "Ignorer";
                 else if (lang == "EN") return_Value = "Ignore";
+                else if (lang == "ES") return_Value = "Ignorar";
                 else return_Value = "Ignorer";
             }
 

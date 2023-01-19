@@ -89,6 +89,12 @@ namespace WidraSoft.UI
             form.Show();
         }
 
+        private void produitsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Form form = new ProduitsListe("1=1");
+            form.Show();
+        }
+
         private void panelUserInfo_MouseDown(object sender, MouseEventArgs e)
         {
             ReleaseCapture();
@@ -105,6 +111,7 @@ namespace WidraSoft.UI
                 Spain_flag.Visible = false;
                 Language_Manager language_Manager = new Language_Manager();
                 language_Manager.ChangeLanguage("fr", this, typeof(MenuGeneral));
+
              }
 
             if (cbLang.Text == "EN")
@@ -121,10 +128,13 @@ namespace WidraSoft.UI
                 France_flag.Visible = false;
                 England_flag.Visible = false;
                 Spain_flag.Visible = true;
-              
+                Language_Manager language_Manager = new Language_Manager();
+                language_Manager.ChangeLanguage("es", this, typeof(MenuGeneral));
             }
             Utilisateur utilisateur = new Utilisateur();
             lblusername.Text = utilisateur.GetFullUsername(vg_UtilisateurId);
-        }     
+        }
+
+  
     }
 }

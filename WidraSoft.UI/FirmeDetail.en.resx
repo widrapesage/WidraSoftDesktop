@@ -57,105 +57,126 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="btSupprimer.Text" xml:space="preserve">
-    <value>Delete</value>
-  </data>
-  <data name="btModifier.Text" xml:space="preserve">
-    <value>Edit</value>
-  </data>
-  <data name="btAjouter.Text" xml:space="preserve">
-    <value>Add</value>
-  </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="label2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>60, 17</value>
+    <value>60, 19</value>
   </data>
   <data name="label2.Text" xml:space="preserve">
     <value>Created</value>
   </data>
   <data name="label4.Size" type="System.Drawing.Size, System.Drawing">
-    <value>47, 17</value>
+    <value>47, 19</value>
   </data>
   <data name="label4.Text" xml:space="preserve">
     <value>Name</value>
   </data>
   <data name="label5.Size" type="System.Drawing.Size, System.Drawing">
-    <value>54, 17</value>
+    <value>53, 19</value>
   </data>
   <data name="label5.Text" xml:space="preserve">
     <value>Adress</value>
   </data>
   <data name="label6.Size" type="System.Drawing.Size, System.Drawing">
-    <value>85, 17</value>
+    <value>84, 19</value>
   </data>
   <data name="label6.Text" xml:space="preserve">
     <value>Postal code</value>
   </data>
   <data name="label7.Size" type="System.Drawing.Size, System.Drawing">
-    <value>33, 17</value>
+    <value>34, 19</value>
   </data>
   <data name="label7.Text" xml:space="preserve">
     <value>City</value>
   </data>
   <data name="label8.Size" type="System.Drawing.Size, System.Drawing">
-    <value>59, 17</value>
+    <value>59, 19</value>
   </data>
   <data name="label8.Text" xml:space="preserve">
     <value>Country</value>
   </data>
   <data name="label9.Size" type="System.Drawing.Size, System.Drawing">
-    <value>91, 17</value>
+    <value>89, 19</value>
   </data>
   <data name="label9.Text" xml:space="preserve">
     <value>Phone numb</value>
   </data>
   <data name="label10.Size" type="System.Drawing.Size, System.Drawing">
-    <value>33, 17</value>
+    <value>38, 19</value>
   </data>
   <data name="label10.Text" xml:space="preserve">
     <value>Mail</value>
   </data>
   <data name="label11.Size" type="System.Drawing.Size, System.Drawing">
-    <value>89, 17</value>
+    <value>89, 19</value>
   </data>
   <data name="label11.Text" xml:space="preserve">
     <value>TVA Number</value>
   </data>
   <data name="label12.Size" type="System.Drawing.Size, System.Drawing">
-    <value>82, 17</value>
+    <value>83, 19</value>
   </data>
   <data name="label12.Text" xml:space="preserve">
     <value>Website url</value>
   </data>
   <data name="label13.Size" type="System.Drawing.Size, System.Drawing">
-    <value>90, 17</value>
+    <value>93, 19</value>
   </data>
   <data name="label13.Text" xml:space="preserve">
     <value>Blocking text</value>
   </data>
   <data name="label14.Size" type="System.Drawing.Size, System.Drawing">
-    <value>89, 17</value>
+    <value>92, 19</value>
   </data>
   <data name="label14.Text" xml:space="preserve">
     <value>Warning text</value>
   </data>
   <data name="label16.Size" type="System.Drawing.Size, System.Drawing">
-    <value>38, 17</value>
+    <value>41, 19</value>
   </data>
   <data name="label16.Text" xml:space="preserve">
     <value>Valid</value>
   </data>
   <data name="label17.Size" type="System.Drawing.Size, System.Drawing">
-    <value>60, 17</value>
+    <value>59, 19</value>
   </data>
   <data name="label17.Text" xml:space="preserve">
     <value>Blocked</value>
   </data>
   <data name="label18.Size" type="System.Drawing.Size, System.Drawing">
-    <value>62, 17</value>
+    <value>63, 19</value>
   </data>
   <data name="label18.Text" xml:space="preserve">
     <value>Warning</value>
+  </data>
+  <data name="pictureBox3.Location" type="System.Drawing.Point, System.Drawing">
+    <value>124, 9</value>
+  </data>
+  <data name="lbModifier.Location" type="System.Drawing.Point, System.Drawing">
+    <value>148, 8</value>
+  </data>
+  <data name="lbModifier.Size" type="System.Drawing.Size, System.Drawing">
+    <value>32, 18</value>
+  </data>
+  <data name="lbModifier.Text" xml:space="preserve">
+    <value>Edit</value>
+  </data>
+  <data name="pictureBox1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>190, 8</value>
+  </data>
+  <data name="lbAjouter.Size" type="System.Drawing.Size, System.Drawing">
+    <value>33, 18</value>
+  </data>
+  <data name="lbAjouter.Text" xml:space="preserve">
+    <value>Add</value>
+  </data>
+  <data name="lbSupprimer.Location" type="System.Drawing.Point, System.Drawing">
+    <value>214, 8</value>
+  </data>
+  <data name="lbSupprimer.Size" type="System.Drawing.Size, System.Drawing">
+    <value>50, 18</value>
+  </data>
+  <data name="lbSupprimer.Text" xml:space="preserve">
+    <value>Delete</value>
   </data>
   <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>

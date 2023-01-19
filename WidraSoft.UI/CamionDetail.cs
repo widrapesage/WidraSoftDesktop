@@ -1,4 +1,5 @@
-﻿using System;
+﻿using CustomMessageBox;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -27,10 +28,7 @@ namespace WidraSoft.UI
         private void CamionDetail_Load(object sender, EventArgs e)
         {
             this.CenterToParent();
-            cbLang.DataSource = Language.Languages;
-            cbLang.ValueMember = null;
-            cbLang.DisplayMember = Language.Languages[0];
-            cbLang.SelectedIndex = 0;
+            
             if (vg_Mode == "Add")
             {
                 try
@@ -57,6 +55,10 @@ namespace WidraSoft.UI
                     }
                 }
             }
+            cbLang.DataSource = Language.Languages;
+            cbLang.ValueMember = null;
+            cbLang.DisplayMember = Language.Languages[0];
+            cbLang.SelectedIndex = 0;
         }
 
         private void Add_Item()
@@ -64,10 +66,10 @@ namespace WidraSoft.UI
             if (txtId.Text == "" && txtDateCreation.Text == "" && txtBadge.Text == "" && txtPlaque.Text == "" && txtCode.Text == "" && txtTare.Text == ""
                 && txtValide.Text == "" && txtBloque.Text == "" && txtBlocage.Text == "" && txtAttention.Text == "" && txtAlerte.Text == "" && txtObservations.Text == "")
             {
-                btModifier.Enabled = false;
-                btModifier.BackColor = Color.Transparent;
-                btSupprimer.Enabled = false;
-                btSupprimer.BackColor = Color.Transparent;
+                lbModifier.Enabled = false;
+                lbModifier.BackColor = Color.Transparent;
+                lbSupprimer.Enabled = false;
+                lbSupprimer.BackColor = Color.Transparent;
 
                 txtTare.Text = "0";
                 txtValide.Text = "1";
@@ -82,8 +84,8 @@ namespace WidraSoft.UI
 
         private void Edit_Item()
         {
-            btAjouter.Enabled = false;
-            btAjouter.BackColor = Color.Transparent;
+            lbAjouter.Enabled = false;
+            lbAjouter.BackColor = Color.Transparent;
             Disable();
             Bind_Fields();
         }
@@ -103,20 +105,17 @@ namespace WidraSoft.UI
                 txtCode.Text = row["CODE"].ToString();
                 txtTare.Text = row["TARE"].ToString();
                 txtValide.Text = row["VALIDE"].ToString();
-                txtValide.Visible = false;
                 if (txtValide.Text == "1")
                     chx_Valide.Checked = true;
                 else
                     chx_Valide.Checked = false;
                 txtBloque.Text = row["BLOQUE"].ToString();
-                txtBloque.Visible = false;
                 if (txtBloque.Text == "1")
                     chx_Bloque.Checked = true;
                 else
                     chx_Bloque.Checked = false;
                 txtBlocage.Text = row["TEXTEBLOQUE"].ToString();
                 txtAttention.Text = row["ATTENTION"].ToString();
-                txtAttention.Visible = false;
                 if (txtAttention.Text == "1")
                     chx_Attention.Checked = true;
                 else
@@ -139,6 +138,7 @@ namespace WidraSoft.UI
             chx_Attention.Enabled = false;
             txtAlerte.Enabled = false;
             txtObservations.Enabled = false;
+            pbUpdating.Visible = false;
 
             vg_IsEnabled = false;
         }
@@ -156,6 +156,7 @@ namespace WidraSoft.UI
             chx_Attention.Enabled = true;
             txtAlerte.Enabled = true;
             txtObservations.Enabled = true;
+            pbUpdating.Visible = true;
 
             vg_IsEnabled = true;
         }
@@ -174,42 +175,6 @@ namespace WidraSoft.UI
             chx_Valide.Checked = false;
             chx_Bloque.Checked = false;
             chx_Attention.Checked = false;
-        }
-
-        private void btAjouter_MouseEnter(object sender, EventArgs e)
-        {
-            if (btAjouter.Enabled == true)
-                btAjouter.BackColor = Color.Honeydew;
-        }
-
-        private void btAjouter_MouseLeave(object sender, EventArgs e)
-        {
-            if (btAjouter.Enabled == true)
-                btAjouter.BackColor = Color.FromArgb(72,190,117) ;
-        }
-
-        private void btModifier_MouseEnter(object sender, EventArgs e)
-        {
-            if (btModifier.Enabled == true)
-                btModifier.BackColor = Color.Honeydew;
-        }
-
-        private void btModifier_MouseLeave(object sender, EventArgs e)
-        {
-            if (btModifier.Enabled == true)
-                btModifier.BackColor = Color.FromArgb(72, 190, 117);
-        }
-
-        private void btSupprimer_MouseEnter(object sender, EventArgs e)
-        {
-            if (btSupprimer.Enabled == true)
-                btSupprimer.BackColor = Color.Honeydew;
-        }
-
-        private void btSupprimer_MouseLeave(object sender, EventArgs e)
-        {
-            if (btSupprimer.Enabled == true)
-                btSupprimer.BackColor = Color.FromArgb(72, 190, 117);
         }
 
         private void chx_Valide_CheckedChanged(object sender, EventArgs e)
@@ -234,148 +199,6 @@ namespace WidraSoft.UI
                 txtAttention.Text = "1";
             else
                 txtAttention.Text = "0";
-        }
-
-        private void btAjouter_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                if (txtId.Text == "" && txtDateCreation.Text == "" && txtPlaque.Text != "" && txtValide.Text != "" && txtBloque.Text != "" && txtAttention.Text != "")
-                {
-                    int Tare;
-                    int Valide;
-                    int Bloque;
-                    int Attention;
-                    bool IsParsableTare;
-                    bool IsParsableValide;
-                    bool IsParsableBloque;
-                    bool IsParsableAttention;
-                    IsParsableTare = Int32.TryParse(txtTare.Text, out Tare);
-                    IsParsableValide = Int32.TryParse(txtValide.Text, out Valide);
-                    IsParsableBloque = Int32.TryParse(txtBloque.Text, out Bloque);
-                    IsParsableAttention = Int32.TryParse(txtAttention.Text, out Attention);
-                    try
-                    {
-                        if (IsParsableTare && IsParsableValide && IsParsableBloque && IsParsableAttention)
-                        {
-                            Camion camion = new Camion();
-                            camion.Add(txtCode.Text, txtPlaque.Text, txtBadge.Text, Tare, Valide, Bloque, txtBlocage.Text,
-                                 Attention, txtAlerte.Text, txtObservations.Text);
-                            MessageBox.Show("Camion ajouté avec succès");
-                            Close();
-                        }
-                    }
-                    catch
-                    {
-                        throw;
-                    }
-
-                }
-                else
-                {
-                    MessageBox.Show("Informations incomplètes");                   
-                }
-            }
-            catch
-            {
-                throw;
-            }
-        }
-
-        private void btModifier_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                if (vg_Update == false && vg_IsEnabled == false)
-                {
-                    Enable();
-                    btModifier.Text = Language_Manager.Localize("Valider", cbLang.Text);
-                    vg_Update = true;
-                }
-                else
-                {
-                    try
-                    {
-                        if (txtId.Text != "" && txtDateCreation.Text != "" && txtPlaque.Text != "" && txtValide.Text != "" && txtBloque.Text != "" && txtAttention.Text != "")
-                        {
-                            int Id;
-                            int Tare;
-                            int Valide;
-                            int Bloque;
-                            int Attention;
-                            bool IsParsableId;
-                            bool IsParsableTare;
-                            bool IsParsableValide;
-                            bool IsParsableBloque;
-                            bool IsParsableAttention;
-                            IsParsableId = Int32.TryParse(txtId.Text, out Id);  
-                            IsParsableTare = Int32.TryParse(txtTare.Text, out Tare);
-                            IsParsableValide = Int32.TryParse(txtValide.Text, out Valide);
-                            IsParsableBloque = Int32.TryParse(txtBloque.Text, out Bloque);
-                            IsParsableAttention = Int32.TryParse(txtAttention.Text, out Attention);
-                            try
-                            {
-                                if (IsParsableId && IsParsableTare && IsParsableValide && IsParsableBloque && IsParsableAttention)
-                                {
-                                    Camion camion = new Camion();
-                                    camion.Update(Id, txtCode.Text, txtPlaque.Text, txtBadge.Text, Tare, Valide, Bloque, txtBlocage.Text,
-                                       Attention, txtAlerte.Text, txtObservations.Text) ;
-                                    MessageBox.Show("Camion modifié avec succès");
-                                    btModifier.Text = Language_Manager.Localize("Modifier", cbLang.Text);
-                                    vg_Update = false;
-                                    Disable();
-                                    Bind_Fields();
-                                }
-                            }
-                            catch
-                            {
-                                throw;
-                            }
-                        }
-                        else
-                        {
-                            MessageBox.Show("Informations incomplètes");
-                        }
-                    }
-                    catch
-                    {
-                        throw;
-                    }
-                }
-            }
-            catch
-            {
-                throw;
-            }
-        }
-
-        private void btSupprimer_Click(object sender, EventArgs e)
-        {
-            if (vg_Update)
-            {
-                MessageBox.Show("Vous ne pouvez pas supprimer l'enregistrement terminez d'abord la modification");
-            }
-            else
-            {
-                try
-                {
-                    Camion camion = new Camion();
-                    int Id;
-                    bool IsParsableId;
-                    IsParsableId = Int32.TryParse(txtId.Text, out Id);
-                    if (IsParsableId)
-                    {
-                        camion.Delete(Id);
-                        MessageBox.Show("Camion supprimé avec succès");
-                        Close();
-                    }
-                }
-                catch
-                {
-                    throw;
-                }
-
-            }
         }
 
         private void cbLang_SelectedIndexChanged(object sender, EventArgs e)
@@ -404,7 +227,212 @@ namespace WidraSoft.UI
                 France_flag.Visible = false;
                 England_flag.Visible = false;
                 Spain_flag.Visible = true;
+                Language_Manager language_Manager = new Language_Manager();
+                language_Manager.ChangeLanguage("es", this, typeof(CamionDetail));
             }
         }
+
+        private void lbAjouter_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            try
+            {
+                if (txtId.Text == "" && txtDateCreation.Text == "" && txtPlaque.Text != "" && txtValide.Text != "" && txtBloque.Text != "" && txtAttention.Text != "")
+                {
+                    int Tare;
+                    int Valide;
+                    int Bloque;
+                    int Attention;
+                    bool IsParsableTare;
+                    bool IsParsableValide;
+                    bool IsParsableBloque;
+                    bool IsParsableAttention;
+                    IsParsableTare = Int32.TryParse(txtTare.Text, out Tare);
+                    IsParsableValide = Int32.TryParse(txtValide.Text, out Valide);
+                    IsParsableBloque = Int32.TryParse(txtBloque.Text, out Bloque);
+                    IsParsableAttention = Int32.TryParse(txtAttention.Text, out Attention);
+                    try
+                    {
+                        if (IsParsableTare && IsParsableValide && IsParsableBloque && IsParsableAttention)
+                        {
+                            Camion camion = new Camion();
+                            camion.Add(txtCode.Text, txtPlaque.Text, txtBadge.Text, Tare, Valide, Bloque, txtBlocage.Text,
+                                 Attention, txtAlerte.Text, txtObservations.Text);
+                            if (cbLang.Text == "FR")
+                                Custom_MessageBox.Show("FR", "Camion ajouté avec succès", "Camion", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            else if (cbLang.Text == "EN")
+                                Custom_MessageBox.Show("EN", "Truck added successfully", "Truck", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            else
+                                Custom_MessageBox.Show("ES", "Camión agregado", "Camión", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            Close();
+                        }
+                    }
+                    catch
+                    {
+                        throw;
+                    }
+
+                }
+                else
+                {
+                    if (cbLang.Text == "FR")
+                        Custom_MessageBox.Show("FR", "Informations incomplètes", "Camion", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    else if (cbLang.Text == "EN")
+                        Custom_MessageBox.Show("EN", "Incomplete informations", "Truck", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    else
+                        Custom_MessageBox.Show("ES", "Información incompleta", "Camión", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+            }
+            catch
+            {
+                throw;
+            }
+        }
+
+        private void lbModifier_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            try
+            {
+                if (vg_Update == false && vg_IsEnabled == false)
+                {
+                    Enable();
+                    lbModifier.Text = Language_Manager.Localize("Valider", cbLang.Text);
+                    vg_Update = true;
+                }
+                else
+                {
+                    try
+                    {
+                        if (txtId.Text != "" && txtDateCreation.Text != "" && txtPlaque.Text != "" && txtValide.Text != "" && txtBloque.Text != "" && txtAttention.Text != "")
+                        {
+                            int Id;
+                            int Tare;
+                            int Valide;
+                            int Bloque;
+                            int Attention;
+                            bool IsParsableId;
+                            bool IsParsableTare;
+                            bool IsParsableValide;
+                            bool IsParsableBloque;
+                            bool IsParsableAttention;
+                            IsParsableId = Int32.TryParse(txtId.Text, out Id);
+                            IsParsableTare = Int32.TryParse(txtTare.Text, out Tare);
+                            IsParsableValide = Int32.TryParse(txtValide.Text, out Valide);
+                            IsParsableBloque = Int32.TryParse(txtBloque.Text, out Bloque);
+                            IsParsableAttention = Int32.TryParse(txtAttention.Text, out Attention);
+                            try
+                            {
+                                if (IsParsableId && IsParsableTare && IsParsableValide && IsParsableBloque && IsParsableAttention)
+                                {
+                                    Camion camion = new Camion();
+                                    camion.Update(Id, txtCode.Text, txtPlaque.Text, txtBadge.Text, Tare, Valide, Bloque, txtBlocage.Text,
+                                       Attention, txtAlerte.Text, txtObservations.Text);
+                                    if (cbLang.Text == "FR")
+                                        Custom_MessageBox.Show("FR", "Camion modifié avec succès", "Camion", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                    else if (cbLang.Text == "EN")
+                                        Custom_MessageBox.Show("EN", "Truck updated successfully", "Truck", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                    else
+                                        Custom_MessageBox.Show("ES", "Camión alterado", "Camión", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                    lbModifier.Text = Language_Manager.Localize("Modifier", cbLang.Text);
+                                    vg_Update = false;
+                                    Disable();
+                                    Bind_Fields();
+                                }
+                            }
+                            catch
+                            {
+                                throw;
+                            }
+                        }
+                        else
+                        {
+                            if (cbLang.Text == "FR")
+                                Custom_MessageBox.Show("FR", "Informations incomplètes", "Camion", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            else if (cbLang.Text == "EN")
+                                Custom_MessageBox.Show("EN", "Incomplete informations", "Truck", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            else
+                                Custom_MessageBox.Show("ES", "Información incompleta", "Camión", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        }
+                    }
+                    catch
+                    {
+                        throw;
+                    }
+                }
+            }
+            catch
+            {
+                throw;
+            }
+        }
+
+        private void lbSupprimer_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            if (vg_Update)
+            {
+                MessageBox.Show("Vous ne pouvez pas supprimer l'enregistrement terminez d'abord la modification");
+                if (cbLang.Text == "FR")
+                    Custom_MessageBox.Show("FR", "Vous ne pouvez pas supprimer l'enregistrement tant que la modification n'est pas validée", "Camion", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                else if (cbLang.Text == "EN")
+                    Custom_MessageBox.Show("EN", "You can't delete this record before the update is completed", "Truck", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                else
+                    Custom_MessageBox.Show("ES", "No puede eliminar el registro hasta que se confirme el cambio", "Camión", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            else
+            {
+                try
+                {
+                    Camion camion = new Camion();
+                    int Id;
+                    bool IsParsableId;
+                    IsParsableId = Int32.TryParse(txtId.Text, out Id);
+                    if (IsParsableId)
+                    {
+                        DialogResult result;
+                        if (cbLang.Text == "FR")
+                            result = Custom_MessageBox.Show("FR", "Etes vous sur de vouloir supprimer cet enregistrement?", "Camion", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                        else if (cbLang.Text == "EN")
+                            result = Custom_MessageBox.Show("EN", "Are you sure you want to delete this record?", "Truck", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                        else
+                            result = Custom_MessageBox.Show("ES", "¿Está seguro de que desea eliminar este registro?", "Camión", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                        if (result == DialogResult.Yes)
+                        {
+                            camion.Delete(Id);
+                            if (cbLang.Text == "FR")
+                                Custom_MessageBox.Show("FR", "Camion supprimé avec succès", "Camion", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            else if (cbLang.Text == "EN")
+                                Custom_MessageBox.Show("EN", "Truck deleted successfully", "Truck", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            else
+                                Custom_MessageBox.Show("ES", "Camión eliminado", "Camión", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            Close();
+                        }
+                           
+                    }
+                }
+                catch
+                {
+                    throw;
+                }
+
+            }
+        }
+
+        private void CamionDetail_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            if (vg_Mode == "Edit")
+            {
+                if (pbUpdating.Visible)
+                {
+                    if (cbLang.Text == "FR")
+                        Custom_MessageBox.Show("FR", "Vous ne pouvez pas fermer la fenetre tant que la modification n'est pas validée", "Camion", MessageBoxButtons.OK, MessageBoxIcon.Stop);
+                    else if (cbLang.Text == "EN")
+                        Custom_MessageBox.Show("EN", "You can't close this window before the update is completed", "Truck", MessageBoxButtons.OK, MessageBoxIcon.Stop);
+                    else
+                        Custom_MessageBox.Show("ES", "No puede cerrar la página hasta que se valide el cambio", "Camión", MessageBoxButtons.OK, MessageBoxIcon.Stop);
+                    e.Cancel = true;
+                }
+            }
+        }
+
+
     }
 }

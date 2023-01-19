@@ -261,11 +261,11 @@ public partial class FormMessageBox : Form
                 break;
             case MessageBoxIcon.Information: //Information
                 this.pictureBoxIcon.Image = Properties.Resources.information;
-                PrimaryColor = Color.FromArgb(72, 190, 117);
+                PrimaryColor = Color.FromArgb(72, 86, 58);
                 break;
             case MessageBoxIcon.Question://Question
                 this.pictureBoxIcon.Image = Properties.Resources.question;
-                PrimaryColor = Color.FromArgb(72, 190, 117);
+                PrimaryColor = Color.FromArgb(72, 86, 58);
                 break;
             case MessageBoxIcon.Exclamation://Exclamation
                 this.pictureBoxIcon.Image = Properties.Resources.exclamation;
@@ -273,7 +273,7 @@ public partial class FormMessageBox : Form
                 break;
             case MessageBoxIcon.None: //None
                 this.pictureBoxIcon.Image = Properties.Resources.chat;
-                PrimaryColor = Color.FromArgb(72, 190, 117); 
+                PrimaryColor = Color.FromArgb(72, 86, 58); 
                 break;
         }
     }
@@ -298,5 +298,9 @@ public partial class FormMessageBox : Form
 
         #endregion
 
+        private void FormMessageBox_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

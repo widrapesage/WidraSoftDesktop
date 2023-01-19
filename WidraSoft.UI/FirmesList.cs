@@ -102,44 +102,28 @@ namespace WidraSoft.UI
                 DgvList.Columns["ATTENTION"].HeaderText = "WARNING";
                 DgvList.Columns["DATECREATION"].HeaderText = "CREATION DATE";
             }
+            
+            if (lang == "es")
+            {
+                DgvList.Columns["BADGE"].HeaderText = "N° INSIGNIA";
+                DgvList.Columns["DESIGNATION"].HeaderText = "DESIGNACIÓN";
+                DgvList.Columns["ADRESSE"].HeaderText = "DIRECCIÓN";
+                DgvList.Columns["CODEPOSTAL"].HeaderText = "CÓDIGO POSTAL";
+                DgvList.Columns["LOCALITE"].HeaderText = "LOCALIDAD";
+                DgvList.Columns["PAYS"].HeaderText = "PAÍS";
+                DgvList.Columns["TELEPHONE"].HeaderText = "TELÉFONO";
+                DgvList.Columns["EMAIL"].HeaderText = "CORREO ELECTRÓNICO";
+                DgvList.Columns["NUMTVA"].HeaderText = "N° IVA";
+                DgvList.Columns["SITEWEB_URL"].HeaderText = "SITIO WEB";
+                DgvList.Columns["VALIDE"].HeaderText = "VÁLIDO";
+                DgvList.Columns["BLOQUE"].HeaderText = "OBSTRUIDO";
+                DgvList.Columns["ATTENTION"].HeaderText = "ATENCIÓN";
+                DgvList.Columns["DATECREATION"].HeaderText = "FECHA DE CREACIÓN";
+            }
 
         }
 
-        private Int32 GetId()
-        {
-            try
-            {
-                return (int)DgvList[0, DgvList.CurrentCell.RowIndex].Value;
-
-            }
-            catch
-            {
-                throw;
-            }
-        }
-
-        private Int32[] GetSelectedRowsId()
-        {
-            try
-            {
-                Int32 SelectedRowsCount = DgvList.Rows.GetRowCount(DataGridViewElementStates.Selected);
-                Int32[] Selected = new Int32[SelectedRowsCount];
-                if (SelectedRowsCount > 0)
-                {
-
-                    for (int i = 0; i < SelectedRowsCount; i++)
-                    {
-                        Selected[i] = Int32.Parse(DgvList.SelectedRows[i].Cells[0].Value.ToString());
-                    }
-
-                }
-                return Selected;
-            }
-            catch
-            {
-                throw;
-            }
-        }
+       
 
         private void ActualiserToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -149,13 +133,8 @@ namespace WidraSoft.UI
 
         private void ouvrirToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Form form = new FirmeDetail("Edit", GetId());
-            form.Show();
-        }
-
-        private void modifierToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            Form form = new FirmeDetail("Edit", GetId());
+            DgvList.Focus();
+            Form form = new FirmeDetail("Edit", Common_functions.GetDatagridViewSelectedId(DgvList));
             form.Show();
         }
 
@@ -167,17 +146,17 @@ namespace WidraSoft.UI
 
         private void supprimerToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Int32[] selectedIds = new Int32[GetSelectedRowsId().Length];
-            selectedIds = GetSelectedRowsId();
-            if (GetSelectedRowsId().Length > 0)
+            Int32[] selectedIds = new Int32[Common_functions.GetDatagridViewSelectedRowsId(DgvList).Length];
+            selectedIds = Common_functions.GetDatagridViewSelectedRowsId(DgvList);
+            if (Common_functions.GetDatagridViewSelectedRowsId(DgvList).Length > 0)
             {
-                for (int i = 0; i < GetSelectedRowsId().Length; i++)
+                for (int i = 0; i < Common_functions.GetDatagridViewSelectedRowsId(DgvList).Length; i++)
                 {
                     //MessageBox.Show(selectedIds[i].ToString());
                     Firme firme = new Firme();
                     firme.Delete(selectedIds[i]);
                 }
-                MessageBox.Show(GetSelectedRowsId().Length + " firme(s) supprimée(s)");
+                MessageBox.Show(Common_functions.GetDatagridViewSelectedRowsId(DgvList).Length + " firme(s) supprimée(s)");
             }
             else
             {
@@ -186,11 +165,7 @@ namespace WidraSoft.UI
         
         }
 
-        private void txtSearchBox_TextChanged(object sender, EventArgs e)
-        {
-            Firme firme = new Firme();
-            DgvList.DataSource = firme.SearchBox(txtSearchBox.Text);
-        }
+
 
         private void cbLang_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -219,7 +194,16 @@ namespace WidraSoft.UI
                 France_flag.Visible = false;
                 England_flag.Visible = false;
                 Spain_flag.Visible = true;
+                Language_Manager language_Manager = new Language_Manager();
+                language_Manager.ChangeLanguage("es", this, typeof(FirmesList));
+                Localize_Dgv("es");
             }
+        }
+
+        private void txtSearchBox_TextChanged(object sender, EventArgs e)
+        {
+            Firme firme = new Firme();
+            DgvList.DataSource = firme.SearchBox(txtSearchBox.Text);
         }
     }
 }

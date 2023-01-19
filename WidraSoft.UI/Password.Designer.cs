@@ -114,20 +114,21 @@ namespace WidraSoft.UI
             // 
             resources.ApplyResources(this.label1, "label1");
             this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(190)))), ((int)(((byte)(117)))));
+            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(110)))), ((int)(((byte)(230)))), ((int)(((byte)(130)))));
             this.label1.Name = "label1";
             // 
             // pictureBox2
             // 
             this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pictureBox2.Image = global::WidraSoft.UI.Properties.Resources.Balance;
+            this.pictureBox2.Image = global::WidraSoft.UI.Properties.Resources.Balance1;
             resources.ApplyResources(this.pictureBox2, "pictureBox2");
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.TabStop = false;
             // 
             // PanelLayout
             // 
+            this.PanelLayout.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(86)))), ((int)(((byte)(81)))));
             this.PanelLayout.Controls.Add(this.panelLang);
             this.PanelLayout.Controls.Add(this.pictureBox2);
             this.PanelLayout.Controls.Add(this.label1);

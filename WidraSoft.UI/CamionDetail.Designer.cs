@@ -29,10 +29,6 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CamionDetail));
-            this.btSupprimer = new System.Windows.Forms.Button();
-            this.btModifier = new System.Windows.Forms.Button();
-            this.btAjouter = new System.Windows.Forms.Button();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.label4 = new System.Windows.Forms.Label();
             this.txtPlaque = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
@@ -61,72 +57,30 @@
             this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.panelLang = new System.Windows.Forms.Panel();
+            this.pbUpdating = new System.Windows.Forms.PictureBox();
             this.Spain_flag = new System.Windows.Forms.PictureBox();
             this.England_flag = new System.Windows.Forms.PictureBox();
             this.France_flag = new System.Windows.Forms.PictureBox();
             this.cbLang = new System.Windows.Forms.ComboBox();
-            this.groupBox1.SuspendLayout();
+            this.panelNavigation = new System.Windows.Forms.Panel();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.lbModifier = new System.Windows.Forms.LinkLabel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.lbAjouter = new System.Windows.Forms.LinkLabel();
+            this.lbSupprimer = new System.Windows.Forms.LinkLabel();
+            this.panelDetail = new System.Windows.Forms.Panel();
             this.panelLang.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbUpdating)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Spain_flag)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.England_flag)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.France_flag)).BeginInit();
+            this.panelNavigation.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            this.panelDetail.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // btSupprimer
-            // 
-            this.btSupprimer.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(190)))), ((int)(((byte)(117)))));
-            this.btSupprimer.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btSupprimer.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(62)))), ((int)(((byte)(60)))));
-            this.btSupprimer.FlatAppearance.BorderSize = 2;
-            resources.ApplyResources(this.btSupprimer, "btSupprimer");
-            this.btSupprimer.ForeColor = System.Drawing.Color.Black;
-            this.btSupprimer.Image = global::WidraSoft.UI.Properties.Resources.button_delete;
-            this.btSupprimer.Name = "btSupprimer";
-            this.btSupprimer.UseVisualStyleBackColor = false;
-            this.btSupprimer.Click += new System.EventHandler(this.btSupprimer_Click);
-            this.btSupprimer.MouseEnter += new System.EventHandler(this.btSupprimer_MouseEnter);
-            this.btSupprimer.MouseLeave += new System.EventHandler(this.btSupprimer_MouseLeave);
-            // 
-            // btModifier
-            // 
-            this.btModifier.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(190)))), ((int)(((byte)(117)))));
-            this.btModifier.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btModifier.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(62)))), ((int)(((byte)(60)))));
-            this.btModifier.FlatAppearance.BorderSize = 2;
-            resources.ApplyResources(this.btModifier, "btModifier");
-            this.btModifier.ForeColor = System.Drawing.Color.Black;
-            this.btModifier.Image = global::WidraSoft.UI.Properties.Resources.button_edit;
-            this.btModifier.Name = "btModifier";
-            this.btModifier.UseVisualStyleBackColor = false;
-            this.btModifier.Click += new System.EventHandler(this.btModifier_Click);
-            this.btModifier.MouseEnter += new System.EventHandler(this.btModifier_MouseEnter);
-            this.btModifier.MouseLeave += new System.EventHandler(this.btModifier_MouseLeave);
-            // 
-            // btAjouter
-            // 
-            this.btAjouter.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(190)))), ((int)(((byte)(117)))));
-            this.btAjouter.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btAjouter.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(62)))), ((int)(((byte)(60)))));
-            this.btAjouter.FlatAppearance.BorderSize = 2;
-            resources.ApplyResources(this.btAjouter, "btAjouter");
-            this.btAjouter.ForeColor = System.Drawing.Color.Black;
-            this.btAjouter.Image = global::WidraSoft.UI.Properties.Resources.button_add;
-            this.btAjouter.Name = "btAjouter";
-            this.btAjouter.UseVisualStyleBackColor = false;
-            this.btAjouter.Click += new System.EventHandler(this.btAjouter_Click);
-            this.btAjouter.MouseEnter += new System.EventHandler(this.btAjouter_MouseEnter);
-            this.btAjouter.MouseLeave += new System.EventHandler(this.btAjouter_MouseLeave);
-            // 
-            // groupBox1
-            // 
-            this.groupBox1.Controls.Add(this.btSupprimer);
-            this.groupBox1.Controls.Add(this.btModifier);
-            this.groupBox1.Controls.Add(this.btAjouter);
-            this.groupBox1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            resources.ApplyResources(this.groupBox1, "groupBox1");
-            this.groupBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(190)))), ((int)(((byte)(117)))));
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.TabStop = false;
             // 
             // label4
             // 
@@ -305,13 +259,21 @@
             // 
             // panelLang
             // 
-            this.panelLang.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(86)))), ((int)(((byte)(77)))));
+            this.panelLang.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(86)))), ((int)(((byte)(81)))));
+            this.panelLang.Controls.Add(this.pbUpdating);
             this.panelLang.Controls.Add(this.Spain_flag);
             this.panelLang.Controls.Add(this.England_flag);
             this.panelLang.Controls.Add(this.France_flag);
             this.panelLang.Controls.Add(this.cbLang);
             resources.ApplyResources(this.panelLang, "panelLang");
             this.panelLang.Name = "panelLang";
+            // 
+            // pbUpdating
+            // 
+            this.pbUpdating.Image = global::WidraSoft.UI.Properties.Resources.pencil;
+            resources.ApplyResources(this.pbUpdating, "pbUpdating");
+            this.pbUpdating.Name = "pbUpdating";
+            this.pbUpdating.TabStop = false;
             // 
             // Spain_flag
             // 
@@ -350,60 +312,143 @@
             this.cbLang.Name = "cbLang";
             this.cbLang.SelectedIndexChanged += new System.EventHandler(this.cbLang_SelectedIndexChanged);
             // 
+            // panelNavigation
+            // 
+            this.panelNavigation.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(62)))), ((int)(((byte)(60)))));
+            this.panelNavigation.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panelNavigation.Controls.Add(this.pictureBox3);
+            this.panelNavigation.Controls.Add(this.lbModifier);
+            this.panelNavigation.Controls.Add(this.pictureBox1);
+            this.panelNavigation.Controls.Add(this.pictureBox2);
+            this.panelNavigation.Controls.Add(this.lbAjouter);
+            this.panelNavigation.Controls.Add(this.lbSupprimer);
+            resources.ApplyResources(this.panelNavigation, "panelNavigation");
+            this.panelNavigation.Name = "panelNavigation";
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox3.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pictureBox3.Image = global::WidraSoft.UI.Properties.Resources.update;
+            resources.ApplyResources(this.pictureBox3, "pictureBox3");
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.TabStop = false;
+            // 
+            // lbModifier
+            // 
+            this.lbModifier.ActiveLinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(190)))), ((int)(((byte)(117)))));
+            resources.ApplyResources(this.lbModifier, "lbModifier");
+            this.lbModifier.BackColor = System.Drawing.Color.Transparent;
+            this.lbModifier.ForeColor = System.Drawing.Color.White;
+            this.lbModifier.LinkColor = System.Drawing.Color.White;
+            this.lbModifier.Name = "lbModifier";
+            this.lbModifier.TabStop = true;
+            this.lbModifier.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lbModifier_LinkClicked);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pictureBox1.Image = global::WidraSoft.UI.Properties.Resources.remove;
+            resources.ApplyResources(this.pictureBox1, "pictureBox1");
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.TabStop = false;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox2.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pictureBox2.Image = global::WidraSoft.UI.Properties.Resources.add;
+            resources.ApplyResources(this.pictureBox2, "pictureBox2");
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.TabStop = false;
+            // 
+            // lbAjouter
+            // 
+            this.lbAjouter.ActiveLinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(190)))), ((int)(((byte)(117)))));
+            resources.ApplyResources(this.lbAjouter, "lbAjouter");
+            this.lbAjouter.BackColor = System.Drawing.Color.Transparent;
+            this.lbAjouter.ForeColor = System.Drawing.Color.White;
+            this.lbAjouter.LinkColor = System.Drawing.Color.White;
+            this.lbAjouter.Name = "lbAjouter";
+            this.lbAjouter.TabStop = true;
+            this.lbAjouter.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lbAjouter_LinkClicked);
+            // 
+            // lbSupprimer
+            // 
+            this.lbSupprimer.ActiveLinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(190)))), ((int)(((byte)(117)))));
+            resources.ApplyResources(this.lbSupprimer, "lbSupprimer");
+            this.lbSupprimer.BackColor = System.Drawing.Color.Transparent;
+            this.lbSupprimer.ForeColor = System.Drawing.Color.White;
+            this.lbSupprimer.LinkColor = System.Drawing.Color.White;
+            this.lbSupprimer.Name = "lbSupprimer";
+            this.lbSupprimer.TabStop = true;
+            this.lbSupprimer.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lbSupprimer_LinkClicked);
+            // 
+            // panelDetail
+            // 
+            this.panelDetail.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(86)))), ((int)(((byte)(81)))));
+            this.panelDetail.Controls.Add(this.txtDateCreation);
+            this.panelDetail.Controls.Add(this.txtCode);
+            this.panelDetail.Controls.Add(this.txtPlaque);
+            this.panelDetail.Controls.Add(this.label15);
+            this.panelDetail.Controls.Add(this.txtObservations);
+            this.panelDetail.Controls.Add(this.txtAlerte);
+            this.panelDetail.Controls.Add(this.label9);
+            this.panelDetail.Controls.Add(this.txtBlocage);
+            this.panelDetail.Controls.Add(this.label13);
+            this.panelDetail.Controls.Add(this.label4);
+            this.panelDetail.Controls.Add(this.label14);
+            this.panelDetail.Controls.Add(this.label5);
+            this.panelDetail.Controls.Add(this.label8);
+            this.panelDetail.Controls.Add(this.label3);
+            this.panelDetail.Controls.Add(this.txtId);
+            this.panelDetail.Controls.Add(this.chx_Bloque);
+            this.panelDetail.Controls.Add(this.txtTare);
+            this.panelDetail.Controls.Add(this.label7);
+            this.panelDetail.Controls.Add(this.label2);
+            this.panelDetail.Controls.Add(this.chx_Valide);
+            this.panelDetail.Controls.Add(this.label6);
+            this.panelDetail.Controls.Add(this.chx_Attention);
+            this.panelDetail.Controls.Add(this.txtBadge);
+            this.panelDetail.Controls.Add(this.txtAttention);
+            this.panelDetail.Controls.Add(this.label1);
+            this.panelDetail.Controls.Add(this.txtBloque);
+            this.panelDetail.Controls.Add(this.txtValide);
+            resources.ApplyResources(this.panelDetail, "panelDetail");
+            this.panelDetail.Name = "panelDetail";
+            // 
             // CamionDetail
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(62)))), ((int)(((byte)(60)))));
-            this.Controls.Add(this.txtPlaque);
-            this.Controls.Add(this.groupBox1);
+            this.Controls.Add(this.panelDetail);
+            this.Controls.Add(this.panelNavigation);
             this.Controls.Add(this.panelLang);
-            this.Controls.Add(this.label9);
-            this.Controls.Add(this.txtId);
-            this.Controls.Add(this.txtAlerte);
-            this.Controls.Add(this.label8);
-            this.Controls.Add(this.txtBlocage);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.chx_Bloque);
-            this.Controls.Add(this.label7);
-            this.Controls.Add(this.label13);
-            this.Controls.Add(this.txtBadge);
-            this.Controls.Add(this.chx_Valide);
-            this.Controls.Add(this.txtDateCreation);
-            this.Controls.Add(this.chx_Attention);
-            this.Controls.Add(this.txtAttention);
-            this.Controls.Add(this.label6);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.txtTare);
-            this.Controls.Add(this.txtBloque);
-            this.Controls.Add(this.label14);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.label5);
-            this.Controls.Add(this.txtValide);
-            this.Controls.Add(this.txtObservations);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.txtCode);
-            this.Controls.Add(this.label15);
             this.ForeColor = System.Drawing.Color.White;
             this.MaximizeBox = false;
             this.Name = "CamionDetail";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.CamionDetail_FormClosing);
             this.Load += new System.EventHandler(this.CamionDetail_Load);
-            this.groupBox1.ResumeLayout(false);
             this.panelLang.ResumeLayout(false);
             this.panelLang.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbUpdating)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Spain_flag)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.England_flag)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.France_flag)).EndInit();
+            this.panelNavigation.ResumeLayout(false);
+            this.panelNavigation.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            this.panelDetail.ResumeLayout(false);
+            this.panelDetail.PerformLayout();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
-        private System.Windows.Forms.Button btSupprimer;
-        private System.Windows.Forms.Button btModifier;
-        private System.Windows.Forms.Button btAjouter;
-        private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox txtPlaque;
         private System.Windows.Forms.Label label3;
@@ -436,5 +481,14 @@
         private System.Windows.Forms.PictureBox England_flag;
         private System.Windows.Forms.PictureBox France_flag;
         private System.Windows.Forms.ComboBox cbLang;
+        private System.Windows.Forms.PictureBox pbUpdating;
+        private System.Windows.Forms.Panel panelNavigation;
+        private System.Windows.Forms.PictureBox pictureBox3;
+        private System.Windows.Forms.LinkLabel lbModifier;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.LinkLabel lbAjouter;
+        private System.Windows.Forms.LinkLabel lbSupprimer;
+        private System.Windows.Forms.Panel panelDetail;
     }
 }

@@ -31,6 +31,44 @@ namespace WidraSoft.DA
             }
         }
 
+        public DataTable FindAuthorizedModulesByGroupeId(Int32 Id)
+        {
+            String sql = "SELECT gm.MODULEID, m.DESIGNATION, gm.TYPEACESS FROM MODULE m, GROUPEMODULE gm WHERE gm.MODULEID = m.MODULEID AND gm.GROUPEID=" + Id ;
+            conn.ConnectionString = connString;
+            if (conn.State == ConnectionState.Closed)
+                conn.Open();
+            SqlCommand cmd = new SqlCommand(sql, conn);
+            try
+            {
+                SqlDataReader reader = cmd.ExecuteReader();
+                dt.Load(reader);
+                return dt;
+            }
+            catch
+            {
+                throw;
+            }
+        }
+
+        public DataTable FindNonAuthorizedModulesByGroupeId(Int32 Id)
+        {
+            String sql = "SELECT MODULEID,DESIGNATION FROM MODULE WHERE MODULEID NOT IN (SELECT MODULEID FROM GROUPEMODULE WHERE GROUPEID=" + Id + ")";
+            conn.ConnectionString = connString;
+            if (conn.State == ConnectionState.Closed)
+                conn.Open();
+            SqlCommand cmd = new SqlCommand(sql, conn);
+            try
+            {
+                SqlDataReader reader = cmd.ExecuteReader();
+                dt.Load(reader);
+                return dt;
+            }
+            catch
+            {
+                throw;
+            }
+        }
+
         public DataTable FindByGroupeId(Int32 Id)
         {
             String sql = "SELECT * FROM GROUPEMODULE WHERE GROUPEID=" + Id;

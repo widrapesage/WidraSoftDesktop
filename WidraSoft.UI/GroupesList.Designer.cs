@@ -30,16 +30,14 @@ namespace WidraSoft.UI
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(GroupesList));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.ouvrirToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.modifierToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ajouterToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.supprimerToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ActualiserToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.rechercherToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.exporterVersToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.excelToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.pDFToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -71,11 +69,9 @@ namespace WidraSoft.UI
             this.menuStrip1.ImageScalingSize = new System.Drawing.Size(24, 24);
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.ouvrirToolStripMenuItem,
-            this.modifierToolStripMenuItem,
             this.ajouterToolStripMenuItem,
             this.supprimerToolStripMenuItem,
             this.ActualiserToolStripMenuItem,
-            this.rechercherToolStripMenuItem,
             this.exporterVersToolStripMenuItem});
             this.menuStrip1.Name = "menuStrip1";
             // 
@@ -83,20 +79,15 @@ namespace WidraSoft.UI
             // 
             resources.ApplyResources(this.ouvrirToolStripMenuItem, "ouvrirToolStripMenuItem");
             this.ouvrirToolStripMenuItem.ForeColor = System.Drawing.Color.White;
+            this.ouvrirToolStripMenuItem.Image = global::WidraSoft.UI.Properties.Resources.open;
             this.ouvrirToolStripMenuItem.Name = "ouvrirToolStripMenuItem";
             this.ouvrirToolStripMenuItem.Click += new System.EventHandler(this.ouvrirToolStripMenuItem_Click);
-            // 
-            // modifierToolStripMenuItem
-            // 
-            resources.ApplyResources(this.modifierToolStripMenuItem, "modifierToolStripMenuItem");
-            this.modifierToolStripMenuItem.ForeColor = System.Drawing.Color.White;
-            this.modifierToolStripMenuItem.Name = "modifierToolStripMenuItem";
-            this.modifierToolStripMenuItem.Click += new System.EventHandler(this.modifierToolStripMenuItem_Click);
             // 
             // ajouterToolStripMenuItem
             // 
             resources.ApplyResources(this.ajouterToolStripMenuItem, "ajouterToolStripMenuItem");
             this.ajouterToolStripMenuItem.ForeColor = System.Drawing.Color.White;
+            this.ajouterToolStripMenuItem.Image = global::WidraSoft.UI.Properties.Resources.add;
             this.ajouterToolStripMenuItem.Name = "ajouterToolStripMenuItem";
             this.ajouterToolStripMenuItem.Click += new System.EventHandler(this.ajouterToolStripMenuItem_Click);
             // 
@@ -104,6 +95,7 @@ namespace WidraSoft.UI
             // 
             resources.ApplyResources(this.supprimerToolStripMenuItem, "supprimerToolStripMenuItem");
             this.supprimerToolStripMenuItem.ForeColor = System.Drawing.Color.White;
+            this.supprimerToolStripMenuItem.Image = global::WidraSoft.UI.Properties.Resources.remove1;
             this.supprimerToolStripMenuItem.Name = "supprimerToolStripMenuItem";
             this.supprimerToolStripMenuItem.Click += new System.EventHandler(this.supprimerToolStripMenuItem_Click);
             // 
@@ -111,14 +103,9 @@ namespace WidraSoft.UI
             // 
             resources.ApplyResources(this.ActualiserToolStripMenuItem, "ActualiserToolStripMenuItem");
             this.ActualiserToolStripMenuItem.ForeColor = System.Drawing.Color.White;
+            this.ActualiserToolStripMenuItem.Image = global::WidraSoft.UI.Properties.Resources.refresh;
             this.ActualiserToolStripMenuItem.Name = "ActualiserToolStripMenuItem";
             this.ActualiserToolStripMenuItem.Click += new System.EventHandler(this.ActualiserToolStripMenuItem_Click);
-            // 
-            // rechercherToolStripMenuItem
-            // 
-            resources.ApplyResources(this.rechercherToolStripMenuItem, "rechercherToolStripMenuItem");
-            this.rechercherToolStripMenuItem.ForeColor = System.Drawing.Color.White;
-            this.rechercherToolStripMenuItem.Name = "rechercherToolStripMenuItem";
             // 
             // exporterVersToolStripMenuItem
             // 
@@ -127,20 +114,26 @@ namespace WidraSoft.UI
             this.pDFToolStripMenuItem});
             resources.ApplyResources(this.exporterVersToolStripMenuItem, "exporterVersToolStripMenuItem");
             this.exporterVersToolStripMenuItem.ForeColor = System.Drawing.Color.White;
+            this.exporterVersToolStripMenuItem.Image = global::WidraSoft.UI.Properties.Resources.export;
             this.exporterVersToolStripMenuItem.Name = "exporterVersToolStripMenuItem";
             // 
             // excelToolStripMenuItem
             // 
+            this.excelToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(62)))), ((int)(((byte)(60)))));
+            this.excelToolStripMenuItem.ForeColor = System.Drawing.Color.White;
             this.excelToolStripMenuItem.Name = "excelToolStripMenuItem";
             resources.ApplyResources(this.excelToolStripMenuItem, "excelToolStripMenuItem");
             // 
             // pDFToolStripMenuItem
             // 
+            this.pDFToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(62)))), ((int)(((byte)(60)))));
+            this.pDFToolStripMenuItem.ForeColor = System.Drawing.Color.White;
             this.pDFToolStripMenuItem.Name = "pDFToolStripMenuItem";
             resources.ApplyResources(this.pDFToolStripMenuItem, "pDFToolStripMenuItem");
             // 
             // panelTitleBar
             // 
+            this.panelTitleBar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(86)))), ((int)(((byte)(81)))));
             this.panelTitleBar.Controls.Add(this.pictureBox1);
             this.panelTitleBar.Controls.Add(this.txtSearchBox);
             this.panelTitleBar.Controls.Add(this.panel1);
@@ -220,36 +213,36 @@ namespace WidraSoft.UI
             // 
             this.DgvList.AllowUserToAddRows = false;
             this.DgvList.AllowUserToDeleteRows = false;
-            this.DgvList.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(62)))), ((int)(((byte)(60)))));
+            this.DgvList.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(86)))), ((int)(((byte)(81)))));
             this.DgvList.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.Sunken;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(86)))), ((int)(((byte)(77)))));
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Corbel", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(190)))), ((int)(((byte)(117)))));
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.DgvList.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(86)))), ((int)(((byte)(77)))));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Corbel", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(190)))), ((int)(((byte)(117)))));
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.DgvList.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.DgvList.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle5.BackColor = System.Drawing.Color.Honeydew;
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(86)))), ((int)(((byte)(77)))));
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.DgvList.DefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.Honeydew;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(86)))), ((int)(((byte)(81)))));
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.DgvList.DefaultCellStyle = dataGridViewCellStyle2;
             resources.ApplyResources(this.DgvList, "DgvList");
             this.DgvList.Name = "DgvList";
             this.DgvList.ReadOnly = true;
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle6.BackColor = System.Drawing.Color.Honeydew;
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Corbel", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.MediumSeaGreen;
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.DgvList.RowHeadersDefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.Honeydew;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Corbel", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.MediumSeaGreen;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.DgvList.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.DgvList.RowTemplate.Height = 33;
             // 
             // GroupesList
@@ -283,11 +276,9 @@ namespace WidraSoft.UI
 
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem ouvrirToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem modifierToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem ajouterToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem supprimerToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem ActualiserToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem rechercherToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem exporterVersToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem excelToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem pDFToolStripMenuItem;

@@ -32,19 +32,9 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-            this.ouvrirToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.modifierToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.ajouterToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.supprimerToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.ActualiserToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.rechercherToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.exporterVersToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.excelToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.pDFToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.panelTitleBar = new System.Windows.Forms.Panel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.txtSearchBox = new System.Windows.Forms.TextBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.Spain_flag = new System.Windows.Forms.PictureBox();
             this.England_flag = new System.Windows.Forms.PictureBox();
@@ -52,7 +42,14 @@
             this.cbLang = new System.Windows.Forms.ComboBox();
             this.panelList = new System.Windows.Forms.Panel();
             this.DgvList = new System.Windows.Forms.DataGridView();
-            this.menuStrip1.SuspendLayout();
+            this.ouvrirToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.ajouterToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.supprimerToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.ActualiserToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.exporterVersToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.excelToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.pDFToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.panelTitleBar.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel1.SuspendLayout();
@@ -61,91 +58,25 @@
             ((System.ComponentModel.ISupportInitialize)(this.France_flag)).BeginInit();
             this.panelList.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DgvList)).BeginInit();
+            this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // menuStrip1
-            // 
-            this.menuStrip1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(62)))), ((int)(((byte)(60)))));
-            resources.ApplyResources(this.menuStrip1, "menuStrip1");
-            this.menuStrip1.ImageScalingSize = new System.Drawing.Size(24, 24);
-            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.ouvrirToolStripMenuItem,
-            this.modifierToolStripMenuItem,
-            this.ajouterToolStripMenuItem,
-            this.supprimerToolStripMenuItem,
-            this.ActualiserToolStripMenuItem,
-            this.rechercherToolStripMenuItem,
-            this.exporterVersToolStripMenuItem});
-            this.menuStrip1.Name = "menuStrip1";
-            // 
-            // ouvrirToolStripMenuItem
-            // 
-            resources.ApplyResources(this.ouvrirToolStripMenuItem, "ouvrirToolStripMenuItem");
-            this.ouvrirToolStripMenuItem.ForeColor = System.Drawing.Color.White;
-            this.ouvrirToolStripMenuItem.Name = "ouvrirToolStripMenuItem";
-            this.ouvrirToolStripMenuItem.Click += new System.EventHandler(this.ouvrirToolStripMenuItem_Click);
-            // 
-            // modifierToolStripMenuItem
-            // 
-            resources.ApplyResources(this.modifierToolStripMenuItem, "modifierToolStripMenuItem");
-            this.modifierToolStripMenuItem.ForeColor = System.Drawing.Color.White;
-            this.modifierToolStripMenuItem.Name = "modifierToolStripMenuItem";
-            this.modifierToolStripMenuItem.Click += new System.EventHandler(this.modifierToolStripMenuItem_Click);
-            // 
-            // ajouterToolStripMenuItem
-            // 
-            resources.ApplyResources(this.ajouterToolStripMenuItem, "ajouterToolStripMenuItem");
-            this.ajouterToolStripMenuItem.ForeColor = System.Drawing.Color.White;
-            this.ajouterToolStripMenuItem.Name = "ajouterToolStripMenuItem";
-            this.ajouterToolStripMenuItem.Click += new System.EventHandler(this.ajouterToolStripMenuItem_Click);
-            // 
-            // supprimerToolStripMenuItem
-            // 
-            resources.ApplyResources(this.supprimerToolStripMenuItem, "supprimerToolStripMenuItem");
-            this.supprimerToolStripMenuItem.ForeColor = System.Drawing.Color.White;
-            this.supprimerToolStripMenuItem.Name = "supprimerToolStripMenuItem";
-            this.supprimerToolStripMenuItem.Click += new System.EventHandler(this.supprimerToolStripMenuItem_Click);
-            // 
-            // ActualiserToolStripMenuItem
-            // 
-            resources.ApplyResources(this.ActualiserToolStripMenuItem, "ActualiserToolStripMenuItem");
-            this.ActualiserToolStripMenuItem.ForeColor = System.Drawing.Color.White;
-            this.ActualiserToolStripMenuItem.Name = "ActualiserToolStripMenuItem";
-            this.ActualiserToolStripMenuItem.Click += new System.EventHandler(this.ActualiserToolStripMenuItem_Click);
-            // 
-            // rechercherToolStripMenuItem
-            // 
-            resources.ApplyResources(this.rechercherToolStripMenuItem, "rechercherToolStripMenuItem");
-            this.rechercherToolStripMenuItem.ForeColor = System.Drawing.Color.White;
-            this.rechercherToolStripMenuItem.Name = "rechercherToolStripMenuItem";
-            // 
-            // exporterVersToolStripMenuItem
-            // 
-            this.exporterVersToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.excelToolStripMenuItem,
-            this.pDFToolStripMenuItem});
-            resources.ApplyResources(this.exporterVersToolStripMenuItem, "exporterVersToolStripMenuItem");
-            this.exporterVersToolStripMenuItem.ForeColor = System.Drawing.Color.White;
-            this.exporterVersToolStripMenuItem.Name = "exporterVersToolStripMenuItem";
-            // 
-            // excelToolStripMenuItem
-            // 
-            this.excelToolStripMenuItem.Name = "excelToolStripMenuItem";
-            resources.ApplyResources(this.excelToolStripMenuItem, "excelToolStripMenuItem");
-            // 
-            // pDFToolStripMenuItem
-            // 
-            this.pDFToolStripMenuItem.Name = "pDFToolStripMenuItem";
-            resources.ApplyResources(this.pDFToolStripMenuItem, "pDFToolStripMenuItem");
             // 
             // panelTitleBar
             // 
-            this.panelTitleBar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(86)))), ((int)(((byte)(77)))));
-            this.panelTitleBar.Controls.Add(this.pictureBox1);
+            this.panelTitleBar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(86)))), ((int)(((byte)(81)))));
             this.panelTitleBar.Controls.Add(this.txtSearchBox);
+            this.panelTitleBar.Controls.Add(this.pictureBox1);
             this.panelTitleBar.Controls.Add(this.panel1);
             resources.ApplyResources(this.panelTitleBar, "panelTitleBar");
             this.panelTitleBar.Name = "panelTitleBar";
+            // 
+            // txtSearchBox
+            // 
+            this.txtSearchBox.BackColor = System.Drawing.Color.Honeydew;
+            resources.ApplyResources(this.txtSearchBox, "txtSearchBox");
+            this.txtSearchBox.ForeColor = System.Drawing.Color.Black;
+            this.txtSearchBox.Name = "txtSearchBox";
+            this.txtSearchBox.TextChanged += new System.EventHandler(this.txtSearchBox_TextChanged);
             // 
             // pictureBox1
             // 
@@ -155,14 +86,6 @@
             resources.ApplyResources(this.pictureBox1, "pictureBox1");
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.TabStop = false;
-            // 
-            // txtSearchBox
-            // 
-            this.txtSearchBox.BackColor = System.Drawing.Color.Honeydew;
-            resources.ApplyResources(this.txtSearchBox, "txtSearchBox");
-            this.txtSearchBox.ForeColor = System.Drawing.Color.Black;
-            this.txtSearchBox.Name = "txtSearchBox";
-            this.txtSearchBox.TextChanged += new System.EventHandler(this.txtSearchBox_TextChanged);
             // 
             // panel1
             // 
@@ -220,22 +143,22 @@
             // 
             this.DgvList.AllowUserToAddRows = false;
             this.DgvList.AllowUserToDeleteRows = false;
-            this.DgvList.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(62)))), ((int)(((byte)(60)))));
+            this.DgvList.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(86)))), ((int)(((byte)(81)))));
             this.DgvList.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.Sunken;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(86)))), ((int)(((byte)(77)))));
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.Honeydew;
             dataGridViewCellStyle1.Font = new System.Drawing.Font("Corbel", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(190)))), ((int)(((byte)(117)))));
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(86)))), ((int)(((byte)(81)))));
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.White;
             dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.DgvList.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.DgvList.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = System.Drawing.Color.Honeydew;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Corbel", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(86)))), ((int)(((byte)(77)))));
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(86)))), ((int)(((byte)(81)))));
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.White;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.DgvList.DefaultCellStyle = dataGridViewCellStyle2;
@@ -252,6 +175,75 @@
             this.DgvList.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.DgvList.RowTemplate.Height = 33;
             // 
+            // ouvrirToolStripMenuItem
+            // 
+            resources.ApplyResources(this.ouvrirToolStripMenuItem, "ouvrirToolStripMenuItem");
+            this.ouvrirToolStripMenuItem.ForeColor = System.Drawing.Color.White;
+            this.ouvrirToolStripMenuItem.Image = global::WidraSoft.UI.Properties.Resources.open;
+            this.ouvrirToolStripMenuItem.Name = "ouvrirToolStripMenuItem";
+            this.ouvrirToolStripMenuItem.Click += new System.EventHandler(this.ouvrirToolStripMenuItem_Click);
+            // 
+            // ajouterToolStripMenuItem
+            // 
+            resources.ApplyResources(this.ajouterToolStripMenuItem, "ajouterToolStripMenuItem");
+            this.ajouterToolStripMenuItem.ForeColor = System.Drawing.Color.White;
+            this.ajouterToolStripMenuItem.Image = global::WidraSoft.UI.Properties.Resources.add;
+            this.ajouterToolStripMenuItem.Name = "ajouterToolStripMenuItem";
+            this.ajouterToolStripMenuItem.Click += new System.EventHandler(this.ajouterToolStripMenuItem_Click);
+            // 
+            // supprimerToolStripMenuItem
+            // 
+            resources.ApplyResources(this.supprimerToolStripMenuItem, "supprimerToolStripMenuItem");
+            this.supprimerToolStripMenuItem.ForeColor = System.Drawing.Color.White;
+            this.supprimerToolStripMenuItem.Image = global::WidraSoft.UI.Properties.Resources.remove;
+            this.supprimerToolStripMenuItem.Name = "supprimerToolStripMenuItem";
+            this.supprimerToolStripMenuItem.Click += new System.EventHandler(this.supprimerToolStripMenuItem_Click);
+            // 
+            // ActualiserToolStripMenuItem
+            // 
+            resources.ApplyResources(this.ActualiserToolStripMenuItem, "ActualiserToolStripMenuItem");
+            this.ActualiserToolStripMenuItem.ForeColor = System.Drawing.Color.White;
+            this.ActualiserToolStripMenuItem.Image = global::WidraSoft.UI.Properties.Resources.refresh;
+            this.ActualiserToolStripMenuItem.Name = "ActualiserToolStripMenuItem";
+            this.ActualiserToolStripMenuItem.Click += new System.EventHandler(this.ActualiserToolStripMenuItem_Click);
+            // 
+            // exporterVersToolStripMenuItem
+            // 
+            this.exporterVersToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.excelToolStripMenuItem,
+            this.pDFToolStripMenuItem});
+            resources.ApplyResources(this.exporterVersToolStripMenuItem, "exporterVersToolStripMenuItem");
+            this.exporterVersToolStripMenuItem.ForeColor = System.Drawing.Color.White;
+            this.exporterVersToolStripMenuItem.Image = global::WidraSoft.UI.Properties.Resources.export;
+            this.exporterVersToolStripMenuItem.Name = "exporterVersToolStripMenuItem";
+            // 
+            // excelToolStripMenuItem
+            // 
+            this.excelToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(62)))), ((int)(((byte)(60)))));
+            this.excelToolStripMenuItem.ForeColor = System.Drawing.Color.White;
+            this.excelToolStripMenuItem.Name = "excelToolStripMenuItem";
+            resources.ApplyResources(this.excelToolStripMenuItem, "excelToolStripMenuItem");
+            // 
+            // pDFToolStripMenuItem
+            // 
+            this.pDFToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(62)))), ((int)(((byte)(60)))));
+            this.pDFToolStripMenuItem.ForeColor = System.Drawing.Color.White;
+            this.pDFToolStripMenuItem.Name = "pDFToolStripMenuItem";
+            resources.ApplyResources(this.pDFToolStripMenuItem, "pDFToolStripMenuItem");
+            // 
+            // menuStrip1
+            // 
+            this.menuStrip1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(62)))), ((int)(((byte)(60)))));
+            resources.ApplyResources(this.menuStrip1, "menuStrip1");
+            this.menuStrip1.ImageScalingSize = new System.Drawing.Size(24, 24);
+            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.ouvrirToolStripMenuItem,
+            this.ajouterToolStripMenuItem,
+            this.supprimerToolStripMenuItem,
+            this.ActualiserToolStripMenuItem,
+            this.exporterVersToolStripMenuItem});
+            this.menuStrip1.Name = "menuStrip1";
+            // 
             // CamionsListe
             // 
             resources.ApplyResources(this, "$this");
@@ -262,8 +254,6 @@
             this.Controls.Add(this.menuStrip1);
             this.Name = "CamionsListe";
             this.Load += new System.EventHandler(this.CamionsListe_Load);
-            this.menuStrip1.ResumeLayout(false);
-            this.menuStrip1.PerformLayout();
             this.panelTitleBar.ResumeLayout(false);
             this.panelTitleBar.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
@@ -274,22 +264,14 @@
             ((System.ComponentModel.ISupportInitialize)(this.France_flag)).EndInit();
             this.panelList.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.DgvList)).EndInit();
+            this.menuStrip1.ResumeLayout(false);
+            this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-        private System.Windows.Forms.MenuStrip menuStrip1;
-        private System.Windows.Forms.ToolStripMenuItem ouvrirToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem modifierToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem ajouterToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem supprimerToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem ActualiserToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem rechercherToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem exporterVersToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem excelToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem pDFToolStripMenuItem;
         private System.Windows.Forms.Panel panelTitleBar;
         private System.Windows.Forms.Panel panelList;
         private System.Windows.Forms.Panel panel1;
@@ -297,8 +279,16 @@
         private System.Windows.Forms.PictureBox England_flag;
         private System.Windows.Forms.PictureBox France_flag;
         private System.Windows.Forms.ComboBox cbLang;
-        private System.Windows.Forms.TextBox txtSearchBox;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.ToolStripMenuItem ouvrirToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem ajouterToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem supprimerToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem ActualiserToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem exporterVersToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem excelToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem pDFToolStripMenuItem;
+        private System.Windows.Forms.MenuStrip menuStrip1;
+        private System.Windows.Forms.TextBox txtSearchBox;
         private System.Windows.Forms.DataGridView DgvList;
     }
 }

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using CustomMessageBox;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -61,7 +62,6 @@ namespace WidraSoft.UI
                 DgvList.Columns["NBLIMITE"].HeaderText = "NOMBRE LIMITE";
                 DgvList.Columns["DATECREATION"].HeaderText = "DATE CREATION";
             }
-
             if (lang == "en")
             {
                 DgvList.Columns["DESIGNATION"].HeaderText = "NAME";
@@ -70,53 +70,23 @@ namespace WidraSoft.UI
                 DgvList.Columns["NBLIMITE"].HeaderText = "LIMIT NUMBER";
                 DgvList.Columns["DATECREATION"].HeaderText = "CREATION DATE";
             }
+            if (lang == "es")
+            {
+                DgvList.Columns["DESIGNATION"].HeaderText = "DESIGNACION";
+                DgvList.Columns["CODE"].HeaderText = "CODIGO";
+                DgvList.Columns["LIMITER"].HeaderText = "LÍMITE";
+                DgvList.Columns["NBLIMITE"].HeaderText = "NÚMERO LIMITADO";
+                DgvList.Columns["DATECREATION"].HeaderText = "FECHA DE CREACIÓN";
+            }
 
         }
-        private Int32 GetId()
-        {
-            try
-            {
-                return (int)DgvList[0, DgvList.CurrentCell.RowIndex].Value;
-
-            }
-            catch
-            {
-                throw;
-            }
-        }
-        private Int32[] GetSelectedRowsId()
-        {
-            try
-            {
-                Int32 SelectedRowsCount = DgvList.Rows.GetRowCount(DataGridViewElementStates.Selected);
-                Int32[] Selected = new Int32[SelectedRowsCount];
-                if (SelectedRowsCount > 1)
-                {
-
-                    for (int i = 0; i < SelectedRowsCount; i++)
-                    {
-                        Selected[i] = Int32.Parse(DgvList.SelectedRows[i].Cells[0].Value.ToString());
-                    }
-
-                }
-                return Selected;
-            }
-            catch
-            {
-                throw;
-            }
-        }
+        
 
         private void ouvrirToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Form form = new GroupeDetail("Edit", GetId());
-            form.Show();
-        }
-
-        private void modifierToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            Form form = new GroupeDetail("Edit", GetId());
-            form.Show();
+            DgvList.Focus();          
+            Form form = new GroupeDetail("Edit", Common_functions.GetDatagridViewSelectedId(DgvList));
+            form.Show();           
         }
 
         private void ActualiserToolStripMenuItem_Click(object sender, EventArgs e)
@@ -133,21 +103,41 @@ namespace WidraSoft.UI
 
         private void supprimerToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Int32[] selectedIds = new Int32[GetSelectedRowsId().Length];
-            selectedIds = GetSelectedRowsId();
-            if (GetSelectedRowsId().Length > 0)
+            Int32[] selectedIds = new Int32[Common_functions.GetDatagridViewSelectedRowsId(DgvList).Length];
+            selectedIds = Common_functions.GetDatagridViewSelectedRowsId(DgvList);
+            if (Common_functions.GetDatagridViewSelectedRowsId(DgvList).Length > 0)
             {
-                for (int i = 0; i < GetSelectedRowsId().Length; i++)
+                DialogResult result;
+                if (cbLang.Text == "FR")
+                    result = Custom_MessageBox.Show("FR", "Etes vous sur?", "Groupe", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                else if (cbLang.Text == "EN")
+                    result = Custom_MessageBox.Show("EN", "Are you sure?", "Group", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                else
+                    result = Custom_MessageBox.Show("ES", "¿Está usted seguro?", "Grupo", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                if (result == DialogResult.Yes)
                 {
-                    //MessageBox.Show(selectedIds[i].ToString());
-                    Groupe groupe = new Groupe();
-                    groupe.Delete(selectedIds[i]);
+                    for (int i = 0; i < Common_functions.GetDatagridViewSelectedRowsId(DgvList).Length; i++)
+                    {
+                        Groupe groupe = new Groupe();
+                        groupe.Delete(selectedIds[i]);
+                    }
+                    if (cbLang.Text == "FR")
+                        Custom_MessageBox.Show("FR", Common_functions.GetDatagridViewSelectedRowsId(DgvList).Length + " groupe(s) supprimé(s)", "Groupe", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    else if (cbLang.Text == "EN")
+                        Custom_MessageBox.Show("EN", Common_functions.GetDatagridViewSelectedRowsId(DgvList).Length + " group(s) deleted", "Group", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    else
+                        Custom_MessageBox.Show("ES", Common_functions.GetDatagridViewSelectedRowsId(DgvList).Length + " grupo(s) eliminado(s)", "Groupe", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    Bind_Dgv();
                 }
-                MessageBox.Show(GetSelectedRowsId().Length + " groupe(s) supprimé(s)");
             }
             else
             {
-                MessageBox.Show("Vous n'avez selectionné aucun enregistrement à supprimer");
+                if (cbLang.Text == "FR")
+                    Custom_MessageBox.Show("FR", "Aucun enregistrement n'a été sélectionné", "Groupe", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                else if (cbLang.Text == "EN")
+                    Custom_MessageBox.Show("EN", "No row selected", "Group", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                else
+                    Custom_MessageBox.Show("ES", "Ningún registro seleccionado", "Grupo", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -184,7 +174,10 @@ namespace WidraSoft.UI
                 France_flag.Visible = false;
                 England_flag.Visible = false;
                 Spain_flag.Visible = true;
+                Language_Manager language_Manager = new Language_Manager();
+                language_Manager.ChangeLanguage("es", this, typeof(GroupesList));
+                Localize_Dgv("es");
             }
-        }
+        }       
     }
 }

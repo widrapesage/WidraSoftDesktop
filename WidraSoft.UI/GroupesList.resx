@@ -65,64 +65,61 @@
     <value>Corbel, 11pt, style=Bold</value>
   </data>
   <data name="ouvrirToolStripMenuItem.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Corbel, 12pt, style=Bold</value>
+    <value>Calibri, 12pt, style=Bold</value>
   </data>
   <data name="ouvrirToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>66, 23</value>
+    <value>89, 28</value>
   </data>
   <data name="ouvrirToolStripMenuItem.Text" xml:space="preserve">
     <value>Ouvrir</value>
   </data>
-  <data name="modifierToolStripMenuItem.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Corbel, 12pt, style=Bold</value>
-  </data>
-  <data name="modifierToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>79, 23</value>
-  </data>
-  <data name="modifierToolStripMenuItem.Text" xml:space="preserve">
-    <value>Modifier</value>
-  </data>
   <data name="ajouterToolStripMenuItem.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Corbel, 12pt, style=Bold</value>
+    <value>Calibri, 12pt, style=Bold</value>
+  </data>
+  <data name="ajouterToolStripMenuItem.ImageAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleRight</value>
   </data>
   <data name="ajouterToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>74, 23</value>
+    <value>97, 28</value>
   </data>
   <data name="ajouterToolStripMenuItem.Text" xml:space="preserve">
     <value>Ajouter</value>
   </data>
   <data name="supprimerToolStripMenuItem.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Corbel, 12pt, style=Bold</value>
+    <value>Calibri, 12pt, style=Bold</value>
   </data>
   <data name="supprimerToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>95, 23</value>
+    <value>117, 28</value>
   </data>
   <data name="supprimerToolStripMenuItem.Text" xml:space="preserve">
     <value>Supprimer</value>
   </data>
   <data name="ActualiserToolStripMenuItem.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Corbel, 12pt, style=Bold</value>
+    <value>Calibri, 12pt, style=Bold</value>
   </data>
   <data name="ActualiserToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>91, 23</value>
+    <value>113, 28</value>
   </data>
   <data name="ActualiserToolStripMenuItem.Text" xml:space="preserve">
     <value>Actualiser</value>
   </data>
-  <data name="rechercherToolStripMenuItem.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Corbel, 12pt, style=Bold</value>
+  <data name="excelToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>112, 24</value>
   </data>
-  <data name="rechercherToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>99, 23</value>
+  <data name="excelToolStripMenuItem.Text" xml:space="preserve">
+    <value>Excel</value>
   </data>
-  <data name="rechercherToolStripMenuItem.Text" xml:space="preserve">
-    <value>Rechercher</value>
+  <data name="pDFToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>112, 24</value>
+  </data>
+  <data name="pDFToolStripMenuItem.Text" xml:space="preserve">
+    <value>PDF</value>
   </data>
   <data name="exporterVersToolStripMenuItem.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Corbel, 12pt, style=Bold</value>
+    <value>Calibri, 12pt, style=Bold</value>
   </data>
   <data name="exporterVersToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>114, 23</value>
+    <value>136, 28</value>
   </data>
   <data name="exporterVersToolStripMenuItem.Text" xml:space="preserve">
     <value>Exporter vers</value>
@@ -135,7 +132,7 @@
     <value>4, 1, 0, 1</value>
   </data>
   <data name="menuStrip1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1052, 25</value>
+    <value>1052, 30</value>
   </data>
   <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="menuStrip1.TabIndex" type="System.Int32, mscorlib">
@@ -156,24 +153,12 @@
   <data name="&gt;&gt;menuStrip1.ZOrder" xml:space="preserve">
     <value>2</value>
   </data>
-  <data name="excelToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>114, 24</value>
-  </data>
-  <data name="excelToolStripMenuItem.Text" xml:space="preserve">
-    <value>Excel</value>
-  </data>
-  <data name="pDFToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>114, 24</value>
-  </data>
-  <data name="pDFToolStripMenuItem.Text" xml:space="preserve">
-    <value>PDF</value>
-  </data>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="pictureBox1.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
   <data name="pictureBox1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>14, 6</value>
+    <value>14, 5</value>
   </data>
   <data name="pictureBox1.Size" type="System.Drawing.Size, System.Drawing">
     <value>24, 24</value>
@@ -200,7 +185,7 @@
     <value>Calibri, 12pt</value>
   </data>
   <data name="txtSearchBox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>42, 6</value>
+    <value>42, 5</value>
   </data>
   <data name="txtSearchBox.Size" type="System.Drawing.Size, System.Drawing">
     <value>357, 27</value>
@@ -356,7 +341,7 @@
     <value>Top</value>
   </data>
   <data name="panelTitleBar.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 25</value>
+    <value>0, 30</value>
   </data>
   <data name="panelTitleBar.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>4, 4, 4, 4</value>
@@ -379,6 +364,21 @@
   <data name="&gt;&gt;panelTitleBar.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
+  <data name="DgvList.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="DgvList.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="DgvList.RowHeadersWidth" type="System.Int32, mscorlib">
+    <value>62</value>
+  </data>
+  <data name="DgvList.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1052, 513</value>
+  </data>
+  <data name="DgvList.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
   <data name="&gt;&gt;DgvList.Name" xml:space="preserve">
     <value>DgvList</value>
   </data>
@@ -395,13 +395,13 @@
     <value>Fill</value>
   </data>
   <data name="panelList.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 63</value>
+    <value>0, 68</value>
   </data>
   <data name="panelList.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>4, 4, 4, 4</value>
   </data>
   <data name="panelList.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1052, 518</value>
+    <value>1052, 513</value>
   </data>
   <data name="panelList.TabIndex" type="System.Int32, mscorlib">
     <value>5</value>
@@ -416,33 +416,6 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;panelList.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="DgvList.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Fill</value>
-  </data>
-  <data name="DgvList.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 0</value>
-  </data>
-  <data name="DgvList.RowHeadersWidth" type="System.Int32, mscorlib">
-    <value>62</value>
-  </data>
-  <data name="DgvList.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1052, 518</value>
-  </data>
-  <data name="DgvList.TabIndex" type="System.Int32, mscorlib">
-    <value>9</value>
-  </data>
-  <data name="&gt;&gt;DgvList.Name" xml:space="preserve">
-    <value>DgvList</value>
-  </data>
-  <data name="&gt;&gt;DgvList.Type" xml:space="preserve">
-    <value>System.Windows.Forms.DataGridView, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;DgvList.Parent" xml:space="preserve">
-    <value>panelList</value>
-  </data>
-  <data name="&gt;&gt;DgvList.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
@@ -1004,12 +977,6 @@
   <data name="&gt;&gt;ouvrirToolStripMenuItem.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;modifierToolStripMenuItem.Name" xml:space="preserve">
-    <value>modifierToolStripMenuItem</value>
-  </data>
-  <data name="&gt;&gt;modifierToolStripMenuItem.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
   <data name="&gt;&gt;ajouterToolStripMenuItem.Name" xml:space="preserve">
     <value>ajouterToolStripMenuItem</value>
   </data>
@@ -1026,12 +993,6 @@
     <value>ActualiserToolStripMenuItem</value>
   </data>
   <data name="&gt;&gt;ActualiserToolStripMenuItem.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;rechercherToolStripMenuItem.Name" xml:space="preserve">
-    <value>rechercherToolStripMenuItem</value>
-  </data>
-  <data name="&gt;&gt;rechercherToolStripMenuItem.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;exporterVersToolStripMenuItem.Name" xml:space="preserve">

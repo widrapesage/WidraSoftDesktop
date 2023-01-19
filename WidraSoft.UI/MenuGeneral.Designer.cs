@@ -104,7 +104,7 @@ namespace WidraSoft.UI
             // 
             // homeToolStripMenuItem
             // 
-            this.homeToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(86)))), ((int)(((byte)(77)))));
+            this.homeToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(86)))), ((int)(((byte)(81)))));
             this.homeToolStripMenuItem.Image = global::WidraSoft.UI.Properties.Resources.Balance;
             resources.ApplyResources(this.homeToolStripMenuItem, "homeToolStripMenuItem");
             this.homeToolStripMenuItem.Name = "homeToolStripMenuItem";
@@ -145,7 +145,7 @@ namespace WidraSoft.UI
             // 
             resources.ApplyResources(this.pToolStripMenuItem, "pToolStripMenuItem");
             this.pToolStripMenuItem.ForeColor = System.Drawing.Color.White;
-            this.pToolStripMenuItem.Image = global::WidraSoft.UI.Properties.Resources.device1;
+            this.pToolStripMenuItem.Image = global::WidraSoft.UI.Properties.Resources.device;
             this.pToolStripMenuItem.Margin = new System.Windows.Forms.Padding(0, 4, 0, 0);
             this.pToolStripMenuItem.Name = "pToolStripMenuItem";
             this.pToolStripMenuItem.Padding = new System.Windows.Forms.Padding(4, 1, 4, 3);
@@ -183,6 +183,7 @@ namespace WidraSoft.UI
             this.produitsToolStripMenuItem.Image = global::WidraSoft.UI.Properties.Resources.cubes1;
             this.produitsToolStripMenuItem.Name = "produitsToolStripMenuItem";
             resources.ApplyResources(this.produitsToolStripMenuItem, "produitsToolStripMenuItem");
+            this.produitsToolStripMenuItem.Click += new System.EventHandler(this.produitsToolStripMenuItem_Click);
             // 
             // chauffeursToolStripMenuItem1
             // 
@@ -447,6 +448,7 @@ namespace WidraSoft.UI
             // 
             // pictureBox2
             // 
+            this.pictureBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(86)))), ((int)(((byte)(81)))));
             resources.ApplyResources(this.pictureBox2, "pictureBox2");
             this.pictureBox2.Image = global::WidraSoft.UI.Properties.Resources.logo_Widra_2501;
             this.pictureBox2.Name = "pictureBox2";

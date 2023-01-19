@@ -85,42 +85,20 @@ namespace WidraSoft.UI
                 DgvList.Columns["DATECREATION"].HeaderText = "CREATION DATE";
             }
             
+            if (lang== "es")
+            {
+                DgvList.Columns["CODE"].HeaderText = "CÓDIGO";
+                DgvList.Columns["PLAQUE"].HeaderText = "N° DE PLACA";
+                DgvList.Columns["BADGE"].HeaderText = "N INSIGNIA°";
+                DgvList.Columns["TARE"].HeaderText = "TARA (KG)";
+                DgvList.Columns["VALIDE"].HeaderText = "VÁLIDO";
+                DgvList.Columns["BLOQUE"].HeaderText = "OBSTRUIDO";
+                DgvList.Columns["ATTENTION"].HeaderText = "ATENCIÓN";
+                DgvList.Columns["DATECREATION"].HeaderText = "FECHA DE CREACIÓN";
+            }
+            
         }
 
-        private Int32 GetId()
-        {
-            try
-            {
-                return (int)DgvList[0, DgvList.CurrentCell.RowIndex].Value;
-
-            }
-            catch
-            {
-                throw;
-            }
-        }
-        private Int32[] GetSelectedRowsId()
-        {
-            try
-            {
-                Int32 SelectedRowsCount = DgvList.Rows.GetRowCount(DataGridViewElementStates.Selected);
-                Int32[] Selected = new Int32[SelectedRowsCount];
-                if (SelectedRowsCount > 0)
-                {
-
-                    for (int i = 0; i < SelectedRowsCount; i++)
-                    {
-                        Selected[i] = Int32.Parse(DgvList.SelectedRows[i].Cells[0].Value.ToString());
-                    }
-
-                }
-                return Selected;
-            }
-            catch
-            {
-                throw;
-            }
-        }
 
         private void ActualiserToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -130,13 +108,8 @@ namespace WidraSoft.UI
 
         private void ouvrirToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Form form = new CamionDetail("Edit", GetId());
-            form.Show();
-        }
-
-        private void modifierToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            Form form = new CamionDetail("Edit", GetId());
+            DgvList.Focus();
+            Form form = new CamionDetail("Edit", Common_functions.GetDatagridViewSelectedId(DgvList));
             form.Show();
         }
 
@@ -148,17 +121,17 @@ namespace WidraSoft.UI
 
         private void supprimerToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Int32[] selectedIds = new Int32[GetSelectedRowsId().Length];
-            selectedIds = GetSelectedRowsId();
-            if (GetSelectedRowsId().Length > 0)
+            Int32[] selectedIds = new Int32[Common_functions.GetDatagridViewSelectedRowsId(DgvList).Length];
+            selectedIds = Common_functions.GetDatagridViewSelectedRowsId(DgvList);
+            if (Common_functions.GetDatagridViewSelectedRowsId(DgvList).Length > 0)
             {
-                for (int i = 0; i < GetSelectedRowsId().Length; i++)
+                for (int i = 0; i < Common_functions.GetDatagridViewSelectedRowsId(DgvList).Length; i++)
                 {
                     //MessageBox.Show(selectedIds[i].ToString());
                     Camion camion = new Camion();
                     camion.Delete(selectedIds[i]);
                 }
-                MessageBox.Show(GetSelectedRowsId().Length + " camion(s) supprimé(s)");
+                MessageBox.Show(Common_functions.GetDatagridViewSelectedRowsId(DgvList).Length + " camion(s) supprimé(s)");
             }
             else
             {
@@ -193,6 +166,9 @@ namespace WidraSoft.UI
                 France_flag.Visible = false;
                 England_flag.Visible = false;
                 Spain_flag.Visible = true;
+                Language_Manager language_Manager = new Language_Manager();
+                language_Manager.ChangeLanguage("es", this, typeof(CamionsListe));
+                Localize_Dgv("es");
             }
         }
 

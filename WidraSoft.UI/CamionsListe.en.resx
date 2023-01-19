@@ -59,43 +59,31 @@
   </resheader>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="ouvrirToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>59, 23</value>
+    <value>82, 28</value>
   </data>
   <data name="ouvrirToolStripMenuItem.Text" xml:space="preserve">
     <value>Open</value>
   </data>
-  <data name="modifierToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>49, 23</value>
-  </data>
-  <data name="modifierToolStripMenuItem.Text" xml:space="preserve">
-    <value>Edit</value>
-  </data>
   <data name="ajouterToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>50, 23</value>
+    <value>73, 28</value>
   </data>
   <data name="ajouterToolStripMenuItem.Text" xml:space="preserve">
     <value>Add</value>
   </data>
   <data name="supprimerToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>66, 23</value>
+    <value>89, 28</value>
   </data>
   <data name="supprimerToolStripMenuItem.Text" xml:space="preserve">
     <value>Delete</value>
   </data>
   <data name="ActualiserToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>74, 23</value>
+    <value>96, 28</value>
   </data>
   <data name="ActualiserToolStripMenuItem.Text" xml:space="preserve">
     <value>Refresh</value>
   </data>
-  <data name="rechercherToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>68, 23</value>
-  </data>
-  <data name="rechercherToolStripMenuItem.Text" xml:space="preserve">
-    <value>Search</value>
-  </data>
   <data name="exporterVersToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>87, 23</value>
+    <value>110, 28</value>
   </data>
   <data name="exporterVersToolStripMenuItem.Text" xml:space="preserve">
     <value>Export To</value>

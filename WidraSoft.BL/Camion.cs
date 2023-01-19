@@ -21,7 +21,6 @@ namespace WidraSoft.BL
             {
                 throw;
             }
-
         }
 
         public DataTable SearchBox(string Filter)
