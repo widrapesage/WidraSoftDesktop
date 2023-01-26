@@ -58,11 +58,17 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="label3.Location" type="System.Drawing.Point, System.Drawing">
+    <value>59, 116</value>
+  </data>
   <data name="label3.Size" type="System.Drawing.Size, System.Drawing">
     <value>83, 19</value>
   </data>
   <data name="label3.Text" xml:space="preserve">
     <value>N° Insignia </value>
+  </data>
+  <data name="label2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>59, 81</value>
   </data>
   <data name="label2.Size" type="System.Drawing.Size, System.Drawing">
     <value>126, 19</value>
@@ -71,13 +77,19 @@
     <value>Fecha de creación</value>
   </data>
   <data name="txtDateCreation.Location" type="System.Drawing.Point, System.Drawing">
-    <value>216, 148</value>
+    <value>214, 78</value>
   </data>
   <data name="txtBadge.Location" type="System.Drawing.Point, System.Drawing">
-    <value>216, 181</value>
+    <value>214, 111</value>
+  </data>
+  <data name="label1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>59, 48</value>
   </data>
   <data name="txtId.Location" type="System.Drawing.Point, System.Drawing">
-    <value>216, 115</value>
+    <value>214, 45</value>
+  </data>
+  <data name="label4.Location" type="System.Drawing.Point, System.Drawing">
+    <value>59, 149</value>
   </data>
   <data name="label4.Size" type="System.Drawing.Size, System.Drawing">
     <value>89, 19</value>
@@ -86,7 +98,10 @@
     <value>Designación</value>
   </data>
   <data name="txtDesignation.Location" type="System.Drawing.Point, System.Drawing">
-    <value>216, 214</value>
+    <value>214, 144</value>
+  </data>
+  <data name="label5.Location" type="System.Drawing.Point, System.Drawing">
+    <value>59, 212</value>
   </data>
   <data name="label5.Size" type="System.Drawing.Size, System.Drawing">
     <value>70, 19</value>
@@ -95,7 +110,10 @@
     <value>Dirección</value>
   </data>
   <data name="txtAdresse.Location" type="System.Drawing.Point, System.Drawing">
-    <value>216, 278</value>
+    <value>214, 208</value>
+  </data>
+  <data name="label6.Location" type="System.Drawing.Point, System.Drawing">
+    <value>59, 243</value>
   </data>
   <data name="label6.Size" type="System.Drawing.Size, System.Drawing">
     <value>98, 19</value>
@@ -104,7 +122,10 @@
     <value>Código postal</value>
   </data>
   <data name="txtCodePostal.Location" type="System.Drawing.Point, System.Drawing">
-    <value>216, 311</value>
+    <value>214, 241</value>
+  </data>
+  <data name="label7.Location" type="System.Drawing.Point, System.Drawing">
+    <value>59, 276</value>
   </data>
   <data name="label7.Size" type="System.Drawing.Size, System.Drawing">
     <value>71, 19</value>
@@ -113,7 +134,10 @@
     <value>Localidad</value>
   </data>
   <data name="txtLocalite.Location" type="System.Drawing.Point, System.Drawing">
-    <value>216, 344</value>
+    <value>214, 274</value>
+  </data>
+  <data name="label8.Location" type="System.Drawing.Point, System.Drawing">
+    <value>59, 308</value>
   </data>
   <data name="label8.Size" type="System.Drawing.Size, System.Drawing">
     <value>36, 19</value>
@@ -122,10 +146,10 @@
     <value>País</value>
   </data>
   <data name="txtPays.Location" type="System.Drawing.Point, System.Drawing">
-    <value>216, 378</value>
+    <value>214, 307</value>
   </data>
   <data name="label9.Location" type="System.Drawing.Point, System.Drawing">
-    <value>548, 282</value>
+    <value>546, 212</value>
   </data>
   <data name="label9.Size" type="System.Drawing.Size, System.Drawing">
     <value>65, 19</value>
@@ -134,10 +158,10 @@
     <value>Teléfono</value>
   </data>
   <data name="txtTelephone.Location" type="System.Drawing.Point, System.Drawing">
-    <value>682, 278</value>
+    <value>680, 208</value>
   </data>
   <data name="label10.Location" type="System.Drawing.Point, System.Drawing">
-    <value>548, 313</value>
+    <value>546, 243</value>
   </data>
   <data name="label10.Size" type="System.Drawing.Size, System.Drawing">
     <value>128, 19</value>
@@ -146,10 +170,10 @@
     <value>Correo electrónico</value>
   </data>
   <data name="txtEmail.Location" type="System.Drawing.Point, System.Drawing">
-    <value>682, 312</value>
+    <value>680, 241</value>
   </data>
   <data name="label11.Location" type="System.Drawing.Point, System.Drawing">
-    <value>548, 347</value>
+    <value>546, 276</value>
   </data>
   <data name="label11.Size" type="System.Drawing.Size, System.Drawing">
     <value>85, 19</value>
@@ -158,10 +182,10 @@
     <value>Número IVA</value>
   </data>
   <data name="txtNumTVA.Location" type="System.Drawing.Point, System.Drawing">
-    <value>682, 345</value>
+    <value>680, 274</value>
   </data>
   <data name="label12.Location" type="System.Drawing.Point, System.Drawing">
-    <value>548, 382</value>
+    <value>546, 308</value>
   </data>
   <data name="label12.Size" type="System.Drawing.Size, System.Drawing">
     <value>122, 19</value>
@@ -170,16 +194,19 @@
     <value>URL del sitio web</value>
   </data>
   <data name="txtSiteWebUrl.Location" type="System.Drawing.Point, System.Drawing">
-    <value>682, 379</value>
+    <value>680, 307</value>
   </data>
   <data name="chx_Valide.Location" type="System.Drawing.Point, System.Drawing">
-    <value>217, 443</value>
+    <value>214, 372</value>
   </data>
   <data name="chx_Bloque.Location" type="System.Drawing.Point, System.Drawing">
-    <value>217, 483</value>
+    <value>214, 412</value>
   </data>
   <data name="txtBlocage.Location" type="System.Drawing.Point, System.Drawing">
-    <value>217, 508</value>
+    <value>214, 437</value>
+  </data>
+  <data name="label13.Location" type="System.Drawing.Point, System.Drawing">
+    <value>58, 440</value>
   </data>
   <data name="label13.Size" type="System.Drawing.Size, System.Drawing">
     <value>104, 19</value>
@@ -188,10 +215,10 @@
     <value>Bloquear texto</value>
   </data>
   <data name="chx_Attention.Location" type="System.Drawing.Point, System.Drawing">
-    <value>682, 483</value>
+    <value>679, 412</value>
   </data>
   <data name="label14.Location" type="System.Drawing.Point, System.Drawing">
-    <value>548, 508</value>
+    <value>545, 437</value>
   </data>
   <data name="label14.Size" type="System.Drawing.Size, System.Drawing">
     <value>106, 19</value>
@@ -200,7 +227,10 @@
     <value>Texto de alerta</value>
   </data>
   <data name="txtAlerte.Location" type="System.Drawing.Point, System.Drawing">
-    <value>682, 508</value>
+    <value>679, 437</value>
+  </data>
+  <data name="label15.Location" type="System.Drawing.Point, System.Drawing">
+    <value>58, 523</value>
   </data>
   <data name="label15.Size" type="System.Drawing.Size, System.Drawing">
     <value>91, 19</value>
@@ -209,25 +239,28 @@
     <value>Comentarios</value>
   </data>
   <data name="txtObservations.Location" type="System.Drawing.Point, System.Drawing">
-    <value>216, 591</value>
+    <value>213, 520</value>
   </data>
   <data name="txtObservations.Size" type="System.Drawing.Size, System.Drawing">
     <value>761, 75</value>
   </data>
   <data name="txtValide.Location" type="System.Drawing.Point, System.Drawing">
-    <value>195, 442</value>
+    <value>192, 371</value>
   </data>
   <data name="txtBloque.Location" type="System.Drawing.Point, System.Drawing">
-    <value>195, 480</value>
+    <value>192, 409</value>
+  </data>
+  <data name="txtAttention.Location" type="System.Drawing.Point, System.Drawing">
+    <value>657, 408</value>
   </data>
   <data name="label16.Location" type="System.Drawing.Point, System.Drawing">
-    <value>234, 441</value>
+    <value>231, 370</value>
   </data>
   <data name="label16.Text" xml:space="preserve">
     <value>Válido</value>
   </data>
   <data name="label17.Location" type="System.Drawing.Point, System.Drawing">
-    <value>234, 481</value>
+    <value>231, 410</value>
   </data>
   <data name="label17.Size" type="System.Drawing.Size, System.Drawing">
     <value>73, 19</value>
@@ -236,7 +269,7 @@
     <value>Obstruido</value>
   </data>
   <data name="label18.Location" type="System.Drawing.Point, System.Drawing">
-    <value>699, 481</value>
+    <value>696, 410</value>
   </data>
   <data name="label18.Size" type="System.Drawing.Size, System.Drawing">
     <value>66, 19</value>
@@ -244,20 +277,17 @@
   <data name="label18.Text" xml:space="preserve">
     <value>Atención</value>
   </data>
-  <data name="pictureBox3.Location" type="System.Drawing.Point, System.Drawing">
-    <value>152, 9</value>
-  </data>
-  <data name="lbModifier.Location" type="System.Drawing.Point, System.Drawing">
-    <value>176, 8</value>
-  </data>
   <data name="lbModifier.Size" type="System.Drawing.Size, System.Drawing">
     <value>44, 18</value>
   </data>
   <data name="lbModifier.Text" xml:space="preserve">
     <value>Editar</value>
   </data>
+  <data name="lbModifier.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleLeft</value>
+  </data>
   <data name="pictureBox1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>238, 8</value>
+    <value>228, 8</value>
   </data>
   <data name="lbAjouter.Size" type="System.Drawing.Size, System.Drawing">
     <value>56, 18</value>
@@ -265,14 +295,20 @@
   <data name="lbAjouter.Text" xml:space="preserve">
     <value>Agregar</value>
   </data>
+  <data name="lbAjouter.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleLeft</value>
+  </data>
   <data name="lbSupprimer.Location" type="System.Drawing.Point, System.Drawing">
-    <value>262, 8</value>
+    <value>252, 8</value>
   </data>
   <data name="lbSupprimer.Size" type="System.Drawing.Size, System.Drawing">
     <value>46, 18</value>
   </data>
   <data name="lbSupprimer.Text" xml:space="preserve">
     <value>Borrar</value>
+  </data>
+  <data name="lbSupprimer.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleLeft</value>
   </data>
   <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>

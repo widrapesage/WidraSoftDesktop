@@ -31,6 +31,33 @@ namespace WidraSoft.UI
 
             this.CenterToParent();
 
+            if (vg_Mode == "Add")
+            {
+                try
+                {
+                    Clear();
+                    Add_Item();
+                }
+                catch
+                {
+                    throw;
+                }
+            }
+            else
+            {
+                if (vg_Mode == "Edit")
+                {
+                    try
+                    {
+                        Edit_Item();
+                    }
+                    catch
+                    {
+                        throw;
+                    }
+                }
+            }
+
             cbLang.DataSource = Language.Languages;
             cbLang.ValueMember = null;
             cbLang.DisplayMember = Language.Languages[0];
@@ -41,7 +68,7 @@ namespace WidraSoft.UI
         {
             if (txtId.Text == "" && txtDateCreation.Text == "" && txtBadge.Text == "" && txtNom.Text == "" && txtNumeroNational.Text == "" 
                 && txtAdresse.Text == "" && txtCodePostal.Text == "" && txtLocalite.Text == ""
-                && txtPays.Text == "" && txtTelephone.Text == "" && txtEmail.Text == "" && txtNumTVA.Text == "" && txtSiteWebUrl.Text == ""
+                && txtPays.Text == "" && txtTelephone.Text == "" 
                 && txtValide.Text == "" && txtBloque.Text == "" && txtBlocage.Text == "" && txtAttention.Text == "" && txtAlerte.Text == "" && txtObservations.Text == "")
             {
                 lbModifier.Enabled = false;
@@ -60,8 +87,8 @@ namespace WidraSoft.UI
         {
             lbAjouter.Enabled = false;
             lbAjouter.BackColor = Color.Transparent;
-            //Disable();
-            //Bind_Fields();
+            Disable();
+            Bind_Fields();
         }
 
         private void Bind_Fields()
@@ -83,9 +110,6 @@ namespace WidraSoft.UI
                 txtLocalite.Text = row["LOCALITE"].ToString();
                 txtPays.Text = row["PAYS"].ToString();
                 txtTelephone.Text = row["TELEPHONE"].ToString();
-                txtEmail.Text = row["EMAIL"].ToString();
-                txtNumTVA.Text = row["NUMTVA"].ToString();
-                txtSiteWebUrl.Text = row["SITEWEB_URL"].ToString();
                 txtObservations.Text = row["OBSERVATIONS"].ToString();
                 txtValide.Text = row["VALIDE"].ToString();
                 if (txtValide.Text == "1")
@@ -119,9 +143,6 @@ namespace WidraSoft.UI
             txtLocalite.Enabled = false;
             txtPays.Enabled = false;
             txtTelephone.Enabled = false;
-            txtEmail.Enabled = false;
-            txtNumTVA.Enabled = false;
-            txtSiteWebUrl.Enabled = false;
             chx_Valide.Enabled = false;
             chx_Bloque.Enabled = false;
             txtBlocage.Enabled = false;
@@ -145,9 +166,6 @@ namespace WidraSoft.UI
             txtLocalite.Enabled = true;
             txtPays.Enabled = true;
             txtTelephone.Enabled = true;
-            txtEmail.Enabled = true;
-            txtNumTVA.Enabled = true;
-            txtSiteWebUrl.Enabled = true;
             chx_Valide.Enabled = true;
             chx_Bloque.Enabled = true;
             txtBlocage.Enabled = true;
@@ -172,9 +190,6 @@ namespace WidraSoft.UI
             txtLocalite.Text = "";
             txtPays.Text = "";
             txtTelephone.Text = "";
-            txtEmail.Text = "";
-            txtNumTVA.Text = "";
-            txtSiteWebUrl.Text = "";
             txtBlocage.Text = "";
             txtAlerte.Text = "";
             txtObservations.Text = "";
@@ -228,14 +243,14 @@ namespace WidraSoft.UI
                         if (IsParsableValide && IsParsableBloque && IsParsableAttention)
                         {
                             Chauffeur chauffeur = new Chauffeur();
-                            //chauffeur.Add(txtBadge.Text, txtNom.Text, txtNumeroNational.Text, txtNumeroPermis.Text, txtAdresse.Text, txtCodePostal.Text, txtLocalite.Text, txtPays.Text, txtTelephone.Text,
-                               //     txtNumTVA.Text, txtSiteWebUrl.Text, txtObservations.Text, Valide, Bloque, txtBlocage.Text, Attention, txtAlerte.Text);
+                            chauffeur.Add(txtBadge.Text, txtNom.Text, txtNumeroNational.Text, txtNumeroPermis.Text, txtAdresse.Text, txtCodePostal.Text, txtLocalite.Text, txtPays.Text, txtTelephone.Text,
+                                    txtObservations.Text, Valide, Bloque, txtBlocage.Text, Attention, txtAlerte.Text);
                             if (cbLang.Text == "FR")
-                                Custom_MessageBox.Show("FR", "Firme ajoutée avec succès", "Firme", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                Custom_MessageBox.Show("FR", "Chauffeur ajouté avec succès", "Chauffeur", MessageBoxButtons.OK, MessageBoxIcon.Information);
                             else if (cbLang.Text == "EN")
-                                Custom_MessageBox.Show("EN", "Firm added successfully", "Firm", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                Custom_MessageBox.Show("EN", "Driver added successfully", "Driver", MessageBoxButtons.OK, MessageBoxIcon.Information);
                             else
-                                Custom_MessageBox.Show("ES", "Firma agregado", "Firma", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                Custom_MessageBox.Show("ES", "Conductor agregado", "Conductor", MessageBoxButtons.OK, MessageBoxIcon.Information);
                             Close();
                         }
                     }
@@ -248,16 +263,189 @@ namespace WidraSoft.UI
                 else
                 {
                     if (cbLang.Text == "FR")
-                        Custom_MessageBox.Show("FR", "Informations incomplètes", "Firme", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        Custom_MessageBox.Show("FR", "Informations incomplètes", "Chauffeur", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     else if (cbLang.Text == "EN")
-                        Custom_MessageBox.Show("EN", "Incomplete informations", "Firm", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        Custom_MessageBox.Show("EN", "Incomplete informations", "Driver", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     else
-                        Custom_MessageBox.Show("ES", "Información incompleta", "Firma", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        Custom_MessageBox.Show("ES", "Información incompleta", "Conductor", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
             }
             catch
             {
                 throw;
+            }
+        }
+
+        private void lbModifier_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            try
+            {
+                if (vg_Update == false && vg_IsEnabled == false)
+                {
+                    Enable();
+                    lbModifier.Text = Language_Manager.Localize("Valider", cbLang.Text);
+                    vg_Update = true;
+                }
+                else
+                {
+                    try
+                    {
+                        if (txtId.Text != "" && txtDateCreation.Text != "" && txtNom.Text != "" && txtValide.Text != "" && txtBloque.Text != "" && txtAttention.Text != "")
+                        {
+                            int Id;
+                            int Valide;
+                            int Bloque;
+                            int Attention;
+                            bool IsParsableId;
+                            bool IsParsableValide;
+                            bool IsParsableBloque;
+                            bool IsParsableAttention;
+                            IsParsableId = Int32.TryParse(txtId.Text, out Id);
+                            IsParsableValide = Int32.TryParse(txtValide.Text, out Valide);
+                            IsParsableBloque = Int32.TryParse(txtBloque.Text, out Bloque);
+                            IsParsableAttention = Int32.TryParse(txtAttention.Text, out Attention);
+                            try
+                            {
+                                if (IsParsableValide && IsParsableBloque && IsParsableAttention)
+                                {
+                                    Chauffeur chauffeur = new Chauffeur();
+                                    chauffeur.Update(Id, txtBadge.Text, txtNom.Text, txtNumeroNational.Text, txtNumeroPermis.Text, txtAdresse.Text, txtCodePostal.Text, txtLocalite.Text, txtPays.Text, txtTelephone.Text,
+                                            txtObservations.Text, Valide, Bloque, txtBlocage.Text, Attention, txtAlerte.Text);
+                                    if (cbLang.Text == "FR")
+                                        Custom_MessageBox.Show("FR", "Chauffeur modifié avec succès", "Chauffeur", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                    else if (cbLang.Text == "EN")
+                                        Custom_MessageBox.Show("EN", "Driver updated successfully", "Driver", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                    else
+                                        Custom_MessageBox.Show("ES", "Conductor agregado", "Conductor", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                    lbModifier.Text = Language_Manager.Localize("Modifier", cbLang.Text);
+                                    vg_Update = false;
+                                    Disable();
+                                    Bind_Fields();
+                                }
+                            }
+                            catch
+                            {
+                                throw;
+                            }
+                        }
+                        else
+                        {
+                            if (cbLang.Text == "FR")
+                                Custom_MessageBox.Show("FR", "Informations incomplètes", "Chauffeur", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            else if (cbLang.Text == "EN")
+                                Custom_MessageBox.Show("EN", "Incomplete informations", "Driver", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            else
+                                Custom_MessageBox.Show("ES", "Información incompleta", "Conductor", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        }
+                    }
+                    catch
+                    {
+                        throw;
+                    }
+                }
+            
+            }
+            catch
+            {
+                throw;
+            }
+        }
+
+        private void lbSupprimer_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            if (vg_Update)
+            {
+                if (cbLang.Text == "FR")
+                    Custom_MessageBox.Show("FR", "Vous ne pouvez pas supprimer l'enregistrement tant que la modification n'est pas validée", "Chauffeur", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                else if (cbLang.Text == "EN")
+                    Custom_MessageBox.Show("EN", "You can't delete this record before the update is completed", "Driver", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                else
+                    Custom_MessageBox.Show("ES", "No puede eliminar el registro hasta que se confirme el cambio", "Conductor", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            else
+            {
+                try
+                {
+                    Chauffeur chauffeur = new Chauffeur();
+                    int Id;
+                    bool IsParsableId;
+                    IsParsableId = Int32.TryParse(txtId.Text, out Id);
+                    if (IsParsableId)
+                    {
+                        DialogResult result;
+                        if (cbLang.Text == "FR")
+                            result = Custom_MessageBox.Show("FR", "Etes vous sur de vouloir supprimer cet enregistrement?", "Chauffeur", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                        else if (cbLang.Text == "EN")
+                            result = Custom_MessageBox.Show("EN", "Are you sure you want to delete this record?", "Driver", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                        else
+                            result = Custom_MessageBox.Show("ES", "¿Está seguro de que desea eliminar este registro?", "Conductor", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+                        if (result == DialogResult.Yes)
+                        {
+                            chauffeur.Delete(Id);
+                            if (cbLang.Text == "FR")
+                                Custom_MessageBox.Show("FR", "Chauffeur supprimé avec succès", "Chauffeur", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            else if (cbLang.Text == "EN")
+                                Custom_MessageBox.Show("EN", "Driver deleted successfully", "Driver", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            else
+                                Custom_MessageBox.Show("ES", "Conductor eliminado", "Conductor", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            Close();
+                        }
+                    }
+                }
+                catch
+                {
+                    throw;
+                }
+
+            }
+        }
+
+        private void ChauffeurDetail_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            if (vg_Mode == "Edit")
+            {
+                if (pbUpdating.Visible)
+                {
+                    if (cbLang.Text == "FR")
+                        Custom_MessageBox.Show("FR", "Vous ne pouvez pas fermer la fenetre tant que la modification n'est pas validée", "Chauffeur", MessageBoxButtons.OK, MessageBoxIcon.Stop);
+                    else if (cbLang.Text == "EN")
+                        Custom_MessageBox.Show("EN", "You can't close this window before the update is completed", "Driver", MessageBoxButtons.OK, MessageBoxIcon.Stop);
+                    else
+                        Custom_MessageBox.Show("ES", "No puede cerrar la página hasta que se valide el cambio", "Conductor", MessageBoxButtons.OK, MessageBoxIcon.Stop);
+                    e.Cancel = true;
+                }
+            }
+        }
+
+        private void cbLang_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (cbLang.Text == "FR")
+            {
+                France_flag.Visible = true;
+                England_flag.Visible = false;
+                Spain_flag.Visible = false;
+                Language_Manager language_Manager = new Language_Manager();
+                language_Manager.ChangeLanguage("fr", this, typeof(ChauffeurDetail));
+
+            }
+
+            if (cbLang.Text == "EN")
+            {
+                France_flag.Visible = false;
+                England_flag.Visible = true;
+                Spain_flag.Visible = false;
+                Language_Manager language_Manager = new Language_Manager();
+                language_Manager.ChangeLanguage("en", this, typeof(ChauffeurDetail));
+            }
+
+            if (cbLang.Text == "ES")
+            {
+                France_flag.Visible = false;
+                England_flag.Visible = false;
+                Spain_flag.Visible = true;
+                Language_Manager language_Manager = new Language_Manager();
+                language_Manager.ChangeLanguage("es", this, typeof(ChauffeurDetail));
             }
         }
     }

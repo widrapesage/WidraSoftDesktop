@@ -57,105 +57,12 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="label3.Text" xml:space="preserve">
-    <value>Badge N°</value>
-  </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="label2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>60, 19</value>
-  </data>
-  <data name="label2.Text" xml:space="preserve">
-    <value>Created</value>
-  </data>
-  <data name="label4.Size" type="System.Drawing.Size, System.Drawing">
-    <value>47, 19</value>
-  </data>
-  <data name="label4.Text" xml:space="preserve">
-    <value>Name</value>
-  </data>
-  <data name="label5.Size" type="System.Drawing.Size, System.Drawing">
-    <value>53, 19</value>
-  </data>
-  <data name="label5.Text" xml:space="preserve">
-    <value>Adress</value>
-  </data>
-  <data name="label6.Size" type="System.Drawing.Size, System.Drawing">
-    <value>84, 19</value>
-  </data>
-  <data name="label6.Text" xml:space="preserve">
-    <value>Postal code</value>
-  </data>
-  <data name="label7.Size" type="System.Drawing.Size, System.Drawing">
-    <value>34, 19</value>
-  </data>
-  <data name="label7.Text" xml:space="preserve">
-    <value>City</value>
-  </data>
-  <data name="label8.Size" type="System.Drawing.Size, System.Drawing">
-    <value>59, 19</value>
-  </data>
-  <data name="label8.Text" xml:space="preserve">
-    <value>Country</value>
-  </data>
-  <data name="label9.Size" type="System.Drawing.Size, System.Drawing">
-    <value>68, 19</value>
-  </data>
-  <data name="label9.Text" xml:space="preserve">
-    <value>Phone N°</value>
-  </data>
-  <data name="label10.Size" type="System.Drawing.Size, System.Drawing">
-    <value>38, 19</value>
-  </data>
-  <data name="label10.Text" xml:space="preserve">
-    <value>Mail</value>
-  </data>
-  <data name="label11.Size" type="System.Drawing.Size, System.Drawing">
-    <value>88, 19</value>
-  </data>
-  <data name="label11.Text" xml:space="preserve">
-    <value>VAT Number</value>
-  </data>
-  <data name="label12.Size" type="System.Drawing.Size, System.Drawing">
-    <value>83, 19</value>
-  </data>
-  <data name="label12.Text" xml:space="preserve">
-    <value>Website url</value>
-  </data>
-  <data name="label13.Size" type="System.Drawing.Size, System.Drawing">
-    <value>93, 19</value>
-  </data>
-  <data name="label13.Text" xml:space="preserve">
-    <value>Blocking text</value>
-  </data>
-  <data name="label14.Size" type="System.Drawing.Size, System.Drawing">
-    <value>92, 19</value>
-  </data>
-  <data name="label14.Text" xml:space="preserve">
-    <value>Warning text</value>
-  </data>
-  <data name="label16.Size" type="System.Drawing.Size, System.Drawing">
-    <value>41, 19</value>
-  </data>
-  <data name="label16.Text" xml:space="preserve">
-    <value>Valid</value>
-  </data>
-  <data name="label17.Size" type="System.Drawing.Size, System.Drawing">
-    <value>59, 19</value>
-  </data>
-  <data name="label17.Text" xml:space="preserve">
-    <value>Blocked</value>
-  </data>
-  <data name="label18.Size" type="System.Drawing.Size, System.Drawing">
-    <value>63, 19</value>
-  </data>
-  <data name="label18.Text" xml:space="preserve">
-    <value>Warning</value>
-  </data>
   <data name="pictureBox3.Location" type="System.Drawing.Point, System.Drawing">
-    <value>124, 9</value>
+    <value>125, 9</value>
   </data>
   <data name="lbModifier.Location" type="System.Drawing.Point, System.Drawing">
-    <value>148, 8</value>
+    <value>149, 8</value>
   </data>
   <data name="lbModifier.Size" type="System.Drawing.Size, System.Drawing">
     <value>32, 18</value>
@@ -164,7 +71,7 @@
     <value>Edit</value>
   </data>
   <data name="pictureBox1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>190, 8</value>
+    <value>192, 8</value>
   </data>
   <data name="lbAjouter.Size" type="System.Drawing.Size, System.Drawing">
     <value>33, 18</value>
@@ -173,13 +80,208 @@
     <value>Add</value>
   </data>
   <data name="lbSupprimer.Location" type="System.Drawing.Point, System.Drawing">
-    <value>214, 8</value>
+    <value>216, 8</value>
   </data>
   <data name="lbSupprimer.Size" type="System.Drawing.Size, System.Drawing">
     <value>50, 18</value>
   </data>
   <data name="lbSupprimer.Text" xml:space="preserve">
     <value>Delete</value>
+  </data>
+  <data name="txtNumeroPermis.Location" type="System.Drawing.Point, System.Drawing">
+    <value>179, 209</value>
+  </data>
+  <data name="label20.Location" type="System.Drawing.Point, System.Drawing">
+    <value>55, 212</value>
+  </data>
+  <data name="label20.Size" type="System.Drawing.Size, System.Drawing">
+    <value>111, 19</value>
+  </data>
+  <data name="label20.Text" xml:space="preserve">
+    <value>License number</value>
+  </data>
+  <data name="txtNumeroNational.Location" type="System.Drawing.Point, System.Drawing">
+    <value>179, 176</value>
+  </data>
+  <data name="label19.Location" type="System.Drawing.Point, System.Drawing">
+    <value>55, 179</value>
+  </data>
+  <data name="label19.Text" xml:space="preserve">
+    <value>National number</value>
+  </data>
+  <data name="txtDateCreation.Location" type="System.Drawing.Point, System.Drawing">
+    <value>179, 77</value>
+  </data>
+  <data name="txtId.Location" type="System.Drawing.Point, System.Drawing">
+    <value>179, 44</value>
+  </data>
+  <data name="label18.Location" type="System.Drawing.Point, System.Drawing">
+    <value>676, 438</value>
+  </data>
+  <data name="label18.Size" type="System.Drawing.Size, System.Drawing">
+    <value>63, 19</value>
+  </data>
+  <data name="label18.Text" xml:space="preserve">
+    <value>Warning</value>
+  </data>
+  <data name="label1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>55, 45</value>
+  </data>
+  <data name="label17.Location" type="System.Drawing.Point, System.Drawing">
+    <value>196, 438</value>
+  </data>
+  <data name="label17.Size" type="System.Drawing.Size, System.Drawing">
+    <value>59, 19</value>
+  </data>
+  <data name="label17.Text" xml:space="preserve">
+    <value>Blocked</value>
+  </data>
+  <data name="txtBadge.Location" type="System.Drawing.Point, System.Drawing">
+    <value>179, 110</value>
+  </data>
+  <data name="label16.Location" type="System.Drawing.Point, System.Drawing">
+    <value>196, 398</value>
+  </data>
+  <data name="label16.Size" type="System.Drawing.Size, System.Drawing">
+    <value>41, 19</value>
+  </data>
+  <data name="label16.Text" xml:space="preserve">
+    <value>Valid</value>
+  </data>
+  <data name="label2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>55, 78</value>
+  </data>
+  <data name="label2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>60, 19</value>
+  </data>
+  <data name="label2.Text" xml:space="preserve">
+    <value>Created</value>
+  </data>
+  <data name="label3.Location" type="System.Drawing.Point, System.Drawing">
+    <value>55, 113</value>
+  </data>
+  <data name="label3.Text" xml:space="preserve">
+    <value>Badge N°</value>
+  </data>
+  <data name="txtAttention.Location" type="System.Drawing.Point, System.Drawing">
+    <value>637, 437</value>
+  </data>
+  <data name="txtNom.Location" type="System.Drawing.Point, System.Drawing">
+    <value>179, 143</value>
+  </data>
+  <data name="txtBloque.Location" type="System.Drawing.Point, System.Drawing">
+    <value>157, 437</value>
+  </data>
+  <data name="label4.Location" type="System.Drawing.Point, System.Drawing">
+    <value>55, 146</value>
+  </data>
+  <data name="label4.Size" type="System.Drawing.Size, System.Drawing">
+    <value>47, 19</value>
+  </data>
+  <data name="label4.Text" xml:space="preserve">
+    <value>Name</value>
+  </data>
+  <data name="txtValide.Location" type="System.Drawing.Point, System.Drawing">
+    <value>157, 399</value>
+  </data>
+  <data name="txtAdresse.Location" type="System.Drawing.Point, System.Drawing">
+    <value>178, 266</value>
+  </data>
+  <data name="label15.Location" type="System.Drawing.Point, System.Drawing">
+    <value>54, 548</value>
+  </data>
+  <data name="label5.Location" type="System.Drawing.Point, System.Drawing">
+    <value>54, 270</value>
+  </data>
+  <data name="label5.Size" type="System.Drawing.Size, System.Drawing">
+    <value>53, 19</value>
+  </data>
+  <data name="label5.Text" xml:space="preserve">
+    <value>Adress</value>
+  </data>
+  <data name="txtObservations.Location" type="System.Drawing.Point, System.Drawing">
+    <value>179, 548</value>
+  </data>
+  <data name="txtCodePostal.Location" type="System.Drawing.Point, System.Drawing">
+    <value>178, 299</value>
+  </data>
+  <data name="label14.Location" type="System.Drawing.Point, System.Drawing">
+    <value>561, 465</value>
+  </data>
+  <data name="label14.Size" type="System.Drawing.Size, System.Drawing">
+    <value>92, 19</value>
+  </data>
+  <data name="label14.Text" xml:space="preserve">
+    <value>Warning text</value>
+  </data>
+  <data name="label6.Location" type="System.Drawing.Point, System.Drawing">
+    <value>54, 301</value>
+  </data>
+  <data name="label6.Size" type="System.Drawing.Size, System.Drawing">
+    <value>84, 19</value>
+  </data>
+  <data name="label6.Text" xml:space="preserve">
+    <value>Postal code</value>
+  </data>
+  <data name="txtAlerte.Location" type="System.Drawing.Point, System.Drawing">
+    <value>659, 465</value>
+  </data>
+  <data name="txtLocalite.Location" type="System.Drawing.Point, System.Drawing">
+    <value>178, 332</value>
+  </data>
+  <data name="chx_Attention.Location" type="System.Drawing.Point, System.Drawing">
+    <value>659, 440</value>
+  </data>
+  <data name="label7.Location" type="System.Drawing.Point, System.Drawing">
+    <value>54, 334</value>
+  </data>
+  <data name="label7.Size" type="System.Drawing.Size, System.Drawing">
+    <value>34, 19</value>
+  </data>
+  <data name="label7.Text" xml:space="preserve">
+    <value>City</value>
+  </data>
+  <data name="label13.Location" type="System.Drawing.Point, System.Drawing">
+    <value>54, 465</value>
+  </data>
+  <data name="label13.Size" type="System.Drawing.Size, System.Drawing">
+    <value>93, 19</value>
+  </data>
+  <data name="label13.Text" xml:space="preserve">
+    <value>Blocking text</value>
+  </data>
+  <data name="txtTelephone.Location" type="System.Drawing.Point, System.Drawing">
+    <value>659, 299</value>
+  </data>
+  <data name="txtBlocage.Location" type="System.Drawing.Point, System.Drawing">
+    <value>179, 465</value>
+  </data>
+  <data name="label9.Location" type="System.Drawing.Point, System.Drawing">
+    <value>561, 301</value>
+  </data>
+  <data name="label9.Size" type="System.Drawing.Size, System.Drawing">
+    <value>68, 19</value>
+  </data>
+  <data name="label9.Text" xml:space="preserve">
+    <value>Phone N°</value>
+  </data>
+  <data name="chx_Bloque.Location" type="System.Drawing.Point, System.Drawing">
+    <value>179, 440</value>
+  </data>
+  <data name="chx_Valide.Location" type="System.Drawing.Point, System.Drawing">
+    <value>179, 400</value>
+  </data>
+  <data name="label8.Location" type="System.Drawing.Point, System.Drawing">
+    <value>561, 270</value>
+  </data>
+  <data name="label8.Size" type="System.Drawing.Size, System.Drawing">
+    <value>59, 19</value>
+  </data>
+  <data name="label8.Text" xml:space="preserve">
+    <value>Country</value>
+  </data>
+  <data name="txtPays.Location" type="System.Drawing.Point, System.Drawing">
+    <value>659, 266</value>
   </data>
   <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -718,8 +820,5 @@
         AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
         AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==
 </value>
-  </data>
-  <data name="$this.Text" xml:space="preserve">
-    <value>Firm</value>
   </data>
 </root>

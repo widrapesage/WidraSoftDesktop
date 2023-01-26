@@ -1,4 +1,5 @@
-﻿using System;
+﻿using CustomMessageBox;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -8,27 +9,27 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using WidraSoft.BL;
-using CustomMessageBox;
 
 namespace WidraSoft.UI
 {
-    public partial class FirmeDetail : Form
+    public partial class TransporteurDetail : Form
     {
         String vg_Mode = "";
         Int32 vg_Id = 0;
         Boolean vg_IsEnabled = true;
         Boolean vg_Update = false;
-        public FirmeDetail(String Mode, Int32 Id)
+
+        public TransporteurDetail(String Mode, Int32 Id)
         {
             InitializeComponent();
             vg_Mode = Mode;
             vg_Id = Id;
         }
 
-        private void FirmeDetail_Load(object sender, EventArgs e)
+        private void TransporteurDetail_Load(object sender, EventArgs e)
         {
             this.CenterToParent();
-          
+
             if (vg_Mode == "Add")
             {
                 try
@@ -60,14 +61,13 @@ namespace WidraSoft.UI
             cbLang.ValueMember = null;
             cbLang.DisplayMember = Language.Languages[0];
             cbLang.SelectedIndex = 0;
-
         }
 
         private void Add_Item()
         {
-            if (txtId.Text == "" && txtDateCreation.Text == "" && txtBadge.Text == "" && txtDesignation.Text == "" && txtAdresse.Text == "" && txtCodePostal.Text == "" && txtLocalite.Text == ""
+            if (txtId.Text == "" && txtDateCreation.Text == "" && txtLicence.Text == "" && txtNom.Text == "" && txtAdresse.Text == "" && txtCodePostal.Text == "" && txtLocalite.Text == ""
                 && txtPays.Text == "" && txtTelephone.Text == "" && txtEmail.Text == "" && txtNumTVA.Text == "" && txtSiteWebUrl.Text == ""
-                && txtValide.Text == "" && txtBloque.Text == "" && txtBlocage.Text == "" && txtAttention.Text == "" && txtAlerte.Text == "" && txtObservations.Text== "")
+                && txtValide.Text == "" && txtBloque.Text == "" && txtBlocage.Text == "" && txtAttention.Text == "" && txtAlerte.Text == "" && txtObservations.Text == "")
             {
                 lbModifier.Enabled = false;
                 lbModifier.BackColor = Color.Transparent;
@@ -80,7 +80,7 @@ namespace WidraSoft.UI
                 chx_Bloque.Checked = false;
                 txtAttention.Text = "0";
                 chx_Attention.Checked = false;
-                
+
             }
         }
 
@@ -95,15 +95,15 @@ namespace WidraSoft.UI
         private void Bind_Fields()
         {
             DataTable dt = new DataTable();
-            Firme firme = new Firme();
-            dt = firme.FindById(vg_Id);
+            Transporteur transporteur = new Transporteur();
+            dt = transporteur.FindById(vg_Id);
             foreach (DataRow row in dt.Rows)
             {
                 int Id = (int)row["FIRMEID"];
                 txtId.Text = Id.ToString();
                 txtDateCreation.Text = row["DATECREATION"].ToString();
-                txtBadge.Text = row["BADGE"].ToString();
-                txtDesignation.Text = row["DESIGNATION"].ToString();
+                txtLicence.Text = row["LICENCE"].ToString();
+                txtNom.Text = row["NOM"].ToString();
                 txtAdresse.Text = row["ADRESSE"].ToString();
                 txtCodePostal.Text = row["CODEPOSTAL"].ToString();
                 txtLocalite.Text = row["LOCALITE"].ToString();
@@ -121,29 +121,29 @@ namespace WidraSoft.UI
                     chx_Valide.Checked = false;
                 txtBloque.Text = row["BLOQUE"].ToString();
                 txtBloque.Visible = false;
-                if (txtBloque.Text == "1" )
+                if (txtBloque.Text == "1")
                     chx_Bloque.Checked = true;
                 else
                     chx_Bloque.Checked = false;
                 txtBlocage.Text = row["TEXTEBLOQUE"].ToString();
                 txtAttention.Text = row["ATTENTION"].ToString();
                 txtAttention.Visible = false;
-                if (txtAttention.Text == "1" )
+                if (txtAttention.Text == "1")
                     chx_Attention.Checked = true;
                 else
                     chx_Attention.Checked = false;
-                txtAlerte.Text = row["TEXTEATTENTION"].ToString();                  
+                txtAlerte.Text = row["TEXTEATTENTION"].ToString();
             }
         }
 
         private void Disable()
         {
             txtDateCreation.Enabled = false;
-            txtBadge.Enabled = false;
-            txtDesignation.Enabled = false;
+            txtLicence.Enabled = false;
+            txtNom.Enabled = false;
             txtAdresse.Enabled = false;
             txtCodePostal.Enabled = false;
-            txtLocalite.Enabled = false;    
+            txtLocalite.Enabled = false;
             txtPays.Enabled = false;
             txtTelephone.Enabled = false;
             txtEmail.Enabled = false;
@@ -160,11 +160,11 @@ namespace WidraSoft.UI
             vg_IsEnabled = false;
         }
 
-        private void Enable() 
+        private void Enable()
         {
             txtDateCreation.Enabled = true;
-            txtBadge.Enabled = true;
-            txtDesignation.Enabled = true;
+            txtLicence.Enabled = true;
+            txtNom.Enabled = true;
             txtAdresse.Enabled = true;
             txtCodePostal.Enabled = true;
             txtLocalite.Enabled = true;
@@ -188,8 +188,8 @@ namespace WidraSoft.UI
         {
             txtId.Text = "";
             txtDateCreation.Text = "";
-            txtBadge.Text = "";
-            txtDesignation.Text = "";
+            txtLicence.Text = "";
+            txtNom.Text = "";
             txtAdresse.Text = "";
             txtCodePostal.Text = "";
             txtLocalite.Text = "";
@@ -206,12 +206,11 @@ namespace WidraSoft.UI
             chx_Attention.Checked = false;
         }
 
-
         private void chx_Valide_CheckedChanged(object sender, EventArgs e)
         {
             if (chx_Valide.Checked)
                 txtValide.Text = "1";
-            else 
+            else
                 txtValide.Text = "0";
         }
 
@@ -231,43 +230,12 @@ namespace WidraSoft.UI
                 txtAttention.Text = "0";
         }
 
-        private void cbLang_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            if (cbLang.Text == "FR")
-            {
-                France_flag.Visible = true;
-                England_flag.Visible = false;
-                Spain_flag.Visible = false;
-                Language_Manager language_Manager = new Language_Manager();
-                language_Manager.ChangeLanguage("fr", this, typeof(FirmeDetail));
-
-            }
-
-            if (cbLang.Text == "EN")
-            {
-                France_flag.Visible = false;
-                England_flag.Visible = true;
-                Spain_flag.Visible = false;
-                Language_Manager language_Manager = new Language_Manager();
-                language_Manager.ChangeLanguage("en", this, typeof(FirmeDetail));
-            }
-
-            if (cbLang.Text == "ES")
-            {
-                France_flag.Visible = false;
-                England_flag.Visible = false;
-                Spain_flag.Visible = true;
-                Language_Manager language_Manager = new Language_Manager();
-                language_Manager.ChangeLanguage("es", this, typeof(FirmeDetail));
-            }
-        }
-
         private void lbAjouter_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             try
             {
 
-                if (txtId.Text == "" && txtDateCreation.Text == "" && txtDesignation.Text != "" && txtValide.Text != "" && txtBloque.Text != "" && txtAttention.Text != "")
+                if (txtId.Text == "" && txtDateCreation.Text == "" && txtNom.Text != "" && txtValide.Text != "" && txtBloque.Text != "" && txtAttention.Text != "")
                 {
                     int Valide;
                     int Bloque;
@@ -282,15 +250,15 @@ namespace WidraSoft.UI
                     {
                         if (IsParsableValide && IsParsableBloque && IsParsableAttention)
                         {
-                            Firme firme = new Firme();
-                            firme.Add(txtBadge.Text, txtDesignation.Text, txtAdresse.Text, txtCodePostal.Text, txtLocalite.Text, txtPays.Text, txtTelephone.Text, txtEmail.Text,
+                            Transporteur transporteur = new Transporteur();
+                            transporteur.Add(txtLicence.Text, txtNom.Text, txtAdresse.Text, txtCodePostal.Text, txtLocalite.Text, txtPays.Text, txtTelephone.Text, txtEmail.Text,
                                     txtNumTVA.Text, txtSiteWebUrl.Text, txtObservations.Text, Valide, Bloque, txtBlocage.Text, Attention, txtAlerte.Text);
                             if (cbLang.Text == "FR")
-                                Custom_MessageBox.Show("FR", "Firme ajoutée avec succès", "Firme", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                Custom_MessageBox.Show("FR", "Transporteur ajouté avec succès", "Transporteur", MessageBoxButtons.OK, MessageBoxIcon.Information);
                             else if (cbLang.Text == "EN")
-                                Custom_MessageBox.Show("EN", "Firm added successfully", "Firm", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                Custom_MessageBox.Show("EN", "Carrier added successfully", "Carrier", MessageBoxButtons.OK, MessageBoxIcon.Information);
                             else
-                                Custom_MessageBox.Show("ES", "Firma agregado", "Firma", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                Custom_MessageBox.Show("ES", "Transportador agregado", "Transportador", MessageBoxButtons.OK, MessageBoxIcon.Information);
                             Close();
                         }
                     }
@@ -303,11 +271,11 @@ namespace WidraSoft.UI
                 else
                 {
                     if (cbLang.Text == "FR")
-                        Custom_MessageBox.Show("FR", "Informations incomplètes", "Firme", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        Custom_MessageBox.Show("FR", "Informations incomplètes", "Transporteur", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     else if (cbLang.Text == "EN")
-                        Custom_MessageBox.Show("EN", "Incomplete informations", "Firm", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        Custom_MessageBox.Show("EN", "Incomplete informations", "Carrier", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     else
-                        Custom_MessageBox.Show("ES", "Información incompleta", "Firma", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        Custom_MessageBox.Show("ES", "Información incompleta", "Transportador", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
             }
             catch
@@ -330,7 +298,7 @@ namespace WidraSoft.UI
                 {
                     try
                     {
-                        if (txtId.Text != "" && txtDateCreation.Text != "" && txtDesignation.Text != ""
+                        if (txtId.Text != "" && txtDateCreation.Text != "" && txtNom.Text != ""
                             && txtValide.Text != "" && txtBloque.Text != "" && txtAttention.Text != "")
                         {
                             int Id;
@@ -349,15 +317,15 @@ namespace WidraSoft.UI
                             {
                                 if (IsParsableId && IsParsableValide && IsParsableBloque && IsParsableAttention)
                                 {
-                                    Firme firme = new Firme();
-                                    firme.Update(Id, txtBadge.Text, txtDesignation.Text, txtAdresse.Text, txtCodePostal.Text, txtLocalite.Text, txtPays.Text, txtTelephone.Text, txtEmail.Text,
+                                    Transporteur transporteur = new Transporteur();
+                                    transporteur.Update(Id, txtLicence.Text, txtNom.Text, txtAdresse.Text, txtCodePostal.Text, txtLocalite.Text, txtPays.Text, txtTelephone.Text, txtEmail.Text,
                                             txtNumTVA.Text, txtSiteWebUrl.Text, txtObservations.Text, Valide, Bloque, txtBlocage.Text, Attention, txtAlerte.Text);
                                     if (cbLang.Text == "FR")
-                                        Custom_MessageBox.Show("FR", "Firme modifiée avec succès", "Firme", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                        Custom_MessageBox.Show("FR", "Transporteur modifié avec succès", "Transporteur", MessageBoxButtons.OK, MessageBoxIcon.Information);
                                     else if (cbLang.Text == "EN")
-                                        Custom_MessageBox.Show("EN", "Firm updated successfully", "Firm", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                        Custom_MessageBox.Show("EN", "Carrier updated successfully", "Carrier", MessageBoxButtons.OK, MessageBoxIcon.Information);
                                     else
-                                        Custom_MessageBox.Show("ES", "Firma alterado", "Firma", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                        Custom_MessageBox.Show("ES", "Transportador alterado", "Transportador", MessageBoxButtons.OK, MessageBoxIcon.Information);
                                     lbModifier.Text = Language_Manager.Localize("Modifier", cbLang.Text);
                                     vg_Update = false;
                                     Disable();
@@ -373,11 +341,11 @@ namespace WidraSoft.UI
                         else
                         {
                             if (cbLang.Text == "FR")
-                                Custom_MessageBox.Show("FR", "Informations incomplètes", "Firme", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                Custom_MessageBox.Show("FR", "Informations incomplètes", "Transporteur", MessageBoxButtons.OK, MessageBoxIcon.Information);
                             else if (cbLang.Text == "EN")
-                                Custom_MessageBox.Show("EN", "Incomplete informations", "Firm", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                Custom_MessageBox.Show("EN", "Incomplete informations", "Carrier", MessageBoxButtons.OK, MessageBoxIcon.Information);
                             else
-                                Custom_MessageBox.Show("ES", "Información incompleta", "Firma", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                Custom_MessageBox.Show("ES", "Información incompleta", "Transportador", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         }
                     }
                     catch
@@ -397,17 +365,17 @@ namespace WidraSoft.UI
             if (vg_Update)
             {
                 if (cbLang.Text == "FR")
-                    Custom_MessageBox.Show("FR", "Vous ne pouvez pas supprimer l'enregistrement tant que la modification n'est pas validée", "Firme", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    Custom_MessageBox.Show("FR", "Vous ne pouvez pas supprimer l'enregistrement tant que la modification n'est pas validée", "Transporteur", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 else if (cbLang.Text == "EN")
-                    Custom_MessageBox.Show("EN", "You can't delete this record before the update is completed", "Firm", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    Custom_MessageBox.Show("EN", "You can't delete this record before the update is completed", "Carrier", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 else
-                    Custom_MessageBox.Show("ES", "No puede eliminar el registro hasta que se confirme el cambio", "Firma", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    Custom_MessageBox.Show("ES", "No puede eliminar el registro hasta que se confirme el cambio", "Transportador", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             else
             {
                 try
                 {
-                    Firme firme = new Firme();
+                    Transporteur transporteur = new Transporteur();
                     int Id;
                     bool IsParsableId;
                     IsParsableId = Int32.TryParse(txtId.Text, out Id);
@@ -415,21 +383,21 @@ namespace WidraSoft.UI
                     {
                         DialogResult result;
                         if (cbLang.Text == "FR")
-                            result = Custom_MessageBox.Show("FR", "Etes vous sur de vouloir supprimer cet enregistrement?", "Firme", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                            result = Custom_MessageBox.Show("FR", "Etes vous sur de vouloir supprimer cet enregistrement?", "Transporteur", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
                         else if (cbLang.Text == "EN")
-                            result = Custom_MessageBox.Show("EN", "Are you sure you want to delete this record?", "Firm", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                            result = Custom_MessageBox.Show("EN", "Are you sure you want to delete this record?", "Carrier", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
                         else
-                            result = Custom_MessageBox.Show("ES", "¿Está seguro de que desea eliminar este registro?", "Firma", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                            result = Custom_MessageBox.Show("ES", "¿Está seguro de que desea eliminar este registro?", "Transportador", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
 
                         if (result == DialogResult.Yes)
                         {
-                            firme.Delete(Id);
+                            transporteur.Delete(Id);
                             if (cbLang.Text == "FR")
-                                Custom_MessageBox.Show("FR", "Firme supprimée avec succès", "Firme", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                Custom_MessageBox.Show("FR", "Transporteur supprimé avec succès", "Transporteur", MessageBoxButtons.OK, MessageBoxIcon.Information);
                             else if (cbLang.Text == "EN")
-                                Custom_MessageBox.Show("EN", "Firm deleted successfully", "Firm", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                Custom_MessageBox.Show("EN", "Carrier deleted successfully", "Carrier", MessageBoxButtons.OK, MessageBoxIcon.Information);
                             else
-                                Custom_MessageBox.Show("ES", "Firma eliminado", "Firma", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                Custom_MessageBox.Show("ES", "Transportador eliminado", "Transportador", MessageBoxButtons.OK, MessageBoxIcon.Information);
                             Close();
                         }
                     }
@@ -442,23 +410,52 @@ namespace WidraSoft.UI
             }
         }
 
-        private void FirmeDetail_FormClosing(object sender, FormClosingEventArgs e)
+        private void TransporteurDetail_FormClosing(object sender, FormClosingEventArgs e)
         {
             if (vg_Mode == "Edit")
             {
                 if (pbUpdating.Visible)
                 {
                     if (cbLang.Text == "FR")
-                        Custom_MessageBox.Show("FR", "Vous ne pouvez pas fermer la fenetre tant que la modification n'est pas validée", "Firme", MessageBoxButtons.OK, MessageBoxIcon.Stop);
+                        Custom_MessageBox.Show("FR", "Vous ne pouvez pas fermer la fenetre tant que la modification n'est pas validée", "Transporteur", MessageBoxButtons.OK, MessageBoxIcon.Stop);
                     else if (cbLang.Text == "EN")
-                        Custom_MessageBox.Show("EN", "You can't close this window before the update is completed", "Firm", MessageBoxButtons.OK, MessageBoxIcon.Stop);
+                        Custom_MessageBox.Show("EN", "You can't close this window before the update is completed", "Carrier", MessageBoxButtons.OK, MessageBoxIcon.Stop);
                     else
-                        Custom_MessageBox.Show("ES", "No puede cerrar la página hasta que se valide el cambio", "Firma", MessageBoxButtons.OK, MessageBoxIcon.Stop);
+                        Custom_MessageBox.Show("ES", "No puede cerrar la página hasta que se valide el cambio", "Transportador", MessageBoxButtons.OK, MessageBoxIcon.Stop);
                     e.Cancel = true;
                 }
             }
         }
 
+        private void cbLang_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (cbLang.Text == "FR")
+            {
+                France_flag.Visible = true;
+                England_flag.Visible = false;
+                Spain_flag.Visible = false;
+                Language_Manager language_Manager = new Language_Manager();
+                language_Manager.ChangeLanguage("fr", this, typeof(TransporteurDetail));
 
+            }
+
+            if (cbLang.Text == "EN")
+            {
+                France_flag.Visible = false;
+                England_flag.Visible = true;
+                Spain_flag.Visible = false;
+                Language_Manager language_Manager = new Language_Manager();
+                language_Manager.ChangeLanguage("en", this, typeof(TransporteurDetail));
+            }
+
+            if (cbLang.Text == "ES")
+            {
+                France_flag.Visible = false;
+                England_flag.Visible = false;
+                Spain_flag.Visible = true;
+                Language_Manager language_Manager = new Language_Manager();
+                language_Manager.ChangeLanguage("es", this, typeof(TransporteurDetail));
+            }
+        }
     }
 }

@@ -95,6 +95,19 @@ namespace WidraSoft.UI
             form.Show();
         }
 
+        private void chauffeursToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            Form form = new ChauffeursListe("1=1");
+            form.Show();
+        }
+
+
+        private void transporteursToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Form form = new TransporteursListe("1=1");
+            form.Show();
+        }
+
         private void panelUserInfo_MouseDown(object sender, MouseEventArgs e)
         {
             ReleaseCapture();
@@ -135,6 +148,5 @@ namespace WidraSoft.UI
             lblusername.Text = utilisateur.GetFullUsername(vg_UtilisateurId);
         }
 
-  
     }
 }

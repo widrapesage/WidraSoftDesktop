@@ -1,6 +1,6 @@
 ﻿namespace WidraSoft.UI
 {
-    partial class ChauffeurDetail
+    partial class TransporteurDetail
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ChauffeurDetail));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TransporteurDetail));
             this.panelLang = new System.Windows.Forms.Panel();
             this.pbUpdating = new System.Windows.Forms.PictureBox();
             this.Spain_flag = new System.Windows.Forms.PictureBox();
@@ -43,16 +43,12 @@
             this.lbAjouter = new System.Windows.Forms.LinkLabel();
             this.lbSupprimer = new System.Windows.Forms.LinkLabel();
             this.panelDetail = new System.Windows.Forms.Panel();
-            this.txtNumeroPermis = new System.Windows.Forms.TextBox();
-            this.label20 = new System.Windows.Forms.Label();
-            this.txtNumeroNational = new System.Windows.Forms.TextBox();
-            this.label19 = new System.Windows.Forms.Label();
             this.txtDateCreation = new System.Windows.Forms.TextBox();
             this.txtId = new System.Windows.Forms.TextBox();
             this.label18 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.label17 = new System.Windows.Forms.Label();
-            this.txtBadge = new System.Windows.Forms.TextBox();
+            this.txtLicence = new System.Windows.Forms.TextBox();
             this.label16 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -77,7 +73,13 @@
             this.txtBlocage = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
             this.chx_Bloque = new System.Windows.Forms.CheckBox();
+            this.txtEmail = new System.Windows.Forms.TextBox();
             this.chx_Valide = new System.Windows.Forms.CheckBox();
+            this.label10 = new System.Windows.Forms.Label();
+            this.label12 = new System.Windows.Forms.Label();
+            this.txtNumTVA = new System.Windows.Forms.TextBox();
+            this.txtSiteWebUrl = new System.Windows.Forms.TextBox();
+            this.label11 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.txtPays = new System.Windows.Forms.TextBox();
             this.panelLang.SuspendLayout();
@@ -94,54 +96,54 @@
             // 
             // panelLang
             // 
+            resources.ApplyResources(this.panelLang, "panelLang");
             this.panelLang.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(86)))), ((int)(((byte)(81)))));
             this.panelLang.Controls.Add(this.pbUpdating);
             this.panelLang.Controls.Add(this.Spain_flag);
             this.panelLang.Controls.Add(this.England_flag);
             this.panelLang.Controls.Add(this.France_flag);
             this.panelLang.Controls.Add(this.cbLang);
-            resources.ApplyResources(this.panelLang, "panelLang");
             this.panelLang.Name = "panelLang";
             // 
             // pbUpdating
             // 
-            this.pbUpdating.Image = global::WidraSoft.UI.Properties.Resources.pencil;
             resources.ApplyResources(this.pbUpdating, "pbUpdating");
+            this.pbUpdating.Image = global::WidraSoft.UI.Properties.Resources.pencil;
             this.pbUpdating.Name = "pbUpdating";
             this.pbUpdating.TabStop = false;
             // 
             // Spain_flag
             // 
+            resources.ApplyResources(this.Spain_flag, "Spain_flag");
             this.Spain_flag.BackColor = System.Drawing.Color.Transparent;
             this.Spain_flag.Cursor = System.Windows.Forms.Cursors.Hand;
             this.Spain_flag.Image = global::WidraSoft.UI.Properties.Resources.spain;
-            resources.ApplyResources(this.Spain_flag, "Spain_flag");
             this.Spain_flag.Name = "Spain_flag";
             this.Spain_flag.TabStop = false;
             // 
             // England_flag
             // 
+            resources.ApplyResources(this.England_flag, "England_flag");
             this.England_flag.BackColor = System.Drawing.Color.Transparent;
             this.England_flag.Cursor = System.Windows.Forms.Cursors.Hand;
             this.England_flag.Image = global::WidraSoft.UI.Properties.Resources.united_kingdom;
-            resources.ApplyResources(this.England_flag, "England_flag");
             this.England_flag.Name = "England_flag";
             this.England_flag.TabStop = false;
             // 
             // France_flag
             // 
+            resources.ApplyResources(this.France_flag, "France_flag");
             this.France_flag.BackColor = System.Drawing.Color.Transparent;
             this.France_flag.Cursor = System.Windows.Forms.Cursors.Hand;
             this.France_flag.Image = global::WidraSoft.UI.Properties.Resources.france;
-            resources.ApplyResources(this.France_flag, "France_flag");
             this.France_flag.Name = "France_flag";
             this.France_flag.TabStop = false;
             // 
             // cbLang
             // 
+            resources.ApplyResources(this.cbLang, "cbLang");
             this.cbLang.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(86)))), ((int)(((byte)(77)))));
             this.cbLang.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            resources.ApplyResources(this.cbLang, "cbLang");
             this.cbLang.ForeColor = System.Drawing.Color.White;
             this.cbLang.FormattingEnabled = true;
             this.cbLang.Name = "cbLang";
@@ -149,6 +151,7 @@
             // 
             // panelNavigation
             // 
+            resources.ApplyResources(this.panelNavigation, "panelNavigation");
             this.panelNavigation.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(62)))), ((int)(((byte)(60)))));
             this.panelNavigation.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panelNavigation.Controls.Add(this.pictureBox3);
@@ -157,22 +160,21 @@
             this.panelNavigation.Controls.Add(this.pictureBox2);
             this.panelNavigation.Controls.Add(this.lbAjouter);
             this.panelNavigation.Controls.Add(this.lbSupprimer);
-            resources.ApplyResources(this.panelNavigation, "panelNavigation");
             this.panelNavigation.Name = "panelNavigation";
             // 
             // pictureBox3
             // 
+            resources.ApplyResources(this.pictureBox3, "pictureBox3");
             this.pictureBox3.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox3.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBox3.Image = global::WidraSoft.UI.Properties.Resources.update;
-            resources.ApplyResources(this.pictureBox3, "pictureBox3");
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.TabStop = false;
             // 
             // lbModifier
             // 
-            this.lbModifier.ActiveLinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(190)))), ((int)(((byte)(117)))));
             resources.ApplyResources(this.lbModifier, "lbModifier");
+            this.lbModifier.ActiveLinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(190)))), ((int)(((byte)(117)))));
             this.lbModifier.BackColor = System.Drawing.Color.Transparent;
             this.lbModifier.ForeColor = System.Drawing.Color.White;
             this.lbModifier.LinkColor = System.Drawing.Color.White;
@@ -182,26 +184,26 @@
             // 
             // pictureBox1
             // 
+            resources.ApplyResources(this.pictureBox1, "pictureBox1");
             this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBox1.Image = global::WidraSoft.UI.Properties.Resources.remove;
-            resources.ApplyResources(this.pictureBox1, "pictureBox1");
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.TabStop = false;
             // 
             // pictureBox2
             // 
+            resources.ApplyResources(this.pictureBox2, "pictureBox2");
             this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox2.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBox2.Image = global::WidraSoft.UI.Properties.Resources.add;
-            resources.ApplyResources(this.pictureBox2, "pictureBox2");
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.TabStop = false;
             // 
             // lbAjouter
             // 
-            this.lbAjouter.ActiveLinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(190)))), ((int)(((byte)(117)))));
             resources.ApplyResources(this.lbAjouter, "lbAjouter");
+            this.lbAjouter.ActiveLinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(190)))), ((int)(((byte)(117)))));
             this.lbAjouter.BackColor = System.Drawing.Color.Transparent;
             this.lbAjouter.ForeColor = System.Drawing.Color.White;
             this.lbAjouter.LinkColor = System.Drawing.Color.White;
@@ -211,8 +213,8 @@
             // 
             // lbSupprimer
             // 
-            this.lbSupprimer.ActiveLinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(190)))), ((int)(((byte)(117)))));
             resources.ApplyResources(this.lbSupprimer, "lbSupprimer");
+            this.lbSupprimer.ActiveLinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(190)))), ((int)(((byte)(117)))));
             this.lbSupprimer.BackColor = System.Drawing.Color.Transparent;
             this.lbSupprimer.ForeColor = System.Drawing.Color.White;
             this.lbSupprimer.LinkColor = System.Drawing.Color.White;
@@ -222,17 +224,14 @@
             // 
             // panelDetail
             // 
+            resources.ApplyResources(this.panelDetail, "panelDetail");
             this.panelDetail.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(86)))), ((int)(((byte)(81)))));
-            this.panelDetail.Controls.Add(this.txtNumeroPermis);
-            this.panelDetail.Controls.Add(this.label20);
-            this.panelDetail.Controls.Add(this.txtNumeroNational);
-            this.panelDetail.Controls.Add(this.label19);
             this.panelDetail.Controls.Add(this.txtDateCreation);
             this.panelDetail.Controls.Add(this.txtId);
             this.panelDetail.Controls.Add(this.label18);
             this.panelDetail.Controls.Add(this.label1);
             this.panelDetail.Controls.Add(this.label17);
-            this.panelDetail.Controls.Add(this.txtBadge);
+            this.panelDetail.Controls.Add(this.txtLicence);
             this.panelDetail.Controls.Add(this.label16);
             this.panelDetail.Controls.Add(this.label2);
             this.panelDetail.Controls.Add(this.label3);
@@ -257,47 +256,28 @@
             this.panelDetail.Controls.Add(this.txtBlocage);
             this.panelDetail.Controls.Add(this.label9);
             this.panelDetail.Controls.Add(this.chx_Bloque);
+            this.panelDetail.Controls.Add(this.txtEmail);
             this.panelDetail.Controls.Add(this.chx_Valide);
+            this.panelDetail.Controls.Add(this.label10);
+            this.panelDetail.Controls.Add(this.label12);
+            this.panelDetail.Controls.Add(this.txtNumTVA);
+            this.panelDetail.Controls.Add(this.txtSiteWebUrl);
+            this.panelDetail.Controls.Add(this.label11);
             this.panelDetail.Controls.Add(this.label8);
             this.panelDetail.Controls.Add(this.txtPays);
-            resources.ApplyResources(this.panelDetail, "panelDetail");
             this.panelDetail.Name = "panelDetail";
-            // 
-            // txtNumeroPermis
-            // 
-            this.txtNumeroPermis.BackColor = System.Drawing.Color.Honeydew;
-            resources.ApplyResources(this.txtNumeroPermis, "txtNumeroPermis");
-            this.txtNumeroPermis.Name = "txtNumeroPermis";
-            // 
-            // label20
-            // 
-            resources.ApplyResources(this.label20, "label20");
-            this.label20.ForeColor = System.Drawing.Color.White;
-            this.label20.Name = "label20";
-            // 
-            // txtNumeroNational
-            // 
-            this.txtNumeroNational.BackColor = System.Drawing.Color.Honeydew;
-            resources.ApplyResources(this.txtNumeroNational, "txtNumeroNational");
-            this.txtNumeroNational.Name = "txtNumeroNational";
-            // 
-            // label19
-            // 
-            resources.ApplyResources(this.label19, "label19");
-            this.label19.ForeColor = System.Drawing.Color.White;
-            this.label19.Name = "label19";
             // 
             // txtDateCreation
             // 
-            this.txtDateCreation.BackColor = System.Drawing.Color.Honeydew;
             resources.ApplyResources(this.txtDateCreation, "txtDateCreation");
+            this.txtDateCreation.BackColor = System.Drawing.Color.Honeydew;
             this.txtDateCreation.Name = "txtDateCreation";
             this.txtDateCreation.ReadOnly = true;
             // 
             // txtId
             // 
-            this.txtId.BackColor = System.Drawing.Color.Honeydew;
             resources.ApplyResources(this.txtId, "txtId");
+            this.txtId.BackColor = System.Drawing.Color.Honeydew;
             this.txtId.Name = "txtId";
             // 
             // label18
@@ -318,11 +298,11 @@
             this.label17.ForeColor = System.Drawing.Color.White;
             this.label17.Name = "label17";
             // 
-            // txtBadge
+            // txtLicence
             // 
-            this.txtBadge.BackColor = System.Drawing.Color.Honeydew;
-            resources.ApplyResources(this.txtBadge, "txtBadge");
-            this.txtBadge.Name = "txtBadge";
+            resources.ApplyResources(this.txtLicence, "txtLicence");
+            this.txtLicence.BackColor = System.Drawing.Color.Honeydew;
+            this.txtLicence.Name = "txtLicence";
             // 
             // label16
             // 
@@ -349,8 +329,8 @@
             // 
             // txtNom
             // 
-            this.txtNom.BackColor = System.Drawing.Color.Honeydew;
             resources.ApplyResources(this.txtNom, "txtNom");
+            this.txtNom.BackColor = System.Drawing.Color.Honeydew;
             this.txtNom.Name = "txtNom";
             // 
             // txtBloque
@@ -371,8 +351,8 @@
             // 
             // txtAdresse
             // 
-            this.txtAdresse.BackColor = System.Drawing.Color.Honeydew;
             resources.ApplyResources(this.txtAdresse, "txtAdresse");
+            this.txtAdresse.BackColor = System.Drawing.Color.Honeydew;
             this.txtAdresse.Name = "txtAdresse";
             // 
             // label15
@@ -389,14 +369,14 @@
             // 
             // txtObservations
             // 
-            this.txtObservations.BackColor = System.Drawing.Color.Honeydew;
             resources.ApplyResources(this.txtObservations, "txtObservations");
+            this.txtObservations.BackColor = System.Drawing.Color.Honeydew;
             this.txtObservations.Name = "txtObservations";
             // 
             // txtCodePostal
             // 
-            this.txtCodePostal.BackColor = System.Drawing.Color.Honeydew;
             resources.ApplyResources(this.txtCodePostal, "txtCodePostal");
+            this.txtCodePostal.BackColor = System.Drawing.Color.Honeydew;
             this.txtCodePostal.Name = "txtCodePostal";
             // 
             // label14
@@ -413,14 +393,14 @@
             // 
             // txtAlerte
             // 
-            this.txtAlerte.BackColor = System.Drawing.Color.Honeydew;
             resources.ApplyResources(this.txtAlerte, "txtAlerte");
+            this.txtAlerte.BackColor = System.Drawing.Color.Honeydew;
             this.txtAlerte.Name = "txtAlerte";
             // 
             // txtLocalite
             // 
-            this.txtLocalite.BackColor = System.Drawing.Color.Honeydew;
             resources.ApplyResources(this.txtLocalite, "txtLocalite");
+            this.txtLocalite.BackColor = System.Drawing.Color.Honeydew;
             this.txtLocalite.Name = "txtLocalite";
             // 
             // chx_Attention
@@ -445,14 +425,14 @@
             // 
             // txtTelephone
             // 
-            this.txtTelephone.BackColor = System.Drawing.Color.Honeydew;
             resources.ApplyResources(this.txtTelephone, "txtTelephone");
+            this.txtTelephone.BackColor = System.Drawing.Color.Honeydew;
             this.txtTelephone.Name = "txtTelephone";
             // 
             // txtBlocage
             // 
-            this.txtBlocage.BackColor = System.Drawing.Color.Honeydew;
             resources.ApplyResources(this.txtBlocage, "txtBlocage");
+            this.txtBlocage.BackColor = System.Drawing.Color.Honeydew;
             this.txtBlocage.Name = "txtBlocage";
             // 
             // label9
@@ -469,6 +449,12 @@
             this.chx_Bloque.UseVisualStyleBackColor = true;
             this.chx_Bloque.CheckedChanged += new System.EventHandler(this.chx_Bloque_CheckedChanged);
             // 
+            // txtEmail
+            // 
+            resources.ApplyResources(this.txtEmail, "txtEmail");
+            this.txtEmail.BackColor = System.Drawing.Color.Honeydew;
+            this.txtEmail.Name = "txtEmail";
+            // 
             // chx_Valide
             // 
             resources.ApplyResources(this.chx_Valide, "chx_Valide");
@@ -476,6 +462,36 @@
             this.chx_Valide.Name = "chx_Valide";
             this.chx_Valide.UseVisualStyleBackColor = true;
             this.chx_Valide.CheckedChanged += new System.EventHandler(this.chx_Valide_CheckedChanged);
+            // 
+            // label10
+            // 
+            resources.ApplyResources(this.label10, "label10");
+            this.label10.ForeColor = System.Drawing.Color.White;
+            this.label10.Name = "label10";
+            // 
+            // label12
+            // 
+            resources.ApplyResources(this.label12, "label12");
+            this.label12.ForeColor = System.Drawing.Color.White;
+            this.label12.Name = "label12";
+            // 
+            // txtNumTVA
+            // 
+            resources.ApplyResources(this.txtNumTVA, "txtNumTVA");
+            this.txtNumTVA.BackColor = System.Drawing.Color.Honeydew;
+            this.txtNumTVA.Name = "txtNumTVA";
+            // 
+            // txtSiteWebUrl
+            // 
+            resources.ApplyResources(this.txtSiteWebUrl, "txtSiteWebUrl");
+            this.txtSiteWebUrl.BackColor = System.Drawing.Color.Honeydew;
+            this.txtSiteWebUrl.Name = "txtSiteWebUrl";
+            // 
+            // label11
+            // 
+            resources.ApplyResources(this.label11, "label11");
+            this.label11.ForeColor = System.Drawing.Color.White;
+            this.label11.Name = "label11";
             // 
             // label8
             // 
@@ -485,11 +501,11 @@
             // 
             // txtPays
             // 
-            this.txtPays.BackColor = System.Drawing.Color.Honeydew;
             resources.ApplyResources(this.txtPays, "txtPays");
+            this.txtPays.BackColor = System.Drawing.Color.Honeydew;
             this.txtPays.Name = "txtPays";
             // 
-            // ChauffeurDetail
+            // TransporteurDetail
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -498,9 +514,9 @@
             this.Controls.Add(this.panelNavigation);
             this.Controls.Add(this.panelLang);
             this.MaximizeBox = false;
-            this.Name = "ChauffeurDetail";
-            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.ChauffeurDetail_FormClosing);
-            this.Load += new System.EventHandler(this.ChauffeurDetail_Load);
+            this.Name = "TransporteurDetail";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.TransporteurDetail_FormClosing);
+            this.Load += new System.EventHandler(this.TransporteurDetail_Load);
             this.panelLang.ResumeLayout(false);
             this.panelLang.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbUpdating)).EndInit();
@@ -539,7 +555,7 @@
         private System.Windows.Forms.Label label18;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label17;
-        private System.Windows.Forms.TextBox txtBadge;
+        private System.Windows.Forms.TextBox txtLicence;
         private System.Windows.Forms.Label label16;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
@@ -564,12 +580,14 @@
         private System.Windows.Forms.TextBox txtBlocage;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.CheckBox chx_Bloque;
+        private System.Windows.Forms.TextBox txtEmail;
         private System.Windows.Forms.CheckBox chx_Valide;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.TextBox txtNumTVA;
+        private System.Windows.Forms.TextBox txtSiteWebUrl;
+        private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.TextBox txtPays;
-        private System.Windows.Forms.TextBox txtNumeroNational;
-        private System.Windows.Forms.Label label19;
-        private System.Windows.Forms.TextBox txtNumeroPermis;
-        private System.Windows.Forms.Label label20;
     }
 }

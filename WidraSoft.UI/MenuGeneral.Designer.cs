@@ -192,6 +192,7 @@ namespace WidraSoft.UI
             this.chauffeursToolStripMenuItem1.Image = global::WidraSoft.UI.Properties.Resources.driver1;
             this.chauffeursToolStripMenuItem1.Name = "chauffeursToolStripMenuItem1";
             resources.ApplyResources(this.chauffeursToolStripMenuItem1, "chauffeursToolStripMenuItem1");
+            this.chauffeursToolStripMenuItem1.Click += new System.EventHandler(this.chauffeursToolStripMenuItem1_Click);
             // 
             // firmesToolStripMenuItem
             // 
@@ -209,6 +210,7 @@ namespace WidraSoft.UI
             this.transporteursToolStripMenuItem.Image = global::WidraSoft.UI.Properties.Resources.Carriers;
             this.transporteursToolStripMenuItem.Name = "transporteursToolStripMenuItem";
             resources.ApplyResources(this.transporteursToolStripMenuItem, "transporteursToolStripMenuItem");
+            this.transporteursToolStripMenuItem.Click += new System.EventHandler(this.transporteursToolStripMenuItem_Click);
             // 
             // destinationsProvenancesToolStripMenuItem
             // 

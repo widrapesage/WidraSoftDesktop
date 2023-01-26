@@ -8,28 +8,28 @@ using WidraSoft.DA;
 
 namespace WidraSoft.BL
 {
-    public class Firme
+    public class Transporteur
     {
         public DataTable List(string filter)
         {
             try
             {
-                FirmeDA firme = new FirmeDA();
-                return firme.List(filter);
+                TransporteurDA transporteur = new TransporteurDA();
+                return transporteur.List(filter);
             }
             catch
             {
                 throw;
             }
-           
+
         }
 
         public DataTable SearchBox(string Filter)
         {
             try
             {
-                FirmeDA firme = new FirmeDA();
-                return firme.SearchBox(Filter);
+                TransporteurDA transporteur = new TransporteurDA();
+                return transporteur.SearchBox(Filter);
             }
             catch
             {
@@ -41,8 +41,8 @@ namespace WidraSoft.BL
         {
             try
             {
-                FirmeDA firme = new FirmeDA();
-                return firme.FindById(Id);
+                TransporteurDA transporteur = new TransporteurDA();
+                return transporteur.FindById(Id);
             }
             catch
             {
@@ -54,8 +54,8 @@ namespace WidraSoft.BL
         {
             try
             {
-                FirmeDA firme = new FirmeDA();
-                return firme.GetName(Id);
+                TransporteurDA transporteur = new TransporteurDA();
+                return transporteur.GetName(Id);
             }
             catch
             {
@@ -63,56 +63,49 @@ namespace WidraSoft.BL
             }
         }
 
-        public void Add(String Badge, String Designation, String Adresse, String CodePostal, String Localite, 
-            String Pays, String Telephone,
-            String Email, String NumTVA, String SiteWeb_Url, String Observations, Int32 Valide, Int32 Bloque, 
-            String TexteBloque, Int32 Attention, String TexteAttention)
-        {
-            try
-            {
-                FirmeDA firme = new FirmeDA();
-                firme.Add(Badge, Designation, Adresse, CodePostal, Localite, Pays, Telephone,
-                    Email, NumTVA, SiteWeb_Url, Observations, Valide, Bloque, TexteBloque, Attention, TexteAttention);
-            }
-            catch
-            {
-                throw;
-            }
-        }
-
-        public void Update(Int32 Id, String Badge, String Designation, String Adresse, String CodePostal,
-            String Localite, String Pays, String Telephone,
-            String Email, String NumTVA, String SiteWeb_Url, String Observations,
+        public void Add(String Licence, String Nom, String Adresse, String CodePostal, String Localite, String Pays,
+            String Telephone, String Email, String NumTVA, String SiteWeb_Url, String Observations,
             Int32 Valide, Int32 Bloque, String TexteBloque, Int32 Attention, String TexteAttention)
         {
             try
             {
-                FirmeDA firme = new FirmeDA();
-                firme.Update(Id, Badge, Designation, Adresse, CodePostal, Localite, Pays, Telephone,
+                TransporteurDA transporteur = new TransporteurDA();
+                transporteur.Add(Licence, Nom, Adresse, CodePostal, Localite, Pays, Telephone,
                     Email, NumTVA, SiteWeb_Url, Observations, Valide, Bloque, TexteBloque, Attention, TexteAttention);
             }
             catch
             {
                 throw;
             }
-           
+        }
+
+        public void Update(Int32 Id, String Licence, String Nom, String Adresse, String CodePostal, String Localite, String Pays,
+            String Telephone, String Email, String NumTVA, String SiteWeb_Url, String Observations,
+            Int32 Valide, Int32 Bloque, String TexteBloque, Int32 Attention, String TexteAttention)
+        {
+            try
+            {
+                TransporteurDA transporteur = new TransporteurDA();
+                transporteur.Update(Id, Licence, Nom, Adresse, CodePostal, Localite, Pays, Telephone,
+                    Email, NumTVA, SiteWeb_Url, Observations, Valide, Bloque, TexteBloque, Attention, TexteAttention);
+            }
+            catch
+            {
+                throw;
+            }
         }
 
         public void Delete(Int32 Id)
         {
             try
             {
-                FirmeDA firme = new FirmeDA();
-                firme.Delete(Id);
+                TransporteurDA transporteur = new TransporteurDA();
+                transporteur.Delete(Id);
             }
             catch
             {
                 throw;
             }
         }
-
-
     }
-
-    
 }
