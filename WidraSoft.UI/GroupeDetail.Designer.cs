@@ -70,7 +70,7 @@ namespace WidraSoft.UI
             this.lbSupprimer = new System.Windows.Forms.LinkLabel();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.lbActualiserDgv = new System.Windows.Forms.LinkLabel();
-            this.panel1 = new System.Windows.Forms.Panel();
+            this.panelDetail = new System.Windows.Forms.Panel();
             this.panelLang.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbUpdating)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Spain_flag)).BeginInit();
@@ -85,7 +85,7 @@ namespace WidraSoft.UI
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
-            this.panel1.SuspendLayout();
+            this.panelDetail.SuspendLayout();
             this.SuspendLayout();
             // 
             // label2
@@ -433,39 +433,39 @@ namespace WidraSoft.UI
             this.lbActualiserDgv.TabStop = true;
             this.lbActualiserDgv.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lbValiderDgv_LinkClicked);
             // 
-            // panel1
+            // panelDetail
             // 
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(86)))), ((int)(((byte)(81)))));
-            this.panel1.Controls.Add(this.txtId);
-            this.panel1.Controls.Add(this.pictureBox4);
-            this.panel1.Controls.Add(this.label1);
-            this.panel1.Controls.Add(this.lbActualiserDgv);
-            this.panel1.Controls.Add(this.txtDateCreation);
-            this.panel1.Controls.Add(this.label2);
-            this.panel1.Controls.Add(this.label6);
-            this.panel1.Controls.Add(this.txtDesignation);
-            this.panel1.Controls.Add(this.DgvUsersList);
-            this.panel1.Controls.Add(this.label3);
-            this.panel1.Controls.Add(this.pbRemoveRow);
-            this.panel1.Controls.Add(this.txtCode);
-            this.panel1.Controls.Add(this.pbAddRow);
-            this.panel1.Controls.Add(this.label4);
-            this.panel1.Controls.Add(this.lblAddDgv);
-            this.panel1.Controls.Add(this.cbLimite);
-            this.panel1.Controls.Add(this.lblRetirerDgv);
-            this.panel1.Controls.Add(this.label7);
-            this.panel1.Controls.Add(this.dgvGroupeDroits);
-            this.panel1.Controls.Add(this.txtNbLimite);
-            this.panel1.Controls.Add(this.label5);
-            resources.ApplyResources(this.panel1, "panel1");
-            this.panel1.Name = "panel1";
+            this.panelDetail.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(86)))), ((int)(((byte)(81)))));
+            this.panelDetail.Controls.Add(this.txtId);
+            this.panelDetail.Controls.Add(this.pictureBox4);
+            this.panelDetail.Controls.Add(this.label1);
+            this.panelDetail.Controls.Add(this.lbActualiserDgv);
+            this.panelDetail.Controls.Add(this.txtDateCreation);
+            this.panelDetail.Controls.Add(this.label2);
+            this.panelDetail.Controls.Add(this.label6);
+            this.panelDetail.Controls.Add(this.txtDesignation);
+            this.panelDetail.Controls.Add(this.DgvUsersList);
+            this.panelDetail.Controls.Add(this.label3);
+            this.panelDetail.Controls.Add(this.pbRemoveRow);
+            this.panelDetail.Controls.Add(this.txtCode);
+            this.panelDetail.Controls.Add(this.pbAddRow);
+            this.panelDetail.Controls.Add(this.label4);
+            this.panelDetail.Controls.Add(this.lblAddDgv);
+            this.panelDetail.Controls.Add(this.cbLimite);
+            this.panelDetail.Controls.Add(this.lblRetirerDgv);
+            this.panelDetail.Controls.Add(this.label7);
+            this.panelDetail.Controls.Add(this.dgvGroupeDroits);
+            this.panelDetail.Controls.Add(this.txtNbLimite);
+            this.panelDetail.Controls.Add(this.label5);
+            resources.ApplyResources(this.panelDetail, "panelDetail");
+            this.panelDetail.Name = "panelDetail";
             // 
             // GroupeDetail
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(62)))), ((int)(((byte)(60)))));
-            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.panelDetail);
             this.Controls.Add(this.panelNavigation);
             this.Controls.Add(this.panelLang);
             this.MaximizeBox = false;
@@ -488,8 +488,8 @@ namespace WidraSoft.UI
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
+            this.panelDetail.ResumeLayout(false);
+            this.panelDetail.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -529,6 +529,6 @@ namespace WidraSoft.UI
         private System.Windows.Forms.LinkLabel lbModifier;
         private System.Windows.Forms.PictureBox pictureBox4;
         private System.Windows.Forms.LinkLabel lbActualiserDgv;
-        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel panelDetail;
     }
 }

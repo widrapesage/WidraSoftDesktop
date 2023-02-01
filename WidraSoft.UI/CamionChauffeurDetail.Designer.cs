@@ -1,6 +1,6 @@
 ﻿namespace WidraSoft.UI
 {
-    partial class GroupeDetailDroits
+    partial class CamionChauffeurDetail
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(GroupeDetailDroits));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CamionChauffeurDetail));
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
@@ -37,25 +37,25 @@
             this.England_flag = new System.Windows.Forms.PictureBox();
             this.France_flag = new System.Windows.Forms.PictureBox();
             this.cbLang = new System.Windows.Forms.ComboBox();
-            this.pictureBox4 = new System.Windows.Forms.PictureBox();
-            this.lblEnregistrerDgv = new System.Windows.Forms.LinkLabel();
-            this.dgvGroupeDroits = new System.Windows.Forms.DataGridView();
             this.panelNavigation = new System.Windows.Forms.Panel();
             this.lblDeselectionner = new System.Windows.Forms.LinkLabel();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.lblSelectionnerTout = new System.Windows.Forms.LinkLabel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.lblEnregistrerDgv = new System.Windows.Forms.LinkLabel();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.panelLayout = new System.Windows.Forms.Panel();
+            this.dgvChauffeurs = new System.Windows.Forms.DataGridView();
             this.panelLang.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Spain_flag)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.England_flag)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.France_flag)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvGroupeDroits)).BeginInit();
             this.panelNavigation.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             this.panelLayout.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvChauffeurs)).BeginInit();
             this.SuspendLayout();
             // 
             // panelLang
@@ -104,64 +104,6 @@
             this.cbLang.FormattingEnabled = true;
             this.cbLang.Name = "cbLang";
             this.cbLang.SelectedIndexChanged += new System.EventHandler(this.cbLang_SelectedIndexChanged);
-            // 
-            // pictureBox4
-            // 
-            resources.ApplyResources(this.pictureBox4, "pictureBox4");
-            this.pictureBox4.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox4.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pictureBox4.Image = global::WidraSoft.UI.Properties.Resources.plus;
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.TabStop = false;
-            // 
-            // lblEnregistrerDgv
-            // 
-            resources.ApplyResources(this.lblEnregistrerDgv, "lblEnregistrerDgv");
-            this.lblEnregistrerDgv.ActiveLinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(190)))), ((int)(((byte)(117)))));
-            this.lblEnregistrerDgv.BackColor = System.Drawing.Color.Transparent;
-            this.lblEnregistrerDgv.ForeColor = System.Drawing.Color.White;
-            this.lblEnregistrerDgv.LinkColor = System.Drawing.Color.White;
-            this.lblEnregistrerDgv.Name = "lblEnregistrerDgv";
-            this.lblEnregistrerDgv.TabStop = true;
-            this.lblEnregistrerDgv.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lblEnregistrerDgv_LinkClicked);
-            // 
-            // dgvGroupeDroits
-            // 
-            resources.ApplyResources(this.dgvGroupeDroits, "dgvGroupeDroits");
-            this.dgvGroupeDroits.AllowUserToAddRows = false;
-            this.dgvGroupeDroits.AllowUserToDeleteRows = false;
-            this.dgvGroupeDroits.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(86)))), ((int)(((byte)(81)))));
-            this.dgvGroupeDroits.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.dgvGroupeDroits.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.Sunken;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(86)))), ((int)(((byte)(77)))));
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Corbel", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(190)))), ((int)(((byte)(117)))));
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvGroupeDroits.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
-            this.dgvGroupeDroits.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle5.BackColor = System.Drawing.Color.Honeydew;
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(86)))), ((int)(((byte)(81)))));
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvGroupeDroits.DefaultCellStyle = dataGridViewCellStyle5;
-            this.dgvGroupeDroits.Name = "dgvGroupeDroits";
-            this.dgvGroupeDroits.ReadOnly = true;
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle6.BackColor = System.Drawing.Color.Honeydew;
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Corbel", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.MediumSeaGreen;
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvGroupeDroits.RowHeadersDefaultCellStyle = dataGridViewCellStyle6;
-            this.dgvGroupeDroits.RowTemplate.Height = 33;
-            this.dgvGroupeDroits.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvGroupeDroits_CellContentClick);
             // 
             // panelNavigation
             // 
@@ -216,13 +158,71 @@
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.TabStop = false;
             // 
+            // lblEnregistrerDgv
+            // 
+            resources.ApplyResources(this.lblEnregistrerDgv, "lblEnregistrerDgv");
+            this.lblEnregistrerDgv.ActiveLinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(190)))), ((int)(((byte)(117)))));
+            this.lblEnregistrerDgv.BackColor = System.Drawing.Color.Transparent;
+            this.lblEnregistrerDgv.ForeColor = System.Drawing.Color.White;
+            this.lblEnregistrerDgv.LinkColor = System.Drawing.Color.White;
+            this.lblEnregistrerDgv.Name = "lblEnregistrerDgv";
+            this.lblEnregistrerDgv.TabStop = true;
+            this.lblEnregistrerDgv.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lblEnregistrerDgv_LinkClicked);
+            // 
+            // pictureBox4
+            // 
+            resources.ApplyResources(this.pictureBox4, "pictureBox4");
+            this.pictureBox4.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox4.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pictureBox4.Image = global::WidraSoft.UI.Properties.Resources.plus;
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.TabStop = false;
+            // 
             // panelLayout
             // 
             resources.ApplyResources(this.panelLayout, "panelLayout");
-            this.panelLayout.Controls.Add(this.dgvGroupeDroits);
+            this.panelLayout.Controls.Add(this.dgvChauffeurs);
             this.panelLayout.Name = "panelLayout";
             // 
-            // GroupeDetailDroits
+            // dgvChauffeurs
+            // 
+            resources.ApplyResources(this.dgvChauffeurs, "dgvChauffeurs");
+            this.dgvChauffeurs.AllowUserToAddRows = false;
+            this.dgvChauffeurs.AllowUserToDeleteRows = false;
+            this.dgvChauffeurs.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(86)))), ((int)(((byte)(81)))));
+            this.dgvChauffeurs.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dgvChauffeurs.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.Sunken;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(86)))), ((int)(((byte)(77)))));
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Corbel", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(190)))), ((int)(((byte)(117)))));
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvChauffeurs.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            this.dgvChauffeurs.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.Honeydew;
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(86)))), ((int)(((byte)(81)))));
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvChauffeurs.DefaultCellStyle = dataGridViewCellStyle5;
+            this.dgvChauffeurs.Name = "dgvChauffeurs";
+            this.dgvChauffeurs.ReadOnly = true;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.Honeydew;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Corbel", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.MediumSeaGreen;
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvChauffeurs.RowHeadersDefaultCellStyle = dataGridViewCellStyle6;
+            this.dgvChauffeurs.RowTemplate.Height = 33;
+            this.dgvChauffeurs.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvChauffeurs_CellContentClick);
+            // 
+            // CamionChauffeurDetail
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -231,20 +231,20 @@
             this.Controls.Add(this.panelNavigation);
             this.Controls.Add(this.panelLang);
             this.MaximizeBox = false;
-            this.Name = "GroupeDetailDroits";
-            this.Load += new System.EventHandler(this.GroupeDetailDroits_Load);
+            this.Name = "CamionChauffeurDetail";
+            this.Load += new System.EventHandler(this.CamionChauffeurDetail_Load);
             this.panelLang.ResumeLayout(false);
             this.panelLang.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Spain_flag)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.England_flag)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.France_flag)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvGroupeDroits)).EndInit();
             this.panelNavigation.ResumeLayout(false);
             this.panelNavigation.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             this.panelLayout.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvChauffeurs)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -256,14 +256,14 @@
         private System.Windows.Forms.PictureBox England_flag;
         private System.Windows.Forms.PictureBox France_flag;
         private System.Windows.Forms.ComboBox cbLang;
-        private System.Windows.Forms.DataGridView dgvGroupeDroits;
         private System.Windows.Forms.Panel panelNavigation;
-        private System.Windows.Forms.LinkLabel lblEnregistrerDgv;
-        private System.Windows.Forms.Panel panelLayout;
-        private System.Windows.Forms.PictureBox pictureBox4;
-        private System.Windows.Forms.LinkLabel lblSelectionnerTout;
-        private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.LinkLabel lblDeselectionner;
         private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.LinkLabel lblSelectionnerTout;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.LinkLabel lblEnregistrerDgv;
+        private System.Windows.Forms.PictureBox pictureBox4;
+        private System.Windows.Forms.Panel panelLayout;
+        private System.Windows.Forms.DataGridView dgvChauffeurs;
     }
 }

@@ -88,7 +88,7 @@
     <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;label2.Parent" xml:space="preserve">
-    <value>panel1</value>
+    <value>panelDetail</value>
   </data>
   <data name="&gt;&gt;label2.ZOrder" xml:space="preserve">
     <value>5</value>
@@ -115,7 +115,7 @@
     <value>System.Windows.Forms.TextBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;txtDateCreation.Parent" xml:space="preserve">
-    <value>panel1</value>
+    <value>panelDetail</value>
   </data>
   <data name="&gt;&gt;txtDateCreation.ZOrder" xml:space="preserve">
     <value>4</value>
@@ -148,7 +148,7 @@
     <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;label1.Parent" xml:space="preserve">
-    <value>panel1</value>
+    <value>panelDetail</value>
   </data>
   <data name="&gt;&gt;label1.ZOrder" xml:space="preserve">
     <value>2</value>
@@ -178,7 +178,7 @@
     <value>System.Windows.Forms.TextBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;txtId.Parent" xml:space="preserve">
-    <value>panel1</value>
+    <value>panelDetail</value>
   </data>
   <data name="&gt;&gt;txtId.ZOrder" xml:space="preserve">
     <value>0</value>
@@ -211,7 +211,7 @@
     <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;label3.Parent" xml:space="preserve">
-    <value>panel1</value>
+    <value>panelDetail</value>
   </data>
   <data name="&gt;&gt;label3.ZOrder" xml:space="preserve">
     <value>9</value>
@@ -238,7 +238,7 @@
     <value>System.Windows.Forms.TextBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;txtDesignation.Parent" xml:space="preserve">
-    <value>panel1</value>
+    <value>panelDetail</value>
   </data>
   <data name="&gt;&gt;txtDesignation.ZOrder" xml:space="preserve">
     <value>7</value>
@@ -271,7 +271,7 @@
     <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;label4.Parent" xml:space="preserve">
-    <value>panel1</value>
+    <value>panelDetail</value>
   </data>
   <data name="&gt;&gt;label4.ZOrder" xml:space="preserve">
     <value>13</value>
@@ -298,7 +298,7 @@
     <value>System.Windows.Forms.TextBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;txtCode.Parent" xml:space="preserve">
-    <value>panel1</value>
+    <value>panelDetail</value>
   </data>
   <data name="&gt;&gt;txtCode.ZOrder" xml:space="preserve">
     <value>11</value>
@@ -331,7 +331,7 @@
     <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;label7.Parent" xml:space="preserve">
-    <value>panel1</value>
+    <value>panelDetail</value>
   </data>
   <data name="&gt;&gt;label7.ZOrder" xml:space="preserve">
     <value>17</value>
@@ -364,7 +364,7 @@
     <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;cbLimite.Parent" xml:space="preserve">
-    <value>panel1</value>
+    <value>panelDetail</value>
   </data>
   <data name="&gt;&gt;cbLimite.ZOrder" xml:space="preserve">
     <value>15</value>
@@ -397,7 +397,7 @@
     <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;label5.Parent" xml:space="preserve">
-    <value>panel1</value>
+    <value>panelDetail</value>
   </data>
   <data name="&gt;&gt;label5.ZOrder" xml:space="preserve">
     <value>20</value>
@@ -424,7 +424,7 @@
     <value>System.Windows.Forms.TextBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;txtNbLimite.Parent" xml:space="preserve">
-    <value>panel1</value>
+    <value>panelDetail</value>
   </data>
   <data name="&gt;&gt;txtNbLimite.ZOrder" xml:space="preserve">
     <value>19</value>
@@ -605,7 +605,7 @@
     <value>System.Windows.Forms.DataGridView, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;dgvGroupeDroits.Parent" xml:space="preserve">
-    <value>panel1</value>
+    <value>panelDetail</value>
   </data>
   <data name="&gt;&gt;dgvGroupeDroits.ZOrder" xml:space="preserve">
     <value>18</value>
@@ -638,7 +638,7 @@
     <value>System.Windows.Forms.LinkLabel, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;lblRetirerDgv.Parent" xml:space="preserve">
-    <value>panel1</value>
+    <value>panelDetail</value>
   </data>
   <data name="&gt;&gt;lblRetirerDgv.ZOrder" xml:space="preserve">
     <value>16</value>
@@ -677,7 +677,7 @@
     <value>System.Windows.Forms.LinkLabel, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;lblAddDgv.Parent" xml:space="preserve">
-    <value>panel1</value>
+    <value>panelDetail</value>
   </data>
   <data name="&gt;&gt;lblAddDgv.ZOrder" xml:space="preserve">
     <value>14</value>
@@ -704,7 +704,7 @@
     <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;pbAddRow.Parent" xml:space="preserve">
-    <value>panel1</value>
+    <value>panelDetail</value>
   </data>
   <data name="&gt;&gt;pbAddRow.ZOrder" xml:space="preserve">
     <value>12</value>
@@ -731,7 +731,7 @@
     <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;pbRemoveRow.Parent" xml:space="preserve">
-    <value>panel1</value>
+    <value>panelDetail</value>
   </data>
   <data name="&gt;&gt;pbRemoveRow.ZOrder" xml:space="preserve">
     <value>10</value>
@@ -755,7 +755,7 @@
     <value>System.Windows.Forms.DataGridView, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;DgvUsersList.Parent" xml:space="preserve">
-    <value>panel1</value>
+    <value>panelDetail</value>
   </data>
   <data name="&gt;&gt;DgvUsersList.ZOrder" xml:space="preserve">
     <value>8</value>
@@ -791,7 +791,7 @@
     <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;label6.Parent" xml:space="preserve">
-    <value>panel1</value>
+    <value>panelDetail</value>
   </data>
   <data name="&gt;&gt;label6.ZOrder" xml:space="preserve">
     <value>6</value>
@@ -1034,7 +1034,7 @@
     <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;pictureBox4.Parent" xml:space="preserve">
-    <value>panel1</value>
+    <value>panelDetail</value>
   </data>
   <data name="&gt;&gt;pictureBox4.ZOrder" xml:space="preserve">
     <value>1</value>
@@ -1067,33 +1067,33 @@
     <value>System.Windows.Forms.LinkLabel, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;lbActualiserDgv.Parent" xml:space="preserve">
-    <value>panel1</value>
+    <value>panelDetail</value>
   </data>
   <data name="&gt;&gt;lbActualiserDgv.ZOrder" xml:space="preserve">
     <value>3</value>
   </data>
-  <data name="panel1.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+  <data name="panelDetail.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Fill</value>
   </data>
-  <data name="panel1.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="panelDetail.Location" type="System.Drawing.Point, System.Drawing">
     <value>0, 70</value>
   </data>
-  <data name="panel1.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="panelDetail.Size" type="System.Drawing.Size, System.Drawing">
     <value>1192, 753</value>
   </data>
-  <data name="panel1.TabIndex" type="System.Int32, mscorlib">
+  <data name="panelDetail.TabIndex" type="System.Int32, mscorlib">
     <value>83</value>
   </data>
-  <data name="&gt;&gt;panel1.Name" xml:space="preserve">
-    <value>panel1</value>
+  <data name="&gt;&gt;panelDetail.Name" xml:space="preserve">
+    <value>panelDetail</value>
   </data>
-  <data name="&gt;&gt;panel1.Type" xml:space="preserve">
+  <data name="&gt;&gt;panelDetail.Type" xml:space="preserve">
     <value>System.Windows.Forms.Panel, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;panel1.Parent" xml:space="preserve">
+  <data name="&gt;&gt;panelDetail.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
-  <data name="&gt;&gt;panel1.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;panelDetail.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">

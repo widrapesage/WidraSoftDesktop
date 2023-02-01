@@ -29,6 +29,8 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CamionDetail));
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.label4 = new System.Windows.Forms.Label();
             this.txtPlaque = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
@@ -70,6 +72,22 @@
             this.lbAjouter = new System.Windows.Forms.LinkLabel();
             this.lbSupprimer = new System.Windows.Forms.LinkLabel();
             this.panelDetail = new System.Windows.Forms.Panel();
+            this.dgvTransporteurs = new System.Windows.Forms.DataGridView();
+            this.dgvChauffeurs = new System.Windows.Forms.DataGridView();
+            this.label11 = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
+            this.pictureBox5 = new System.Windows.Forms.PictureBox();
+            this.lbActualiserDgvTransporteurs = new System.Windows.Forms.LinkLabel();
+            this.pictureBox6 = new System.Windows.Forms.PictureBox();
+            this.pictureBox7 = new System.Windows.Forms.PictureBox();
+            this.lblAddDgvTransporteurs = new System.Windows.Forms.LinkLabel();
+            this.lblRetirerDgvTransporteurs = new System.Windows.Forms.LinkLabel();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
+            this.lbActualiserDgvChauffeurs = new System.Windows.Forms.LinkLabel();
+            this.pbRemoveRow = new System.Windows.Forms.PictureBox();
+            this.pbAddRow = new System.Windows.Forms.PictureBox();
+            this.lblAddDgvChauffeurs = new System.Windows.Forms.LinkLabel();
+            this.lblRetirerDgvChauffeurs = new System.Windows.Forms.LinkLabel();
             this.panelLang.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbUpdating)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Spain_flag)).BeginInit();
@@ -80,6 +98,14 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.panelDetail.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvTransporteurs)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvChauffeurs)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbRemoveRow)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbAddRow)).BeginInit();
             this.SuspendLayout();
             // 
             // label4
@@ -90,8 +116,8 @@
             // 
             // txtPlaque
             // 
-            this.txtPlaque.BackColor = System.Drawing.Color.Honeydew;
             resources.ApplyResources(this.txtPlaque, "txtPlaque");
+            this.txtPlaque.BackColor = System.Drawing.Color.Honeydew;
             this.txtPlaque.ForeColor = System.Drawing.Color.Black;
             this.txtPlaque.Name = "txtPlaque";
             // 
@@ -109,16 +135,16 @@
             // 
             // txtDateCreation
             // 
-            this.txtDateCreation.BackColor = System.Drawing.Color.Honeydew;
             resources.ApplyResources(this.txtDateCreation, "txtDateCreation");
+            this.txtDateCreation.BackColor = System.Drawing.Color.Honeydew;
             this.txtDateCreation.ForeColor = System.Drawing.Color.Black;
             this.txtDateCreation.Name = "txtDateCreation";
             this.txtDateCreation.ReadOnly = true;
             // 
             // txtBadge
             // 
-            this.txtBadge.BackColor = System.Drawing.Color.Honeydew;
             resources.ApplyResources(this.txtBadge, "txtBadge");
+            this.txtBadge.BackColor = System.Drawing.Color.Honeydew;
             this.txtBadge.ForeColor = System.Drawing.Color.Black;
             this.txtBadge.Name = "txtBadge";
             // 
@@ -130,8 +156,8 @@
             // 
             // txtId
             // 
-            this.txtId.BackColor = System.Drawing.Color.Honeydew;
             resources.ApplyResources(this.txtId, "txtId");
+            this.txtId.BackColor = System.Drawing.Color.Honeydew;
             this.txtId.ForeColor = System.Drawing.Color.Black;
             this.txtId.Name = "txtId";
             // 
@@ -143,8 +169,8 @@
             // 
             // txtCode
             // 
-            this.txtCode.BackColor = System.Drawing.Color.Honeydew;
             resources.ApplyResources(this.txtCode, "txtCode");
+            this.txtCode.BackColor = System.Drawing.Color.Honeydew;
             this.txtCode.ForeColor = System.Drawing.Color.Black;
             this.txtCode.Name = "txtCode";
             // 
@@ -156,8 +182,8 @@
             // 
             // txtTare
             // 
-            this.txtTare.BackColor = System.Drawing.Color.Honeydew;
             resources.ApplyResources(this.txtTare, "txtTare");
+            this.txtTare.BackColor = System.Drawing.Color.Honeydew;
             this.txtTare.ForeColor = System.Drawing.Color.Black;
             this.txtTare.Name = "txtTare";
             // 
@@ -184,8 +210,8 @@
             // 
             // txtObservations
             // 
-            this.txtObservations.BackColor = System.Drawing.Color.Honeydew;
             resources.ApplyResources(this.txtObservations, "txtObservations");
+            this.txtObservations.BackColor = System.Drawing.Color.Honeydew;
             this.txtObservations.ForeColor = System.Drawing.Color.Black;
             this.txtObservations.Name = "txtObservations";
             // 
@@ -197,8 +223,8 @@
             // 
             // txtAlerte
             // 
-            this.txtAlerte.BackColor = System.Drawing.Color.Honeydew;
             resources.ApplyResources(this.txtAlerte, "txtAlerte");
+            this.txtAlerte.BackColor = System.Drawing.Color.Honeydew;
             this.txtAlerte.ForeColor = System.Drawing.Color.Black;
             this.txtAlerte.Name = "txtAlerte";
             // 
@@ -218,8 +244,8 @@
             // 
             // txtBlocage
             // 
-            this.txtBlocage.BackColor = System.Drawing.Color.Honeydew;
             resources.ApplyResources(this.txtBlocage, "txtBlocage");
+            this.txtBlocage.BackColor = System.Drawing.Color.Honeydew;
             this.txtBlocage.ForeColor = System.Drawing.Color.Black;
             this.txtBlocage.Name = "txtBlocage";
             // 
@@ -259,54 +285,54 @@
             // 
             // panelLang
             // 
+            resources.ApplyResources(this.panelLang, "panelLang");
             this.panelLang.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(86)))), ((int)(((byte)(81)))));
             this.panelLang.Controls.Add(this.pbUpdating);
             this.panelLang.Controls.Add(this.Spain_flag);
             this.panelLang.Controls.Add(this.England_flag);
             this.panelLang.Controls.Add(this.France_flag);
             this.panelLang.Controls.Add(this.cbLang);
-            resources.ApplyResources(this.panelLang, "panelLang");
             this.panelLang.Name = "panelLang";
             // 
             // pbUpdating
             // 
-            this.pbUpdating.Image = global::WidraSoft.UI.Properties.Resources.pencil;
             resources.ApplyResources(this.pbUpdating, "pbUpdating");
+            this.pbUpdating.Image = global::WidraSoft.UI.Properties.Resources.pencil;
             this.pbUpdating.Name = "pbUpdating";
             this.pbUpdating.TabStop = false;
             // 
             // Spain_flag
             // 
+            resources.ApplyResources(this.Spain_flag, "Spain_flag");
             this.Spain_flag.BackColor = System.Drawing.Color.Transparent;
             this.Spain_flag.Cursor = System.Windows.Forms.Cursors.Hand;
             this.Spain_flag.Image = global::WidraSoft.UI.Properties.Resources.spain;
-            resources.ApplyResources(this.Spain_flag, "Spain_flag");
             this.Spain_flag.Name = "Spain_flag";
             this.Spain_flag.TabStop = false;
             // 
             // England_flag
             // 
+            resources.ApplyResources(this.England_flag, "England_flag");
             this.England_flag.BackColor = System.Drawing.Color.Transparent;
             this.England_flag.Cursor = System.Windows.Forms.Cursors.Hand;
             this.England_flag.Image = global::WidraSoft.UI.Properties.Resources.united_kingdom;
-            resources.ApplyResources(this.England_flag, "England_flag");
             this.England_flag.Name = "England_flag";
             this.England_flag.TabStop = false;
             // 
             // France_flag
             // 
+            resources.ApplyResources(this.France_flag, "France_flag");
             this.France_flag.BackColor = System.Drawing.Color.Transparent;
             this.France_flag.Cursor = System.Windows.Forms.Cursors.Hand;
             this.France_flag.Image = global::WidraSoft.UI.Properties.Resources.france;
-            resources.ApplyResources(this.France_flag, "France_flag");
             this.France_flag.Name = "France_flag";
             this.France_flag.TabStop = false;
             // 
             // cbLang
             // 
+            resources.ApplyResources(this.cbLang, "cbLang");
             this.cbLang.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(86)))), ((int)(((byte)(77)))));
             this.cbLang.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            resources.ApplyResources(this.cbLang, "cbLang");
             this.cbLang.ForeColor = System.Drawing.Color.White;
             this.cbLang.FormattingEnabled = true;
             this.cbLang.Name = "cbLang";
@@ -314,6 +340,7 @@
             // 
             // panelNavigation
             // 
+            resources.ApplyResources(this.panelNavigation, "panelNavigation");
             this.panelNavigation.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(62)))), ((int)(((byte)(60)))));
             this.panelNavigation.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panelNavigation.Controls.Add(this.pictureBox3);
@@ -322,22 +349,21 @@
             this.panelNavigation.Controls.Add(this.pictureBox2);
             this.panelNavigation.Controls.Add(this.lbAjouter);
             this.panelNavigation.Controls.Add(this.lbSupprimer);
-            resources.ApplyResources(this.panelNavigation, "panelNavigation");
             this.panelNavigation.Name = "panelNavigation";
             // 
             // pictureBox3
             // 
+            resources.ApplyResources(this.pictureBox3, "pictureBox3");
             this.pictureBox3.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox3.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBox3.Image = global::WidraSoft.UI.Properties.Resources.update;
-            resources.ApplyResources(this.pictureBox3, "pictureBox3");
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.TabStop = false;
             // 
             // lbModifier
             // 
-            this.lbModifier.ActiveLinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(190)))), ((int)(((byte)(117)))));
             resources.ApplyResources(this.lbModifier, "lbModifier");
+            this.lbModifier.ActiveLinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(190)))), ((int)(((byte)(117)))));
             this.lbModifier.BackColor = System.Drawing.Color.Transparent;
             this.lbModifier.ForeColor = System.Drawing.Color.White;
             this.lbModifier.LinkColor = System.Drawing.Color.White;
@@ -347,26 +373,26 @@
             // 
             // pictureBox1
             // 
+            resources.ApplyResources(this.pictureBox1, "pictureBox1");
             this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBox1.Image = global::WidraSoft.UI.Properties.Resources.remove;
-            resources.ApplyResources(this.pictureBox1, "pictureBox1");
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.TabStop = false;
             // 
             // pictureBox2
             // 
+            resources.ApplyResources(this.pictureBox2, "pictureBox2");
             this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox2.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBox2.Image = global::WidraSoft.UI.Properties.Resources.add;
-            resources.ApplyResources(this.pictureBox2, "pictureBox2");
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.TabStop = false;
             // 
             // lbAjouter
             // 
-            this.lbAjouter.ActiveLinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(190)))), ((int)(((byte)(117)))));
             resources.ApplyResources(this.lbAjouter, "lbAjouter");
+            this.lbAjouter.ActiveLinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(190)))), ((int)(((byte)(117)))));
             this.lbAjouter.BackColor = System.Drawing.Color.Transparent;
             this.lbAjouter.ForeColor = System.Drawing.Color.White;
             this.lbAjouter.LinkColor = System.Drawing.Color.White;
@@ -376,8 +402,8 @@
             // 
             // lbSupprimer
             // 
-            this.lbSupprimer.ActiveLinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(190)))), ((int)(((byte)(117)))));
             resources.ApplyResources(this.lbSupprimer, "lbSupprimer");
+            this.lbSupprimer.ActiveLinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(190)))), ((int)(((byte)(117)))));
             this.lbSupprimer.BackColor = System.Drawing.Color.Transparent;
             this.lbSupprimer.ForeColor = System.Drawing.Color.White;
             this.lbSupprimer.LinkColor = System.Drawing.Color.White;
@@ -387,7 +413,24 @@
             // 
             // panelDetail
             // 
+            resources.ApplyResources(this.panelDetail, "panelDetail");
             this.panelDetail.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(86)))), ((int)(((byte)(81)))));
+            this.panelDetail.Controls.Add(this.dgvTransporteurs);
+            this.panelDetail.Controls.Add(this.dgvChauffeurs);
+            this.panelDetail.Controls.Add(this.label11);
+            this.panelDetail.Controls.Add(this.label10);
+            this.panelDetail.Controls.Add(this.pictureBox5);
+            this.panelDetail.Controls.Add(this.lbActualiserDgvTransporteurs);
+            this.panelDetail.Controls.Add(this.pictureBox6);
+            this.panelDetail.Controls.Add(this.pictureBox7);
+            this.panelDetail.Controls.Add(this.lblAddDgvTransporteurs);
+            this.panelDetail.Controls.Add(this.lblRetirerDgvTransporteurs);
+            this.panelDetail.Controls.Add(this.pictureBox4);
+            this.panelDetail.Controls.Add(this.lbActualiserDgvChauffeurs);
+            this.panelDetail.Controls.Add(this.pbRemoveRow);
+            this.panelDetail.Controls.Add(this.pbAddRow);
+            this.panelDetail.Controls.Add(this.lblAddDgvChauffeurs);
+            this.panelDetail.Controls.Add(this.lblRetirerDgvChauffeurs);
             this.panelDetail.Controls.Add(this.txtDateCreation);
             this.panelDetail.Controls.Add(this.txtCode);
             this.panelDetail.Controls.Add(this.txtPlaque);
@@ -415,8 +458,179 @@
             this.panelDetail.Controls.Add(this.label1);
             this.panelDetail.Controls.Add(this.txtBloque);
             this.panelDetail.Controls.Add(this.txtValide);
-            resources.ApplyResources(this.panelDetail, "panelDetail");
             this.panelDetail.Name = "panelDetail";
+            // 
+            // dgvTransporteurs
+            // 
+            resources.ApplyResources(this.dgvTransporteurs, "dgvTransporteurs");
+            this.dgvTransporteurs.AllowUserToAddRows = false;
+            this.dgvTransporteurs.AllowUserToDeleteRows = false;
+            this.dgvTransporteurs.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(86)))), ((int)(((byte)(81)))));
+            this.dgvTransporteurs.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dgvTransporteurs.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.Sunken;
+            this.dgvTransporteurs.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.Honeydew;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Corbel", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(86)))), ((int)(((byte)(81)))));
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvTransporteurs.DefaultCellStyle = dataGridViewCellStyle3;
+            this.dgvTransporteurs.Name = "dgvTransporteurs";
+            this.dgvTransporteurs.RowTemplate.Height = 25;
+            // 
+            // dgvChauffeurs
+            // 
+            resources.ApplyResources(this.dgvChauffeurs, "dgvChauffeurs");
+            this.dgvChauffeurs.AllowUserToAddRows = false;
+            this.dgvChauffeurs.AllowUserToDeleteRows = false;
+            this.dgvChauffeurs.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(86)))), ((int)(((byte)(81)))));
+            this.dgvChauffeurs.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dgvChauffeurs.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.Sunken;
+            this.dgvChauffeurs.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.Honeydew;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Corbel", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(86)))), ((int)(((byte)(81)))));
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvChauffeurs.DefaultCellStyle = dataGridViewCellStyle4;
+            this.dgvChauffeurs.Name = "dgvChauffeurs";
+            this.dgvChauffeurs.RowTemplate.Height = 25;
+            // 
+            // label11
+            // 
+            resources.ApplyResources(this.label11, "label11");
+            this.label11.ForeColor = System.Drawing.Color.White;
+            this.label11.Name = "label11";
+            // 
+            // label10
+            // 
+            resources.ApplyResources(this.label10, "label10");
+            this.label10.ForeColor = System.Drawing.Color.White;
+            this.label10.Name = "label10";
+            // 
+            // pictureBox5
+            // 
+            resources.ApplyResources(this.pictureBox5, "pictureBox5");
+            this.pictureBox5.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox5.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pictureBox5.Image = global::WidraSoft.UI.Properties.Resources.refresh;
+            this.pictureBox5.Name = "pictureBox5";
+            this.pictureBox5.TabStop = false;
+            // 
+            // lbActualiserDgvTransporteurs
+            // 
+            resources.ApplyResources(this.lbActualiserDgvTransporteurs, "lbActualiserDgvTransporteurs");
+            this.lbActualiserDgvTransporteurs.ActiveLinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(190)))), ((int)(((byte)(117)))));
+            this.lbActualiserDgvTransporteurs.BackColor = System.Drawing.Color.Transparent;
+            this.lbActualiserDgvTransporteurs.ForeColor = System.Drawing.Color.White;
+            this.lbActualiserDgvTransporteurs.LinkColor = System.Drawing.Color.White;
+            this.lbActualiserDgvTransporteurs.Name = "lbActualiserDgvTransporteurs";
+            this.lbActualiserDgvTransporteurs.TabStop = true;
+            this.lbActualiserDgvTransporteurs.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lbActualiserDgvTransporteurs_LinkClicked);
+            // 
+            // pictureBox6
+            // 
+            resources.ApplyResources(this.pictureBox6, "pictureBox6");
+            this.pictureBox6.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox6.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pictureBox6.Image = global::WidraSoft.UI.Properties.Resources.remove;
+            this.pictureBox6.Name = "pictureBox6";
+            this.pictureBox6.TabStop = false;
+            // 
+            // pictureBox7
+            // 
+            resources.ApplyResources(this.pictureBox7, "pictureBox7");
+            this.pictureBox7.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox7.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pictureBox7.Image = global::WidraSoft.UI.Properties.Resources.plus;
+            this.pictureBox7.Name = "pictureBox7";
+            this.pictureBox7.TabStop = false;
+            // 
+            // lblAddDgvTransporteurs
+            // 
+            resources.ApplyResources(this.lblAddDgvTransporteurs, "lblAddDgvTransporteurs");
+            this.lblAddDgvTransporteurs.ActiveLinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(190)))), ((int)(((byte)(117)))));
+            this.lblAddDgvTransporteurs.BackColor = System.Drawing.Color.Transparent;
+            this.lblAddDgvTransporteurs.ForeColor = System.Drawing.Color.White;
+            this.lblAddDgvTransporteurs.LinkColor = System.Drawing.Color.White;
+            this.lblAddDgvTransporteurs.Name = "lblAddDgvTransporteurs";
+            this.lblAddDgvTransporteurs.TabStop = true;
+            this.lblAddDgvTransporteurs.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lblAddDgvTransporteurs_LinkClicked);
+            // 
+            // lblRetirerDgvTransporteurs
+            // 
+            resources.ApplyResources(this.lblRetirerDgvTransporteurs, "lblRetirerDgvTransporteurs");
+            this.lblRetirerDgvTransporteurs.ActiveLinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(190)))), ((int)(((byte)(117)))));
+            this.lblRetirerDgvTransporteurs.BackColor = System.Drawing.Color.Transparent;
+            this.lblRetirerDgvTransporteurs.ForeColor = System.Drawing.Color.White;
+            this.lblRetirerDgvTransporteurs.LinkColor = System.Drawing.Color.White;
+            this.lblRetirerDgvTransporteurs.Name = "lblRetirerDgvTransporteurs";
+            this.lblRetirerDgvTransporteurs.TabStop = true;
+            this.lblRetirerDgvTransporteurs.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lblRetirerDgvTransporteurs_LinkClicked);
+            // 
+            // pictureBox4
+            // 
+            resources.ApplyResources(this.pictureBox4, "pictureBox4");
+            this.pictureBox4.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox4.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pictureBox4.Image = global::WidraSoft.UI.Properties.Resources.refresh;
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.TabStop = false;
+            // 
+            // lbActualiserDgvChauffeurs
+            // 
+            resources.ApplyResources(this.lbActualiserDgvChauffeurs, "lbActualiserDgvChauffeurs");
+            this.lbActualiserDgvChauffeurs.ActiveLinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(190)))), ((int)(((byte)(117)))));
+            this.lbActualiserDgvChauffeurs.BackColor = System.Drawing.Color.Transparent;
+            this.lbActualiserDgvChauffeurs.ForeColor = System.Drawing.Color.White;
+            this.lbActualiserDgvChauffeurs.LinkColor = System.Drawing.Color.White;
+            this.lbActualiserDgvChauffeurs.Name = "lbActualiserDgvChauffeurs";
+            this.lbActualiserDgvChauffeurs.TabStop = true;
+            this.lbActualiserDgvChauffeurs.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lbActualiserDgvChauffeurs_LinkClicked);
+            // 
+            // pbRemoveRow
+            // 
+            resources.ApplyResources(this.pbRemoveRow, "pbRemoveRow");
+            this.pbRemoveRow.BackColor = System.Drawing.Color.Transparent;
+            this.pbRemoveRow.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pbRemoveRow.Image = global::WidraSoft.UI.Properties.Resources.remove;
+            this.pbRemoveRow.Name = "pbRemoveRow";
+            this.pbRemoveRow.TabStop = false;
+            // 
+            // pbAddRow
+            // 
+            resources.ApplyResources(this.pbAddRow, "pbAddRow");
+            this.pbAddRow.BackColor = System.Drawing.Color.Transparent;
+            this.pbAddRow.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pbAddRow.Image = global::WidraSoft.UI.Properties.Resources.plus;
+            this.pbAddRow.Name = "pbAddRow";
+            this.pbAddRow.TabStop = false;
+            // 
+            // lblAddDgvChauffeurs
+            // 
+            resources.ApplyResources(this.lblAddDgvChauffeurs, "lblAddDgvChauffeurs");
+            this.lblAddDgvChauffeurs.ActiveLinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(190)))), ((int)(((byte)(117)))));
+            this.lblAddDgvChauffeurs.BackColor = System.Drawing.Color.Transparent;
+            this.lblAddDgvChauffeurs.ForeColor = System.Drawing.Color.White;
+            this.lblAddDgvChauffeurs.LinkColor = System.Drawing.Color.White;
+            this.lblAddDgvChauffeurs.Name = "lblAddDgvChauffeurs";
+            this.lblAddDgvChauffeurs.TabStop = true;
+            this.lblAddDgvChauffeurs.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lblAddDgvChauffeurs_LinkClicked);
+            // 
+            // lblRetirerDgvChauffeurs
+            // 
+            resources.ApplyResources(this.lblRetirerDgvChauffeurs, "lblRetirerDgvChauffeurs");
+            this.lblRetirerDgvChauffeurs.ActiveLinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(190)))), ((int)(((byte)(117)))));
+            this.lblRetirerDgvChauffeurs.BackColor = System.Drawing.Color.Transparent;
+            this.lblRetirerDgvChauffeurs.ForeColor = System.Drawing.Color.White;
+            this.lblRetirerDgvChauffeurs.LinkColor = System.Drawing.Color.White;
+            this.lblRetirerDgvChauffeurs.Name = "lblRetirerDgvChauffeurs";
+            this.lblRetirerDgvChauffeurs.TabStop = true;
+            this.lblRetirerDgvChauffeurs.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lblRetirerDgvChauffeurs_LinkClicked);
             // 
             // CamionDetail
             // 
@@ -426,7 +640,7 @@
             this.Controls.Add(this.panelDetail);
             this.Controls.Add(this.panelNavigation);
             this.Controls.Add(this.panelLang);
-            this.ForeColor = System.Drawing.Color.White;
+            this.ForeColor = System.Drawing.SystemColors.ControlText;
             this.MaximizeBox = false;
             this.Name = "CamionDetail";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.CamionDetail_FormClosing);
@@ -444,6 +658,14 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.panelDetail.ResumeLayout(false);
             this.panelDetail.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvTransporteurs)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvChauffeurs)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbRemoveRow)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbAddRow)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -490,5 +712,21 @@
         private System.Windows.Forms.LinkLabel lbAjouter;
         private System.Windows.Forms.LinkLabel lbSupprimer;
         private System.Windows.Forms.Panel panelDetail;
+        private System.Windows.Forms.PictureBox pictureBox4;
+        private System.Windows.Forms.LinkLabel lbActualiserDgvChauffeurs;
+        private System.Windows.Forms.PictureBox pbRemoveRow;
+        private System.Windows.Forms.PictureBox pbAddRow;
+        private System.Windows.Forms.LinkLabel lblAddDgvChauffeurs;
+        private System.Windows.Forms.LinkLabel lblRetirerDgvChauffeurs;
+        private System.Windows.Forms.PictureBox pictureBox5;
+        private System.Windows.Forms.LinkLabel lbActualiserDgvTransporteurs;
+        private System.Windows.Forms.PictureBox pictureBox6;
+        private System.Windows.Forms.PictureBox pictureBox7;
+        private System.Windows.Forms.LinkLabel lblAddDgvTransporteurs;
+        private System.Windows.Forms.LinkLabel lblRetirerDgvTransporteurs;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.DataGridView dgvChauffeurs;
+        private System.Windows.Forms.DataGridView dgvTransporteurs;
     }
 }

@@ -58,88 +58,35 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="label2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>60, 19</value>
+  <data name="lblDeselectionner.Location" type="System.Drawing.Point, System.Drawing">
+    <value>326, 7</value>
   </data>
-  <data name="label2.Text" xml:space="preserve">
-    <value>Created</value>
+  <data name="lblDeselectionner.Size" type="System.Drawing.Size, System.Drawing">
+    <value>95, 18</value>
   </data>
-  <data name="label3.Size" type="System.Drawing.Size, System.Drawing">
-    <value>76, 19</value>
+  <data name="lblDeselectionner.Text" xml:space="preserve">
+    <value>Deseleccionar</value>
   </data>
-  <data name="label3.Text" xml:space="preserve">
-    <value>Last name</value>
+  <data name="pictureBox2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>306, 9</value>
   </data>
-  <data name="label4.Size" type="System.Drawing.Size, System.Drawing">
-    <value>77, 19</value>
+  <data name="lblSelectionnerTout.Location" type="System.Drawing.Point, System.Drawing">
+    <value>178, 7</value>
   </data>
-  <data name="label4.Text" xml:space="preserve">
-    <value>First name</value>
+  <data name="lblSelectionnerTout.Size" type="System.Drawing.Size, System.Drawing">
+    <value>111, 18</value>
   </data>
-  <data name="label6.Size" type="System.Drawing.Size, System.Drawing">
-    <value>71, 19</value>
-  </data>
-  <data name="label6.Text" xml:space="preserve">
-    <value>Password</value>
-  </data>
-  <data name="label7.Size" type="System.Drawing.Size, System.Drawing">
-    <value>48, 19</value>
-  </data>
-  <data name="label7.Text" xml:space="preserve">
-    <value>Group</value>
-  </data>
-  <data name="pictureBox3.Location" type="System.Drawing.Point, System.Drawing">
-    <value>131, 9</value>
-  </data>
-  <data name="lbModifier.Location" type="System.Drawing.Point, System.Drawing">
-    <value>155, 8</value>
-  </data>
-  <data name="lbModifier.Size" type="System.Drawing.Size, System.Drawing">
-    <value>32, 18</value>
-  </data>
-  <data name="lbModifier.Text" xml:space="preserve">
-    <value>Edit</value>
+  <data name="lblSelectionnerTout.Text" xml:space="preserve">
+    <value>Seleccionar todo</value>
   </data>
   <data name="pictureBox1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>199, 8</value>
+    <value>158, 9</value>
   </data>
-  <data name="lbAjouter.Size" type="System.Drawing.Size, System.Drawing">
-    <value>33, 18</value>
+  <data name="lblEnregistrerDgv.Size" type="System.Drawing.Size, System.Drawing">
+    <value>56, 18</value>
   </data>
-  <data name="lbAjouter.Text" xml:space="preserve">
-    <value>Add</value>
-  </data>
-  <data name="lbSupprimer.Location" type="System.Drawing.Point, System.Drawing">
-    <value>221, 8</value>
-  </data>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="lbSupprimer.RightToLeft" type="System.Windows.Forms.RightToLeft, System.Windows.Forms">
-    <value>Yes</value>
-  </data>
-  <data name="lbSupprimer.Size" type="System.Drawing.Size, System.Drawing">
-    <value>50, 18</value>
-  </data>
-  <data name="lbSupprimer.Text" xml:space="preserve">
-    <value>Delete</value>
-  </data>
-  <data name="label8.Size" type="System.Drawing.Size, System.Drawing">
-    <value>127, 19</value>
-  </data>
-  <data name="label8.Text" xml:space="preserve">
-    <value>This user's access</value>
-  </data>
-  <data name="panelDetail.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Fill</value>
-  </data>
-  <data name="panelDetail.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 70</value>
-  </data>
-  <data name="panelDetail.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1051, 326</value>
-  </data>
-  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="panelDetail.TabIndex" type="System.Int32, mscorlib">
-    <value>84</value>
+  <data name="lblEnregistrerDgv.Text" xml:space="preserve">
+    <value>Agregar</value>
   </data>
   <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>

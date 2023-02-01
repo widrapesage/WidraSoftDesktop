@@ -65,7 +65,7 @@
     <value>N° Placa</value>
   </data>
   <data name="txtPlaque.Location" type="System.Drawing.Point, System.Drawing">
-    <value>194, 213</value>
+    <value>193, 130</value>
   </data>
   <data name="label3.Size" type="System.Drawing.Size, System.Drawing">
     <value>83, 19</value>
@@ -80,13 +80,13 @@
     <value>Fecha de creación</value>
   </data>
   <data name="txtDateCreation.Location" type="System.Drawing.Point, System.Drawing">
-    <value>194, 147</value>
+    <value>193, 64</value>
   </data>
   <data name="txtBadge.Location" type="System.Drawing.Point, System.Drawing">
-    <value>194, 180</value>
+    <value>193, 97</value>
   </data>
   <data name="txtId.Location" type="System.Drawing.Point, System.Drawing">
-    <value>194, 114</value>
+    <value>193, 31</value>
   </data>
   <data name="label5.Size" type="System.Drawing.Size, System.Drawing">
     <value>54, 19</value>
@@ -95,22 +95,25 @@
     <value>Código</value>
   </data>
   <data name="txtCode.Location" type="System.Drawing.Point, System.Drawing">
-    <value>194, 246</value>
+    <value>193, 163</value>
   </data>
   <data name="label6.Text" xml:space="preserve">
     <value>Tara (Kg)</value>
   </data>
   <data name="txtTare.Location" type="System.Drawing.Point, System.Drawing">
-    <value>194, 279</value>
+    <value>193, 196</value>
   </data>
   <data name="txtAttention.Location" type="System.Drawing.Point, System.Drawing">
-    <value>652, 367</value>
+    <value>651, 283</value>
   </data>
   <data name="txtBloque.Location" type="System.Drawing.Point, System.Drawing">
-    <value>173, 367</value>
+    <value>172, 283</value>
   </data>
   <data name="txtValide.Location" type="System.Drawing.Point, System.Drawing">
-    <value>173, 327</value>
+    <value>172, 243</value>
+  </data>
+  <data name="label15.Location" type="System.Drawing.Point, System.Drawing">
+    <value>61, 403</value>
   </data>
   <data name="label15.Size" type="System.Drawing.Size, System.Drawing">
     <value>91, 19</value>
@@ -119,10 +122,10 @@
     <value>Comentarios</value>
   </data>
   <data name="txtObservations.Location" type="System.Drawing.Point, System.Drawing">
-    <value>194, 498</value>
+    <value>193, 404</value>
   </data>
   <data name="label14.Location" type="System.Drawing.Point, System.Drawing">
-    <value>554, 416</value>
+    <value>553, 322</value>
   </data>
   <data name="label14.Size" type="System.Drawing.Size, System.Drawing">
     <value>106, 19</value>
@@ -131,10 +134,13 @@
     <value>Texto de alerta</value>
   </data>
   <data name="txtAlerte.Location" type="System.Drawing.Point, System.Drawing">
-    <value>674, 416</value>
+    <value>673, 322</value>
   </data>
   <data name="chx_Attention.Location" type="System.Drawing.Point, System.Drawing">
-    <value>673, 368</value>
+    <value>672, 284</value>
+  </data>
+  <data name="label13.Location" type="System.Drawing.Point, System.Drawing">
+    <value>60, 322</value>
   </data>
   <data name="label13.Size" type="System.Drawing.Size, System.Drawing">
     <value>104, 19</value>
@@ -143,22 +149,22 @@
     <value>Bloquear texto</value>
   </data>
   <data name="txtBlocage.Location" type="System.Drawing.Point, System.Drawing">
-    <value>194, 416</value>
+    <value>193, 322</value>
   </data>
   <data name="chx_Bloque.Location" type="System.Drawing.Point, System.Drawing">
-    <value>194, 368</value>
+    <value>193, 284</value>
   </data>
   <data name="chx_Valide.Location" type="System.Drawing.Point, System.Drawing">
-    <value>194, 330</value>
+    <value>193, 246</value>
   </data>
   <data name="label7.Location" type="System.Drawing.Point, System.Drawing">
-    <value>211, 328</value>
+    <value>210, 244</value>
   </data>
   <data name="label7.Text" xml:space="preserve">
     <value>Válido</value>
   </data>
   <data name="label8.Location" type="System.Drawing.Point, System.Drawing">
-    <value>211, 366</value>
+    <value>210, 282</value>
   </data>
   <data name="label8.Size" type="System.Drawing.Size, System.Drawing">
     <value>73, 19</value>
@@ -167,7 +173,7 @@
     <value>Obstruido</value>
   </data>
   <data name="label9.Location" type="System.Drawing.Point, System.Drawing">
-    <value>691, 366</value>
+    <value>690, 282</value>
   </data>
   <data name="label9.Size" type="System.Drawing.Size, System.Drawing">
     <value>66, 19</value>
@@ -197,6 +203,102 @@
     <value>46, 18</value>
   </data>
   <data name="lbSupprimer.Text" xml:space="preserve">
+    <value>Borrar</value>
+  </data>
+  <data name="dgvTransporteurs.Location" type="System.Drawing.Point, System.Drawing">
+    <value>599, 560</value>
+  </data>
+  <data name="dgvChauffeurs.Location" type="System.Drawing.Point, System.Drawing">
+    <value>192, 560</value>
+  </data>
+  <data name="label11.Location" type="System.Drawing.Point, System.Drawing">
+    <value>597, 505</value>
+  </data>
+  <data name="label11.Size" type="System.Drawing.Size, System.Drawing">
+    <value>204, 19</value>
+  </data>
+  <data name="label11.Text" xml:space="preserve">
+    <value>Transportistas de este camión</value>
+  </data>
+  <data name="label10.Location" type="System.Drawing.Point, System.Drawing">
+    <value>191, 505</value>
+  </data>
+  <data name="label10.Size" type="System.Drawing.Size, System.Drawing">
+    <value>193, 19</value>
+  </data>
+  <data name="label10.Text" xml:space="preserve">
+    <value>Conductores de este camión</value>
+  </data>
+  <data name="pictureBox5.Location" type="System.Drawing.Point, System.Drawing">
+    <value>749, 535</value>
+  </data>
+  <data name="lbActualiserDgvTransporteurs.Location" type="System.Drawing.Point, System.Drawing">
+    <value>766, 534</value>
+  </data>
+  <data name="lbActualiserDgvTransporteurs.Size" type="System.Drawing.Size, System.Drawing">
+    <value>69, 18</value>
+  </data>
+  <data name="lbActualiserDgvTransporteurs.Text" xml:space="preserve">
+    <value>Actualizar</value>
+  </data>
+  <data name="pictureBox6.Location" type="System.Drawing.Point, System.Drawing">
+    <value>679, 535</value>
+  </data>
+  <data name="pictureBox7.Location" type="System.Drawing.Point, System.Drawing">
+    <value>599, 535</value>
+  </data>
+  <data name="lblAddDgvTransporteurs.Location" type="System.Drawing.Point, System.Drawing">
+    <value>615, 534</value>
+  </data>
+  <data name="lblAddDgvTransporteurs.Size" type="System.Drawing.Size, System.Drawing">
+    <value>56, 18</value>
+  </data>
+  <data name="lblAddDgvTransporteurs.Text" xml:space="preserve">
+    <value>Agregar</value>
+  </data>
+  <data name="lblRetirerDgvTransporteurs.Location" type="System.Drawing.Point, System.Drawing">
+    <value>695, 534</value>
+  </data>
+  <data name="lblRetirerDgvTransporteurs.Size" type="System.Drawing.Size, System.Drawing">
+    <value>46, 18</value>
+  </data>
+  <data name="lblRetirerDgvTransporteurs.Text" xml:space="preserve">
+    <value>Borrar</value>
+  </data>
+  <data name="pictureBox4.Location" type="System.Drawing.Point, System.Drawing">
+    <value>341, 535</value>
+  </data>
+  <data name="lbActualiserDgvChauffeurs.Location" type="System.Drawing.Point, System.Drawing">
+    <value>358, 534</value>
+  </data>
+  <data name="lbActualiserDgvChauffeurs.Size" type="System.Drawing.Size, System.Drawing">
+    <value>69, 18</value>
+  </data>
+  <data name="lbActualiserDgvChauffeurs.Text" xml:space="preserve">
+    <value>Actualizar</value>
+  </data>
+  <data name="pbRemoveRow.Location" type="System.Drawing.Point, System.Drawing">
+    <value>272, 535</value>
+  </data>
+  <data name="pbAddRow.Location" type="System.Drawing.Point, System.Drawing">
+    <value>192, 535</value>
+  </data>
+  <data name="lblAddDgvChauffeurs.Location" type="System.Drawing.Point, System.Drawing">
+    <value>208, 534</value>
+  </data>
+  <data name="lblAddDgvChauffeurs.Size" type="System.Drawing.Size, System.Drawing">
+    <value>56, 18</value>
+  </data>
+  <data name="lblAddDgvChauffeurs.Text" xml:space="preserve">
+    <value>Agregar</value>
+  </data>
+  <data name="lblRetirerDgvChauffeurs.Location" type="System.Drawing.Point, System.Drawing">
+    <value>288, 534</value>
+  </data>
+  <data name="lblRetirerDgvChauffeurs.Size" type="System.Drawing.Size, System.Drawing">
+    <value>46, 18</value>
+  </data>
+  <data name="lblRetirerDgvChauffeurs.Text" xml:space="preserve">
     <value>Borrar</value>
   </data>
   <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">

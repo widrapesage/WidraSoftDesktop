@@ -55,6 +55,8 @@ namespace WidraSoft.UI
                     }
                 }
             }
+            Bind_DgvChauffeurs();
+            Bind_DgvTransporteurs();
             cbLang.DataSource = Language.Languages;
             cbLang.ValueMember = null;
             cbLang.DisplayMember = Language.Languages[0];
@@ -138,6 +140,14 @@ namespace WidraSoft.UI
             chx_Attention.Enabled = false;
             txtAlerte.Enabled = false;
             txtObservations.Enabled = false;
+            dgvChauffeurs.Enabled = false;
+            dgvTransporteurs.Enabled = false;
+            lblAddDgvChauffeurs.Enabled = false;
+            lblRetirerDgvChauffeurs.Enabled = false;
+            lbActualiserDgvChauffeurs.Enabled = false;
+            lblAddDgvTransporteurs.Enabled =false;
+            lblRetirerDgvTransporteurs.Enabled = false;
+            lbActualiserDgvTransporteurs.Enabled = false;
             pbUpdating.Visible = false;
 
             vg_IsEnabled = false;
@@ -156,6 +166,14 @@ namespace WidraSoft.UI
             chx_Attention.Enabled = true;
             txtAlerte.Enabled = true;
             txtObservations.Enabled = true;
+            dgvChauffeurs.Enabled = true;
+            dgvTransporteurs.Enabled = true;
+            lblAddDgvChauffeurs.Enabled = true;
+            lblRetirerDgvChauffeurs.Enabled = true;
+            lbActualiserDgvChauffeurs.Enabled = true;
+            lblAddDgvTransporteurs.Enabled = true;
+            lblRetirerDgvTransporteurs.Enabled = true;
+            lbActualiserDgvTransporteurs.Enabled = true;
             pbUpdating.Visible = true;
 
             vg_IsEnabled = true;
@@ -201,6 +219,244 @@ namespace WidraSoft.UI
                 txtAttention.Text = "0";
         }
 
+        private void Bind_DgvChauffeurs()
+        {
+            CamionChauffeur camionChauffeur = new CamionChauffeur();
+            if (txtId.Text == "")
+            {
+                dgvChauffeurs.DataSource = camionChauffeur.FindByCamionId(-1);
+            }
+            else
+            {
+                int Id;
+                bool IsParsableId;
+                IsParsableId = Int32.TryParse(txtId.Text, out Id);
+                dgvChauffeurs.DataSource = camionChauffeur.FindByCamionId(Id);
+            }
+
+            dgvChauffeurs.Columns[0].Visible = false;
+            dgvChauffeurs.Columns["CHAUFFEUR"].Visible = true;
+            dgvChauffeurs.Columns["CAMIONID"].Visible = false;
+            dgvChauffeurs.Columns["CAMION"].Visible = false;
+            dgvChauffeurs.Columns["DATECREATION"].Visible = false;
+
+            dgvChauffeurs.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            dgvChauffeurs.ReadOnly = true;
+
+        }
+
+        private void Localize_DgvChauffeurs(string lang)
+        {
+            if (lang == "fr")
+            {
+                dgvChauffeurs.Columns["CAMION"].HeaderText = "CAMION";
+                dgvChauffeurs.Columns["CHAUFFEUR"].HeaderText = "CHAUFFEUR";
+                dgvChauffeurs.Columns["DATECREATION"].HeaderText = "DATE CREATION";
+            }
+
+            if (lang == "en")
+            {
+                dgvChauffeurs.Columns["CAMION"].HeaderText = "TRUCK";
+                dgvChauffeurs.Columns["CHAUFFEUR"].HeaderText = "DRIVER";
+                dgvChauffeurs.Columns["DATECREATION"].HeaderText = "CREATION DATE";
+            }
+
+            if (lang == "es")
+            {
+                dgvChauffeurs.Columns["CAMION"].HeaderText = "CAMIÓN";
+                dgvChauffeurs.Columns["CHAUFFEUR"].HeaderText = "CONDUCTOR";
+                dgvChauffeurs.Columns["DATECREATION"].HeaderText = "FECHA DE CREACIÓN";
+            }
+        }
+
+        private void lblAddDgvChauffeurs_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            try
+            {
+                Form form = new CamionChauffeurDetail(vg_Id);
+                form.Show();
+            }
+            catch
+            {
+                throw;
+            }
+        }
+
+        private void lbActualiserDgvChauffeurs_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            Refresh_DgvChauffeurs();
+        }
+
+        private void lblRetirerDgvChauffeurs_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            Int32[] selectedIds = new Int32[Common_functions.GetDatagridViewSelectedRowsId(dgvChauffeurs).Length];
+            selectedIds = Common_functions.GetDatagridViewSelectedRowsId(dgvChauffeurs);
+            if (Common_functions.GetDatagridViewSelectedRowsId(dgvChauffeurs).Length > 0)
+            {
+                for (int i = 0; i < Common_functions.GetDatagridViewSelectedRowsId(dgvChauffeurs).Length; i++)
+                {
+                    try
+                    {
+                        CamionChauffeur camionChauffeur = new CamionChauffeur();
+                        camionChauffeur.Delete(vg_Id, selectedIds[i]);
+                    }
+                    catch
+                    {
+                        throw;
+                    }
+                }
+                if (cbLang.Text == "FR")
+                    Custom_MessageBox.Show("FR", Common_functions.GetDatagridViewSelectedRowsId(dgvChauffeurs).Length + " chauffeur(s) supprimé(s)", "Chauffeur", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                else if (cbLang.Text == "EN")
+                    Custom_MessageBox.Show("EN", Common_functions.GetDatagridViewSelectedRowsId(dgvChauffeurs).Length + " driver(s) deleted", "Driver", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                else
+                    Custom_MessageBox.Show("ES", Common_functions.GetDatagridViewSelectedRowsId(dgvChauffeurs).Length + " conductor(es) añadido(s)", "Conductor", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                Refresh_DgvChauffeurs();
+            }
+            else
+            {
+
+                if (cbLang.Text == "FR")
+                    Custom_MessageBox.Show("FR", "Aucun enregistrement sélectionné", "Chauffeur", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                else if (cbLang.Text == "EN")
+                    Custom_MessageBox.Show("EN", "No rows selected", "Driver", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                else
+                    Custom_MessageBox.Show("ES", "Ningún registro seleccionado", "Conductor", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+            }
+        }
+
+        private void Refresh_DgvChauffeurs()
+        {
+            int Id;
+            bool IsParsableId;
+            CamionChauffeur camionChauffeur = new CamionChauffeur();
+            IsParsableId = Int32.TryParse(txtId.Text, out Id);
+            dgvChauffeurs.DataSource = camionChauffeur.FindByCamionId(Id);
+        }
+
+        private void Bind_DgvTransporteurs()
+        {
+            CamionTransporteur camionTransporteur = new CamionTransporteur();
+            if (txtId.Text == "")
+            {
+                dgvTransporteurs.DataSource = camionTransporteur.FindByCamionId(-1);
+            }
+            else
+            {
+                int Id;
+                bool IsParsableId;
+                IsParsableId = Int32.TryParse(txtId.Text, out Id);
+                dgvTransporteurs.DataSource = camionTransporteur.FindByCamionId(Id);
+            }
+
+            dgvTransporteurs.Columns[0].Visible = false;
+            dgvTransporteurs.Columns["TRANSPORTEUR"].Visible = true;
+            dgvTransporteurs.Columns["CAMIONID"].Visible = false;
+            dgvTransporteurs.Columns["CAMION"].Visible = false;
+            dgvTransporteurs.Columns["DATECREATION"].Visible = false;
+
+            dgvTransporteurs.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            dgvTransporteurs.ReadOnly = true;
+
+        }
+
+        private void Localize_DgvTransporteurs(string lang)
+        {
+            if (lang == "fr")
+            {
+                dgvTransporteurs.Columns["CAMION"].HeaderText = "CAMION";
+                dgvTransporteurs.Columns["TRANSPORTEUR"].HeaderText = "TRANSPORTEUR";
+                dgvTransporteurs.Columns["DATECREATION"].HeaderText = "DATE CREATION";
+            }
+
+            if (lang == "en")
+            {
+                dgvTransporteurs.Columns["CAMION"].HeaderText = "TRUCK";
+                dgvTransporteurs.Columns["TRANSPORTEUR"].HeaderText = "CARRIER";
+                dgvTransporteurs.Columns["DATECREATION"].HeaderText = "CREATION DATE";
+            }
+
+            if (lang == "es")
+            {
+                dgvTransporteurs.Columns["CAMION"].HeaderText = "CAMIÓN";
+                dgvTransporteurs.Columns["TRANSPORTEUR"].HeaderText = "TRANSPORTADOR";
+                dgvTransporteurs.Columns["DATECREATION"].HeaderText = "FECHA DE CREACIÓN";
+            }
+        }
+
+        private void lblAddDgvTransporteurs_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            try
+            {
+                Form form = new CamionTransporteurDetail(vg_Id);
+                form.Show();
+            }
+            catch
+            {
+                throw;
+            }
+        }
+
+        private void lbActualiserDgvTransporteurs_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            Refresh_DgvTransporteurs();
+        }
+
+        private void lblRetirerDgvTransporteurs_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            Int32[] selectedIds = new Int32[Common_functions.GetDatagridViewSelectedRowsId(dgvTransporteurs).Length];
+            selectedIds = Common_functions.GetDatagridViewSelectedRowsId(dgvTransporteurs);
+            if (Common_functions.GetDatagridViewSelectedRowsId(dgvTransporteurs).Length > 0)
+            {
+                for (int i = 0; i < Common_functions.GetDatagridViewSelectedRowsId(dgvTransporteurs).Length; i++)
+                {
+                    try
+                    {
+                        CamionTransporteur camionTransporteur = new CamionTransporteur();
+                        camionTransporteur.Delete(vg_Id, selectedIds[i]);
+                    }
+                    catch
+                    {
+                        throw;
+                    }
+                }
+                if (cbLang.Text == "FR")
+                    Custom_MessageBox.Show("FR", Common_functions.GetDatagridViewSelectedRowsId(dgvTransporteurs).Length + " transporteur(s) supprimé(s)", "Transporteur", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                else if (cbLang.Text == "EN")
+                    Custom_MessageBox.Show("EN", Common_functions.GetDatagridViewSelectedRowsId(dgvTransporteurs).Length + " carrier(s) deleted", "Carrier", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                else
+                    Custom_MessageBox.Show("ES", Common_functions.GetDatagridViewSelectedRowsId(dgvTransporteurs).Length + " transportistas añadidos", "Transportador", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                Refresh_DgvChauffeurs();
+            }
+            else
+            {
+
+                if (cbLang.Text == "FR")
+                    Custom_MessageBox.Show("FR", "Aucun enregistrement sélectionné", "Transporteur", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                else if (cbLang.Text == "EN")
+                    Custom_MessageBox.Show("EN", "No rows selected", "Carrier", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                else
+                    Custom_MessageBox.Show("ES", "Ningún registro seleccionado", "Transportador", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+            }
+        }
+
+        private void Refresh_DgvTransporteurs()
+        {
+            int Id;
+            bool IsParsableId;
+            CamionTransporteur camionTransporteur = new CamionTransporteur();
+            IsParsableId = Int32.TryParse(txtId.Text, out Id);
+            dgvTransporteurs.DataSource = camionTransporteur.FindByCamionId(Id);
+        }
+
+
+
+
+
         private void cbLang_SelectedIndexChanged(object sender, EventArgs e)
         {
             if (cbLang.Text == "FR")
@@ -210,6 +466,8 @@ namespace WidraSoft.UI
                 Spain_flag.Visible = false;
                 Language_Manager language_Manager = new Language_Manager();
                 language_Manager.ChangeLanguage("fr", this, typeof(CamionDetail));
+                Localize_DgvChauffeurs("fr");
+                Localize_DgvTransporteurs("fr");
 
             }
 
@@ -220,6 +478,8 @@ namespace WidraSoft.UI
                 Spain_flag.Visible = false;
                 Language_Manager language_Manager = new Language_Manager();
                 language_Manager.ChangeLanguage("en", this, typeof(CamionDetail));
+                Localize_DgvChauffeurs("en");
+                Localize_DgvTransporteurs("en");
             }
 
             if (cbLang.Text == "ES")
@@ -229,6 +489,8 @@ namespace WidraSoft.UI
                 Spain_flag.Visible = true;
                 Language_Manager language_Manager = new Language_Manager();
                 language_Manager.ChangeLanguage("es", this, typeof(CamionDetail));
+                Localize_DgvChauffeurs("es");
+                Localize_DgvTransporteurs("es");
             }
         }
 
@@ -433,6 +695,6 @@ namespace WidraSoft.UI
             }
         }
 
-
+        
     }
 }

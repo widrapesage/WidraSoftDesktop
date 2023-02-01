@@ -65,10 +65,10 @@
     <value>Fecha de creación</value>
   </data>
   <data name="txtDateCreation.Location" type="System.Drawing.Point, System.Drawing">
-    <value>191, 146</value>
+    <value>194, 78</value>
   </data>
   <data name="txtId.Location" type="System.Drawing.Point, System.Drawing">
-    <value>191, 113</value>
+    <value>194, 45</value>
   </data>
   <data name="label3.Size" type="System.Drawing.Size, System.Drawing">
     <value>89, 19</value>
@@ -77,7 +77,7 @@
     <value>Designación</value>
   </data>
   <data name="txtDesignation.Location" type="System.Drawing.Point, System.Drawing">
-    <value>191, 179</value>
+    <value>194, 111</value>
   </data>
   <data name="label4.Size" type="System.Drawing.Size, System.Drawing">
     <value>103, 19</value>
@@ -86,7 +86,7 @@
     <value>Codigo groupo</value>
   </data>
   <data name="txtCode.Location" type="System.Drawing.Point, System.Drawing">
-    <value>191, 212</value>
+    <value>194, 144</value>
   </data>
   <data name="label7.Size" type="System.Drawing.Size, System.Drawing">
     <value>54, 19</value>
@@ -95,7 +95,7 @@
     <value>Limitar</value>
   </data>
   <data name="cbLimite.Location" type="System.Drawing.Point, System.Drawing">
-    <value>191, 245</value>
+    <value>194, 177</value>
   </data>
   <data name="label5.Size" type="System.Drawing.Size, System.Drawing">
     <value>117, 19</value>
@@ -104,7 +104,7 @@
     <value>Número limitado</value>
   </data>
   <data name="txtNbLimite.Location" type="System.Drawing.Point, System.Drawing">
-    <value>191, 279</value>
+    <value>194, 211</value>
   </data>
   <data name="lblRetirerDgv.Size" type="System.Drawing.Size, System.Drawing">
     <value>46, 18</value>
@@ -159,6 +159,20 @@
   </data>
   <data name="lbActualiserDgv.Text" xml:space="preserve">
     <value>Actualizar</value>
+  </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="panelDetail.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="panelDetail.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 70</value>
+  </data>
+  <data name="panelDetail.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1192, 753</value>
+  </data>
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="panelDetail.TabIndex" type="System.Int32, mscorlib">
+    <value>83</value>
   </data>
   <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>

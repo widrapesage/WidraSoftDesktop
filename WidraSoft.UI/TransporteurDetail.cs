@@ -99,7 +99,7 @@ namespace WidraSoft.UI
             dt = transporteur.FindById(vg_Id);
             foreach (DataRow row in dt.Rows)
             {
-                int Id = (int)row["FIRMEID"];
+                int Id = (int)row["TRANSPORTEURID"];
                 txtId.Text = Id.ToString();
                 txtDateCreation.Text = row["DATECREATION"].ToString();
                 txtLicence.Text = row["LICENCE"].ToString();

@@ -59,25 +59,25 @@
   </resheader>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="txtId.Location" type="System.Drawing.Point, System.Drawing">
-    <value>195, 114</value>
+    <value>194, 37</value>
   </data>
   <data name="txtNom.Location" type="System.Drawing.Point, System.Drawing">
-    <value>195, 178</value>
+    <value>194, 101</value>
   </data>
   <data name="txtPrenom.Location" type="System.Drawing.Point, System.Drawing">
-    <value>195, 210</value>
+    <value>194, 133</value>
   </data>
   <data name="txtLogin.Location" type="System.Drawing.Point, System.Drawing">
-    <value>195, 242</value>
+    <value>194, 165</value>
   </data>
   <data name="txtPassword.Location" type="System.Drawing.Point, System.Drawing">
-    <value>195, 274</value>
+    <value>194, 197</value>
   </data>
   <data name="cbGroupeId.Location" type="System.Drawing.Point, System.Drawing">
-    <value>195, 306</value>
+    <value>194, 229</value>
   </data>
   <data name="txtDateCreation.Location" type="System.Drawing.Point, System.Drawing">
-    <value>195, 146</value>
+    <value>194, 69</value>
   </data>
   <data name="label2.Size" type="System.Drawing.Size, System.Drawing">
     <value>126, 19</value>

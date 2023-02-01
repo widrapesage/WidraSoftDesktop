@@ -173,7 +173,7 @@ namespace WidraSoft.UI
             dgvGroupeDroits.SelectAll();
         }
 
-        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        private void lblDeselectionner_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             dgvGroupeDroits.ClearSelection();
         }
@@ -185,6 +185,7 @@ namespace WidraSoft.UI
             else
                 dgvGroupeDroits.CurrentCell.Selected = true;
         }
+
 
     }
 }
