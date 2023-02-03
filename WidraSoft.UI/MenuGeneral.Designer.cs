@@ -140,6 +140,7 @@ namespace WidraSoft.UI
             this.pontsToolStripMenuItem.Margin = new System.Windows.Forms.Padding(0, 4, 0, 0);
             this.pontsToolStripMenuItem.Name = "pontsToolStripMenuItem";
             this.pontsToolStripMenuItem.Padding = new System.Windows.Forms.Padding(4, 1, 4, 3);
+            this.pontsToolStripMenuItem.Click += new System.EventHandler(this.pontsToolStripMenuItem_Click);
             // 
             // pToolStripMenuItem
             // 

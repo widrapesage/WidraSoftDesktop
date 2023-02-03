@@ -631,7 +631,6 @@ namespace WidraSoft.UI
         {
             if (vg_Update)
             {
-                MessageBox.Show("Vous ne pouvez pas supprimer l'enregistrement terminez d'abord la modification");
                 if (cbLang.Text == "FR")
                     Custom_MessageBox.Show("FR", "Vous ne pouvez pas supprimer l'enregistrement tant que la modification n'est pas validée", "Camion", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 else if (cbLang.Text == "EN")

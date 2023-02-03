@@ -148,5 +148,10 @@ namespace WidraSoft.UI
             lblusername.Text = utilisateur.GetFullUsername(vg_UtilisateurId);
         }
 
+        private void pontsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Form form = new PontsListe("1=1");
+            form.Show();
+        }
     }
 }
