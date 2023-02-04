@@ -12,6 +12,7 @@ namespace WidraSoft.UI
         public static List<Int32> Databits = new List<Int32>();
         public static List<String> StopBits = new List<String>();
         public static List<String> Handshake = new List<String>();
+        public static List<String> WeightSettigs_ModeLecture = new List<String>();
 
         static Values()
         {
@@ -53,6 +54,10 @@ namespace WidraSoft.UI
             Handshake.Add("RequestToSend");
             Handshake.Add("RequestedToSendXOnXOff");
             Handshake.Add("XOnXOff");
+
+            //WeightSettings_ModeLecture
+            WeightSettigs_ModeLecture.Add("Ligne");
+            WeightSettigs_ModeLecture.Add("Tableau");
 
 
 

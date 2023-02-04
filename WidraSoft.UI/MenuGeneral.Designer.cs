@@ -109,6 +109,7 @@ namespace WidraSoft.UI
             resources.ApplyResources(this.homeToolStripMenuItem, "homeToolStripMenuItem");
             this.homeToolStripMenuItem.Name = "homeToolStripMenuItem";
             this.homeToolStripMenuItem.Padding = new System.Windows.Forms.Padding(0, 0, 0, 85);
+            this.homeToolStripMenuItem.Click += new System.EventHandler(this.homeToolStripMenuItem_Click);
             // 
             // camionsToolStripMenuItem
             // 

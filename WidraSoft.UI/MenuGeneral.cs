@@ -153,5 +153,11 @@ namespace WidraSoft.UI
             Form form = new PontsListe("1=1");
             form.Show();
         }
+
+        private void homeToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Form form = new PeseePontBascule();
+            form.Show();
+        }
     }
 }

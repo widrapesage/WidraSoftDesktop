@@ -35,19 +35,19 @@ namespace WidraSoft.UI
             cbWeight_SettingsId.ValueMember = "WEIGHT_SETTINGSID";
 
             cbBaudRate.DataSource = Values.BaudRate;
-            cbBaudRate.ValueMember = null;
+            cbBaudRate.ValueMember = Values.BaudRate[0].ToString();
             cbBaudRate.DisplayMember = Values.BaudRate[0].ToString();
 
             cbDataBits.DataSource = Values.Databits;
-            cbDataBits.ValueMember = null;
+            cbDataBits.ValueMember = Values.Databits[0].ToString();
             cbDataBits.DisplayMember = Values.Databits[0].ToString();
 
             cbStopBits.DataSource = Values.StopBits;
-            cbStopBits.ValueMember = null;
+            cbStopBits.ValueMember = Values.Databits[0].ToString();
             cbStopBits.DisplayMember = Values.StopBits[0];
 
             cbHandshake.DataSource = Values.Handshake;
-            cbHandshake.ValueMember = null;
+            cbHandshake.ValueMember = Values.Databits[0].ToString();
             cbHandshake.DisplayMember = Values.Handshake[0];
 
             if (vg_Mode == "Add")
@@ -76,9 +76,7 @@ namespace WidraSoft.UI
                     }
                 }
             }
-
-            
-
+           
             cbLang.DataSource = Language.Languages;
             cbLang.ValueMember = null;
             cbLang.DisplayMember = Language.Languages[0];
@@ -88,7 +86,7 @@ namespace WidraSoft.UI
 
         private void Add_Item()
         {
-            if (txtId.Text == "" && txtDateCreation.Text == "" && cbWeight_SettingsId.Text == "" && txtCOM.Text == "" && txtActiverPoids.Text == "" && cbBaudRate.Text == "" && cbDataBits.Text == ""
+            if (txtId.Text == "" && txtDateCreation.Text == "" && txtDesignation.Text == "" && cbWeight_SettingsId.Text == "" && txtCOM.Text == "" && txtActiverPoids.Text == "" && cbBaudRate.Text == "" && cbDataBits.Text == ""
                 && cbStopBits.Text == "" && cbHandshake.Text == "" && txtReadTimeOut.Text == "")
             {
                 lbModifier.Enabled = false;
