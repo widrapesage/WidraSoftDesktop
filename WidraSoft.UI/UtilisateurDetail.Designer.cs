@@ -30,9 +30,9 @@ namespace WidraSoft.UI
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UtilisateurDetail));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.txtId = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.txtNom = new System.Windows.Forms.TextBox();
@@ -78,8 +78,8 @@ namespace WidraSoft.UI
             // 
             // txtId
             // 
-            resources.ApplyResources(this.txtId, "txtId");
             this.txtId.BackColor = System.Drawing.Color.Honeydew;
+            resources.ApplyResources(this.txtId, "txtId");
             this.txtId.Name = "txtId";
             // 
             // label1
@@ -90,39 +90,39 @@ namespace WidraSoft.UI
             // 
             // txtNom
             // 
-            resources.ApplyResources(this.txtNom, "txtNom");
             this.txtNom.BackColor = System.Drawing.Color.Honeydew;
+            resources.ApplyResources(this.txtNom, "txtNom");
             this.txtNom.Name = "txtNom";
             // 
             // txtPrenom
             // 
-            resources.ApplyResources(this.txtPrenom, "txtPrenom");
             this.txtPrenom.BackColor = System.Drawing.Color.Honeydew;
+            resources.ApplyResources(this.txtPrenom, "txtPrenom");
             this.txtPrenom.Name = "txtPrenom";
             // 
             // txtLogin
             // 
-            resources.ApplyResources(this.txtLogin, "txtLogin");
             this.txtLogin.BackColor = System.Drawing.Color.Honeydew;
+            resources.ApplyResources(this.txtLogin, "txtLogin");
             this.txtLogin.Name = "txtLogin";
             // 
             // txtPassword
             // 
-            resources.ApplyResources(this.txtPassword, "txtPassword");
             this.txtPassword.BackColor = System.Drawing.Color.Honeydew;
+            resources.ApplyResources(this.txtPassword, "txtPassword");
             this.txtPassword.Name = "txtPassword";
             // 
             // cbGroupeId
             // 
-            resources.ApplyResources(this.cbGroupeId, "cbGroupeId");
             this.cbGroupeId.BackColor = System.Drawing.Color.Honeydew;
+            resources.ApplyResources(this.cbGroupeId, "cbGroupeId");
             this.cbGroupeId.FormattingEnabled = true;
             this.cbGroupeId.Name = "cbGroupeId";
             // 
             // txtDateCreation
             // 
-            resources.ApplyResources(this.txtDateCreation, "txtDateCreation");
             this.txtDateCreation.BackColor = System.Drawing.Color.Honeydew;
+            resources.ApplyResources(this.txtDateCreation, "txtDateCreation");
             this.txtDateCreation.Name = "txtDateCreation";
             this.txtDateCreation.ReadOnly = true;
             // 
@@ -164,54 +164,54 @@ namespace WidraSoft.UI
             // 
             // panelLang
             // 
-            resources.ApplyResources(this.panelLang, "panelLang");
             this.panelLang.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(86)))), ((int)(((byte)(81)))));
             this.panelLang.Controls.Add(this.pbUpdating);
             this.panelLang.Controls.Add(this.Spain_flag);
             this.panelLang.Controls.Add(this.England_flag);
             this.panelLang.Controls.Add(this.France_flag);
             this.panelLang.Controls.Add(this.cbLang);
+            resources.ApplyResources(this.panelLang, "panelLang");
             this.panelLang.Name = "panelLang";
             // 
             // pbUpdating
             // 
-            resources.ApplyResources(this.pbUpdating, "pbUpdating");
             this.pbUpdating.Image = global::WidraSoft.UI.Properties.Resources.pencil;
+            resources.ApplyResources(this.pbUpdating, "pbUpdating");
             this.pbUpdating.Name = "pbUpdating";
             this.pbUpdating.TabStop = false;
             // 
             // Spain_flag
             // 
-            resources.ApplyResources(this.Spain_flag, "Spain_flag");
             this.Spain_flag.BackColor = System.Drawing.Color.Transparent;
             this.Spain_flag.Cursor = System.Windows.Forms.Cursors.Hand;
             this.Spain_flag.Image = global::WidraSoft.UI.Properties.Resources.spain;
+            resources.ApplyResources(this.Spain_flag, "Spain_flag");
             this.Spain_flag.Name = "Spain_flag";
             this.Spain_flag.TabStop = false;
             // 
             // England_flag
             // 
-            resources.ApplyResources(this.England_flag, "England_flag");
             this.England_flag.BackColor = System.Drawing.Color.Transparent;
             this.England_flag.Cursor = System.Windows.Forms.Cursors.Hand;
             this.England_flag.Image = global::WidraSoft.UI.Properties.Resources.united_kingdom;
+            resources.ApplyResources(this.England_flag, "England_flag");
             this.England_flag.Name = "England_flag";
             this.England_flag.TabStop = false;
             // 
             // France_flag
             // 
-            resources.ApplyResources(this.France_flag, "France_flag");
             this.France_flag.BackColor = System.Drawing.Color.Transparent;
             this.France_flag.Cursor = System.Windows.Forms.Cursors.Hand;
             this.France_flag.Image = global::WidraSoft.UI.Properties.Resources.france;
+            resources.ApplyResources(this.France_flag, "France_flag");
             this.France_flag.Name = "France_flag";
             this.France_flag.TabStop = false;
             // 
             // cbLang
             // 
-            resources.ApplyResources(this.cbLang, "cbLang");
             this.cbLang.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(86)))), ((int)(((byte)(77)))));
             this.cbLang.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            resources.ApplyResources(this.cbLang, "cbLang");
             this.cbLang.ForeColor = System.Drawing.Color.White;
             this.cbLang.FormattingEnabled = true;
             this.cbLang.Name = "cbLang";
@@ -219,7 +219,6 @@ namespace WidraSoft.UI
             // 
             // panelNavigation
             // 
-            resources.ApplyResources(this.panelNavigation, "panelNavigation");
             this.panelNavigation.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(62)))), ((int)(((byte)(60)))));
             this.panelNavigation.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panelNavigation.Controls.Add(this.pictureBox3);
@@ -228,21 +227,22 @@ namespace WidraSoft.UI
             this.panelNavigation.Controls.Add(this.pictureBox2);
             this.panelNavigation.Controls.Add(this.lbAjouter);
             this.panelNavigation.Controls.Add(this.lbSupprimer);
+            resources.ApplyResources(this.panelNavigation, "panelNavigation");
             this.panelNavigation.Name = "panelNavigation";
             // 
             // pictureBox3
             // 
-            resources.ApplyResources(this.pictureBox3, "pictureBox3");
             this.pictureBox3.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox3.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBox3.Image = global::WidraSoft.UI.Properties.Resources.update;
+            resources.ApplyResources(this.pictureBox3, "pictureBox3");
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.TabStop = false;
             // 
             // lbModifier
             // 
-            resources.ApplyResources(this.lbModifier, "lbModifier");
             this.lbModifier.ActiveLinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(190)))), ((int)(((byte)(117)))));
+            resources.ApplyResources(this.lbModifier, "lbModifier");
             this.lbModifier.BackColor = System.Drawing.Color.Transparent;
             this.lbModifier.ForeColor = System.Drawing.Color.White;
             this.lbModifier.LinkColor = System.Drawing.Color.White;
@@ -252,26 +252,26 @@ namespace WidraSoft.UI
             // 
             // pictureBox1
             // 
-            resources.ApplyResources(this.pictureBox1, "pictureBox1");
             this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBox1.Image = global::WidraSoft.UI.Properties.Resources.remove;
+            resources.ApplyResources(this.pictureBox1, "pictureBox1");
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.TabStop = false;
             // 
             // pictureBox2
             // 
-            resources.ApplyResources(this.pictureBox2, "pictureBox2");
             this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox2.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBox2.Image = global::WidraSoft.UI.Properties.Resources.add;
+            resources.ApplyResources(this.pictureBox2, "pictureBox2");
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.TabStop = false;
             // 
             // lbAjouter
             // 
-            resources.ApplyResources(this.lbAjouter, "lbAjouter");
             this.lbAjouter.ActiveLinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(190)))), ((int)(((byte)(117)))));
+            resources.ApplyResources(this.lbAjouter, "lbAjouter");
             this.lbAjouter.BackColor = System.Drawing.Color.Transparent;
             this.lbAjouter.ForeColor = System.Drawing.Color.White;
             this.lbAjouter.LinkColor = System.Drawing.Color.White;
@@ -281,8 +281,8 @@ namespace WidraSoft.UI
             // 
             // lbSupprimer
             // 
-            resources.ApplyResources(this.lbSupprimer, "lbSupprimer");
             this.lbSupprimer.ActiveLinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(190)))), ((int)(((byte)(117)))));
+            resources.ApplyResources(this.lbSupprimer, "lbSupprimer");
             this.lbSupprimer.BackColor = System.Drawing.Color.Transparent;
             this.lbSupprimer.ForeColor = System.Drawing.Color.White;
             this.lbSupprimer.LinkColor = System.Drawing.Color.White;
@@ -298,44 +298,43 @@ namespace WidraSoft.UI
             // 
             // DgvAuthorizationList
             // 
-            resources.ApplyResources(this.DgvAuthorizationList, "DgvAuthorizationList");
             this.DgvAuthorizationList.AllowUserToAddRows = false;
             this.DgvAuthorizationList.AllowUserToDeleteRows = false;
             this.DgvAuthorizationList.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(86)))), ((int)(((byte)(81)))));
             this.DgvAuthorizationList.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.DgvAuthorizationList.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.Sunken;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.Honeydew;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Corbel", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(86)))), ((int)(((byte)(81)))));
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.DgvAuthorizationList.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.Honeydew;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Corbel", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(86)))), ((int)(((byte)(81)))));
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.DgvAuthorizationList.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.DgvAuthorizationList.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle5.BackColor = System.Drawing.Color.Honeydew;
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Corbel", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(86)))), ((int)(((byte)(77)))));
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.DgvAuthorizationList.DefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.Honeydew;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Calibri", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(86)))), ((int)(((byte)(81)))));
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.DgvAuthorizationList.DefaultCellStyle = dataGridViewCellStyle2;
+            resources.ApplyResources(this.DgvAuthorizationList, "DgvAuthorizationList");
             this.DgvAuthorizationList.Name = "DgvAuthorizationList";
             this.DgvAuthorizationList.ReadOnly = true;
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle6.BackColor = System.Drawing.Color.Honeydew;
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Corbel", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.MediumSeaGreen;
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.DgvAuthorizationList.RowHeadersDefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.Honeydew;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Corbel", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.MediumSeaGreen;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.DgvAuthorizationList.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.DgvAuthorizationList.RowTemplate.Height = 33;
             // 
             // panelDetail
             // 
-            resources.ApplyResources(this.panelDetail, "panelDetail");
             this.panelDetail.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(86)))), ((int)(((byte)(81)))));
             this.panelDetail.Controls.Add(this.txtId);
             this.panelDetail.Controls.Add(this.label8);
@@ -353,6 +352,7 @@ namespace WidraSoft.UI
             this.panelDetail.Controls.Add(this.label4);
             this.panelDetail.Controls.Add(this.label2);
             this.panelDetail.Controls.Add(this.label3);
+            resources.ApplyResources(this.panelDetail, "panelDetail");
             this.panelDetail.Name = "panelDetail";
             // 
             // UtilisateurDetail

@@ -28,75 +28,90 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(PeseePontBascule));
-            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
-            this.label1 = new System.Windows.Forms.Label();
+            this.richTextBoxPoids = new System.Windows.Forms.RichTextBox();
             this.panelLang = new System.Windows.Forms.Panel();
-            this.pbUpdating = new System.Windows.Forms.PictureBox();
             this.Spain_flag = new System.Windows.Forms.PictureBox();
             this.England_flag = new System.Windows.Forms.PictureBox();
             this.France_flag = new System.Windows.Forms.PictureBox();
             this.cbLang = new System.Windows.Forms.ComboBox();
             this.panelNavigation = new System.Windows.Forms.Panel();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.lbModifier = new System.Windows.Forms.LinkLabel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.lbAjouter = new System.Windows.Forms.LinkLabel();
-            this.lbSupprimer = new System.Windows.Forms.LinkLabel();
-            this.label14 = new System.Windows.Forms.Label();
+            this.lbImprimer = new System.Windows.Forms.LinkLabel();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.lbEnregistrer = new System.Windows.Forms.LinkLabel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.lbAnnuler = new System.Windows.Forms.LinkLabel();
+            this.lbPont = new System.Windows.Forms.Label();
             this.cbPont = new System.Windows.Forms.ComboBox();
-            this.label2 = new System.Windows.Forms.Label();
+            this.lbFirme = new System.Windows.Forms.Label();
             this.cbFirme = new System.Windows.Forms.ComboBox();
+            this.lbCOM = new System.Windows.Forms.Label();
+            this.lbCamion = new System.Windows.Forms.Label();
+            this.cbCamion = new System.Windows.Forms.ComboBox();
+            this.lbChauffeur = new System.Windows.Forms.Label();
+            this.cbChauffeur = new System.Windows.Forms.ComboBox();
+            this.lbTransporteur = new System.Windows.Forms.Label();
+            this.cbTransporteur = new System.Windows.Forms.ComboBox();
+            this.lbProduit = new System.Windows.Forms.Label();
+            this.cbProduit = new System.Windows.Forms.ComboBox();
+            this.lbClient = new System.Windows.Forms.Label();
+            this.cbClient = new System.Windows.Forms.ComboBox();
+            this.gbTypePesee = new System.Windows.Forms.GroupBox();
+            this.rb2x = new System.Windows.Forms.RadioButton();
+            this.rb1x = new System.Windows.Forms.RadioButton();
+            this.panelData = new System.Windows.Forms.Panel();
+            this.gbFlux = new System.Windows.Forms.GroupBox();
+            this.radioButton1 = new System.Windows.Forms.RadioButton();
+            this.radioButton2 = new System.Windows.Forms.RadioButton();
+            this.panelLayout = new System.Windows.Forms.Panel();
+            this.panelWeightDetails = new System.Windows.Forms.Panel();
+            this.button2 = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
+            this.lbPoidsNet = new System.Windows.Forms.Label();
+            this.lbPoidsTare = new System.Windows.Forms.Label();
+            this.lbPoidsBrut = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.richTextBox2 = new System.Windows.Forms.RichTextBox();
-            this.label4 = new System.Windows.Forms.Label();
-            this.richTextBox3 = new System.Windows.Forms.RichTextBox();
-            this.label5 = new System.Windows.Forms.Label();
-            this.richTextBox4 = new System.Windows.Forms.RichTextBox();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.panelWeightDisplay = new System.Windows.Forms.Panel();
+            this.lbWeightSettings = new System.Windows.Forms.Label();
+            this.lbStatus = new System.Windows.Forms.Label();
+            this.Weight_Timer = new System.Windows.Forms.Timer(this.components);
             this.panelLang.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pbUpdating)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Spain_flag)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.England_flag)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.France_flag)).BeginInit();
             this.panelNavigation.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            this.gbTypePesee.SuspendLayout();
+            this.panelData.SuspendLayout();
+            this.gbFlux.SuspendLayout();
+            this.panelLayout.SuspendLayout();
+            this.panelWeightDetails.SuspendLayout();
+            this.panelWeightDisplay.SuspendLayout();
             this.SuspendLayout();
             // 
-            // richTextBox1
+            // richTextBoxPoids
             // 
-            this.richTextBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.richTextBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(62)))), ((int)(((byte)(60)))));
-            this.richTextBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.richTextBox1.Font = new System.Drawing.Font("Corbel", 55F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.richTextBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(190)))), ((int)(((byte)(117)))));
-            this.richTextBox1.Location = new System.Drawing.Point(815, 76);
-            this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(288, 100);
-            this.richTextBox1.TabIndex = 0;
-            this.richTextBox1.TabStop = false;
-            this.richTextBox1.Text = "0";
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Corbel", 35F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(190)))), ((int)(((byte)(117)))));
-            this.label1.Location = new System.Drawing.Point(1108, 101);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(77, 58);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "Kg";
+            this.richTextBoxPoids.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(86)))), ((int)(((byte)(81)))));
+            this.richTextBoxPoids.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.richTextBoxPoids.Dock = System.Windows.Forms.DockStyle.Right;
+            this.richTextBoxPoids.Font = new System.Drawing.Font("Calibri", 60F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.richTextBoxPoids.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(112)))), ((int)(((byte)(228)))), ((int)(((byte)(132)))));
+            this.richTextBoxPoids.Location = new System.Drawing.Point(276, 0);
+            this.richTextBoxPoids.Name = "richTextBoxPoids";
+            this.richTextBoxPoids.Size = new System.Drawing.Size(289, 128);
+            this.richTextBoxPoids.TabIndex = 0;
+            this.richTextBoxPoids.TabStop = false;
+            this.richTextBoxPoids.Text = "0";
             // 
             // panelLang
             // 
             this.panelLang.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(86)))), ((int)(((byte)(81)))));
-            this.panelLang.Controls.Add(this.pbUpdating);
             this.panelLang.Controls.Add(this.Spain_flag);
             this.panelLang.Controls.Add(this.England_flag);
             this.panelLang.Controls.Add(this.France_flag);
@@ -104,19 +119,8 @@
             this.panelLang.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelLang.Location = new System.Drawing.Point(0, 0);
             this.panelLang.Name = "panelLang";
-            this.panelLang.Size = new System.Drawing.Size(1185, 35);
+            this.panelLang.Size = new System.Drawing.Size(1114, 35);
             this.panelLang.TabIndex = 74;
-            // 
-            // pbUpdating
-            // 
-            this.pbUpdating.Image = global::WidraSoft.UI.Properties.Resources.pencil;
-            this.pbUpdating.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.pbUpdating.Location = new System.Drawing.Point(1155, 5);
-            this.pbUpdating.Name = "pbUpdating";
-            this.pbUpdating.Size = new System.Drawing.Size(24, 24);
-            this.pbUpdating.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.pbUpdating.TabIndex = 28;
-            this.pbUpdating.TabStop = false;
             // 
             // Spain_flag
             // 
@@ -174,17 +178,46 @@
             // 
             this.panelNavigation.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(62)))), ((int)(((byte)(60)))));
             this.panelNavigation.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panelNavigation.Controls.Add(this.pictureBox3);
-            this.panelNavigation.Controls.Add(this.lbModifier);
-            this.panelNavigation.Controls.Add(this.pictureBox1);
             this.panelNavigation.Controls.Add(this.pictureBox2);
-            this.panelNavigation.Controls.Add(this.lbAjouter);
-            this.panelNavigation.Controls.Add(this.lbSupprimer);
+            this.panelNavigation.Controls.Add(this.lbImprimer);
+            this.panelNavigation.Controls.Add(this.pictureBox3);
+            this.panelNavigation.Controls.Add(this.lbEnregistrer);
+            this.panelNavigation.Controls.Add(this.pictureBox1);
+            this.panelNavigation.Controls.Add(this.lbAnnuler);
             this.panelNavigation.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelNavigation.Location = new System.Drawing.Point(0, 35);
             this.panelNavigation.Name = "panelNavigation";
-            this.panelNavigation.Size = new System.Drawing.Size(1185, 35);
+            this.panelNavigation.Size = new System.Drawing.Size(1114, 35);
             this.panelNavigation.TabIndex = 84;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox2.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pictureBox2.Image = global::WidraSoft.UI.Properties.Resources.printer;
+            this.pictureBox2.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.pictureBox2.Location = new System.Drawing.Point(272, 6);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(21, 22);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.pictureBox2.TabIndex = 85;
+            this.pictureBox2.TabStop = false;
+            // 
+            // lbImprimer
+            // 
+            this.lbImprimer.ActiveLinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(190)))), ((int)(((byte)(117)))));
+            this.lbImprimer.AutoSize = true;
+            this.lbImprimer.BackColor = System.Drawing.Color.Transparent;
+            this.lbImprimer.Font = new System.Drawing.Font("Calibri", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.lbImprimer.ForeColor = System.Drawing.Color.White;
+            this.lbImprimer.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.lbImprimer.LinkColor = System.Drawing.Color.White;
+            this.lbImprimer.Location = new System.Drawing.Point(296, 6);
+            this.lbImprimer.Name = "lbImprimer";
+            this.lbImprimer.Size = new System.Drawing.Size(66, 18);
+            this.lbImprimer.TabIndex = 84;
+            this.lbImprimer.TabStop = true;
+            this.lbImprimer.Text = "Imprimer";
             // 
             // pictureBox3
             // 
@@ -192,325 +225,605 @@
             this.pictureBox3.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBox3.Image = global::WidraSoft.UI.Properties.Resources.update;
             this.pictureBox3.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.pictureBox3.Location = new System.Drawing.Point(153, 9);
+            this.pictureBox3.Location = new System.Drawing.Point(60, 7);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(21, 22);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.pictureBox3.TabIndex = 83;
             this.pictureBox3.TabStop = false;
             // 
-            // lbModifier
+            // lbEnregistrer
             // 
-            this.lbModifier.ActiveLinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(190)))), ((int)(((byte)(117)))));
-            this.lbModifier.AutoSize = true;
-            this.lbModifier.BackColor = System.Drawing.Color.Transparent;
-            this.lbModifier.Font = new System.Drawing.Font("Calibri", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.lbModifier.ForeColor = System.Drawing.Color.White;
-            this.lbModifier.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.lbModifier.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.lbModifier.LinkColor = System.Drawing.Color.White;
-            this.lbModifier.Location = new System.Drawing.Point(177, 8);
-            this.lbModifier.Name = "lbModifier";
-            this.lbModifier.Size = new System.Drawing.Size(62, 18);
-            this.lbModifier.TabIndex = 82;
-            this.lbModifier.TabStop = true;
-            this.lbModifier.Text = "Modifier";
-            this.lbModifier.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.lbEnregistrer.ActiveLinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(190)))), ((int)(((byte)(117)))));
+            this.lbEnregistrer.AutoSize = true;
+            this.lbEnregistrer.BackColor = System.Drawing.Color.Transparent;
+            this.lbEnregistrer.Font = new System.Drawing.Font("Calibri", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.lbEnregistrer.ForeColor = System.Drawing.Color.White;
+            this.lbEnregistrer.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.lbEnregistrer.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.lbEnregistrer.LinkColor = System.Drawing.Color.White;
+            this.lbEnregistrer.Location = new System.Drawing.Point(84, 6);
+            this.lbEnregistrer.Name = "lbEnregistrer";
+            this.lbEnregistrer.Size = new System.Drawing.Size(76, 18);
+            this.lbEnregistrer.TabIndex = 82;
+            this.lbEnregistrer.TabStop = true;
+            this.lbEnregistrer.Text = "Enregistrer";
+            this.lbEnregistrer.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // pictureBox1
             // 
             this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pictureBox1.Image = global::WidraSoft.UI.Properties.Resources.remove;
+            this.pictureBox1.Image = global::WidraSoft.UI.Properties.Resources.delete;
             this.pictureBox1.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.pictureBox1.Location = new System.Drawing.Point(260, 8);
+            this.pictureBox1.Location = new System.Drawing.Point(178, 6);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(21, 22);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.pictureBox1.TabIndex = 81;
             this.pictureBox1.TabStop = false;
             // 
-            // pictureBox2
+            // lbAnnuler
             // 
-            this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pictureBox2.Image = global::WidraSoft.UI.Properties.Resources.add;
-            this.pictureBox2.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.pictureBox2.Location = new System.Drawing.Point(56, 8);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(21, 22);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.pictureBox2.TabIndex = 80;
-            this.pictureBox2.TabStop = false;
+            this.lbAnnuler.ActiveLinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(190)))), ((int)(((byte)(117)))));
+            this.lbAnnuler.AutoSize = true;
+            this.lbAnnuler.BackColor = System.Drawing.Color.Transparent;
+            this.lbAnnuler.Font = new System.Drawing.Font("Calibri", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.lbAnnuler.ForeColor = System.Drawing.Color.White;
+            this.lbAnnuler.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.lbAnnuler.LinkColor = System.Drawing.Color.White;
+            this.lbAnnuler.Location = new System.Drawing.Point(202, 6);
+            this.lbAnnuler.Name = "lbAnnuler";
+            this.lbAnnuler.Size = new System.Drawing.Size(58, 18);
+            this.lbAnnuler.TabIndex = 78;
+            this.lbAnnuler.TabStop = true;
+            this.lbAnnuler.Text = "Annuler";
             // 
-            // lbAjouter
+            // lbPont
             // 
-            this.lbAjouter.ActiveLinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(190)))), ((int)(((byte)(117)))));
-            this.lbAjouter.AutoSize = true;
-            this.lbAjouter.BackColor = System.Drawing.Color.Transparent;
-            this.lbAjouter.Font = new System.Drawing.Font("Calibri", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.lbAjouter.ForeColor = System.Drawing.Color.White;
-            this.lbAjouter.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.lbAjouter.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.lbAjouter.LinkColor = System.Drawing.Color.White;
-            this.lbAjouter.Location = new System.Drawing.Point(78, 8);
-            this.lbAjouter.Name = "lbAjouter";
-            this.lbAjouter.Size = new System.Drawing.Size(55, 18);
-            this.lbAjouter.TabIndex = 79;
-            this.lbAjouter.TabStop = true;
-            this.lbAjouter.Text = "Ajouter";
-            this.lbAjouter.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
-            // lbSupprimer
-            // 
-            this.lbSupprimer.ActiveLinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(190)))), ((int)(((byte)(117)))));
-            this.lbSupprimer.AutoSize = true;
-            this.lbSupprimer.BackColor = System.Drawing.Color.Transparent;
-            this.lbSupprimer.Font = new System.Drawing.Font("Calibri", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.lbSupprimer.ForeColor = System.Drawing.Color.White;
-            this.lbSupprimer.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.lbSupprimer.LinkColor = System.Drawing.Color.White;
-            this.lbSupprimer.Location = new System.Drawing.Point(284, 8);
-            this.lbSupprimer.Name = "lbSupprimer";
-            this.lbSupprimer.Size = new System.Drawing.Size(73, 18);
-            this.lbSupprimer.TabIndex = 78;
-            this.lbSupprimer.TabStop = true;
-            this.lbSupprimer.Text = "Supprimer";
-            // 
-            // label14
-            // 
-            this.label14.AutoSize = true;
-            this.label14.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label14.ForeColor = System.Drawing.Color.White;
-            this.label14.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label14.Location = new System.Drawing.Point(60, 134);
-            this.label14.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(38, 19);
-            this.label14.TabIndex = 86;
-            this.label14.Text = "Pont";
+            this.lbPont.AutoSize = true;
+            this.lbPont.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lbPont.ForeColor = System.Drawing.Color.White;
+            this.lbPont.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.lbPont.Location = new System.Drawing.Point(56, 175);
+            this.lbPont.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lbPont.Name = "lbPont";
+            this.lbPont.Size = new System.Drawing.Size(38, 19);
+            this.lbPont.TabIndex = 86;
+            this.lbPont.Text = "Pont";
             // 
             // cbPont
             // 
             this.cbPont.BackColor = System.Drawing.Color.Honeydew;
             this.cbPont.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.cbPont.FormattingEnabled = true;
-            this.cbPont.Location = new System.Drawing.Point(144, 131);
+            this.cbPont.Location = new System.Drawing.Point(160, 172);
             this.cbPont.Margin = new System.Windows.Forms.Padding(2);
             this.cbPont.Name = "cbPont";
             this.cbPont.Size = new System.Drawing.Size(296, 27);
             this.cbPont.TabIndex = 85;
             // 
-            // label2
+            // lbFirme
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label2.Location = new System.Drawing.Point(60, 182);
-            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(45, 19);
-            this.label2.TabIndex = 88;
-            this.label2.Text = "Firme";
+            this.lbFirme.AutoSize = true;
+            this.lbFirme.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lbFirme.ForeColor = System.Drawing.Color.White;
+            this.lbFirme.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.lbFirme.Location = new System.Drawing.Point(56, 223);
+            this.lbFirme.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lbFirme.Name = "lbFirme";
+            this.lbFirme.Size = new System.Drawing.Size(45, 19);
+            this.lbFirme.TabIndex = 88;
+            this.lbFirme.Text = "Firme";
             // 
             // cbFirme
             // 
             this.cbFirme.BackColor = System.Drawing.Color.Honeydew;
             this.cbFirme.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.cbFirme.FormattingEnabled = true;
-            this.cbFirme.Location = new System.Drawing.Point(144, 179);
+            this.cbFirme.Location = new System.Drawing.Point(160, 220);
             this.cbFirme.Margin = new System.Windows.Forms.Padding(2);
             this.cbFirme.Name = "cbFirme";
             this.cbFirme.Size = new System.Drawing.Size(296, 27);
             this.cbFirme.TabIndex = 87;
             // 
+            // lbCOM
+            // 
+            this.lbCOM.AutoSize = true;
+            this.lbCOM.Font = new System.Drawing.Font("Calibri", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lbCOM.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(112)))), ((int)(((byte)(228)))), ((int)(((byte)(132)))));
+            this.lbCOM.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.lbCOM.Location = new System.Drawing.Point(54, 19);
+            this.lbCOM.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lbCOM.Name = "lbCOM";
+            this.lbCOM.Size = new System.Drawing.Size(51, 24);
+            this.lbCOM.TabIndex = 95;
+            this.lbCOM.Text = "COM";
+            // 
+            // lbCamion
+            // 
+            this.lbCamion.AutoSize = true;
+            this.lbCamion.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lbCamion.ForeColor = System.Drawing.Color.White;
+            this.lbCamion.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.lbCamion.Location = new System.Drawing.Point(56, 274);
+            this.lbCamion.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lbCamion.Name = "lbCamion";
+            this.lbCamion.Size = new System.Drawing.Size(58, 19);
+            this.lbCamion.TabIndex = 99;
+            this.lbCamion.Text = "Camion";
+            // 
+            // cbCamion
+            // 
+            this.cbCamion.BackColor = System.Drawing.Color.Honeydew;
+            this.cbCamion.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.cbCamion.FormattingEnabled = true;
+            this.cbCamion.Location = new System.Drawing.Point(160, 271);
+            this.cbCamion.Margin = new System.Windows.Forms.Padding(2);
+            this.cbCamion.Name = "cbCamion";
+            this.cbCamion.Size = new System.Drawing.Size(296, 27);
+            this.cbCamion.TabIndex = 98;
+            // 
+            // lbChauffeur
+            // 
+            this.lbChauffeur.AutoSize = true;
+            this.lbChauffeur.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lbChauffeur.ForeColor = System.Drawing.Color.White;
+            this.lbChauffeur.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.lbChauffeur.Location = new System.Drawing.Point(56, 324);
+            this.lbChauffeur.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lbChauffeur.Name = "lbChauffeur";
+            this.lbChauffeur.Size = new System.Drawing.Size(72, 19);
+            this.lbChauffeur.TabIndex = 101;
+            this.lbChauffeur.Text = "Chauffeur";
+            // 
+            // cbChauffeur
+            // 
+            this.cbChauffeur.BackColor = System.Drawing.Color.Honeydew;
+            this.cbChauffeur.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.cbChauffeur.FormattingEnabled = true;
+            this.cbChauffeur.Location = new System.Drawing.Point(160, 321);
+            this.cbChauffeur.Margin = new System.Windows.Forms.Padding(2);
+            this.cbChauffeur.Name = "cbChauffeur";
+            this.cbChauffeur.Size = new System.Drawing.Size(296, 27);
+            this.cbChauffeur.TabIndex = 100;
+            // 
+            // lbTransporteur
+            // 
+            this.lbTransporteur.AutoSize = true;
+            this.lbTransporteur.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lbTransporteur.ForeColor = System.Drawing.Color.White;
+            this.lbTransporteur.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.lbTransporteur.Location = new System.Drawing.Point(56, 377);
+            this.lbTransporteur.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lbTransporteur.Name = "lbTransporteur";
+            this.lbTransporteur.Size = new System.Drawing.Size(91, 19);
+            this.lbTransporteur.TabIndex = 103;
+            this.lbTransporteur.Text = "Transporteur";
+            // 
+            // cbTransporteur
+            // 
+            this.cbTransporteur.BackColor = System.Drawing.Color.Honeydew;
+            this.cbTransporteur.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.cbTransporteur.FormattingEnabled = true;
+            this.cbTransporteur.Location = new System.Drawing.Point(160, 374);
+            this.cbTransporteur.Margin = new System.Windows.Forms.Padding(2);
+            this.cbTransporteur.Name = "cbTransporteur";
+            this.cbTransporteur.Size = new System.Drawing.Size(296, 27);
+            this.cbTransporteur.TabIndex = 102;
+            // 
+            // lbProduit
+            // 
+            this.lbProduit.AutoSize = true;
+            this.lbProduit.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lbProduit.ForeColor = System.Drawing.Color.White;
+            this.lbProduit.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.lbProduit.Location = new System.Drawing.Point(56, 431);
+            this.lbProduit.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lbProduit.Name = "lbProduit";
+            this.lbProduit.Size = new System.Drawing.Size(55, 19);
+            this.lbProduit.TabIndex = 105;
+            this.lbProduit.Text = "Produit";
+            // 
+            // cbProduit
+            // 
+            this.cbProduit.BackColor = System.Drawing.Color.Honeydew;
+            this.cbProduit.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.cbProduit.FormattingEnabled = true;
+            this.cbProduit.Location = new System.Drawing.Point(160, 428);
+            this.cbProduit.Margin = new System.Windows.Forms.Padding(2);
+            this.cbProduit.Name = "cbProduit";
+            this.cbProduit.Size = new System.Drawing.Size(296, 27);
+            this.cbProduit.TabIndex = 104;
+            // 
+            // lbClient
+            // 
+            this.lbClient.AutoSize = true;
+            this.lbClient.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lbClient.ForeColor = System.Drawing.Color.White;
+            this.lbClient.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.lbClient.Location = new System.Drawing.Point(56, 485);
+            this.lbClient.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lbClient.Name = "lbClient";
+            this.lbClient.Size = new System.Drawing.Size(47, 19);
+            this.lbClient.TabIndex = 107;
+            this.lbClient.Text = "Client";
+            // 
+            // cbClient
+            // 
+            this.cbClient.BackColor = System.Drawing.Color.Honeydew;
+            this.cbClient.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.cbClient.FormattingEnabled = true;
+            this.cbClient.Location = new System.Drawing.Point(160, 482);
+            this.cbClient.Margin = new System.Windows.Forms.Padding(2);
+            this.cbClient.Name = "cbClient";
+            this.cbClient.Size = new System.Drawing.Size(296, 27);
+            this.cbClient.TabIndex = 106;
+            // 
+            // gbTypePesee
+            // 
+            this.gbTypePesee.Controls.Add(this.rb2x);
+            this.gbTypePesee.Controls.Add(this.rb1x);
+            this.gbTypePesee.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.gbTypePesee.ForeColor = System.Drawing.Color.White;
+            this.gbTypePesee.Location = new System.Drawing.Point(160, 29);
+            this.gbTypePesee.Name = "gbTypePesee";
+            this.gbTypePesee.Size = new System.Drawing.Size(296, 56);
+            this.gbTypePesee.TabIndex = 108;
+            this.gbTypePesee.TabStop = false;
+            this.gbTypePesee.Text = "Type de pesée";
+            // 
+            // rb2x
+            // 
+            this.rb2x.AutoSize = true;
+            this.rb2x.FlatAppearance.CheckedBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(190)))), ((int)(((byte)(117)))));
+            this.rb2x.Location = new System.Drawing.Point(179, 23);
+            this.rb2x.Name = "rb2x";
+            this.rb2x.Size = new System.Drawing.Size(42, 23);
+            this.rb2x.TabIndex = 1;
+            this.rb2x.TabStop = true;
+            this.rb2x.Text = "2x";
+            this.rb2x.UseVisualStyleBackColor = true;
+            // 
+            // rb1x
+            // 
+            this.rb1x.AutoSize = true;
+            this.rb1x.FlatAppearance.CheckedBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(190)))), ((int)(((byte)(117)))));
+            this.rb1x.Location = new System.Drawing.Point(53, 23);
+            this.rb1x.Name = "rb1x";
+            this.rb1x.Size = new System.Drawing.Size(42, 23);
+            this.rb1x.TabIndex = 0;
+            this.rb1x.TabStop = true;
+            this.rb1x.Text = "1x";
+            this.rb1x.UseVisualStyleBackColor = true;
+            // 
+            // panelData
+            // 
+            this.panelData.Controls.Add(this.gbFlux);
+            this.panelData.Controls.Add(this.cbCamion);
+            this.panelData.Controls.Add(this.gbTypePesee);
+            this.panelData.Controls.Add(this.cbPont);
+            this.panelData.Controls.Add(this.lbClient);
+            this.panelData.Controls.Add(this.lbPont);
+            this.panelData.Controls.Add(this.cbClient);
+            this.panelData.Controls.Add(this.cbFirme);
+            this.panelData.Controls.Add(this.lbProduit);
+            this.panelData.Controls.Add(this.lbFirme);
+            this.panelData.Controls.Add(this.cbProduit);
+            this.panelData.Controls.Add(this.lbCamion);
+            this.panelData.Controls.Add(this.lbTransporteur);
+            this.panelData.Controls.Add(this.cbChauffeur);
+            this.panelData.Controls.Add(this.cbTransporteur);
+            this.panelData.Controls.Add(this.lbChauffeur);
+            this.panelData.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panelData.Location = new System.Drawing.Point(0, 0);
+            this.panelData.Name = "panelData";
+            this.panelData.Size = new System.Drawing.Size(549, 631);
+            this.panelData.TabIndex = 109;
+            // 
+            // gbFlux
+            // 
+            this.gbFlux.Controls.Add(this.radioButton1);
+            this.gbFlux.Controls.Add(this.radioButton2);
+            this.gbFlux.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.gbFlux.ForeColor = System.Drawing.Color.White;
+            this.gbFlux.Location = new System.Drawing.Point(160, 90);
+            this.gbFlux.Name = "gbFlux";
+            this.gbFlux.Size = new System.Drawing.Size(296, 56);
+            this.gbFlux.TabIndex = 109;
+            this.gbFlux.TabStop = false;
+            this.gbFlux.Text = "Flux";
+            // 
+            // radioButton1
+            // 
+            this.radioButton1.AutoSize = true;
+            this.radioButton1.FlatAppearance.CheckedBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(190)))), ((int)(((byte)(117)))));
+            this.radioButton1.Location = new System.Drawing.Point(179, 23);
+            this.radioButton1.Name = "radioButton1";
+            this.radioButton1.Size = new System.Drawing.Size(73, 23);
+            this.radioButton1.TabIndex = 1;
+            this.radioButton1.TabStop = true;
+            this.radioButton1.Text = "Sortant";
+            this.radioButton1.UseVisualStyleBackColor = true;
+            // 
+            // radioButton2
+            // 
+            this.radioButton2.AutoSize = true;
+            this.radioButton2.FlatAppearance.CheckedBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(190)))), ((int)(((byte)(117)))));
+            this.radioButton2.Location = new System.Drawing.Point(53, 23);
+            this.radioButton2.Name = "radioButton2";
+            this.radioButton2.Size = new System.Drawing.Size(74, 23);
+            this.radioButton2.TabIndex = 0;
+            this.radioButton2.TabStop = true;
+            this.radioButton2.Text = "Entrant";
+            this.radioButton2.UseVisualStyleBackColor = true;
+            // 
+            // panelLayout
+            // 
+            this.panelLayout.Controls.Add(this.panelWeightDetails);
+            this.panelLayout.Controls.Add(this.panelWeightDisplay);
+            this.panelLayout.Controls.Add(this.panelData);
+            this.panelLayout.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelLayout.Location = new System.Drawing.Point(0, 70);
+            this.panelLayout.Name = "panelLayout";
+            this.panelLayout.Size = new System.Drawing.Size(1114, 631);
+            this.panelLayout.TabIndex = 110;
+            // 
+            // panelWeightDetails
+            // 
+            this.panelWeightDetails.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(86)))), ((int)(((byte)(81)))));
+            this.panelWeightDetails.Controls.Add(this.button2);
+            this.panelWeightDetails.Controls.Add(this.button1);
+            this.panelWeightDetails.Controls.Add(this.lbPoidsNet);
+            this.panelWeightDetails.Controls.Add(this.lbPoidsTare);
+            this.panelWeightDetails.Controls.Add(this.lbPoidsBrut);
+            this.panelWeightDetails.Controls.Add(this.label3);
+            this.panelWeightDetails.Controls.Add(this.label2);
+            this.panelWeightDetails.Controls.Add(this.label1);
+            this.panelWeightDetails.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panelWeightDetails.Location = new System.Drawing.Point(549, 128);
+            this.panelWeightDetails.Name = "panelWeightDetails";
+            this.panelWeightDetails.Size = new System.Drawing.Size(565, 114);
+            this.panelWeightDetails.TabIndex = 112;
+            // 
+            // button2
+            // 
+            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(62)))), ((int)(((byte)(60)))));
+            this.button2.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button2.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(112)))), ((int)(((byte)(228)))), ((int)(((byte)(132)))));
+            this.button2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(86)))), ((int)(((byte)(81)))));
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button2.Image = global::WidraSoft.UI.Properties.Resources.insert1;
+            this.button2.Location = new System.Drawing.Point(25, 44);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(27, 28);
+            this.button2.TabIndex = 118;
+            this.button2.UseVisualStyleBackColor = false;
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(62)))), ((int)(((byte)(60)))));
+            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button1.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(112)))), ((int)(((byte)(228)))), ((int)(((byte)(132)))));
+            this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(86)))), ((int)(((byte)(81)))));
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Image = global::WidraSoft.UI.Properties.Resources.insert1;
+            this.button1.Location = new System.Drawing.Point(25, 8);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(27, 28);
+            this.button1.TabIndex = 113;
+            this.button1.UseVisualStyleBackColor = false;
+            // 
+            // lbPoidsNet
+            // 
+            this.lbPoidsNet.AutoSize = true;
+            this.lbPoidsNet.Font = new System.Drawing.Font("Calibri", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lbPoidsNet.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(112)))), ((int)(((byte)(228)))), ((int)(((byte)(132)))));
+            this.lbPoidsNet.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.lbPoidsNet.Location = new System.Drawing.Point(195, 78);
+            this.lbPoidsNet.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lbPoidsNet.Name = "lbPoidsNet";
+            this.lbPoidsNet.Size = new System.Drawing.Size(20, 24);
+            this.lbPoidsNet.TabIndex = 117;
+            this.lbPoidsNet.Text = "0";
+            // 
+            // lbPoidsTare
+            // 
+            this.lbPoidsTare.AutoSize = true;
+            this.lbPoidsTare.Font = new System.Drawing.Font("Calibri", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lbPoidsTare.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(112)))), ((int)(((byte)(228)))), ((int)(((byte)(132)))));
+            this.lbPoidsTare.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.lbPoidsTare.Location = new System.Drawing.Point(195, 44);
+            this.lbPoidsTare.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lbPoidsTare.Name = "lbPoidsTare";
+            this.lbPoidsTare.Size = new System.Drawing.Size(20, 24);
+            this.lbPoidsTare.TabIndex = 116;
+            this.lbPoidsTare.Text = "0";
+            // 
+            // lbPoidsBrut
+            // 
+            this.lbPoidsBrut.AutoSize = true;
+            this.lbPoidsBrut.Font = new System.Drawing.Font("Calibri", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lbPoidsBrut.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(112)))), ((int)(((byte)(228)))), ((int)(((byte)(132)))));
+            this.lbPoidsBrut.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.lbPoidsBrut.Location = new System.Drawing.Point(195, 10);
+            this.lbPoidsBrut.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lbPoidsBrut.Name = "lbPoidsBrut";
+            this.lbPoidsBrut.Size = new System.Drawing.Size(20, 24);
+            this.lbPoidsBrut.TabIndex = 115;
+            this.lbPoidsBrut.Text = "0";
+            // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Corbel", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(190)))), ((int)(((byte)(117)))));
-            this.label3.Location = new System.Drawing.Point(1109, 491);
+            this.label3.Font = new System.Drawing.Font("Calibri", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(112)))), ((int)(((byte)(228)))), ((int)(((byte)(132)))));
+            this.label3.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.label3.Location = new System.Drawing.Point(54, 78);
+            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(44, 33);
-            this.label3.TabIndex = 90;
-            this.label3.Text = "Kg";
+            this.label3.Size = new System.Drawing.Size(130, 24);
+            this.label3.TabIndex = 114;
+            this.label3.Text = "Poids Net (kg):";
             // 
-            // richTextBox2
+            // label2
             // 
-            this.richTextBox2.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.richTextBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(62)))), ((int)(((byte)(60)))));
-            this.richTextBox2.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.richTextBox2.Font = new System.Drawing.Font("Corbel", 25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.richTextBox2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(190)))), ((int)(((byte)(117)))));
-            this.richTextBox2.Location = new System.Drawing.Point(916, 486);
-            this.richTextBox2.Name = "richTextBox2";
-            this.richTextBox2.Size = new System.Drawing.Size(187, 67);
-            this.richTextBox2.TabIndex = 89;
-            this.richTextBox2.TabStop = false;
-            this.richTextBox2.Text = "0";
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Calibri", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(112)))), ((int)(((byte)(228)))), ((int)(((byte)(132)))));
+            this.label2.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.label2.Location = new System.Drawing.Point(54, 44);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(135, 24);
+            this.label2.TabIndex = 113;
+            this.label2.Text = "Poids Tare (kg):";
             // 
-            // label4
+            // label1
             // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Corbel", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(190)))), ((int)(((byte)(117)))));
-            this.label4.Location = new System.Drawing.Point(1109, 564);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(44, 33);
-            this.label4.TabIndex = 92;
-            this.label4.Text = "Kg";
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Calibri", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(112)))), ((int)(((byte)(228)))), ((int)(((byte)(132)))));
+            this.label1.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.label1.Location = new System.Drawing.Point(54, 10);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(136, 24);
+            this.label1.TabIndex = 112;
+            this.label1.Text = "Poids Brut (kg):";
             // 
-            // richTextBox3
+            // panelWeightDisplay
             // 
-            this.richTextBox3.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.richTextBox3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(62)))), ((int)(((byte)(60)))));
-            this.richTextBox3.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.richTextBox3.Font = new System.Drawing.Font("Corbel", 25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.richTextBox3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(190)))), ((int)(((byte)(117)))));
-            this.richTextBox3.Location = new System.Drawing.Point(916, 559);
-            this.richTextBox3.Name = "richTextBox3";
-            this.richTextBox3.Size = new System.Drawing.Size(187, 67);
-            this.richTextBox3.TabIndex = 91;
-            this.richTextBox3.TabStop = false;
-            this.richTextBox3.Text = "0";
+            this.panelWeightDisplay.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(86)))), ((int)(((byte)(81)))));
+            this.panelWeightDisplay.Controls.Add(this.lbWeightSettings);
+            this.panelWeightDisplay.Controls.Add(this.lbCOM);
+            this.panelWeightDisplay.Controls.Add(this.lbStatus);
+            this.panelWeightDisplay.Controls.Add(this.richTextBoxPoids);
+            this.panelWeightDisplay.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panelWeightDisplay.Location = new System.Drawing.Point(549, 0);
+            this.panelWeightDisplay.Name = "panelWeightDisplay";
+            this.panelWeightDisplay.Size = new System.Drawing.Size(565, 128);
+            this.panelWeightDisplay.TabIndex = 111;
             // 
-            // label5
+            // lbWeightSettings
             // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Corbel", 20F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point);
-            this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(190)))), ((int)(((byte)(117)))));
-            this.label5.Location = new System.Drawing.Point(1109, 639);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(44, 33);
-            this.label5.TabIndex = 94;
-            this.label5.Text = "Kg";
+            this.lbWeightSettings.AutoSize = true;
+            this.lbWeightSettings.Font = new System.Drawing.Font("Calibri", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lbWeightSettings.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(112)))), ((int)(((byte)(228)))), ((int)(((byte)(132)))));
+            this.lbWeightSettings.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.lbWeightSettings.Location = new System.Drawing.Point(54, 90);
+            this.lbWeightSettings.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lbWeightSettings.Name = "lbWeightSettings";
+            this.lbWeightSettings.Size = new System.Drawing.Size(51, 24);
+            this.lbWeightSettings.TabIndex = 111;
+            this.lbWeightSettings.Text = "COM";
             // 
-            // richTextBox4
+            // lbStatus
             // 
-            this.richTextBox4.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.richTextBox4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(62)))), ((int)(((byte)(60)))));
-            this.richTextBox4.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.richTextBox4.Font = new System.Drawing.Font("Corbel", 25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point);
-            this.richTextBox4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(190)))), ((int)(((byte)(117)))));
-            this.richTextBox4.Location = new System.Drawing.Point(916, 632);
-            this.richTextBox4.Name = "richTextBox4";
-            this.richTextBox4.Size = new System.Drawing.Size(187, 67);
-            this.richTextBox4.TabIndex = 93;
-            this.richTextBox4.TabStop = false;
-            this.richTextBox4.Text = "0";
+            this.lbStatus.AutoSize = true;
+            this.lbStatus.Font = new System.Drawing.Font("Calibri", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lbStatus.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(112)))), ((int)(((byte)(228)))), ((int)(((byte)(132)))));
+            this.lbStatus.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.lbStatus.Location = new System.Drawing.Point(54, 55);
+            this.lbStatus.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lbStatus.Name = "lbStatus";
+            this.lbStatus.Size = new System.Drawing.Size(51, 24);
+            this.lbStatus.TabIndex = 110;
+            this.lbStatus.Text = "COM";
             // 
-            // label6
+            // Weight_Timer
             // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Corbel", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(190)))), ((int)(((byte)(117)))));
-            this.label6.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label6.Location = new System.Drawing.Point(795, 500);
-            this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(68, 24);
-            this.label6.TabIndex = 95;
-            this.label6.Text = "Poids 1";
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Corbel", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(190)))), ((int)(((byte)(117)))));
-            this.label7.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label7.Location = new System.Drawing.Point(795, 573);
-            this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(69, 24);
-            this.label7.TabIndex = 96;
-            this.label7.Text = "Poids 2";
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Corbel", 15F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point);
-            this.label8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(190)))), ((int)(((byte)(117)))));
-            this.label8.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label8.Location = new System.Drawing.Point(831, 646);
-            this.label8.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(46, 24);
-            this.label8.TabIndex = 97;
-            this.label8.Text = "NET";
+            this.Weight_Timer.Tick += new System.EventHandler(this.Weight_Timer_Tick);
             // 
             // PeseePontBascule
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(62)))), ((int)(((byte)(60)))));
-            this.ClientSize = new System.Drawing.Size(1185, 705);
-            this.Controls.Add(this.label8);
-            this.Controls.Add(this.label7);
-            this.Controls.Add(this.label6);
-            this.Controls.Add(this.label5);
-            this.Controls.Add(this.richTextBox4);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.richTextBox3);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.richTextBox2);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.cbFirme);
-            this.Controls.Add(this.label14);
-            this.Controls.Add(this.cbPont);
+            this.ClientSize = new System.Drawing.Size(1114, 701);
+            this.Controls.Add(this.panelLayout);
             this.Controls.Add(this.panelNavigation);
             this.Controls.Add(this.panelLang);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.richTextBox1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "PeseePontBascule";
             this.Text = "Pesée pont bascule";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.PeseePontBascule_FormClosing);
             this.Load += new System.EventHandler(this.PeseePontBascule_Load);
             this.panelLang.ResumeLayout(false);
             this.panelLang.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pbUpdating)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Spain_flag)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.England_flag)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.France_flag)).EndInit();
             this.panelNavigation.ResumeLayout(false);
             this.panelNavigation.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            this.gbTypePesee.ResumeLayout(false);
+            this.gbTypePesee.PerformLayout();
+            this.panelData.ResumeLayout(false);
+            this.panelData.PerformLayout();
+            this.gbFlux.ResumeLayout(false);
+            this.gbFlux.PerformLayout();
+            this.panelLayout.ResumeLayout(false);
+            this.panelWeightDetails.ResumeLayout(false);
+            this.panelWeightDetails.PerformLayout();
+            this.panelWeightDisplay.ResumeLayout(false);
+            this.panelWeightDisplay.PerformLayout();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
 
-        private System.Windows.Forms.RichTextBox richTextBox1;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.RichTextBox richTextBoxPoids;
         private System.Windows.Forms.Panel panelLang;
-        private System.Windows.Forms.PictureBox pbUpdating;
         private System.Windows.Forms.PictureBox Spain_flag;
         private System.Windows.Forms.PictureBox England_flag;
         private System.Windows.Forms.PictureBox France_flag;
         private System.Windows.Forms.ComboBox cbLang;
         private System.Windows.Forms.Panel panelNavigation;
         private System.Windows.Forms.PictureBox pictureBox3;
-        private System.Windows.Forms.LinkLabel lbModifier;
+        private System.Windows.Forms.LinkLabel lbEnregistrer;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.LinkLabel lbAjouter;
-        private System.Windows.Forms.LinkLabel lbSupprimer;
-        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.LinkLabel lbAnnuler;
+        private System.Windows.Forms.Label lbPont;
         private System.Windows.Forms.ComboBox cbPont;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label lbFirme;
         private System.Windows.Forms.ComboBox cbFirme;
+        private System.Windows.Forms.Label lbCOM;
+        private System.Windows.Forms.Label lbCamion;
+        private System.Windows.Forms.ComboBox cbCamion;
+        private System.Windows.Forms.Label lbChauffeur;
+        private System.Windows.Forms.ComboBox cbChauffeur;
+        private System.Windows.Forms.Label lbTransporteur;
+        private System.Windows.Forms.ComboBox cbTransporteur;
+        private System.Windows.Forms.Label lbProduit;
+        private System.Windows.Forms.ComboBox cbProduit;
+        private System.Windows.Forms.Label lbClient;
+        private System.Windows.Forms.ComboBox cbClient;
+        private System.Windows.Forms.GroupBox gbTypePesee;
+        private System.Windows.Forms.RadioButton rb2x;
+        private System.Windows.Forms.RadioButton rb1x;
+        private System.Windows.Forms.Panel panelData;
+        private System.Windows.Forms.Panel panelLayout;
+        private System.Windows.Forms.Label lbStatus;
+        private System.Windows.Forms.Panel panelWeightDisplay;
+        private System.Windows.Forms.Label lbWeightSettings;
+        private System.Windows.Forms.Panel panelWeightDetails;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.GroupBox gbFlux;
+        private System.Windows.Forms.RadioButton radioButton1;
+        private System.Windows.Forms.RadioButton radioButton2;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.RichTextBox richTextBox2;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.RichTextBox richTextBox3;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.RichTextBox richTextBox4;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label lbPoidsNet;
+        private System.Windows.Forms.Label lbPoidsTare;
+        private System.Windows.Forms.Label lbPoidsBrut;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.LinkLabel lbImprimer;
+        private System.Windows.Forms.Timer Weight_Timer;
     }
 }

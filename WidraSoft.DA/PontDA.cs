@@ -90,6 +90,25 @@ namespace WidraSoft.DA
             }
         }
 
+        public string GetCOM(Int32 Id)
+        {
+
+            String sql = "SELECT NUMPORTCOM FROM PONT WHERE PONTID=" + Id;
+            conn.ConnectionString = connString;
+            if (conn.State == ConnectionState.Closed)
+                conn.Open();
+            SqlCommand cmd = new SqlCommand(sql, conn);
+            try
+            {
+                String name = (string)cmd.ExecuteScalar();
+                return name;
+            }
+            catch
+            {
+                throw;
+            }
+        }
+
         public void Add(String Designation, String NumPortCOM, Int32 Weight_SettingsId, Int32 ActiverPoids, Int32 BaudRate,
                         Int32 DataBits, String StopBits, String Handshake, Int32 ReadTimeOut)
         {

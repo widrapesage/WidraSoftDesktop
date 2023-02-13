@@ -99,8 +99,6 @@ namespace WidraSoft.UI
             form.Show();
         }
 
-
-
         private void txtSearchBox_TextChanged(object sender, EventArgs e)
         {
             Pont pont = new Pont();

@@ -36,6 +36,7 @@ namespace WidraSoft.UI
             this.chauffeursToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.pontsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.pToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.ParamPoidstoolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.gérerToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.camionsToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.produitsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -145,12 +146,23 @@ namespace WidraSoft.UI
             // 
             // pToolStripMenuItem
             // 
+            this.pToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.ParamPoidstoolStripMenuItem1});
             resources.ApplyResources(this.pToolStripMenuItem, "pToolStripMenuItem");
             this.pToolStripMenuItem.ForeColor = System.Drawing.Color.White;
             this.pToolStripMenuItem.Image = global::WidraSoft.UI.Properties.Resources.device;
             this.pToolStripMenuItem.Margin = new System.Windows.Forms.Padding(0, 4, 0, 0);
             this.pToolStripMenuItem.Name = "pToolStripMenuItem";
             this.pToolStripMenuItem.Padding = new System.Windows.Forms.Padding(4, 1, 4, 3);
+            // 
+            // ParamPoidstoolStripMenuItem1
+            // 
+            this.ParamPoidstoolStripMenuItem1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(62)))), ((int)(((byte)(60)))));
+            this.ParamPoidstoolStripMenuItem1.ForeColor = System.Drawing.Color.White;
+            this.ParamPoidstoolStripMenuItem1.Image = global::WidraSoft.UI.Properties.Resources.Weighing_settings;
+            this.ParamPoidstoolStripMenuItem1.Name = "ParamPoidstoolStripMenuItem1";
+            resources.ApplyResources(this.ParamPoidstoolStripMenuItem1, "ParamPoidstoolStripMenuItem1");
+            this.ParamPoidstoolStripMenuItem1.Click += new System.EventHandler(this.ParamPoidstoolStripMenuItem1_Click);
             // 
             // gérerToolStripMenuItem
             // 
@@ -229,6 +241,7 @@ namespace WidraSoft.UI
             this.clientsToolStripMenuItem.Image = global::WidraSoft.UI.Properties.Resources.Customers;
             this.clientsToolStripMenuItem.Name = "clientsToolStripMenuItem";
             resources.ApplyResources(this.clientsToolStripMenuItem, "clientsToolStripMenuItem");
+            this.clientsToolStripMenuItem.Click += new System.EventHandler(this.clientsToolStripMenuItem_Click);
             // 
             // BorneToolpStripMenuItem
             // 
@@ -530,6 +543,7 @@ namespace WidraSoft.UI
         private System.Windows.Forms.TextBox txtEntreprise;
         private System.Windows.Forms.TextBox txtValidite;
         private System.Windows.Forms.Panel panelLicenceInfo;
+        private System.Windows.Forms.ToolStripMenuItem ParamPoidstoolStripMenuItem1;
         //private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

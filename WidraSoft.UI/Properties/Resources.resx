@@ -127,8 +127,8 @@
   <data name="user1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\user.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="delete" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\delete.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Logo" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Logo.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Users" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Users.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -145,14 +145,23 @@
   <data name="logo_Widra-250" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\logo_Widra-250.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="refresh" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\refresh.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="delete-button" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\delete-button.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="add-user" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\add-user.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="cubes" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\cubes.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="insert1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\insert.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="update" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\update.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="refresh" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\refresh.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="remove1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\remove.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -181,17 +190,26 @@
   <data name="Balance" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Balance.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="delete1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\delete.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="check" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\check.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Groupes" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Groupes.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="save1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\save.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="delivery-weighing" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\delivery-weighing.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Customers" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Customers.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="close" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\close.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="help-web-button" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\help-web-button.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -208,17 +226,11 @@
   <data name="synchronize" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\synchronize.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="cubes" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\cubes.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="uncheck" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\uncheck.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Weighing_settings" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Weighing_settings.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="driver" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\driver.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="delete-button" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\delete-button.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="logo_Widra-2501" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\logo_Widra-250.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -265,11 +277,17 @@
   <data name="Weighing" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Weighing.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="insert" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\insert.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="Balance-Grand" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Balance-Grand.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="industry" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\industry.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="delete" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\delete.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="select" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\select.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -277,17 +295,11 @@
   <data name="folder" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\folder.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Logo" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Logo.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="cubes1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\cubes.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="united-kingdom" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\united-kingdom.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="device" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\device.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="profit-report1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\profit-report.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -295,8 +307,8 @@
   <data name="profit-report" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\profit-report.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="close" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\close.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="device" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\device.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Gerer" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Gerer.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -304,8 +316,8 @@
   <data name="france" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\france.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Aide" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Aide.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="uncheck" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\uncheck.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="spain" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\spain.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -319,8 +331,14 @@
   <data name="device1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\device.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="Aide" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Aide.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="button_delete" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\button_delete.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="pencil" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\pencil.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="atm" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\atm.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -349,7 +367,7 @@
   <data name="export" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\export.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="pencil" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\pencil.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="printer" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\printer.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

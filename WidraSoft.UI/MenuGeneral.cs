@@ -29,8 +29,6 @@ namespace WidraSoft.UI
             public MyRenderer() : base(new MyMenuColors()) { }
         }
 
-
-
         private void MenuGeneral_Load(object sender, EventArgs e)
         {
             this.CenterToScreen();
@@ -157,6 +155,18 @@ namespace WidraSoft.UI
         private void homeToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Form form = new PeseePontBascule();
+            form.Show();
+        }
+
+        private void clientsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Form form = new ClientsListe("1=1");
+            form.Show();
+        }
+
+        private void ParamPoidstoolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            Form form = new WeightSettingsList("1=1");
             form.Show();
         }
     }

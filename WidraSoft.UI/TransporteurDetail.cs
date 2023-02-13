@@ -57,6 +57,7 @@ namespace WidraSoft.UI
                 }
             }
 
+            Bind_DgvCamions();
             cbLang.DataSource = Language.Languages;
             cbLang.ValueMember = null;
             cbLang.DisplayMember = Language.Languages[0];
@@ -136,6 +137,48 @@ namespace WidraSoft.UI
             }
         }
 
+        private void Bind_DgvCamions()
+        {
+            CamionTransporteur camionTransporteur = new CamionTransporteur();
+            if (vg_Id <= 0)
+            {
+                DgvCamions.DataSource = camionTransporteur.FindByTransporteurId(-1);
+            }
+            else
+            {
+                DgvCamions.DataSource = camionTransporteur.FindByTransporteurId(vg_Id);
+            }
+
+            DgvCamions.Columns[0].Visible = false;
+            DgvCamions.Columns["CAMION"].Visible = true;
+            DgvCamions.Columns["TRANSPORTEURID"].Visible = false;
+            DgvCamions.Columns["TRANSPORTEUR"].Visible = false;
+            DgvCamions.Columns["DATECREATION"].Visible = false;
+
+            DgvCamions.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            DgvCamions.ReadOnly = true;
+            DgvCamions.RowHeadersVisible = false;
+
+        }
+
+        private void Localize_DgvCamions(string lang)
+        {
+            if (lang == "fr")
+            {
+                DgvCamions.Columns["CAMION"].HeaderText = "CAMION";
+            }
+
+            if (lang == "en")
+            {
+                DgvCamions.Columns["CAMION"].HeaderText = "TRUCK";
+            }
+
+            if (lang == "es")
+            {
+                DgvCamions.Columns["CAMION"].HeaderText = "CAMIÓN";
+            }
+        }
+
         private void Disable()
         {
             txtDateCreation.Enabled = false;
@@ -155,6 +198,7 @@ namespace WidraSoft.UI
             chx_Attention.Enabled = false;
             txtAlerte.Enabled = false;
             txtObservations.Enabled = false;
+            DgvCamions.Enabled = false;
             pbUpdating.Visible = false;
 
             vg_IsEnabled = false;
@@ -179,6 +223,7 @@ namespace WidraSoft.UI
             chx_Attention.Enabled = true;
             txtAlerte.Enabled = true;
             txtObservations.Enabled = true;
+            DgvCamions.Enabled = true;
             pbUpdating.Visible = true;
 
             vg_IsEnabled = true;
@@ -330,6 +375,7 @@ namespace WidraSoft.UI
                                     vg_Update = false;
                                     Disable();
                                     Bind_Fields();
+                                    Bind_DgvCamions();
                                 }
 
                             }
@@ -436,7 +482,7 @@ namespace WidraSoft.UI
                 Spain_flag.Visible = false;
                 Language_Manager language_Manager = new Language_Manager();
                 language_Manager.ChangeLanguage("fr", this, typeof(TransporteurDetail));
-
+                Localize_DgvCamions("fr");
             }
 
             if (cbLang.Text == "EN")
@@ -446,6 +492,7 @@ namespace WidraSoft.UI
                 Spain_flag.Visible = false;
                 Language_Manager language_Manager = new Language_Manager();
                 language_Manager.ChangeLanguage("en", this, typeof(TransporteurDetail));
+                Localize_DgvCamions("en");
             }
 
             if (cbLang.Text == "ES")
@@ -455,6 +502,7 @@ namespace WidraSoft.UI
                 Spain_flag.Visible = true;
                 Language_Manager language_Manager = new Language_Manager();
                 language_Manager.ChangeLanguage("es", this, typeof(TransporteurDetail));
+                Localize_DgvCamions("es");
             }
         }
     }

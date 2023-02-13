@@ -113,6 +113,12 @@
   <data name="pontsToolStripMenuItem.TextImageRelation" type="System.Windows.Forms.TextImageRelation, System.Windows.Forms">
     <value>ImageAboveText</value>
   </data>
+  <data name="ParamPoidstoolStripMenuItem1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>347, 30</value>
+  </data>
+  <data name="ParamPoidstoolStripMenuItem1.Text" xml:space="preserve">
+    <value>Paramètres de lecture du poids</value>
+  </data>
   <data name="pToolStripMenuItem.Font" type="System.Drawing.Font, System.Drawing">
     <value>Corbel, 15pt</value>
   </data>
@@ -1428,6 +1434,12 @@
     <value>pToolStripMenuItem</value>
   </data>
   <data name="&gt;&gt;pToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;ParamPoidstoolStripMenuItem1.Name" xml:space="preserve">
+    <value>ParamPoidstoolStripMenuItem1</value>
+  </data>
+  <data name="&gt;&gt;ParamPoidstoolStripMenuItem1.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;gérerToolStripMenuItem.Name" xml:space="preserve">

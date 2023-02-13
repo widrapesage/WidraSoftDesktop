@@ -35,19 +35,19 @@ namespace WidraSoft.UI
             cbWeight_SettingsId.ValueMember = "WEIGHT_SETTINGSID";
 
             cbBaudRate.DataSource = Values.BaudRate;
-            cbBaudRate.ValueMember = Values.BaudRate[0].ToString();
+            cbBaudRate.ValueMember =null;
             cbBaudRate.DisplayMember = Values.BaudRate[0].ToString();
 
             cbDataBits.DataSource = Values.Databits;
-            cbDataBits.ValueMember = Values.Databits[0].ToString();
+            cbDataBits.ValueMember = null;
             cbDataBits.DisplayMember = Values.Databits[0].ToString();
 
             cbStopBits.DataSource = Values.StopBits;
-            cbStopBits.ValueMember = Values.Databits[0].ToString();
+            cbStopBits.ValueMember = null;
             cbStopBits.DisplayMember = Values.StopBits[0];
 
             cbHandshake.DataSource = Values.Handshake;
-            cbHandshake.ValueMember = Values.Databits[0].ToString();
+            cbHandshake.ValueMember = null;
             cbHandshake.DisplayMember = Values.Handshake[0];
 
             if (vg_Mode == "Add")
@@ -76,7 +76,8 @@ namespace WidraSoft.UI
                     }
                 }
             }
-           
+
+            Bind_DgvFirmes();
             cbLang.DataSource = Language.Languages;
             cbLang.ValueMember = null;
             cbLang.DisplayMember = Language.Languages[0];
@@ -93,6 +94,9 @@ namespace WidraSoft.UI
                 lbModifier.BackColor = Color.Transparent;
                 lbSupprimer.Enabled = false;
                 lbSupprimer.BackColor = Color.Transparent;
+
+                txtActiverPoids.Text = "1";
+                chx_ActiverPoids.Checked = true;
             }
         }
 
@@ -118,30 +122,23 @@ namespace WidraSoft.UI
                 if (row["WEIGHT_SETTINGSID"] is System.DBNull)
                     cbWeight_SettingsId.SelectedValue = 0;
                 else
-                    cbWeight_SettingsId.SelectedValue = (int)row["WEIGHT_SETTINGSID"];
-                if (row["BAUDRATE"] is System.DBNull)
-                    cbBaudRate.SelectedValue = "";
-                else
-                    cbBaudRate.SelectedValue = (int)row["BAUDRATE"];
-                if (row["DATABITS"] is System.DBNull)
-                    cbDataBits.SelectedValue = "";
-                else
-                    cbDataBits.SelectedValue = (int)row["DATABITS"];
-                if (row["STOPBITS"] is System.DBNull)
-                    cbDataBits.SelectedValue = "";
-                else
-                    cbDataBits.SelectedValue = row["STOPBITS"].ToString();
-                if (row["HANDSHAKE"] is System.DBNull)
-                    cbHandshake.SelectedValue = "";
-                else
-                    cbHandshake.SelectedValue = row["HANDSHAKE"].ToString();
-
+                    cbWeight_SettingsId.SelectedValue = (int)row["WEIGHT_SETTINGSID"];               
                 txtCOM.Text = row["NUMPORTCOM"].ToString();
                 txtActiverPoids.Text = row["ACTIVERPOIDS"].ToString();
                 if (txtActiverPoids.Text == "1")
                     chx_ActiverPoids.Checked = true;
                 else
                     chx_ActiverPoids.Checked = false;
+                if (row["BAUDRATE"] is System.DBNull)
+                    cbBaudRate.Text = "";
+                else
+                    cbBaudRate.Text = row["BAUDRATE"].ToString();
+                if (row["DATABITS"] is System.DBNull)
+                    cbDataBits.Text = "";
+                else
+                    cbDataBits.Text = row["DATABITS"].ToString();
+                cbStopBits.Text = row["STOPBITS"].ToString();
+                cbHandshake.Text = row["HANDSHAKE"].ToString();
                 txtReadTimeOut.Text = row["READTIMEOUT"].ToString();
             }
         }
@@ -158,7 +155,8 @@ namespace WidraSoft.UI
             cbDataBits.Enabled = false;
             cbStopBits.Enabled = false;
             cbHandshake.Enabled = false;
-            txtReadTimeOut.Enabled = false;           
+            txtReadTimeOut.Enabled = false;      
+            dgvFirmes.Enabled = false;
             pbUpdating.Visible = false;
 
             vg_IsEnabled = false;
@@ -177,6 +175,7 @@ namespace WidraSoft.UI
             cbStopBits.Enabled = true;
             cbHandshake.Enabled = true;
             txtReadTimeOut.Enabled = true;
+            dgvFirmes.Enabled = true;
             pbUpdating.Visible = true;
 
             vg_IsEnabled = true;
@@ -196,6 +195,65 @@ namespace WidraSoft.UI
             cbStopBits.Text = "";
             cbHandshake.Text = "";
             txtReadTimeOut.Text = "";
+        }
+
+        private void Bind_DgvFirmes()
+        {
+            PontFirme pontFirme = new PontFirme();
+            if (txtId.Text == "")
+            {
+                dgvFirmes.DataSource = pontFirme.FindByPontId(-1);
+            }
+            else
+            {
+                int Id;
+                bool IsParsableId;
+                IsParsableId = Int32.TryParse(txtId.Text, out Id);
+                dgvFirmes.DataSource = pontFirme.FindByPontId(Id);
+            }
+
+            dgvFirmes.Columns[0].Visible = false;
+            dgvFirmes.Columns["FIRME"].Visible = true;
+            dgvFirmes.Columns["PONTID"].Visible = false;
+            dgvFirmes.Columns["PONT"].Visible = false;
+            dgvFirmes.Columns["DATECREATION"].Visible = false;
+
+            dgvFirmes.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            dgvFirmes.ReadOnly = true;
+
+        }
+
+        private void Localize_DgvFirmes(string lang)
+        {
+            if (lang == "fr")
+            {
+                dgvFirmes.Columns["PONT"].HeaderText = "PONT";
+                dgvFirmes.Columns["FIRME"].HeaderText = "FIRME";
+                dgvFirmes.Columns["DATECREATION"].HeaderText = "DATE CREATION";
+            }
+
+            if (lang == "en")
+            {
+                dgvFirmes.Columns["PONT"].HeaderText = "WEIGHBRIDGE";
+                dgvFirmes.Columns["FIRME"].HeaderText = "FIRM";
+                dgvFirmes.Columns["DATECREATION"].HeaderText = "CREATION DATE";
+            }
+
+            if (lang == "es")
+            {
+                dgvFirmes.Columns["PONT"].HeaderText = "PUENTE";
+                dgvFirmes.Columns["FIRME"].HeaderText = "FIRMA";
+                dgvFirmes.Columns["DATECREATION"].HeaderText = "FECHA DE CREACIÓN";
+            }
+        }
+
+        private void Refresh_DgvFirmes()
+        {
+            int Id;
+            bool IsParsableId;
+            PontFirme pontFirme = new PontFirme();
+            IsParsableId = Int32.TryParse(txtId.Text, out Id);
+            dgvFirmes.DataSource = pontFirme.FindByPontId(Id);
         }
 
         private void chx_ActiverPoids_CheckedChanged(object sender, EventArgs e)
@@ -436,6 +494,64 @@ namespace WidraSoft.UI
                 Spain_flag.Visible = true;
                 Language_Manager language_Manager = new Language_Manager();
                 language_Manager.ChangeLanguage("es", this, typeof(PontDetail));
+            }
+        }
+
+        private void lblAddDgvChauffeurs_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            try
+            {
+                Form form = new PontFirmeDetail(vg_Id);
+                form.Show();
+            }
+            catch
+            {
+                throw;
+            }
+        }
+
+        private void lbActualiserDgvChauffeurs_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            Refresh_DgvFirmes();
+        }
+
+        private void lblRetirerDgvChauffeurs_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            Int32[] selectedIds = new Int32[Common_functions.GetDatagridViewSelectedRowsId(dgvFirmes).Length];
+            selectedIds = Common_functions.GetDatagridViewSelectedRowsId(dgvFirmes);
+            if (Common_functions.GetDatagridViewSelectedRowsId(dgvFirmes).Length > 0)
+            {
+                for (int i = 0; i < Common_functions.GetDatagridViewSelectedRowsId(dgvFirmes).Length; i++)
+                {
+                    try
+                    {
+                        PontFirme pontFirme = new PontFirme();
+                        pontFirme.Delete(vg_Id, selectedIds[i]);
+                    }
+                    catch
+                    {
+                        throw;
+                    }
+                }
+                if (cbLang.Text == "FR")
+                    Custom_MessageBox.Show("FR", Common_functions.GetDatagridViewSelectedRowsId(dgvFirmes).Length + " firme(s) supprimé(s)", "Firme", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                else if (cbLang.Text == "EN")
+                    Custom_MessageBox.Show("EN", Common_functions.GetDatagridViewSelectedRowsId(dgvFirmes).Length + " firm(s) deleted", "Firm", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                else
+                    Custom_MessageBox.Show("ES", Common_functions.GetDatagridViewSelectedRowsId(dgvFirmes).Length + " firma(s) añadido(s)", "Firma", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                Refresh_DgvFirmes();
+            }
+            else
+            {
+
+                if (cbLang.Text == "FR")
+                    Custom_MessageBox.Show("FR", "Aucun enregistrement sélectionné", "Firme", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                else if (cbLang.Text == "EN")
+                    Custom_MessageBox.Show("EN", "No rows selected", "Firm", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                else
+                    Custom_MessageBox.Show("ES", "Ningún registro seleccionado", "Firma", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
             }
         }
     }

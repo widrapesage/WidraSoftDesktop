@@ -62,6 +62,19 @@ namespace WidraSoft.BL
             }
         }
 
+        public string GetCOM(Int32 Id)
+        {
+            try
+            {
+                PontDA pont = new PontDA();
+                return pont.GetCOM(Id);
+            }
+            catch
+            {
+                throw;
+            }
+        }
+
         public void Add(String Designation, String NumPortCOM, Int32 Weight_SettingsId, Int32 ActiverPoids, Int32 BaudRate,
                         Int32 DataBits, String StopBits, String Handshake, Int32 ReadTimeOut)
         {

@@ -88,6 +88,30 @@
   <data name="lbSupprimer.Text" xml:space="preserve">
     <value>Borrar</value>
   </data>
+  <data name="label5.Size" type="System.Drawing.Size, System.Drawing">
+    <value>153, 19</value>
+  </data>
+  <data name="label5.Text" xml:space="preserve">
+    <value>Firmas de este puente</value>
+  </data>
+  <data name="lbActualiserDgvChauffeurs.Size" type="System.Drawing.Size, System.Drawing">
+    <value>69, 18</value>
+  </data>
+  <data name="lbActualiserDgvChauffeurs.Text" xml:space="preserve">
+    <value>Actualizar</value>
+  </data>
+  <data name="lblAddDgvChauffeurs.Size" type="System.Drawing.Size, System.Drawing">
+    <value>56, 18</value>
+  </data>
+  <data name="lblAddDgvChauffeurs.Text" xml:space="preserve">
+    <value>Agregar</value>
+  </data>
+  <data name="lblRetirerDgvChauffeurs.Size" type="System.Drawing.Size, System.Drawing">
+    <value>46, 18</value>
+  </data>
+  <data name="lblRetirerDgvChauffeurs.Text" xml:space="preserve">
+    <value>Borrar</value>
+  </data>
   <data name="cbHandshake.Location" type="System.Drawing.Point, System.Drawing">
     <value>196, 332</value>
   </data>

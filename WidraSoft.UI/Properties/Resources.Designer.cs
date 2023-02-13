@@ -293,6 +293,16 @@ namespace WidraSoft.UI.Properties {
         /// <summary>
         ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap delete1 {
+            get {
+                object obj = ResourceManager.GetObject("delete1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap delivery_weighing {
             get {
                 object obj = ResourceManager.GetObject("delivery-weighing", resourceCulture);
@@ -493,6 +503,26 @@ namespace WidraSoft.UI.Properties {
         /// <summary>
         ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap insert {
+            get {
+                object obj = ResourceManager.GetObject("insert", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap insert1 {
+            get {
+                object obj = ResourceManager.GetObject("insert1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Logo {
             get {
                 object obj = ResourceManager.GetObject("Logo", resourceCulture);
@@ -566,6 +596,16 @@ namespace WidraSoft.UI.Properties {
         internal static System.Drawing.Bitmap plus {
             get {
                 object obj = ResourceManager.GetObject("plus", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap printer {
+            get {
+                object obj = ResourceManager.GetObject("printer", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -656,6 +696,16 @@ namespace WidraSoft.UI.Properties {
         internal static System.Drawing.Bitmap save {
             get {
                 object obj = ResourceManager.GetObject("save", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap save1 {
+            get {
+                object obj = ResourceManager.GetObject("save1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -836,6 +886,16 @@ namespace WidraSoft.UI.Properties {
         internal static System.Drawing.Bitmap Weighing {
             get {
                 object obj = ResourceManager.GetObject("Weighing", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Weighing_settings {
+            get {
+                object obj = ResourceManager.GetObject("Weighing_settings", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

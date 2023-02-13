@@ -81,8 +81,8 @@ namespace WidraSoft.UI
             }
 
             DgvAuthorizationList.Columns[0].Visible = false;
-            DgvAuthorizationList.Columns["DESIGNATION"].Width = 150;
-            DgvAuthorizationList.Columns["TYPEACESS"].Width = 100;
+            DgvAuthorizationList.Columns["DESIGNATION"].Visible = true;
+            DgvAuthorizationList.Columns["TYPEACESS"].Visible = true;
 
             DgvAuthorizationList.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             DgvAuthorizationList.ReadOnly = true;
@@ -159,6 +159,7 @@ namespace WidraSoft.UI
             txtPassword.Enabled = false;
             cbGroupeId.Enabled = false;
             pbUpdating.Visible = false;
+            DgvAuthorizationList.Enabled = false;
 
             vg_IsEnabled = false;
         }
@@ -172,6 +173,7 @@ namespace WidraSoft.UI
             txtPassword.Enabled = true;
             cbGroupeId.Enabled = true;
             pbUpdating.Visible = true;
+            DgvAuthorizationList.Enabled = true;
 
             vg_IsEnabled = true;
         }

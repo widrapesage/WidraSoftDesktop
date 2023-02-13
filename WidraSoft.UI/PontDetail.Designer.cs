@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(PontDetail));
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panelLang = new System.Windows.Forms.Panel();
             this.pbUpdating = new System.Windows.Forms.PictureBox();
             this.Spain_flag = new System.Windows.Forms.PictureBox();
@@ -43,6 +44,14 @@
             this.lbAjouter = new System.Windows.Forms.LinkLabel();
             this.lbSupprimer = new System.Windows.Forms.LinkLabel();
             this.panelDetail = new System.Windows.Forms.Panel();
+            this.dgvFirmes = new System.Windows.Forms.DataGridView();
+            this.label5 = new System.Windows.Forms.Label();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
+            this.lbActualiserDgvChauffeurs = new System.Windows.Forms.LinkLabel();
+            this.pbRemoveRow = new System.Windows.Forms.PictureBox();
+            this.pbAddRow = new System.Windows.Forms.PictureBox();
+            this.lblAddDgvChauffeurs = new System.Windows.Forms.LinkLabel();
+            this.lblRetirerDgvChauffeurs = new System.Windows.Forms.LinkLabel();
             this.label14 = new System.Windows.Forms.Label();
             this.cbHandshake = new System.Windows.Forms.ComboBox();
             this.label13 = new System.Windows.Forms.Label();
@@ -76,6 +85,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.panelDetail.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvFirmes)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbRemoveRow)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbAddRow)).BeginInit();
             this.SuspendLayout();
             // 
             // panelLang
@@ -209,6 +222,14 @@
             // panelDetail
             // 
             this.panelDetail.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(86)))), ((int)(((byte)(81)))));
+            this.panelDetail.Controls.Add(this.dgvFirmes);
+            this.panelDetail.Controls.Add(this.label5);
+            this.panelDetail.Controls.Add(this.pictureBox4);
+            this.panelDetail.Controls.Add(this.lbActualiserDgvChauffeurs);
+            this.panelDetail.Controls.Add(this.pbRemoveRow);
+            this.panelDetail.Controls.Add(this.pbAddRow);
+            this.panelDetail.Controls.Add(this.lblAddDgvChauffeurs);
+            this.panelDetail.Controls.Add(this.lblRetirerDgvChauffeurs);
             this.panelDetail.Controls.Add(this.label14);
             this.panelDetail.Controls.Add(this.cbHandshake);
             this.panelDetail.Controls.Add(this.label13);
@@ -234,6 +255,92 @@
             this.panelDetail.Controls.Add(this.txtActiverPoids);
             resources.ApplyResources(this.panelDetail, "panelDetail");
             this.panelDetail.Name = "panelDetail";
+            // 
+            // dgvFirmes
+            // 
+            this.dgvFirmes.AllowUserToAddRows = false;
+            this.dgvFirmes.AllowUserToDeleteRows = false;
+            this.dgvFirmes.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(86)))), ((int)(((byte)(81)))));
+            this.dgvFirmes.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dgvFirmes.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.Sunken;
+            this.dgvFirmes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.Honeydew;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Calibri", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(86)))), ((int)(((byte)(81)))));
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvFirmes.DefaultCellStyle = dataGridViewCellStyle1;
+            resources.ApplyResources(this.dgvFirmes, "dgvFirmes");
+            this.dgvFirmes.Name = "dgvFirmes";
+            this.dgvFirmes.RowTemplate.Height = 25;
+            // 
+            // label5
+            // 
+            resources.ApplyResources(this.label5, "label5");
+            this.label5.ForeColor = System.Drawing.Color.White;
+            this.label5.Name = "label5";
+            // 
+            // pictureBox4
+            // 
+            this.pictureBox4.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox4.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pictureBox4.Image = global::WidraSoft.UI.Properties.Resources.refresh;
+            resources.ApplyResources(this.pictureBox4, "pictureBox4");
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.TabStop = false;
+            // 
+            // lbActualiserDgvChauffeurs
+            // 
+            this.lbActualiserDgvChauffeurs.ActiveLinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(190)))), ((int)(((byte)(117)))));
+            resources.ApplyResources(this.lbActualiserDgvChauffeurs, "lbActualiserDgvChauffeurs");
+            this.lbActualiserDgvChauffeurs.BackColor = System.Drawing.Color.Transparent;
+            this.lbActualiserDgvChauffeurs.ForeColor = System.Drawing.Color.White;
+            this.lbActualiserDgvChauffeurs.LinkColor = System.Drawing.Color.White;
+            this.lbActualiserDgvChauffeurs.Name = "lbActualiserDgvChauffeurs";
+            this.lbActualiserDgvChauffeurs.TabStop = true;
+            this.lbActualiserDgvChauffeurs.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lbActualiserDgvChauffeurs_LinkClicked);
+            // 
+            // pbRemoveRow
+            // 
+            this.pbRemoveRow.BackColor = System.Drawing.Color.Transparent;
+            this.pbRemoveRow.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pbRemoveRow.Image = global::WidraSoft.UI.Properties.Resources.remove;
+            resources.ApplyResources(this.pbRemoveRow, "pbRemoveRow");
+            this.pbRemoveRow.Name = "pbRemoveRow";
+            this.pbRemoveRow.TabStop = false;
+            // 
+            // pbAddRow
+            // 
+            this.pbAddRow.BackColor = System.Drawing.Color.Transparent;
+            this.pbAddRow.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pbAddRow.Image = global::WidraSoft.UI.Properties.Resources.plus;
+            resources.ApplyResources(this.pbAddRow, "pbAddRow");
+            this.pbAddRow.Name = "pbAddRow";
+            this.pbAddRow.TabStop = false;
+            // 
+            // lblAddDgvChauffeurs
+            // 
+            this.lblAddDgvChauffeurs.ActiveLinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(190)))), ((int)(((byte)(117)))));
+            resources.ApplyResources(this.lblAddDgvChauffeurs, "lblAddDgvChauffeurs");
+            this.lblAddDgvChauffeurs.BackColor = System.Drawing.Color.Transparent;
+            this.lblAddDgvChauffeurs.ForeColor = System.Drawing.Color.White;
+            this.lblAddDgvChauffeurs.LinkColor = System.Drawing.Color.White;
+            this.lblAddDgvChauffeurs.Name = "lblAddDgvChauffeurs";
+            this.lblAddDgvChauffeurs.TabStop = true;
+            this.lblAddDgvChauffeurs.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lblAddDgvChauffeurs_LinkClicked);
+            // 
+            // lblRetirerDgvChauffeurs
+            // 
+            this.lblRetirerDgvChauffeurs.ActiveLinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(190)))), ((int)(((byte)(117)))));
+            resources.ApplyResources(this.lblRetirerDgvChauffeurs, "lblRetirerDgvChauffeurs");
+            this.lblRetirerDgvChauffeurs.BackColor = System.Drawing.Color.Transparent;
+            this.lblRetirerDgvChauffeurs.ForeColor = System.Drawing.Color.White;
+            this.lblRetirerDgvChauffeurs.LinkColor = System.Drawing.Color.White;
+            this.lblRetirerDgvChauffeurs.Name = "lblRetirerDgvChauffeurs";
+            this.lblRetirerDgvChauffeurs.TabStop = true;
+            this.lblRetirerDgvChauffeurs.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lblRetirerDgvChauffeurs_LinkClicked);
             // 
             // label14
             // 
@@ -410,6 +517,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.panelDetail.ResumeLayout(false);
             this.panelDetail.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvFirmes)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbRemoveRow)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbAddRow)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -453,5 +564,13 @@
         private System.Windows.Forms.ComboBox cbStopBits;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.ComboBox cbHandshake;
+        private System.Windows.Forms.DataGridView dgvFirmes;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.PictureBox pictureBox4;
+        private System.Windows.Forms.LinkLabel lbActualiserDgvChauffeurs;
+        private System.Windows.Forms.PictureBox pbRemoveRow;
+        private System.Windows.Forms.PictureBox pbAddRow;
+        private System.Windows.Forms.LinkLabel lblAddDgvChauffeurs;
+        private System.Windows.Forms.LinkLabel lblRetirerDgvChauffeurs;
     }
 }
