@@ -50,6 +50,19 @@ namespace WidraSoft.BL
             }
         }
 
+        public bool IfExists(String Name)
+        {
+            try
+            {
+                FirmeDA firme = new FirmeDA();
+                return firme.IfExists(Name);
+            }
+            catch
+            {
+                throw;
+            }
+        }
+
         public string GetName(Int32 Id)
         {
             try

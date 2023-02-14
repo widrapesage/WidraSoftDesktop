@@ -34,6 +34,11 @@ namespace WidraSoft.UI
             cbWeight_SettingsId.DisplayMember = "DESIGNATION";
             cbWeight_SettingsId.ValueMember = "WEIGHT_SETTINGSID";
 
+            WeighingSettings weighingSettings = new WeighingSettings();
+            cbWeighing_SettingsId.DataSource = weighingSettings.List("1=1");
+            cbWeighing_SettingsId.DisplayMember = "DESIGNATION";
+            cbWeighing_SettingsId.ValueMember = "WEIGHING_SETTINGSID";
+
             cbBaudRate.DataSource = Values.BaudRate;
             cbBaudRate.ValueMember =null;
             cbBaudRate.DisplayMember = Values.BaudRate[0].ToString();
@@ -87,7 +92,7 @@ namespace WidraSoft.UI
 
         private void Add_Item()
         {
-            if (txtId.Text == "" && txtDateCreation.Text == "" && txtDesignation.Text == "" && cbWeight_SettingsId.Text == "" && txtCOM.Text == "" && txtActiverPoids.Text == "" && cbBaudRate.Text == "" && cbDataBits.Text == ""
+            if (txtId.Text == "" && txtDateCreation.Text == "" && txtDesignation.Text == "" && cbWeight_SettingsId.Text == "" && cbWeighing_SettingsId.Text == "" && txtCOM.Text == "" && txtActiverPoids.Text == "" && cbBaudRate.Text == "" && cbDataBits.Text == ""
                 && cbStopBits.Text == "" && cbHandshake.Text == "" && txtReadTimeOut.Text == "")
             {
                 lbModifier.Enabled = false;
@@ -122,7 +127,11 @@ namespace WidraSoft.UI
                 if (row["WEIGHT_SETTINGSID"] is System.DBNull)
                     cbWeight_SettingsId.SelectedValue = 0;
                 else
-                    cbWeight_SettingsId.SelectedValue = (int)row["WEIGHT_SETTINGSID"];               
+                    cbWeight_SettingsId.SelectedValue = (int)row["WEIGHT_SETTINGSID"];
+                if (row["WEIGHING_SETTINGSID"] is System.DBNull)
+                    cbWeighing_SettingsId.SelectedValue = 0;
+                else
+                    cbWeighing_SettingsId.SelectedValue = (int)row["WEIGHING_SETTINGSID"];
                 txtCOM.Text = row["NUMPORTCOM"].ToString();
                 txtActiverPoids.Text = row["ACTIVERPOIDS"].ToString();
                 if (txtActiverPoids.Text == "1")
@@ -148,6 +157,7 @@ namespace WidraSoft.UI
             txtDateCreation.Enabled = false;
             txtDesignation.Enabled = false;
             cbWeight_SettingsId.Enabled = false;
+            cbWeighing_SettingsId.Enabled = false;
             txtCOM.Enabled = false;
             txtActiverPoids.Enabled = false;
             chx_ActiverPoids.Enabled = false;
@@ -167,6 +177,7 @@ namespace WidraSoft.UI
             txtDateCreation.Enabled = true;
             txtDesignation.Enabled = true;
             cbWeight_SettingsId.Enabled = true;
+            cbWeighing_SettingsId.Enabled = true;
             txtCOM.Enabled = true;
             txtActiverPoids.Enabled = true;
             chx_ActiverPoids.Enabled = true;
@@ -187,6 +198,7 @@ namespace WidraSoft.UI
             txtDateCreation.Text = "";
             txtDesignation.Text = "";
             cbWeight_SettingsId.Text = "";
+            cbWeighing_SettingsId.Text = "";
             txtCOM.Text = "";
             txtActiverPoids.Text = "";
             chx_ActiverPoids.Checked = false;
@@ -268,7 +280,7 @@ namespace WidraSoft.UI
         {
             try
             {
-                if (txtId.Text == "" && txtDateCreation.Text == "" && txtDesignation.Text != "" && cbWeight_SettingsId.Text != "" && txtCOM.Text != "" && txtActiverPoids.Text != ""
+                if (txtId.Text == "" && txtDateCreation.Text == "" && txtDesignation.Text != "" && cbWeight_SettingsId.Text != "" && cbWeighing_SettingsId.Text != "" && txtCOM.Text != "" && txtActiverPoids.Text != ""
                     && cbBaudRate.Text != "" && cbDataBits.Text != "" && cbStopBits.Text != "" && cbHandshake.Text != "" && txtReadTimeOut.Text != "")
                 {
                     int ActiverPoids;
@@ -288,7 +300,7 @@ namespace WidraSoft.UI
                         if (IsParsableActiverPoids && IsParsableBaudRate && IsParsableDataBits && IsParsableReadTimeOut)
                         {
                             Pont pont = new Pont();
-                            pont.Add(txtDesignation.Text, txtCOM.Text, Common_functions.CbSelectedValue_Convert_Int(cbWeight_SettingsId), ActiverPoids, BaudRate, DataBits, cbStopBits.Text,
+                            pont.Add(txtDesignation.Text, txtCOM.Text, Common_functions.CbSelectedValue_Convert_Int(cbWeight_SettingsId), Common_functions.CbSelectedValue_Convert_Int(cbWeighing_SettingsId),ActiverPoids, BaudRate, DataBits, cbStopBits.Text,
                                  cbHandshake.Text, ReadTimeOut);
                             if (cbLang.Text == "FR")
                                 Custom_MessageBox.Show("FR", "Pont ajouté avec succès", "Pont", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -335,7 +347,7 @@ namespace WidraSoft.UI
                 {
                     try
                     {
-                        if (txtId.Text != "" && txtDateCreation.Text != "" && txtDesignation.Text != "" && cbWeight_SettingsId.Text != "" && txtCOM.Text != "" && txtActiverPoids.Text != ""
+                        if (txtId.Text != "" && txtDateCreation.Text != "" && txtDesignation.Text != "" && cbWeight_SettingsId.Text != "" && cbWeighing_SettingsId.Text != "" && txtCOM.Text != "" && txtActiverPoids.Text != ""
                              && cbBaudRate.Text != "" && cbDataBits.Text != "" && cbStopBits.Text != "" && cbHandshake.Text != "" && txtReadTimeOut.Text != "")
                         {
                             int Id;
@@ -358,7 +370,7 @@ namespace WidraSoft.UI
                                 if (IsParsableActiverPoids && IsParsableBaudRate && IsParsableDataBits && IsParsableReadTimeOut)
                                 {
                                     Pont pont = new Pont();
-                                    pont.Update(Id, txtDesignation.Text, txtCOM.Text, Common_functions.CbSelectedValue_Convert_Int(cbWeight_SettingsId), ActiverPoids, BaudRate, DataBits, cbStopBits.Text,
+                                    pont.Update(Id, txtDesignation.Text, txtCOM.Text, Common_functions.CbSelectedValue_Convert_Int(cbWeight_SettingsId), Common_functions.CbSelectedValue_Convert_Int(cbWeighing_SettingsId), ActiverPoids, BaudRate, DataBits, cbStopBits.Text,
                                          cbHandshake.Text, ReadTimeOut);
                                     if (cbLang.Text == "FR")
                                         Custom_MessageBox.Show("FR", "Pont modifié avec succès", "Pont", MessageBoxButtons.OK, MessageBoxIcon.Information);

@@ -47,6 +47,7 @@ namespace WidraSoft.UI
             this.clientsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.BorneToolpStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.paramètresToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.pamamètresDePeséeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.reportingToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.synchronisationToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.aideToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -256,12 +257,23 @@ namespace WidraSoft.UI
             // paramètresToolStripMenuItem
             // 
             this.paramètresToolStripMenuItem.BackColor = System.Drawing.Color.Transparent;
+            this.paramètresToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.pamamètresDePeséeToolStripMenuItem});
             resources.ApplyResources(this.paramètresToolStripMenuItem, "paramètresToolStripMenuItem");
             this.paramètresToolStripMenuItem.ForeColor = System.Drawing.Color.White;
             this.paramètresToolStripMenuItem.Image = global::WidraSoft.UI.Properties.Resources.Settings1;
             this.paramètresToolStripMenuItem.Margin = new System.Windows.Forms.Padding(0, 4, 0, 0);
             this.paramètresToolStripMenuItem.Name = "paramètresToolStripMenuItem";
             this.paramètresToolStripMenuItem.Padding = new System.Windows.Forms.Padding(4, 1, 4, 3);
+            // 
+            // pamamètresDePeséeToolStripMenuItem
+            // 
+            this.pamamètresDePeséeToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(62)))), ((int)(((byte)(60)))));
+            this.pamamètresDePeséeToolStripMenuItem.ForeColor = System.Drawing.Color.White;
+            this.pamamètresDePeséeToolStripMenuItem.Image = global::WidraSoft.UI.Properties.Resources.Weighing_settings;
+            this.pamamètresDePeséeToolStripMenuItem.Name = "pamamètresDePeséeToolStripMenuItem";
+            resources.ApplyResources(this.pamamètresDePeséeToolStripMenuItem, "pamamètresDePeséeToolStripMenuItem");
+            this.pamamètresDePeséeToolStripMenuItem.Click += new System.EventHandler(this.pamamètresDePeséeToolStripMenuItem_Click);
             // 
             // reportingToolStripMenuItem
             // 
@@ -272,6 +284,7 @@ namespace WidraSoft.UI
             this.reportingToolStripMenuItem.Margin = new System.Windows.Forms.Padding(0, 4, 0, 0);
             this.reportingToolStripMenuItem.Name = "reportingToolStripMenuItem";
             this.reportingToolStripMenuItem.Padding = new System.Windows.Forms.Padding(4, 1, 4, 3);
+            this.reportingToolStripMenuItem.Click += new System.EventHandler(this.reportingToolStripMenuItem_Click);
             // 
             // synchronisationToolStripMenuItem
             // 
@@ -544,6 +557,7 @@ namespace WidraSoft.UI
         private System.Windows.Forms.TextBox txtValidite;
         private System.Windows.Forms.Panel panelLicenceInfo;
         private System.Windows.Forms.ToolStripMenuItem ParamPoidstoolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem pamamètresDePeséeToolStripMenuItem;
         //private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

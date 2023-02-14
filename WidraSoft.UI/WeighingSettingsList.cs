@@ -11,10 +11,10 @@ using WidraSoft.BL;
 
 namespace WidraSoft.UI
 {
-    public partial class PontsListe : Form
+    public partial class WeighingSettingsList : Form
     {
         string vg_filter = "";
-        public PontsListe(string filter)
+        public WeighingSettingsList(string filter)
         {
             InitializeComponent();
             menuStrip1.Renderer = new MyRenderer();
@@ -25,7 +25,7 @@ namespace WidraSoft.UI
             public MyRenderer() : base(new MyMenuColors()) { }
         }
 
-        private void PontsListe_Load(object sender, EventArgs e)
+        private void WeighingSettingsList_Load(object sender, EventArgs e)
         {
             this.CenterToScreen();
             Bind_Dgv();
@@ -37,19 +37,17 @@ namespace WidraSoft.UI
 
         private void Bind_Dgv()
         {
-            Pont pont = new Pont();
-            DgvList.DataSource = pont.List(vg_filter);
+            WeighingSettings weighingSettings = new WeighingSettings();
+            DgvList.DataSource = weighingSettings.List(vg_filter);
             DgvList.Columns[0].Visible = false;
             DgvList.Columns["DESIGNATION"].Visible = true;
-            DgvList.Columns["NUMPORTCOM"].Visible = true;
-            DgvList.Columns["WEIGHT_SETTINGSID"].Visible = false;
-            DgvList.Columns["WEIGHING_SETTINGSID"].Visible = false;
-            DgvList.Columns["ACTIVERPOIDS"].Visible = false;
-            DgvList.Columns["BAUDRATE"].Visible = false;
-            DgvList.Columns["DATABITS"].Visible = false;
-            DgvList.Columns["STOPBITS"].Visible = false;
-            DgvList.Columns["HANDSHAKE"].Visible = false;
-            DgvList.Columns["READTIMEOUT"].Visible = false;
+            DgvList.Columns["CAMION"].Visible = false;
+            DgvList.Columns["CHAUFFEUR"].Visible = false;
+            DgvList.Columns["TRANSPORTEUR"].Visible = false;
+            DgvList.Columns["PRODUIT"].Visible = false;
+            DgvList.Columns["CLIENT"].Visible = false;
+            DgvList.Columns["DESTINATION"].Visible = false;
+            DgvList.Columns["PROVENANCE"].Visible = false;
             DgvList.Columns["DATECREATION"].Visible = true;
 
             DgvList.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
@@ -61,21 +59,18 @@ namespace WidraSoft.UI
             if (lang == "fr")
             {
                 DgvList.Columns["DESIGNATION"].HeaderText = "DESIGNATION";
-                DgvList.Columns["NUMPORTCOM"].HeaderText = "COM";
                 DgvList.Columns["DATECREATION"].HeaderText = "DATE CREATION";
             }
 
             if (lang == "en")
             {
                 DgvList.Columns["DESIGNATION"].HeaderText = "NAME";
-                DgvList.Columns["NUMPORTCOM"].HeaderText = "COM";
                 DgvList.Columns["DATECREATION"].HeaderText = "CREATION DATE";
             }
 
             if (lang == "es")
             {
                 DgvList.Columns["DESIGNATION"].HeaderText = "DESIGNACIÓN";
-                DgvList.Columns["NUMPORTCOM"].HeaderText = "COM";
                 DgvList.Columns["DATECREATION"].HeaderText = "CREATION DATE";
             }
 
@@ -90,20 +85,20 @@ namespace WidraSoft.UI
         private void ouvrirToolStripMenuItem_Click(object sender, EventArgs e)
         {
             DgvList.Focus();
-            Form form = new PontDetail("Edit", Common_functions.GetDatagridViewSelectedId(DgvList));
+            Form form = new WeighingSettingsDetail("Edit", Common_functions.GetDatagridViewSelectedId(DgvList));
             form.Show();
         }
 
         private void ajouterToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Form form = new PontDetail("Add", 0);
+            Form form = new WeighingSettingsDetail("Add", 0);
             form.Show();
         }
 
         private void txtSearchBox_TextChanged(object sender, EventArgs e)
         {
-            Pont pont = new Pont();
-            DgvList.DataSource = pont.SearchBox(txtSearchBox.Text);
+            WeighingSettings weighingSettings = new WeighingSettings();
+            DgvList.DataSource = weighingSettings.SearchBox(txtSearchBox.Text);
         }
 
         private void cbLang_SelectedIndexChanged(object sender, EventArgs e)
@@ -114,7 +109,7 @@ namespace WidraSoft.UI
                 England_flag.Visible = false;
                 Spain_flag.Visible = false;
                 Language_Manager language_Manager = new Language_Manager();
-                language_Manager.ChangeLanguage("fr", this, typeof(PontsListe));
+                language_Manager.ChangeLanguage("fr", this, typeof(WeighingSettingsList));
                 Localize_Dgv("fr");
             }
 
@@ -124,7 +119,7 @@ namespace WidraSoft.UI
                 England_flag.Visible = true;
                 Spain_flag.Visible = false;
                 Language_Manager language_Manager = new Language_Manager();
-                language_Manager.ChangeLanguage("en", this, typeof(PontsListe));
+                language_Manager.ChangeLanguage("en", this, typeof(WeighingSettingsList));
                 Localize_Dgv("en");
             }
 
@@ -134,7 +129,7 @@ namespace WidraSoft.UI
                 England_flag.Visible = false;
                 Spain_flag.Visible = true;
                 Language_Manager language_Manager = new Language_Manager();
-                language_Manager.ChangeLanguage("es", this, typeof(PontsListe));
+                language_Manager.ChangeLanguage("es", this, typeof(WeighingSettingsList));
                 Localize_Dgv("es");
             }
         }

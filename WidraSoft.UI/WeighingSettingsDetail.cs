@@ -29,6 +29,32 @@ namespace WidraSoft.UI
         {
             this.CenterToParent();
 
+            if (vg_Mode == "Add")
+            {
+                try
+                {
+                    Clear();
+                    Add_Item();
+                }
+                catch
+                {
+                    throw;
+                }
+            }
+            else
+            {
+                if (vg_Mode == "Edit")
+                {
+                    try
+                    {
+                        Edit_Item();
+                    }
+                    catch
+                    {
+                        throw;
+                    }
+                }
+            }
 
             cbLang.DataSource = Language.Languages;
             cbLang.ValueMember = null;
@@ -68,7 +94,7 @@ namespace WidraSoft.UI
         {
             lbAjouter.Enabled = false;
             lbAjouter.BackColor = Color.Transparent;
-            //Disable();
+            Disable();
             Bind_Fields();
         }
 
@@ -79,7 +105,7 @@ namespace WidraSoft.UI
             dt = weighingSettings.FindById(vg_Id);
             foreach (DataRow row in dt.Rows)
             {
-                int Id = (int)row["CAMIONID"];
+                int Id = (int)row["WEIGHING_SETTINGSID"];
                 txtId.Text = Id.ToString();
                 txtDateCreation.Text = row["DATECREATION"].ToString();
                 txtDesignation.Text = row["DESIGNATION"].ToString();                
@@ -303,7 +329,7 @@ namespace WidraSoft.UI
                 {
                     try
                     {
-                        if (txtId.Text == "" && txtDateCreation.Text == "" && txtDesignation.Text != "" && txtCamion.Text != "" && txtChauffeur.Text != "" && txtTransporteur.Text != ""
+                        if (txtId.Text != "" && txtDateCreation.Text != "" && txtDesignation.Text != "" && txtCamion.Text != "" && txtChauffeur.Text != "" && txtTransporteur.Text != ""
                             && txtProduit.Text != "" && txtClient.Text != "" && txtDestination.Text != "" && txtProvenance.Text != "")
                         {
                             

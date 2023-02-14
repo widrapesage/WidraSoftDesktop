@@ -49,6 +49,19 @@ namespace WidraSoft.BL
             }
         }
 
+        public bool IfExists(String Name)
+        {
+            try
+            {
+                CamionDA camion = new CamionDA();
+                return camion.IfExists(Name);
+            }
+            catch
+            {
+                throw;
+            }
+        }
+
         public string GetName(Int32 Id)
         {
             try

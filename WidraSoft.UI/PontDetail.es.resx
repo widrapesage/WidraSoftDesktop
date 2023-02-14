@@ -88,6 +88,15 @@
   <data name="lbSupprimer.Text" xml:space="preserve">
     <value>Borrar</value>
   </data>
+  <data name="label8.Size" type="System.Drawing.Size, System.Drawing">
+    <value>127, 19</value>
+  </data>
+  <data name="label8.Text" xml:space="preserve">
+    <value>Parámetro  pesaje</value>
+  </data>
+  <data name="comboBox1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>196, 163</value>
+  </data>
   <data name="label5.Size" type="System.Drawing.Size, System.Drawing">
     <value>153, 19</value>
   </data>
@@ -112,17 +121,29 @@
   <data name="lblRetirerDgvChauffeurs.Text" xml:space="preserve">
     <value>Borrar</value>
   </data>
+  <data name="label14.Location" type="System.Drawing.Point, System.Drawing">
+    <value>62, 381</value>
+  </data>
   <data name="cbHandshake.Location" type="System.Drawing.Point, System.Drawing">
-    <value>196, 332</value>
+    <value>196, 375</value>
+  </data>
+  <data name="label13.Location" type="System.Drawing.Point, System.Drawing">
+    <value>62, 348</value>
   </data>
   <data name="cbStopBits.Location" type="System.Drawing.Point, System.Drawing">
-    <value>196, 299</value>
+    <value>196, 342</value>
+  </data>
+  <data name="label12.Location" type="System.Drawing.Point, System.Drawing">
+    <value>62, 315</value>
   </data>
   <data name="cbDataBits.Location" type="System.Drawing.Point, System.Drawing">
-    <value>196, 266</value>
+    <value>196, 309</value>
+  </data>
+  <data name="label11.Location" type="System.Drawing.Point, System.Drawing">
+    <value>62, 282</value>
   </data>
   <data name="cbBaudRate.Location" type="System.Drawing.Point, System.Drawing">
-    <value>196, 233</value>
+    <value>196, 276</value>
   </data>
   <data name="label10.Size" type="System.Drawing.Size, System.Drawing">
     <value>131, 19</value>
@@ -137,7 +158,10 @@
     <value>196, 64</value>
   </data>
   <data name="txtCOM.Location" type="System.Drawing.Point, System.Drawing">
-    <value>196, 163</value>
+    <value>196, 196</value>
+  </data>
+  <data name="label4.Location" type="System.Drawing.Point, System.Drawing">
+    <value>61, 199</value>
   </data>
   <data name="label3.Size" type="System.Drawing.Size, System.Drawing">
     <value>93, 19</value>
@@ -149,10 +173,10 @@
     <value>196, 31</value>
   </data>
   <data name="txtReadTimeOut.Location" type="System.Drawing.Point, System.Drawing">
-    <value>196, 365</value>
+    <value>196, 408</value>
   </data>
   <data name="label7.Location" type="System.Drawing.Point, System.Drawing">
-    <value>211, 202</value>
+    <value>211, 245</value>
   </data>
   <data name="label7.Size" type="System.Drawing.Size, System.Drawing">
     <value>158, 19</value>
@@ -167,13 +191,16 @@
     <value>Fecha de creación</value>
   </data>
   <data name="chx_ActiverPoids.Location" type="System.Drawing.Point, System.Drawing">
-    <value>196, 205</value>
+    <value>196, 248</value>
+  </data>
+  <data name="label6.Location" type="System.Drawing.Point, System.Drawing">
+    <value>61, 412</value>
   </data>
   <data name="txtDesignation.Location" type="System.Drawing.Point, System.Drawing">
     <value>196, 97</value>
   </data>
   <data name="txtActiverPoids.Location" type="System.Drawing.Point, System.Drawing">
-    <value>173, 201</value>
+    <value>173, 244</value>
   </data>
   <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>

@@ -50,6 +50,19 @@ namespace WidraSoft.BL
             }
         }
 
+        public bool IfExists(String Name)
+        {
+            try
+            {
+                TransporteurDA transporteur = new TransporteurDA();
+                return transporteur.IfExists(Name);
+            }
+            catch
+            {
+                throw;
+            }
+        }
+
         public string GetName(Int32 Id)
         {
             try

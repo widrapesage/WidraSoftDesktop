@@ -71,6 +71,27 @@ namespace WidraSoft.DA
             }
         }
 
+        public bool IfExists(String Name)
+        {
+            String sql = "SELECT COUNT(*) FROM FIRME WHERE DESIGNATION='" + Name + "'";
+            conn.ConnectionString = connString;
+            if (conn.State == ConnectionState.Closed)
+                conn.Open();
+            SqlCommand cmd = new SqlCommand(sql, conn);
+            try
+            {
+                Int32 nb = (int)cmd.ExecuteScalar();
+                if (nb > 0)
+                    return true;
+                else
+                    return false;
+            }
+            catch
+            {
+                throw;
+            }
+        }
+
         public string GetName(Int32 Id)
         {
 

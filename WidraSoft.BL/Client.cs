@@ -49,6 +49,19 @@ namespace WidraSoft.BL
             }
         }
 
+        public bool IfExists(String Name)
+        {
+            try
+            {
+                ClientDA client = new ClientDA();
+                return client.IfExists(Name);
+            }
+            catch
+            {
+                throw;
+            }
+        }
+
         public string GetName(Int32 Id)
         {
             try

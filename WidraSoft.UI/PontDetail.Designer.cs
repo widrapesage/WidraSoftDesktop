@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(PontDetail));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panelLang = new System.Windows.Forms.Panel();
             this.pbUpdating = new System.Windows.Forms.PictureBox();
             this.Spain_flag = new System.Windows.Forms.PictureBox();
@@ -44,6 +44,8 @@
             this.lbAjouter = new System.Windows.Forms.LinkLabel();
             this.lbSupprimer = new System.Windows.Forms.LinkLabel();
             this.panelDetail = new System.Windows.Forms.Panel();
+            this.label8 = new System.Windows.Forms.Label();
+            this.cbWeighing_SettingsId = new System.Windows.Forms.ComboBox();
             this.dgvFirmes = new System.Windows.Forms.DataGridView();
             this.label5 = new System.Windows.Forms.Label();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
@@ -222,6 +224,8 @@
             // panelDetail
             // 
             this.panelDetail.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(86)))), ((int)(((byte)(81)))));
+            this.panelDetail.Controls.Add(this.label8);
+            this.panelDetail.Controls.Add(this.cbWeighing_SettingsId);
             this.panelDetail.Controls.Add(this.dgvFirmes);
             this.panelDetail.Controls.Add(this.label5);
             this.panelDetail.Controls.Add(this.pictureBox4);
@@ -256,6 +260,19 @@
             resources.ApplyResources(this.panelDetail, "panelDetail");
             this.panelDetail.Name = "panelDetail";
             // 
+            // label8
+            // 
+            resources.ApplyResources(this.label8, "label8");
+            this.label8.ForeColor = System.Drawing.Color.White;
+            this.label8.Name = "label8";
+            // 
+            // cbWeighing_SettingsId
+            // 
+            this.cbWeighing_SettingsId.BackColor = System.Drawing.Color.Honeydew;
+            resources.ApplyResources(this.cbWeighing_SettingsId, "cbWeighing_SettingsId");
+            this.cbWeighing_SettingsId.FormattingEnabled = true;
+            this.cbWeighing_SettingsId.Name = "cbWeighing_SettingsId";
+            // 
             // dgvFirmes
             // 
             this.dgvFirmes.AllowUserToAddRows = false;
@@ -264,14 +281,14 @@
             this.dgvFirmes.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgvFirmes.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.Sunken;
             this.dgvFirmes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.Honeydew;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Calibri", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(86)))), ((int)(((byte)(81)))));
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvFirmes.DefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.Honeydew;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Calibri", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(86)))), ((int)(((byte)(81)))));
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvFirmes.DefaultCellStyle = dataGridViewCellStyle2;
             resources.ApplyResources(this.dgvFirmes, "dgvFirmes");
             this.dgvFirmes.Name = "dgvFirmes";
             this.dgvFirmes.RowTemplate.Height = 25;
@@ -572,5 +589,7 @@
         private System.Windows.Forms.PictureBox pbAddRow;
         private System.Windows.Forms.LinkLabel lblAddDgvChauffeurs;
         private System.Windows.Forms.LinkLabel lblRetirerDgvChauffeurs;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.ComboBox cbWeighing_SettingsId;
     }
 }

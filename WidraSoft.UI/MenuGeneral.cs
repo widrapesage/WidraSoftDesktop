@@ -169,5 +169,17 @@ namespace WidraSoft.UI
             Form form = new WeightSettingsList("1=1");
             form.Show();
         }
+
+        private void pamamètresDePeséeToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Form form = new WeighingSettingsList("1=1");
+            form.Show();
+
+        }
+
+        private void reportingToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+           
+        }
     }
 }
