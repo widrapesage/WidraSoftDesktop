@@ -58,374 +58,248 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="txtSearchBox.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Calibri, 12pt</value>
+  <data name="pictureBox3.Location" type="System.Drawing.Point, System.Drawing">
+    <value>148, 9</value>
   </data>
-  <data name="txtSearchBox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>44, 6</value>
+  <data name="lbModifier.Location" type="System.Drawing.Point, System.Drawing">
+    <value>172, 8</value>
   </data>
-  <data name="txtSearchBox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>357, 27</value>
+  <data name="lbModifier.Size" type="System.Drawing.Size, System.Drawing">
+    <value>44, 18</value>
   </data>
-  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="txtSearchBox.TabIndex" type="System.Int32, mscorlib">
-    <value>34</value>
-  </data>
-  <data name="&gt;&gt;txtSearchBox.Name" xml:space="preserve">
-    <value>txtSearchBox</value>
-  </data>
-  <data name="&gt;&gt;txtSearchBox.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;txtSearchBox.Parent" xml:space="preserve">
-    <value>panelTitleBar</value>
-  </data>
-  <data name="&gt;&gt;txtSearchBox.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="pictureBox1.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
+  <data name="lbModifier.Text" xml:space="preserve">
+    <value>Editar</value>
   </data>
   <data name="pictureBox1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>14, 6</value>
+    <value>235, 8</value>
   </data>
-  <data name="pictureBox1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>24, 24</value>
+  <data name="lbAjouter.Size" type="System.Drawing.Size, System.Drawing">
+    <value>56, 18</value>
   </data>
-  <data name="pictureBox1.SizeMode" type="System.Windows.Forms.PictureBoxSizeMode, System.Windows.Forms">
-    <value>AutoSize</value>
+  <data name="lbAjouter.Text" xml:space="preserve">
+    <value>Agregar</value>
   </data>
-  <data name="pictureBox1.TabIndex" type="System.Int32, mscorlib">
-    <value>31</value>
+  <data name="lbSupprimer.Location" type="System.Drawing.Point, System.Drawing">
+    <value>259, 8</value>
   </data>
-  <data name="&gt;&gt;pictureBox1.Name" xml:space="preserve">
-    <value>pictureBox1</value>
+  <data name="lbSupprimer.Size" type="System.Drawing.Size, System.Drawing">
+    <value>46, 18</value>
   </data>
-  <data name="&gt;&gt;pictureBox1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="lbSupprimer.Text" xml:space="preserve">
+    <value>Borrar</value>
   </data>
-  <data name="&gt;&gt;pictureBox1.Parent" xml:space="preserve">
-    <value>panelTitleBar</value>
+  <data name="dgvEnregistrements.Location" type="System.Drawing.Point, System.Drawing">
+    <value>195, 616</value>
   </data>
-  <data name="&gt;&gt;pictureBox1.ZOrder" xml:space="preserve">
-    <value>1</value>
+  <data name="label3.Location" type="System.Drawing.Point, System.Drawing">
+    <value>194, 561</value>
   </data>
-  <data name="Spain_flag.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
+  <data name="label3.Size" type="System.Drawing.Size, System.Drawing">
+    <value>157, 19</value>
   </data>
-  <data name="Spain_flag.Location" type="System.Drawing.Point, System.Drawing">
-    <value>81, 7</value>
+  <data name="label3.Text" xml:space="preserve">
+    <value>Tablas de este registro</value>
   </data>
-  <data name="Spain_flag.Size" type="System.Drawing.Size, System.Drawing">
-    <value>24, 24</value>
+  <data name="pictureBox4.Location" type="System.Drawing.Point, System.Drawing">
+    <value>344, 591</value>
   </data>
-  <data name="Spain_flag.SizeMode" type="System.Windows.Forms.PictureBoxSizeMode, System.Windows.Forms">
-    <value>AutoSize</value>
+  <data name="lbActualiserDgvChauffeurs.Location" type="System.Drawing.Point, System.Drawing">
+    <value>361, 590</value>
   </data>
-  <data name="Spain_flag.TabIndex" type="System.Int32, mscorlib">
-    <value>30</value>
+  <data name="lbActualiserDgvChauffeurs.Size" type="System.Drawing.Size, System.Drawing">
+    <value>69, 18</value>
   </data>
-  <data name="&gt;&gt;Spain_flag.Name" xml:space="preserve">
-    <value>Spain_flag</value>
+  <data name="lbActualiserDgvChauffeurs.Text" xml:space="preserve">
+    <value>Actualizar</value>
   </data>
-  <data name="&gt;&gt;Spain_flag.Type" xml:space="preserve">
-    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="pbRemoveRow.Location" type="System.Drawing.Point, System.Drawing">
+    <value>275, 591</value>
   </data>
-  <data name="&gt;&gt;Spain_flag.Parent" xml:space="preserve">
-    <value>panel1</value>
+  <data name="pbAddRow.Location" type="System.Drawing.Point, System.Drawing">
+    <value>195, 591</value>
   </data>
-  <data name="&gt;&gt;Spain_flag.ZOrder" xml:space="preserve">
-    <value>0</value>
+  <data name="lblAddDgvChauffeurs.Location" type="System.Drawing.Point, System.Drawing">
+    <value>211, 590</value>
   </data>
-  <data name="England_flag.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
+  <data name="lblAddDgvChauffeurs.Size" type="System.Drawing.Size, System.Drawing">
+    <value>56, 18</value>
   </data>
-  <data name="England_flag.Location" type="System.Drawing.Point, System.Drawing">
-    <value>81, 7</value>
+  <data name="lblAddDgvChauffeurs.Text" xml:space="preserve">
+    <value>Agregar</value>
   </data>
-  <data name="England_flag.Size" type="System.Drawing.Size, System.Drawing">
-    <value>24, 24</value>
+  <data name="lblRetirerDgvChauffeurs.Location" type="System.Drawing.Point, System.Drawing">
+    <value>291, 590</value>
   </data>
-  <data name="England_flag.SizeMode" type="System.Windows.Forms.PictureBoxSizeMode, System.Windows.Forms">
-    <value>AutoSize</value>
+  <data name="lblRetirerDgvChauffeurs.Size" type="System.Drawing.Size, System.Drawing">
+    <value>46, 18</value>
   </data>
-  <data name="England_flag.TabIndex" type="System.Int32, mscorlib">
-    <value>29</value>
+  <data name="lblRetirerDgvChauffeurs.Text" xml:space="preserve">
+    <value>Borrar</value>
   </data>
-  <data name="&gt;&gt;England_flag.Name" xml:space="preserve">
-    <value>England_flag</value>
+  <data name="txtDateCreation.Location" type="System.Drawing.Point, System.Drawing">
+    <value>195, 88</value>
   </data>
-  <data name="&gt;&gt;England_flag.Type" xml:space="preserve">
-    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="txtId.Location" type="System.Drawing.Point, System.Drawing">
+    <value>195, 55</value>
   </data>
-  <data name="&gt;&gt;England_flag.Parent" xml:space="preserve">
-    <value>panel1</value>
+  <data name="label18.Location" type="System.Drawing.Point, System.Drawing">
+    <value>693, 352</value>
   </data>
-  <data name="&gt;&gt;England_flag.ZOrder" xml:space="preserve">
-    <value>1</value>
+  <data name="label18.Size" type="System.Drawing.Size, System.Drawing">
+    <value>66, 19</value>
   </data>
-  <data name="France_flag.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
+  <data name="label18.Text" xml:space="preserve">
+    <value>Atención</value>
   </data>
-  <data name="France_flag.Location" type="System.Drawing.Point, System.Drawing">
-    <value>81, 7</value>
+  <data name="label17.Location" type="System.Drawing.Point, System.Drawing">
+    <value>213, 352</value>
   </data>
-  <data name="France_flag.Size" type="System.Drawing.Size, System.Drawing">
-    <value>24, 24</value>
+  <data name="label17.Size" type="System.Drawing.Size, System.Drawing">
+    <value>73, 19</value>
   </data>
-  <data name="France_flag.SizeMode" type="System.Windows.Forms.PictureBoxSizeMode, System.Windows.Forms">
-    <value>AutoSize</value>
+  <data name="label17.Text" xml:space="preserve">
+    <value>Obstruido</value>
   </data>
-  <data name="France_flag.TabIndex" type="System.Int32, mscorlib">
-    <value>28</value>
+  <data name="label2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>126, 19</value>
   </data>
-  <data name="&gt;&gt;France_flag.Name" xml:space="preserve">
-    <value>France_flag</value>
+  <data name="label2.Text" xml:space="preserve">
+    <value>Fecha de creación</value>
   </data>
-  <data name="&gt;&gt;France_flag.Type" xml:space="preserve">
-    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="txtAttention.Location" type="System.Drawing.Point, System.Drawing">
+    <value>654, 351</value>
   </data>
-  <data name="&gt;&gt;France_flag.Parent" xml:space="preserve">
-    <value>panel1</value>
+  <data name="txtNom.Location" type="System.Drawing.Point, System.Drawing">
+    <value>195, 121</value>
   </data>
-  <data name="&gt;&gt;France_flag.ZOrder" xml:space="preserve">
-    <value>2</value>
+  <data name="txtBloque.Location" type="System.Drawing.Point, System.Drawing">
+    <value>174, 351</value>
   </data>
-  <data name="cbLang.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
-    <value>Flat</value>
+  <data name="label4.Size" type="System.Drawing.Size, System.Drawing">
+    <value>62, 19</value>
   </data>
-  <data name="cbLang.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Calibri, 11pt, style=Bold</value>
+  <data name="label4.Text" xml:space="preserve">
+    <value>Apellido</value>
   </data>
-  <data name="cbLang.Location" type="System.Drawing.Point, System.Drawing">
-    <value>111, 6</value>
+  <data name="txtAdresse.Location" type="System.Drawing.Point, System.Drawing">
+    <value>195, 196</value>
   </data>
-  <data name="cbLang.Size" type="System.Drawing.Size, System.Drawing">
-    <value>158, 26</value>
+  <data name="label15.Size" type="System.Drawing.Size, System.Drawing">
+    <value>91, 19</value>
   </data>
-  <data name="cbLang.TabIndex" type="System.Int32, mscorlib">
-    <value>27</value>
+  <data name="label15.Text" xml:space="preserve">
+    <value>Comentarios</value>
   </data>
-  <data name="&gt;&gt;cbLang.Name" xml:space="preserve">
-    <value>cbLang</value>
+  <data name="label5.Size" type="System.Drawing.Size, System.Drawing">
+    <value>70, 19</value>
   </data>
-  <data name="&gt;&gt;cbLang.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="label5.Text" xml:space="preserve">
+    <value>Dirección</value>
   </data>
-  <data name="&gt;&gt;cbLang.Parent" xml:space="preserve">
-    <value>panel1</value>
+  <data name="txtObservations.Location" type="System.Drawing.Point, System.Drawing">
+    <value>196, 462</value>
   </data>
-  <data name="&gt;&gt;cbLang.ZOrder" xml:space="preserve">
-    <value>3</value>
+  <data name="txtCodePostal.Location" type="System.Drawing.Point, System.Drawing">
+    <value>195, 229</value>
   </data>
-  <data name="panel1.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Right</value>
+  <data name="label14.Location" type="System.Drawing.Point, System.Drawing">
+    <value>540, 379</value>
   </data>
-  <data name="panel1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>756, 0</value>
+  <data name="label14.Size" type="System.Drawing.Size, System.Drawing">
+    <value>106, 19</value>
   </data>
-  <data name="panel1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>280, 38</value>
+  <data name="label14.Text" xml:space="preserve">
+    <value>Texto de alerta</value>
   </data>
-  <data name="panel1.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
+  <data name="label6.Size" type="System.Drawing.Size, System.Drawing">
+    <value>98, 19</value>
   </data>
-  <data name="&gt;&gt;panel1.Name" xml:space="preserve">
-    <value>panel1</value>
+  <data name="label6.Text" xml:space="preserve">
+    <value>Código postal</value>
   </data>
-  <data name="&gt;&gt;panel1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Panel, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="txtAlerte.Location" type="System.Drawing.Point, System.Drawing">
+    <value>676, 379</value>
   </data>
-  <data name="&gt;&gt;panel1.Parent" xml:space="preserve">
-    <value>panelTitleBar</value>
+  <data name="txtLocalite.Location" type="System.Drawing.Point, System.Drawing">
+    <value>195, 262</value>
   </data>
-  <data name="&gt;&gt;panel1.ZOrder" xml:space="preserve">
-    <value>2</value>
+  <data name="chx_Attention.Location" type="System.Drawing.Point, System.Drawing">
+    <value>676, 354</value>
   </data>
-  <data name="panelTitleBar.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Top</value>
+  <data name="label7.Size" type="System.Drawing.Size, System.Drawing">
+    <value>71, 19</value>
   </data>
-  <data name="panelTitleBar.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 30</value>
+  <data name="label7.Text" xml:space="preserve">
+    <value>Localidad</value>
   </data>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="panelTitleBar.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>4, 4, 4, 4</value>
+  <data name="label13.Size" type="System.Drawing.Size, System.Drawing">
+    <value>104, 19</value>
   </data>
-  <data name="panelTitleBar.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1036, 38</value>
+  <data name="label13.Text" xml:space="preserve">
+    <value>Bloquear texto</value>
   </data>
-  <data name="panelTitleBar.TabIndex" type="System.Int32, mscorlib">
-    <value>7</value>
+  <data name="txtTelephone.Location" type="System.Drawing.Point, System.Drawing">
+    <value>676, 196</value>
   </data>
-  <data name="&gt;&gt;panelTitleBar.Name" xml:space="preserve">
-    <value>panelTitleBar</value>
+  <data name="txtBlocage.Location" type="System.Drawing.Point, System.Drawing">
+    <value>196, 379</value>
   </data>
-  <data name="&gt;&gt;panelTitleBar.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Panel, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="label9.Location" type="System.Drawing.Point, System.Drawing">
+    <value>540, 200</value>
   </data>
-  <data name="&gt;&gt;panelTitleBar.Parent" xml:space="preserve">
-    <value>$this</value>
+  <data name="label9.Size" type="System.Drawing.Size, System.Drawing">
+    <value>65, 19</value>
   </data>
-  <data name="&gt;&gt;panelTitleBar.ZOrder" xml:space="preserve">
-    <value>1</value>
+  <data name="label9.Text" xml:space="preserve">
+    <value>Teléfono</value>
   </data>
-  <data name="DgvList.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Fill</value>
+  <data name="chx_Bloque.Location" type="System.Drawing.Point, System.Drawing">
+    <value>196, 354</value>
   </data>
-  <data name="DgvList.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 0</value>
+  <data name="txtEmail.Location" type="System.Drawing.Point, System.Drawing">
+    <value>676, 229</value>
   </data>
-  <data name="DgvList.RowHeadersWidth" type="System.Int32, mscorlib">
-    <value>62</value>
+  <data name="label10.Location" type="System.Drawing.Point, System.Drawing">
+    <value>540, 230</value>
   </data>
-  <data name="DgvList.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1036, 493</value>
+  <data name="label10.Size" type="System.Drawing.Size, System.Drawing">
+    <value>128, 19</value>
   </data>
-  <data name="DgvList.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
+  <data name="label10.Text" xml:space="preserve">
+    <value>Correo electrónico</value>
   </data>
-  <data name="&gt;&gt;DgvList.Name" xml:space="preserve">
-    <value>DgvList</value>
+  <data name="label12.Location" type="System.Drawing.Point, System.Drawing">
+    <value>540, 298</value>
   </data>
-  <data name="&gt;&gt;DgvList.Type" xml:space="preserve">
-    <value>System.Windows.Forms.DataGridView, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="label12.Size" type="System.Drawing.Size, System.Drawing">
+    <value>122, 19</value>
   </data>
-  <data name="&gt;&gt;DgvList.Parent" xml:space="preserve">
-    <value>panelList</value>
+  <data name="label12.Text" xml:space="preserve">
+    <value>URL del sitio web</value>
   </data>
-  <data name="&gt;&gt;DgvList.ZOrder" xml:space="preserve">
-    <value>0</value>
+  <data name="txtNumTVA.Location" type="System.Drawing.Point, System.Drawing">
+    <value>676, 262</value>
   </data>
-  <data name="panelList.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Fill</value>
+  <data name="txtSiteWebUrl.Location" type="System.Drawing.Point, System.Drawing">
+    <value>676, 295</value>
   </data>
-  <data name="panelList.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 68</value>
+  <data name="label11.Location" type="System.Drawing.Point, System.Drawing">
+    <value>540, 264</value>
   </data>
-  <data name="panelList.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>4, 4, 4, 4</value>
+  <data name="label11.Size" type="System.Drawing.Size, System.Drawing">
+    <value>85, 19</value>
   </data>
-  <data name="panelList.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1036, 493</value>
+  <data name="label11.Text" xml:space="preserve">
+    <value>Número IVA</value>
   </data>
-  <data name="panelList.TabIndex" type="System.Int32, mscorlib">
-    <value>8</value>
+  <data name="label8.Size" type="System.Drawing.Size, System.Drawing">
+    <value>36, 19</value>
   </data>
-  <data name="&gt;&gt;panelList.Name" xml:space="preserve">
-    <value>panelList</value>
+  <data name="label8.Text" xml:space="preserve">
+    <value>País</value>
   </data>
-  <data name="&gt;&gt;panelList.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Panel, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;panelList.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;panelList.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="ouvrirToolStripMenuItem.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Calibri, 12pt, style=Bold</value>
-  </data>
-  <data name="ouvrirToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>89, 28</value>
-  </data>
-  <data name="ouvrirToolStripMenuItem.Text" xml:space="preserve">
-    <value>Ouvrir</value>
-  </data>
-  <data name="ajouterToolStripMenuItem.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Calibri, 12pt, style=Bold</value>
-  </data>
-  <data name="ajouterToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>97, 28</value>
-  </data>
-  <data name="ajouterToolStripMenuItem.Text" xml:space="preserve">
-    <value>Ajouter</value>
-  </data>
-  <data name="supprimerToolStripMenuItem.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Calibri, 12pt, style=Bold</value>
-  </data>
-  <data name="supprimerToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>117, 28</value>
-  </data>
-  <data name="supprimerToolStripMenuItem.Text" xml:space="preserve">
-    <value>Supprimer</value>
-  </data>
-  <data name="ActualiserToolStripMenuItem.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Calibri, 12pt, style=Bold</value>
-  </data>
-  <data name="ActualiserToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>113, 28</value>
-  </data>
-  <data name="ActualiserToolStripMenuItem.Text" xml:space="preserve">
-    <value>Actualiser</value>
-  </data>
-  <data name="excelToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>112, 24</value>
-  </data>
-  <data name="excelToolStripMenuItem.Text" xml:space="preserve">
-    <value>Excel</value>
-  </data>
-  <data name="pDFToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>112, 24</value>
-  </data>
-  <data name="pDFToolStripMenuItem.Text" xml:space="preserve">
-    <value>PDF</value>
-  </data>
-  <data name="exporterVersToolStripMenuItem.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Calibri, 12pt, style=Bold</value>
-  </data>
-  <data name="exporterVersToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>136, 28</value>
-  </data>
-  <data name="exporterVersToolStripMenuItem.Text" xml:space="preserve">
-    <value>Exporter vers</value>
-  </data>
-  <metadata name="menuStrip1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 17</value>
-  </metadata>
-  <data name="menuStrip1.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Corbel, 11pt, style=Bold</value>
-  </data>
-  <data name="menuStrip1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 0</value>
-  </data>
-  <data name="menuStrip1.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>4, 1, 0, 1</value>
-  </data>
-  <data name="menuStrip1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1036, 30</value>
-  </data>
-  <data name="menuStrip1.TabIndex" type="System.Int32, mscorlib">
-    <value>5</value>
-  </data>
-  <data name="menuStrip1.Text" xml:space="preserve">
-    <value>menuStrip1</value>
-  </data>
-  <data name="&gt;&gt;menuStrip1.Name" xml:space="preserve">
-    <value>menuStrip1</value>
-  </data>
-  <data name="&gt;&gt;menuStrip1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.MenuStrip, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;menuStrip1.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;menuStrip1.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
-    <value>8, 18</value>
-  </data>
-  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
-    <value>1036, 561</value>
-  </data>
-  <data name="$this.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Corbel, 11pt</value>
+  <data name="txtPays.Location" type="System.Drawing.Point, System.Drawing">
+    <value>195, 295</value>
   </data>
   <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -964,59 +838,5 @@
         AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
         AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==
 </value>
-  </data>
-  <data name="$this.MinimumSize" type="System.Drawing.Size, System.Drawing">
-    <value>800, 400</value>
-  </data>
-  <data name="$this.Text" xml:space="preserve">
-    <value>Liste des camions</value>
-  </data>
-  <data name="&gt;&gt;ouvrirToolStripMenuItem.Name" xml:space="preserve">
-    <value>ouvrirToolStripMenuItem</value>
-  </data>
-  <data name="&gt;&gt;ouvrirToolStripMenuItem.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;ajouterToolStripMenuItem.Name" xml:space="preserve">
-    <value>ajouterToolStripMenuItem</value>
-  </data>
-  <data name="&gt;&gt;ajouterToolStripMenuItem.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;supprimerToolStripMenuItem.Name" xml:space="preserve">
-    <value>supprimerToolStripMenuItem</value>
-  </data>
-  <data name="&gt;&gt;supprimerToolStripMenuItem.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;ActualiserToolStripMenuItem.Name" xml:space="preserve">
-    <value>ActualiserToolStripMenuItem</value>
-  </data>
-  <data name="&gt;&gt;ActualiserToolStripMenuItem.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;exporterVersToolStripMenuItem.Name" xml:space="preserve">
-    <value>exporterVersToolStripMenuItem</value>
-  </data>
-  <data name="&gt;&gt;exporterVersToolStripMenuItem.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;excelToolStripMenuItem.Name" xml:space="preserve">
-    <value>excelToolStripMenuItem</value>
-  </data>
-  <data name="&gt;&gt;excelToolStripMenuItem.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;pDFToolStripMenuItem.Name" xml:space="preserve">
-    <value>pDFToolStripMenuItem</value>
-  </data>
-  <data name="&gt;&gt;pDFToolStripMenuItem.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;$this.Name" xml:space="preserve">
-    <value>CamionsListe</value>
-  </data>
-  <data name="&gt;&gt;$this.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Form, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
 </root>

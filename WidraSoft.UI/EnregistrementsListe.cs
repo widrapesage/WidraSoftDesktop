@@ -11,10 +11,10 @@ using WidraSoft.BL;
 
 namespace WidraSoft.UI
 {
-    public partial class CamionsListe : Form
+    public partial class EnregistrementsListe : Form
     {
         string vg_filter = "";
-        public CamionsListe(string filter)
+        public EnregistrementsListe(string filter)
         {
             InitializeComponent();
             menuStrip1.Renderer = new MyRenderer();
@@ -25,7 +25,7 @@ namespace WidraSoft.UI
             public MyRenderer() : base(new MyMenuColors()) { }
         }
 
-        private void CamionsListe_Load(object sender, EventArgs e)
+        private void EnregistrementsListe_Load(object sender, EventArgs e)
         {
             this.CenterToScreen();
             Bind_Dgv();
@@ -35,70 +35,83 @@ namespace WidraSoft.UI
             cbLang.SelectedIndex = 0;
         }
 
-
         private void Bind_Dgv()
         {
-            Camion camion = new Camion();
-            DgvList.DataSource = camion.List(vg_filter);
+            Enregistrements enregistrements = new Enregistrements();
+            DgvList.DataSource = enregistrements.List(vg_filter);
             DgvList.Columns[0].Visible = false;
-            DgvList.Columns["CODE"].Visible = true ; 
-            DgvList.Columns["PLAQUE"].Visible = true; 
-            DgvList.Columns["BADGE"].Visible = false;
-            DgvList.Columns["TARE"].Visible = false;
-            DgvList.Columns["TARE"].HeaderText = "TARE (KG)";
-            DgvList.Columns["VALIDE"].Visible = false;
+            DgvList.Columns["NOM"].Visible = true;
+            DgvList.Columns["ADRESSE"].Visible = true;
+            DgvList.Columns["CODEPOSTAL"].Visible = true;
+            DgvList.Columns["LOCALITE"].Visible = true;
+            DgvList.Columns["PAYS"].Visible = true;
+            DgvList.Columns["TELEPHONE"].Visible = true;
+            DgvList.Columns["EMAIL"].Visible = true;
+            DgvList.Columns["NUMTVA"].Visible = false;
+            DgvList.Columns["SITEWEB_URL"].Visible = false;
+            DgvList.Columns["OBSERVATIONS"].Visible = false;
             DgvList.Columns["BLOQUE"].Visible = false;
             DgvList.Columns["TEXTEBLOQUE"].Visible = false;
             DgvList.Columns["ATTENTION"].Visible = false;
             DgvList.Columns["TEXTEATTENTION"].Visible = false;
             DgvList.Columns["DATECREATION"].Visible = true;
-            DgvList.Columns["DATECREATION"].HeaderText = "DATE CREATION";
-            DgvList.Columns["OBSERVATIONS"].Visible = false;
 
             DgvList.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             DgvList.ReadOnly = true;
+
         }
 
         private void Localize_Dgv(string lang)
         {
             if (lang == "fr")
             {
-                DgvList.Columns["CODE"].HeaderText = "CODE";
-                DgvList.Columns["PLAQUE"].HeaderText = "PLAQUE";
-                DgvList.Columns["BADGE"].HeaderText = "N° BADGE";
-                DgvList.Columns["TARE"].HeaderText = "TARE (KG)";
-                DgvList.Columns["VALIDE"].HeaderText = "VALIDE";
+                DgvList.Columns["NOM"].HeaderText = "NOM";
+                DgvList.Columns["ADRESSE"].HeaderText = "ADRESSE";
+                DgvList.Columns["CODEPOSTAL"].HeaderText = "CODE POSTAL";
+                DgvList.Columns["LOCALITE"].HeaderText = "LOCALITE";
+                DgvList.Columns["PAYS"].HeaderText = "PAYS";
+                DgvList.Columns["TELEPHONE"].HeaderText = "N° TELEPHONE";
+                DgvList.Columns["EMAIL"].HeaderText = "EMAIL";
+                DgvList.Columns["NUMTVA"].HeaderText = "N° TVA";
+                DgvList.Columns["SITEWEB_URL"].HeaderText = "URL SITE WEB";
                 DgvList.Columns["BLOQUE"].HeaderText = "BLOQUE";
                 DgvList.Columns["ATTENTION"].HeaderText = "ATTENTION";
                 DgvList.Columns["DATECREATION"].HeaderText = "DATE CREATION";
             }
 
-            if (lang== "en")
+            if (lang == "en")
             {
-                DgvList.Columns["CODE"].HeaderText = "CODE";
-                DgvList.Columns["PLAQUE"].HeaderText = "LICENSE PLATE";
-                DgvList.Columns["BADGE"].HeaderText = "BADGE N°";
-                DgvList.Columns["TARE"].HeaderText = "TARE (KG)";
-                DgvList.Columns["VALIDE"].HeaderText = "VALID";
+                DgvList.Columns["NOM"].HeaderText = "NAME";
+                DgvList.Columns["ADRESSE"].HeaderText = "ADRESS";
+                DgvList.Columns["CODEPOSTAL"].HeaderText = "POSTAL CODE";
+                DgvList.Columns["LOCALITE"].HeaderText = "CITY";
+                DgvList.Columns["PAYS"].HeaderText = "COUNTRY";
+                DgvList.Columns["TELEPHONE"].HeaderText = "PHONE N°";
+                DgvList.Columns["EMAIL"].HeaderText = "MAIL";
+                DgvList.Columns["NUMTVA"].HeaderText = "VAT N°";
+                DgvList.Columns["SITEWEB_URL"].HeaderText = "WEBSITE URL";
                 DgvList.Columns["BLOQUE"].HeaderText = "BLOCKED";
                 DgvList.Columns["ATTENTION"].HeaderText = "WARNING";
                 DgvList.Columns["DATECREATION"].HeaderText = "CREATION DATE";
             }
-            
-            if (lang== "es")
+
+            if (lang == "es")
             {
-                DgvList.Columns["CODE"].HeaderText = "CÓDIGO";
-                DgvList.Columns["PLAQUE"].HeaderText = "N° DE PLACA";
-                DgvList.Columns["BADGE"].HeaderText = "N INSIGNIA°";
-                DgvList.Columns["TARE"].HeaderText = "TARA (KG)";
-                DgvList.Columns["VALIDE"].HeaderText = "VÁLIDO";
+                DgvList.Columns["NOM"].HeaderText = "APELLIDO";
+                DgvList.Columns["ADRESSE"].HeaderText = "DIRECCIÓN";
+                DgvList.Columns["CODEPOSTAL"].HeaderText = "CÓDIGO POSTAL";
+                DgvList.Columns["LOCALITE"].HeaderText = "LOCALIDAD";
+                DgvList.Columns["PAYS"].HeaderText = "PAÍS";
+                DgvList.Columns["TELEPHONE"].HeaderText = "TELÉFONO";
+                DgvList.Columns["EMAIL"].HeaderText = "CORREO ELECTRÓNICO";
+                DgvList.Columns["NUMTVA"].HeaderText = "N° IVA";
+                DgvList.Columns["SITEWEB_URL"].HeaderText = "SITIO WEB";
                 DgvList.Columns["BLOQUE"].HeaderText = "OBSTRUIDO";
                 DgvList.Columns["ATTENTION"].HeaderText = "ATENCIÓN";
                 DgvList.Columns["DATECREATION"].HeaderText = "FECHA DE CREACIÓN";
             }
-            
-        }
 
+        }
 
         private void ActualiserToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -109,34 +122,20 @@ namespace WidraSoft.UI
         private void ouvrirToolStripMenuItem_Click(object sender, EventArgs e)
         {
             DgvList.Focus();
-            Form form = new CamionDetail("Edit", Common_functions.GetDatagridViewSelectedId(DgvList));
+            Form form = new EnregistrementsDetail("Edit", Common_functions.GetDatagridViewSelectedId(DgvList));
             form.Show();
         }
 
         private void ajouterToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Form form = new CamionDetail("Add", 0);
+            Form form = new EnregistrementsDetail("Add", 0);
             form.Show();
         }
 
-        private void supprimerToolStripMenuItem_Click(object sender, EventArgs e)
+        private void txtSearchBox_TextChanged(object sender, EventArgs e)
         {
-            Int32[] selectedIds = new Int32[Common_functions.GetDatagridViewSelectedRowsId(DgvList).Length];
-            selectedIds = Common_functions.GetDatagridViewSelectedRowsId(DgvList);
-            if (Common_functions.GetDatagridViewSelectedRowsId(DgvList).Length > 0)
-            {
-                for (int i = 0; i < Common_functions.GetDatagridViewSelectedRowsId(DgvList).Length; i++)
-                {
-                    //MessageBox.Show(selectedIds[i].ToString());
-                    Camion camion = new Camion();
-                    camion.Delete(selectedIds[i]);
-                }
-                MessageBox.Show(Common_functions.GetDatagridViewSelectedRowsId(DgvList).Length + " camion(s) supprimé(s)");
-            }
-            else
-            {
-                MessageBox.Show("Vous n'avez selectionné aucun enregistrement à supprimer");
-            }
+            Enregistrements enregistrements = new Enregistrements();
+            DgvList.DataSource = enregistrements.SearchBox(txtSearchBox.Text);
         }
 
         private void cbLang_SelectedIndexChanged(object sender, EventArgs e)
@@ -147,7 +146,7 @@ namespace WidraSoft.UI
                 England_flag.Visible = false;
                 Spain_flag.Visible = false;
                 Language_Manager language_Manager = new Language_Manager();
-                language_Manager.ChangeLanguage("fr", this, typeof(CamionsListe));
+                language_Manager.ChangeLanguage("fr", this, typeof(EnregistrementsListe));
                 Localize_Dgv("fr");
             }
 
@@ -157,7 +156,7 @@ namespace WidraSoft.UI
                 England_flag.Visible = true;
                 Spain_flag.Visible = false;
                 Language_Manager language_Manager = new Language_Manager();
-                language_Manager.ChangeLanguage("en", this, typeof(CamionsListe));
+                language_Manager.ChangeLanguage("en", this, typeof(EnregistrementsListe));
                 Localize_Dgv("en");
             }
 
@@ -167,15 +166,9 @@ namespace WidraSoft.UI
                 England_flag.Visible = false;
                 Spain_flag.Visible = true;
                 Language_Manager language_Manager = new Language_Manager();
-                language_Manager.ChangeLanguage("es", this, typeof(CamionsListe));
+                language_Manager.ChangeLanguage("es", this, typeof(EnregistrementsListe));
                 Localize_Dgv("es");
             }
-        }
-
-        private void txtSearchBox_TextChanged(object sender, EventArgs e)
-        {
-            Camion camion = new Camion();
-            DgvList.DataSource = camion.SearchBox(txtSearchBox.Text);
         }
     }
 }

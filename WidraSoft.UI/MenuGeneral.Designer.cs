@@ -48,6 +48,9 @@ namespace WidraSoft.UI
             this.BorneToolpStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.paramètresToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.pamamètresDePeséeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.tablesSupplémentairesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.tablesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.enregistrementsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.reportingToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.synchronisationToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.aideToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -258,7 +261,8 @@ namespace WidraSoft.UI
             // 
             this.paramètresToolStripMenuItem.BackColor = System.Drawing.Color.Transparent;
             this.paramètresToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.pamamètresDePeséeToolStripMenuItem});
+            this.pamamètresDePeséeToolStripMenuItem,
+            this.tablesSupplémentairesToolStripMenuItem});
             resources.ApplyResources(this.paramètresToolStripMenuItem, "paramètresToolStripMenuItem");
             this.paramètresToolStripMenuItem.ForeColor = System.Drawing.Color.White;
             this.paramètresToolStripMenuItem.Image = global::WidraSoft.UI.Properties.Resources.Settings1;
@@ -274,6 +278,35 @@ namespace WidraSoft.UI
             this.pamamètresDePeséeToolStripMenuItem.Name = "pamamètresDePeséeToolStripMenuItem";
             resources.ApplyResources(this.pamamètresDePeséeToolStripMenuItem, "pamamètresDePeséeToolStripMenuItem");
             this.pamamètresDePeséeToolStripMenuItem.Click += new System.EventHandler(this.pamamètresDePeséeToolStripMenuItem_Click);
+            // 
+            // tablesSupplémentairesToolStripMenuItem
+            // 
+            this.tablesSupplémentairesToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(62)))), ((int)(((byte)(60)))));
+            this.tablesSupplémentairesToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.tablesToolStripMenuItem,
+            this.enregistrementsToolStripMenuItem});
+            this.tablesSupplémentairesToolStripMenuItem.ForeColor = System.Drawing.Color.White;
+            this.tablesSupplémentairesToolStripMenuItem.Image = global::WidraSoft.UI.Properties.Resources.table;
+            this.tablesSupplémentairesToolStripMenuItem.Name = "tablesSupplémentairesToolStripMenuItem";
+            resources.ApplyResources(this.tablesSupplémentairesToolStripMenuItem, "tablesSupplémentairesToolStripMenuItem");
+            // 
+            // tablesToolStripMenuItem
+            // 
+            this.tablesToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(62)))), ((int)(((byte)(60)))));
+            this.tablesToolStripMenuItem.ForeColor = System.Drawing.Color.White;
+            this.tablesToolStripMenuItem.Image = global::WidraSoft.UI.Properties.Resources.table;
+            this.tablesToolStripMenuItem.Name = "tablesToolStripMenuItem";
+            resources.ApplyResources(this.tablesToolStripMenuItem, "tablesToolStripMenuItem");
+            this.tablesToolStripMenuItem.Click += new System.EventHandler(this.tablesToolStripMenuItem_Click);
+            // 
+            // enregistrementsToolStripMenuItem
+            // 
+            this.enregistrementsToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(62)))), ((int)(((byte)(60)))));
+            this.enregistrementsToolStripMenuItem.ForeColor = System.Drawing.Color.White;
+            this.enregistrementsToolStripMenuItem.Image = global::WidraSoft.UI.Properties.Resources.lignes;
+            this.enregistrementsToolStripMenuItem.Name = "enregistrementsToolStripMenuItem";
+            resources.ApplyResources(this.enregistrementsToolStripMenuItem, "enregistrementsToolStripMenuItem");
+            this.enregistrementsToolStripMenuItem.Click += new System.EventHandler(this.enregistrementsToolStripMenuItem_Click);
             // 
             // reportingToolStripMenuItem
             // 
@@ -558,6 +591,9 @@ namespace WidraSoft.UI
         private System.Windows.Forms.Panel panelLicenceInfo;
         private System.Windows.Forms.ToolStripMenuItem ParamPoidstoolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem pamamètresDePeséeToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem tablesSupplémentairesToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem tablesToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem enregistrementsToolStripMenuItem;
         //private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

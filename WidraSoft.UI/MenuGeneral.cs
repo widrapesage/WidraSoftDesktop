@@ -181,5 +181,17 @@ namespace WidraSoft.UI
         {
            
         }
+
+        private void tablesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Form form = new TablesList("1=1");
+            form.Show();
+        }
+
+        private void enregistrementsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Form form = new EnregistrementsListe("1=1");
+            form.Show();
+        }
     }
 }

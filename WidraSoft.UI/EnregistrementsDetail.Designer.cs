@@ -1,6 +1,6 @@
 ﻿namespace WidraSoft.UI
 {
-    partial class TransporteurDetail
+    partial class EnregistrementsDetail
     {
         /// <summary>
         /// Required designer variable.
@@ -28,10 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TransporteurDetail));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(EnregistrementsDetail));
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panelLang = new System.Windows.Forms.Panel();
             this.pbUpdating = new System.Windows.Forms.PictureBox();
             this.Spain_flag = new System.Windows.Forms.PictureBox();
@@ -46,22 +44,24 @@
             this.lbAjouter = new System.Windows.Forms.LinkLabel();
             this.lbSupprimer = new System.Windows.Forms.LinkLabel();
             this.panelDetail = new System.Windows.Forms.Panel();
-            this.label19 = new System.Windows.Forms.Label();
-            this.DgvCamions = new System.Windows.Forms.DataGridView();
+            this.dgvEnregistrements = new System.Windows.Forms.DataGridView();
+            this.label3 = new System.Windows.Forms.Label();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
+            this.lbActualiserDgvChauffeurs = new System.Windows.Forms.LinkLabel();
+            this.pbRemoveRow = new System.Windows.Forms.PictureBox();
+            this.pbAddRow = new System.Windows.Forms.PictureBox();
+            this.lblAddDgvChauffeurs = new System.Windows.Forms.LinkLabel();
+            this.lblRetirerDgvChauffeurs = new System.Windows.Forms.LinkLabel();
             this.txtDateCreation = new System.Windows.Forms.TextBox();
             this.txtId = new System.Windows.Forms.TextBox();
             this.label18 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.label17 = new System.Windows.Forms.Label();
-            this.txtLicence = new System.Windows.Forms.TextBox();
-            this.label16 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
             this.txtAttention = new System.Windows.Forms.TextBox();
             this.txtNom = new System.Windows.Forms.TextBox();
             this.txtBloque = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.txtValide = new System.Windows.Forms.TextBox();
             this.txtAdresse = new System.Windows.Forms.TextBox();
             this.label15 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
@@ -79,7 +79,6 @@
             this.label9 = new System.Windows.Forms.Label();
             this.chx_Bloque = new System.Windows.Forms.CheckBox();
             this.txtEmail = new System.Windows.Forms.TextBox();
-            this.chx_Valide = new System.Windows.Forms.CheckBox();
             this.label10 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
             this.txtNumTVA = new System.Windows.Forms.TextBox();
@@ -97,7 +96,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.panelDetail.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.DgvCamions)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvEnregistrements)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbRemoveRow)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbAddRow)).BeginInit();
             this.SuspendLayout();
             // 
             // panelLang
@@ -232,22 +234,24 @@
             // 
             resources.ApplyResources(this.panelDetail, "panelDetail");
             this.panelDetail.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(86)))), ((int)(((byte)(81)))));
-            this.panelDetail.Controls.Add(this.label19);
-            this.panelDetail.Controls.Add(this.DgvCamions);
+            this.panelDetail.Controls.Add(this.dgvEnregistrements);
+            this.panelDetail.Controls.Add(this.label3);
+            this.panelDetail.Controls.Add(this.pictureBox4);
+            this.panelDetail.Controls.Add(this.lbActualiserDgvChauffeurs);
+            this.panelDetail.Controls.Add(this.pbRemoveRow);
+            this.panelDetail.Controls.Add(this.pbAddRow);
+            this.panelDetail.Controls.Add(this.lblAddDgvChauffeurs);
+            this.panelDetail.Controls.Add(this.lblRetirerDgvChauffeurs);
             this.panelDetail.Controls.Add(this.txtDateCreation);
             this.panelDetail.Controls.Add(this.txtId);
             this.panelDetail.Controls.Add(this.label18);
             this.panelDetail.Controls.Add(this.label1);
             this.panelDetail.Controls.Add(this.label17);
-            this.panelDetail.Controls.Add(this.txtLicence);
-            this.panelDetail.Controls.Add(this.label16);
             this.panelDetail.Controls.Add(this.label2);
-            this.panelDetail.Controls.Add(this.label3);
             this.panelDetail.Controls.Add(this.txtAttention);
             this.panelDetail.Controls.Add(this.txtNom);
             this.panelDetail.Controls.Add(this.txtBloque);
             this.panelDetail.Controls.Add(this.label4);
-            this.panelDetail.Controls.Add(this.txtValide);
             this.panelDetail.Controls.Add(this.txtAdresse);
             this.panelDetail.Controls.Add(this.label15);
             this.panelDetail.Controls.Add(this.label5);
@@ -265,7 +269,6 @@
             this.panelDetail.Controls.Add(this.label9);
             this.panelDetail.Controls.Add(this.chx_Bloque);
             this.panelDetail.Controls.Add(this.txtEmail);
-            this.panelDetail.Controls.Add(this.chx_Valide);
             this.panelDetail.Controls.Add(this.label10);
             this.panelDetail.Controls.Add(this.label12);
             this.panelDetail.Controls.Add(this.txtNumTVA);
@@ -275,48 +278,88 @@
             this.panelDetail.Controls.Add(this.txtPays);
             this.panelDetail.Name = "panelDetail";
             // 
-            // label19
+            // dgvEnregistrements
             // 
-            resources.ApplyResources(this.label19, "label19");
-            this.label19.ForeColor = System.Drawing.Color.White;
-            this.label19.Name = "label19";
+            resources.ApplyResources(this.dgvEnregistrements, "dgvEnregistrements");
+            this.dgvEnregistrements.AllowUserToAddRows = false;
+            this.dgvEnregistrements.AllowUserToDeleteRows = false;
+            this.dgvEnregistrements.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(86)))), ((int)(((byte)(81)))));
+            this.dgvEnregistrements.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dgvEnregistrements.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.Sunken;
+            this.dgvEnregistrements.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.Honeydew;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Calibri", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(86)))), ((int)(((byte)(81)))));
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvEnregistrements.DefaultCellStyle = dataGridViewCellStyle2;
+            this.dgvEnregistrements.Name = "dgvEnregistrements";
+            this.dgvEnregistrements.RowTemplate.Height = 25;
             // 
-            // DgvCamions
+            // label3
             // 
-            resources.ApplyResources(this.DgvCamions, "DgvCamions");
-            this.DgvCamions.AllowUserToAddRows = false;
-            this.DgvCamions.AllowUserToDeleteRows = false;
-            this.DgvCamions.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(86)))), ((int)(((byte)(81)))));
-            this.DgvCamions.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.DgvCamions.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.Sunken;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.Honeydew;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Corbel", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(86)))), ((int)(((byte)(81)))));
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.DgvCamions.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
-            this.DgvCamions.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle5.BackColor = System.Drawing.Color.Honeydew;
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Calibri", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(86)))), ((int)(((byte)(81)))));
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.DgvCamions.DefaultCellStyle = dataGridViewCellStyle5;
-            this.DgvCamions.Name = "DgvCamions";
-            this.DgvCamions.ReadOnly = true;
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle6.BackColor = System.Drawing.Color.Honeydew;
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Corbel", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.MediumSeaGreen;
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.DgvCamions.RowHeadersDefaultCellStyle = dataGridViewCellStyle6;
-            this.DgvCamions.RowTemplate.Height = 33;
+            resources.ApplyResources(this.label3, "label3");
+            this.label3.ForeColor = System.Drawing.Color.White;
+            this.label3.Name = "label3";
+            // 
+            // pictureBox4
+            // 
+            resources.ApplyResources(this.pictureBox4, "pictureBox4");
+            this.pictureBox4.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox4.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pictureBox4.Image = global::WidraSoft.UI.Properties.Resources.refresh;
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.TabStop = false;
+            // 
+            // lbActualiserDgvChauffeurs
+            // 
+            resources.ApplyResources(this.lbActualiserDgvChauffeurs, "lbActualiserDgvChauffeurs");
+            this.lbActualiserDgvChauffeurs.ActiveLinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(190)))), ((int)(((byte)(117)))));
+            this.lbActualiserDgvChauffeurs.BackColor = System.Drawing.Color.Transparent;
+            this.lbActualiserDgvChauffeurs.ForeColor = System.Drawing.Color.White;
+            this.lbActualiserDgvChauffeurs.LinkColor = System.Drawing.Color.White;
+            this.lbActualiserDgvChauffeurs.Name = "lbActualiserDgvChauffeurs";
+            this.lbActualiserDgvChauffeurs.TabStop = true;
+            // 
+            // pbRemoveRow
+            // 
+            resources.ApplyResources(this.pbRemoveRow, "pbRemoveRow");
+            this.pbRemoveRow.BackColor = System.Drawing.Color.Transparent;
+            this.pbRemoveRow.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pbRemoveRow.Image = global::WidraSoft.UI.Properties.Resources.remove;
+            this.pbRemoveRow.Name = "pbRemoveRow";
+            this.pbRemoveRow.TabStop = false;
+            // 
+            // pbAddRow
+            // 
+            resources.ApplyResources(this.pbAddRow, "pbAddRow");
+            this.pbAddRow.BackColor = System.Drawing.Color.Transparent;
+            this.pbAddRow.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pbAddRow.Image = global::WidraSoft.UI.Properties.Resources.plus;
+            this.pbAddRow.Name = "pbAddRow";
+            this.pbAddRow.TabStop = false;
+            // 
+            // lblAddDgvChauffeurs
+            // 
+            resources.ApplyResources(this.lblAddDgvChauffeurs, "lblAddDgvChauffeurs");
+            this.lblAddDgvChauffeurs.ActiveLinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(190)))), ((int)(((byte)(117)))));
+            this.lblAddDgvChauffeurs.BackColor = System.Drawing.Color.Transparent;
+            this.lblAddDgvChauffeurs.ForeColor = System.Drawing.Color.White;
+            this.lblAddDgvChauffeurs.LinkColor = System.Drawing.Color.White;
+            this.lblAddDgvChauffeurs.Name = "lblAddDgvChauffeurs";
+            this.lblAddDgvChauffeurs.TabStop = true;
+            // 
+            // lblRetirerDgvChauffeurs
+            // 
+            resources.ApplyResources(this.lblRetirerDgvChauffeurs, "lblRetirerDgvChauffeurs");
+            this.lblRetirerDgvChauffeurs.ActiveLinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(190)))), ((int)(((byte)(117)))));
+            this.lblRetirerDgvChauffeurs.BackColor = System.Drawing.Color.Transparent;
+            this.lblRetirerDgvChauffeurs.ForeColor = System.Drawing.Color.White;
+            this.lblRetirerDgvChauffeurs.LinkColor = System.Drawing.Color.White;
+            this.lblRetirerDgvChauffeurs.Name = "lblRetirerDgvChauffeurs";
+            this.lblRetirerDgvChauffeurs.TabStop = true;
             // 
             // txtDateCreation
             // 
@@ -349,29 +392,11 @@
             this.label17.ForeColor = System.Drawing.Color.White;
             this.label17.Name = "label17";
             // 
-            // txtLicence
-            // 
-            resources.ApplyResources(this.txtLicence, "txtLicence");
-            this.txtLicence.BackColor = System.Drawing.Color.Honeydew;
-            this.txtLicence.Name = "txtLicence";
-            // 
-            // label16
-            // 
-            resources.ApplyResources(this.label16, "label16");
-            this.label16.ForeColor = System.Drawing.Color.White;
-            this.label16.Name = "label16";
-            // 
             // label2
             // 
             resources.ApplyResources(this.label2, "label2");
             this.label2.ForeColor = System.Drawing.Color.White;
             this.label2.Name = "label2";
-            // 
-            // label3
-            // 
-            resources.ApplyResources(this.label3, "label3");
-            this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Name = "label3";
             // 
             // txtAttention
             // 
@@ -394,11 +419,6 @@
             resources.ApplyResources(this.label4, "label4");
             this.label4.ForeColor = System.Drawing.Color.White;
             this.label4.Name = "label4";
-            // 
-            // txtValide
-            // 
-            resources.ApplyResources(this.txtValide, "txtValide");
-            this.txtValide.Name = "txtValide";
             // 
             // txtAdresse
             // 
@@ -506,14 +526,6 @@
             this.txtEmail.BackColor = System.Drawing.Color.Honeydew;
             this.txtEmail.Name = "txtEmail";
             // 
-            // chx_Valide
-            // 
-            resources.ApplyResources(this.chx_Valide, "chx_Valide");
-            this.chx_Valide.ForeColor = System.Drawing.Color.White;
-            this.chx_Valide.Name = "chx_Valide";
-            this.chx_Valide.UseVisualStyleBackColor = true;
-            this.chx_Valide.CheckedChanged += new System.EventHandler(this.chx_Valide_CheckedChanged);
-            // 
             // label10
             // 
             resources.ApplyResources(this.label10, "label10");
@@ -556,7 +568,7 @@
             this.txtPays.BackColor = System.Drawing.Color.Honeydew;
             this.txtPays.Name = "txtPays";
             // 
-            // TransporteurDetail
+            // EnregistrementsDetail
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -565,9 +577,9 @@
             this.Controls.Add(this.panelNavigation);
             this.Controls.Add(this.panelLang);
             this.MaximizeBox = false;
-            this.Name = "TransporteurDetail";
-            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.TransporteurDetail_FormClosing);
-            this.Load += new System.EventHandler(this.TransporteurDetail_Load);
+            this.Name = "EnregistrementsDetail";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.EnregistrementsDetail_FormClosing);
+            this.Load += new System.EventHandler(this.EnregistrementsDetail_Load);
             this.panelLang.ResumeLayout(false);
             this.panelLang.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbUpdating)).EndInit();
@@ -581,7 +593,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.panelDetail.ResumeLayout(false);
             this.panelDetail.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.DgvCamions)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvEnregistrements)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbRemoveRow)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbAddRow)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -607,15 +622,11 @@
         private System.Windows.Forms.Label label18;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label17;
-        private System.Windows.Forms.TextBox txtLicence;
-        private System.Windows.Forms.Label label16;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox txtAttention;
         private System.Windows.Forms.TextBox txtNom;
         private System.Windows.Forms.TextBox txtBloque;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox txtValide;
         private System.Windows.Forms.TextBox txtAdresse;
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.Label label5;
@@ -633,7 +644,6 @@
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.CheckBox chx_Bloque;
         private System.Windows.Forms.TextBox txtEmail;
-        private System.Windows.Forms.CheckBox chx_Valide;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.TextBox txtNumTVA;
@@ -641,7 +651,13 @@
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.TextBox txtPays;
-        private System.Windows.Forms.Label label19;
-        private System.Windows.Forms.DataGridView DgvCamions;
+        private System.Windows.Forms.DataGridView dgvEnregistrements;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.PictureBox pictureBox4;
+        private System.Windows.Forms.LinkLabel lbActualiserDgvChauffeurs;
+        private System.Windows.Forms.PictureBox pbRemoveRow;
+        private System.Windows.Forms.PictureBox pbAddRow;
+        private System.Windows.Forms.LinkLabel lblAddDgvChauffeurs;
+        private System.Windows.Forms.LinkLabel lblRetirerDgvChauffeurs;
     }
 }

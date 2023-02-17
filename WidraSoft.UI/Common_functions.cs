@@ -17,7 +17,10 @@ namespace WidraSoft.UI
             }
             else
             {
-                return (Int32)o.SelectedValue;
+                if (o.Text == "") 
+                    return 0;
+                else
+                    return (Int32)o.SelectedValue;
             }
         }
 

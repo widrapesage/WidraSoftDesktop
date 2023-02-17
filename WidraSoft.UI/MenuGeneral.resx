@@ -219,10 +219,28 @@
     <value>ImageAboveText</value>
   </data>
   <data name="pamamètresDePeséeToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>263, 30</value>
+    <value>278, 30</value>
   </data>
   <data name="pamamètresDePeséeToolStripMenuItem.Text" xml:space="preserve">
     <value>Paramètres de pesée</value>
+  </data>
+  <data name="tablesToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>228, 30</value>
+  </data>
+  <data name="tablesToolStripMenuItem.Text" xml:space="preserve">
+    <value>Tables</value>
+  </data>
+  <data name="enregistrementsToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>228, 30</value>
+  </data>
+  <data name="enregistrementsToolStripMenuItem.Text" xml:space="preserve">
+    <value>Enregistrements</value>
+  </data>
+  <data name="tablesSupplémentairesToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>278, 30</value>
+  </data>
+  <data name="tablesSupplémentairesToolStripMenuItem.Text" xml:space="preserve">
+    <value>Tables supplémentaire</value>
   </data>
   <data name="paramètresToolStripMenuItem.Font" type="System.Drawing.Font, System.Drawing">
     <value>Corbel, 15pt</value>
@@ -1512,6 +1530,24 @@
     <value>pamamètresDePeséeToolStripMenuItem</value>
   </data>
   <data name="&gt;&gt;pamamètresDePeséeToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;tablesSupplémentairesToolStripMenuItem.Name" xml:space="preserve">
+    <value>tablesSupplémentairesToolStripMenuItem</value>
+  </data>
+  <data name="&gt;&gt;tablesSupplémentairesToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;tablesToolStripMenuItem.Name" xml:space="preserve">
+    <value>tablesToolStripMenuItem</value>
+  </data>
+  <data name="&gt;&gt;tablesToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;enregistrementsToolStripMenuItem.Name" xml:space="preserve">
+    <value>enregistrementsToolStripMenuItem</value>
+  </data>
+  <data name="&gt;&gt;enregistrementsToolStripMenuItem.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;reportingToolStripMenuItem.Name" xml:space="preserve">
