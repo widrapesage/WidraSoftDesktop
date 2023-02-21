@@ -29,19 +29,17 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(PeseePontBascule));
             this.panelLang = new System.Windows.Forms.Panel();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.txtId = new System.Windows.Forms.TextBox();
             this.Spain_flag = new System.Windows.Forms.PictureBox();
             this.England_flag = new System.Windows.Forms.PictureBox();
             this.France_flag = new System.Windows.Forms.PictureBox();
             this.cbLang = new System.Windows.Forms.ComboBox();
-            this.panelNavigation = new System.Windows.Forms.Panel();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.lbImprimer = new System.Windows.Forms.LinkLabel();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.lbEnregistrer = new System.Windows.Forms.LinkLabel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.lbAnnuler = new System.Windows.Forms.LinkLabel();
             this.lbPont = new System.Windows.Forms.Label();
             this.cbPont = new System.Windows.Forms.ComboBox();
             this.lbFirme = new System.Windows.Forms.Label();
@@ -62,6 +60,31 @@
             this.rb2x1 = new System.Windows.Forms.RadioButton();
             this.rb1x = new System.Windows.Forms.RadioButton();
             this.panelData = new System.Windows.Forms.Panel();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.menuStrip = new System.Windows.Forms.MenuStrip();
+            this.MenuItemNouveau = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItem3 = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItem4 = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
+            this.pontsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.pToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.ParamPoidstoolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.gérerToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.camionsToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.produitsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.chauffeursToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.firmesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.transporteursToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.destinationsProvenancesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.clientsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.paramètresToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.pamamètresDePeséeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.tablesSupplémentairesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.tablesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.enregistrementsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.reportingToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.aideToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.aIIIToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.btAddClient = new System.Windows.Forms.Button();
             this.btAddProduit = new System.Windows.Forms.Button();
             this.btAddTransporteur = new System.Windows.Forms.Button();
@@ -71,11 +94,15 @@
             this.btAddPont = new System.Windows.Forms.Button();
             this.lbTareCamion = new System.Windows.Forms.Label();
             this.txtTareCamion = new System.Windows.Forms.TextBox();
-            this.txtId = new System.Windows.Forms.TextBox();
             this.gbFlux = new System.Windows.Forms.GroupBox();
             this.rbxSortant = new System.Windows.Forms.RadioButton();
             this.rbxEntrant = new System.Windows.Forms.RadioButton();
             this.panelLayout = new System.Windows.Forms.Panel();
+            this.DgvList = new System.Windows.Forms.DataGridView();
+            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.MenuItemTerminer = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripSearch = new System.Windows.Forms.ToolStripTextBox();
+            this.panel2 = new System.Windows.Forms.Panel();
             this.panelWeightDetails = new System.Windows.Forms.Panel();
             this.lbDateHeurePoidsTare = new System.Windows.Forms.Label();
             this.lbDateHeurePoidsBrut = new System.Windows.Forms.Label();
@@ -95,24 +122,25 @@
             this.lbStatus = new System.Windows.Forms.Label();
             this.Weight_Timer = new System.Windows.Forms.Timer(this.components);
             this.panelLang.SuspendLayout();
+            this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Spain_flag)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.England_flag)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.France_flag)).BeginInit();
-            this.panelNavigation.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.gbTypePesee.SuspendLayout();
             this.panelData.SuspendLayout();
+            this.menuStrip.SuspendLayout();
             this.gbFlux.SuspendLayout();
             this.panelLayout.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.DgvList)).BeginInit();
+            this.menuStrip1.SuspendLayout();
             this.panelWeightDetails.SuspendLayout();
             this.panelWeightDisplay.SuspendLayout();
             this.SuspendLayout();
             // 
             // panelLang
             // 
-            this.panelLang.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(86)))), ((int)(((byte)(81)))));
+            this.panelLang.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(62)))), ((int)(((byte)(60)))));
+            this.panelLang.Controls.Add(this.panel1);
             this.panelLang.Controls.Add(this.Spain_flag);
             this.panelLang.Controls.Add(this.England_flag);
             this.panelLang.Controls.Add(this.France_flag);
@@ -120,8 +148,32 @@
             this.panelLang.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelLang.Location = new System.Drawing.Point(0, 0);
             this.panelLang.Name = "panelLang";
-            this.panelLang.Size = new System.Drawing.Size(1114, 35);
+            this.panelLang.Size = new System.Drawing.Size(1271, 35);
             this.panelLang.TabIndex = 74;
+            // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(86)))), ((int)(((byte)(81)))));
+            this.panel1.Controls.Add(this.txtId);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(127, 35);
+            this.panel1.TabIndex = 129;
+            // 
+            // txtId
+            // 
+            this.txtId.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(86)))), ((int)(((byte)(81)))));
+            this.txtId.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtId.Font = new System.Drawing.Font("Calibri", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.txtId.ForeColor = System.Drawing.Color.White;
+            this.txtId.Location = new System.Drawing.Point(2, 5);
+            this.txtId.Margin = new System.Windows.Forms.Padding(2);
+            this.txtId.Name = "txtId";
+            this.txtId.ReadOnly = true;
+            this.txtId.Size = new System.Drawing.Size(123, 25);
+            this.txtId.TabIndex = 110;
+            this.txtId.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // Spain_flag
             // 
@@ -129,7 +181,7 @@
             this.Spain_flag.Cursor = System.Windows.Forms.Cursors.Hand;
             this.Spain_flag.Image = global::WidraSoft.UI.Properties.Resources.spain;
             this.Spain_flag.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.Spain_flag.Location = new System.Drawing.Point(30, 5);
+            this.Spain_flag.Location = new System.Drawing.Point(147, 5);
             this.Spain_flag.Name = "Spain_flag";
             this.Spain_flag.Size = new System.Drawing.Size(24, 24);
             this.Spain_flag.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -142,7 +194,7 @@
             this.England_flag.Cursor = System.Windows.Forms.Cursors.Hand;
             this.England_flag.Image = global::WidraSoft.UI.Properties.Resources.united_kingdom;
             this.England_flag.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.England_flag.Location = new System.Drawing.Point(30, 5);
+            this.England_flag.Location = new System.Drawing.Point(147, 5);
             this.England_flag.Name = "England_flag";
             this.England_flag.Size = new System.Drawing.Size(24, 24);
             this.England_flag.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -155,7 +207,7 @@
             this.France_flag.Cursor = System.Windows.Forms.Cursors.Hand;
             this.France_flag.Image = global::WidraSoft.UI.Properties.Resources.france;
             this.France_flag.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.France_flag.Location = new System.Drawing.Point(30, 5);
+            this.France_flag.Location = new System.Drawing.Point(147, 5);
             this.France_flag.Name = "France_flag";
             this.France_flag.Size = new System.Drawing.Size(24, 24);
             this.France_flag.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -164,121 +216,16 @@
             // 
             // cbLang
             // 
-            this.cbLang.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(86)))), ((int)(((byte)(77)))));
+            this.cbLang.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(62)))), ((int)(((byte)(60)))));
             this.cbLang.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbLang.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cbLang.Font = new System.Drawing.Font("Corbel", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.cbLang.ForeColor = System.Drawing.Color.White;
             this.cbLang.FormattingEnabled = true;
-            this.cbLang.Location = new System.Drawing.Point(60, 7);
+            this.cbLang.Location = new System.Drawing.Point(177, 7);
             this.cbLang.Name = "cbLang";
             this.cbLang.Size = new System.Drawing.Size(158, 22);
             this.cbLang.TabIndex = 23;
-            // 
-            // panelNavigation
-            // 
-            this.panelNavigation.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(62)))), ((int)(((byte)(60)))));
-            this.panelNavigation.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panelNavigation.Controls.Add(this.pictureBox2);
-            this.panelNavigation.Controls.Add(this.lbImprimer);
-            this.panelNavigation.Controls.Add(this.pictureBox3);
-            this.panelNavigation.Controls.Add(this.lbEnregistrer);
-            this.panelNavigation.Controls.Add(this.pictureBox1);
-            this.panelNavigation.Controls.Add(this.lbAnnuler);
-            this.panelNavigation.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelNavigation.Location = new System.Drawing.Point(0, 35);
-            this.panelNavigation.Name = "panelNavigation";
-            this.panelNavigation.Size = new System.Drawing.Size(1114, 35);
-            this.panelNavigation.TabIndex = 84;
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pictureBox2.Image = global::WidraSoft.UI.Properties.Resources.printer;
-            this.pictureBox2.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.pictureBox2.Location = new System.Drawing.Point(272, 6);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(21, 22);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.pictureBox2.TabIndex = 85;
-            this.pictureBox2.TabStop = false;
-            // 
-            // lbImprimer
-            // 
-            this.lbImprimer.ActiveLinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(190)))), ((int)(((byte)(117)))));
-            this.lbImprimer.AutoSize = true;
-            this.lbImprimer.BackColor = System.Drawing.Color.Transparent;
-            this.lbImprimer.Font = new System.Drawing.Font("Calibri", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.lbImprimer.ForeColor = System.Drawing.Color.White;
-            this.lbImprimer.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.lbImprimer.LinkColor = System.Drawing.Color.White;
-            this.lbImprimer.Location = new System.Drawing.Point(296, 6);
-            this.lbImprimer.Name = "lbImprimer";
-            this.lbImprimer.Size = new System.Drawing.Size(66, 18);
-            this.lbImprimer.TabIndex = 84;
-            this.lbImprimer.TabStop = true;
-            this.lbImprimer.Text = "Imprimer";
-            // 
-            // pictureBox3
-            // 
-            this.pictureBox3.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox3.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pictureBox3.Image = global::WidraSoft.UI.Properties.Resources.update;
-            this.pictureBox3.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.pictureBox3.Location = new System.Drawing.Point(60, 7);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(21, 22);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.pictureBox3.TabIndex = 83;
-            this.pictureBox3.TabStop = false;
-            // 
-            // lbEnregistrer
-            // 
-            this.lbEnregistrer.ActiveLinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(190)))), ((int)(((byte)(117)))));
-            this.lbEnregistrer.AutoSize = true;
-            this.lbEnregistrer.BackColor = System.Drawing.Color.Transparent;
-            this.lbEnregistrer.Font = new System.Drawing.Font("Calibri", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.lbEnregistrer.ForeColor = System.Drawing.Color.White;
-            this.lbEnregistrer.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.lbEnregistrer.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.lbEnregistrer.LinkColor = System.Drawing.Color.White;
-            this.lbEnregistrer.Location = new System.Drawing.Point(84, 6);
-            this.lbEnregistrer.Name = "lbEnregistrer";
-            this.lbEnregistrer.Size = new System.Drawing.Size(76, 18);
-            this.lbEnregistrer.TabIndex = 82;
-            this.lbEnregistrer.TabStop = true;
-            this.lbEnregistrer.Text = "Enregistrer";
-            this.lbEnregistrer.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pictureBox1.Image = global::WidraSoft.UI.Properties.Resources.delete;
-            this.pictureBox1.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.pictureBox1.Location = new System.Drawing.Point(178, 6);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(21, 22);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.pictureBox1.TabIndex = 81;
-            this.pictureBox1.TabStop = false;
-            // 
-            // lbAnnuler
-            // 
-            this.lbAnnuler.ActiveLinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(190)))), ((int)(((byte)(117)))));
-            this.lbAnnuler.AutoSize = true;
-            this.lbAnnuler.BackColor = System.Drawing.Color.Transparent;
-            this.lbAnnuler.Font = new System.Drawing.Font("Calibri", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.lbAnnuler.ForeColor = System.Drawing.Color.White;
-            this.lbAnnuler.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.lbAnnuler.LinkColor = System.Drawing.Color.White;
-            this.lbAnnuler.Location = new System.Drawing.Point(202, 6);
-            this.lbAnnuler.Name = "lbAnnuler";
-            this.lbAnnuler.Size = new System.Drawing.Size(58, 18);
-            this.lbAnnuler.TabIndex = 78;
-            this.lbAnnuler.TabStop = true;
-            this.lbAnnuler.Text = "Annuler";
             // 
             // lbPont
             // 
@@ -286,7 +233,7 @@
             this.lbPont.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.lbPont.ForeColor = System.Drawing.Color.White;
             this.lbPont.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.lbPont.Location = new System.Drawing.Point(56, 200);
+            this.lbPont.Location = new System.Drawing.Point(205, 201);
             this.lbPont.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbPont.Name = "lbPont";
             this.lbPont.Size = new System.Drawing.Size(38, 19);
@@ -298,9 +245,9 @@
             this.cbPont.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
             this.cbPont.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
             this.cbPont.BackColor = System.Drawing.Color.Honeydew;
-            this.cbPont.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.cbPont.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.cbPont.FormattingEnabled = true;
-            this.cbPont.Location = new System.Drawing.Point(160, 197);
+            this.cbPont.Location = new System.Drawing.Point(309, 198);
             this.cbPont.Margin = new System.Windows.Forms.Padding(2);
             this.cbPont.Name = "cbPont";
             this.cbPont.Size = new System.Drawing.Size(296, 27);
@@ -315,7 +262,7 @@
             this.lbFirme.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.lbFirme.ForeColor = System.Drawing.Color.White;
             this.lbFirme.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.lbFirme.Location = new System.Drawing.Point(56, 235);
+            this.lbFirme.Location = new System.Drawing.Point(205, 236);
             this.lbFirme.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbFirme.Name = "lbFirme";
             this.lbFirme.Size = new System.Drawing.Size(45, 19);
@@ -327,9 +274,9 @@
             this.cbFirme.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
             this.cbFirme.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
             this.cbFirme.BackColor = System.Drawing.Color.Honeydew;
-            this.cbFirme.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.cbFirme.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.cbFirme.FormattingEnabled = true;
-            this.cbFirme.Location = new System.Drawing.Point(160, 232);
+            this.cbFirme.Location = new System.Drawing.Point(309, 233);
             this.cbFirme.Margin = new System.Windows.Forms.Padding(2);
             this.cbFirme.Name = "cbFirme";
             this.cbFirme.Size = new System.Drawing.Size(296, 27);
@@ -339,13 +286,13 @@
             // lbCOM
             // 
             this.lbCOM.AutoSize = true;
-            this.lbCOM.Font = new System.Drawing.Font("Calibri", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lbCOM.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.lbCOM.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(112)))), ((int)(((byte)(228)))), ((int)(((byte)(132)))));
             this.lbCOM.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.lbCOM.Location = new System.Drawing.Point(54, 5);
+            this.lbCOM.Location = new System.Drawing.Point(54, 6);
             this.lbCOM.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbCOM.Name = "lbCOM";
-            this.lbCOM.Size = new System.Drawing.Size(47, 22);
+            this.lbCOM.Size = new System.Drawing.Size(42, 19);
             this.lbCOM.TabIndex = 95;
             this.lbCOM.Text = "COM";
             // 
@@ -355,7 +302,7 @@
             this.lbCamion.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.lbCamion.ForeColor = System.Drawing.Color.White;
             this.lbCamion.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.lbCamion.Location = new System.Drawing.Point(56, 271);
+            this.lbCamion.Location = new System.Drawing.Point(205, 272);
             this.lbCamion.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbCamion.Name = "lbCamion";
             this.lbCamion.Size = new System.Drawing.Size(58, 19);
@@ -367,9 +314,9 @@
             this.cbCamion.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
             this.cbCamion.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
             this.cbCamion.BackColor = System.Drawing.Color.Honeydew;
-            this.cbCamion.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.cbCamion.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.cbCamion.FormattingEnabled = true;
-            this.cbCamion.Location = new System.Drawing.Point(160, 268);
+            this.cbCamion.Location = new System.Drawing.Point(309, 269);
             this.cbCamion.Margin = new System.Windows.Forms.Padding(2);
             this.cbCamion.Name = "cbCamion";
             this.cbCamion.Size = new System.Drawing.Size(296, 27);
@@ -382,7 +329,7 @@
             this.lbChauffeur.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.lbChauffeur.ForeColor = System.Drawing.Color.White;
             this.lbChauffeur.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.lbChauffeur.Location = new System.Drawing.Point(56, 307);
+            this.lbChauffeur.Location = new System.Drawing.Point(205, 308);
             this.lbChauffeur.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbChauffeur.Name = "lbChauffeur";
             this.lbChauffeur.Size = new System.Drawing.Size(72, 19);
@@ -394,9 +341,9 @@
             this.cbChauffeur.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
             this.cbChauffeur.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
             this.cbChauffeur.BackColor = System.Drawing.Color.Honeydew;
-            this.cbChauffeur.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.cbChauffeur.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.cbChauffeur.FormattingEnabled = true;
-            this.cbChauffeur.Location = new System.Drawing.Point(160, 304);
+            this.cbChauffeur.Location = new System.Drawing.Point(309, 305);
             this.cbChauffeur.Margin = new System.Windows.Forms.Padding(2);
             this.cbChauffeur.Name = "cbChauffeur";
             this.cbChauffeur.Size = new System.Drawing.Size(296, 27);
@@ -409,7 +356,7 @@
             this.lbTransporteur.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.lbTransporteur.ForeColor = System.Drawing.Color.White;
             this.lbTransporteur.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.lbTransporteur.Location = new System.Drawing.Point(56, 343);
+            this.lbTransporteur.Location = new System.Drawing.Point(205, 344);
             this.lbTransporteur.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbTransporteur.Name = "lbTransporteur";
             this.lbTransporteur.Size = new System.Drawing.Size(91, 19);
@@ -421,9 +368,9 @@
             this.cbTransporteur.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
             this.cbTransporteur.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
             this.cbTransporteur.BackColor = System.Drawing.Color.Honeydew;
-            this.cbTransporteur.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.cbTransporteur.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.cbTransporteur.FormattingEnabled = true;
-            this.cbTransporteur.Location = new System.Drawing.Point(160, 340);
+            this.cbTransporteur.Location = new System.Drawing.Point(309, 341);
             this.cbTransporteur.Margin = new System.Windows.Forms.Padding(2);
             this.cbTransporteur.Name = "cbTransporteur";
             this.cbTransporteur.Size = new System.Drawing.Size(296, 27);
@@ -436,7 +383,7 @@
             this.lbProduit.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.lbProduit.ForeColor = System.Drawing.Color.White;
             this.lbProduit.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.lbProduit.Location = new System.Drawing.Point(56, 379);
+            this.lbProduit.Location = new System.Drawing.Point(205, 380);
             this.lbProduit.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbProduit.Name = "lbProduit";
             this.lbProduit.Size = new System.Drawing.Size(55, 19);
@@ -448,9 +395,9 @@
             this.cbProduit.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
             this.cbProduit.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
             this.cbProduit.BackColor = System.Drawing.Color.Honeydew;
-            this.cbProduit.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.cbProduit.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.cbProduit.FormattingEnabled = true;
-            this.cbProduit.Location = new System.Drawing.Point(160, 376);
+            this.cbProduit.Location = new System.Drawing.Point(309, 377);
             this.cbProduit.Margin = new System.Windows.Forms.Padding(2);
             this.cbProduit.Name = "cbProduit";
             this.cbProduit.Size = new System.Drawing.Size(296, 27);
@@ -463,7 +410,7 @@
             this.lbClient.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.lbClient.ForeColor = System.Drawing.Color.White;
             this.lbClient.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.lbClient.Location = new System.Drawing.Point(56, 415);
+            this.lbClient.Location = new System.Drawing.Point(205, 416);
             this.lbClient.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbClient.Name = "lbClient";
             this.lbClient.Size = new System.Drawing.Size(47, 19);
@@ -475,9 +422,9 @@
             this.cbClient.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
             this.cbClient.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
             this.cbClient.BackColor = System.Drawing.Color.Honeydew;
-            this.cbClient.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.cbClient.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.cbClient.FormattingEnabled = true;
-            this.cbClient.Location = new System.Drawing.Point(160, 412);
+            this.cbClient.Location = new System.Drawing.Point(309, 413);
             this.cbClient.Margin = new System.Windows.Forms.Padding(2);
             this.cbClient.Name = "cbClient";
             this.cbClient.Size = new System.Drawing.Size(296, 27);
@@ -491,7 +438,7 @@
             this.gbTypePesee.Controls.Add(this.rb1x);
             this.gbTypePesee.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.gbTypePesee.ForeColor = System.Drawing.Color.White;
-            this.gbTypePesee.Location = new System.Drawing.Point(160, 6);
+            this.gbTypePesee.Location = new System.Drawing.Point(309, 7);
             this.gbTypePesee.Name = "gbTypePesee";
             this.gbTypePesee.Size = new System.Drawing.Size(296, 106);
             this.gbTypePesee.TabIndex = 108;
@@ -509,6 +456,7 @@
             this.rb2x2.TabStop = true;
             this.rb2x2.Text = "2x - seconde pesée";
             this.rb2x2.UseVisualStyleBackColor = true;
+            this.rb2x2.CheckedChanged += new System.EventHandler(this.rb2x2_CheckedChanged);
             // 
             // rb2x1
             // 
@@ -521,6 +469,7 @@
             this.rb2x1.TabStop = true;
             this.rb2x1.Text = "2x - première pesée";
             this.rb2x1.UseVisualStyleBackColor = true;
+            this.rb2x1.CheckedChanged += new System.EventHandler(this.rb2x1_CheckedChanged);
             // 
             // rb1x
             // 
@@ -537,6 +486,9 @@
             // 
             // panelData
             // 
+            this.panelData.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(86)))), ((int)(((byte)(81)))));
+            this.panelData.Controls.Add(this.panel3);
+            this.panelData.Controls.Add(this.menuStrip);
             this.panelData.Controls.Add(this.btAddClient);
             this.panelData.Controls.Add(this.btAddProduit);
             this.panelData.Controls.Add(this.btAddTransporteur);
@@ -546,7 +498,6 @@
             this.panelData.Controls.Add(this.btAddPont);
             this.panelData.Controls.Add(this.lbTareCamion);
             this.panelData.Controls.Add(this.txtTareCamion);
-            this.panelData.Controls.Add(this.txtId);
             this.panelData.Controls.Add(this.gbFlux);
             this.panelData.Controls.Add(this.cbCamion);
             this.panelData.Controls.Add(this.gbTypePesee);
@@ -566,8 +517,305 @@
             this.panelData.Dock = System.Windows.Forms.DockStyle.Left;
             this.panelData.Location = new System.Drawing.Point(0, 0);
             this.panelData.Name = "panelData";
-            this.panelData.Size = new System.Drawing.Size(625, 631);
+            this.panelData.Size = new System.Drawing.Size(798, 699);
             this.panelData.TabIndex = 109;
+            // 
+            // panel3
+            // 
+            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(62)))), ((int)(((byte)(60)))));
+            this.panel3.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel3.Location = new System.Drawing.Point(127, 672);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(671, 27);
+            this.panel3.TabIndex = 3;
+            // 
+            // menuStrip
+            // 
+            this.menuStrip.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(62)))), ((int)(((byte)(60)))));
+            this.menuStrip.Dock = System.Windows.Forms.DockStyle.Left;
+            this.menuStrip.Font = new System.Drawing.Font("Corbel", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.menuStrip.ImageScalingSize = new System.Drawing.Size(24, 24);
+            this.menuStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.MenuItemNouveau,
+            this.toolStripMenuItem3,
+            this.toolStripMenuItem4,
+            this.toolStripMenuItem2,
+            this.pontsToolStripMenuItem,
+            this.pToolStripMenuItem,
+            this.gérerToolStripMenuItem,
+            this.paramètresToolStripMenuItem,
+            this.reportingToolStripMenuItem,
+            this.aideToolStripMenuItem});
+            this.menuStrip.Location = new System.Drawing.Point(0, 0);
+            this.menuStrip.Name = "menuStrip";
+            this.menuStrip.Padding = new System.Windows.Forms.Padding(0, 0, 0, 1);
+            this.menuStrip.RenderMode = System.Windows.Forms.ToolStripRenderMode.Professional;
+            this.menuStrip.Size = new System.Drawing.Size(127, 699);
+            this.menuStrip.TabIndex = 128;
+            this.menuStrip.Text = "menuStrip1";
+            // 
+            // MenuItemNouveau
+            // 
+            this.MenuItemNouveau.Font = new System.Drawing.Font("Corbel", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.MenuItemNouveau.ForeColor = System.Drawing.Color.White;
+            this.MenuItemNouveau.Image = global::WidraSoft.UI.Properties.Resources.New1;
+            this.MenuItemNouveau.Margin = new System.Windows.Forms.Padding(0, 4, 0, 0);
+            this.MenuItemNouveau.Name = "MenuItemNouveau";
+            this.MenuItemNouveau.Padding = new System.Windows.Forms.Padding(4, 1, 4, 3);
+            this.MenuItemNouveau.Size = new System.Drawing.Size(126, 54);
+            this.MenuItemNouveau.Text = "Nouveau";
+            this.MenuItemNouveau.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.MenuItemNouveau.Click += new System.EventHandler(this.MenuItemNouveau_Click);
+            // 
+            // toolStripMenuItem3
+            // 
+            this.toolStripMenuItem3.Font = new System.Drawing.Font("Corbel", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.toolStripMenuItem3.ForeColor = System.Drawing.Color.White;
+            this.toolStripMenuItem3.Image = global::WidraSoft.UI.Properties.Resources.printing;
+            this.toolStripMenuItem3.Margin = new System.Windows.Forms.Padding(0, 4, 0, 0);
+            this.toolStripMenuItem3.Name = "toolStripMenuItem3";
+            this.toolStripMenuItem3.Padding = new System.Windows.Forms.Padding(4, 1, 4, 3);
+            this.toolStripMenuItem3.Size = new System.Drawing.Size(126, 54);
+            this.toolStripMenuItem3.Text = "Imprimer";
+            this.toolStripMenuItem3.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            // 
+            // toolStripMenuItem4
+            // 
+            this.toolStripMenuItem4.Font = new System.Drawing.Font("Corbel", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.toolStripMenuItem4.ForeColor = System.Drawing.Color.White;
+            this.toolStripMenuItem4.Image = global::WidraSoft.UI.Properties.Resources.close;
+            this.toolStripMenuItem4.Margin = new System.Windows.Forms.Padding(0, 4, 0, 0);
+            this.toolStripMenuItem4.Name = "toolStripMenuItem4";
+            this.toolStripMenuItem4.Padding = new System.Windows.Forms.Padding(4, 1, 4, 3);
+            this.toolStripMenuItem4.Size = new System.Drawing.Size(126, 54);
+            this.toolStripMenuItem4.Text = "Annuler";
+            this.toolStripMenuItem4.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            // 
+            // toolStripMenuItem2
+            // 
+            this.toolStripMenuItem2.Font = new System.Drawing.Font("Corbel", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.toolStripMenuItem2.ForeColor = System.Drawing.Color.White;
+            this.toolStripMenuItem2.Image = global::WidraSoft.UI.Properties.Resources.camera;
+            this.toolStripMenuItem2.Margin = new System.Windows.Forms.Padding(0, 4, 0, 0);
+            this.toolStripMenuItem2.Name = "toolStripMenuItem2";
+            this.toolStripMenuItem2.Padding = new System.Windows.Forms.Padding(4, 1, 4, 3);
+            this.toolStripMenuItem2.Size = new System.Drawing.Size(126, 54);
+            this.toolStripMenuItem2.Text = "Images";
+            this.toolStripMenuItem2.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            // 
+            // pontsToolStripMenuItem
+            // 
+            this.pontsToolStripMenuItem.Font = new System.Drawing.Font("Corbel", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.pontsToolStripMenuItem.ForeColor = System.Drawing.Color.White;
+            this.pontsToolStripMenuItem.Image = global::WidraSoft.UI.Properties.Resources.scale;
+            this.pontsToolStripMenuItem.Margin = new System.Windows.Forms.Padding(0, 80, 0, 0);
+            this.pontsToolStripMenuItem.Name = "pontsToolStripMenuItem";
+            this.pontsToolStripMenuItem.Padding = new System.Windows.Forms.Padding(4, 1, 4, 3);
+            this.pontsToolStripMenuItem.Size = new System.Drawing.Size(126, 54);
+            this.pontsToolStripMenuItem.Text = "Ponts";
+            this.pontsToolStripMenuItem.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            // 
+            // pToolStripMenuItem
+            // 
+            this.pToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.ParamPoidstoolStripMenuItem1});
+            this.pToolStripMenuItem.Font = new System.Drawing.Font("Corbel", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.pToolStripMenuItem.ForeColor = System.Drawing.Color.White;
+            this.pToolStripMenuItem.Image = global::WidraSoft.UI.Properties.Resources.device;
+            this.pToolStripMenuItem.Margin = new System.Windows.Forms.Padding(0, 4, 0, 0);
+            this.pToolStripMenuItem.Name = "pToolStripMenuItem";
+            this.pToolStripMenuItem.Padding = new System.Windows.Forms.Padding(4, 1, 4, 3);
+            this.pToolStripMenuItem.Size = new System.Drawing.Size(126, 54);
+            this.pToolStripMenuItem.Text = "Périphériques ";
+            this.pToolStripMenuItem.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            // 
+            // ParamPoidstoolStripMenuItem1
+            // 
+            this.ParamPoidstoolStripMenuItem1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(62)))), ((int)(((byte)(60)))));
+            this.ParamPoidstoolStripMenuItem1.ForeColor = System.Drawing.Color.White;
+            this.ParamPoidstoolStripMenuItem1.Image = global::WidraSoft.UI.Properties.Resources.Weighing_settings;
+            this.ParamPoidstoolStripMenuItem1.Name = "ParamPoidstoolStripMenuItem1";
+            this.ParamPoidstoolStripMenuItem1.Size = new System.Drawing.Size(312, 26);
+            this.ParamPoidstoolStripMenuItem1.Text = "Paramètres de lecture du poids";
+            // 
+            // gérerToolStripMenuItem
+            // 
+            this.gérerToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.camionsToolStripMenuItem1,
+            this.produitsToolStripMenuItem,
+            this.chauffeursToolStripMenuItem1,
+            this.firmesToolStripMenuItem,
+            this.transporteursToolStripMenuItem,
+            this.destinationsProvenancesToolStripMenuItem,
+            this.clientsToolStripMenuItem});
+            this.gérerToolStripMenuItem.Font = new System.Drawing.Font("Corbel", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.gérerToolStripMenuItem.ForeColor = System.Drawing.Color.White;
+            this.gérerToolStripMenuItem.Image = global::WidraSoft.UI.Properties.Resources.organize;
+            this.gérerToolStripMenuItem.Margin = new System.Windows.Forms.Padding(0, 4, 0, 0);
+            this.gérerToolStripMenuItem.Name = "gérerToolStripMenuItem";
+            this.gérerToolStripMenuItem.Padding = new System.Windows.Forms.Padding(4, 1, 4, 3);
+            this.gérerToolStripMenuItem.Size = new System.Drawing.Size(126, 54);
+            this.gérerToolStripMenuItem.Text = "Gérer";
+            this.gérerToolStripMenuItem.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            // 
+            // camionsToolStripMenuItem1
+            // 
+            this.camionsToolStripMenuItem1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(62)))), ((int)(((byte)(60)))));
+            this.camionsToolStripMenuItem1.ForeColor = System.Drawing.Color.White;
+            this.camionsToolStripMenuItem1.Image = global::WidraSoft.UI.Properties.Resources.cargo_truck;
+            this.camionsToolStripMenuItem1.Name = "camionsToolStripMenuItem1";
+            this.camionsToolStripMenuItem1.Size = new System.Drawing.Size(276, 26);
+            this.camionsToolStripMenuItem1.Text = "Camions";
+            this.camionsToolStripMenuItem1.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
+            // 
+            // produitsToolStripMenuItem
+            // 
+            this.produitsToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(62)))), ((int)(((byte)(60)))));
+            this.produitsToolStripMenuItem.ForeColor = System.Drawing.Color.White;
+            this.produitsToolStripMenuItem.Image = global::WidraSoft.UI.Properties.Resources.cubes1;
+            this.produitsToolStripMenuItem.Name = "produitsToolStripMenuItem";
+            this.produitsToolStripMenuItem.Size = new System.Drawing.Size(276, 26);
+            this.produitsToolStripMenuItem.Text = "Produits";
+            this.produitsToolStripMenuItem.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
+            // 
+            // chauffeursToolStripMenuItem1
+            // 
+            this.chauffeursToolStripMenuItem1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(62)))), ((int)(((byte)(60)))));
+            this.chauffeursToolStripMenuItem1.ForeColor = System.Drawing.Color.White;
+            this.chauffeursToolStripMenuItem1.Image = global::WidraSoft.UI.Properties.Resources.driver1;
+            this.chauffeursToolStripMenuItem1.Name = "chauffeursToolStripMenuItem1";
+            this.chauffeursToolStripMenuItem1.Size = new System.Drawing.Size(276, 26);
+            this.chauffeursToolStripMenuItem1.Text = "Chauffeurs";
+            this.chauffeursToolStripMenuItem1.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
+            // 
+            // firmesToolStripMenuItem
+            // 
+            this.firmesToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(62)))), ((int)(((byte)(60)))));
+            this.firmesToolStripMenuItem.ForeColor = System.Drawing.Color.White;
+            this.firmesToolStripMenuItem.Image = global::WidraSoft.UI.Properties.Resources.industry;
+            this.firmesToolStripMenuItem.Name = "firmesToolStripMenuItem";
+            this.firmesToolStripMenuItem.Size = new System.Drawing.Size(276, 26);
+            this.firmesToolStripMenuItem.Text = "Firmes";
+            this.firmesToolStripMenuItem.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
+            // 
+            // transporteursToolStripMenuItem
+            // 
+            this.transporteursToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(62)))), ((int)(((byte)(60)))));
+            this.transporteursToolStripMenuItem.ForeColor = System.Drawing.Color.White;
+            this.transporteursToolStripMenuItem.Image = global::WidraSoft.UI.Properties.Resources.Carriers;
+            this.transporteursToolStripMenuItem.Name = "transporteursToolStripMenuItem";
+            this.transporteursToolStripMenuItem.Size = new System.Drawing.Size(276, 26);
+            this.transporteursToolStripMenuItem.Text = "Transporteurs";
+            this.transporteursToolStripMenuItem.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
+            // 
+            // destinationsProvenancesToolStripMenuItem
+            // 
+            this.destinationsProvenancesToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(62)))), ((int)(((byte)(60)))));
+            this.destinationsProvenancesToolStripMenuItem.ForeColor = System.Drawing.Color.White;
+            this.destinationsProvenancesToolStripMenuItem.Image = global::WidraSoft.UI.Properties.Resources.destination1;
+            this.destinationsProvenancesToolStripMenuItem.Name = "destinationsProvenancesToolStripMenuItem";
+            this.destinationsProvenancesToolStripMenuItem.Size = new System.Drawing.Size(276, 26);
+            this.destinationsProvenancesToolStripMenuItem.Text = "Destinations-Provenances";
+            this.destinationsProvenancesToolStripMenuItem.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
+            // 
+            // clientsToolStripMenuItem
+            // 
+            this.clientsToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(62)))), ((int)(((byte)(60)))));
+            this.clientsToolStripMenuItem.ForeColor = System.Drawing.Color.White;
+            this.clientsToolStripMenuItem.Image = global::WidraSoft.UI.Properties.Resources.Customers;
+            this.clientsToolStripMenuItem.Name = "clientsToolStripMenuItem";
+            this.clientsToolStripMenuItem.Size = new System.Drawing.Size(276, 26);
+            this.clientsToolStripMenuItem.Text = "Clients";
+            this.clientsToolStripMenuItem.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
+            // 
+            // paramètresToolStripMenuItem
+            // 
+            this.paramètresToolStripMenuItem.BackColor = System.Drawing.Color.Transparent;
+            this.paramètresToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.pamamètresDePeséeToolStripMenuItem,
+            this.tablesSupplémentairesToolStripMenuItem});
+            this.paramètresToolStripMenuItem.Font = new System.Drawing.Font("Corbel", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.paramètresToolStripMenuItem.ForeColor = System.Drawing.Color.White;
+            this.paramètresToolStripMenuItem.Image = global::WidraSoft.UI.Properties.Resources.Settings1;
+            this.paramètresToolStripMenuItem.Margin = new System.Windows.Forms.Padding(0, 4, 0, 0);
+            this.paramètresToolStripMenuItem.Name = "paramètresToolStripMenuItem";
+            this.paramètresToolStripMenuItem.Padding = new System.Windows.Forms.Padding(4, 1, 4, 3);
+            this.paramètresToolStripMenuItem.Size = new System.Drawing.Size(126, 54);
+            this.paramètresToolStripMenuItem.Text = "Paramètres";
+            this.paramètresToolStripMenuItem.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            // 
+            // pamamètresDePeséeToolStripMenuItem
+            // 
+            this.pamamètresDePeséeToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(62)))), ((int)(((byte)(60)))));
+            this.pamamètresDePeséeToolStripMenuItem.ForeColor = System.Drawing.Color.White;
+            this.pamamètresDePeséeToolStripMenuItem.Image = global::WidraSoft.UI.Properties.Resources.Weighing_settings;
+            this.pamamètresDePeséeToolStripMenuItem.Name = "pamamètresDePeséeToolStripMenuItem";
+            this.pamamètresDePeséeToolStripMenuItem.Size = new System.Drawing.Size(249, 26);
+            this.pamamètresDePeséeToolStripMenuItem.Text = "Paramètres de pesée";
+            // 
+            // tablesSupplémentairesToolStripMenuItem
+            // 
+            this.tablesSupplémentairesToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(62)))), ((int)(((byte)(60)))));
+            this.tablesSupplémentairesToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.tablesToolStripMenuItem,
+            this.enregistrementsToolStripMenuItem});
+            this.tablesSupplémentairesToolStripMenuItem.ForeColor = System.Drawing.Color.White;
+            this.tablesSupplémentairesToolStripMenuItem.Image = global::WidraSoft.UI.Properties.Resources.table;
+            this.tablesSupplémentairesToolStripMenuItem.Name = "tablesSupplémentairesToolStripMenuItem";
+            this.tablesSupplémentairesToolStripMenuItem.Size = new System.Drawing.Size(249, 26);
+            this.tablesSupplémentairesToolStripMenuItem.Text = "Tables supplémentaire";
+            // 
+            // tablesToolStripMenuItem
+            // 
+            this.tablesToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(62)))), ((int)(((byte)(60)))));
+            this.tablesToolStripMenuItem.ForeColor = System.Drawing.Color.White;
+            this.tablesToolStripMenuItem.Image = global::WidraSoft.UI.Properties.Resources.table;
+            this.tablesToolStripMenuItem.Name = "tablesToolStripMenuItem";
+            this.tablesToolStripMenuItem.Size = new System.Drawing.Size(204, 26);
+            this.tablesToolStripMenuItem.Text = "Tables";
+            // 
+            // enregistrementsToolStripMenuItem
+            // 
+            this.enregistrementsToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(62)))), ((int)(((byte)(60)))));
+            this.enregistrementsToolStripMenuItem.ForeColor = System.Drawing.Color.White;
+            this.enregistrementsToolStripMenuItem.Image = global::WidraSoft.UI.Properties.Resources.lignes;
+            this.enregistrementsToolStripMenuItem.Name = "enregistrementsToolStripMenuItem";
+            this.enregistrementsToolStripMenuItem.Size = new System.Drawing.Size(204, 26);
+            this.enregistrementsToolStripMenuItem.Text = "Enregistrements";
+            // 
+            // reportingToolStripMenuItem
+            // 
+            this.reportingToolStripMenuItem.BackColor = System.Drawing.Color.Transparent;
+            this.reportingToolStripMenuItem.Font = new System.Drawing.Font("Corbel", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.reportingToolStripMenuItem.ForeColor = System.Drawing.Color.White;
+            this.reportingToolStripMenuItem.Image = global::WidraSoft.UI.Properties.Resources.profit_report1;
+            this.reportingToolStripMenuItem.Margin = new System.Windows.Forms.Padding(0, 4, 0, 0);
+            this.reportingToolStripMenuItem.Name = "reportingToolStripMenuItem";
+            this.reportingToolStripMenuItem.Padding = new System.Windows.Forms.Padding(4, 1, 4, 3);
+            this.reportingToolStripMenuItem.Size = new System.Drawing.Size(126, 54);
+            this.reportingToolStripMenuItem.Text = "Reporting";
+            this.reportingToolStripMenuItem.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            // 
+            // aideToolStripMenuItem
+            // 
+            this.aideToolStripMenuItem.BackColor = System.Drawing.Color.Transparent;
+            this.aideToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.aIIIToolStripMenuItem});
+            this.aideToolStripMenuItem.Font = new System.Drawing.Font("Corbel", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.aideToolStripMenuItem.ForeColor = System.Drawing.Color.White;
+            this.aideToolStripMenuItem.Image = global::WidraSoft.UI.Properties.Resources.help_web_button;
+            this.aideToolStripMenuItem.Margin = new System.Windows.Forms.Padding(0, 4, 0, 0);
+            this.aideToolStripMenuItem.Name = "aideToolStripMenuItem";
+            this.aideToolStripMenuItem.Padding = new System.Windows.Forms.Padding(4, 1, 4, 3);
+            this.aideToolStripMenuItem.Size = new System.Drawing.Size(126, 54);
+            this.aideToolStripMenuItem.Text = "Aide ";
+            this.aideToolStripMenuItem.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            // 
+            // aIIIToolStripMenuItem
+            // 
+            this.aIIIToolStripMenuItem.Name = "aIIIToolStripMenuItem";
+            this.aIIIToolStripMenuItem.Size = new System.Drawing.Size(103, 26);
+            this.aIIIToolStripMenuItem.Text = "AIII";
             // 
             // btAddClient
             // 
@@ -577,7 +825,7 @@
             this.btAddClient.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(86)))), ((int)(((byte)(81)))));
             this.btAddClient.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btAddClient.Image = global::WidraSoft.UI.Properties.Resources.plus_Weighing;
-            this.btAddClient.Location = new System.Drawing.Point(461, 413);
+            this.btAddClient.Location = new System.Drawing.Point(610, 414);
             this.btAddClient.Name = "btAddClient";
             this.btAddClient.Size = new System.Drawing.Size(25, 25);
             this.btAddClient.TabIndex = 127;
@@ -593,7 +841,7 @@
             this.btAddProduit.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(86)))), ((int)(((byte)(81)))));
             this.btAddProduit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btAddProduit.Image = global::WidraSoft.UI.Properties.Resources.plus_Weighing;
-            this.btAddProduit.Location = new System.Drawing.Point(461, 377);
+            this.btAddProduit.Location = new System.Drawing.Point(610, 378);
             this.btAddProduit.Name = "btAddProduit";
             this.btAddProduit.Size = new System.Drawing.Size(25, 25);
             this.btAddProduit.TabIndex = 126;
@@ -609,7 +857,7 @@
             this.btAddTransporteur.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(86)))), ((int)(((byte)(81)))));
             this.btAddTransporteur.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btAddTransporteur.Image = global::WidraSoft.UI.Properties.Resources.plus_Weighing;
-            this.btAddTransporteur.Location = new System.Drawing.Point(461, 341);
+            this.btAddTransporteur.Location = new System.Drawing.Point(610, 342);
             this.btAddTransporteur.Name = "btAddTransporteur";
             this.btAddTransporteur.Size = new System.Drawing.Size(25, 25);
             this.btAddTransporteur.TabIndex = 125;
@@ -625,7 +873,7 @@
             this.btAddChauffeur.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(86)))), ((int)(((byte)(81)))));
             this.btAddChauffeur.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btAddChauffeur.Image = global::WidraSoft.UI.Properties.Resources.plus_Weighing;
-            this.btAddChauffeur.Location = new System.Drawing.Point(461, 305);
+            this.btAddChauffeur.Location = new System.Drawing.Point(610, 306);
             this.btAddChauffeur.Name = "btAddChauffeur";
             this.btAddChauffeur.Size = new System.Drawing.Size(25, 25);
             this.btAddChauffeur.TabIndex = 124;
@@ -641,7 +889,7 @@
             this.btAddCamion.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(86)))), ((int)(((byte)(81)))));
             this.btAddCamion.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btAddCamion.Image = global::WidraSoft.UI.Properties.Resources.plus_Weighing;
-            this.btAddCamion.Location = new System.Drawing.Point(461, 269);
+            this.btAddCamion.Location = new System.Drawing.Point(610, 270);
             this.btAddCamion.Name = "btAddCamion";
             this.btAddCamion.Size = new System.Drawing.Size(25, 25);
             this.btAddCamion.TabIndex = 123;
@@ -657,7 +905,7 @@
             this.btAddFirme.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(86)))), ((int)(((byte)(81)))));
             this.btAddFirme.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btAddFirme.Image = global::WidraSoft.UI.Properties.Resources.plus_Weighing;
-            this.btAddFirme.Location = new System.Drawing.Point(461, 233);
+            this.btAddFirme.Location = new System.Drawing.Point(610, 234);
             this.btAddFirme.Name = "btAddFirme";
             this.btAddFirme.Size = new System.Drawing.Size(25, 25);
             this.btAddFirme.TabIndex = 122;
@@ -673,7 +921,7 @@
             this.btAddPont.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(86)))), ((int)(((byte)(81)))));
             this.btAddPont.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btAddPont.Image = global::WidraSoft.UI.Properties.Resources.plus_Weighing;
-            this.btAddPont.Location = new System.Drawing.Point(461, 198);
+            this.btAddPont.Location = new System.Drawing.Point(610, 199);
             this.btAddPont.Name = "btAddPont";
             this.btAddPont.Size = new System.Drawing.Size(25, 25);
             this.btAddPont.TabIndex = 121;
@@ -687,7 +935,7 @@
             this.lbTareCamion.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.lbTareCamion.ForeColor = System.Drawing.Color.White;
             this.lbTareCamion.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.lbTareCamion.Location = new System.Drawing.Point(537, 246);
+            this.lbTareCamion.Location = new System.Drawing.Point(638, 247);
             this.lbTareCamion.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbTareCamion.Name = "lbTareCamion";
             this.lbTareCamion.Size = new System.Drawing.Size(67, 19);
@@ -700,23 +948,11 @@
             this.txtTareCamion.BackColor = System.Drawing.Color.Honeydew;
             this.txtTareCamion.Font = new System.Drawing.Font("Calibri", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.txtTareCamion.ForeColor = System.Drawing.Color.Black;
-            this.txtTareCamion.Location = new System.Drawing.Point(537, 268);
+            this.txtTareCamion.Location = new System.Drawing.Point(638, 269);
             this.txtTareCamion.Name = "txtTareCamion";
             this.txtTareCamion.Size = new System.Drawing.Size(74, 25);
             this.txtTareCamion.TabIndex = 111;
             this.txtTareCamion.Visible = false;
-            // 
-            // txtId
-            // 
-            this.txtId.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(62)))), ((int)(((byte)(60)))));
-            this.txtId.Enabled = false;
-            this.txtId.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.txtId.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(112)))), ((int)(((byte)(228)))), ((int)(((byte)(132)))));
-            this.txtId.Location = new System.Drawing.Point(61, 15);
-            this.txtId.Margin = new System.Windows.Forms.Padding(2);
-            this.txtId.Name = "txtId";
-            this.txtId.Size = new System.Drawing.Size(94, 27);
-            this.txtId.TabIndex = 110;
             // 
             // gbFlux
             // 
@@ -724,7 +960,7 @@
             this.gbFlux.Controls.Add(this.rbxEntrant);
             this.gbFlux.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.gbFlux.ForeColor = System.Drawing.Color.White;
-            this.gbFlux.Location = new System.Drawing.Point(160, 118);
+            this.gbFlux.Location = new System.Drawing.Point(309, 119);
             this.gbFlux.Name = "gbFlux";
             this.gbFlux.Size = new System.Drawing.Size(296, 56);
             this.gbFlux.TabIndex = 109;
@@ -759,18 +995,105 @@
             // 
             // panelLayout
             // 
+            this.panelLayout.Controls.Add(this.DgvList);
+            this.panelLayout.Controls.Add(this.menuStrip1);
+            this.panelLayout.Controls.Add(this.panel2);
             this.panelLayout.Controls.Add(this.panelWeightDetails);
             this.panelLayout.Controls.Add(this.panelWeightDisplay);
             this.panelLayout.Controls.Add(this.panelData);
             this.panelLayout.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelLayout.Location = new System.Drawing.Point(0, 70);
+            this.panelLayout.Location = new System.Drawing.Point(0, 35);
             this.panelLayout.Name = "panelLayout";
-            this.panelLayout.Size = new System.Drawing.Size(1114, 631);
+            this.panelLayout.Size = new System.Drawing.Size(1271, 699);
             this.panelLayout.TabIndex = 110;
+            // 
+            // DgvList
+            // 
+            this.DgvList.AllowUserToAddRows = false;
+            this.DgvList.AllowUserToDeleteRows = false;
+            this.DgvList.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(86)))), ((int)(((byte)(81)))));
+            this.DgvList.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.DgvList.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.Sunken;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(86)))), ((int)(((byte)(77)))));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Corbel", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(190)))), ((int)(((byte)(117)))));
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.DgvList.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            this.DgvList.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.Honeydew;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(86)))), ((int)(((byte)(81)))));
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.DgvList.DefaultCellStyle = dataGridViewCellStyle2;
+            this.DgvList.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.DgvList.Location = new System.Drawing.Point(798, 248);
+            this.DgvList.Name = "DgvList";
+            this.DgvList.ReadOnly = true;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.Honeydew;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Corbel", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.MediumSeaGreen;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.DgvList.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            this.DgvList.RowHeadersWidth = 62;
+            this.DgvList.RowTemplate.Height = 33;
+            this.DgvList.Size = new System.Drawing.Size(473, 424);
+            this.DgvList.TabIndex = 1;
+            // 
+            // menuStrip1
+            // 
+            this.menuStrip1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(86)))), ((int)(((byte)(81)))));
+            this.menuStrip1.Font = new System.Drawing.Font("Corbel", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.menuStrip1.ImageScalingSize = new System.Drawing.Size(24, 24);
+            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.MenuItemTerminer,
+            this.toolStripSearch});
+            this.menuStrip1.Location = new System.Drawing.Point(798, 189);
+            this.menuStrip1.Name = "menuStrip1";
+            this.menuStrip1.Padding = new System.Windows.Forms.Padding(0, 0, 0, 1);
+            this.menuStrip1.RenderMode = System.Windows.Forms.ToolStripRenderMode.Professional;
+            this.menuStrip1.Size = new System.Drawing.Size(473, 59);
+            this.menuStrip1.TabIndex = 129;
+            this.menuStrip1.Text = "menuStripDgv";
+            // 
+            // MenuItemTerminer
+            // 
+            this.MenuItemTerminer.Font = new System.Drawing.Font("Corbel", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.MenuItemTerminer.ForeColor = System.Drawing.Color.White;
+            this.MenuItemTerminer.Image = global::WidraSoft.UI.Properties.Resources.Left_arrow;
+            this.MenuItemTerminer.Margin = new System.Windows.Forms.Padding(10, 4, 10, 0);
+            this.MenuItemTerminer.Name = "MenuItemTerminer";
+            this.MenuItemTerminer.Padding = new System.Windows.Forms.Padding(4, 1, 4, 3);
+            this.MenuItemTerminer.Size = new System.Drawing.Size(90, 54);
+            this.MenuItemTerminer.Text = "Terminer";
+            this.MenuItemTerminer.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.MenuItemTerminer.Click += new System.EventHandler(this.MenuItemTerminer_Click);
+            // 
+            // toolStripSearch
+            // 
+            this.toolStripSearch.BackColor = System.Drawing.Color.Honeydew;
+            this.toolStripSearch.Name = "toolStripSearch";
+            this.toolStripSearch.Size = new System.Drawing.Size(200, 58);
+            // 
+            // panel2
+            // 
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel2.Location = new System.Drawing.Point(798, 672);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(473, 27);
+            this.panel2.TabIndex = 2;
             // 
             // panelWeightDetails
             // 
-            this.panelWeightDetails.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(86)))), ((int)(((byte)(81)))));
+            this.panelWeightDetails.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(62)))), ((int)(((byte)(60)))));
             this.panelWeightDetails.Controls.Add(this.lbDateHeurePoidsTare);
             this.panelWeightDetails.Controls.Add(this.lbDateHeurePoidsBrut);
             this.panelWeightDetails.Controls.Add(this.btPeser);
@@ -781,9 +1104,9 @@
             this.panelWeightDetails.Controls.Add(this.label2);
             this.panelWeightDetails.Controls.Add(this.label1);
             this.panelWeightDetails.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelWeightDetails.Location = new System.Drawing.Point(625, 101);
+            this.panelWeightDetails.Location = new System.Drawing.Point(798, 101);
             this.panelWeightDetails.Name = "panelWeightDetails";
-            this.panelWeightDetails.Size = new System.Drawing.Size(489, 88);
+            this.panelWeightDetails.Size = new System.Drawing.Size(473, 88);
             this.panelWeightDetails.TabIndex = 112;
             // 
             // lbDateHeurePoidsTare
@@ -908,7 +1231,7 @@
             // 
             // panelWeightDisplay
             // 
-            this.panelWeightDisplay.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(86)))), ((int)(((byte)(81)))));
+            this.panelWeightDisplay.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(62)))), ((int)(((byte)(60)))));
             this.panelWeightDisplay.Controls.Add(this.lbWeighingSettings);
             this.panelWeightDisplay.Controls.Add(this.button2);
             this.panelWeightDisplay.Controls.Add(this.btSimulateur);
@@ -917,21 +1240,21 @@
             this.panelWeightDisplay.Controls.Add(this.lbCOM);
             this.panelWeightDisplay.Controls.Add(this.lbStatus);
             this.panelWeightDisplay.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelWeightDisplay.Location = new System.Drawing.Point(625, 0);
+            this.panelWeightDisplay.Location = new System.Drawing.Point(798, 0);
             this.panelWeightDisplay.Name = "panelWeightDisplay";
-            this.panelWeightDisplay.Size = new System.Drawing.Size(489, 101);
+            this.panelWeightDisplay.Size = new System.Drawing.Size(473, 101);
             this.panelWeightDisplay.TabIndex = 111;
             // 
             // lbWeighingSettings
             // 
             this.lbWeighingSettings.AutoSize = true;
-            this.lbWeighingSettings.Font = new System.Drawing.Font("Calibri", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lbWeighingSettings.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.lbWeighingSettings.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(112)))), ((int)(((byte)(228)))), ((int)(((byte)(132)))));
             this.lbWeighingSettings.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.lbWeighingSettings.Location = new System.Drawing.Point(54, 75);
+            this.lbWeighingSettings.Location = new System.Drawing.Point(54, 76);
             this.lbWeighingSettings.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbWeighingSettings.Name = "lbWeighingSettings";
-            this.lbWeighingSettings.Size = new System.Drawing.Size(47, 22);
+            this.lbWeighingSettings.Size = new System.Drawing.Size(42, 19);
             this.lbWeighingSettings.TabIndex = 120;
             this.lbWeighingSettings.Text = "COM";
             // 
@@ -966,12 +1289,12 @@
             // 
             // txtPoids
             // 
-            this.txtPoids.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(86)))), ((int)(((byte)(81)))));
+            this.txtPoids.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(62)))), ((int)(((byte)(60)))));
             this.txtPoids.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtPoids.Dock = System.Windows.Forms.DockStyle.Right;
             this.txtPoids.Font = new System.Drawing.Font("Calibri", 60F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point);
             this.txtPoids.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(112)))), ((int)(((byte)(228)))), ((int)(((byte)(132)))));
-            this.txtPoids.Location = new System.Drawing.Point(219, 0);
+            this.txtPoids.Location = new System.Drawing.Point(203, 0);
             this.txtPoids.Name = "txtPoids";
             this.txtPoids.Size = new System.Drawing.Size(270, 98);
             this.txtPoids.TabIndex = 113;
@@ -981,26 +1304,26 @@
             // lbWeightSettings
             // 
             this.lbWeightSettings.AutoSize = true;
-            this.lbWeightSettings.Font = new System.Drawing.Font("Calibri", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lbWeightSettings.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.lbWeightSettings.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(112)))), ((int)(((byte)(228)))), ((int)(((byte)(132)))));
             this.lbWeightSettings.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.lbWeightSettings.Location = new System.Drawing.Point(54, 52);
+            this.lbWeightSettings.Location = new System.Drawing.Point(54, 53);
             this.lbWeightSettings.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbWeightSettings.Name = "lbWeightSettings";
-            this.lbWeightSettings.Size = new System.Drawing.Size(47, 22);
+            this.lbWeightSettings.Size = new System.Drawing.Size(42, 19);
             this.lbWeightSettings.TabIndex = 111;
             this.lbWeightSettings.Text = "COM";
             // 
             // lbStatus
             // 
             this.lbStatus.AutoSize = true;
-            this.lbStatus.Font = new System.Drawing.Font("Calibri", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lbStatus.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.lbStatus.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(112)))), ((int)(((byte)(228)))), ((int)(((byte)(132)))));
             this.lbStatus.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.lbStatus.Location = new System.Drawing.Point(54, 28);
+            this.lbStatus.Location = new System.Drawing.Point(54, 29);
             this.lbStatus.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbStatus.Name = "lbStatus";
-            this.lbStatus.Size = new System.Drawing.Size(47, 22);
+            this.lbStatus.Size = new System.Drawing.Size(42, 19);
             this.lbStatus.TabIndex = 110;
             this.lbStatus.Text = "COM";
             // 
@@ -1013,9 +1336,8 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(62)))), ((int)(((byte)(60)))));
-            this.ClientSize = new System.Drawing.Size(1114, 701);
+            this.ClientSize = new System.Drawing.Size(1271, 734);
             this.Controls.Add(this.panelLayout);
-            this.Controls.Add(this.panelNavigation);
             this.Controls.Add(this.panelLang);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "PeseePontBascule";
@@ -1024,21 +1346,24 @@
             this.Load += new System.EventHandler(this.PeseePontBascule_Load);
             this.panelLang.ResumeLayout(false);
             this.panelLang.PerformLayout();
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Spain_flag)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.England_flag)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.France_flag)).EndInit();
-            this.panelNavigation.ResumeLayout(false);
-            this.panelNavigation.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.gbTypePesee.ResumeLayout(false);
             this.gbTypePesee.PerformLayout();
             this.panelData.ResumeLayout(false);
             this.panelData.PerformLayout();
+            this.menuStrip.ResumeLayout(false);
+            this.menuStrip.PerformLayout();
             this.gbFlux.ResumeLayout(false);
             this.gbFlux.PerformLayout();
             this.panelLayout.ResumeLayout(false);
+            this.panelLayout.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.DgvList)).EndInit();
+            this.menuStrip1.ResumeLayout(false);
+            this.menuStrip1.PerformLayout();
             this.panelWeightDetails.ResumeLayout(false);
             this.panelWeightDetails.PerformLayout();
             this.panelWeightDisplay.ResumeLayout(false);
@@ -1053,11 +1378,6 @@
         private System.Windows.Forms.PictureBox England_flag;
         private System.Windows.Forms.PictureBox France_flag;
         private System.Windows.Forms.ComboBox cbLang;
-        private System.Windows.Forms.Panel panelNavigation;
-        private System.Windows.Forms.PictureBox pictureBox3;
-        private System.Windows.Forms.LinkLabel lbEnregistrer;
-        private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.LinkLabel lbAnnuler;
         private System.Windows.Forms.Label lbPont;
         private System.Windows.Forms.ComboBox cbPont;
         private System.Windows.Forms.Label lbFirme;
@@ -1092,8 +1412,6 @@
         private System.Windows.Forms.Label lbPoidsTare;
         private System.Windows.Forms.Label lbPoidsBrut;
         private System.Windows.Forms.Button btPeser;
-        private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.LinkLabel lbImprimer;
         private System.Windows.Forms.Timer Weight_Timer;
         private System.Windows.Forms.TextBox txtPoids;
         private System.Windows.Forms.RadioButton rb2x2;
@@ -1112,5 +1430,36 @@
         private System.Windows.Forms.Button btAddCamion;
         private System.Windows.Forms.Button btAddFirme;
         private System.Windows.Forms.Button btAddPont;
+        private System.Windows.Forms.DataGridView DgvList;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.MenuStrip menuStrip;
+        private System.Windows.Forms.ToolStripMenuItem pontsToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem pToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem ParamPoidstoolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem gérerToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem camionsToolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem produitsToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem chauffeursToolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem firmesToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem transporteursToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem destinationsProvenancesToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem clientsToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem paramètresToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem pamamètresDePeséeToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem tablesSupplémentairesToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem tablesToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem enregistrementsToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem reportingToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem aideToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem aIIIToolStripMenuItem;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.MenuStrip menuStrip1;
+        private System.Windows.Forms.ToolStripMenuItem MenuItemTerminer;
+        private System.Windows.Forms.ToolStripTextBox toolStripSearch;
+        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem2;
+        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem3;
+        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem4;
+        private System.Windows.Forms.ToolStripMenuItem MenuItemNouveau;
     }
 }

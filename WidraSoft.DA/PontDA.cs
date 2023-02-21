@@ -168,6 +168,8 @@ namespace WidraSoft.DA
             }
         }
 
+       
+
         public void Add(String Designation, String NumPortCOM, Int32 Weight_SettingsId, Int32 Weighing_SettingsId, Int32 ActiverPoids, Int32 BaudRate,
                         Int32 DataBits, String StopBits, String Handshake, Int32 ReadTimeOut)
         {

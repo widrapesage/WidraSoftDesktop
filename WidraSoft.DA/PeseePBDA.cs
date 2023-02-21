@@ -72,6 +72,43 @@ namespace WidraSoft.DA
             }
         }
 
+        public DataTable FindWeighingsInProgress()
+        {
+            String sql = "SELECT * FROM VW_PESEEPB WHERE ETATPESEE='En cours' ORDER BY PESEEPBID DESC";
+            conn.ConnectionString = connString;
+            if (conn.State == ConnectionState.Closed)
+                conn.Open();
+            SqlCommand cmd = new SqlCommand(sql, conn);
+            try
+            {
+                SqlDataReader reader = cmd.ExecuteReader();
+                dt.Load(reader);
+                return dt;
+            }
+            catch
+            {
+                throw;
+            }
+        }
+
+        public Int32 GetMaxIdByPontId(Int32 Id)
+        {
+            String sql = "SELECT MAX(PESEEPBID) FROM PESEEPB WHERE PONTID=" + Id;
+            conn.ConnectionString = connString;
+            if (conn.State == ConnectionState.Closed)
+                conn.Open();
+            SqlCommand cmd = new SqlCommand(sql, conn);
+            try
+            {
+                Int32 WeighingSettingsId = (Int32)cmd.ExecuteScalar();
+                return WeighingSettingsId;
+            }
+            catch
+            {
+                throw;
+            }
+        }
+
         public void Add(String TypePesee, String Flux, Int32 PontId, Int32 FirmeId, Int32 CamionId, Int32 ChauffeurId, Int32 TransporteurId, Int32 ProduitId, Int32 ClientId, Int32 ProvenanceId, Int32 DestinationId,
                         Int32 Poids1, DateTime DateHeurePoids1, Int32 Poids2, DateTime DateHeurePoids2, Int32 PoidsNet, String UserInfo, String EtatPesee)
         {

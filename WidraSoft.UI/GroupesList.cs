@@ -40,11 +40,11 @@ namespace WidraSoft.UI
             Groupe groupe = new Groupe();
             DgvList.DataSource = groupe.List(vg_filter);
             DgvList.Columns[0].Visible = false;
-            DgvList.Columns["DESIGNATION"].Width = 250;
-            DgvList.Columns["CODE"].Width = 120;
-            DgvList.Columns["LIMITER"].Width = 100;
+            DgvList.Columns["DESIGNATION"].Visible = true;
+            DgvList.Columns["CODE"].Visible = true;
+            DgvList.Columns["LIMITER"].Visible = true;
             DgvList.Columns["NBLIMITE"].Visible= false;
-            DgvList.Columns["DATECREATION"].Width = 250;
+            DgvList.Columns["DATECREATION"].Visible = true;
 
             DgvList.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             DgvList.RowHeadersWidthSizeMode = DataGridViewRowHeadersWidthSizeMode.AutoSizeToFirstHeader;

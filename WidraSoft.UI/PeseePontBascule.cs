@@ -50,7 +50,12 @@ namespace WidraSoft.UI
         public PeseePontBascule()
         {
             InitializeComponent();
+            menuStrip.Renderer = menuStrip1.Renderer = new MyRenderer();
+        }
 
+        private class MyRenderer : ToolStripProfessionalRenderer
+        {
+            public MyRenderer() : base(new MyMenuColors()) { }
         }
 
         private void PeseePontBascule_Load(object sender, EventArgs e)
@@ -166,6 +171,7 @@ namespace WidraSoft.UI
             Clear();
 
             rb1x.Checked = true;
+            Bind_Dgv();
 
 
             //Lang
@@ -176,28 +182,104 @@ namespace WidraSoft.UI
 
         }
 
+        private void Bind_Dgv()
+        {
+            PeseePB peseePB = new PeseePB();
+            DgvList.DataSource = peseePB.FindWeighingsInProgress();
+            DgvList.Columns[0].Visible = true;
+            DgvList.Columns[0].HeaderText = "NUMERO";
+            DgvList.Columns["TYPEPESEE"].Visible = false;
+            DgvList.Columns["FLUX"].Visible = false;
+            DgvList.Columns["PONTID"].Visible = false;
+            DgvList.Columns["PONT"].Visible = true;
+            DgvList.Columns["FIRMEID"].Visible = false;
+            DgvList.Columns["FIRME"].Visible = false;
+            DgvList.Columns["CAMIONID"].Visible = false;
+            DgvList.Columns["CAMION"].Visible = true;
+            DgvList.Columns["CHAUFFEURID"].Visible = false;
+            DgvList.Columns["CHAUFFEUR"].Visible = false;
+            DgvList.Columns["TRANSPORTEURID"].Visible = false;
+            DgvList.Columns["TRANSPORTEUR"].Visible = false;
+            DgvList.Columns["PRODUITID"].Visible = false;
+            DgvList.Columns["PRODUIT"].Visible = false;
+            DgvList.Columns["CLIENTID"].Visible = false;
+            DgvList.Columns["CLIENT"].Visible = false;
+            DgvList.Columns["POIDS1"].Visible = false;
+            DgvList.Columns["DATEHEUREPOIDS1"].Visible = false;
+            DgvList.Columns["POIDS2"].Visible = false;
+            DgvList.Columns["DATEHEUREPOIDS2"].Visible = false;
+            DgvList.Columns["POIDSNET"].Visible = false;
+            DgvList.Columns["USER_INFO"].Visible = false;
+            DgvList.Columns["ETATPESEE"].Visible = true;
+            DgvList.Columns["ETATPESEE"].HeaderText = "ETAT";
+            DgvList.Columns["DATECREATION"].Visible = false;
+
+            DgvList.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            DgvList.RowHeadersWidthSizeMode = DataGridViewRowHeadersWidthSizeMode.AutoSizeToFirstHeader;
+            DgvList.ReadOnly = true;
+
+        }
+
+        private void Localize_Dgv(string lang)
+        {
+            if (lang == "fr")
+            {
+                DgvList.Columns[0].HeaderText = "NUMERO";
+                DgvList.Columns["PONT"].HeaderText = "PONT";
+                DgvList.Columns["CAMION"].HeaderText = "CAMION";
+                DgvList.Columns["PRODUIT"].HeaderText = "PRODUIT";
+                DgvList.Columns["POIDS1"].HeaderText = "POIDS BRUT";
+                DgvList.Columns["DATEHEUREPOIDS1"].HeaderText = "DATE POIDS BRUT";
+                DgvList.Columns["POIDS2"].HeaderText = "TARE";
+                DgvList.Columns["DATEHEUREPOIDS2"].HeaderText = "DATE TARE";
+                DgvList.Columns["ETATPESEE"].HeaderText = "ETAT";
+            }
+            if (lang == "en")
+            {
+                DgvList.Columns["DESIGNATION"].HeaderText = "NAME";
+                DgvList.Columns["CODE"].HeaderText = "CODE";
+                DgvList.Columns["LIMITER"].HeaderText = "LIMIT";
+                DgvList.Columns["NBLIMITE"].HeaderText = "LIMIT NUMBER";
+                DgvList.Columns["DATECREATION"].HeaderText = "CREATION DATE";
+                DgvList.Columns["ETATPESEE"].HeaderText = "ETAT";
+            }
+            if (lang == "es")
+            {
+                DgvList.Columns["DESIGNATION"].HeaderText = "DESIGNACION";
+                DgvList.Columns["CODE"].HeaderText = "CODIGO";
+                DgvList.Columns["LIMITER"].HeaderText = "LÍMITE";
+                DgvList.Columns["NBLIMITE"].HeaderText = "NÚMERO LIMITADO";
+                DgvList.Columns["DATECREATION"].HeaderText = "FECHA DE CREACIÓN";
+                DgvList.Columns["ETATPESEE"].HeaderText = "ETAT";
+            }
+
+        }
+
+        private void Refresh_Dgv()
+        {
+
+            PeseePB peseePB = new PeseePB();
+            DgvList.DataSource = peseePB.FindWeighingsInProgress();
+        }
+
         private void Add_Item_1x()
         {
+            Clear();
             if (txtId.Text == "" && cbPont.Text == "" && cbFirme.Text == "" && cbCamion.Text == "" && cbChauffeur.Text == "" && cbTransporteur.Text == "" && cbProduit.Text == "" && cbClient.Text == "")
             {
 
                 rbxEntrant.Checked = true;
                 TypePesee = "1x";
                 txtTareCamion.Visible = true;
-                lbTareCamion.Visible = true;
-
-                Clear();
+                lbTareCamion.Visible = true;   
                 ApplyWeighingSettings();
 
-                lbAnnuler.Enabled = false;
-                lbAnnuler.BackColor = Color.Transparent;
-                lbImprimer.Enabled = false;
-                lbImprimer.BackColor = Color.Transparent;
             }
         }
 
         private void Add_Item_2x1()
         {
+            Clear();
             if (txtId.Text == "" && cbPont.Text == "" && cbFirme.Text == "" && cbCamion.Text == "" && cbChauffeur.Text == "" && cbTransporteur.Text == "" && cbProduit.Text == "" && cbClient.Text == "")
             {
 
@@ -205,73 +287,131 @@ namespace WidraSoft.UI
                 TypePesee = "2x1";
                 txtTareCamion.Visible = false;
                 lbTareCamion.Visible = false;
-                Clear();
                 ApplyWeighingSettings();
 
-                lbAnnuler.Enabled = false;
-                lbAnnuler.BackColor = Color.Transparent;
-                lbImprimer.Enabled = false;
-                lbImprimer.BackColor = Color.Transparent;
             }
         }
 
         private void Edit_Item_2x2()
         {
-            rb2x2.Checked = true;
-            TypePesee = "2x2";
-            txtTareCamion.Visible = false;
-            lbTareCamion.Visible = false;
-            ApplyWeighingSettings();
-            Bind_Fields();
+            Clear();
+            if (vg_Id == 0)
+            {
+                if (cbLang.Text == "FR")
+                    Custom_MessageBox.Show("FR", "Veuillez choisir une pesée à terminer dans la liste des pesées en cours", "Pesee", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                else if (cbLang.Text == "EN")
+                    Custom_MessageBox.Show("EN", "You can't delete this record before the update is completed", "Weighing", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                else
+                    Custom_MessageBox.Show("ES", "No puede eliminar el registro hasta que se confirme el cambio", "Pesaje", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                rb1x.Checked = true;
+                DgvList.Focus();
+            }
+            else
+            {
+                //rb2x2.Checked = true;
+                TypePesee = "2x2";
+                Enable();
+                txtTareCamion.Visible = false;
+                lbTareCamion.Visible = false;                
+                Bind_Fields();
+                ApplyWeighingSettings();
+            }
+            
         }
 
         private void Bind_Fields()
         {
+            //Pont 
+            Pont pont = new Pont();
+            cbPont.DataSource = pont.List("1=1");
+            cbPont.DisplayMember = "DESIGNATION";
+            cbPont.ValueMember = "PONTID";
+
+            //Firme
+            Firme firme = new Firme();
+            cbFirme.DataSource = firme.List("1=1");
+            cbFirme.DisplayMember = "DESIGNATION";
+            cbFirme.ValueMember = "FIRMEID";
+
+            //Camion
+            Camion camion = new Camion();
+            cbCamion.DataSource = camion.List("1=1");
+            cbCamion.DisplayMember = "PLAQUE";
+            cbCamion.ValueMember = "CAMIONID";
+
+            //Chauffeur
+            Chauffeur chauffeur = new Chauffeur();
+            cbChauffeur.DataSource = chauffeur.List("1=1");
+            cbChauffeur.DisplayMember = "NOM";
+            cbChauffeur.ValueMember = "CHAUFFEURID";
+
+            //Transporteur
+            Transporteur transporteur = new Transporteur();
+            cbTransporteur.DataSource = transporteur.List("1=1");
+            cbTransporteur.DisplayMember = "NOM";
+            cbTransporteur.ValueMember = "TRANSPORTEURID";
+
+            //Produit
+            Produit produit = new Produit();
+            cbProduit.DataSource = produit.List("1=1");
+            cbProduit.DisplayMember = "DESIGNATION";
+            cbProduit.ValueMember = "PRODUITID";
+
+            //Client
+            Client client = new Client();
+            cbClient.DataSource = client.List("1=1");
+            cbClient.DisplayMember = "DESIGNATION";
+            cbClient.ValueMember = "CLIENTID";
+
             DataTable dt = new DataTable();
             PeseePB peseePB = new PeseePB();
             dt = peseePB.FindById(vg_Id);
             foreach (DataRow row in dt.Rows)
             {
-                int Id = (int)row["PESEEPB"];
+                int Id = (int)row["PESEEPBID"];
                 txtId.Text = Id.ToString();
                 //TypePesee
                 if (row["PONTID"] is System.DBNull)
                     cbPont.SelectedValue = 0;
                 else
                     cbPont.SelectedValue = (int)row["PONTID"];
+                cbPont_Leave(this, EventArgs.Empty);
                 if (row["FIRMEID"] is System.DBNull)
                     cbFirme.SelectedValue = 0;
                 else
                     cbFirme.SelectedValue = (int)row["FIRMEID"];
+                cbFirme_Leave(this, EventArgs.Empty);
                 if (row["CAMIONID"] is System.DBNull)
                     cbCamion.SelectedValue = 0;
                 else
                     cbCamion.SelectedValue = (int)row["CAMIONID"];
+                cbCamion_Leave(this, EventArgs.Empty);
                 if (row["CHAUFFEURID"] is System.DBNull)
                     cbChauffeur.SelectedValue = 0;
                 else
                     cbChauffeur.SelectedValue = (int)row["CHAUFFEURID"];
+                cbChauffeur_Leave(this, EventArgs.Empty);
                 if (row["TRANSPORTEURID"] is System.DBNull)
                     cbTransporteur.SelectedValue = 0;
                 else
                     cbTransporteur.SelectedValue = (int)row["TRANSPORTEURID"];
+                cbTransporteur_Leave(this, EventArgs.Empty);
                 if (row["PRODUITID"] is System.DBNull)
                     cbProduit.SelectedValue = 0;
                 else
                     cbProduit.SelectedValue = (int)row["PRODUITID"];
+                cbProduit_Leave(this, EventArgs.Empty);
                 if (row["CLIENTID"] is System.DBNull)
                     cbClient.SelectedValue = 0;
                 else
                     cbClient.SelectedValue = (int)row["CLIENTID"];
-                if (row["CLIENTID"] is System.DBNull)
-                    cbClient.SelectedValue = 0;
-                else
-                    cbClient.SelectedValue = (int)row["CLIENTID"];
+                cbClient_Leave(this, EventArgs.Empty);
                 lbPoidsBrut.Text = row["POIDS1"].ToString();
                 lbDateHeurePoidsBrut.Text = row["DATEHEUREPOIDS1"].ToString();
                 lbPoidsTare.Text = row["POIDS2"].ToString();
                 lbDateHeurePoidsTare.Text = row["DATEHEUREPOIDS2"].ToString();
                 lbPoidsNet.Text = row["POIDSNET"].ToString();
+                lbStatus.Text = row["ETATPESEE"].ToString();
             }
         }
         private void ApplyWeighingSettings()
@@ -299,6 +439,17 @@ namespace WidraSoft.UI
 
 
         }
+
+        private bool check_fields_min()
+        {
+            bool vl_return;
+            if (txtId.Text != "" || cbPont.Text != "" || cbFirme.Text != "" || cbCamion.Text != "" || cbChauffeur.Text != "" || cbTransporteur.Text != "" || cbProduit.Text != "" || cbClient.Text != "")
+                vl_return = true;
+            else 
+                vl_return = false;
+            return vl_return;
+        }
+
         private bool check_fields()
         {
             bool vl_Camion;
@@ -369,22 +520,59 @@ namespace WidraSoft.UI
             }
             else
                 return false;
-
-
-
-
-
         }
+
+
+
         private void Clear()
         {
             cbPont.Text = "";
+            cbPont.SelectedIndex = -1;
+            cbPont.BackColor = Color.Honeydew;
+            cbPont.ForeColor = Color.Black;
+            btAddPont.Visible = false;
             cbFirme.Text = "";
+            cbFirme.SelectedIndex = -1;
+            cbFirme.BackColor = Color.Honeydew;
+            cbFirme.ForeColor = Color.Black;
+            btAddFirme.Visible = false;
             cbCamion.Text = "";
+            cbCamion.SelectedIndex = -1;
+            cbCamion.BackColor = Color.Honeydew;
+            cbCamion.ForeColor = Color.Black;
+            btAddCamion.Visible = false;
             cbChauffeur.Text = "";
+            cbChauffeur.SelectedIndex = -1;
+            cbChauffeur.BackColor = Color.Honeydew;
+            cbChauffeur.ForeColor = Color.Black;
+            btAddChauffeur.Visible = false;
             cbTransporteur.Text = "";
+            cbTransporteur.SelectedIndex = -1;
+            cbTransporteur.BackColor = Color.Honeydew;
+            cbTransporteur.ForeColor = Color.Black;
+            btAddTransporteur.Visible = false;
             cbProduit.Text = "";
+            cbProduit.SelectedIndex = -1;
+            cbProduit.BackColor = Color.Honeydew;
+            cbProduit.ForeColor = Color.Black;
+            btAddProduit.Visible = false;
             cbClient.Text = "";
+            cbClient.SelectedIndex = -1;
+            cbClient.BackColor = Color.Honeydew;
+            cbClient.ForeColor = Color.Black;
+            btAddClient.Visible = false;
+
+
+            txtId.Text = "";
+            lbPoidsBrut.Text = "";
+            lbPoidsTare.Text = "";
+            lbPoidsNet.Text = "";
+            lbDateHeurePoidsBrut.Text = "";
+            lbDateHeurePoidsTare.Text = "";
+
+            Disable_Checked_rbxs_only();
         }
+
         private void Disable()
         {
             //gbTypePesee.Enabled = false;
@@ -397,6 +585,7 @@ namespace WidraSoft.UI
             cbProduit.Enabled = false;
             cbClient.Enabled = false;
             btPeser.Enabled = false;
+            
 
             vg_IsEnabled = false;
         }
@@ -417,8 +606,38 @@ namespace WidraSoft.UI
             vg_IsEnabled = true;
         }
 
+        private void Enable_Checked_rbxs_only()
+        {
+            if (rb1x.Checked == true)
+            {
+                rb2x1.Visible = false;
+                rb2x2.Visible = false;
+            }
+            if (rb2x1.Checked == true)
+            {
+                rb1x.Visible = false;
+                rb2x2.Visible = false;
+            }
+            if (rb2x2.Checked == true)
+            {
+                rb1x.Visible = false;
+                rb2x1.Visible = false;
+            }
+        }
 
+        private void Disable_Checked_rbxs_only()
+        {
+            rb1x.Visible = true;
+            rb2x1.Visible = true;
+            rb2x2.Visible = true;
+        }
 
+        private void getMaxId()
+        {
+            PeseePB peseePB = new PeseePB();
+            if (txtId.Text == "")
+                txtId.Text = peseePB.GetMaxIdByPontId(Common_functions.CbSelectedValue_Convert_Int(cbPont)).ToString();
+        }
         public String filtredataBilancia(String returnstr)
         {
             Char s;
@@ -428,6 +647,7 @@ namespace WidraSoft.UI
                 returnstr = returnstr.Substring(PositionDebut, LongueurChaine);
                 if (s == ValeurStable[0])
                 {
+                    txtPoids.ForeColor = Color.FromArgb(112, 228, 132) ;
                     Stable = true;
                 }
                 else
@@ -480,14 +700,8 @@ namespace WidraSoft.UI
             {
                 Add_Item_1x();
             }
-            if (rb2x1.Checked)
-            {
-                Add_Item_2x1();
-            }
-            if (rb2x2.Checked)
-            {
-                Edit_Item_2x2();
-            }
+            
+            
         }
 
         private void cbPont_SelectedIndexChanged(object sender, EventArgs e)
@@ -532,7 +746,10 @@ namespace WidraSoft.UI
                                 peseePB.Add("1x", Flux, Common_functions.CbSelectedValue_Convert_Int(cbPont), Common_functions.CbSelectedValue_Convert_Int(cbFirme), Common_functions.CbSelectedValue_Convert_Int(cbCamion),
                                     Common_functions.CbSelectedValue_Convert_Int(cbChauffeur), Common_functions.CbSelectedValue_Convert_Int(cbTransporteur), Common_functions.CbSelectedValue_Convert_Int(cbProduit),
                                     Common_functions.CbSelectedValue_Convert_Int(cbClient), 0, 0, Poids, DateHeurePoidsBrut, Tare, DateHeurePoidsTare, PoidsNet, "", lbStatus.Text);
+                                Refresh_Dgv();
                                 Disable();
+                                Enable_Checked_rbxs_only();
+                                getMaxId();
                             }
                             catch
                             {
@@ -571,6 +788,143 @@ namespace WidraSoft.UI
                         Custom_MessageBox.Show("ES", "Ningún registro seleccionado", "Pasaje", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
+
+            if (TypePesee == "2x1")
+            {
+                if (check_fields())
+                {
+                    DateTime DateHeurePoidsTare;
+                    Int32 Poids;
+                    bool IsParsablePoids;
+                    bool IsParsableTare;
+                    Int32 Tare;
+                    IsParsablePoids = Int32.TryParse(txtPoids.Text, out Poids);
+                    if (IsParsablePoids && Poids > 0)
+                    {
+                        lbPoidsTare.Text = Poids.ToString();
+                        IsParsableTare = Int32.TryParse(lbPoidsTare.Text, out Tare);
+                        DateHeurePoidsTare = DateTime.Now;
+                        lbDateHeurePoidsTare.Text = DateHeurePoidsTare.ToString();
+                        lbStatus.Text = "En cours";
+                        try
+                        {
+                            if (IsParsableTare)
+                            {
+                                PeseePB peseePB = new PeseePB();
+                                peseePB.Add("2x", Flux, Common_functions.CbSelectedValue_Convert_Int(cbPont), Common_functions.CbSelectedValue_Convert_Int(cbFirme), Common_functions.CbSelectedValue_Convert_Int(cbCamion),
+                                    Common_functions.CbSelectedValue_Convert_Int(cbChauffeur), Common_functions.CbSelectedValue_Convert_Int(cbTransporteur), Common_functions.CbSelectedValue_Convert_Int(cbProduit),
+                                    Common_functions.CbSelectedValue_Convert_Int(cbClient), 0, 0, 0, DateHeurePoidsTare, Tare, DateHeurePoidsTare, 0, "", lbStatus.Text);
+                                Refresh_Dgv();                                
+                                Disable();
+                                Enable_Checked_rbxs_only();
+                                getMaxId();
+                            }
+                            
+                        }
+                        catch
+                        {
+                            throw;
+                        }
+
+                       
+
+                    }
+                    else
+                    {
+                        if (cbLang.Text == "FR")
+                            Custom_MessageBox.Show("FR", "Le poids doit etre supérieur à 0", "Pesée", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        else if (cbLang.Text == "EN")
+                            Custom_MessageBox.Show("EN", "Weight must be greater than 0", "Weighing", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        else
+                            Custom_MessageBox.Show("ES", "Ningún registro seleccionado", "Pasaje", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                }
+                else
+                {
+                    if (cbLang.Text == "FR")
+                        Custom_MessageBox.Show("FR", "Informations incomplètes", "Pesée", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    else if (cbLang.Text == "EN")
+                        Custom_MessageBox.Show("EN", "Incomplete informations", "Weighing", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    else
+                        Custom_MessageBox.Show("ES", "Ningún registro seleccionado", "Pasaje", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+
+            if (TypePesee == "2x2")
+            {
+                if (check_fields())
+                {
+                    DateTime DateHeurePoidsBrut;
+                    DateTime DateHeurePoidsTare;
+                    Int32 Poids;
+                    bool IsParsablePoids;
+                    bool IsParsableBrut;
+                    bool IsParsableTare;
+                    bool IsParsableDateHeurePoidsTare;
+                    Int32 Brut;
+                    Int32 Tare;
+                    Int32 PoidsNet;
+                    IsParsablePoids = Int32.TryParse(txtPoids.Text, out Poids);
+                    if (IsParsablePoids && Poids > 0)
+                    {
+                        lbPoidsBrut.Text = Poids.ToString();
+                        IsParsableBrut = Int32.TryParse(lbPoidsBrut.Text, out Brut);
+                        IsParsableTare = Int32.TryParse(lbPoidsTare.Text, out Tare);
+                        IsParsableDateHeurePoidsTare = DateTime.TryParse(lbDateHeurePoidsTare.Text, out DateHeurePoidsTare);
+                        DateHeurePoidsBrut = DateTime.Now;
+                        lbDateHeurePoidsBrut.Text = DateHeurePoidsBrut.ToString();
+                        PoidsNet = Brut - Tare;
+                        lbPoidsNet.Text = PoidsNet.ToString();
+                        lbStatus.Text = "Terminée";
+                        try
+                        {
+                            if (IsParsableBrut && IsParsableTare && IsParsableDateHeurePoidsTare)
+                            {
+                                PeseePB peseePB = new PeseePB();
+                                peseePB.Update(vg_Id, "2x", Flux, Common_functions.CbSelectedValue_Convert_Int(cbPont), Common_functions.CbSelectedValue_Convert_Int(cbFirme), Common_functions.CbSelectedValue_Convert_Int(cbCamion),
+                                    Common_functions.CbSelectedValue_Convert_Int(cbChauffeur), Common_functions.CbSelectedValue_Convert_Int(cbTransporteur), Common_functions.CbSelectedValue_Convert_Int(cbProduit),
+                                    Common_functions.CbSelectedValue_Convert_Int(cbClient), 0, 0, Brut, DateHeurePoidsBrut, Tare, DateHeurePoidsTare, PoidsNet, "", lbStatus.Text);
+                                Refresh_Dgv();
+                                Disable();
+                                Enable_Checked_rbxs_only();
+                                if (cbLang.Text == "FR")
+                                    Custom_MessageBox.Show("FR", "Pesage Terminé, impression du ticket ...", "Pesée", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                else if (cbLang.Text == "EN")
+                                    Custom_MessageBox.Show("EN", "Weighing over", "Weighing", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                else
+                                    Custom_MessageBox.Show("ES", "Ningún registro seleccionado", "Pasaje", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                
+                            }
+
+                        }
+                        catch
+                        {
+                            throw;
+                        }
+                    }
+                    else
+                    {
+                        if (cbLang.Text == "FR")
+                            Custom_MessageBox.Show("FR", "Le poids doit etre supérieur à 0", "Pesée", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        else if (cbLang.Text == "EN")
+                            Custom_MessageBox.Show("EN", "Weight must be greater than 0", "Weighing", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        else
+                            Custom_MessageBox.Show("ES", "Ningún registro seleccionado", "Pasaje", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                }
+                else
+                {
+                    if (cbLang.Text == "FR")
+                        Custom_MessageBox.Show("FR", "Informations incomplètes", "Pesée", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    else if (cbLang.Text == "EN")
+                        Custom_MessageBox.Show("EN", "Incomplete informations", "Weighing", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    else
+                        Custom_MessageBox.Show("ES", "Ningún registro seleccionado", "Pasaje", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+
+
+
         }
 
         private void btSimulateur_Click(object sender, EventArgs e)
@@ -599,13 +953,13 @@ namespace WidraSoft.UI
                 if (pont.IfExists(cbPont.Text))
                 {
                     cbPont.BackColor = Color.FromArgb(58, 62, 60);
-                    cbPont.ForeColor = Color.White;
+                    cbPont.ForeColor = Color.White;                   
                     btAddPont.Visible = false;
                 }
                 else
                 {
                     cbPont.BackColor = Color.Honeydew;
-                    cbPont.ForeColor = Color.Black;
+                    cbPont.ForeColor = Color.Black;                   
                     btAddPont.Visible = true;
                 }
             }
@@ -947,6 +1301,86 @@ namespace WidraSoft.UI
 
                 }
             }
+        }
+
+        
+
+        private void rb2x1_CheckedChanged(object sender, EventArgs e)
+        {
+            if (rb2x1.Checked)
+            {
+                Add_Item_2x1();
+            }
+        }
+
+        private void rb2x2_CheckedChanged(object sender, EventArgs e)
+        {
+            if (rb2x2.Checked)
+            {
+                Edit_Item_2x2();
+            }
+        }
+
+     
+
+        private void MenuItemNouveau_Click(object sender, EventArgs e)
+        {
+            if (check_fields_min())
+            {
+                DialogResult result;
+                if (cbLang.Text == "FR")
+                    result = Custom_MessageBox.Show("FR", "ATTENTION, les données non enregistrées seront perdues. Etes vous sur?", "Pesée", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+                else if (cbLang.Text == "EN")
+                    result = Custom_MessageBox.Show("EN", "Are you sure you want to delete this record?", "Weighing", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+                else
+                    result = Custom_MessageBox.Show("ES", "¿Está seguro de que desea eliminar este registro?", "Camión", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+                if (result == DialogResult.Yes)
+                {
+                    Clear();
+                    Enable();
+                    Refresh_Dgv();
+                    rb2x1.Checked = true;
+                }
+            }
+            else
+            {
+                Clear();
+                Enable();
+                Refresh_Dgv();
+                rb2x1.Checked = true;
+            }
+                
+        }
+
+        private void MenuItemTerminer_Click(object sender, EventArgs e)
+        {
+            if (check_fields_min())
+            {
+                DialogResult result;
+                if (cbLang.Text == "FR")
+                    result = Custom_MessageBox.Show("FR", "ATTENTION, les données non enregistrées seront perdues. Etes vous sur?", "Pesée", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) ;
+                else if (cbLang.Text == "EN")
+                    result = Custom_MessageBox.Show("EN", "Are you sure you want to delete this record?", "Weighing", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+                else
+                    result = Custom_MessageBox.Show("ES", "¿Está seguro de que desea eliminar este registro?", "Camión", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+                if (result == DialogResult.Yes)
+                {
+                    Clear();
+                    vg_Id = Common_functions.GetDatagridViewSelectedId(DgvList);
+                    Enable();
+                    Refresh_Dgv();
+                    rb2x2.Checked = true;
+                }
+            } 
+            else
+            {
+                Clear();
+                vg_Id = Common_functions.GetDatagridViewSelectedId(DgvList);
+                Enable();
+                Refresh_Dgv();
+                rb2x2.Checked = true;
+            }
+            
         }
     }
 }

@@ -173,6 +173,16 @@ namespace WidraSoft.UI.Properties {
         /// <summary>
         ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap camera {
+            get {
+                object obj = ResourceManager.GetObject("camera", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap cargo_truck {
             get {
                 object obj = ResourceManager.GetObject("cargo-truck", resourceCulture);
@@ -513,6 +523,16 @@ namespace WidraSoft.UI.Properties {
         /// <summary>
         ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap imprimante {
+            get {
+                object obj = ResourceManager.GetObject("imprimante", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap industry {
             get {
                 object obj = ResourceManager.GetObject("industry", resourceCulture);
@@ -536,6 +556,16 @@ namespace WidraSoft.UI.Properties {
         internal static System.Drawing.Bitmap insert1 {
             get {
                 object obj = ResourceManager.GetObject("insert1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Left_arrow {
+            get {
+                object obj = ResourceManager.GetObject("Left arrow", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -586,6 +616,26 @@ namespace WidraSoft.UI.Properties {
         internal static System.Drawing.Bitmap Logo_Widra_rond_transparent {
             get {
                 object obj = ResourceManager.GetObject("Logo Widra rond transparent", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap New {
+            get {
+                object obj = ResourceManager.GetObject("New", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap New1 {
+            get {
+                object obj = ResourceManager.GetObject("New1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -656,6 +706,16 @@ namespace WidraSoft.UI.Properties {
         internal static System.Drawing.Bitmap printer {
             get {
                 object obj = ResourceManager.GetObject("printer", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap printing {
+            get {
+                object obj = ResourceManager.GetObject("printing", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

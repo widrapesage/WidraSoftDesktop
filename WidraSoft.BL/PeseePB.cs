@@ -49,6 +49,33 @@ namespace WidraSoft.BL
             }
         }
 
+        public DataTable FindWeighingsInProgress()
+        {
+            try
+            {
+                PeseePBDA peseePBDA = new PeseePBDA();
+                return peseePBDA.FindWeighingsInProgress();
+            }
+            catch
+            {
+                throw;
+            }
+        }
+
+        public Int32 GetMaxIdByPontId(Int32 Id)
+        {
+            try
+            {
+                PeseePBDA peseePBDA= new PeseePBDA();
+                return peseePBDA.GetMaxIdByPontId(Id);
+            }
+            catch
+            {
+                throw;
+            }
+        }
+
+
         public void Add(String TypePesee, String Flux, Int32 PontId, Int32 FirmeId, Int32 CamionId, Int32 ChauffeurId, Int32 TransporteurId, Int32 ProduitId, Int32 ClientId, Int32 ProvenanceId, Int32 DestinationId,
                         Int32 Poids1, DateTime DateHeurePoids1, Int32 Poids2, DateTime DateHeurePoids2, Int32 PoidsNet, String UserInfo, String EtatPesee)
         {
