@@ -90,6 +90,25 @@ namespace WidraSoft.DA
             }
         }
 
+        public DataTable FindByTablesIdEnregistrementsId(Int32 TablesId, Int32 EnregistrementId)
+        {
+            String sql = "SELECT te.TABLESID, T.NOM AS TABLES, te.ENREGISTREMENTSID, e.NOM AS ENREGISTREMENT, te.DATECREATION FROM TABLES_ENREGISTREMENTS te, TABLES t, ENREGISTREMENTS e WHERE te.TABLESID = t.TABLESID AND te.ENREGISTREMENTSID = e.ENREGISTREMENTSID AND te.ENREGISTREMENTSID=" + EnregistrementId + " AND te.TABLESID=" + TablesId;
+            conn.ConnectionString = connString;
+            if (conn.State == ConnectionState.Closed)
+                conn.Open();
+            SqlCommand cmd = new SqlCommand(sql, conn);
+            try
+            {
+                SqlDataReader reader = cmd.ExecuteReader();
+                dt.Load(reader);
+                return dt;
+            }
+            catch
+            {
+                throw;
+            }
+        }
+
         public void Add(Int32 TablesId, Int32 EnregistrementsId, Int32 EnregistrementParentId, Int32 Numero)
         {
             using (conn)
@@ -98,6 +117,32 @@ namespace WidraSoft.DA
                 if (conn.State == ConnectionState.Closed)
                     conn.Open();
                 SqlCommand cmd = new SqlCommand("PS_ADD_TABLES_ENREGISTREMENTS", conn);
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Parameters.Add("@TABLESID", SqlDbType.Int).Value = TablesId;
+                cmd.Parameters.Add("@ENREGISTREMENTSID", SqlDbType.Int).Value = EnregistrementsId;
+                cmd.Parameters.Add("@ENREGISTREMENTPARENTID", SqlDbType.Int).Value = EnregistrementParentId;
+                cmd.Parameters.Add("@NUMERO", SqlDbType.Int).Value = Numero;
+
+
+                try
+                {
+                    cmd.ExecuteNonQuery();
+                }
+                catch
+                {
+                    throw;
+                }
+            }
+        }
+
+        public void Update(Int32 TablesId, Int32 EnregistrementsId, Int32 EnregistrementParentId, Int32 Numero)
+        {
+            using (conn)
+            {
+                conn.ConnectionString = connString;
+                if (conn.State == ConnectionState.Closed)
+                    conn.Open();
+                SqlCommand cmd = new SqlCommand("PS_UPDATE_TABLES_ENREGISTREMENTS", conn);
                 cmd.CommandType = CommandType.StoredProcedure;
                 cmd.Parameters.Add("@TABLESID", SqlDbType.Int).Value = TablesId;
                 cmd.Parameters.Add("@ENREGISTREMENTSID", SqlDbType.Int).Value = EnregistrementsId;

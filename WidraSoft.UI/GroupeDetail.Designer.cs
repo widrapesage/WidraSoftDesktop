@@ -71,6 +71,9 @@ namespace WidraSoft.UI
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.lbActualiserDgv = new System.Windows.Forms.LinkLabel();
             this.panelDetail = new System.Windows.Forms.Panel();
+            this.RqPont = new System.Windows.Forms.PictureBox();
+            this.pictureBox5 = new System.Windows.Forms.PictureBox();
+            this.pictureBox6 = new System.Windows.Forms.PictureBox();
             this.panelLang.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbUpdating)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Spain_flag)).BeginInit();
@@ -86,6 +89,9 @@ namespace WidraSoft.UI
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             this.panelDetail.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.RqPont)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             this.SuspendLayout();
             // 
             // label2
@@ -436,6 +442,9 @@ namespace WidraSoft.UI
             // panelDetail
             // 
             this.panelDetail.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(86)))), ((int)(((byte)(81)))));
+            this.panelDetail.Controls.Add(this.pictureBox6);
+            this.panelDetail.Controls.Add(this.pictureBox5);
+            this.panelDetail.Controls.Add(this.RqPont);
             this.panelDetail.Controls.Add(this.txtId);
             this.panelDetail.Controls.Add(this.pictureBox4);
             this.panelDetail.Controls.Add(this.label1);
@@ -459,6 +468,27 @@ namespace WidraSoft.UI
             this.panelDetail.Controls.Add(this.label5);
             resources.ApplyResources(this.panelDetail, "panelDetail");
             this.panelDetail.Name = "panelDetail";
+            // 
+            // RqPont
+            // 
+            this.RqPont.Image = global::WidraSoft.UI.Properties.Resources.asterisk;
+            resources.ApplyResources(this.RqPont, "RqPont");
+            this.RqPont.Name = "RqPont";
+            this.RqPont.TabStop = false;
+            // 
+            // pictureBox5
+            // 
+            this.pictureBox5.Image = global::WidraSoft.UI.Properties.Resources.asterisk;
+            resources.ApplyResources(this.pictureBox5, "pictureBox5");
+            this.pictureBox5.Name = "pictureBox5";
+            this.pictureBox5.TabStop = false;
+            // 
+            // pictureBox6
+            // 
+            this.pictureBox6.Image = global::WidraSoft.UI.Properties.Resources.asterisk;
+            resources.ApplyResources(this.pictureBox6, "pictureBox6");
+            this.pictureBox6.Name = "pictureBox6";
+            this.pictureBox6.TabStop = false;
             // 
             // GroupeDetail
             // 
@@ -490,6 +520,9 @@ namespace WidraSoft.UI
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             this.panelDetail.ResumeLayout(false);
             this.panelDetail.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.RqPont)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -530,5 +563,8 @@ namespace WidraSoft.UI
         private System.Windows.Forms.PictureBox pictureBox4;
         private System.Windows.Forms.LinkLabel lbActualiserDgv;
         private System.Windows.Forms.Panel panelDetail;
+        private System.Windows.Forms.PictureBox RqPont;
+        private System.Windows.Forms.PictureBox pictureBox5;
+        private System.Windows.Forms.PictureBox pictureBox6;
     }
 }

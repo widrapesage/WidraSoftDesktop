@@ -7,6 +7,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\..\NetSDKCS\NetSDKCS.csproj" />
     <ProjectReference Include="..\WidraSoft.BL\WidraSoft.BL.csproj" />
   </ItemGroup>
 

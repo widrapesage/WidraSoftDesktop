@@ -55,7 +55,7 @@ namespace WidraSoft.UI
                     }
                 }
             }
-            //Bind_DgvCamions();
+            Bind_DgvEnregistrements();
             cbLang.DataSource = Language.Languages;
             cbLang.ValueMember = null;
             cbLang.DisplayMember = Language.Languages[0];
@@ -124,6 +124,65 @@ namespace WidraSoft.UI
             }
         }
 
+        private void Bind_DgvEnregistrements()
+        {
+            TablesEnregistrements tablesEnregistrements = new TablesEnregistrements();
+            if (txtId.Text == "")
+            {
+                dgvEnregistrements.DataSource = tablesEnregistrements.FindByEnregistrementsId(-1);
+            }
+            else
+            {
+                int Id;
+                bool IsParsableId;
+                IsParsableId = Int32.TryParse(txtId.Text, out Id);
+                dgvEnregistrements.DataSource = tablesEnregistrements.FindByEnregistrementsId(Id);
+            }
+
+            dgvEnregistrements.Columns[0].Visible = false;
+            dgvEnregistrements.Columns["TABLES"].Visible = true;
+            dgvEnregistrements.Columns["ENREGISTREMENTSID"].Visible = false;
+            dgvEnregistrements.Columns["ENREGISTREMENT"].Visible = false;
+            dgvEnregistrements.Columns["DATECREATION"].Visible = false;
+
+            dgvEnregistrements.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            dgvEnregistrements.ReadOnly = true;
+
+        }
+
+        private void Localize_DgvEnregistrements(string lang)
+        {
+            if (lang == "fr")
+            {
+                dgvEnregistrements.Columns["TABLES"].HeaderText = "TABLES";
+                dgvEnregistrements.Columns["ENREGISTREMENT"].HeaderText = "ENREGISTREMENTS";
+                dgvEnregistrements.Columns["DATECREATION"].HeaderText = "DATE CREATION";
+            }
+
+            if (lang == "en")
+            {
+                dgvEnregistrements.Columns["TABLES"].HeaderText = "TABLES";
+                dgvEnregistrements.Columns["ENREGISTREMENT"].HeaderText = "RECORDS";
+                dgvEnregistrements.Columns["DATECREATION"].HeaderText = "CREATION DATE";
+            }
+
+            if (lang == "es")
+            {
+                dgvEnregistrements.Columns["TABLES"].HeaderText = "TABLAS";
+                dgvEnregistrements.Columns["ENREGISTREMENT"].HeaderText = "REGISTROS";
+                dgvEnregistrements.Columns["DATECREATION"].HeaderText = "FECHA DE CREACIÓN";
+            }
+        }
+
+        private void Refresh_DgvEnregistrements()
+        {
+            int Id;
+            bool IsParsableId;
+            TablesEnregistrements tablesEnregistrements = new TablesEnregistrements();
+            IsParsableId = Int32.TryParse(txtId.Text, out Id);
+            dgvEnregistrements.DataSource = tablesEnregistrements.FindByEnregistrementsId(Id);
+        }
+
         private void Disable()
         {
             txtDateCreation.Enabled = false;
@@ -141,7 +200,9 @@ namespace WidraSoft.UI
             chx_Attention.Enabled = false;
             txtAlerte.Enabled = false;
             txtObservations.Enabled = false;
-            //DgvCamions.Enabled = false;
+            dgvEnregistrements.Enabled = false;
+            lblAddDgvEnregistrements.Enabled = false;
+            lbActualiserDgvEnregistrements.Enabled = false;
             pbUpdating.Visible = false;
 
             vg_IsEnabled = false;
@@ -164,7 +225,9 @@ namespace WidraSoft.UI
             chx_Attention.Enabled = true;
             txtAlerte.Enabled = true;
             txtObservations.Enabled = true;
-            //DgvCamions.Enabled = true;
+            dgvEnregistrements.Enabled = true;
+            lblAddDgvEnregistrements.Enabled = true;
+            lbActualiserDgvEnregistrements.Enabled = true;
             pbUpdating.Visible = true;
 
             vg_IsEnabled = true;
@@ -300,7 +363,7 @@ namespace WidraSoft.UI
                                     vg_Update = false;
                                     Disable();
                                     Bind_Fields();
-                                    //Bind_DgvCamions();
+                                    Bind_DgvEnregistrements();
                                 }
 
                             }
@@ -407,7 +470,7 @@ namespace WidraSoft.UI
                 Spain_flag.Visible = false;
                 Language_Manager language_Manager = new Language_Manager();
                 language_Manager.ChangeLanguage("fr", this, typeof(EnregistrementsDetail));
-                //Localize_DgvCamions("fr");
+                Localize_DgvEnregistrements("fr");
             }
 
             if (cbLang.Text == "EN")
@@ -417,7 +480,7 @@ namespace WidraSoft.UI
                 Spain_flag.Visible = false;
                 Language_Manager language_Manager = new Language_Manager();
                 language_Manager.ChangeLanguage("en", this, typeof(EnregistrementsDetail));
-                //Localize_DgvCamions("en");
+                Localize_DgvEnregistrements("en");
             }
 
             if (cbLang.Text == "ES")
@@ -427,8 +490,39 @@ namespace WidraSoft.UI
                 Spain_flag.Visible = true;
                 Language_Manager language_Manager = new Language_Manager();
                 language_Manager.ChangeLanguage("es", this, typeof(EnregistrementsDetail));
-                //Localize_DgvCamions("es");
+                Localize_DgvEnregistrements("es");
             }
+        }
+
+        private void lblAddDgvEnregistrements_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            try
+            {
+                if (vg_Id > 0)
+                {
+                    Form form = new TablesEnregistrementsDetail("Add", vg_Id);
+                    form.Show();
+                }
+                else
+                {
+                    if (cbLang.Text == "FR")
+                        Custom_MessageBox.Show("FR", "Vous ne pouvez pas ajouter d'enregistrements tant que la modification n'est pas validée", "Enregistrement", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    else if (cbLang.Text == "EN")
+                        Custom_MessageBox.Show("EN", "You can't add a record before the update is completed", "Record", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    else
+                        Custom_MessageBox.Show("ES", "No puede agregar un registro hasta que se confirme el cambio", "Registro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+            catch
+            {
+                throw;
+            }
+           
+        }
+
+        private void lbActualiserDgvEnregistrements_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            Refresh_DgvEnregistrements();
         }
     }
 }

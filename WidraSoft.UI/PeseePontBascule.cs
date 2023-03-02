@@ -32,6 +32,7 @@ namespace WidraSoft.UI
         Boolean Stable;
         Boolean vg_IsEnabled = true;
         Int32 vg_Id = 0;
+        Boolean vg_Clearing = false;
 
         // Weighing Settings Informations
         int EnableCamion;
@@ -264,59 +265,116 @@ namespace WidraSoft.UI
 
         private void Add_Item_1x()
         {
-            Clear();
-            if (txtId.Text == "" && cbPont.Text == "" && cbFirme.Text == "" && cbCamion.Text == "" && cbChauffeur.Text == "" && cbTransporteur.Text == "" && cbProduit.Text == "" && cbClient.Text == "")
+            if (check_fields_min())
             {
+                DialogResult result;
+                if (cbLang.Text == "FR")
+                    result = Custom_MessageBox.Show("FR", "ATTENTION, les données non enregistrées seront perdues. Etes vous sur?", "Pesée", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+                else if (cbLang.Text == "EN")
+                    result = Custom_MessageBox.Show("EN", "Are you sure you want to delete this record?", "Weighing", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+                else
+                    result = Custom_MessageBox.Show("ES", "¿Está seguro de que desea eliminar este registro?", "Camión", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+                if (result == DialogResult.Yes)
+                {
+                    Clear();
+                    Enable();
+                    if (txtId.Text == "" && cbPont.Text == "" && cbFirme.Text == "" && cbCamion.Text == "" && cbChauffeur.Text == "" && cbTransporteur.Text == "" && cbProduit.Text == "" && cbClient.Text == "")
+                    {
 
-                rbxEntrant.Checked = true;
-                TypePesee = "1x";
-                txtTareCamion.Visible = true;
-                lbTareCamion.Visible = true;   
-                ApplyWeighingSettings();
-
+                        rbxEntrant.Checked = true;
+                        TypePesee = "1x";
+                        txtTareCamion.Visible = true;
+                        lbTareCamion.Visible = true;
+                        txtTareCamion.Text = "";
+                        ApplyWeighingSettings();
+                    }
+                } 
+                else
+                {
+                    vg_Clearing = true;
+                    rb2x1.Checked = true;
+                }
             }
+            else
+            {
+                Clear();
+                Enable();
+                if (txtId.Text == "" && cbPont.Text == "" && cbFirme.Text == "" && cbCamion.Text == "" && cbChauffeur.Text == "" && cbTransporteur.Text == "" && cbProduit.Text == "" && cbClient.Text == "")
+                {
+
+                    rbxEntrant.Checked = true;
+                    TypePesee = "1x";
+                    txtTareCamion.Visible = true;
+                    lbTareCamion.Visible = true;
+                    txtTareCamion.Text = "";
+                    ApplyWeighingSettings();
+                }
+            }
+            
         }
 
         private void Add_Item_2x1()
         {
-            Clear();
-            if (txtId.Text == "" && cbPont.Text == "" && cbFirme.Text == "" && cbCamion.Text == "" && cbChauffeur.Text == "" && cbTransporteur.Text == "" && cbProduit.Text == "" && cbClient.Text == "")
+            if (check_fields_min())
             {
-
-                rbxEntrant.Checked = true;
-                TypePesee = "2x1";
-                txtTareCamion.Visible = false;
-                lbTareCamion.Visible = false;
-                ApplyWeighingSettings();
-
-            }
-        }
-
-        private void Edit_Item_2x2()
-        {
-            Clear();
-            if (vg_Id == 0)
-            {
+                DialogResult result;
                 if (cbLang.Text == "FR")
-                    Custom_MessageBox.Show("FR", "Veuillez choisir une pesée à terminer dans la liste des pesées en cours", "Pesee", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    result = Custom_MessageBox.Show("FR", "ATTENTION, les données non enregistrées seront perdues. Etes vous sur?", "Pesée", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
                 else if (cbLang.Text == "EN")
-                    Custom_MessageBox.Show("EN", "You can't delete this record before the update is completed", "Weighing", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    result = Custom_MessageBox.Show("EN", "Are you sure you want to delete this record?", "Weighing", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
                 else
-                    Custom_MessageBox.Show("ES", "No puede eliminar el registro hasta que se confirme el cambio", "Pesaje", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                rb1x.Checked = true;
-                DgvList.Focus();
+                    result = Custom_MessageBox.Show("ES", "¿Está seguro de que desea eliminar este registro?", "Camión", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+                if (result == DialogResult.Yes)
+                {
+                    Clear();
+                    Enable();
+                    if (txtId.Text == "" && cbPont.Text == "" && cbFirme.Text == "" && cbCamion.Text == "" && cbChauffeur.Text == "" && cbTransporteur.Text == "" && cbProduit.Text == "" && cbClient.Text == "")
+                    {
+
+                        rbxEntrant.Checked = true;
+                        TypePesee = "2x1";
+                        txtTareCamion.Visible = false;
+                        lbTareCamion.Visible = false;
+                        ApplyWeighingSettings();
+
+                    }
+                }
+                else
+                {
+                    vg_Clearing = true;
+                    rb1x.Checked = true;
+                }
             }
             else
             {
-                //rb2x2.Checked = true;
+                Clear();
+                Enable();
+                if (txtId.Text == "" && cbPont.Text == "" && cbFirme.Text == "" && cbCamion.Text == "" && cbChauffeur.Text == "" && cbTransporteur.Text == "" && cbProduit.Text == "" && cbClient.Text == "")
+                {
+
+                    rbxEntrant.Checked = true;
+                    TypePesee = "2x1";
+                    txtTareCamion.Visible = false;
+                    lbTareCamion.Visible = false;
+                    ApplyWeighingSettings();
+                }
+            }
+            
+        }
+
+        private void Edit_Item_2x2()
+        {            
+            if (vg_Id > 0)            
+            {
+                Clear();
+                rb2x1.Checked = true;
                 TypePesee = "2x2";
                 Enable();
                 txtTareCamion.Visible = false;
                 lbTareCamion.Visible = false;                
                 Bind_Fields();
                 ApplyWeighingSettings();
-            }
-            
+            }           
         }
 
         private void Bind_Fields()
@@ -419,22 +477,27 @@ namespace WidraSoft.UI
             if (EnableCamion == 0)
             {
                 cbCamion.Enabled = false;
+                RqCamion.Visible = false;
             }
             if (EnableChauffeur == 0)
             {
                 cbChauffeur.Enabled = false;
+                RqChauffeur.Visible = false;
             }
             if (EnableTransporteur == 0)
             {
                 cbTransporteur.Enabled = false;
+                RqTransporteur.Visible = false;
             }
             if (EnableProduit == 0)
             {
                 cbProduit.Enabled = false;
+                RqProduit.Visible = false;
             }
             if (EnableClient == 0)
             {
                 cbClient.Enabled = false;
+                RqClient.Visible = false;
             }
 
 
@@ -611,25 +674,18 @@ namespace WidraSoft.UI
             if (rb1x.Checked == true)
             {
                 rb2x1.Visible = false;
-                rb2x2.Visible = false;
             }
             if (rb2x1.Checked == true)
             {
                 rb1x.Visible = false;
-                rb2x2.Visible = false;
             }
-            if (rb2x2.Checked == true)
-            {
-                rb1x.Visible = false;
-                rb2x1.Visible = false;
-            }
+            
         }
 
         private void Disable_Checked_rbxs_only()
         {
             rb1x.Visible = true;
             rb2x1.Visible = true;
-            rb2x2.Visible = true;
         }
 
         private void getMaxId()
@@ -698,10 +754,22 @@ namespace WidraSoft.UI
         {
             if (rb1x.Checked)
             {
-                Add_Item_1x();
+                if (vg_Clearing == false)
+                    Add_Item_1x();
+                else 
+                    vg_Clearing = false;
+            }                      
+        }
+
+        private void rb2x1_CheckedChanged(object sender, EventArgs e)
+        {
+            if (rb2x1.Checked)
+            {
+                if (vg_Clearing == false)
+                    Add_Item_2x1();
+                else
+                    vg_Clearing = false;
             }
-            
-            
         }
 
         private void cbPont_SelectedIndexChanged(object sender, EventArgs e)
@@ -750,6 +818,15 @@ namespace WidraSoft.UI
                                 Disable();
                                 Enable_Checked_rbxs_only();
                                 getMaxId();
+                                //Details de la pesée et impression
+                                if (cbLang.Text == "FR")
+                                    Custom_MessageBox.Show("FR", "Pesage Terminé, impression du ticket ...", "Pesée: " + txtId.Text, MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                else if (cbLang.Text == "EN")
+                                    Custom_MessageBox.Show("EN", "Weighing over", "Weighing", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                else
+                                    Custom_MessageBox.Show("ES", "Ningún registro seleccionado", "Pasaje", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                Clear();
+                                Add_Item_1x();
                             }
                             catch
                             {
@@ -818,16 +895,22 @@ namespace WidraSoft.UI
                                 Disable();
                                 Enable_Checked_rbxs_only();
                                 getMaxId();
+                                //Details de la pesée et impression
+                                if (cbLang.Text == "FR")
+                                    Custom_MessageBox.Show("FR", "Pesage Terminé, impression du ticket ...", "Pesée: " + txtId.Text, MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                else if (cbLang.Text == "EN")
+                                    Custom_MessageBox.Show("EN", "Weighing over", "Weighing", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                else
+                                    Custom_MessageBox.Show("ES", "Ningún registro seleccionado", "Pasaje", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                Clear();
+                                Add_Item_2x1();
                             }
                             
                         }
                         catch
                         {
                             throw;
-                        }
-
-                       
-
+                        }               
                     }
                     else
                     {
@@ -888,7 +971,7 @@ namespace WidraSoft.UI
                                 Disable();
                                 Enable_Checked_rbxs_only();
                                 if (cbLang.Text == "FR")
-                                    Custom_MessageBox.Show("FR", "Pesage Terminé, impression du ticket ...", "Pesée", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                    Custom_MessageBox.Show("FR", "Pesage Terminé, impression du ticket ...", "Pesée: " + txtId.Text, MessageBoxButtons.OK, MessageBoxIcon.Information);
                                 else if (cbLang.Text == "EN")
                                     Custom_MessageBox.Show("EN", "Weighing over", "Weighing", MessageBoxButtons.OK, MessageBoxIcon.Information);
                                 else
@@ -922,8 +1005,6 @@ namespace WidraSoft.UI
                         Custom_MessageBox.Show("ES", "Ningún registro seleccionado", "Pasaje", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
-
-
 
         }
 
@@ -1304,52 +1385,19 @@ namespace WidraSoft.UI
         }
 
         
-
-        private void rb2x1_CheckedChanged(object sender, EventArgs e)
-        {
-            if (rb2x1.Checked)
-            {
-                Add_Item_2x1();
-            }
-        }
-
         private void rb2x2_CheckedChanged(object sender, EventArgs e)
         {
-            if (rb2x2.Checked)
-            {
-                Edit_Item_2x2();
-            }
+            //if (rb2x2.Checked)
+            //{
+               // Edit_Item_2x2();
+            //}
         }
 
      
 
         private void MenuItemNouveau_Click(object sender, EventArgs e)
         {
-            if (check_fields_min())
-            {
-                DialogResult result;
-                if (cbLang.Text == "FR")
-                    result = Custom_MessageBox.Show("FR", "ATTENTION, les données non enregistrées seront perdues. Etes vous sur?", "Pesée", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
-                else if (cbLang.Text == "EN")
-                    result = Custom_MessageBox.Show("EN", "Are you sure you want to delete this record?", "Weighing", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
-                else
-                    result = Custom_MessageBox.Show("ES", "¿Está seguro de que desea eliminar este registro?", "Camión", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
-                if (result == DialogResult.Yes)
-                {
-                    Clear();
-                    Enable();
-                    Refresh_Dgv();
-                    rb2x1.Checked = true;
-                }
-            }
-            else
-            {
-                Clear();
-                Enable();
-                Refresh_Dgv();
-                rb2x1.Checked = true;
-            }
-                
+                        
         }
 
         private void MenuItemTerminer_Click(object sender, EventArgs e)
@@ -1364,12 +1412,23 @@ namespace WidraSoft.UI
                 else
                     result = Custom_MessageBox.Show("ES", "¿Está seguro de que desea eliminar este registro?", "Camión", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
                 if (result == DialogResult.Yes)
-                {
-                    Clear();
+                {                    
                     vg_Id = Common_functions.GetDatagridViewSelectedId(DgvList);
-                    Enable();
                     Refresh_Dgv();
-                    rb2x2.Checked = true;
+                    Edit_Item_2x2();
+                }
+                else
+                {
+                    if (rb1x.Checked)
+                    {
+                        vg_Clearing = true;
+                        rb1x.Checked = true;
+                    }
+                    else
+                    {
+                        vg_Clearing = true;
+                        rb2x1.Checked = true;
+                    }
                 }
             } 
             else
@@ -1378,9 +1437,108 @@ namespace WidraSoft.UI
                 vg_Id = Common_functions.GetDatagridViewSelectedId(DgvList);
                 Enable();
                 Refresh_Dgv();
-                rb2x2.Checked = true;
+                rb2x1.Checked = true;
             }
             
+        }
+
+        private void cbLang_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (cbLang.Text == "FR")
+            {
+                France_flag.Visible = true;
+                England_flag.Visible = false;
+                Spain_flag.Visible = false;
+                //Language_Manager language_Manager = new Language_Manager();
+                //language_Manager.ChangeLanguage("fr", this, typeof(TransporteurDetail));
+               
+            }
+
+            if (cbLang.Text == "EN")
+            {
+                France_flag.Visible = false;
+                England_flag.Visible = true;
+                Spain_flag.Visible = false;
+                //Language_Manager language_Manager = new Language_Manager();
+                //language_Manager.ChangeLanguage("en", this, typeof(TransporteurDetail));
+               
+            }
+
+            if (cbLang.Text == "ES")
+            {
+                France_flag.Visible = false;
+                England_flag.Visible = false;
+                Spain_flag.Visible = true;
+                //Language_Manager language_Manager = new Language_Manager();
+                //language_Manager.ChangeLanguage("es", this, typeof(TransporteurDetail));
+               
+            }
+        }
+
+        private void pontsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Form form = new PontsListe("1=1");
+            form.Show();
+        }
+
+        private void ParamPoidstoolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            Form form = new WeightSettingsList("1=1");
+            form.Show();
+        }
+
+        private void camionsToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            Form form = new CamionsListe("1=1");
+            form.Show();
+        }
+
+        private void produitsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Form form = new ProduitsListe("1=1");
+            form.Show();
+        }
+
+        private void chauffeursToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            Form form = new ChauffeursListe("1=1");
+            form.Show();
+        }
+
+        private void transporteursToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Form form = new TransporteursListe("1=1");
+            form.Show();
+        }
+
+        private void clientsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Form form = new ClientsListe("1=1");
+            form.Show();
+        }
+
+        private void firmesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Form form = new FirmesList("1=1");
+            form.Show();
+        }
+
+        private void pamamètresDePeséeToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Form form = new WeighingSettingsList("1=1");
+            form.Show();
+        }
+
+        private void tablesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Form form = new TablesList("1=1");
+            form.Show();
+        }
+
+        private void enregistrementsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Form form = new EnregistrementsListe("1=1");
+            form.Show();
         }
     }
 }

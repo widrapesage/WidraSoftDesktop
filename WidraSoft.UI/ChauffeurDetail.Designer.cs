@@ -80,6 +80,7 @@
             this.chx_Valide = new System.Windows.Forms.CheckBox();
             this.label8 = new System.Windows.Forms.Label();
             this.txtPays = new System.Windows.Forms.TextBox();
+            this.RqPont = new System.Windows.Forms.PictureBox();
             this.panelLang.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbUpdating)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Spain_flag)).BeginInit();
@@ -90,6 +91,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.panelDetail.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.RqPont)).BeginInit();
             this.SuspendLayout();
             // 
             // panelLang
@@ -223,6 +225,7 @@
             // panelDetail
             // 
             this.panelDetail.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(86)))), ((int)(((byte)(81)))));
+            this.panelDetail.Controls.Add(this.RqPont);
             this.panelDetail.Controls.Add(this.txtNumeroPermis);
             this.panelDetail.Controls.Add(this.label20);
             this.panelDetail.Controls.Add(this.txtNumeroNational);
@@ -489,6 +492,13 @@
             resources.ApplyResources(this.txtPays, "txtPays");
             this.txtPays.Name = "txtPays";
             // 
+            // RqPont
+            // 
+            this.RqPont.Image = global::WidraSoft.UI.Properties.Resources.asterisk;
+            resources.ApplyResources(this.RqPont, "RqPont");
+            this.RqPont.Name = "RqPont";
+            this.RqPont.TabStop = false;
+            // 
             // ChauffeurDetail
             // 
             resources.ApplyResources(this, "$this");
@@ -514,6 +524,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.panelDetail.ResumeLayout(false);
             this.panelDetail.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.RqPont)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -571,5 +582,6 @@
         private System.Windows.Forms.Label label19;
         private System.Windows.Forms.TextBox txtNumeroPermis;
         private System.Windows.Forms.Label label20;
+        private System.Windows.Forms.PictureBox RqPont;
     }
 }

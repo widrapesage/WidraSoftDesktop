@@ -56,10 +56,16 @@
             this.lbClient = new System.Windows.Forms.Label();
             this.cbClient = new System.Windows.Forms.ComboBox();
             this.gbTypePesee = new System.Windows.Forms.GroupBox();
-            this.rb2x2 = new System.Windows.Forms.RadioButton();
             this.rb2x1 = new System.Windows.Forms.RadioButton();
             this.rb1x = new System.Windows.Forms.RadioButton();
             this.panelData = new System.Windows.Forms.Panel();
+            this.RqClient = new System.Windows.Forms.PictureBox();
+            this.RqProduit = new System.Windows.Forms.PictureBox();
+            this.RqTransporteur = new System.Windows.Forms.PictureBox();
+            this.RqChauffeur = new System.Windows.Forms.PictureBox();
+            this.RqCamion = new System.Windows.Forms.PictureBox();
+            this.RqFirme = new System.Windows.Forms.PictureBox();
+            this.RqPont = new System.Windows.Forms.PictureBox();
             this.panel3 = new System.Windows.Forms.Panel();
             this.menuStrip = new System.Windows.Forms.MenuStrip();
             this.MenuItemNouveau = new System.Windows.Forms.ToolStripMenuItem();
@@ -128,6 +134,13 @@
             ((System.ComponentModel.ISupportInitialize)(this.France_flag)).BeginInit();
             this.gbTypePesee.SuspendLayout();
             this.panelData.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.RqClient)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.RqProduit)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.RqTransporteur)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.RqChauffeur)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.RqCamion)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.RqFirme)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.RqPont)).BeginInit();
             this.menuStrip.SuspendLayout();
             this.gbFlux.SuspendLayout();
             this.panelLayout.SuspendLayout();
@@ -226,6 +239,7 @@
             this.cbLang.Name = "cbLang";
             this.cbLang.Size = new System.Drawing.Size(158, 22);
             this.cbLang.TabIndex = 23;
+            this.cbLang.SelectedIndexChanged += new System.EventHandler(this.cbLang_SelectedIndexChanged);
             // 
             // lbPont
             // 
@@ -233,7 +247,7 @@
             this.lbPont.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.lbPont.ForeColor = System.Drawing.Color.White;
             this.lbPont.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.lbPont.Location = new System.Drawing.Point(205, 201);
+            this.lbPont.Location = new System.Drawing.Point(205, 157);
             this.lbPont.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbPont.Name = "lbPont";
             this.lbPont.Size = new System.Drawing.Size(38, 19);
@@ -247,7 +261,7 @@
             this.cbPont.BackColor = System.Drawing.Color.Honeydew;
             this.cbPont.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.cbPont.FormattingEnabled = true;
-            this.cbPont.Location = new System.Drawing.Point(309, 198);
+            this.cbPont.Location = new System.Drawing.Point(309, 154);
             this.cbPont.Margin = new System.Windows.Forms.Padding(2);
             this.cbPont.Name = "cbPont";
             this.cbPont.Size = new System.Drawing.Size(296, 27);
@@ -262,7 +276,7 @@
             this.lbFirme.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.lbFirme.ForeColor = System.Drawing.Color.White;
             this.lbFirme.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.lbFirme.Location = new System.Drawing.Point(205, 236);
+            this.lbFirme.Location = new System.Drawing.Point(205, 192);
             this.lbFirme.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbFirme.Name = "lbFirme";
             this.lbFirme.Size = new System.Drawing.Size(45, 19);
@@ -276,7 +290,7 @@
             this.cbFirme.BackColor = System.Drawing.Color.Honeydew;
             this.cbFirme.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.cbFirme.FormattingEnabled = true;
-            this.cbFirme.Location = new System.Drawing.Point(309, 233);
+            this.cbFirme.Location = new System.Drawing.Point(309, 189);
             this.cbFirme.Margin = new System.Windows.Forms.Padding(2);
             this.cbFirme.Name = "cbFirme";
             this.cbFirme.Size = new System.Drawing.Size(296, 27);
@@ -302,7 +316,7 @@
             this.lbCamion.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.lbCamion.ForeColor = System.Drawing.Color.White;
             this.lbCamion.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.lbCamion.Location = new System.Drawing.Point(205, 272);
+            this.lbCamion.Location = new System.Drawing.Point(205, 228);
             this.lbCamion.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbCamion.Name = "lbCamion";
             this.lbCamion.Size = new System.Drawing.Size(58, 19);
@@ -316,7 +330,7 @@
             this.cbCamion.BackColor = System.Drawing.Color.Honeydew;
             this.cbCamion.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.cbCamion.FormattingEnabled = true;
-            this.cbCamion.Location = new System.Drawing.Point(309, 269);
+            this.cbCamion.Location = new System.Drawing.Point(309, 225);
             this.cbCamion.Margin = new System.Windows.Forms.Padding(2);
             this.cbCamion.Name = "cbCamion";
             this.cbCamion.Size = new System.Drawing.Size(296, 27);
@@ -329,7 +343,7 @@
             this.lbChauffeur.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.lbChauffeur.ForeColor = System.Drawing.Color.White;
             this.lbChauffeur.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.lbChauffeur.Location = new System.Drawing.Point(205, 308);
+            this.lbChauffeur.Location = new System.Drawing.Point(205, 264);
             this.lbChauffeur.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbChauffeur.Name = "lbChauffeur";
             this.lbChauffeur.Size = new System.Drawing.Size(72, 19);
@@ -343,7 +357,7 @@
             this.cbChauffeur.BackColor = System.Drawing.Color.Honeydew;
             this.cbChauffeur.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.cbChauffeur.FormattingEnabled = true;
-            this.cbChauffeur.Location = new System.Drawing.Point(309, 305);
+            this.cbChauffeur.Location = new System.Drawing.Point(309, 261);
             this.cbChauffeur.Margin = new System.Windows.Forms.Padding(2);
             this.cbChauffeur.Name = "cbChauffeur";
             this.cbChauffeur.Size = new System.Drawing.Size(296, 27);
@@ -356,7 +370,7 @@
             this.lbTransporteur.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.lbTransporteur.ForeColor = System.Drawing.Color.White;
             this.lbTransporteur.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.lbTransporteur.Location = new System.Drawing.Point(205, 344);
+            this.lbTransporteur.Location = new System.Drawing.Point(205, 300);
             this.lbTransporteur.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbTransporteur.Name = "lbTransporteur";
             this.lbTransporteur.Size = new System.Drawing.Size(91, 19);
@@ -370,7 +384,7 @@
             this.cbTransporteur.BackColor = System.Drawing.Color.Honeydew;
             this.cbTransporteur.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.cbTransporteur.FormattingEnabled = true;
-            this.cbTransporteur.Location = new System.Drawing.Point(309, 341);
+            this.cbTransporteur.Location = new System.Drawing.Point(309, 297);
             this.cbTransporteur.Margin = new System.Windows.Forms.Padding(2);
             this.cbTransporteur.Name = "cbTransporteur";
             this.cbTransporteur.Size = new System.Drawing.Size(296, 27);
@@ -383,7 +397,7 @@
             this.lbProduit.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.lbProduit.ForeColor = System.Drawing.Color.White;
             this.lbProduit.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.lbProduit.Location = new System.Drawing.Point(205, 380);
+            this.lbProduit.Location = new System.Drawing.Point(205, 336);
             this.lbProduit.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbProduit.Name = "lbProduit";
             this.lbProduit.Size = new System.Drawing.Size(55, 19);
@@ -397,7 +411,7 @@
             this.cbProduit.BackColor = System.Drawing.Color.Honeydew;
             this.cbProduit.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.cbProduit.FormattingEnabled = true;
-            this.cbProduit.Location = new System.Drawing.Point(309, 377);
+            this.cbProduit.Location = new System.Drawing.Point(309, 333);
             this.cbProduit.Margin = new System.Windows.Forms.Padding(2);
             this.cbProduit.Name = "cbProduit";
             this.cbProduit.Size = new System.Drawing.Size(296, 27);
@@ -410,7 +424,7 @@
             this.lbClient.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.lbClient.ForeColor = System.Drawing.Color.White;
             this.lbClient.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.lbClient.Location = new System.Drawing.Point(205, 416);
+            this.lbClient.Location = new System.Drawing.Point(205, 372);
             this.lbClient.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbClient.Name = "lbClient";
             this.lbClient.Size = new System.Drawing.Size(47, 19);
@@ -424,7 +438,7 @@
             this.cbClient.BackColor = System.Drawing.Color.Honeydew;
             this.cbClient.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.cbClient.FormattingEnabled = true;
-            this.cbClient.Location = new System.Drawing.Point(309, 413);
+            this.cbClient.Location = new System.Drawing.Point(309, 369);
             this.cbClient.Margin = new System.Windows.Forms.Padding(2);
             this.cbClient.Name = "cbClient";
             this.cbClient.Size = new System.Drawing.Size(296, 27);
@@ -433,41 +447,27 @@
             // 
             // gbTypePesee
             // 
-            this.gbTypePesee.Controls.Add(this.rb2x2);
             this.gbTypePesee.Controls.Add(this.rb2x1);
             this.gbTypePesee.Controls.Add(this.rb1x);
             this.gbTypePesee.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.gbTypePesee.ForeColor = System.Drawing.Color.White;
             this.gbTypePesee.Location = new System.Drawing.Point(309, 7);
             this.gbTypePesee.Name = "gbTypePesee";
-            this.gbTypePesee.Size = new System.Drawing.Size(296, 106);
+            this.gbTypePesee.Size = new System.Drawing.Size(296, 55);
             this.gbTypePesee.TabIndex = 108;
             this.gbTypePesee.TabStop = false;
             this.gbTypePesee.Text = "Type de pesée";
-            // 
-            // rb2x2
-            // 
-            this.rb2x2.AutoSize = true;
-            this.rb2x2.FlatAppearance.CheckedBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(190)))), ((int)(((byte)(117)))));
-            this.rb2x2.Location = new System.Drawing.Point(53, 78);
-            this.rb2x2.Name = "rb2x2";
-            this.rb2x2.Size = new System.Drawing.Size(152, 23);
-            this.rb2x2.TabIndex = 2;
-            this.rb2x2.TabStop = true;
-            this.rb2x2.Text = "2x - seconde pesée";
-            this.rb2x2.UseVisualStyleBackColor = true;
-            this.rb2x2.CheckedChanged += new System.EventHandler(this.rb2x2_CheckedChanged);
             // 
             // rb2x1
             // 
             this.rb2x1.AutoSize = true;
             this.rb2x1.FlatAppearance.CheckedBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(190)))), ((int)(((byte)(117)))));
-            this.rb2x1.Location = new System.Drawing.Point(53, 49);
+            this.rb2x1.Location = new System.Drawing.Point(179, 20);
             this.rb2x1.Name = "rb2x1";
-            this.rb2x1.Size = new System.Drawing.Size(156, 23);
+            this.rb2x1.Size = new System.Drawing.Size(42, 23);
             this.rb2x1.TabIndex = 1;
             this.rb2x1.TabStop = true;
-            this.rb2x1.Text = "2x - première pesée";
+            this.rb2x1.Text = "2x";
             this.rb2x1.UseVisualStyleBackColor = true;
             this.rb2x1.CheckedChanged += new System.EventHandler(this.rb2x1_CheckedChanged);
             // 
@@ -487,6 +487,13 @@
             // panelData
             // 
             this.panelData.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(86)))), ((int)(((byte)(81)))));
+            this.panelData.Controls.Add(this.RqClient);
+            this.panelData.Controls.Add(this.RqProduit);
+            this.panelData.Controls.Add(this.RqTransporteur);
+            this.panelData.Controls.Add(this.RqChauffeur);
+            this.panelData.Controls.Add(this.RqCamion);
+            this.panelData.Controls.Add(this.RqFirme);
+            this.panelData.Controls.Add(this.RqPont);
             this.panelData.Controls.Add(this.panel3);
             this.panelData.Controls.Add(this.menuStrip);
             this.panelData.Controls.Add(this.btAddClient);
@@ -519,6 +526,76 @@
             this.panelData.Name = "panelData";
             this.panelData.Size = new System.Drawing.Size(798, 699);
             this.panelData.TabIndex = 109;
+            // 
+            // RqClient
+            // 
+            this.RqClient.Image = global::WidraSoft.UI.Properties.Resources.asterisk;
+            this.RqClient.Location = new System.Drawing.Point(177, 370);
+            this.RqClient.Name = "RqClient";
+            this.RqClient.Size = new System.Drawing.Size(28, 22);
+            this.RqClient.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.RqClient.TabIndex = 135;
+            this.RqClient.TabStop = false;
+            // 
+            // RqProduit
+            // 
+            this.RqProduit.Image = global::WidraSoft.UI.Properties.Resources.asterisk;
+            this.RqProduit.Location = new System.Drawing.Point(177, 334);
+            this.RqProduit.Name = "RqProduit";
+            this.RqProduit.Size = new System.Drawing.Size(28, 22);
+            this.RqProduit.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.RqProduit.TabIndex = 134;
+            this.RqProduit.TabStop = false;
+            // 
+            // RqTransporteur
+            // 
+            this.RqTransporteur.Image = global::WidraSoft.UI.Properties.Resources.asterisk;
+            this.RqTransporteur.Location = new System.Drawing.Point(177, 298);
+            this.RqTransporteur.Name = "RqTransporteur";
+            this.RqTransporteur.Size = new System.Drawing.Size(28, 22);
+            this.RqTransporteur.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.RqTransporteur.TabIndex = 133;
+            this.RqTransporteur.TabStop = false;
+            // 
+            // RqChauffeur
+            // 
+            this.RqChauffeur.Image = global::WidraSoft.UI.Properties.Resources.asterisk;
+            this.RqChauffeur.Location = new System.Drawing.Point(177, 262);
+            this.RqChauffeur.Name = "RqChauffeur";
+            this.RqChauffeur.Size = new System.Drawing.Size(28, 22);
+            this.RqChauffeur.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.RqChauffeur.TabIndex = 132;
+            this.RqChauffeur.TabStop = false;
+            // 
+            // RqCamion
+            // 
+            this.RqCamion.Image = global::WidraSoft.UI.Properties.Resources.asterisk;
+            this.RqCamion.Location = new System.Drawing.Point(177, 226);
+            this.RqCamion.Name = "RqCamion";
+            this.RqCamion.Size = new System.Drawing.Size(28, 22);
+            this.RqCamion.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.RqCamion.TabIndex = 131;
+            this.RqCamion.TabStop = false;
+            // 
+            // RqFirme
+            // 
+            this.RqFirme.Image = global::WidraSoft.UI.Properties.Resources.asterisk;
+            this.RqFirme.Location = new System.Drawing.Point(177, 191);
+            this.RqFirme.Name = "RqFirme";
+            this.RqFirme.Size = new System.Drawing.Size(28, 22);
+            this.RqFirme.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.RqFirme.TabIndex = 130;
+            this.RqFirme.TabStop = false;
+            // 
+            // RqPont
+            // 
+            this.RqPont.Image = global::WidraSoft.UI.Properties.Resources.asterisk;
+            this.RqPont.Location = new System.Drawing.Point(177, 157);
+            this.RqPont.Name = "RqPont";
+            this.RqPont.Size = new System.Drawing.Size(28, 22);
+            this.RqPont.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.RqPont.TabIndex = 129;
+            this.RqPont.TabStop = false;
             // 
             // panel3
             // 
@@ -614,6 +691,7 @@
             this.pontsToolStripMenuItem.Size = new System.Drawing.Size(126, 54);
             this.pontsToolStripMenuItem.Text = "Ponts";
             this.pontsToolStripMenuItem.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.pontsToolStripMenuItem.Click += new System.EventHandler(this.pontsToolStripMenuItem_Click);
             // 
             // pToolStripMenuItem
             // 
@@ -637,6 +715,7 @@
             this.ParamPoidstoolStripMenuItem1.Name = "ParamPoidstoolStripMenuItem1";
             this.ParamPoidstoolStripMenuItem1.Size = new System.Drawing.Size(312, 26);
             this.ParamPoidstoolStripMenuItem1.Text = "Paramètres de lecture du poids";
+            this.ParamPoidstoolStripMenuItem1.Click += new System.EventHandler(this.ParamPoidstoolStripMenuItem1_Click);
             // 
             // gérerToolStripMenuItem
             // 
@@ -667,6 +746,7 @@
             this.camionsToolStripMenuItem1.Size = new System.Drawing.Size(276, 26);
             this.camionsToolStripMenuItem1.Text = "Camions";
             this.camionsToolStripMenuItem1.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
+            this.camionsToolStripMenuItem1.Click += new System.EventHandler(this.camionsToolStripMenuItem1_Click);
             // 
             // produitsToolStripMenuItem
             // 
@@ -677,6 +757,7 @@
             this.produitsToolStripMenuItem.Size = new System.Drawing.Size(276, 26);
             this.produitsToolStripMenuItem.Text = "Produits";
             this.produitsToolStripMenuItem.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
+            this.produitsToolStripMenuItem.Click += new System.EventHandler(this.produitsToolStripMenuItem_Click);
             // 
             // chauffeursToolStripMenuItem1
             // 
@@ -687,6 +768,7 @@
             this.chauffeursToolStripMenuItem1.Size = new System.Drawing.Size(276, 26);
             this.chauffeursToolStripMenuItem1.Text = "Chauffeurs";
             this.chauffeursToolStripMenuItem1.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
+            this.chauffeursToolStripMenuItem1.Click += new System.EventHandler(this.chauffeursToolStripMenuItem1_Click);
             // 
             // firmesToolStripMenuItem
             // 
@@ -697,6 +779,7 @@
             this.firmesToolStripMenuItem.Size = new System.Drawing.Size(276, 26);
             this.firmesToolStripMenuItem.Text = "Firmes";
             this.firmesToolStripMenuItem.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
+            this.firmesToolStripMenuItem.Click += new System.EventHandler(this.firmesToolStripMenuItem_Click);
             // 
             // transporteursToolStripMenuItem
             // 
@@ -707,6 +790,7 @@
             this.transporteursToolStripMenuItem.Size = new System.Drawing.Size(276, 26);
             this.transporteursToolStripMenuItem.Text = "Transporteurs";
             this.transporteursToolStripMenuItem.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
+            this.transporteursToolStripMenuItem.Click += new System.EventHandler(this.transporteursToolStripMenuItem_Click);
             // 
             // destinationsProvenancesToolStripMenuItem
             // 
@@ -727,6 +811,7 @@
             this.clientsToolStripMenuItem.Size = new System.Drawing.Size(276, 26);
             this.clientsToolStripMenuItem.Text = "Clients";
             this.clientsToolStripMenuItem.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
+            this.clientsToolStripMenuItem.Click += new System.EventHandler(this.clientsToolStripMenuItem_Click);
             // 
             // paramètresToolStripMenuItem
             // 
@@ -752,6 +837,7 @@
             this.pamamètresDePeséeToolStripMenuItem.Name = "pamamètresDePeséeToolStripMenuItem";
             this.pamamètresDePeséeToolStripMenuItem.Size = new System.Drawing.Size(249, 26);
             this.pamamètresDePeséeToolStripMenuItem.Text = "Paramètres de pesée";
+            this.pamamètresDePeséeToolStripMenuItem.Click += new System.EventHandler(this.pamamètresDePeséeToolStripMenuItem_Click);
             // 
             // tablesSupplémentairesToolStripMenuItem
             // 
@@ -773,6 +859,7 @@
             this.tablesToolStripMenuItem.Name = "tablesToolStripMenuItem";
             this.tablesToolStripMenuItem.Size = new System.Drawing.Size(204, 26);
             this.tablesToolStripMenuItem.Text = "Tables";
+            this.tablesToolStripMenuItem.Click += new System.EventHandler(this.tablesToolStripMenuItem_Click);
             // 
             // enregistrementsToolStripMenuItem
             // 
@@ -782,6 +869,7 @@
             this.enregistrementsToolStripMenuItem.Name = "enregistrementsToolStripMenuItem";
             this.enregistrementsToolStripMenuItem.Size = new System.Drawing.Size(204, 26);
             this.enregistrementsToolStripMenuItem.Text = "Enregistrements";
+            this.enregistrementsToolStripMenuItem.Click += new System.EventHandler(this.enregistrementsToolStripMenuItem_Click);
             // 
             // reportingToolStripMenuItem
             // 
@@ -825,7 +913,7 @@
             this.btAddClient.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(86)))), ((int)(((byte)(81)))));
             this.btAddClient.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btAddClient.Image = global::WidraSoft.UI.Properties.Resources.plus_Weighing;
-            this.btAddClient.Location = new System.Drawing.Point(610, 414);
+            this.btAddClient.Location = new System.Drawing.Point(610, 370);
             this.btAddClient.Name = "btAddClient";
             this.btAddClient.Size = new System.Drawing.Size(25, 25);
             this.btAddClient.TabIndex = 127;
@@ -841,7 +929,7 @@
             this.btAddProduit.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(86)))), ((int)(((byte)(81)))));
             this.btAddProduit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btAddProduit.Image = global::WidraSoft.UI.Properties.Resources.plus_Weighing;
-            this.btAddProduit.Location = new System.Drawing.Point(610, 378);
+            this.btAddProduit.Location = new System.Drawing.Point(610, 334);
             this.btAddProduit.Name = "btAddProduit";
             this.btAddProduit.Size = new System.Drawing.Size(25, 25);
             this.btAddProduit.TabIndex = 126;
@@ -857,7 +945,7 @@
             this.btAddTransporteur.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(86)))), ((int)(((byte)(81)))));
             this.btAddTransporteur.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btAddTransporteur.Image = global::WidraSoft.UI.Properties.Resources.plus_Weighing;
-            this.btAddTransporteur.Location = new System.Drawing.Point(610, 342);
+            this.btAddTransporteur.Location = new System.Drawing.Point(610, 298);
             this.btAddTransporteur.Name = "btAddTransporteur";
             this.btAddTransporteur.Size = new System.Drawing.Size(25, 25);
             this.btAddTransporteur.TabIndex = 125;
@@ -873,7 +961,7 @@
             this.btAddChauffeur.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(86)))), ((int)(((byte)(81)))));
             this.btAddChauffeur.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btAddChauffeur.Image = global::WidraSoft.UI.Properties.Resources.plus_Weighing;
-            this.btAddChauffeur.Location = new System.Drawing.Point(610, 306);
+            this.btAddChauffeur.Location = new System.Drawing.Point(610, 262);
             this.btAddChauffeur.Name = "btAddChauffeur";
             this.btAddChauffeur.Size = new System.Drawing.Size(25, 25);
             this.btAddChauffeur.TabIndex = 124;
@@ -889,7 +977,7 @@
             this.btAddCamion.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(86)))), ((int)(((byte)(81)))));
             this.btAddCamion.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btAddCamion.Image = global::WidraSoft.UI.Properties.Resources.plus_Weighing;
-            this.btAddCamion.Location = new System.Drawing.Point(610, 270);
+            this.btAddCamion.Location = new System.Drawing.Point(610, 226);
             this.btAddCamion.Name = "btAddCamion";
             this.btAddCamion.Size = new System.Drawing.Size(25, 25);
             this.btAddCamion.TabIndex = 123;
@@ -905,7 +993,7 @@
             this.btAddFirme.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(86)))), ((int)(((byte)(81)))));
             this.btAddFirme.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btAddFirme.Image = global::WidraSoft.UI.Properties.Resources.plus_Weighing;
-            this.btAddFirme.Location = new System.Drawing.Point(610, 234);
+            this.btAddFirme.Location = new System.Drawing.Point(610, 190);
             this.btAddFirme.Name = "btAddFirme";
             this.btAddFirme.Size = new System.Drawing.Size(25, 25);
             this.btAddFirme.TabIndex = 122;
@@ -921,7 +1009,7 @@
             this.btAddPont.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(86)))), ((int)(((byte)(81)))));
             this.btAddPont.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btAddPont.Image = global::WidraSoft.UI.Properties.Resources.plus_Weighing;
-            this.btAddPont.Location = new System.Drawing.Point(610, 199);
+            this.btAddPont.Location = new System.Drawing.Point(610, 155);
             this.btAddPont.Name = "btAddPont";
             this.btAddPont.Size = new System.Drawing.Size(25, 25);
             this.btAddPont.TabIndex = 121;
@@ -935,7 +1023,7 @@
             this.lbTareCamion.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.lbTareCamion.ForeColor = System.Drawing.Color.White;
             this.lbTareCamion.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.lbTareCamion.Location = new System.Drawing.Point(638, 247);
+            this.lbTareCamion.Location = new System.Drawing.Point(641, 204);
             this.lbTareCamion.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbTareCamion.Name = "lbTareCamion";
             this.lbTareCamion.Size = new System.Drawing.Size(67, 19);
@@ -948,7 +1036,7 @@
             this.txtTareCamion.BackColor = System.Drawing.Color.Honeydew;
             this.txtTareCamion.Font = new System.Drawing.Font("Calibri", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.txtTareCamion.ForeColor = System.Drawing.Color.Black;
-            this.txtTareCamion.Location = new System.Drawing.Point(638, 269);
+            this.txtTareCamion.Location = new System.Drawing.Point(641, 226);
             this.txtTareCamion.Name = "txtTareCamion";
             this.txtTareCamion.Size = new System.Drawing.Size(74, 25);
             this.txtTareCamion.TabIndex = 111;
@@ -960,7 +1048,7 @@
             this.gbFlux.Controls.Add(this.rbxEntrant);
             this.gbFlux.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.gbFlux.ForeColor = System.Drawing.Color.White;
-            this.gbFlux.Location = new System.Drawing.Point(309, 119);
+            this.gbFlux.Location = new System.Drawing.Point(309, 75);
             this.gbFlux.Name = "gbFlux";
             this.gbFlux.Size = new System.Drawing.Size(296, 56);
             this.gbFlux.TabIndex = 109;
@@ -1355,6 +1443,13 @@
             this.gbTypePesee.PerformLayout();
             this.panelData.ResumeLayout(false);
             this.panelData.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.RqClient)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.RqProduit)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.RqTransporteur)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.RqChauffeur)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.RqCamion)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.RqFirme)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.RqPont)).EndInit();
             this.menuStrip.ResumeLayout(false);
             this.menuStrip.PerformLayout();
             this.gbFlux.ResumeLayout(false);
@@ -1414,7 +1509,6 @@
         private System.Windows.Forms.Button btPeser;
         private System.Windows.Forms.Timer Weight_Timer;
         private System.Windows.Forms.TextBox txtPoids;
-        private System.Windows.Forms.RadioButton rb2x2;
         private System.Windows.Forms.TextBox txtId;
         private System.Windows.Forms.Button btSimulateur;
         private System.Windows.Forms.Button button2;
@@ -1461,5 +1555,12 @@
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem3;
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem4;
         private System.Windows.Forms.ToolStripMenuItem MenuItemNouveau;
+        private System.Windows.Forms.PictureBox RqPont;
+        private System.Windows.Forms.PictureBox RqClient;
+        private System.Windows.Forms.PictureBox RqProduit;
+        private System.Windows.Forms.PictureBox RqTransporteur;
+        private System.Windows.Forms.PictureBox RqChauffeur;
+        private System.Windows.Forms.PictureBox RqCamion;
+        private System.Windows.Forms.PictureBox RqFirme;
     }
 }

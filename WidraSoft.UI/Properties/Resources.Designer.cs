@@ -103,6 +103,16 @@ namespace WidraSoft.UI.Properties {
         /// <summary>
         ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap asterisk {
+            get {
+                object obj = ResourceManager.GetObject("asterisk", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap atm {
             get {
                 object obj = ResourceManager.GetObject("atm", resourceCulture);

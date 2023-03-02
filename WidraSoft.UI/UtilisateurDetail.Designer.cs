@@ -63,6 +63,10 @@ namespace WidraSoft.UI
             this.label8 = new System.Windows.Forms.Label();
             this.DgvAuthorizationList = new System.Windows.Forms.DataGridView();
             this.panelDetail = new System.Windows.Forms.Panel();
+            this.pictureBox12 = new System.Windows.Forms.PictureBox();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
+            this.pictureBox5 = new System.Windows.Forms.PictureBox();
+            this.pictureBox6 = new System.Windows.Forms.PictureBox();
             this.panelLang.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbUpdating)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Spain_flag)).BeginInit();
@@ -74,6 +78,10 @@ namespace WidraSoft.UI
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.DgvAuthorizationList)).BeginInit();
             this.panelDetail.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox12)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             this.SuspendLayout();
             // 
             // txtId
@@ -336,6 +344,10 @@ namespace WidraSoft.UI
             // panelDetail
             // 
             this.panelDetail.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(86)))), ((int)(((byte)(81)))));
+            this.panelDetail.Controls.Add(this.pictureBox6);
+            this.panelDetail.Controls.Add(this.pictureBox5);
+            this.panelDetail.Controls.Add(this.pictureBox4);
+            this.panelDetail.Controls.Add(this.pictureBox12);
             this.panelDetail.Controls.Add(this.txtId);
             this.panelDetail.Controls.Add(this.label8);
             this.panelDetail.Controls.Add(this.label1);
@@ -354,6 +366,34 @@ namespace WidraSoft.UI
             this.panelDetail.Controls.Add(this.label3);
             resources.ApplyResources(this.panelDetail, "panelDetail");
             this.panelDetail.Name = "panelDetail";
+            // 
+            // pictureBox12
+            // 
+            this.pictureBox12.Image = global::WidraSoft.UI.Properties.Resources.asterisk;
+            resources.ApplyResources(this.pictureBox12, "pictureBox12");
+            this.pictureBox12.Name = "pictureBox12";
+            this.pictureBox12.TabStop = false;
+            // 
+            // pictureBox4
+            // 
+            this.pictureBox4.Image = global::WidraSoft.UI.Properties.Resources.asterisk;
+            resources.ApplyResources(this.pictureBox4, "pictureBox4");
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.TabStop = false;
+            // 
+            // pictureBox5
+            // 
+            this.pictureBox5.Image = global::WidraSoft.UI.Properties.Resources.asterisk;
+            resources.ApplyResources(this.pictureBox5, "pictureBox5");
+            this.pictureBox5.Name = "pictureBox5";
+            this.pictureBox5.TabStop = false;
+            // 
+            // pictureBox6
+            // 
+            this.pictureBox6.Image = global::WidraSoft.UI.Properties.Resources.asterisk;
+            resources.ApplyResources(this.pictureBox6, "pictureBox6");
+            this.pictureBox6.Name = "pictureBox6";
+            this.pictureBox6.TabStop = false;
             // 
             // UtilisateurDetail
             // 
@@ -381,6 +421,10 @@ namespace WidraSoft.UI
             ((System.ComponentModel.ISupportInitialize)(this.DgvAuthorizationList)).EndInit();
             this.panelDetail.ResumeLayout(false);
             this.panelDetail.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox12)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -417,5 +461,9 @@ namespace WidraSoft.UI
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.DataGridView DgvAuthorizationList;
         private System.Windows.Forms.Panel panelDetail;
+        private System.Windows.Forms.PictureBox pictureBox6;
+        private System.Windows.Forms.PictureBox pictureBox5;
+        private System.Windows.Forms.PictureBox pictureBox4;
+        private System.Windows.Forms.PictureBox pictureBox12;
     }
 }

@@ -29,9 +29,9 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TransporteurDetail));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panelLang = new System.Windows.Forms.Panel();
             this.pbUpdating = new System.Windows.Forms.PictureBox();
             this.Spain_flag = new System.Windows.Forms.PictureBox();
@@ -87,6 +87,7 @@
             this.label11 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.txtPays = new System.Windows.Forms.TextBox();
+            this.pictureBox12 = new System.Windows.Forms.PictureBox();
             this.panelLang.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbUpdating)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Spain_flag)).BeginInit();
@@ -98,58 +99,59 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.panelDetail.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DgvCamions)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox12)).BeginInit();
             this.SuspendLayout();
             // 
             // panelLang
             // 
-            resources.ApplyResources(this.panelLang, "panelLang");
             this.panelLang.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(86)))), ((int)(((byte)(81)))));
             this.panelLang.Controls.Add(this.pbUpdating);
             this.panelLang.Controls.Add(this.Spain_flag);
             this.panelLang.Controls.Add(this.England_flag);
             this.panelLang.Controls.Add(this.France_flag);
             this.panelLang.Controls.Add(this.cbLang);
+            resources.ApplyResources(this.panelLang, "panelLang");
             this.panelLang.Name = "panelLang";
             // 
             // pbUpdating
             // 
-            resources.ApplyResources(this.pbUpdating, "pbUpdating");
             this.pbUpdating.Image = global::WidraSoft.UI.Properties.Resources.pencil;
+            resources.ApplyResources(this.pbUpdating, "pbUpdating");
             this.pbUpdating.Name = "pbUpdating";
             this.pbUpdating.TabStop = false;
             // 
             // Spain_flag
             // 
-            resources.ApplyResources(this.Spain_flag, "Spain_flag");
             this.Spain_flag.BackColor = System.Drawing.Color.Transparent;
             this.Spain_flag.Cursor = System.Windows.Forms.Cursors.Hand;
             this.Spain_flag.Image = global::WidraSoft.UI.Properties.Resources.spain;
+            resources.ApplyResources(this.Spain_flag, "Spain_flag");
             this.Spain_flag.Name = "Spain_flag";
             this.Spain_flag.TabStop = false;
             // 
             // England_flag
             // 
-            resources.ApplyResources(this.England_flag, "England_flag");
             this.England_flag.BackColor = System.Drawing.Color.Transparent;
             this.England_flag.Cursor = System.Windows.Forms.Cursors.Hand;
             this.England_flag.Image = global::WidraSoft.UI.Properties.Resources.united_kingdom;
+            resources.ApplyResources(this.England_flag, "England_flag");
             this.England_flag.Name = "England_flag";
             this.England_flag.TabStop = false;
             // 
             // France_flag
             // 
-            resources.ApplyResources(this.France_flag, "France_flag");
             this.France_flag.BackColor = System.Drawing.Color.Transparent;
             this.France_flag.Cursor = System.Windows.Forms.Cursors.Hand;
             this.France_flag.Image = global::WidraSoft.UI.Properties.Resources.france;
+            resources.ApplyResources(this.France_flag, "France_flag");
             this.France_flag.Name = "France_flag";
             this.France_flag.TabStop = false;
             // 
             // cbLang
             // 
-            resources.ApplyResources(this.cbLang, "cbLang");
             this.cbLang.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(86)))), ((int)(((byte)(77)))));
             this.cbLang.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            resources.ApplyResources(this.cbLang, "cbLang");
             this.cbLang.ForeColor = System.Drawing.Color.White;
             this.cbLang.FormattingEnabled = true;
             this.cbLang.Name = "cbLang";
@@ -157,7 +159,6 @@
             // 
             // panelNavigation
             // 
-            resources.ApplyResources(this.panelNavigation, "panelNavigation");
             this.panelNavigation.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(62)))), ((int)(((byte)(60)))));
             this.panelNavigation.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panelNavigation.Controls.Add(this.pictureBox3);
@@ -166,21 +167,22 @@
             this.panelNavigation.Controls.Add(this.pictureBox2);
             this.panelNavigation.Controls.Add(this.lbAjouter);
             this.panelNavigation.Controls.Add(this.lbSupprimer);
+            resources.ApplyResources(this.panelNavigation, "panelNavigation");
             this.panelNavigation.Name = "panelNavigation";
             // 
             // pictureBox3
             // 
-            resources.ApplyResources(this.pictureBox3, "pictureBox3");
             this.pictureBox3.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox3.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBox3.Image = global::WidraSoft.UI.Properties.Resources.update;
+            resources.ApplyResources(this.pictureBox3, "pictureBox3");
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.TabStop = false;
             // 
             // lbModifier
             // 
-            resources.ApplyResources(this.lbModifier, "lbModifier");
             this.lbModifier.ActiveLinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(190)))), ((int)(((byte)(117)))));
+            resources.ApplyResources(this.lbModifier, "lbModifier");
             this.lbModifier.BackColor = System.Drawing.Color.Transparent;
             this.lbModifier.ForeColor = System.Drawing.Color.White;
             this.lbModifier.LinkColor = System.Drawing.Color.White;
@@ -190,26 +192,26 @@
             // 
             // pictureBox1
             // 
-            resources.ApplyResources(this.pictureBox1, "pictureBox1");
             this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBox1.Image = global::WidraSoft.UI.Properties.Resources.remove;
+            resources.ApplyResources(this.pictureBox1, "pictureBox1");
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.TabStop = false;
             // 
             // pictureBox2
             // 
-            resources.ApplyResources(this.pictureBox2, "pictureBox2");
             this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox2.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBox2.Image = global::WidraSoft.UI.Properties.Resources.add;
+            resources.ApplyResources(this.pictureBox2, "pictureBox2");
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.TabStop = false;
             // 
             // lbAjouter
             // 
-            resources.ApplyResources(this.lbAjouter, "lbAjouter");
             this.lbAjouter.ActiveLinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(190)))), ((int)(((byte)(117)))));
+            resources.ApplyResources(this.lbAjouter, "lbAjouter");
             this.lbAjouter.BackColor = System.Drawing.Color.Transparent;
             this.lbAjouter.ForeColor = System.Drawing.Color.White;
             this.lbAjouter.LinkColor = System.Drawing.Color.White;
@@ -219,8 +221,8 @@
             // 
             // lbSupprimer
             // 
-            resources.ApplyResources(this.lbSupprimer, "lbSupprimer");
             this.lbSupprimer.ActiveLinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(190)))), ((int)(((byte)(117)))));
+            resources.ApplyResources(this.lbSupprimer, "lbSupprimer");
             this.lbSupprimer.BackColor = System.Drawing.Color.Transparent;
             this.lbSupprimer.ForeColor = System.Drawing.Color.White;
             this.lbSupprimer.LinkColor = System.Drawing.Color.White;
@@ -230,8 +232,8 @@
             // 
             // panelDetail
             // 
-            resources.ApplyResources(this.panelDetail, "panelDetail");
             this.panelDetail.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(86)))), ((int)(((byte)(81)))));
+            this.panelDetail.Controls.Add(this.pictureBox12);
             this.panelDetail.Controls.Add(this.label19);
             this.panelDetail.Controls.Add(this.DgvCamions);
             this.panelDetail.Controls.Add(this.txtDateCreation);
@@ -273,6 +275,7 @@
             this.panelDetail.Controls.Add(this.label11);
             this.panelDetail.Controls.Add(this.label8);
             this.panelDetail.Controls.Add(this.txtPays);
+            resources.ApplyResources(this.panelDetail, "panelDetail");
             this.panelDetail.Name = "panelDetail";
             // 
             // label19
@@ -283,52 +286,52 @@
             // 
             // DgvCamions
             // 
-            resources.ApplyResources(this.DgvCamions, "DgvCamions");
             this.DgvCamions.AllowUserToAddRows = false;
             this.DgvCamions.AllowUserToDeleteRows = false;
             this.DgvCamions.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(86)))), ((int)(((byte)(81)))));
             this.DgvCamions.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.DgvCamions.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.Sunken;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.Honeydew;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Corbel", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(86)))), ((int)(((byte)(81)))));
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.DgvCamions.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.Honeydew;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Corbel", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(86)))), ((int)(((byte)(81)))));
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.DgvCamions.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.DgvCamions.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle5.BackColor = System.Drawing.Color.Honeydew;
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Calibri", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(86)))), ((int)(((byte)(81)))));
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.DgvCamions.DefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.Honeydew;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Calibri", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(86)))), ((int)(((byte)(81)))));
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.DgvCamions.DefaultCellStyle = dataGridViewCellStyle2;
+            resources.ApplyResources(this.DgvCamions, "DgvCamions");
             this.DgvCamions.Name = "DgvCamions";
             this.DgvCamions.ReadOnly = true;
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle6.BackColor = System.Drawing.Color.Honeydew;
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Corbel", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.MediumSeaGreen;
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.DgvCamions.RowHeadersDefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.Honeydew;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Corbel", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.MediumSeaGreen;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.DgvCamions.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.DgvCamions.RowTemplate.Height = 33;
             // 
             // txtDateCreation
             // 
-            resources.ApplyResources(this.txtDateCreation, "txtDateCreation");
             this.txtDateCreation.BackColor = System.Drawing.Color.Honeydew;
+            resources.ApplyResources(this.txtDateCreation, "txtDateCreation");
             this.txtDateCreation.Name = "txtDateCreation";
             this.txtDateCreation.ReadOnly = true;
             // 
             // txtId
             // 
-            resources.ApplyResources(this.txtId, "txtId");
             this.txtId.BackColor = System.Drawing.Color.Honeydew;
+            resources.ApplyResources(this.txtId, "txtId");
             this.txtId.Name = "txtId";
             // 
             // label18
@@ -351,8 +354,8 @@
             // 
             // txtLicence
             // 
-            resources.ApplyResources(this.txtLicence, "txtLicence");
             this.txtLicence.BackColor = System.Drawing.Color.Honeydew;
+            resources.ApplyResources(this.txtLicence, "txtLicence");
             this.txtLicence.Name = "txtLicence";
             // 
             // label16
@@ -380,8 +383,8 @@
             // 
             // txtNom
             // 
-            resources.ApplyResources(this.txtNom, "txtNom");
             this.txtNom.BackColor = System.Drawing.Color.Honeydew;
+            resources.ApplyResources(this.txtNom, "txtNom");
             this.txtNom.Name = "txtNom";
             // 
             // txtBloque
@@ -402,8 +405,8 @@
             // 
             // txtAdresse
             // 
-            resources.ApplyResources(this.txtAdresse, "txtAdresse");
             this.txtAdresse.BackColor = System.Drawing.Color.Honeydew;
+            resources.ApplyResources(this.txtAdresse, "txtAdresse");
             this.txtAdresse.Name = "txtAdresse";
             // 
             // label15
@@ -420,14 +423,14 @@
             // 
             // txtObservations
             // 
-            resources.ApplyResources(this.txtObservations, "txtObservations");
             this.txtObservations.BackColor = System.Drawing.Color.Honeydew;
+            resources.ApplyResources(this.txtObservations, "txtObservations");
             this.txtObservations.Name = "txtObservations";
             // 
             // txtCodePostal
             // 
-            resources.ApplyResources(this.txtCodePostal, "txtCodePostal");
             this.txtCodePostal.BackColor = System.Drawing.Color.Honeydew;
+            resources.ApplyResources(this.txtCodePostal, "txtCodePostal");
             this.txtCodePostal.Name = "txtCodePostal";
             // 
             // label14
@@ -444,14 +447,14 @@
             // 
             // txtAlerte
             // 
-            resources.ApplyResources(this.txtAlerte, "txtAlerte");
             this.txtAlerte.BackColor = System.Drawing.Color.Honeydew;
+            resources.ApplyResources(this.txtAlerte, "txtAlerte");
             this.txtAlerte.Name = "txtAlerte";
             // 
             // txtLocalite
             // 
-            resources.ApplyResources(this.txtLocalite, "txtLocalite");
             this.txtLocalite.BackColor = System.Drawing.Color.Honeydew;
+            resources.ApplyResources(this.txtLocalite, "txtLocalite");
             this.txtLocalite.Name = "txtLocalite";
             // 
             // chx_Attention
@@ -476,14 +479,14 @@
             // 
             // txtTelephone
             // 
-            resources.ApplyResources(this.txtTelephone, "txtTelephone");
             this.txtTelephone.BackColor = System.Drawing.Color.Honeydew;
+            resources.ApplyResources(this.txtTelephone, "txtTelephone");
             this.txtTelephone.Name = "txtTelephone";
             // 
             // txtBlocage
             // 
-            resources.ApplyResources(this.txtBlocage, "txtBlocage");
             this.txtBlocage.BackColor = System.Drawing.Color.Honeydew;
+            resources.ApplyResources(this.txtBlocage, "txtBlocage");
             this.txtBlocage.Name = "txtBlocage";
             // 
             // label9
@@ -502,8 +505,8 @@
             // 
             // txtEmail
             // 
-            resources.ApplyResources(this.txtEmail, "txtEmail");
             this.txtEmail.BackColor = System.Drawing.Color.Honeydew;
+            resources.ApplyResources(this.txtEmail, "txtEmail");
             this.txtEmail.Name = "txtEmail";
             // 
             // chx_Valide
@@ -528,14 +531,14 @@
             // 
             // txtNumTVA
             // 
-            resources.ApplyResources(this.txtNumTVA, "txtNumTVA");
             this.txtNumTVA.BackColor = System.Drawing.Color.Honeydew;
+            resources.ApplyResources(this.txtNumTVA, "txtNumTVA");
             this.txtNumTVA.Name = "txtNumTVA";
             // 
             // txtSiteWebUrl
             // 
-            resources.ApplyResources(this.txtSiteWebUrl, "txtSiteWebUrl");
             this.txtSiteWebUrl.BackColor = System.Drawing.Color.Honeydew;
+            resources.ApplyResources(this.txtSiteWebUrl, "txtSiteWebUrl");
             this.txtSiteWebUrl.Name = "txtSiteWebUrl";
             // 
             // label11
@@ -552,9 +555,16 @@
             // 
             // txtPays
             // 
-            resources.ApplyResources(this.txtPays, "txtPays");
             this.txtPays.BackColor = System.Drawing.Color.Honeydew;
+            resources.ApplyResources(this.txtPays, "txtPays");
             this.txtPays.Name = "txtPays";
+            // 
+            // pictureBox12
+            // 
+            this.pictureBox12.Image = global::WidraSoft.UI.Properties.Resources.asterisk;
+            resources.ApplyResources(this.pictureBox12, "pictureBox12");
+            this.pictureBox12.Name = "pictureBox12";
+            this.pictureBox12.TabStop = false;
             // 
             // TransporteurDetail
             // 
@@ -582,6 +592,7 @@
             this.panelDetail.ResumeLayout(false);
             this.panelDetail.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DgvCamions)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox12)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -643,5 +654,6 @@
         private System.Windows.Forms.TextBox txtPays;
         private System.Windows.Forms.Label label19;
         private System.Windows.Forms.DataGridView DgvCamions;
+        private System.Windows.Forms.PictureBox pictureBox12;
     }
 }

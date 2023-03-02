@@ -91,7 +91,7 @@
     <value>panelDetail</value>
   </data>
   <data name="&gt;&gt;label2.ZOrder" xml:space="preserve">
-    <value>5</value>
+    <value>8</value>
   </data>
   <data name="txtDateCreation.Font" type="System.Drawing.Font, System.Drawing">
     <value>Calibri, 12pt</value>
@@ -118,7 +118,7 @@
     <value>panelDetail</value>
   </data>
   <data name="&gt;&gt;txtDateCreation.ZOrder" xml:space="preserve">
-    <value>4</value>
+    <value>7</value>
   </data>
   <data name="label1.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -151,7 +151,7 @@
     <value>panelDetail</value>
   </data>
   <data name="&gt;&gt;label1.ZOrder" xml:space="preserve">
-    <value>2</value>
+    <value>5</value>
   </data>
   <data name="txtId.Enabled" type="System.Boolean, mscorlib">
     <value>False</value>
@@ -181,7 +181,7 @@
     <value>panelDetail</value>
   </data>
   <data name="&gt;&gt;txtId.ZOrder" xml:space="preserve">
-    <value>0</value>
+    <value>3</value>
   </data>
   <data name="label3.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -214,7 +214,7 @@
     <value>panelDetail</value>
   </data>
   <data name="&gt;&gt;label3.ZOrder" xml:space="preserve">
-    <value>9</value>
+    <value>12</value>
   </data>
   <data name="txtDesignation.Font" type="System.Drawing.Font, System.Drawing">
     <value>Calibri, 12pt</value>
@@ -241,7 +241,7 @@
     <value>panelDetail</value>
   </data>
   <data name="&gt;&gt;txtDesignation.ZOrder" xml:space="preserve">
-    <value>7</value>
+    <value>10</value>
   </data>
   <data name="label4.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -274,7 +274,7 @@
     <value>panelDetail</value>
   </data>
   <data name="&gt;&gt;label4.ZOrder" xml:space="preserve">
-    <value>13</value>
+    <value>16</value>
   </data>
   <data name="txtCode.Font" type="System.Drawing.Font, System.Drawing">
     <value>Calibri, 12pt</value>
@@ -301,7 +301,7 @@
     <value>panelDetail</value>
   </data>
   <data name="&gt;&gt;txtCode.ZOrder" xml:space="preserve">
-    <value>11</value>
+    <value>14</value>
   </data>
   <data name="label7.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -334,7 +334,7 @@
     <value>panelDetail</value>
   </data>
   <data name="&gt;&gt;label7.ZOrder" xml:space="preserve">
-    <value>17</value>
+    <value>20</value>
   </data>
   <data name="cbLimite.Font" type="System.Drawing.Font, System.Drawing">
     <value>Calibri, 12pt</value>
@@ -367,7 +367,7 @@
     <value>panelDetail</value>
   </data>
   <data name="&gt;&gt;cbLimite.ZOrder" xml:space="preserve">
-    <value>15</value>
+    <value>18</value>
   </data>
   <data name="label5.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -400,7 +400,7 @@
     <value>panelDetail</value>
   </data>
   <data name="&gt;&gt;label5.ZOrder" xml:space="preserve">
-    <value>20</value>
+    <value>23</value>
   </data>
   <data name="txtNbLimite.Font" type="System.Drawing.Font, System.Drawing">
     <value>Calibri, 12pt</value>
@@ -427,7 +427,7 @@
     <value>panelDetail</value>
   </data>
   <data name="&gt;&gt;txtNbLimite.ZOrder" xml:space="preserve">
-    <value>19</value>
+    <value>22</value>
   </data>
   <data name="pbUpdating.Location" type="System.Drawing.Point, System.Drawing">
     <value>1163, 6</value>
@@ -608,7 +608,7 @@
     <value>panelDetail</value>
   </data>
   <data name="&gt;&gt;dgvGroupeDroits.ZOrder" xml:space="preserve">
-    <value>18</value>
+    <value>21</value>
   </data>
   <data name="lblRetirerDgv.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -641,7 +641,7 @@
     <value>panelDetail</value>
   </data>
   <data name="&gt;&gt;lblRetirerDgv.ZOrder" xml:space="preserve">
-    <value>16</value>
+    <value>19</value>
   </data>
   <data name="lblAddDgv.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -680,7 +680,7 @@
     <value>panelDetail</value>
   </data>
   <data name="&gt;&gt;lblAddDgv.ZOrder" xml:space="preserve">
-    <value>14</value>
+    <value>17</value>
   </data>
   <data name="pbAddRow.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
@@ -707,7 +707,7 @@
     <value>panelDetail</value>
   </data>
   <data name="&gt;&gt;pbAddRow.ZOrder" xml:space="preserve">
-    <value>12</value>
+    <value>15</value>
   </data>
   <data name="pbRemoveRow.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
@@ -734,7 +734,7 @@
     <value>panelDetail</value>
   </data>
   <data name="&gt;&gt;pbRemoveRow.ZOrder" xml:space="preserve">
-    <value>10</value>
+    <value>13</value>
   </data>
   <data name="DgvUsersList.Location" type="System.Drawing.Point, System.Drawing">
     <value>663, 48</value>
@@ -758,7 +758,7 @@
     <value>panelDetail</value>
   </data>
   <data name="&gt;&gt;DgvUsersList.ZOrder" xml:space="preserve">
-    <value>8</value>
+    <value>11</value>
   </data>
   <data name="label6.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -794,7 +794,7 @@
     <value>panelDetail</value>
   </data>
   <data name="&gt;&gt;label6.ZOrder" xml:space="preserve">
-    <value>6</value>
+    <value>9</value>
   </data>
   <data name="pictureBox3.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
@@ -1037,7 +1037,7 @@
     <value>panelDetail</value>
   </data>
   <data name="&gt;&gt;pictureBox4.ZOrder" xml:space="preserve">
-    <value>1</value>
+    <value>4</value>
   </data>
   <data name="lbActualiserDgv.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -1070,7 +1070,85 @@
     <value>panelDetail</value>
   </data>
   <data name="&gt;&gt;lbActualiserDgv.ZOrder" xml:space="preserve">
-    <value>3</value>
+    <value>6</value>
+  </data>
+  <data name="pictureBox6.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="pictureBox6.Location" type="System.Drawing.Point, System.Drawing">
+    <value>296, 180</value>
+  </data>
+  <data name="pictureBox6.Size" type="System.Drawing.Size, System.Drawing">
+    <value>28, 22</value>
+  </data>
+  <data name="pictureBox6.SizeMode" type="System.Windows.Forms.PictureBoxSizeMode, System.Windows.Forms">
+    <value>CenterImage</value>
+  </data>
+  <data name="pictureBox6.TabIndex" type="System.Int32, mscorlib">
+    <value>132</value>
+  </data>
+  <data name="&gt;&gt;pictureBox6.Name" xml:space="preserve">
+    <value>pictureBox6</value>
+  </data>
+  <data name="&gt;&gt;pictureBox6.Type" xml:space="preserve">
+    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;pictureBox6.Parent" xml:space="preserve">
+    <value>panelDetail</value>
+  </data>
+  <data name="&gt;&gt;pictureBox6.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="pictureBox5.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="pictureBox5.Location" type="System.Drawing.Point, System.Drawing">
+    <value>296, 147</value>
+  </data>
+  <data name="pictureBox5.Size" type="System.Drawing.Size, System.Drawing">
+    <value>28, 22</value>
+  </data>
+  <data name="pictureBox5.SizeMode" type="System.Windows.Forms.PictureBoxSizeMode, System.Windows.Forms">
+    <value>CenterImage</value>
+  </data>
+  <data name="pictureBox5.TabIndex" type="System.Int32, mscorlib">
+    <value>131</value>
+  </data>
+  <data name="&gt;&gt;pictureBox5.Name" xml:space="preserve">
+    <value>pictureBox5</value>
+  </data>
+  <data name="&gt;&gt;pictureBox5.Type" xml:space="preserve">
+    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;pictureBox5.Parent" xml:space="preserve">
+    <value>panelDetail</value>
+  </data>
+  <data name="&gt;&gt;pictureBox5.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="RqPont.Location" type="System.Drawing.Point, System.Drawing">
+    <value>470, 114</value>
+  </data>
+  <data name="RqPont.Size" type="System.Drawing.Size, System.Drawing">
+    <value>28, 22</value>
+  </data>
+  <data name="RqPont.SizeMode" type="System.Windows.Forms.PictureBoxSizeMode, System.Windows.Forms">
+    <value>CenterImage</value>
+  </data>
+  <data name="RqPont.TabIndex" type="System.Int32, mscorlib">
+    <value>130</value>
+  </data>
+  <data name="&gt;&gt;RqPont.Name" xml:space="preserve">
+    <value>RqPont</value>
+  </data>
+  <data name="&gt;&gt;RqPont.Type" xml:space="preserve">
+    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;RqPont.Parent" xml:space="preserve">
+    <value>panelDetail</value>
+  </data>
+  <data name="&gt;&gt;RqPont.ZOrder" xml:space="preserve">
+    <value>2</value>
   </data>
   <data name="panelDetail.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Fill</value>

@@ -78,6 +78,7 @@
             this.label13 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
             this.panelDetail = new System.Windows.Forms.Panel();
+            this.pictureBox12 = new System.Windows.Forms.PictureBox();
             this.panelLang.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbUpdating)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Spain_flag)).BeginInit();
@@ -88,6 +89,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.panelDetail.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox12)).BeginInit();
             this.SuspendLayout();
             // 
             // panelLang
@@ -446,6 +448,7 @@
             // panelDetail
             // 
             this.panelDetail.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(86)))), ((int)(((byte)(81)))));
+            this.panelDetail.Controls.Add(this.pictureBox12);
             this.panelDetail.Controls.Add(this.txtId);
             this.panelDetail.Controls.Add(this.label14);
             this.panelDetail.Controls.Add(this.label2);
@@ -484,6 +487,13 @@
             resources.ApplyResources(this.panelDetail, "panelDetail");
             this.panelDetail.Name = "panelDetail";
             // 
+            // pictureBox12
+            // 
+            this.pictureBox12.Image = global::WidraSoft.UI.Properties.Resources.asterisk;
+            resources.ApplyResources(this.pictureBox12, "pictureBox12");
+            this.pictureBox12.Name = "pictureBox12";
+            this.pictureBox12.TabStop = false;
+            // 
             // ProduitDetail
             // 
             resources.ApplyResources(this, "$this");
@@ -509,6 +519,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.panelDetail.ResumeLayout(false);
             this.panelDetail.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox12)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -564,5 +575,6 @@
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Panel panelDetail;
+        private System.Windows.Forms.PictureBox pictureBox12;
     }
 }

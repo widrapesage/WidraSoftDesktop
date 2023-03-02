@@ -41,6 +41,11 @@ namespace WidraSoft.UI
 
             Utilisateur utilisateur = new Utilisateur();
             lblusername.Text = utilisateur.GetFullUsername(vg_UtilisateurId);
+
+            txtEntreprise.Text = "WIDRA";
+            txtTypeAbonnement.Text = "Demo";
+            txtValidite.Text = "---";
+
         }
         [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
         private extern static void ReleaseCapture();
@@ -191,6 +196,12 @@ namespace WidraSoft.UI
         private void enregistrementsToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Form form = new EnregistrementsListe("1=1");
+            form.Show();
+        }
+
+        private void toolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            Form form = new TestANPR();
             form.Show();
         }
     }

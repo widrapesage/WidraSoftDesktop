@@ -83,6 +83,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.txtSortant = new System.Windows.Forms.TextBox();
             this.txtEntrant = new System.Windows.Forms.TextBox();
+            this.RqPont = new System.Windows.Forms.PictureBox();
             this.panelLang.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbUpdating)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Spain_flag)).BeginInit();
@@ -101,6 +102,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbRemoveRow)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbAddRow)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.RqPont)).BeginInit();
             this.SuspendLayout();
             // 
             // panelLang
@@ -234,6 +236,7 @@
             // panelDetail
             // 
             this.panelDetail.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(86)))), ((int)(((byte)(81)))));
+            this.panelDetail.Controls.Add(this.RqPont);
             this.panelDetail.Controls.Add(this.label5);
             this.panelDetail.Controls.Add(this.chx_InclureTicket);
             this.panelDetail.Controls.Add(this.label6);
@@ -584,6 +587,13 @@
             resources.ApplyResources(this.txtEntrant, "txtEntrant");
             this.txtEntrant.Name = "txtEntrant";
             // 
+            // RqPont
+            // 
+            this.RqPont.Image = global::WidraSoft.UI.Properties.Resources.asterisk;
+            resources.ApplyResources(this.RqPont, "RqPont");
+            this.RqPont.Name = "RqPont";
+            this.RqPont.TabStop = false;
+            // 
             // TablesDetail
             // 
             resources.ApplyResources(this, "$this");
@@ -617,6 +627,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbRemoveRow)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbAddRow)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.RqPont)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -675,5 +686,6 @@
         private System.Windows.Forms.PictureBox pbAddRow;
         private System.Windows.Forms.LinkLabel lblAddDgvChauffeurs;
         private System.Windows.Forms.LinkLabel lblRetirerDgvChauffeurs;
+        private System.Windows.Forms.PictureBox RqPont;
     }
 }

@@ -62,12 +62,38 @@ namespace WidraSoft.BL
             }
         }
 
+        public DataTable FindByTablesIdEnregistrementsId(Int32 TablesId, Int32 EnregistrementId)
+        {
+            try
+            {
+                TablesEnregistrementsDA tablesEnregistrements = new TablesEnregistrementsDA();
+                return tablesEnregistrements.FindByTablesIdEnregistrementsId(TablesId, EnregistrementId);
+            }
+            catch
+            {
+                throw;
+            }
+        }
+
         public void Add(Int32 TablesId, Int32 EnregistrementsId, Int32 EnregistrementParentId, Int32 Numero)
         {
             try
             {
                 TablesEnregistrementsDA tablesEnregistrements = new TablesEnregistrementsDA();
                 tablesEnregistrements.Add(TablesId, EnregistrementsId, EnregistrementParentId, Numero);
+            }
+            catch
+            {
+                throw;
+            }
+        }
+
+        public void Update(Int32 TablesId, Int32 EnregistrementsId, Int32 EnregistrementParentId, Int32 Numero)
+        {
+            try
+            {
+                TablesEnregistrementsDA tablesEnregistrements = new TablesEnregistrementsDA();
+                tablesEnregistrements.Update(TablesId, EnregistrementsId, EnregistrementParentId, Numero);
             }
             catch
             {

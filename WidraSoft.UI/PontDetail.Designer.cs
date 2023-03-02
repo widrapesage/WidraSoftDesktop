@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(PontDetail));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panelLang = new System.Windows.Forms.Panel();
             this.pbUpdating = new System.Windows.Forms.PictureBox();
             this.Spain_flag = new System.Windows.Forms.PictureBox();
@@ -77,6 +77,15 @@
             this.txtDesignation = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.txtActiverPoids = new System.Windows.Forms.TextBox();
+            this.pictureBox5 = new System.Windows.Forms.PictureBox();
+            this.pictureBox6 = new System.Windows.Forms.PictureBox();
+            this.pictureBox7 = new System.Windows.Forms.PictureBox();
+            this.pictureBox8 = new System.Windows.Forms.PictureBox();
+            this.pictureBox9 = new System.Windows.Forms.PictureBox();
+            this.pictureBox10 = new System.Windows.Forms.PictureBox();
+            this.pictureBox11 = new System.Windows.Forms.PictureBox();
+            this.pictureBox12 = new System.Windows.Forms.PictureBox();
+            this.pictureBox13 = new System.Windows.Forms.PictureBox();
             this.panelLang.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbUpdating)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Spain_flag)).BeginInit();
@@ -91,6 +100,15 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbRemoveRow)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbAddRow)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox12)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox13)).BeginInit();
             this.SuspendLayout();
             // 
             // panelLang
@@ -224,6 +242,15 @@
             // panelDetail
             // 
             this.panelDetail.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(86)))), ((int)(((byte)(81)))));
+            this.panelDetail.Controls.Add(this.pictureBox13);
+            this.panelDetail.Controls.Add(this.pictureBox12);
+            this.panelDetail.Controls.Add(this.pictureBox11);
+            this.panelDetail.Controls.Add(this.pictureBox10);
+            this.panelDetail.Controls.Add(this.pictureBox9);
+            this.panelDetail.Controls.Add(this.pictureBox8);
+            this.panelDetail.Controls.Add(this.pictureBox7);
+            this.panelDetail.Controls.Add(this.pictureBox6);
+            this.panelDetail.Controls.Add(this.pictureBox5);
             this.panelDetail.Controls.Add(this.label8);
             this.panelDetail.Controls.Add(this.cbWeighing_SettingsId);
             this.panelDetail.Controls.Add(this.dgvFirmes);
@@ -281,14 +308,14 @@
             this.dgvFirmes.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgvFirmes.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.Sunken;
             this.dgvFirmes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.Honeydew;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Calibri", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(86)))), ((int)(((byte)(81)))));
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvFirmes.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.Honeydew;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Calibri", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(86)))), ((int)(((byte)(81)))));
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvFirmes.DefaultCellStyle = dataGridViewCellStyle1;
             resources.ApplyResources(this.dgvFirmes, "dgvFirmes");
             this.dgvFirmes.Name = "dgvFirmes";
             this.dgvFirmes.RowTemplate.Height = 25;
@@ -509,6 +536,69 @@
             resources.ApplyResources(this.txtActiverPoids, "txtActiverPoids");
             this.txtActiverPoids.Name = "txtActiverPoids";
             // 
+            // pictureBox5
+            // 
+            this.pictureBox5.Image = global::WidraSoft.UI.Properties.Resources.asterisk;
+            resources.ApplyResources(this.pictureBox5, "pictureBox5");
+            this.pictureBox5.Name = "pictureBox5";
+            this.pictureBox5.TabStop = false;
+            // 
+            // pictureBox6
+            // 
+            this.pictureBox6.Image = global::WidraSoft.UI.Properties.Resources.asterisk;
+            resources.ApplyResources(this.pictureBox6, "pictureBox6");
+            this.pictureBox6.Name = "pictureBox6";
+            this.pictureBox6.TabStop = false;
+            // 
+            // pictureBox7
+            // 
+            this.pictureBox7.Image = global::WidraSoft.UI.Properties.Resources.asterisk;
+            resources.ApplyResources(this.pictureBox7, "pictureBox7");
+            this.pictureBox7.Name = "pictureBox7";
+            this.pictureBox7.TabStop = false;
+            // 
+            // pictureBox8
+            // 
+            this.pictureBox8.Image = global::WidraSoft.UI.Properties.Resources.asterisk;
+            resources.ApplyResources(this.pictureBox8, "pictureBox8");
+            this.pictureBox8.Name = "pictureBox8";
+            this.pictureBox8.TabStop = false;
+            // 
+            // pictureBox9
+            // 
+            this.pictureBox9.Image = global::WidraSoft.UI.Properties.Resources.asterisk;
+            resources.ApplyResources(this.pictureBox9, "pictureBox9");
+            this.pictureBox9.Name = "pictureBox9";
+            this.pictureBox9.TabStop = false;
+            // 
+            // pictureBox10
+            // 
+            this.pictureBox10.Image = global::WidraSoft.UI.Properties.Resources.asterisk;
+            resources.ApplyResources(this.pictureBox10, "pictureBox10");
+            this.pictureBox10.Name = "pictureBox10";
+            this.pictureBox10.TabStop = false;
+            // 
+            // pictureBox11
+            // 
+            this.pictureBox11.Image = global::WidraSoft.UI.Properties.Resources.asterisk;
+            resources.ApplyResources(this.pictureBox11, "pictureBox11");
+            this.pictureBox11.Name = "pictureBox11";
+            this.pictureBox11.TabStop = false;
+            // 
+            // pictureBox12
+            // 
+            this.pictureBox12.Image = global::WidraSoft.UI.Properties.Resources.asterisk;
+            resources.ApplyResources(this.pictureBox12, "pictureBox12");
+            this.pictureBox12.Name = "pictureBox12";
+            this.pictureBox12.TabStop = false;
+            // 
+            // pictureBox13
+            // 
+            this.pictureBox13.Image = global::WidraSoft.UI.Properties.Resources.asterisk;
+            resources.ApplyResources(this.pictureBox13, "pictureBox13");
+            this.pictureBox13.Name = "pictureBox13";
+            this.pictureBox13.TabStop = false;
+            // 
             // PontDetail
             // 
             resources.ApplyResources(this, "$this");
@@ -538,6 +628,15 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbRemoveRow)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbAddRow)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox12)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox13)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -591,5 +690,14 @@
         private System.Windows.Forms.LinkLabel lblRetirerDgvChauffeurs;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.ComboBox cbWeighing_SettingsId;
+        private System.Windows.Forms.PictureBox pictureBox7;
+        private System.Windows.Forms.PictureBox pictureBox6;
+        private System.Windows.Forms.PictureBox pictureBox5;
+        private System.Windows.Forms.PictureBox pictureBox8;
+        private System.Windows.Forms.PictureBox pictureBox10;
+        private System.Windows.Forms.PictureBox pictureBox9;
+        private System.Windows.Forms.PictureBox pictureBox11;
+        private System.Windows.Forms.PictureBox pictureBox12;
+        private System.Windows.Forms.PictureBox pictureBox13;
     }
 }
