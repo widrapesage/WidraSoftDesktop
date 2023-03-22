@@ -129,8 +129,21 @@ namespace WidraSoft.UI
                 }
             }
 
-            lbStatus.Text = "En cours";
+            Initialize_Data();
 
+            rb1x.Checked = true;
+            
+            //Lang
+            cbLang.DataSource = Language.Languages;
+            cbLang.ValueMember = null;
+            cbLang.DisplayMember = Language.Languages[0];
+            cbLang.SelectedIndex = 0;
+
+        }
+
+        private void Initialize_Data()
+        {
+            lbStatus.Text = "En cours";
 
             //Firme
             Firme firme = new Firme();
@@ -167,20 +180,8 @@ namespace WidraSoft.UI
             cbClient.DataSource = client.List("1=1");
             cbClient.DisplayMember = "DESIGNATION";
             cbClient.ValueMember = "CLIENTID";
-
-
             Clear();
-
-            rb1x.Checked = true;
             Bind_Dgv();
-
-
-            //Lang
-            cbLang.DataSource = Language.Languages;
-            cbLang.ValueMember = null;
-            cbLang.DisplayMember = Language.Languages[0];
-            cbLang.SelectedIndex = 0;
-
         }
 
         private void Bind_Dgv()
@@ -625,7 +626,8 @@ namespace WidraSoft.UI
             cbClient.ForeColor = Color.Black;
             btAddClient.Visible = false;
 
-
+            if (txtTareCamion.Visible)
+                txtTareCamion.Text = "";
             txtId.Text = "";
             lbPoidsBrut.Text = "";
             lbPoidsTare.Text = "";
@@ -648,7 +650,8 @@ namespace WidraSoft.UI
             cbProduit.Enabled = false;
             cbClient.Enabled = false;
             btPeser.Enabled = false;
-            
+            if (txtTareCamion.Visible)
+                txtTareCamion.Enabled = false;
 
             vg_IsEnabled = false;
         }
@@ -665,6 +668,8 @@ namespace WidraSoft.UI
             cbProduit.Enabled = true;
             cbClient.Enabled = true;
             btPeser.Enabled = true;
+            if (txtTareCamion.Visible)
+                txtTareCamion.Enabled = true;
 
             vg_IsEnabled = true;
         }
@@ -678,8 +683,7 @@ namespace WidraSoft.UI
             if (rb2x1.Checked == true)
             {
                 rb1x.Visible = false;
-            }
-            
+            }           
         }
 
         private void Disable_Checked_rbxs_only()
