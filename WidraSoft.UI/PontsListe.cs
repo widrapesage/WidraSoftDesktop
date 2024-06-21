@@ -44,12 +44,17 @@ namespace WidraSoft.UI
             DgvList.Columns["NUMPORTCOM"].Visible = true;
             DgvList.Columns["WEIGHT_SETTINGSID"].Visible = false;
             DgvList.Columns["WEIGHING_SETTINGSID"].Visible = false;
+            DgvList.Columns["ACTIVER_MULTIPLE_PARAM"].Visible = false;
             DgvList.Columns["ACTIVERPOIDS"].Visible = false;
             DgvList.Columns["BAUDRATE"].Visible = false;
             DgvList.Columns["DATABITS"].Visible = false;
             DgvList.Columns["STOPBITS"].Visible = false;
             DgvList.Columns["HANDSHAKE"].Visible = false;
             DgvList.Columns["READTIMEOUT"].Visible = false;
+            DgvList.Columns["MACHINE"].Visible = false;
+            DgvList.Columns["DEMARRAGE"].Visible = false;
+            DgvList.Columns["UTILISATEURID"].Visible = false;
+            DgvList.Columns["POIDS_DETECTION"].Visible = false;
             DgvList.Columns["DATECREATION"].Visible = true;
 
             DgvList.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;

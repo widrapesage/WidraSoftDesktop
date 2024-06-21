@@ -41,6 +41,8 @@
             this.excelToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.pDFToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.panelTitleBar = new System.Windows.Forms.Panel();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.cbTablesId = new System.Windows.Forms.ComboBox();
             this.txtSearchBox = new System.Windows.Forms.TextBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
@@ -52,6 +54,7 @@
             this.DgvList = new System.Windows.Forms.DataGridView();
             this.menuStrip1.SuspendLayout();
             this.panelTitleBar.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Spain_flag)).BeginInit();
@@ -96,6 +99,7 @@
             this.supprimerToolStripMenuItem.ForeColor = System.Drawing.Color.White;
             this.supprimerToolStripMenuItem.Image = global::WidraSoft.UI.Properties.Resources.remove;
             this.supprimerToolStripMenuItem.Name = "supprimerToolStripMenuItem";
+            this.supprimerToolStripMenuItem.Click += new System.EventHandler(this.supprimerToolStripMenuItem_Click);
             // 
             // ActualiserToolStripMenuItem
             // 
@@ -132,11 +136,32 @@
             // panelTitleBar
             // 
             this.panelTitleBar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(86)))), ((int)(((byte)(81)))));
+            this.panelTitleBar.Controls.Add(this.pictureBox2);
+            this.panelTitleBar.Controls.Add(this.cbTablesId);
             this.panelTitleBar.Controls.Add(this.txtSearchBox);
             this.panelTitleBar.Controls.Add(this.pictureBox1);
             this.panelTitleBar.Controls.Add(this.panel1);
             resources.ApplyResources(this.panelTitleBar, "panelTitleBar");
             this.panelTitleBar.Name = "panelTitleBar";
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox2.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pictureBox2.Image = global::WidraSoft.UI.Properties.Resources.table;
+            resources.ApplyResources(this.pictureBox2, "pictureBox2");
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.TabStop = false;
+            // 
+            // cbTablesId
+            // 
+            this.cbTablesId.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(62)))), ((int)(((byte)(60)))));
+            resources.ApplyResources(this.cbTablesId, "cbTablesId");
+            this.cbTablesId.ForeColor = System.Drawing.Color.White;
+            this.cbTablesId.FormattingEnabled = true;
+            this.cbTablesId.Name = "cbTablesId";
+            this.cbTablesId.SelectedIndexChanged += new System.EventHandler(this.cbTablesId_SelectedIndexChanged);
+            this.cbTablesId.SelectedValueChanged += new System.EventHandler(this.cbTablesId_SelectedValueChanged);
             // 
             // txtSearchBox
             // 
@@ -257,6 +282,7 @@
             this.menuStrip1.PerformLayout();
             this.panelTitleBar.ResumeLayout(false);
             this.panelTitleBar.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
@@ -290,5 +316,7 @@
         private System.Windows.Forms.ComboBox cbLang;
         private System.Windows.Forms.Panel panelList;
         private System.Windows.Forms.DataGridView DgvList;
+        private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.ComboBox cbTablesId;
     }
 }

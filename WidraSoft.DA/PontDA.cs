@@ -71,6 +71,25 @@ namespace WidraSoft.DA
             }
         }
 
+        public DataTable FindByMachineName(String Name)
+        {
+            String sql = "SELECT * FROM PONT WHERE MACHINE='" + Name + "'";
+            conn.ConnectionString = connString;
+            if (conn.State == ConnectionState.Closed)
+                conn.Open();
+            SqlCommand cmd = new SqlCommand(sql, conn);
+            try
+            {
+                SqlDataReader reader = cmd.ExecuteReader();
+                dt.Load(reader);
+                return dt;
+            }
+            catch
+            {
+                throw;
+            }
+        }
+
         public bool IfExists(String Name)
         {
             String sql = "SELECT COUNT(*) FROM PONT WHERE DESIGNATION='" + Name + "'";
@@ -82,6 +101,27 @@ namespace WidraSoft.DA
             {
                 Int32 nb = (int)cmd.ExecuteScalar();
                 if (nb > 0)
+                    return true;
+                else
+                    return false;
+            }
+            catch
+            {
+                throw;
+            }
+        }
+
+        public bool IsMultipleParam(Int32 PontId)
+        {
+            String sql = "SELECT ACTIVER_MULTIPLE_PARAM FROM PONT WHERE PONTID=" + PontId;
+            conn.ConnectionString = connString;
+            if (conn.State == ConnectionState.Closed)
+                conn.Open();
+            SqlCommand cmd = new SqlCommand(sql, conn);
+            try
+            {
+                Int32 result = (int)cmd.ExecuteScalar();
+                if (result == 1)
                     return true;
                 else
                     return false;
@@ -171,7 +211,7 @@ namespace WidraSoft.DA
        
 
         public void Add(String Designation, String NumPortCOM, Int32 Weight_SettingsId, Int32 Weighing_SettingsId, Int32 ActiverPoids, Int32 BaudRate,
-                        Int32 DataBits, String StopBits, String Handshake, Int32 ReadTimeOut)
+                        Int32 DataBits, String StopBits, String Handshake, Int32 ReadTimeOut, String Machine, String Demarrage, Int32 UtilisateurId, Int32 ActiverMultipleParam, Int32 Poids_Detection)
         {
             using (conn)
             {
@@ -190,6 +230,11 @@ namespace WidraSoft.DA
                 cmd.Parameters.Add("@STOPBITS", SqlDbType.VarChar).Value = StopBits;
                 cmd.Parameters.Add("@HANDSHAKE", SqlDbType.VarChar).Value = Handshake;
                 cmd.Parameters.Add("@READTIMEOUT", SqlDbType.Int).Value = ReadTimeOut;
+                cmd.Parameters.Add("@MACHINE", SqlDbType.VarChar).Value = Machine;
+                cmd.Parameters.Add("@DEMARRAGE", SqlDbType.VarChar).Value = Demarrage;
+                cmd.Parameters.Add("@UTILISATEURID", SqlDbType.Int).Value = UtilisateurId;
+                cmd.Parameters.Add("@ACTIVER_MULTIPLE_PARAM", SqlDbType.Int).Value = ActiverMultipleParam;
+                cmd.Parameters.Add("@POIDS_DETECTION", SqlDbType.Int).Value = Poids_Detection;
                 try
                 {
                     cmd.ExecuteNonQuery();
@@ -202,7 +247,7 @@ namespace WidraSoft.DA
         }
 
         public void Update(Int32 Id, String Designation, String NumPortCOM, Int32 Weight_SettingsId, Int32 Weighing_SettingsId, Int32 ActiverPoids, Int32 BaudRate,
-                        Int32 DataBits, String StopBits, String Handshake, Int32 ReadTimeOut)
+                        Int32 DataBits, String StopBits, String Handshake, Int32 ReadTimeOut, String Machine, String Demarrage, Int32 UtilisateurId, Int32 ActiverMultipleParam, Int32 Poids_Detection)
         {
             using (conn)
             {
@@ -222,6 +267,11 @@ namespace WidraSoft.DA
                 cmd.Parameters.Add("@STOPBITS", SqlDbType.VarChar).Value = StopBits;
                 cmd.Parameters.Add("@HANDSHAKE", SqlDbType.VarChar).Value = Handshake;
                 cmd.Parameters.Add("@READTIMEOUT", SqlDbType.Int).Value = ReadTimeOut;
+                cmd.Parameters.Add("@MACHINE", SqlDbType.VarChar).Value = Machine;
+                cmd.Parameters.Add("@DEMARRAGE", SqlDbType.VarChar).Value = Demarrage;
+                cmd.Parameters.Add("@UTILISATEURID", SqlDbType.Int).Value = UtilisateurId;
+                cmd.Parameters.Add("@ACTIVER_MULTIPLE_PARAM", SqlDbType.Int).Value = ActiverMultipleParam;
+                cmd.Parameters.Add("@POIDS_DETECTION", SqlDbType.Int).Value = Poids_Detection;
                 try
                 {
                     cmd.ExecuteNonQuery();

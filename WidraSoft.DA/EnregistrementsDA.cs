@@ -33,9 +33,9 @@ namespace WidraSoft.DA
             }
         }
 
-        public DataTable SearchBox(string filter)
+        public DataTable SearchBox(string filter, Int32 TablesId)
         {
-            String sql = "SELECT * FROM ENREGISTREMENTS WHERE NOM LIKE '%" + filter + "%'";
+            String sql = "SELECT * FROM ENREGISTREMENTS WHERE NOM LIKE '%" + filter + "%' AND TABLESID=" + TablesId;
             conn.ConnectionString = connString;
             if (conn.State == ConnectionState.Closed)
                 conn.Open();
@@ -71,6 +71,96 @@ namespace WidraSoft.DA
             }
         }
 
+        public bool IfExists(String Name, Int32 TablesId, Int32 ParentId)
+        {
+            String sql;
+            if (ParentId == 0)
+                sql = "SELECT COUNT(*) FROM ENREGISTREMENTS WHERE NOM='" + Name + "' AND TABLESID=" + TablesId;
+            else
+                sql = "SELECT COUNT(*) FROM ENREGISTREMENTS WHERE NOM='" + Name + "' AND TABLESID=" + TablesId + " AND PARENTID=" + ParentId;
+            conn.ConnectionString = connString;
+            if (conn.State == ConnectionState.Closed)
+                conn.Open();
+            SqlCommand cmd = new SqlCommand(sql, conn);
+            try
+            {
+                Int32 nb = (int)cmd.ExecuteScalar();
+                if (nb > 0)
+                    return true;
+                else
+                    return false;
+            }
+            catch
+            {   
+                throw;
+            }
+        }
+
+        public bool IfExistsWithCode(String Name, Int32 TablesId, Int32 ParentId)
+        {
+            String sql;
+            if (ParentId == 0)
+                sql = "SELECT COUNT(*) FROM ENREGISTREMENTS WHERE NOM + ' (' + CODE + ')'='" + Name + "' AND TABLESID=" + TablesId;
+            else
+                sql = "SELECT COUNT(*) FROM ENREGISTREMENTS WHERE NOM + ' (' + CODE + ')'='" + Name + "' AND TABLESID=" + TablesId + " AND PARENTID=" + ParentId;
+            conn.ConnectionString = connString;
+            if (conn.State == ConnectionState.Closed)
+                conn.Open();
+            SqlCommand cmd = new SqlCommand(sql, conn);
+            try
+            {
+                Int32 nb = (int)cmd.ExecuteScalar();
+                if (nb > 0)
+                    return true;
+                else
+                    return false;
+            }
+            catch
+            {
+                throw;
+            }
+        }
+
+
+
+        public DataTable FindByTableId(Int32 Id)
+        {
+            String sql = "SELECT * FROM ENREGISTREMENTS WHERE TABLESID=" + Id;
+            conn.ConnectionString = connString;
+            if (conn.State == ConnectionState.Closed)
+                conn.Open();
+            SqlCommand cmd = new SqlCommand(sql, conn);
+            try
+            {
+                SqlDataReader reader = cmd.ExecuteReader();
+                dt.Load(reader);
+                return dt;
+            }
+            catch
+            {
+                throw;
+            }
+        }
+
+        public DataTable FindByTableIdAndParentId(Int32 TablesId, Int32 ParentId)
+        {
+            String sql = "SELECT * FROM ENREGISTREMENTS WHERE TABLESID=" + TablesId + " AND PARENTID=" + ParentId;
+            conn.ConnectionString = connString;
+            if (conn.State == ConnectionState.Closed)
+                conn.Open();
+            SqlCommand cmd = new SqlCommand(sql, conn);
+            try
+            {
+                SqlDataReader reader = cmd.ExecuteReader();
+                dt.Load(reader);
+                return dt;
+            }
+            catch
+            {
+                throw;
+            }
+        }
+
         public string GetName(Int32 Id)
         {
 
@@ -90,9 +180,28 @@ namespace WidraSoft.DA
             }
         }
 
-        public void Add(String Nom, String Adresse, String CodePostal, String Localite, String Pays,
+        public string GetCode(Int32 Id)
+        {
+
+            String sql = "SELECT CODE FROM ENREGISTREMENTS WHERE ENREGISTREMENTSID=" + Id;
+            conn.ConnectionString = connString;
+            if (conn.State == ConnectionState.Closed)
+                conn.Open();
+            SqlCommand cmd = new SqlCommand(sql, conn);
+            try
+            {
+                String name = (string)cmd.ExecuteScalar();
+                return name;
+            }
+            catch
+            {
+                throw;
+            }
+        }
+
+        public void Add(Int32 TablesId, String Nom, String Code,String Adresse, String CodePostal, String Localite, String Pays,
             String Telephone, String Email, String NumTVA, String SiteWeb_Url, String Observations,
-            Int32 Bloque, String TexteBloque, Int32 Attention, String TexteAttention)
+            Int32 Bloque, String TexteBloque, Int32 Attention, String TexteAttention, Int32 ParentId)
         {
             using (conn)
             {
@@ -101,7 +210,9 @@ namespace WidraSoft.DA
                     conn.Open();
                 SqlCommand cmd = new SqlCommand("PS_ADD_ENREGISTREMENTS", conn);
                 cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Parameters.Add("@TABLESID", SqlDbType.Int).Value = TablesId;
                 cmd.Parameters.Add("@NOM", SqlDbType.VarChar).Value = Nom;
+                cmd.Parameters.Add("@CODE", SqlDbType.VarChar).Value = Code;
                 cmd.Parameters.Add("@ADRESSE", SqlDbType.VarChar).Value = Adresse;
                 cmd.Parameters.Add("@CODEPOSTAL", SqlDbType.VarChar).Value = CodePostal;
                 cmd.Parameters.Add("@LOCALITE", SqlDbType.VarChar).Value = Localite;
@@ -115,6 +226,7 @@ namespace WidraSoft.DA
                 cmd.Parameters.Add("@TEXTEBLOQUE", SqlDbType.VarChar).Value = TexteBloque;
                 cmd.Parameters.Add("@ATTENTION", SqlDbType.Int).Value = Attention;
                 cmd.Parameters.Add("@TEXTEATTENTION", SqlDbType.VarChar).Value = TexteAttention;
+                cmd.Parameters.Add("@PARENTID", SqlDbType.Int).Value = ParentId;
 
                 try
                 {
@@ -127,9 +239,9 @@ namespace WidraSoft.DA
             }
         }
 
-        public void Update(Int32 Id, String Nom, String Adresse, String CodePostal, String Localite, String Pays,
+        public void Update(Int32 Id, Int32 TablesId, String Nom, String Code, String Adresse, String CodePostal, String Localite, String Pays,
             String Telephone, String Email, String NumTVA, String SiteWeb_Url, String Observations,
-            Int32 Bloque, String TexteBloque, Int32 Attention, String TexteAttention)
+            Int32 Bloque, String TexteBloque, Int32 Attention, String TexteAttention, Int32 ParentId)
         {
             using (conn)
             {
@@ -139,7 +251,9 @@ namespace WidraSoft.DA
                 SqlCommand cmd = new SqlCommand("PS_UPDATE_ENREGISTREMENTS", conn);
                 cmd.CommandType = CommandType.StoredProcedure;
                 cmd.Parameters.Add("@ID", SqlDbType.Int).Value = Id;
+                cmd.Parameters.Add("@TABLESID", SqlDbType.Int).Value = TablesId;
                 cmd.Parameters.Add("@NOM", SqlDbType.VarChar).Value = Nom;
+                cmd.Parameters.Add("@CODE", SqlDbType.VarChar).Value = Code;
                 cmd.Parameters.Add("@ADRESSE", SqlDbType.VarChar).Value = Adresse;
                 cmd.Parameters.Add("@CODEPOSTAL", SqlDbType.VarChar).Value = CodePostal;
                 cmd.Parameters.Add("@LOCALITE", SqlDbType.VarChar).Value = Localite;
@@ -153,6 +267,7 @@ namespace WidraSoft.DA
                 cmd.Parameters.Add("@TEXTEBLOQUE", SqlDbType.VarChar).Value = TexteBloque;
                 cmd.Parameters.Add("@ATTENTION", SqlDbType.Int).Value = Attention;
                 cmd.Parameters.Add("@TEXTEATTENTION", SqlDbType.VarChar).Value = TexteAttention;
+                cmd.Parameters.Add("@PARENTID", SqlDbType.Int).Value = ParentId;
 
                 try
                 {

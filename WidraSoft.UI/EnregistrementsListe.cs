@@ -13,6 +13,7 @@ namespace WidraSoft.UI
 {
     public partial class EnregistrementsListe : Form
     {
+        bool bind_dgv = false;
         string vg_filter = "";
         public EnregistrementsListe(string filter)
         {
@@ -28,7 +29,19 @@ namespace WidraSoft.UI
         private void EnregistrementsListe_Load(object sender, EventArgs e)
         {
             this.CenterToScreen();
-            Bind_Dgv();
+
+            //Tables 
+            Tables tables = new Tables();
+            cbTablesId.DataSource = tables.List("1=1");
+            cbTablesId.DisplayMember = "NOM";
+            cbTablesId.ValueMember = "TABLESID";
+            cbTablesId.SelectedIndex = 0;
+
+            if (cbTablesId.Items.Count > 0 && cbTablesId.SelectedIndex > -1)
+                Bind_Dgv();
+
+            bind_dgv = true;
+
             cbLang.DataSource = Language.Languages;
             cbLang.ValueMember = null;
             cbLang.DisplayMember = Language.Languages[0];
@@ -38,8 +51,9 @@ namespace WidraSoft.UI
         private void Bind_Dgv()
         {
             Enregistrements enregistrements = new Enregistrements();
-            DgvList.DataSource = enregistrements.List(vg_filter);
+            DgvList.DataSource = enregistrements.FindByTableId(Common_functions.CbSelectedValue_Convert_Int(cbTablesId));
             DgvList.Columns[0].Visible = false;
+            DgvList.Columns["TABLESID"].Visible = false;
             DgvList.Columns["NOM"].Visible = true;
             DgvList.Columns["ADRESSE"].Visible = true;
             DgvList.Columns["CODEPOSTAL"].Visible = true;
@@ -54,6 +68,7 @@ namespace WidraSoft.UI
             DgvList.Columns["TEXTEBLOQUE"].Visible = false;
             DgvList.Columns["ATTENTION"].Visible = false;
             DgvList.Columns["TEXTEATTENTION"].Visible = false;
+            DgvList.Columns["PARENTID"].Visible = false;
             DgvList.Columns["DATECREATION"].Visible = true;
 
             DgvList.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
@@ -122,20 +137,20 @@ namespace WidraSoft.UI
         private void ouvrirToolStripMenuItem_Click(object sender, EventArgs e)
         {
             DgvList.Focus();
-            Form form = new EnregistrementsDetail("Edit", Common_functions.GetDatagridViewSelectedId(DgvList));
+            Form form = new EnregistrementsDetail("Edit", Common_functions.GetDatagridViewSelectedId(DgvList), Common_functions.CbSelectedValue_Convert_Int(cbTablesId));
             form.Show();
         }
 
         private void ajouterToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Form form = new EnregistrementsDetail("Add", 0);
+            Form form = new EnregistrementsDetail("Add", 0, Common_functions.CbSelectedValue_Convert_Int(cbTablesId));
             form.Show();
         }
 
         private void txtSearchBox_TextChanged(object sender, EventArgs e)
         {
             Enregistrements enregistrements = new Enregistrements();
-            DgvList.DataSource = enregistrements.SearchBox(txtSearchBox.Text);
+            DgvList.DataSource = enregistrements.SearchBox(txtSearchBox.Text, Common_functions.CbSelectedValue_Convert_Int(cbTablesId));
         }
 
         private void cbLang_SelectedIndexChanged(object sender, EventArgs e)
@@ -169,6 +184,29 @@ namespace WidraSoft.UI
                 language_Manager.ChangeLanguage("es", this, typeof(EnregistrementsListe));
                 Localize_Dgv("es");
             }
+        }
+
+        private void cbTablesId_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (bind_dgv)
+            {
+                if (cbTablesId.Items.Count > 0 && cbTablesId.SelectedIndex > -1)
+                    Bind_Dgv();
+            }
+            
+                
+
+
+        }
+
+        private void cbTablesId_SelectedValueChanged(object sender, EventArgs e)
+        {
+           
+        }
+
+        private void supprimerToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

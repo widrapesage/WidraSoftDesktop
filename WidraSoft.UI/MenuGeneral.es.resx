@@ -130,6 +130,45 @@
   <data name="menuStrip.Size" type="System.Drawing.Size, System.Drawing">
     <value>159, 830</value>
   </data>
+  <data name="toolStripMenuItem2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>247, 30</value>
+  </data>
+  <data name="toolStripMenuItem1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>247, 30</value>
+  </data>
+  <data name="toolStripMenuItem1.Text" xml:space="preserve">
+    <value>Cámara ANPR</value>
+  </data>
+  <data name="ParamPoidstoolStripMenuItem1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>247, 30</value>
+  </data>
+  <data name="ParamPoidstoolStripMenuItem1.Text" xml:space="preserve">
+    <value>Parámetro de peso</value>
+  </data>
+  <data name="pamamètresDePeséeToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>261, 30</value>
+  </data>
+  <data name="pamamètresDePeséeToolStripMenuItem.Text" xml:space="preserve">
+    <value>Parámetro de pesaje</value>
+  </data>
+  <data name="tablesSupplémentairesToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>261, 30</value>
+  </data>
+  <data name="tablesSupplémentairesToolStripMenuItem.Text" xml:space="preserve">
+    <value>Tablas adicionales</value>
+  </data>
+  <data name="tablesToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>188, 30</value>
+  </data>
+  <data name="tablesToolStripMenuItem.Text" xml:space="preserve">
+    <value>Tablas</value>
+  </data>
+  <data name="enregistrementsToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>188, 30</value>
+  </data>
+  <data name="enregistrementsToolStripMenuItem.Text" xml:space="preserve">
+    <value>Registros</value>
+  </data>
   <data name="lblChangerMdp.Size" type="System.Drawing.Size, System.Drawing">
     <value>134, 17</value>
   </data>

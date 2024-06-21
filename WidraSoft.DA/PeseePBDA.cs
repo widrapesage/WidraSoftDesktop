@@ -36,7 +36,7 @@ namespace WidraSoft.DA
         public DataTable SearchBox(string filter)
         {
             String sql = "SELECT * FROM VW_PESEEPB WHERE PONT LIKE '%" + filter + "%' OR FIRME LIKE '%" + filter + "%' OR CAMION LIKE '%" + filter + "%' OR CHAUFFEUR LIKE '%" + filter + "%' OR TRANSPORTEUR LIKE '%" + filter + "%' " +
-                "OR PRODUIT LIKE '%" + filter + "%' OR CLIENT LIKE '%" + filter + "%'";
+                "OR PRODUIT LIKE '%" + filter + "%' OR CLIENT LIKE '%" + filter + "%' AND ETATPESEE='Pending'";
             conn.ConnectionString = connString;
             if (conn.State == ConnectionState.Closed)
                 conn.Open();
@@ -74,7 +74,7 @@ namespace WidraSoft.DA
 
         public DataTable FindWeighingsInProgress()
         {
-            String sql = "SELECT * FROM VW_PESEEPB WHERE ETATPESEE='En cours' ORDER BY PESEEPBID DESC";
+            String sql = "SELECT * FROM VW_PESEEPB WHERE ETATPESEE='Pending' ORDER BY PESEEPBID DESC";
             conn.ConnectionString = connString;
             if (conn.State == ConnectionState.Closed)
                 conn.Open();
@@ -109,8 +109,11 @@ namespace WidraSoft.DA
             }
         }
 
-        public void Add(String TypePesee, String Flux, Int32 PontId, Int32 FirmeId, Int32 CamionId, Int32 ChauffeurId, Int32 TransporteurId, Int32 ProduitId, Int32 ClientId, Int32 ProvenanceId, Int32 DestinationId,
-                        Int32 Poids1, DateTime DateHeurePoids1, Int32 Poids2, DateTime DateHeurePoids2, Int32 PoidsNet, String UserInfo, String EtatPesee)
+        public void Add(String TypePesee, String Flux, Int32 PontId, Int32 WeighingSettingsId, Int32 FirmeId, Int32 CamionId, Int32 ChauffeurId, Int32 TransporteurId, Int32 ProduitId, Int32 ClientId, Int32 EnregistrementsId1,
+            Int32 TablesId1, String TablesName1, String Enregistrements1, Int32 EnregistrementsId2, Int32 TablesId2, String TablesName2, String Enregistrements2, Int32 EnregistrementsId3, Int32 TablesId3, String TablesName3, String Enregistrements3,
+            Int32 EnregistrementsId4, Int32 TablesId4, String TablesName4, String Enregistrements4, Int32 EnregistrementsId5, Int32 TablesId5, String TablesName5, String Enregistrements5, Int32 EnregistrementsId6, Int32 TablesId6, String TablesName6, String Enregistrements6,
+            Int32 EnregistrementsId7, Int32 TablesId7, String TablesName7, String Enregistrements7,
+            Int32 Poids1, DateTime DateHeurePoids1, Int32 Poids2, DateTime DateHeurePoids2, Int32 PoidsNet, String UserInfo, String EtatPesee)
         {
             using (conn)
             {
@@ -122,14 +125,41 @@ namespace WidraSoft.DA
                 cmd.Parameters.Add("@TYPEPESEE", SqlDbType.VarChar).Value = TypePesee;
                 cmd.Parameters.Add("@FLUX", SqlDbType.VarChar).Value = Flux;
                 cmd.Parameters.Add("@PONTID", SqlDbType.Int).Value = PontId;
+                cmd.Parameters.Add("@WEIGHING_SETTINGSID", SqlDbType.Int).Value = WeighingSettingsId;
                 cmd.Parameters.Add("@FIRMEID", SqlDbType.Int).Value = FirmeId;
                 cmd.Parameters.Add("@CAMIONID", SqlDbType.Int).Value = CamionId;
                 cmd.Parameters.Add("@CHAUFFEURID", SqlDbType.Int).Value = ChauffeurId;
                 cmd.Parameters.Add("@TRANSPORTEURID", SqlDbType.Int).Value = TransporteurId;
                 cmd.Parameters.Add("@PRODUITID", SqlDbType.Int).Value = ProduitId;
                 cmd.Parameters.Add("@CLIENTID", SqlDbType.Int).Value = ClientId;
-                cmd.Parameters.Add("@PROVENANCEID", SqlDbType.Int).Value = ProvenanceId;
-                cmd.Parameters.Add("@DESTINATIONID", SqlDbType.Int).Value = DestinationId;
+                cmd.Parameters.Add("@ENREGISTREMENTSID1", SqlDbType.Int).Value = EnregistrementsId1;
+                cmd.Parameters.Add("@TABLESID1", SqlDbType.Int).Value = TablesId1;
+                cmd.Parameters.Add("@TABLESNAME1", SqlDbType.VarChar).Value = TablesName1;
+                cmd.Parameters.Add("@ENREGISTREMENTS1", SqlDbType.VarChar).Value = Enregistrements1;
+                cmd.Parameters.Add("@ENREGISTREMENTSID2", SqlDbType.Int).Value = EnregistrementsId2;
+                cmd.Parameters.Add("@TABLESID2", SqlDbType.Int).Value = TablesId2;
+                cmd.Parameters.Add("@TABLESNAME2", SqlDbType.VarChar).Value = TablesName2;
+                cmd.Parameters.Add("@ENREGISTREMENTS2", SqlDbType.VarChar).Value = Enregistrements2;
+                cmd.Parameters.Add("@ENREGISTREMENTSID3", SqlDbType.Int).Value = EnregistrementsId3;
+                cmd.Parameters.Add("@TABLESID3", SqlDbType.Int).Value = TablesId3;
+                cmd.Parameters.Add("@TABLESNAME3", SqlDbType.VarChar).Value = TablesName3;
+                cmd.Parameters.Add("@ENREGISTREMENTS3", SqlDbType.VarChar).Value = Enregistrements3;
+                cmd.Parameters.Add("@ENREGISTREMENTSID4", SqlDbType.Int).Value = EnregistrementsId4;
+                cmd.Parameters.Add("@TABLESID4", SqlDbType.Int).Value = TablesId4;
+                cmd.Parameters.Add("@TABLESNAME4", SqlDbType.VarChar).Value = TablesName4;
+                cmd.Parameters.Add("@ENREGISTREMENTS4", SqlDbType.VarChar).Value = Enregistrements4;
+                cmd.Parameters.Add("@ENREGISTREMENTSID5", SqlDbType.Int).Value = EnregistrementsId5;
+                cmd.Parameters.Add("@TABLESID5", SqlDbType.Int).Value = TablesId5;
+                cmd.Parameters.Add("@TABLESNAME5", SqlDbType.VarChar).Value = TablesName5;
+                cmd.Parameters.Add("@ENREGISTREMENTS5", SqlDbType.VarChar).Value = Enregistrements5;
+                cmd.Parameters.Add("@ENREGISTREMENTSID6", SqlDbType.Int).Value = EnregistrementsId6;
+                cmd.Parameters.Add("@TABLESID6", SqlDbType.Int).Value = TablesId6;
+                cmd.Parameters.Add("@TABLESNAME6", SqlDbType.VarChar).Value = TablesName6;
+                cmd.Parameters.Add("@ENREGISTREMENTS6", SqlDbType.VarChar).Value = Enregistrements6;
+                cmd.Parameters.Add("@ENREGISTREMENTSID7", SqlDbType.Int).Value = EnregistrementsId7;
+                cmd.Parameters.Add("@TABLESID7", SqlDbType.Int).Value = TablesId7;
+                cmd.Parameters.Add("@TABLESNAME7", SqlDbType.VarChar).Value = TablesName7;
+                cmd.Parameters.Add("@ENREGISTREMENTS7", SqlDbType.VarChar).Value = Enregistrements7;
                 cmd.Parameters.Add("@POIDS1", SqlDbType.Int).Value = Poids1;
                 cmd.Parameters.Add("@DATEHEUREPOIDS1", SqlDbType.DateTime).Value = DateHeurePoids1;
                 cmd.Parameters.Add("@POIDS2", SqlDbType.Int).Value = Poids2;
@@ -148,8 +178,11 @@ namespace WidraSoft.DA
             }
         }
 
-        public void Update(Int32 Id, String TypePesee, String Flux, Int32 PontId, Int32 FirmeId, Int32 CamionId, Int32 ChauffeurId, Int32 TransporteurId, Int32 ProduitId, Int32 ClientId, Int32 ProvenanceId, Int32 DestinationId,
-                        Int32 Poids1, DateTime DateHeurePoids1, Int32 Poids2, DateTime DateHeurePoids2, Int32 PoidsNet, String UserInfo, String EtatPesee)
+        public void Update(Int32 Id, String TypePesee, String Flux, Int32 PontId, Int32 WeighingSettingsId, Int32 FirmeId, Int32 CamionId, Int32 ChauffeurId, Int32 TransporteurId, Int32 ProduitId, Int32 ClientId, Int32 EnregistrementsId1,
+            Int32 TablesId1, String TablesName1, String Enregistrements1, Int32 EnregistrementsId2, Int32 TablesId2, String TablesName2, String Enregistrements2, Int32 EnregistrementsId3, Int32 TablesId3, String TablesName3, String Enregistrements3,
+            Int32 EnregistrementsId4, Int32 TablesId4, String TablesName4, String Enregistrements4, Int32 EnregistrementsId5, Int32 TablesId5, String TablesName5, String Enregistrements5, Int32 EnregistrementsId6, Int32 TablesId6, String TablesName6, String Enregistrements6,
+            Int32 EnregistrementsId7, Int32 TablesId7, String TablesName7, String Enregistrements7,
+            Int32 Poids1, DateTime DateHeurePoids1, Int32 Poids2, DateTime DateHeurePoids2, Int32 PoidsNet, String UserInfo, String EtatPesee)
         {
             using (conn)
             {
@@ -162,14 +195,41 @@ namespace WidraSoft.DA
                 cmd.Parameters.Add("@TYPEPESEE", SqlDbType.VarChar).Value = TypePesee;
                 cmd.Parameters.Add("@FLUX", SqlDbType.VarChar).Value = Flux;
                 cmd.Parameters.Add("@PONTID", SqlDbType.Int).Value = PontId;
+                cmd.Parameters.Add("@WEIGHING_SETTINGSID", SqlDbType.Int).Value = WeighingSettingsId;
                 cmd.Parameters.Add("@FIRMEID", SqlDbType.Int).Value = FirmeId;
                 cmd.Parameters.Add("@CAMIONID", SqlDbType.Int).Value = CamionId;
                 cmd.Parameters.Add("@CHAUFFEURID", SqlDbType.Int).Value = ChauffeurId;
                 cmd.Parameters.Add("@TRANSPORTEURID", SqlDbType.Int).Value = TransporteurId;
                 cmd.Parameters.Add("@PRODUITID", SqlDbType.Int).Value = ProduitId;
                 cmd.Parameters.Add("@CLIENTID", SqlDbType.Int).Value = ClientId;
-                cmd.Parameters.Add("@PROVENANCEID", SqlDbType.Int).Value = ProvenanceId;
-                cmd.Parameters.Add("@DESTINATIONID", SqlDbType.Int).Value = DestinationId;
+                cmd.Parameters.Add("@ENREGISTREMENTSID1", SqlDbType.Int).Value = EnregistrementsId1;
+                cmd.Parameters.Add("@TABLESID1", SqlDbType.Int).Value = TablesId1;
+                cmd.Parameters.Add("@TABLESNAME1", SqlDbType.VarChar).Value = TablesName1;
+                cmd.Parameters.Add("@ENREGISTREMENTS1", SqlDbType.VarChar).Value = Enregistrements1;
+                cmd.Parameters.Add("@ENREGISTREMENTSID2", SqlDbType.Int).Value = EnregistrementsId2;
+                cmd.Parameters.Add("@TABLESID2", SqlDbType.Int).Value = TablesId2;
+                cmd.Parameters.Add("@TABLESNAME2", SqlDbType.VarChar).Value = TablesName2;
+                cmd.Parameters.Add("@ENREGISTREMENTS2", SqlDbType.VarChar).Value = Enregistrements2;
+                cmd.Parameters.Add("@ENREGISTREMENTSID3", SqlDbType.Int).Value = EnregistrementsId3;
+                cmd.Parameters.Add("@TABLESID3", SqlDbType.Int).Value = TablesId3;
+                cmd.Parameters.Add("@TABLESNAME3", SqlDbType.VarChar).Value = TablesName3;
+                cmd.Parameters.Add("@ENREGISTREMENTS3", SqlDbType.VarChar).Value = Enregistrements3;
+                cmd.Parameters.Add("@ENREGISTREMENTSID4", SqlDbType.Int).Value = EnregistrementsId4;
+                cmd.Parameters.Add("@TABLESID4", SqlDbType.Int).Value = TablesId4;
+                cmd.Parameters.Add("@TABLESNAME4", SqlDbType.VarChar).Value = TablesName4;
+                cmd.Parameters.Add("@ENREGISTREMENTS4", SqlDbType.VarChar).Value = Enregistrements4;
+                cmd.Parameters.Add("@ENREGISTREMENTSID5", SqlDbType.Int).Value = EnregistrementsId5;
+                cmd.Parameters.Add("@TABLESID5", SqlDbType.Int).Value = TablesId5;
+                cmd.Parameters.Add("@TABLESNAME5", SqlDbType.VarChar).Value = TablesName5;
+                cmd.Parameters.Add("@ENREGISTREMENTS5", SqlDbType.VarChar).Value = Enregistrements5;
+                cmd.Parameters.Add("@ENREGISTREMENTSID6", SqlDbType.Int).Value = EnregistrementsId6;
+                cmd.Parameters.Add("@TABLESID6", SqlDbType.Int).Value = TablesId6;
+                cmd.Parameters.Add("@TABLESNAME6", SqlDbType.VarChar).Value = TablesName6;
+                cmd.Parameters.Add("@ENREGISTREMENTS6", SqlDbType.VarChar).Value = Enregistrements6;
+                cmd.Parameters.Add("@ENREGISTREMENTSID7", SqlDbType.Int).Value = EnregistrementsId7;
+                cmd.Parameters.Add("@TABLESID7", SqlDbType.Int).Value = TablesId7;
+                cmd.Parameters.Add("@TABLESNAME7", SqlDbType.VarChar).Value = TablesName7;
+                cmd.Parameters.Add("@ENREGISTREMENTS7", SqlDbType.VarChar).Value = Enregistrements7;
                 cmd.Parameters.Add("@POIDS1", SqlDbType.Int).Value = Poids1;
                 cmd.Parameters.Add("@DATEHEUREPOIDS1", SqlDbType.DateTime).Value = DateHeurePoids1;
                 cmd.Parameters.Add("@POIDS2", SqlDbType.Int).Value = Poids2;

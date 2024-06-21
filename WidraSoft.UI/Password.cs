@@ -106,6 +106,11 @@ namespace WidraSoft.UI
 
             }
         }
+
+        private void lbPont_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 
 }

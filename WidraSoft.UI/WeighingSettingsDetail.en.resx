@@ -112,11 +112,35 @@
   <data name="gbChampsPesée.Text" xml:space="preserve">
     <value>Weighing fields</value>
   </data>
+  <data name="label24.Location" type="System.Drawing.Point, System.Drawing">
+    <value>399, 29</value>
+  </data>
+  <data name="label24.Size" type="System.Drawing.Size, System.Drawing">
+    <value>100, 19</value>
+  </data>
+  <data name="label24.Text" xml:space="preserve">
+    <value>Easy addition</value>
+  </data>
+  <data name="label22.Location" type="System.Drawing.Point, System.Drawing">
+    <value>283, 29</value>
+  </data>
+  <data name="label22.Size" type="System.Drawing.Size, System.Drawing">
+    <value>68, 19</value>
+  </data>
+  <data name="label22.Text" xml:space="preserve">
+    <value>Terminal</value>
+  </data>
   <data name="label10.Size" type="System.Drawing.Size, System.Drawing">
-    <value>49, 19</value>
+    <value>71, 19</value>
   </data>
   <data name="label10.Text" xml:space="preserve">
-    <value>Origin</value>
+    <value>Required</value>
+  </data>
+  <data name="label6.Size" type="System.Drawing.Size, System.Drawing">
+    <value>37, 19</value>
+  </data>
+  <data name="label6.Text" xml:space="preserve">
+    <value>Firm</value>
   </data>
   <data name="label5.Size" type="System.Drawing.Size, System.Drawing">
     <value>71, 19</value>
@@ -159,6 +183,93 @@
   </data>
   <data name="label2.Text" xml:space="preserve">
     <value>Created</value>
+  </data>
+  <data name="ChampsSupplementaire.Text" xml:space="preserve">
+    <value>Additional Fields</value>
+  </data>
+  <data name="label23.Size" type="System.Drawing.Size, System.Drawing">
+    <value>100, 19</value>
+  </data>
+  <data name="label23.Text" xml:space="preserve">
+    <value>Easy addition</value>
+  </data>
+  <data name="label20.Size" type="System.Drawing.Size, System.Drawing">
+    <value>68, 19</value>
+  </data>
+  <data name="label20.Text" xml:space="preserve">
+    <value>Terminal</value>
+  </data>
+  <data name="label34.Size" type="System.Drawing.Size, System.Drawing">
+    <value>52, 19</value>
+  </data>
+  <data name="label34.Text" xml:space="preserve">
+    <value>Field 7</value>
+  </data>
+  <data name="label31.Size" type="System.Drawing.Size, System.Drawing">
+    <value>52, 19</value>
+  </data>
+  <data name="label31.Text" xml:space="preserve">
+    <value>Field 6</value>
+  </data>
+  <data name="label28.Size" type="System.Drawing.Size, System.Drawing">
+    <value>95, 19</value>
+  </data>
+  <data name="label28.Text" xml:space="preserve">
+    <value>Display code</value>
+  </data>
+  <data name="label19.Size" type="System.Drawing.Size, System.Drawing">
+    <value>71, 19</value>
+  </data>
+  <data name="label19.Text" xml:space="preserve">
+    <value>Required</value>
+  </data>
+  <data name="label18.Size" type="System.Drawing.Size, System.Drawing">
+    <value>52, 19</value>
+  </data>
+  <data name="label18.Text" xml:space="preserve">
+    <value>Field 5</value>
+  </data>
+  <data name="label14.Size" type="System.Drawing.Size, System.Drawing">
+    <value>52, 19</value>
+  </data>
+  <data name="label14.Text" xml:space="preserve">
+    <value>Field 4</value>
+  </data>
+  <data name="label13.Size" type="System.Drawing.Size, System.Drawing">
+    <value>52, 19</value>
+  </data>
+  <data name="label13.Text" xml:space="preserve">
+    <value>Field 3</value>
+  </data>
+  <data name="label12.Size" type="System.Drawing.Size, System.Drawing">
+    <value>52, 19</value>
+  </data>
+  <data name="label12.Text" xml:space="preserve">
+    <value>Field 2</value>
+  </data>
+  <data name="label11.Size" type="System.Drawing.Size, System.Drawing">
+    <value>52, 19</value>
+  </data>
+  <data name="label11.Text" xml:space="preserve">
+    <value>Field 1</value>
+  </data>
+  <data name="label27.Size" type="System.Drawing.Size, System.Drawing">
+    <value>50, 19</value>
+  </data>
+  <data name="label27.Text" xml:space="preserve">
+    <value>Footer</value>
+  </data>
+  <data name="label26.Size" type="System.Drawing.Size, System.Drawing">
+    <value>68, 19</value>
+  </data>
+  <data name="label26.Text" xml:space="preserve">
+    <value>Header 2</value>
+  </data>
+  <data name="label25.Size" type="System.Drawing.Size, System.Drawing">
+    <value>68, 19</value>
+  </data>
+  <data name="label25.Text" xml:space="preserve">
+    <value>Header 1</value>
   </data>
   <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>

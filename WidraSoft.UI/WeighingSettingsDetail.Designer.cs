@@ -42,24 +42,53 @@
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.lbAjouter = new System.Windows.Forms.LinkLabel();
             this.lbSupprimer = new System.Windows.Forms.LinkLabel();
-            this.panelDetail = new System.Windows.Forms.Panel();
             this.gbFiltres = new System.Windows.Forms.GroupBox();
             this.label15 = new System.Windows.Forms.Label();
-            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.txtPontFirme = new System.Windows.Forms.TextBox();
             this.label16 = new System.Windows.Forms.Label();
-            this.textBox6 = new System.Windows.Forms.TextBox();
+            this.txtCamionChauffeur = new System.Windows.Forms.TextBox();
             this.label17 = new System.Windows.Forms.Label();
-            this.textBox7 = new System.Windows.Forms.TextBox();
-            this.checkBox5 = new System.Windows.Forms.CheckBox();
-            this.checkBox6 = new System.Windows.Forms.CheckBox();
-            this.checkBox7 = new System.Windows.Forms.CheckBox();
+            this.txtCamionTransporteur = new System.Windows.Forms.TextBox();
+            this.chx_CamionTransporteur = new System.Windows.Forms.CheckBox();
+            this.chx_PontFirme = new System.Windows.Forms.CheckBox();
+            this.chx_CamionChauffeur = new System.Windows.Forms.CheckBox();
             this.gbChampsPesée = new System.Windows.Forms.GroupBox();
+            this.txtAjoutFirme = new System.Windows.Forms.TextBox();
+            this.txtAjoutClient = new System.Windows.Forms.TextBox();
+            this.chx_AjoutClient = new System.Windows.Forms.CheckBox();
+            this.txtAjoutProduit = new System.Windows.Forms.TextBox();
+            this.chx_AjoutProduit = new System.Windows.Forms.CheckBox();
+            this.txtAjoutTransporteur = new System.Windows.Forms.TextBox();
+            this.chx_AjoutTransporteur = new System.Windows.Forms.CheckBox();
+            this.txtAjoutChauffeur = new System.Windows.Forms.TextBox();
+            this.chx_AjoutChauffeur = new System.Windows.Forms.CheckBox();
+            this.txtAjoutCamion = new System.Windows.Forms.TextBox();
+            this.chx_AjoutCamion = new System.Windows.Forms.CheckBox();
+            this.label24 = new System.Windows.Forms.Label();
+            this.chx_AjoutFirme = new System.Windows.Forms.CheckBox();
+            this.cbClientBorne = new System.Windows.Forms.ComboBox();
+            this.cbProduitBorne = new System.Windows.Forms.ComboBox();
+            this.cbTransporteurBorne = new System.Windows.Forms.ComboBox();
+            this.cbChauffeurBorne = new System.Windows.Forms.ComboBox();
+            this.cbCamionBorne = new System.Windows.Forms.ComboBox();
+            this.cbFirmeBorne = new System.Windows.Forms.ComboBox();
+            this.label22 = new System.Windows.Forms.Label();
+            this.txtClientObligatoire = new System.Windows.Forms.TextBox();
+            this.chx_ClientObligatoire = new System.Windows.Forms.CheckBox();
+            this.txtProduitObligatoire = new System.Windows.Forms.TextBox();
+            this.chx_ProduitObligatoire = new System.Windows.Forms.CheckBox();
+            this.txtTransporteurObligatoire = new System.Windows.Forms.TextBox();
+            this.chx_TransporteurObligatoire = new System.Windows.Forms.CheckBox();
+            this.txtChauffeurObligatoire = new System.Windows.Forms.TextBox();
+            this.chx_ChauffeurObligatoire = new System.Windows.Forms.CheckBox();
+            this.txtCamionObligatoire = new System.Windows.Forms.TextBox();
+            this.chx_CamionObligatoire = new System.Windows.Forms.CheckBox();
             this.label10 = new System.Windows.Forms.Label();
-            this.txtProvenance = new System.Windows.Forms.TextBox();
-            this.chx_Provenance = new System.Windows.Forms.CheckBox();
+            this.txtFirmeObligatoire = new System.Windows.Forms.TextBox();
+            this.chx_FirmeObligatoire = new System.Windows.Forms.CheckBox();
             this.label6 = new System.Windows.Forms.Label();
-            this.txtDestination = new System.Windows.Forms.TextBox();
-            this.chx_Destination = new System.Windows.Forms.CheckBox();
+            this.txtFirme = new System.Windows.Forms.TextBox();
+            this.chx_Firme = new System.Windows.Forms.CheckBox();
             this.label5 = new System.Windows.Forms.Label();
             this.txtClient = new System.Windows.Forms.TextBox();
             this.chx_Client = new System.Windows.Forms.CheckBox();
@@ -81,6 +110,104 @@
             this.label2 = new System.Windows.Forms.Label();
             this.txtDesignation = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.tabControl2 = new System.Windows.Forms.TabControl();
+            this.General = new System.Windows.Forms.TabPage();
+            this.RqPont = new System.Windows.Forms.PictureBox();
+            this.ChampsSupplementaire = new System.Windows.Forms.TabPage();
+            this.txtAjoutChamp7 = new System.Windows.Forms.TextBox();
+            this.chx_AjoutChamp7 = new System.Windows.Forms.CheckBox();
+            this.txtAjoutChamp6 = new System.Windows.Forms.TextBox();
+            this.chx_AjoutChamp6 = new System.Windows.Forms.CheckBox();
+            this.txtAjoutChamp5 = new System.Windows.Forms.TextBox();
+            this.chx_AjoutChamp5 = new System.Windows.Forms.CheckBox();
+            this.txtAjoutChamp4 = new System.Windows.Forms.TextBox();
+            this.chx_AjoutChamp4 = new System.Windows.Forms.CheckBox();
+            this.txtAjoutChamp3 = new System.Windows.Forms.TextBox();
+            this.chx_AjoutChamp3 = new System.Windows.Forms.CheckBox();
+            this.txtAjoutChamp2 = new System.Windows.Forms.TextBox();
+            this.chx_AjoutChamp2 = new System.Windows.Forms.CheckBox();
+            this.label23 = new System.Windows.Forms.Label();
+            this.txtAjoutChamp1 = new System.Windows.Forms.TextBox();
+            this.chx_AjoutChamp1 = new System.Windows.Forms.CheckBox();
+            this.txtTicketChamp7 = new System.Windows.Forms.TextBox();
+            this.cbx_TicketChamp7 = new System.Windows.Forms.CheckBox();
+            this.txtTicketChamp6 = new System.Windows.Forms.TextBox();
+            this.cbx_TicketChamp6 = new System.Windows.Forms.CheckBox();
+            this.txtTicketChamp5 = new System.Windows.Forms.TextBox();
+            this.cbx_TicketChamp5 = new System.Windows.Forms.CheckBox();
+            this.txtTicketChamp4 = new System.Windows.Forms.TextBox();
+            this.cbx_TicketChamp4 = new System.Windows.Forms.CheckBox();
+            this.txtTicketChamp3 = new System.Windows.Forms.TextBox();
+            this.cbx_TicketChamp3 = new System.Windows.Forms.CheckBox();
+            this.txtTicketChamp2 = new System.Windows.Forms.TextBox();
+            this.cbx_TicketChamp2 = new System.Windows.Forms.CheckBox();
+            this.label21 = new System.Windows.Forms.Label();
+            this.txtTicketChamp1 = new System.Windows.Forms.TextBox();
+            this.cbx_TicketChamp1 = new System.Windows.Forms.CheckBox();
+            this.cbBorneChamp7 = new System.Windows.Forms.ComboBox();
+            this.cbBorneChamp6 = new System.Windows.Forms.ComboBox();
+            this.cbBorneChamp5 = new System.Windows.Forms.ComboBox();
+            this.cbBorneChamp4 = new System.Windows.Forms.ComboBox();
+            this.cbBorneChamp3 = new System.Windows.Forms.ComboBox();
+            this.cbBorneChamp2 = new System.Windows.Forms.ComboBox();
+            this.cbBorneChamp1 = new System.Windows.Forms.ComboBox();
+            this.label20 = new System.Windows.Forms.Label();
+            this.txtAfficherCode7 = new System.Windows.Forms.TextBox();
+            this.chx_AfficherCode7 = new System.Windows.Forms.CheckBox();
+            this.txtObligatoire7 = new System.Windows.Forms.TextBox();
+            this.chx_Obligatoire7 = new System.Windows.Forms.CheckBox();
+            this.label34 = new System.Windows.Forms.Label();
+            this.cbChamp7 = new System.Windows.Forms.ComboBox();
+            this.txtAfficherCode6 = new System.Windows.Forms.TextBox();
+            this.chx_AfficherCode6 = new System.Windows.Forms.CheckBox();
+            this.txtObligatoire6 = new System.Windows.Forms.TextBox();
+            this.chx_Obligatoire6 = new System.Windows.Forms.CheckBox();
+            this.label31 = new System.Windows.Forms.Label();
+            this.cbChamp6 = new System.Windows.Forms.ComboBox();
+            this.txtAfficherCode5 = new System.Windows.Forms.TextBox();
+            this.chx_AfficherCode5 = new System.Windows.Forms.CheckBox();
+            this.txtAfficherCode4 = new System.Windows.Forms.TextBox();
+            this.chx_AfficherCode4 = new System.Windows.Forms.CheckBox();
+            this.txtAfficherCode3 = new System.Windows.Forms.TextBox();
+            this.chx_AfficherCode3 = new System.Windows.Forms.CheckBox();
+            this.txtAfficherCode2 = new System.Windows.Forms.TextBox();
+            this.chx_AfficherCode2 = new System.Windows.Forms.CheckBox();
+            this.label28 = new System.Windows.Forms.Label();
+            this.txtAfficherCode1 = new System.Windows.Forms.TextBox();
+            this.chx_AfficherCode1 = new System.Windows.Forms.CheckBox();
+            this.txtObligatoire5 = new System.Windows.Forms.TextBox();
+            this.chx_Obligatoire5 = new System.Windows.Forms.CheckBox();
+            this.txtObligatoire4 = new System.Windows.Forms.TextBox();
+            this.chx_Obligatoire4 = new System.Windows.Forms.CheckBox();
+            this.txtObligatoire3 = new System.Windows.Forms.TextBox();
+            this.chx_Obligatoire3 = new System.Windows.Forms.CheckBox();
+            this.txtObligatoire2 = new System.Windows.Forms.TextBox();
+            this.chx_Obligatoire2 = new System.Windows.Forms.CheckBox();
+            this.label19 = new System.Windows.Forms.Label();
+            this.txtObligatoire1 = new System.Windows.Forms.TextBox();
+            this.chx_Obligatoire1 = new System.Windows.Forms.CheckBox();
+            this.label18 = new System.Windows.Forms.Label();
+            this.cbChamp5 = new System.Windows.Forms.ComboBox();
+            this.label14 = new System.Windows.Forms.Label();
+            this.cbChamp4 = new System.Windows.Forms.ComboBox();
+            this.label13 = new System.Windows.Forms.Label();
+            this.cbChamp3 = new System.Windows.Forms.ComboBox();
+            this.label12 = new System.Windows.Forms.Label();
+            this.cbChamp2 = new System.Windows.Forms.ComboBox();
+            this.label11 = new System.Windows.Forms.Label();
+            this.cbChamp1 = new System.Windows.Forms.ComboBox();
+            this.Ticket = new System.Windows.Forms.TabPage();
+            this.pbLogo = new System.Windows.Forms.PictureBox();
+            this.label30 = new System.Windows.Forms.Label();
+            this.label29 = new System.Windows.Forms.Label();
+            this.cbFormat = new System.Windows.Forms.ComboBox();
+            this.label27 = new System.Windows.Forms.Label();
+            this.txtFooter = new System.Windows.Forms.TextBox();
+            this.label26 = new System.Windows.Forms.Label();
+            this.txtTitre2 = new System.Windows.Forms.TextBox();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
+            this.label25 = new System.Windows.Forms.Label();
+            this.txtTitre1 = new System.Windows.Forms.TextBox();
             this.panelLang.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbUpdating)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Spain_flag)).BeginInit();
@@ -90,9 +217,15 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            this.panelDetail.SuspendLayout();
             this.gbFiltres.SuspendLayout();
             this.gbChampsPesée.SuspendLayout();
+            this.tabControl2.SuspendLayout();
+            this.General.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.RqPont)).BeginInit();
+            this.ChampsSupplementaire.SuspendLayout();
+            this.Ticket.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbLogo)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             this.SuspendLayout();
             // 
             // panelLang
@@ -223,32 +356,18 @@
             this.lbSupprimer.TabStop = true;
             this.lbSupprimer.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lbSupprimer_LinkClicked);
             // 
-            // panelDetail
-            // 
-            resources.ApplyResources(this.panelDetail, "panelDetail");
-            this.panelDetail.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(86)))), ((int)(((byte)(81)))));
-            this.panelDetail.Controls.Add(this.gbFiltres);
-            this.panelDetail.Controls.Add(this.gbChampsPesée);
-            this.panelDetail.Controls.Add(this.txtDateCreation);
-            this.panelDetail.Controls.Add(this.label3);
-            this.panelDetail.Controls.Add(this.txtId);
-            this.panelDetail.Controls.Add(this.label2);
-            this.panelDetail.Controls.Add(this.txtDesignation);
-            this.panelDetail.Controls.Add(this.label1);
-            this.panelDetail.Name = "panelDetail";
-            // 
             // gbFiltres
             // 
             resources.ApplyResources(this.gbFiltres, "gbFiltres");
             this.gbFiltres.Controls.Add(this.label15);
-            this.gbFiltres.Controls.Add(this.textBox5);
+            this.gbFiltres.Controls.Add(this.txtPontFirme);
             this.gbFiltres.Controls.Add(this.label16);
-            this.gbFiltres.Controls.Add(this.textBox6);
+            this.gbFiltres.Controls.Add(this.txtCamionChauffeur);
             this.gbFiltres.Controls.Add(this.label17);
-            this.gbFiltres.Controls.Add(this.textBox7);
-            this.gbFiltres.Controls.Add(this.checkBox5);
-            this.gbFiltres.Controls.Add(this.checkBox6);
-            this.gbFiltres.Controls.Add(this.checkBox7);
+            this.gbFiltres.Controls.Add(this.txtCamionTransporteur);
+            this.gbFiltres.Controls.Add(this.chx_CamionTransporteur);
+            this.gbFiltres.Controls.Add(this.chx_PontFirme);
+            this.gbFiltres.Controls.Add(this.chx_CamionChauffeur);
             this.gbFiltres.ForeColor = System.Drawing.Color.White;
             this.gbFiltres.Name = "gbFiltres";
             this.gbFiltres.TabStop = false;
@@ -259,10 +378,10 @@
             this.label15.ForeColor = System.Drawing.Color.White;
             this.label15.Name = "label15";
             // 
-            // textBox5
+            // txtPontFirme
             // 
-            resources.ApplyResources(this.textBox5, "textBox5");
-            this.textBox5.Name = "textBox5";
+            resources.ApplyResources(this.txtPontFirme, "txtPontFirme");
+            this.txtPontFirme.Name = "txtPontFirme";
             // 
             // label16
             // 
@@ -270,10 +389,10 @@
             this.label16.ForeColor = System.Drawing.Color.White;
             this.label16.Name = "label16";
             // 
-            // textBox6
+            // txtCamionChauffeur
             // 
-            resources.ApplyResources(this.textBox6, "textBox6");
-            this.textBox6.Name = "textBox6";
+            resources.ApplyResources(this.txtCamionChauffeur, "txtCamionChauffeur");
+            this.txtCamionChauffeur.Name = "txtCamionChauffeur";
             // 
             // label17
             // 
@@ -281,41 +400,74 @@
             this.label17.ForeColor = System.Drawing.Color.White;
             this.label17.Name = "label17";
             // 
-            // textBox7
+            // txtCamionTransporteur
             // 
-            resources.ApplyResources(this.textBox7, "textBox7");
-            this.textBox7.Name = "textBox7";
+            resources.ApplyResources(this.txtCamionTransporteur, "txtCamionTransporteur");
+            this.txtCamionTransporteur.Name = "txtCamionTransporteur";
             // 
-            // checkBox5
+            // chx_CamionTransporteur
             // 
-            resources.ApplyResources(this.checkBox5, "checkBox5");
-            this.checkBox5.ForeColor = System.Drawing.Color.White;
-            this.checkBox5.Name = "checkBox5";
-            this.checkBox5.UseVisualStyleBackColor = true;
+            resources.ApplyResources(this.chx_CamionTransporteur, "chx_CamionTransporteur");
+            this.chx_CamionTransporteur.ForeColor = System.Drawing.Color.White;
+            this.chx_CamionTransporteur.Name = "chx_CamionTransporteur";
+            this.chx_CamionTransporteur.UseVisualStyleBackColor = true;
+            this.chx_CamionTransporteur.CheckedChanged += new System.EventHandler(this.chx_CamionTransporteur_CheckedChanged);
             // 
-            // checkBox6
+            // chx_PontFirme
             // 
-            resources.ApplyResources(this.checkBox6, "checkBox6");
-            this.checkBox6.ForeColor = System.Drawing.Color.White;
-            this.checkBox6.Name = "checkBox6";
-            this.checkBox6.UseVisualStyleBackColor = true;
+            resources.ApplyResources(this.chx_PontFirme, "chx_PontFirme");
+            this.chx_PontFirme.ForeColor = System.Drawing.Color.White;
+            this.chx_PontFirme.Name = "chx_PontFirme";
+            this.chx_PontFirme.UseVisualStyleBackColor = true;
+            this.chx_PontFirme.CheckedChanged += new System.EventHandler(this.chx_PontFirme_CheckedChanged);
             // 
-            // checkBox7
+            // chx_CamionChauffeur
             // 
-            resources.ApplyResources(this.checkBox7, "checkBox7");
-            this.checkBox7.ForeColor = System.Drawing.Color.White;
-            this.checkBox7.Name = "checkBox7";
-            this.checkBox7.UseVisualStyleBackColor = true;
+            resources.ApplyResources(this.chx_CamionChauffeur, "chx_CamionChauffeur");
+            this.chx_CamionChauffeur.ForeColor = System.Drawing.Color.White;
+            this.chx_CamionChauffeur.Name = "chx_CamionChauffeur";
+            this.chx_CamionChauffeur.UseVisualStyleBackColor = true;
+            this.chx_CamionChauffeur.CheckedChanged += new System.EventHandler(this.chx_CamionChauffeur_CheckedChanged);
             // 
             // gbChampsPesée
             // 
             resources.ApplyResources(this.gbChampsPesée, "gbChampsPesée");
+            this.gbChampsPesée.Controls.Add(this.txtAjoutFirme);
+            this.gbChampsPesée.Controls.Add(this.txtAjoutClient);
+            this.gbChampsPesée.Controls.Add(this.chx_AjoutClient);
+            this.gbChampsPesée.Controls.Add(this.txtAjoutProduit);
+            this.gbChampsPesée.Controls.Add(this.chx_AjoutProduit);
+            this.gbChampsPesée.Controls.Add(this.txtAjoutTransporteur);
+            this.gbChampsPesée.Controls.Add(this.chx_AjoutTransporteur);
+            this.gbChampsPesée.Controls.Add(this.txtAjoutChauffeur);
+            this.gbChampsPesée.Controls.Add(this.chx_AjoutChauffeur);
+            this.gbChampsPesée.Controls.Add(this.txtAjoutCamion);
+            this.gbChampsPesée.Controls.Add(this.chx_AjoutCamion);
+            this.gbChampsPesée.Controls.Add(this.label24);
+            this.gbChampsPesée.Controls.Add(this.chx_AjoutFirme);
+            this.gbChampsPesée.Controls.Add(this.cbClientBorne);
+            this.gbChampsPesée.Controls.Add(this.cbProduitBorne);
+            this.gbChampsPesée.Controls.Add(this.cbTransporteurBorne);
+            this.gbChampsPesée.Controls.Add(this.cbChauffeurBorne);
+            this.gbChampsPesée.Controls.Add(this.cbCamionBorne);
+            this.gbChampsPesée.Controls.Add(this.cbFirmeBorne);
+            this.gbChampsPesée.Controls.Add(this.label22);
+            this.gbChampsPesée.Controls.Add(this.txtClientObligatoire);
+            this.gbChampsPesée.Controls.Add(this.chx_ClientObligatoire);
+            this.gbChampsPesée.Controls.Add(this.txtProduitObligatoire);
+            this.gbChampsPesée.Controls.Add(this.chx_ProduitObligatoire);
+            this.gbChampsPesée.Controls.Add(this.txtTransporteurObligatoire);
+            this.gbChampsPesée.Controls.Add(this.chx_TransporteurObligatoire);
+            this.gbChampsPesée.Controls.Add(this.txtChauffeurObligatoire);
+            this.gbChampsPesée.Controls.Add(this.chx_ChauffeurObligatoire);
+            this.gbChampsPesée.Controls.Add(this.txtCamionObligatoire);
+            this.gbChampsPesée.Controls.Add(this.chx_CamionObligatoire);
             this.gbChampsPesée.Controls.Add(this.label10);
-            this.gbChampsPesée.Controls.Add(this.txtProvenance);
-            this.gbChampsPesée.Controls.Add(this.chx_Provenance);
+            this.gbChampsPesée.Controls.Add(this.txtFirmeObligatoire);
+            this.gbChampsPesée.Controls.Add(this.chx_FirmeObligatoire);
             this.gbChampsPesée.Controls.Add(this.label6);
-            this.gbChampsPesée.Controls.Add(this.txtDestination);
-            this.gbChampsPesée.Controls.Add(this.chx_Destination);
+            this.gbChampsPesée.Controls.Add(this.txtFirme);
+            this.gbChampsPesée.Controls.Add(this.chx_Firme);
             this.gbChampsPesée.Controls.Add(this.label5);
             this.gbChampsPesée.Controls.Add(this.txtClient);
             this.gbChampsPesée.Controls.Add(this.chx_Client);
@@ -335,24 +487,221 @@
             this.gbChampsPesée.Name = "gbChampsPesée";
             this.gbChampsPesée.TabStop = false;
             // 
+            // txtAjoutFirme
+            // 
+            resources.ApplyResources(this.txtAjoutFirme, "txtAjoutFirme");
+            this.txtAjoutFirme.Name = "txtAjoutFirme";
+            // 
+            // txtAjoutClient
+            // 
+            resources.ApplyResources(this.txtAjoutClient, "txtAjoutClient");
+            this.txtAjoutClient.Name = "txtAjoutClient";
+            // 
+            // chx_AjoutClient
+            // 
+            resources.ApplyResources(this.chx_AjoutClient, "chx_AjoutClient");
+            this.chx_AjoutClient.ForeColor = System.Drawing.Color.White;
+            this.chx_AjoutClient.Name = "chx_AjoutClient";
+            this.chx_AjoutClient.UseVisualStyleBackColor = true;
+            this.chx_AjoutClient.CheckedChanged += new System.EventHandler(this.chx_AjoutClient_CheckedChanged);
+            // 
+            // txtAjoutProduit
+            // 
+            resources.ApplyResources(this.txtAjoutProduit, "txtAjoutProduit");
+            this.txtAjoutProduit.Name = "txtAjoutProduit";
+            // 
+            // chx_AjoutProduit
+            // 
+            resources.ApplyResources(this.chx_AjoutProduit, "chx_AjoutProduit");
+            this.chx_AjoutProduit.ForeColor = System.Drawing.Color.White;
+            this.chx_AjoutProduit.Name = "chx_AjoutProduit";
+            this.chx_AjoutProduit.UseVisualStyleBackColor = true;
+            this.chx_AjoutProduit.CheckedChanged += new System.EventHandler(this.chx_AjoutProduit_CheckedChanged);
+            // 
+            // txtAjoutTransporteur
+            // 
+            resources.ApplyResources(this.txtAjoutTransporteur, "txtAjoutTransporteur");
+            this.txtAjoutTransporteur.Name = "txtAjoutTransporteur";
+            // 
+            // chx_AjoutTransporteur
+            // 
+            resources.ApplyResources(this.chx_AjoutTransporteur, "chx_AjoutTransporteur");
+            this.chx_AjoutTransporteur.ForeColor = System.Drawing.Color.White;
+            this.chx_AjoutTransporteur.Name = "chx_AjoutTransporteur";
+            this.chx_AjoutTransporteur.UseVisualStyleBackColor = true;
+            this.chx_AjoutTransporteur.CheckedChanged += new System.EventHandler(this.chx_AjoutTransporteur_CheckedChanged);
+            // 
+            // txtAjoutChauffeur
+            // 
+            resources.ApplyResources(this.txtAjoutChauffeur, "txtAjoutChauffeur");
+            this.txtAjoutChauffeur.Name = "txtAjoutChauffeur";
+            // 
+            // chx_AjoutChauffeur
+            // 
+            resources.ApplyResources(this.chx_AjoutChauffeur, "chx_AjoutChauffeur");
+            this.chx_AjoutChauffeur.ForeColor = System.Drawing.Color.White;
+            this.chx_AjoutChauffeur.Name = "chx_AjoutChauffeur";
+            this.chx_AjoutChauffeur.UseVisualStyleBackColor = true;
+            this.chx_AjoutChauffeur.CheckedChanged += new System.EventHandler(this.chx_AjoutChauffeur_CheckedChanged);
+            // 
+            // txtAjoutCamion
+            // 
+            resources.ApplyResources(this.txtAjoutCamion, "txtAjoutCamion");
+            this.txtAjoutCamion.Name = "txtAjoutCamion";
+            // 
+            // chx_AjoutCamion
+            // 
+            resources.ApplyResources(this.chx_AjoutCamion, "chx_AjoutCamion");
+            this.chx_AjoutCamion.ForeColor = System.Drawing.Color.White;
+            this.chx_AjoutCamion.Name = "chx_AjoutCamion";
+            this.chx_AjoutCamion.UseVisualStyleBackColor = true;
+            this.chx_AjoutCamion.CheckedChanged += new System.EventHandler(this.chx_AjoutCamion_CheckedChanged);
+            // 
+            // label24
+            // 
+            resources.ApplyResources(this.label24, "label24");
+            this.label24.ForeColor = System.Drawing.Color.White;
+            this.label24.Name = "label24";
+            // 
+            // chx_AjoutFirme
+            // 
+            resources.ApplyResources(this.chx_AjoutFirme, "chx_AjoutFirme");
+            this.chx_AjoutFirme.ForeColor = System.Drawing.Color.White;
+            this.chx_AjoutFirme.Name = "chx_AjoutFirme";
+            this.chx_AjoutFirme.UseVisualStyleBackColor = true;
+            this.chx_AjoutFirme.CheckedChanged += new System.EventHandler(this.chx_AjoutFirme_CheckedChanged);
+            // 
+            // cbClientBorne
+            // 
+            resources.ApplyResources(this.cbClientBorne, "cbClientBorne");
+            this.cbClientBorne.BackColor = System.Drawing.Color.Honeydew;
+            this.cbClientBorne.FormattingEnabled = true;
+            this.cbClientBorne.Name = "cbClientBorne";
+            // 
+            // cbProduitBorne
+            // 
+            resources.ApplyResources(this.cbProduitBorne, "cbProduitBorne");
+            this.cbProduitBorne.BackColor = System.Drawing.Color.Honeydew;
+            this.cbProduitBorne.FormattingEnabled = true;
+            this.cbProduitBorne.Name = "cbProduitBorne";
+            // 
+            // cbTransporteurBorne
+            // 
+            resources.ApplyResources(this.cbTransporteurBorne, "cbTransporteurBorne");
+            this.cbTransporteurBorne.BackColor = System.Drawing.Color.Honeydew;
+            this.cbTransporteurBorne.FormattingEnabled = true;
+            this.cbTransporteurBorne.Name = "cbTransporteurBorne";
+            // 
+            // cbChauffeurBorne
+            // 
+            resources.ApplyResources(this.cbChauffeurBorne, "cbChauffeurBorne");
+            this.cbChauffeurBorne.BackColor = System.Drawing.Color.Honeydew;
+            this.cbChauffeurBorne.FormattingEnabled = true;
+            this.cbChauffeurBorne.Name = "cbChauffeurBorne";
+            // 
+            // cbCamionBorne
+            // 
+            resources.ApplyResources(this.cbCamionBorne, "cbCamionBorne");
+            this.cbCamionBorne.BackColor = System.Drawing.Color.Honeydew;
+            this.cbCamionBorne.FormattingEnabled = true;
+            this.cbCamionBorne.Name = "cbCamionBorne";
+            // 
+            // cbFirmeBorne
+            // 
+            resources.ApplyResources(this.cbFirmeBorne, "cbFirmeBorne");
+            this.cbFirmeBorne.BackColor = System.Drawing.Color.Honeydew;
+            this.cbFirmeBorne.FormattingEnabled = true;
+            this.cbFirmeBorne.Name = "cbFirmeBorne";
+            // 
+            // label22
+            // 
+            resources.ApplyResources(this.label22, "label22");
+            this.label22.ForeColor = System.Drawing.Color.White;
+            this.label22.Name = "label22";
+            // 
+            // txtClientObligatoire
+            // 
+            resources.ApplyResources(this.txtClientObligatoire, "txtClientObligatoire");
+            this.txtClientObligatoire.Name = "txtClientObligatoire";
+            // 
+            // chx_ClientObligatoire
+            // 
+            resources.ApplyResources(this.chx_ClientObligatoire, "chx_ClientObligatoire");
+            this.chx_ClientObligatoire.ForeColor = System.Drawing.Color.White;
+            this.chx_ClientObligatoire.Name = "chx_ClientObligatoire";
+            this.chx_ClientObligatoire.UseVisualStyleBackColor = true;
+            this.chx_ClientObligatoire.CheckedChanged += new System.EventHandler(this.chx_ClientObligatoire_CheckedChanged);
+            // 
+            // txtProduitObligatoire
+            // 
+            resources.ApplyResources(this.txtProduitObligatoire, "txtProduitObligatoire");
+            this.txtProduitObligatoire.Name = "txtProduitObligatoire";
+            // 
+            // chx_ProduitObligatoire
+            // 
+            resources.ApplyResources(this.chx_ProduitObligatoire, "chx_ProduitObligatoire");
+            this.chx_ProduitObligatoire.ForeColor = System.Drawing.Color.White;
+            this.chx_ProduitObligatoire.Name = "chx_ProduitObligatoire";
+            this.chx_ProduitObligatoire.UseVisualStyleBackColor = true;
+            this.chx_ProduitObligatoire.CheckedChanged += new System.EventHandler(this.chx_ProduitObligatoire_CheckedChanged);
+            // 
+            // txtTransporteurObligatoire
+            // 
+            resources.ApplyResources(this.txtTransporteurObligatoire, "txtTransporteurObligatoire");
+            this.txtTransporteurObligatoire.Name = "txtTransporteurObligatoire";
+            // 
+            // chx_TransporteurObligatoire
+            // 
+            resources.ApplyResources(this.chx_TransporteurObligatoire, "chx_TransporteurObligatoire");
+            this.chx_TransporteurObligatoire.ForeColor = System.Drawing.Color.White;
+            this.chx_TransporteurObligatoire.Name = "chx_TransporteurObligatoire";
+            this.chx_TransporteurObligatoire.UseVisualStyleBackColor = true;
+            this.chx_TransporteurObligatoire.CheckedChanged += new System.EventHandler(this.chx_TransporteurObligatoire_CheckedChanged);
+            // 
+            // txtChauffeurObligatoire
+            // 
+            resources.ApplyResources(this.txtChauffeurObligatoire, "txtChauffeurObligatoire");
+            this.txtChauffeurObligatoire.Name = "txtChauffeurObligatoire";
+            // 
+            // chx_ChauffeurObligatoire
+            // 
+            resources.ApplyResources(this.chx_ChauffeurObligatoire, "chx_ChauffeurObligatoire");
+            this.chx_ChauffeurObligatoire.ForeColor = System.Drawing.Color.White;
+            this.chx_ChauffeurObligatoire.Name = "chx_ChauffeurObligatoire";
+            this.chx_ChauffeurObligatoire.UseVisualStyleBackColor = true;
+            this.chx_ChauffeurObligatoire.CheckedChanged += new System.EventHandler(this.chx_ChauffeurObligatoire_CheckedChanged);
+            // 
+            // txtCamionObligatoire
+            // 
+            resources.ApplyResources(this.txtCamionObligatoire, "txtCamionObligatoire");
+            this.txtCamionObligatoire.Name = "txtCamionObligatoire";
+            // 
+            // chx_CamionObligatoire
+            // 
+            resources.ApplyResources(this.chx_CamionObligatoire, "chx_CamionObligatoire");
+            this.chx_CamionObligatoire.ForeColor = System.Drawing.Color.White;
+            this.chx_CamionObligatoire.Name = "chx_CamionObligatoire";
+            this.chx_CamionObligatoire.UseVisualStyleBackColor = true;
+            this.chx_CamionObligatoire.CheckedChanged += new System.EventHandler(this.chx_CamionObligatoire_CheckedChanged);
+            // 
             // label10
             // 
             resources.ApplyResources(this.label10, "label10");
             this.label10.ForeColor = System.Drawing.Color.White;
             this.label10.Name = "label10";
             // 
-            // txtProvenance
+            // txtFirmeObligatoire
             // 
-            resources.ApplyResources(this.txtProvenance, "txtProvenance");
-            this.txtProvenance.Name = "txtProvenance";
+            resources.ApplyResources(this.txtFirmeObligatoire, "txtFirmeObligatoire");
+            this.txtFirmeObligatoire.Name = "txtFirmeObligatoire";
             // 
-            // chx_Provenance
+            // chx_FirmeObligatoire
             // 
-            resources.ApplyResources(this.chx_Provenance, "chx_Provenance");
-            this.chx_Provenance.ForeColor = System.Drawing.Color.White;
-            this.chx_Provenance.Name = "chx_Provenance";
-            this.chx_Provenance.UseVisualStyleBackColor = true;
-            this.chx_Provenance.CheckedChanged += new System.EventHandler(this.chx_Provenance_CheckedChanged);
+            resources.ApplyResources(this.chx_FirmeObligatoire, "chx_FirmeObligatoire");
+            this.chx_FirmeObligatoire.ForeColor = System.Drawing.Color.White;
+            this.chx_FirmeObligatoire.Name = "chx_FirmeObligatoire";
+            this.chx_FirmeObligatoire.UseVisualStyleBackColor = true;
+            this.chx_FirmeObligatoire.CheckedChanged += new System.EventHandler(this.chx_FirmeObligatoire_CheckedChanged);
             // 
             // label6
             // 
@@ -360,18 +709,18 @@
             this.label6.ForeColor = System.Drawing.Color.White;
             this.label6.Name = "label6";
             // 
-            // txtDestination
+            // txtFirme
             // 
-            resources.ApplyResources(this.txtDestination, "txtDestination");
-            this.txtDestination.Name = "txtDestination";
+            resources.ApplyResources(this.txtFirme, "txtFirme");
+            this.txtFirme.Name = "txtFirme";
             // 
-            // chx_Destination
+            // chx_Firme
             // 
-            resources.ApplyResources(this.chx_Destination, "chx_Destination");
-            this.chx_Destination.ForeColor = System.Drawing.Color.White;
-            this.chx_Destination.Name = "chx_Destination";
-            this.chx_Destination.UseVisualStyleBackColor = true;
-            this.chx_Destination.CheckedChanged += new System.EventHandler(this.chx_Destination_CheckedChanged);
+            resources.ApplyResources(this.chx_Firme, "chx_Firme");
+            this.chx_Firme.ForeColor = System.Drawing.Color.White;
+            this.chx_Firme.Name = "chx_Firme";
+            this.chx_Firme.UseVisualStyleBackColor = true;
+            this.chx_Firme.CheckedChanged += new System.EventHandler(this.chx_Firme_CheckedChanged);
             // 
             // label5
             // 
@@ -508,12 +857,754 @@
             this.label1.ForeColor = System.Drawing.Color.White;
             this.label1.Name = "label1";
             // 
+            // tabControl2
+            // 
+            resources.ApplyResources(this.tabControl2, "tabControl2");
+            this.tabControl2.Controls.Add(this.General);
+            this.tabControl2.Controls.Add(this.ChampsSupplementaire);
+            this.tabControl2.Controls.Add(this.Ticket);
+            this.tabControl2.Name = "tabControl2";
+            this.tabControl2.SelectedIndex = 0;
+            // 
+            // General
+            // 
+            resources.ApplyResources(this.General, "General");
+            this.General.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(86)))), ((int)(((byte)(81)))));
+            this.General.Controls.Add(this.RqPont);
+            this.General.Controls.Add(this.gbFiltres);
+            this.General.Controls.Add(this.gbChampsPesée);
+            this.General.Controls.Add(this.txtId);
+            this.General.Controls.Add(this.txtDateCreation);
+            this.General.Controls.Add(this.label1);
+            this.General.Controls.Add(this.label3);
+            this.General.Controls.Add(this.txtDesignation);
+            this.General.Controls.Add(this.label2);
+            this.General.Name = "General";
+            // 
+            // RqPont
+            // 
+            resources.ApplyResources(this.RqPont, "RqPont");
+            this.RqPont.Image = global::WidraSoft.UI.Properties.Resources.asterisk;
+            this.RqPont.Name = "RqPont";
+            this.RqPont.TabStop = false;
+            // 
+            // ChampsSupplementaire
+            // 
+            resources.ApplyResources(this.ChampsSupplementaire, "ChampsSupplementaire");
+            this.ChampsSupplementaire.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(86)))), ((int)(((byte)(81)))));
+            this.ChampsSupplementaire.Controls.Add(this.txtAjoutChamp7);
+            this.ChampsSupplementaire.Controls.Add(this.chx_AjoutChamp7);
+            this.ChampsSupplementaire.Controls.Add(this.txtAjoutChamp6);
+            this.ChampsSupplementaire.Controls.Add(this.chx_AjoutChamp6);
+            this.ChampsSupplementaire.Controls.Add(this.txtAjoutChamp5);
+            this.ChampsSupplementaire.Controls.Add(this.chx_AjoutChamp5);
+            this.ChampsSupplementaire.Controls.Add(this.txtAjoutChamp4);
+            this.ChampsSupplementaire.Controls.Add(this.chx_AjoutChamp4);
+            this.ChampsSupplementaire.Controls.Add(this.txtAjoutChamp3);
+            this.ChampsSupplementaire.Controls.Add(this.chx_AjoutChamp3);
+            this.ChampsSupplementaire.Controls.Add(this.txtAjoutChamp2);
+            this.ChampsSupplementaire.Controls.Add(this.chx_AjoutChamp2);
+            this.ChampsSupplementaire.Controls.Add(this.label23);
+            this.ChampsSupplementaire.Controls.Add(this.txtAjoutChamp1);
+            this.ChampsSupplementaire.Controls.Add(this.chx_AjoutChamp1);
+            this.ChampsSupplementaire.Controls.Add(this.txtTicketChamp7);
+            this.ChampsSupplementaire.Controls.Add(this.cbx_TicketChamp7);
+            this.ChampsSupplementaire.Controls.Add(this.txtTicketChamp6);
+            this.ChampsSupplementaire.Controls.Add(this.cbx_TicketChamp6);
+            this.ChampsSupplementaire.Controls.Add(this.txtTicketChamp5);
+            this.ChampsSupplementaire.Controls.Add(this.cbx_TicketChamp5);
+            this.ChampsSupplementaire.Controls.Add(this.txtTicketChamp4);
+            this.ChampsSupplementaire.Controls.Add(this.cbx_TicketChamp4);
+            this.ChampsSupplementaire.Controls.Add(this.txtTicketChamp3);
+            this.ChampsSupplementaire.Controls.Add(this.cbx_TicketChamp3);
+            this.ChampsSupplementaire.Controls.Add(this.txtTicketChamp2);
+            this.ChampsSupplementaire.Controls.Add(this.cbx_TicketChamp2);
+            this.ChampsSupplementaire.Controls.Add(this.label21);
+            this.ChampsSupplementaire.Controls.Add(this.txtTicketChamp1);
+            this.ChampsSupplementaire.Controls.Add(this.cbx_TicketChamp1);
+            this.ChampsSupplementaire.Controls.Add(this.cbBorneChamp7);
+            this.ChampsSupplementaire.Controls.Add(this.cbBorneChamp6);
+            this.ChampsSupplementaire.Controls.Add(this.cbBorneChamp5);
+            this.ChampsSupplementaire.Controls.Add(this.cbBorneChamp4);
+            this.ChampsSupplementaire.Controls.Add(this.cbBorneChamp3);
+            this.ChampsSupplementaire.Controls.Add(this.cbBorneChamp2);
+            this.ChampsSupplementaire.Controls.Add(this.cbBorneChamp1);
+            this.ChampsSupplementaire.Controls.Add(this.label20);
+            this.ChampsSupplementaire.Controls.Add(this.txtAfficherCode7);
+            this.ChampsSupplementaire.Controls.Add(this.chx_AfficherCode7);
+            this.ChampsSupplementaire.Controls.Add(this.txtObligatoire7);
+            this.ChampsSupplementaire.Controls.Add(this.chx_Obligatoire7);
+            this.ChampsSupplementaire.Controls.Add(this.label34);
+            this.ChampsSupplementaire.Controls.Add(this.cbChamp7);
+            this.ChampsSupplementaire.Controls.Add(this.txtAfficherCode6);
+            this.ChampsSupplementaire.Controls.Add(this.chx_AfficherCode6);
+            this.ChampsSupplementaire.Controls.Add(this.txtObligatoire6);
+            this.ChampsSupplementaire.Controls.Add(this.chx_Obligatoire6);
+            this.ChampsSupplementaire.Controls.Add(this.label31);
+            this.ChampsSupplementaire.Controls.Add(this.cbChamp6);
+            this.ChampsSupplementaire.Controls.Add(this.txtAfficherCode5);
+            this.ChampsSupplementaire.Controls.Add(this.chx_AfficherCode5);
+            this.ChampsSupplementaire.Controls.Add(this.txtAfficherCode4);
+            this.ChampsSupplementaire.Controls.Add(this.chx_AfficherCode4);
+            this.ChampsSupplementaire.Controls.Add(this.txtAfficherCode3);
+            this.ChampsSupplementaire.Controls.Add(this.chx_AfficherCode3);
+            this.ChampsSupplementaire.Controls.Add(this.txtAfficherCode2);
+            this.ChampsSupplementaire.Controls.Add(this.chx_AfficherCode2);
+            this.ChampsSupplementaire.Controls.Add(this.label28);
+            this.ChampsSupplementaire.Controls.Add(this.txtAfficherCode1);
+            this.ChampsSupplementaire.Controls.Add(this.chx_AfficherCode1);
+            this.ChampsSupplementaire.Controls.Add(this.txtObligatoire5);
+            this.ChampsSupplementaire.Controls.Add(this.chx_Obligatoire5);
+            this.ChampsSupplementaire.Controls.Add(this.txtObligatoire4);
+            this.ChampsSupplementaire.Controls.Add(this.chx_Obligatoire4);
+            this.ChampsSupplementaire.Controls.Add(this.txtObligatoire3);
+            this.ChampsSupplementaire.Controls.Add(this.chx_Obligatoire3);
+            this.ChampsSupplementaire.Controls.Add(this.txtObligatoire2);
+            this.ChampsSupplementaire.Controls.Add(this.chx_Obligatoire2);
+            this.ChampsSupplementaire.Controls.Add(this.label19);
+            this.ChampsSupplementaire.Controls.Add(this.txtObligatoire1);
+            this.ChampsSupplementaire.Controls.Add(this.chx_Obligatoire1);
+            this.ChampsSupplementaire.Controls.Add(this.label18);
+            this.ChampsSupplementaire.Controls.Add(this.cbChamp5);
+            this.ChampsSupplementaire.Controls.Add(this.label14);
+            this.ChampsSupplementaire.Controls.Add(this.cbChamp4);
+            this.ChampsSupplementaire.Controls.Add(this.label13);
+            this.ChampsSupplementaire.Controls.Add(this.cbChamp3);
+            this.ChampsSupplementaire.Controls.Add(this.label12);
+            this.ChampsSupplementaire.Controls.Add(this.cbChamp2);
+            this.ChampsSupplementaire.Controls.Add(this.label11);
+            this.ChampsSupplementaire.Controls.Add(this.cbChamp1);
+            this.ChampsSupplementaire.Name = "ChampsSupplementaire";
+            // 
+            // txtAjoutChamp7
+            // 
+            resources.ApplyResources(this.txtAjoutChamp7, "txtAjoutChamp7");
+            this.txtAjoutChamp7.Name = "txtAjoutChamp7";
+            // 
+            // chx_AjoutChamp7
+            // 
+            resources.ApplyResources(this.chx_AjoutChamp7, "chx_AjoutChamp7");
+            this.chx_AjoutChamp7.ForeColor = System.Drawing.Color.White;
+            this.chx_AjoutChamp7.Name = "chx_AjoutChamp7";
+            this.chx_AjoutChamp7.UseVisualStyleBackColor = true;
+            this.chx_AjoutChamp7.CheckedChanged += new System.EventHandler(this.chx_AjoutChamp7_CheckedChanged);
+            // 
+            // txtAjoutChamp6
+            // 
+            resources.ApplyResources(this.txtAjoutChamp6, "txtAjoutChamp6");
+            this.txtAjoutChamp6.Name = "txtAjoutChamp6";
+            // 
+            // chx_AjoutChamp6
+            // 
+            resources.ApplyResources(this.chx_AjoutChamp6, "chx_AjoutChamp6");
+            this.chx_AjoutChamp6.ForeColor = System.Drawing.Color.White;
+            this.chx_AjoutChamp6.Name = "chx_AjoutChamp6";
+            this.chx_AjoutChamp6.UseVisualStyleBackColor = true;
+            this.chx_AjoutChamp6.CheckedChanged += new System.EventHandler(this.chx_AjoutChamp6_CheckedChanged);
+            // 
+            // txtAjoutChamp5
+            // 
+            resources.ApplyResources(this.txtAjoutChamp5, "txtAjoutChamp5");
+            this.txtAjoutChamp5.Name = "txtAjoutChamp5";
+            // 
+            // chx_AjoutChamp5
+            // 
+            resources.ApplyResources(this.chx_AjoutChamp5, "chx_AjoutChamp5");
+            this.chx_AjoutChamp5.ForeColor = System.Drawing.Color.White;
+            this.chx_AjoutChamp5.Name = "chx_AjoutChamp5";
+            this.chx_AjoutChamp5.UseVisualStyleBackColor = true;
+            this.chx_AjoutChamp5.CheckedChanged += new System.EventHandler(this.chx_AjoutChamp5_CheckedChanged);
+            // 
+            // txtAjoutChamp4
+            // 
+            resources.ApplyResources(this.txtAjoutChamp4, "txtAjoutChamp4");
+            this.txtAjoutChamp4.Name = "txtAjoutChamp4";
+            // 
+            // chx_AjoutChamp4
+            // 
+            resources.ApplyResources(this.chx_AjoutChamp4, "chx_AjoutChamp4");
+            this.chx_AjoutChamp4.ForeColor = System.Drawing.Color.White;
+            this.chx_AjoutChamp4.Name = "chx_AjoutChamp4";
+            this.chx_AjoutChamp4.UseVisualStyleBackColor = true;
+            this.chx_AjoutChamp4.CheckedChanged += new System.EventHandler(this.chx_AjoutChamp4_CheckedChanged);
+            // 
+            // txtAjoutChamp3
+            // 
+            resources.ApplyResources(this.txtAjoutChamp3, "txtAjoutChamp3");
+            this.txtAjoutChamp3.Name = "txtAjoutChamp3";
+            // 
+            // chx_AjoutChamp3
+            // 
+            resources.ApplyResources(this.chx_AjoutChamp3, "chx_AjoutChamp3");
+            this.chx_AjoutChamp3.ForeColor = System.Drawing.Color.White;
+            this.chx_AjoutChamp3.Name = "chx_AjoutChamp3";
+            this.chx_AjoutChamp3.UseVisualStyleBackColor = true;
+            this.chx_AjoutChamp3.CheckedChanged += new System.EventHandler(this.chx_AjoutChamp3_CheckedChanged);
+            // 
+            // txtAjoutChamp2
+            // 
+            resources.ApplyResources(this.txtAjoutChamp2, "txtAjoutChamp2");
+            this.txtAjoutChamp2.Name = "txtAjoutChamp2";
+            // 
+            // chx_AjoutChamp2
+            // 
+            resources.ApplyResources(this.chx_AjoutChamp2, "chx_AjoutChamp2");
+            this.chx_AjoutChamp2.ForeColor = System.Drawing.Color.White;
+            this.chx_AjoutChamp2.Name = "chx_AjoutChamp2";
+            this.chx_AjoutChamp2.UseVisualStyleBackColor = true;
+            this.chx_AjoutChamp2.CheckedChanged += new System.EventHandler(this.chx_AjoutChamp2_CheckedChanged);
+            // 
+            // label23
+            // 
+            resources.ApplyResources(this.label23, "label23");
+            this.label23.ForeColor = System.Drawing.Color.White;
+            this.label23.Name = "label23";
+            // 
+            // txtAjoutChamp1
+            // 
+            resources.ApplyResources(this.txtAjoutChamp1, "txtAjoutChamp1");
+            this.txtAjoutChamp1.Name = "txtAjoutChamp1";
+            // 
+            // chx_AjoutChamp1
+            // 
+            resources.ApplyResources(this.chx_AjoutChamp1, "chx_AjoutChamp1");
+            this.chx_AjoutChamp1.ForeColor = System.Drawing.Color.White;
+            this.chx_AjoutChamp1.Name = "chx_AjoutChamp1";
+            this.chx_AjoutChamp1.UseVisualStyleBackColor = true;
+            this.chx_AjoutChamp1.CheckedChanged += new System.EventHandler(this.chx_AjoutChamp1_CheckedChanged);
+            // 
+            // txtTicketChamp7
+            // 
+            resources.ApplyResources(this.txtTicketChamp7, "txtTicketChamp7");
+            this.txtTicketChamp7.Name = "txtTicketChamp7";
+            // 
+            // cbx_TicketChamp7
+            // 
+            resources.ApplyResources(this.cbx_TicketChamp7, "cbx_TicketChamp7");
+            this.cbx_TicketChamp7.ForeColor = System.Drawing.Color.White;
+            this.cbx_TicketChamp7.Name = "cbx_TicketChamp7";
+            this.cbx_TicketChamp7.UseVisualStyleBackColor = true;
+            this.cbx_TicketChamp7.CheckedChanged += new System.EventHandler(this.cbx_TicketChamp7_CheckedChanged);
+            // 
+            // txtTicketChamp6
+            // 
+            resources.ApplyResources(this.txtTicketChamp6, "txtTicketChamp6");
+            this.txtTicketChamp6.Name = "txtTicketChamp6";
+            // 
+            // cbx_TicketChamp6
+            // 
+            resources.ApplyResources(this.cbx_TicketChamp6, "cbx_TicketChamp6");
+            this.cbx_TicketChamp6.ForeColor = System.Drawing.Color.White;
+            this.cbx_TicketChamp6.Name = "cbx_TicketChamp6";
+            this.cbx_TicketChamp6.UseVisualStyleBackColor = true;
+            this.cbx_TicketChamp6.CheckedChanged += new System.EventHandler(this.cbx_TicketChamp6_CheckedChanged);
+            // 
+            // txtTicketChamp5
+            // 
+            resources.ApplyResources(this.txtTicketChamp5, "txtTicketChamp5");
+            this.txtTicketChamp5.Name = "txtTicketChamp5";
+            // 
+            // cbx_TicketChamp5
+            // 
+            resources.ApplyResources(this.cbx_TicketChamp5, "cbx_TicketChamp5");
+            this.cbx_TicketChamp5.ForeColor = System.Drawing.Color.White;
+            this.cbx_TicketChamp5.Name = "cbx_TicketChamp5";
+            this.cbx_TicketChamp5.UseVisualStyleBackColor = true;
+            this.cbx_TicketChamp5.CheckedChanged += new System.EventHandler(this.cbx_TicketChamp5_CheckedChanged);
+            // 
+            // txtTicketChamp4
+            // 
+            resources.ApplyResources(this.txtTicketChamp4, "txtTicketChamp4");
+            this.txtTicketChamp4.Name = "txtTicketChamp4";
+            // 
+            // cbx_TicketChamp4
+            // 
+            resources.ApplyResources(this.cbx_TicketChamp4, "cbx_TicketChamp4");
+            this.cbx_TicketChamp4.ForeColor = System.Drawing.Color.White;
+            this.cbx_TicketChamp4.Name = "cbx_TicketChamp4";
+            this.cbx_TicketChamp4.UseVisualStyleBackColor = true;
+            this.cbx_TicketChamp4.CheckedChanged += new System.EventHandler(this.cbx_TicketChamp4_CheckedChanged);
+            // 
+            // txtTicketChamp3
+            // 
+            resources.ApplyResources(this.txtTicketChamp3, "txtTicketChamp3");
+            this.txtTicketChamp3.Name = "txtTicketChamp3";
+            // 
+            // cbx_TicketChamp3
+            // 
+            resources.ApplyResources(this.cbx_TicketChamp3, "cbx_TicketChamp3");
+            this.cbx_TicketChamp3.ForeColor = System.Drawing.Color.White;
+            this.cbx_TicketChamp3.Name = "cbx_TicketChamp3";
+            this.cbx_TicketChamp3.UseVisualStyleBackColor = true;
+            this.cbx_TicketChamp3.CheckedChanged += new System.EventHandler(this.cbx_TicketChamp3_CheckedChanged);
+            // 
+            // txtTicketChamp2
+            // 
+            resources.ApplyResources(this.txtTicketChamp2, "txtTicketChamp2");
+            this.txtTicketChamp2.Name = "txtTicketChamp2";
+            // 
+            // cbx_TicketChamp2
+            // 
+            resources.ApplyResources(this.cbx_TicketChamp2, "cbx_TicketChamp2");
+            this.cbx_TicketChamp2.ForeColor = System.Drawing.Color.White;
+            this.cbx_TicketChamp2.Name = "cbx_TicketChamp2";
+            this.cbx_TicketChamp2.UseVisualStyleBackColor = true;
+            this.cbx_TicketChamp2.CheckedChanged += new System.EventHandler(this.cbx_TicketChamp2_CheckedChanged);
+            // 
+            // label21
+            // 
+            resources.ApplyResources(this.label21, "label21");
+            this.label21.ForeColor = System.Drawing.Color.White;
+            this.label21.Name = "label21";
+            // 
+            // txtTicketChamp1
+            // 
+            resources.ApplyResources(this.txtTicketChamp1, "txtTicketChamp1");
+            this.txtTicketChamp1.Name = "txtTicketChamp1";
+            // 
+            // cbx_TicketChamp1
+            // 
+            resources.ApplyResources(this.cbx_TicketChamp1, "cbx_TicketChamp1");
+            this.cbx_TicketChamp1.ForeColor = System.Drawing.Color.White;
+            this.cbx_TicketChamp1.Name = "cbx_TicketChamp1";
+            this.cbx_TicketChamp1.UseVisualStyleBackColor = true;
+            this.cbx_TicketChamp1.CheckedChanged += new System.EventHandler(this.cbx_TicketChamp1_CheckedChanged);
+            // 
+            // cbBorneChamp7
+            // 
+            resources.ApplyResources(this.cbBorneChamp7, "cbBorneChamp7");
+            this.cbBorneChamp7.BackColor = System.Drawing.Color.Honeydew;
+            this.cbBorneChamp7.FormattingEnabled = true;
+            this.cbBorneChamp7.Name = "cbBorneChamp7";
+            // 
+            // cbBorneChamp6
+            // 
+            resources.ApplyResources(this.cbBorneChamp6, "cbBorneChamp6");
+            this.cbBorneChamp6.BackColor = System.Drawing.Color.Honeydew;
+            this.cbBorneChamp6.FormattingEnabled = true;
+            this.cbBorneChamp6.Name = "cbBorneChamp6";
+            // 
+            // cbBorneChamp5
+            // 
+            resources.ApplyResources(this.cbBorneChamp5, "cbBorneChamp5");
+            this.cbBorneChamp5.BackColor = System.Drawing.Color.Honeydew;
+            this.cbBorneChamp5.FormattingEnabled = true;
+            this.cbBorneChamp5.Name = "cbBorneChamp5";
+            // 
+            // cbBorneChamp4
+            // 
+            resources.ApplyResources(this.cbBorneChamp4, "cbBorneChamp4");
+            this.cbBorneChamp4.BackColor = System.Drawing.Color.Honeydew;
+            this.cbBorneChamp4.FormattingEnabled = true;
+            this.cbBorneChamp4.Name = "cbBorneChamp4";
+            // 
+            // cbBorneChamp3
+            // 
+            resources.ApplyResources(this.cbBorneChamp3, "cbBorneChamp3");
+            this.cbBorneChamp3.BackColor = System.Drawing.Color.Honeydew;
+            this.cbBorneChamp3.FormattingEnabled = true;
+            this.cbBorneChamp3.Name = "cbBorneChamp3";
+            // 
+            // cbBorneChamp2
+            // 
+            resources.ApplyResources(this.cbBorneChamp2, "cbBorneChamp2");
+            this.cbBorneChamp2.BackColor = System.Drawing.Color.Honeydew;
+            this.cbBorneChamp2.FormattingEnabled = true;
+            this.cbBorneChamp2.Name = "cbBorneChamp2";
+            // 
+            // cbBorneChamp1
+            // 
+            resources.ApplyResources(this.cbBorneChamp1, "cbBorneChamp1");
+            this.cbBorneChamp1.BackColor = System.Drawing.Color.Honeydew;
+            this.cbBorneChamp1.FormattingEnabled = true;
+            this.cbBorneChamp1.Name = "cbBorneChamp1";
+            // 
+            // label20
+            // 
+            resources.ApplyResources(this.label20, "label20");
+            this.label20.ForeColor = System.Drawing.Color.White;
+            this.label20.Name = "label20";
+            // 
+            // txtAfficherCode7
+            // 
+            resources.ApplyResources(this.txtAfficherCode7, "txtAfficherCode7");
+            this.txtAfficherCode7.Name = "txtAfficherCode7";
+            // 
+            // chx_AfficherCode7
+            // 
+            resources.ApplyResources(this.chx_AfficherCode7, "chx_AfficherCode7");
+            this.chx_AfficherCode7.ForeColor = System.Drawing.Color.White;
+            this.chx_AfficherCode7.Name = "chx_AfficherCode7";
+            this.chx_AfficherCode7.UseVisualStyleBackColor = true;
+            this.chx_AfficherCode7.CheckedChanged += new System.EventHandler(this.chx_AfficherCode7_CheckedChanged);
+            // 
+            // txtObligatoire7
+            // 
+            resources.ApplyResources(this.txtObligatoire7, "txtObligatoire7");
+            this.txtObligatoire7.Name = "txtObligatoire7";
+            // 
+            // chx_Obligatoire7
+            // 
+            resources.ApplyResources(this.chx_Obligatoire7, "chx_Obligatoire7");
+            this.chx_Obligatoire7.ForeColor = System.Drawing.Color.White;
+            this.chx_Obligatoire7.Name = "chx_Obligatoire7";
+            this.chx_Obligatoire7.UseVisualStyleBackColor = true;
+            this.chx_Obligatoire7.CheckedChanged += new System.EventHandler(this.chx_Obligatoire7_CheckedChanged);
+            // 
+            // label34
+            // 
+            resources.ApplyResources(this.label34, "label34");
+            this.label34.ForeColor = System.Drawing.Color.White;
+            this.label34.Name = "label34";
+            // 
+            // cbChamp7
+            // 
+            resources.ApplyResources(this.cbChamp7, "cbChamp7");
+            this.cbChamp7.BackColor = System.Drawing.Color.Honeydew;
+            this.cbChamp7.FormattingEnabled = true;
+            this.cbChamp7.Name = "cbChamp7";
+            // 
+            // txtAfficherCode6
+            // 
+            resources.ApplyResources(this.txtAfficherCode6, "txtAfficherCode6");
+            this.txtAfficherCode6.Name = "txtAfficherCode6";
+            // 
+            // chx_AfficherCode6
+            // 
+            resources.ApplyResources(this.chx_AfficherCode6, "chx_AfficherCode6");
+            this.chx_AfficherCode6.ForeColor = System.Drawing.Color.White;
+            this.chx_AfficherCode6.Name = "chx_AfficherCode6";
+            this.chx_AfficherCode6.UseVisualStyleBackColor = true;
+            this.chx_AfficherCode6.CheckedChanged += new System.EventHandler(this.chx_AfficherCode6_CheckedChanged);
+            // 
+            // txtObligatoire6
+            // 
+            resources.ApplyResources(this.txtObligatoire6, "txtObligatoire6");
+            this.txtObligatoire6.Name = "txtObligatoire6";
+            // 
+            // chx_Obligatoire6
+            // 
+            resources.ApplyResources(this.chx_Obligatoire6, "chx_Obligatoire6");
+            this.chx_Obligatoire6.ForeColor = System.Drawing.Color.White;
+            this.chx_Obligatoire6.Name = "chx_Obligatoire6";
+            this.chx_Obligatoire6.UseVisualStyleBackColor = true;
+            this.chx_Obligatoire6.CheckedChanged += new System.EventHandler(this.chx_Obligatoire6_CheckedChanged);
+            // 
+            // label31
+            // 
+            resources.ApplyResources(this.label31, "label31");
+            this.label31.ForeColor = System.Drawing.Color.White;
+            this.label31.Name = "label31";
+            // 
+            // cbChamp6
+            // 
+            resources.ApplyResources(this.cbChamp6, "cbChamp6");
+            this.cbChamp6.BackColor = System.Drawing.Color.Honeydew;
+            this.cbChamp6.FormattingEnabled = true;
+            this.cbChamp6.Name = "cbChamp6";
+            // 
+            // txtAfficherCode5
+            // 
+            resources.ApplyResources(this.txtAfficherCode5, "txtAfficherCode5");
+            this.txtAfficherCode5.Name = "txtAfficherCode5";
+            // 
+            // chx_AfficherCode5
+            // 
+            resources.ApplyResources(this.chx_AfficherCode5, "chx_AfficherCode5");
+            this.chx_AfficherCode5.ForeColor = System.Drawing.Color.White;
+            this.chx_AfficherCode5.Name = "chx_AfficherCode5";
+            this.chx_AfficherCode5.UseVisualStyleBackColor = true;
+            this.chx_AfficherCode5.CheckedChanged += new System.EventHandler(this.chx_AfficherCode5_CheckedChanged);
+            // 
+            // txtAfficherCode4
+            // 
+            resources.ApplyResources(this.txtAfficherCode4, "txtAfficherCode4");
+            this.txtAfficherCode4.Name = "txtAfficherCode4";
+            // 
+            // chx_AfficherCode4
+            // 
+            resources.ApplyResources(this.chx_AfficherCode4, "chx_AfficherCode4");
+            this.chx_AfficherCode4.ForeColor = System.Drawing.Color.White;
+            this.chx_AfficherCode4.Name = "chx_AfficherCode4";
+            this.chx_AfficherCode4.UseVisualStyleBackColor = true;
+            this.chx_AfficherCode4.CheckedChanged += new System.EventHandler(this.chx_AfficherCode4_CheckedChanged);
+            // 
+            // txtAfficherCode3
+            // 
+            resources.ApplyResources(this.txtAfficherCode3, "txtAfficherCode3");
+            this.txtAfficherCode3.Name = "txtAfficherCode3";
+            // 
+            // chx_AfficherCode3
+            // 
+            resources.ApplyResources(this.chx_AfficherCode3, "chx_AfficherCode3");
+            this.chx_AfficherCode3.ForeColor = System.Drawing.Color.White;
+            this.chx_AfficherCode3.Name = "chx_AfficherCode3";
+            this.chx_AfficherCode3.UseVisualStyleBackColor = true;
+            this.chx_AfficherCode3.CheckedChanged += new System.EventHandler(this.chx_AfficherCode3_CheckedChanged);
+            // 
+            // txtAfficherCode2
+            // 
+            resources.ApplyResources(this.txtAfficherCode2, "txtAfficherCode2");
+            this.txtAfficherCode2.Name = "txtAfficherCode2";
+            // 
+            // chx_AfficherCode2
+            // 
+            resources.ApplyResources(this.chx_AfficherCode2, "chx_AfficherCode2");
+            this.chx_AfficherCode2.ForeColor = System.Drawing.Color.White;
+            this.chx_AfficherCode2.Name = "chx_AfficherCode2";
+            this.chx_AfficherCode2.UseVisualStyleBackColor = true;
+            this.chx_AfficherCode2.CheckedChanged += new System.EventHandler(this.chx_AfficherCode2_CheckedChanged);
+            // 
+            // label28
+            // 
+            resources.ApplyResources(this.label28, "label28");
+            this.label28.ForeColor = System.Drawing.Color.White;
+            this.label28.Name = "label28";
+            // 
+            // txtAfficherCode1
+            // 
+            resources.ApplyResources(this.txtAfficherCode1, "txtAfficherCode1");
+            this.txtAfficherCode1.Name = "txtAfficherCode1";
+            // 
+            // chx_AfficherCode1
+            // 
+            resources.ApplyResources(this.chx_AfficherCode1, "chx_AfficherCode1");
+            this.chx_AfficherCode1.ForeColor = System.Drawing.Color.White;
+            this.chx_AfficherCode1.Name = "chx_AfficherCode1";
+            this.chx_AfficherCode1.UseVisualStyleBackColor = true;
+            this.chx_AfficherCode1.CheckedChanged += new System.EventHandler(this.chx_AfficherCode1_CheckedChanged);
+            // 
+            // txtObligatoire5
+            // 
+            resources.ApplyResources(this.txtObligatoire5, "txtObligatoire5");
+            this.txtObligatoire5.Name = "txtObligatoire5";
+            // 
+            // chx_Obligatoire5
+            // 
+            resources.ApplyResources(this.chx_Obligatoire5, "chx_Obligatoire5");
+            this.chx_Obligatoire5.ForeColor = System.Drawing.Color.White;
+            this.chx_Obligatoire5.Name = "chx_Obligatoire5";
+            this.chx_Obligatoire5.UseVisualStyleBackColor = true;
+            this.chx_Obligatoire5.CheckedChanged += new System.EventHandler(this.chx_Obligatoire5_CheckedChanged);
+            // 
+            // txtObligatoire4
+            // 
+            resources.ApplyResources(this.txtObligatoire4, "txtObligatoire4");
+            this.txtObligatoire4.Name = "txtObligatoire4";
+            // 
+            // chx_Obligatoire4
+            // 
+            resources.ApplyResources(this.chx_Obligatoire4, "chx_Obligatoire4");
+            this.chx_Obligatoire4.ForeColor = System.Drawing.Color.White;
+            this.chx_Obligatoire4.Name = "chx_Obligatoire4";
+            this.chx_Obligatoire4.UseVisualStyleBackColor = true;
+            this.chx_Obligatoire4.CheckedChanged += new System.EventHandler(this.chx_Obligatoire4_CheckedChanged);
+            // 
+            // txtObligatoire3
+            // 
+            resources.ApplyResources(this.txtObligatoire3, "txtObligatoire3");
+            this.txtObligatoire3.Name = "txtObligatoire3";
+            // 
+            // chx_Obligatoire3
+            // 
+            resources.ApplyResources(this.chx_Obligatoire3, "chx_Obligatoire3");
+            this.chx_Obligatoire3.ForeColor = System.Drawing.Color.White;
+            this.chx_Obligatoire3.Name = "chx_Obligatoire3";
+            this.chx_Obligatoire3.UseVisualStyleBackColor = true;
+            this.chx_Obligatoire3.CheckedChanged += new System.EventHandler(this.chx_Obligatoire3_CheckedChanged);
+            // 
+            // txtObligatoire2
+            // 
+            resources.ApplyResources(this.txtObligatoire2, "txtObligatoire2");
+            this.txtObligatoire2.Name = "txtObligatoire2";
+            // 
+            // chx_Obligatoire2
+            // 
+            resources.ApplyResources(this.chx_Obligatoire2, "chx_Obligatoire2");
+            this.chx_Obligatoire2.ForeColor = System.Drawing.Color.White;
+            this.chx_Obligatoire2.Name = "chx_Obligatoire2";
+            this.chx_Obligatoire2.UseVisualStyleBackColor = true;
+            this.chx_Obligatoire2.CheckedChanged += new System.EventHandler(this.chx_Obligatoire2_CheckedChanged);
+            // 
+            // label19
+            // 
+            resources.ApplyResources(this.label19, "label19");
+            this.label19.ForeColor = System.Drawing.Color.White;
+            this.label19.Name = "label19";
+            // 
+            // txtObligatoire1
+            // 
+            resources.ApplyResources(this.txtObligatoire1, "txtObligatoire1");
+            this.txtObligatoire1.Name = "txtObligatoire1";
+            // 
+            // chx_Obligatoire1
+            // 
+            resources.ApplyResources(this.chx_Obligatoire1, "chx_Obligatoire1");
+            this.chx_Obligatoire1.ForeColor = System.Drawing.Color.White;
+            this.chx_Obligatoire1.Name = "chx_Obligatoire1";
+            this.chx_Obligatoire1.UseVisualStyleBackColor = true;
+            this.chx_Obligatoire1.CheckedChanged += new System.EventHandler(this.chx_Obligatoire1_CheckedChanged);
+            // 
+            // label18
+            // 
+            resources.ApplyResources(this.label18, "label18");
+            this.label18.ForeColor = System.Drawing.Color.White;
+            this.label18.Name = "label18";
+            // 
+            // cbChamp5
+            // 
+            resources.ApplyResources(this.cbChamp5, "cbChamp5");
+            this.cbChamp5.BackColor = System.Drawing.Color.Honeydew;
+            this.cbChamp5.FormattingEnabled = true;
+            this.cbChamp5.Name = "cbChamp5";
+            // 
+            // label14
+            // 
+            resources.ApplyResources(this.label14, "label14");
+            this.label14.ForeColor = System.Drawing.Color.White;
+            this.label14.Name = "label14";
+            // 
+            // cbChamp4
+            // 
+            resources.ApplyResources(this.cbChamp4, "cbChamp4");
+            this.cbChamp4.BackColor = System.Drawing.Color.Honeydew;
+            this.cbChamp4.FormattingEnabled = true;
+            this.cbChamp4.Name = "cbChamp4";
+            // 
+            // label13
+            // 
+            resources.ApplyResources(this.label13, "label13");
+            this.label13.ForeColor = System.Drawing.Color.White;
+            this.label13.Name = "label13";
+            // 
+            // cbChamp3
+            // 
+            resources.ApplyResources(this.cbChamp3, "cbChamp3");
+            this.cbChamp3.BackColor = System.Drawing.Color.Honeydew;
+            this.cbChamp3.FormattingEnabled = true;
+            this.cbChamp3.Name = "cbChamp3";
+            // 
+            // label12
+            // 
+            resources.ApplyResources(this.label12, "label12");
+            this.label12.ForeColor = System.Drawing.Color.White;
+            this.label12.Name = "label12";
+            // 
+            // cbChamp2
+            // 
+            resources.ApplyResources(this.cbChamp2, "cbChamp2");
+            this.cbChamp2.BackColor = System.Drawing.Color.Honeydew;
+            this.cbChamp2.FormattingEnabled = true;
+            this.cbChamp2.Name = "cbChamp2";
+            // 
+            // label11
+            // 
+            resources.ApplyResources(this.label11, "label11");
+            this.label11.ForeColor = System.Drawing.Color.White;
+            this.label11.Name = "label11";
+            // 
+            // cbChamp1
+            // 
+            resources.ApplyResources(this.cbChamp1, "cbChamp1");
+            this.cbChamp1.BackColor = System.Drawing.Color.Honeydew;
+            this.cbChamp1.FormattingEnabled = true;
+            this.cbChamp1.Name = "cbChamp1";
+            // 
+            // Ticket
+            // 
+            resources.ApplyResources(this.Ticket, "Ticket");
+            this.Ticket.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(86)))), ((int)(((byte)(81)))));
+            this.Ticket.Controls.Add(this.pbLogo);
+            this.Ticket.Controls.Add(this.label30);
+            this.Ticket.Controls.Add(this.label29);
+            this.Ticket.Controls.Add(this.cbFormat);
+            this.Ticket.Controls.Add(this.label27);
+            this.Ticket.Controls.Add(this.txtFooter);
+            this.Ticket.Controls.Add(this.label26);
+            this.Ticket.Controls.Add(this.txtTitre2);
+            this.Ticket.Controls.Add(this.pictureBox4);
+            this.Ticket.Controls.Add(this.label25);
+            this.Ticket.Controls.Add(this.txtTitre1);
+            this.Ticket.Name = "Ticket";
+            // 
+            // pbLogo
+            // 
+            resources.ApplyResources(this.pbLogo, "pbLogo");
+            this.pbLogo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(62)))), ((int)(((byte)(60)))));
+            this.pbLogo.Name = "pbLogo";
+            this.pbLogo.TabStop = false;
+            // 
+            // label30
+            // 
+            resources.ApplyResources(this.label30, "label30");
+            this.label30.ForeColor = System.Drawing.Color.White;
+            this.label30.Name = "label30";
+            // 
+            // label29
+            // 
+            resources.ApplyResources(this.label29, "label29");
+            this.label29.ForeColor = System.Drawing.Color.White;
+            this.label29.Name = "label29";
+            // 
+            // cbFormat
+            // 
+            resources.ApplyResources(this.cbFormat, "cbFormat");
+            this.cbFormat.BackColor = System.Drawing.Color.Honeydew;
+            this.cbFormat.FormattingEnabled = true;
+            this.cbFormat.Name = "cbFormat";
+            // 
+            // label27
+            // 
+            resources.ApplyResources(this.label27, "label27");
+            this.label27.ForeColor = System.Drawing.Color.White;
+            this.label27.Name = "label27";
+            // 
+            // txtFooter
+            // 
+            resources.ApplyResources(this.txtFooter, "txtFooter");
+            this.txtFooter.BackColor = System.Drawing.Color.Honeydew;
+            this.txtFooter.ForeColor = System.Drawing.Color.Black;
+            this.txtFooter.Name = "txtFooter";
+            // 
+            // label26
+            // 
+            resources.ApplyResources(this.label26, "label26");
+            this.label26.ForeColor = System.Drawing.Color.White;
+            this.label26.Name = "label26";
+            // 
+            // txtTitre2
+            // 
+            resources.ApplyResources(this.txtTitre2, "txtTitre2");
+            this.txtTitre2.BackColor = System.Drawing.Color.Honeydew;
+            this.txtTitre2.ForeColor = System.Drawing.Color.Black;
+            this.txtTitre2.Name = "txtTitre2";
+            // 
+            // pictureBox4
+            // 
+            resources.ApplyResources(this.pictureBox4, "pictureBox4");
+            this.pictureBox4.Image = global::WidraSoft.UI.Properties.Resources.asterisk;
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.TabStop = false;
+            // 
+            // label25
+            // 
+            resources.ApplyResources(this.label25, "label25");
+            this.label25.ForeColor = System.Drawing.Color.White;
+            this.label25.Name = "label25";
+            // 
+            // txtTitre1
+            // 
+            resources.ApplyResources(this.txtTitre1, "txtTitre1");
+            this.txtTitre1.BackColor = System.Drawing.Color.Honeydew;
+            this.txtTitre1.ForeColor = System.Drawing.Color.Black;
+            this.txtTitre1.Name = "txtTitre1";
+            // 
             // WeighingSettingsDetail
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(62)))), ((int)(((byte)(60)))));
-            this.Controls.Add(this.panelDetail);
+            this.Controls.Add(this.tabControl2);
             this.Controls.Add(this.panelNavigation);
             this.Controls.Add(this.panelLang);
             this.MaximizeBox = false;
@@ -531,12 +1622,20 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            this.panelDetail.ResumeLayout(false);
-            this.panelDetail.PerformLayout();
             this.gbFiltres.ResumeLayout(false);
             this.gbFiltres.PerformLayout();
             this.gbChampsPesée.ResumeLayout(false);
             this.gbChampsPesée.PerformLayout();
+            this.tabControl2.ResumeLayout(false);
+            this.General.ResumeLayout(false);
+            this.General.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.RqPont)).EndInit();
+            this.ChampsSupplementaire.ResumeLayout(false);
+            this.ChampsSupplementaire.PerformLayout();
+            this.Ticket.ResumeLayout(false);
+            this.Ticket.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbLogo)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -556,7 +1655,6 @@
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.LinkLabel lbAjouter;
         private System.Windows.Forms.LinkLabel lbSupprimer;
-        private System.Windows.Forms.Panel panelDetail;
         private System.Windows.Forms.TextBox txtDateCreation;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label8;
@@ -579,21 +1677,149 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox txtClient;
         private System.Windows.Forms.CheckBox chx_Client;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox txtDestination;
-        private System.Windows.Forms.CheckBox chx_Destination;
-        private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.TextBox txtProvenance;
-        private System.Windows.Forms.CheckBox chx_Provenance;
         private System.Windows.Forms.GroupBox gbFiltres;
         private System.Windows.Forms.Label label15;
-        private System.Windows.Forms.TextBox textBox5;
+        private System.Windows.Forms.TextBox txtPontFirme;
         private System.Windows.Forms.Label label16;
-        private System.Windows.Forms.TextBox textBox6;
+        private System.Windows.Forms.TextBox txtCamionChauffeur;
         private System.Windows.Forms.Label label17;
-        private System.Windows.Forms.TextBox textBox7;
-        private System.Windows.Forms.CheckBox checkBox5;
-        private System.Windows.Forms.CheckBox checkBox6;
-        private System.Windows.Forms.CheckBox checkBox7;
+        private System.Windows.Forms.TextBox txtCamionTransporteur;
+        private System.Windows.Forms.CheckBox chx_CamionTransporteur;
+        private System.Windows.Forms.CheckBox chx_PontFirme;
+        private System.Windows.Forms.CheckBox chx_CamionChauffeur;
+        private System.Windows.Forms.TabControl tabControl2;
+        private System.Windows.Forms.TabPage General;
+        private System.Windows.Forms.TabPage ChampsSupplementaire;
+        private System.Windows.Forms.TabPage Ticket;
+        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.ComboBox cbChamp4;
+        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.ComboBox cbChamp3;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.ComboBox cbChamp2;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.ComboBox cbChamp1;
+        private System.Windows.Forms.Label label18;
+        private System.Windows.Forms.ComboBox cbChamp5;
+        private System.Windows.Forms.Label label19;
+        private System.Windows.Forms.TextBox txtObligatoire1;
+        private System.Windows.Forms.CheckBox chx_Obligatoire1;
+        private System.Windows.Forms.TextBox txtObligatoire3;
+        private System.Windows.Forms.CheckBox chx_Obligatoire3;
+        private System.Windows.Forms.TextBox txtObligatoire2;
+        private System.Windows.Forms.CheckBox chx_Obligatoire2;
+        private System.Windows.Forms.TextBox txtObligatoire5;
+        private System.Windows.Forms.CheckBox chx_Obligatoire5;
+        private System.Windows.Forms.TextBox txtObligatoire4;
+        private System.Windows.Forms.CheckBox chx_Obligatoire4;
+        private System.Windows.Forms.TextBox txtAfficherCode5;
+        private System.Windows.Forms.CheckBox chx_AfficherCode5;
+        private System.Windows.Forms.TextBox txtAfficherCode4;
+        private System.Windows.Forms.CheckBox chx_AfficherCode4;
+        private System.Windows.Forms.TextBox txtAfficherCode3;
+        private System.Windows.Forms.CheckBox chx_AfficherCode3;
+        private System.Windows.Forms.TextBox txtAfficherCode2;
+        private System.Windows.Forms.CheckBox chx_AfficherCode2;
+        private System.Windows.Forms.Label label28;
+        private System.Windows.Forms.TextBox txtAfficherCode1;
+        private System.Windows.Forms.CheckBox chx_AfficherCode1;
+        private System.Windows.Forms.TextBox txtAfficherCode6;
+        private System.Windows.Forms.CheckBox chx_AfficherCode6;
+        private System.Windows.Forms.TextBox txtObligatoire6;
+        private System.Windows.Forms.CheckBox chx_Obligatoire6;
+        private System.Windows.Forms.Label label31;
+        private System.Windows.Forms.ComboBox cbChamp6;
+        private System.Windows.Forms.TextBox txtAfficherCode7;
+        private System.Windows.Forms.CheckBox chx_AfficherCode7;
+        private System.Windows.Forms.TextBox txtObligatoire7;
+        private System.Windows.Forms.CheckBox chx_Obligatoire7;
+        private System.Windows.Forms.Label label34;
+        private System.Windows.Forms.ComboBox cbChamp7;
+        private System.Windows.Forms.Label label20;
+        private System.Windows.Forms.ComboBox cbBorneChamp1;
+        private System.Windows.Forms.ComboBox cbBorneChamp2;
+        private System.Windows.Forms.ComboBox cbBorneChamp3;
+        private System.Windows.Forms.ComboBox cbBorneChamp4;
+        private System.Windows.Forms.ComboBox cbBorneChamp5;
+        private System.Windows.Forms.ComboBox cbBorneChamp6;
+        private System.Windows.Forms.ComboBox cbBorneChamp7;
+        private System.Windows.Forms.TextBox txtTicketChamp7;
+        private System.Windows.Forms.CheckBox cbx_TicketChamp7;
+        private System.Windows.Forms.TextBox txtTicketChamp6;
+        private System.Windows.Forms.CheckBox cbx_TicketChamp6;
+        private System.Windows.Forms.TextBox txtTicketChamp5;
+        private System.Windows.Forms.CheckBox cbx_TicketChamp5;
+        private System.Windows.Forms.TextBox txtTicketChamp4;
+        private System.Windows.Forms.CheckBox cbx_TicketChamp4;
+        private System.Windows.Forms.TextBox txtTicketChamp3;
+        private System.Windows.Forms.CheckBox cbx_TicketChamp3;
+        private System.Windows.Forms.TextBox txtTicketChamp2;
+        private System.Windows.Forms.CheckBox cbx_TicketChamp2;
+        private System.Windows.Forms.Label label21;
+        private System.Windows.Forms.TextBox txtTicketChamp1;
+        private System.Windows.Forms.CheckBox cbx_TicketChamp1;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.TextBox txtFirme;
+        private System.Windows.Forms.CheckBox chx_Firme;
+        private System.Windows.Forms.TextBox txtClientObligatoire;
+        private System.Windows.Forms.CheckBox chx_ClientObligatoire;
+        private System.Windows.Forms.TextBox txtProduitObligatoire;
+        private System.Windows.Forms.CheckBox chx_ProduitObligatoire;
+        private System.Windows.Forms.TextBox txtTransporteurObligatoire;
+        private System.Windows.Forms.CheckBox chx_TransporteurObligatoire;
+        private System.Windows.Forms.TextBox txtChauffeurObligatoire;
+        private System.Windows.Forms.CheckBox chx_ChauffeurObligatoire;
+        private System.Windows.Forms.TextBox txtCamionObligatoire;
+        private System.Windows.Forms.CheckBox chx_CamionObligatoire;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.TextBox txtFirmeObligatoire;
+        private System.Windows.Forms.CheckBox chx_FirmeObligatoire;
+        private System.Windows.Forms.ComboBox cbClientBorne;
+        private System.Windows.Forms.ComboBox cbProduitBorne;
+        private System.Windows.Forms.ComboBox cbTransporteurBorne;
+        private System.Windows.Forms.ComboBox cbChauffeurBorne;
+        private System.Windows.Forms.ComboBox cbCamionBorne;
+        private System.Windows.Forms.ComboBox cbFirmeBorne;
+        private System.Windows.Forms.Label label22;
+        private System.Windows.Forms.TextBox txtAjoutChamp7;
+        private System.Windows.Forms.CheckBox chx_AjoutChamp7;
+        private System.Windows.Forms.TextBox txtAjoutChamp6;
+        private System.Windows.Forms.CheckBox chx_AjoutChamp6;
+        private System.Windows.Forms.TextBox txtAjoutChamp5;
+        private System.Windows.Forms.CheckBox chx_AjoutChamp5;
+        private System.Windows.Forms.TextBox txtAjoutChamp4;
+        private System.Windows.Forms.CheckBox chx_AjoutChamp4;
+        private System.Windows.Forms.TextBox txtAjoutChamp3;
+        private System.Windows.Forms.CheckBox chx_AjoutChamp3;
+        private System.Windows.Forms.TextBox txtAjoutChamp2;
+        private System.Windows.Forms.CheckBox chx_AjoutChamp2;
+        private System.Windows.Forms.Label label23;
+        private System.Windows.Forms.TextBox txtAjoutChamp1;
+        private System.Windows.Forms.CheckBox chx_AjoutChamp1;
+        private System.Windows.Forms.TextBox txtAjoutClient;
+        private System.Windows.Forms.CheckBox chx_AjoutClient;
+        private System.Windows.Forms.TextBox txtAjoutProduit;
+        private System.Windows.Forms.CheckBox chx_AjoutProduit;
+        private System.Windows.Forms.TextBox txtAjoutTransporteur;
+        private System.Windows.Forms.CheckBox chx_AjoutTransporteur;
+        private System.Windows.Forms.TextBox txtAjoutChauffeur;
+        private System.Windows.Forms.CheckBox chx_AjoutChauffeur;
+        private System.Windows.Forms.TextBox txtAjoutCamion;
+        private System.Windows.Forms.CheckBox chx_AjoutCamion;
+        private System.Windows.Forms.Label label24;
+        private System.Windows.Forms.CheckBox chx_AjoutFirme;
+        private System.Windows.Forms.TextBox txtAjoutFirme;
+        private System.Windows.Forms.PictureBox RqPont;
+        private System.Windows.Forms.PictureBox pictureBox4;
+        private System.Windows.Forms.Label label25;
+        private System.Windows.Forms.TextBox txtTitre1;
+        private System.Windows.Forms.Label label26;
+        private System.Windows.Forms.TextBox txtTitre2;
+        private System.Windows.Forms.Label label27;
+        private System.Windows.Forms.TextBox txtFooter;
+        private System.Windows.Forms.Label label29;
+        private System.Windows.Forms.ComboBox cbFormat;
+        private System.Windows.Forms.Label label30;
+        private System.Windows.Forms.PictureBox pbLogo;
     }
 }

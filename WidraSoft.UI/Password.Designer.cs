@@ -40,6 +40,7 @@ namespace WidraSoft.UI
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.PanelLayout = new System.Windows.Forms.Panel();
+            this.lbPont = new System.Windows.Forms.Label();
             this.panelLang = new System.Windows.Forms.Panel();
             this.Spain_flag = new System.Windows.Forms.PictureBox();
             this.England_flag = new System.Windows.Forms.PictureBox();
@@ -129,6 +130,7 @@ namespace WidraSoft.UI
             // PanelLayout
             // 
             this.PanelLayout.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(86)))), ((int)(((byte)(81)))));
+            this.PanelLayout.Controls.Add(this.lbPont);
             this.PanelLayout.Controls.Add(this.panelLang);
             this.PanelLayout.Controls.Add(this.pictureBox2);
             this.PanelLayout.Controls.Add(this.label1);
@@ -139,6 +141,13 @@ namespace WidraSoft.UI
             this.PanelLayout.Controls.Add(this.txtPassword);
             resources.ApplyResources(this.PanelLayout, "PanelLayout");
             this.PanelLayout.Name = "PanelLayout";
+            // 
+            // lbPont
+            // 
+            resources.ApplyResources(this.lbPont, "lbPont");
+            this.lbPont.ForeColor = System.Drawing.Color.White;
+            this.lbPont.Name = "lbPont";
+            this.lbPont.Click += new System.EventHandler(this.lbPont_Click);
             // 
             // panelLang
             // 
@@ -226,5 +235,6 @@ namespace WidraSoft.UI
         private System.Windows.Forms.PictureBox England_flag;
         private System.Windows.Forms.PictureBox France_flag;
         private System.Windows.Forms.ComboBox cbLang;
+        private System.Windows.Forms.Label lbPont;
     }
 }

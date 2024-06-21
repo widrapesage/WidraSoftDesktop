@@ -16,18 +16,39 @@ namespace WidraSoft.UI
     {
         String vg_Mode = "";
         Int32 vg_Id = 0;
+        Int32 vg_TableId = 0;
         Boolean vg_IsEnabled = true;
         Boolean vg_Update = false;
-        public EnregistrementsDetail(String Mode, Int32 Id)
+        public EnregistrementsDetail(String Mode, Int32 Id, Int32 TableId)
         {
             InitializeComponent();
             vg_Mode = Mode;
             vg_Id = Id;
+            vg_TableId = TableId;
         }
 
         private void EnregistrementsDetail_Load(object sender, EventArgs e)
         {
             this.CenterToParent();
+            //Tables 
+            Tables tables = new Tables();
+            if (tables.IsTableRelated(vg_TableId))
+            {
+                lbParent.Visible = true;
+                cbParent.Visible = true;
+                RqParent.Visible = true;
+
+                Enregistrements enregistrements = new Enregistrements();
+                cbParent.DataSource = enregistrements.FindByTableId(tables.GetParentTableId(vg_TableId));
+                cbParent.DisplayMember = "NOM";
+                cbParent.ValueMember = "ENREGISTREMENTSID";
+            }
+            else
+            {
+                lbParent.Visible = false;
+                cbParent.Visible = false;
+                RqParent.Visible = false;
+            }
 
             if (vg_Mode == "Add")
             {
@@ -55,7 +76,15 @@ namespace WidraSoft.UI
                     }
                 }
             }
-            Bind_DgvEnregistrements();
+
+            
+            cbTablesId.DataSource = tables.FindById(vg_TableId);
+            cbTablesId.DisplayMember = "NOM";
+            cbTablesId.ValueMember = "TABLESID";
+            cbTablesId.SelectedIndex = 0;
+
+            
+
             cbLang.DataSource = Language.Languages;
             cbLang.ValueMember = null;
             cbLang.DisplayMember = Language.Languages[0];
@@ -64,9 +93,9 @@ namespace WidraSoft.UI
 
         private void Add_Item()
         {
-            if (txtId.Text == "" && txtDateCreation.Text == ""  && txtNom.Text == "" && txtAdresse.Text == "" && txtCodePostal.Text == "" && txtLocalite.Text == ""
+            if (txtId.Text == "" && txtDateCreation.Text == ""  && txtNom.Text == "" && txtCode.Text == "" && txtAdresse.Text == "" && txtCodePostal.Text == "" && txtLocalite.Text == ""
                 && txtPays.Text == "" && txtTelephone.Text == "" && txtEmail.Text == "" && txtNumTVA.Text == "" && txtSiteWebUrl.Text == ""
-                &&  txtBloque.Text == "" && txtBlocage.Text == "" && txtAttention.Text == "" && txtAlerte.Text == "" && txtObservations.Text == "")
+                &&  txtBloque.Text == "" && txtBlocage.Text == "" && txtAttention.Text == "" && txtAlerte.Text == "" && txtObservations.Text == "" && cbParent.Text == "")
             {
                 lbModifier.Enabled = false;
                 lbModifier.BackColor = Color.Transparent;
@@ -100,6 +129,7 @@ namespace WidraSoft.UI
                 txtId.Text = Id.ToString();
                 txtDateCreation.Text = row["DATECREATION"].ToString();
                 txtNom.Text = row["NOM"].ToString();
+                txtCode.Text = row["CODE"].ToString();
                 txtAdresse.Text = row["ADRESSE"].ToString();
                 txtCodePostal.Text = row["CODEPOSTAL"].ToString();
                 txtLocalite.Text = row["LOCALITE"].ToString();
@@ -121,72 +151,19 @@ namespace WidraSoft.UI
                 else
                     chx_Attention.Checked = false;
                 txtAlerte.Text = row["TEXTEATTENTION"].ToString();
+                if (row["PARENTID"] is System.DBNull)
+                    cbParent.SelectedValue = 0;
+                else
+                    cbParent.SelectedValue = (int)row["PARENTID"];
+
             }
         }
-
-        private void Bind_DgvEnregistrements()
-        {
-            TablesEnregistrements tablesEnregistrements = new TablesEnregistrements();
-            if (txtId.Text == "")
-            {
-                dgvEnregistrements.DataSource = tablesEnregistrements.FindByEnregistrementsId(-1);
-            }
-            else
-            {
-                int Id;
-                bool IsParsableId;
-                IsParsableId = Int32.TryParse(txtId.Text, out Id);
-                dgvEnregistrements.DataSource = tablesEnregistrements.FindByEnregistrementsId(Id);
-            }
-
-            dgvEnregistrements.Columns[0].Visible = false;
-            dgvEnregistrements.Columns["TABLES"].Visible = true;
-            dgvEnregistrements.Columns["ENREGISTREMENTSID"].Visible = false;
-            dgvEnregistrements.Columns["ENREGISTREMENT"].Visible = false;
-            dgvEnregistrements.Columns["DATECREATION"].Visible = false;
-
-            dgvEnregistrements.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
-            dgvEnregistrements.ReadOnly = true;
-
-        }
-
-        private void Localize_DgvEnregistrements(string lang)
-        {
-            if (lang == "fr")
-            {
-                dgvEnregistrements.Columns["TABLES"].HeaderText = "TABLES";
-                dgvEnregistrements.Columns["ENREGISTREMENT"].HeaderText = "ENREGISTREMENTS";
-                dgvEnregistrements.Columns["DATECREATION"].HeaderText = "DATE CREATION";
-            }
-
-            if (lang == "en")
-            {
-                dgvEnregistrements.Columns["TABLES"].HeaderText = "TABLES";
-                dgvEnregistrements.Columns["ENREGISTREMENT"].HeaderText = "RECORDS";
-                dgvEnregistrements.Columns["DATECREATION"].HeaderText = "CREATION DATE";
-            }
-
-            if (lang == "es")
-            {
-                dgvEnregistrements.Columns["TABLES"].HeaderText = "TABLAS";
-                dgvEnregistrements.Columns["ENREGISTREMENT"].HeaderText = "REGISTROS";
-                dgvEnregistrements.Columns["DATECREATION"].HeaderText = "FECHA DE CREACIÓN";
-            }
-        }
-
-        private void Refresh_DgvEnregistrements()
-        {
-            int Id;
-            bool IsParsableId;
-            TablesEnregistrements tablesEnregistrements = new TablesEnregistrements();
-            IsParsableId = Int32.TryParse(txtId.Text, out Id);
-            dgvEnregistrements.DataSource = tablesEnregistrements.FindByEnregistrementsId(Id);
-        }
-
+        
         private void Disable()
         {
             txtDateCreation.Enabled = false;
             txtNom.Enabled = false;
+            txtCode.Enabled = false;
             txtAdresse.Enabled = false;
             txtCodePostal.Enabled = false;
             txtLocalite.Enabled = false;
@@ -200,9 +177,7 @@ namespace WidraSoft.UI
             chx_Attention.Enabled = false;
             txtAlerte.Enabled = false;
             txtObservations.Enabled = false;
-            dgvEnregistrements.Enabled = false;
-            lblAddDgvEnregistrements.Enabled = false;
-            lbActualiserDgvEnregistrements.Enabled = false;
+            cbParent.Enabled = false;
             pbUpdating.Visible = false;
 
             vg_IsEnabled = false;
@@ -212,6 +187,7 @@ namespace WidraSoft.UI
         {
             txtDateCreation.Enabled = true;
             txtNom.Enabled = true;
+            txtCode.Enabled = true;
             txtAdresse.Enabled = true;
             txtCodePostal.Enabled = true;
             txtLocalite.Enabled = true;
@@ -225,9 +201,7 @@ namespace WidraSoft.UI
             chx_Attention.Enabled = true;
             txtAlerte.Enabled = true;
             txtObservations.Enabled = true;
-            dgvEnregistrements.Enabled = true;
-            lblAddDgvEnregistrements.Enabled = true;
-            lbActualiserDgvEnregistrements.Enabled = true;
+            cbParent.Enabled = true;
             pbUpdating.Visible = true;
 
             vg_IsEnabled = true;
@@ -238,6 +212,7 @@ namespace WidraSoft.UI
             txtId.Text = "";
             txtDateCreation.Text = "";
             txtNom.Text = "";
+            txtCode.Text = "";
             txtAdresse.Text = "";
             txtCodePostal.Text = "";
             txtLocalite.Text = "";
@@ -251,6 +226,7 @@ namespace WidraSoft.UI
             txtObservations.Text = "";
             chx_Bloque.Checked = false;
             chx_Attention.Checked = false;
+            cbParent.Text = "";
         }
 
         private void chx_Bloque_CheckedChanged(object sender, EventArgs e)
@@ -276,33 +252,78 @@ namespace WidraSoft.UI
 
                 if (txtId.Text == "" && txtDateCreation.Text == "" && txtNom.Text != "" && txtBloque.Text != "" && txtAttention.Text != "")
                 {
-                    
-                    int Bloque;
-                    int Attention;
-                    bool IsParsableBloque;
-                    bool IsParsableAttention;
-                    IsParsableBloque = Int32.TryParse(txtBloque.Text, out Bloque);
-                    IsParsableAttention = Int32.TryParse(txtAttention.Text, out Attention);
-                    try
+                    Tables tables = new Tables();
+                    if (tables.IsTableRelated(vg_TableId))
                     {
-                        if (IsParsableBloque && IsParsableAttention)
+                        if (cbParent.Text != "" && cbParent.SelectedIndex != -1)
                         {
-                            Enregistrements enregistrements = new Enregistrements();
-                            enregistrements.Add(txtNom.Text, txtAdresse.Text, txtCodePostal.Text, txtLocalite.Text, txtPays.Text, txtTelephone.Text, txtEmail.Text,
-                                    txtNumTVA.Text, txtSiteWebUrl.Text, txtObservations.Text, Bloque, txtBlocage.Text, Attention, txtAlerte.Text);
+                            int Bloque;
+                            int Attention;
+                            bool IsParsableBloque;
+                            bool IsParsableAttention;
+                            IsParsableBloque = Int32.TryParse(txtBloque.Text, out Bloque);
+                            IsParsableAttention = Int32.TryParse(txtAttention.Text, out Attention);
+                            try
+                            {
+                                if (IsParsableBloque && IsParsableAttention)
+                                {
+                                    Enregistrements enregistrements = new Enregistrements();
+                                    enregistrements.Add(vg_TableId, txtNom.Text, txtCode.Text, txtAdresse.Text, txtCodePostal.Text, txtLocalite.Text, txtPays.Text, txtTelephone.Text, txtEmail.Text,
+                                            txtNumTVA.Text, txtSiteWebUrl.Text, txtObservations.Text, Bloque, txtBlocage.Text, Attention, txtAlerte.Text, Common_functions.CbSelectedValue_Convert_Int(cbParent));
+                                    if (cbLang.Text == "FR")
+                                        Custom_MessageBox.Show("FR", "Enregistrement ajouté avec succès", "Enregistrement", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                    else if (cbLang.Text == "EN")
+                                        Custom_MessageBox.Show("EN", "Record added successfully", "Record", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                    else
+                                        Custom_MessageBox.Show("ES", "Registro agregado", "Registro", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                    Close();
+                                }
+                            }
+                            catch
+                            {
+                                throw;
+                            }
+                        }
+                        else
+                        {
                             if (cbLang.Text == "FR")
-                                Custom_MessageBox.Show("FR", "Enregistrement ajouté avec succès", "Enregistrement", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                Custom_MessageBox.Show("FR", "Informations incomplètes", "Enregistrement", MessageBoxButtons.OK, MessageBoxIcon.Information);
                             else if (cbLang.Text == "EN")
-                                Custom_MessageBox.Show("EN", "Record added successfully", "Record", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                Custom_MessageBox.Show("EN", "Incomplete informations", "Record", MessageBoxButtons.OK, MessageBoxIcon.Information);
                             else
-                                Custom_MessageBox.Show("ES", "Registro agregado", "Registro", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                            Close();
+                                Custom_MessageBox.Show("ES", "Información incompleta", "Registro", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         }
                     }
-                    catch
+                    else
                     {
-                        throw;
+                        int Bloque;
+                        int Attention;
+                        bool IsParsableBloque;
+                        bool IsParsableAttention;
+                        IsParsableBloque = Int32.TryParse(txtBloque.Text, out Bloque);
+                        IsParsableAttention = Int32.TryParse(txtAttention.Text, out Attention);
+                        try
+                        {
+                            if (IsParsableBloque && IsParsableAttention)
+                            {
+                                Enregistrements enregistrements = new Enregistrements();
+                                enregistrements.Add(vg_TableId, txtNom.Text, txtCode.Text, txtAdresse.Text, txtCodePostal.Text, txtLocalite.Text, txtPays.Text, txtTelephone.Text, txtEmail.Text,
+                                        txtNumTVA.Text, txtSiteWebUrl.Text, txtObservations.Text, Bloque, txtBlocage.Text, Attention, txtAlerte.Text, Common_functions.CbSelectedValue_Convert_Int(cbParent));
+                                if (cbLang.Text == "FR")
+                                    Custom_MessageBox.Show("FR", "Enregistrement ajouté avec succès", "Enregistrement", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                else if (cbLang.Text == "EN")
+                                    Custom_MessageBox.Show("EN", "Record added successfully", "Record", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                else
+                                    Custom_MessageBox.Show("ES", "Registro agregado", "Registro", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                Close();
+                            }
+                        }
+                        catch
+                        {
+                            throw;
+                        }
                     }
+                    
 
                 }
                 else
@@ -337,40 +358,92 @@ namespace WidraSoft.UI
                     {
                         if (txtId.Text != "" && txtDateCreation.Text != "" && txtNom.Text != "" && txtBloque.Text != "" && txtAttention.Text != "")
                         {
-                            int Id;
-                            int Bloque;
-                            int Attention;
-                            bool IsParsableId;
-                            bool IsParsableBloque;
-                            bool IsParsableAttention;
-                            IsParsableId = Int32.TryParse(txtId.Text, out Id);
-                            IsParsableBloque = Int32.TryParse(txtBloque.Text, out Bloque);
-                            IsParsableAttention = Int32.TryParse(txtAttention.Text, out Attention);
-                            try
+                            Tables tables = new Tables();
+                            if (tables.IsTableRelated(vg_TableId))
                             {
-                                if (IsParsableId &&  IsParsableBloque && IsParsableAttention)
+                                if (cbParent.Text != "" && cbParent.SelectedIndex != -1)
                                 {
-                                    Enregistrements enregistrements = new Enregistrements();
-                                    enregistrements.Update(Id, txtNom.Text, txtAdresse.Text, txtCodePostal.Text, txtLocalite.Text, txtPays.Text, txtTelephone.Text, txtEmail.Text,
-                                            txtNumTVA.Text, txtSiteWebUrl.Text, txtObservations.Text, Bloque, txtBlocage.Text, Attention, txtAlerte.Text);
-                                    if (cbLang.Text == "FR")
-                                        Custom_MessageBox.Show("FR", "Enregistrement modifié avec succès", "Enregistrement", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                                    else if (cbLang.Text == "EN")
-                                        Custom_MessageBox.Show("EN", "Record updated successfully", "Record", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                                    else
-                                        Custom_MessageBox.Show("ES", "Registro alterado", "Registro", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                                    lbModifier.Text = Language_Manager.Localize("Modifier", cbLang.Text);
-                                    vg_Update = false;
-                                    Disable();
-                                    Bind_Fields();
-                                    Bind_DgvEnregistrements();
-                                }
+                                    int Id;
+                                    int Bloque;
+                                    int Attention;
+                                    bool IsParsableId;
+                                    bool IsParsableBloque;
+                                    bool IsParsableAttention;
+                                    IsParsableId = Int32.TryParse(txtId.Text, out Id);
+                                    IsParsableBloque = Int32.TryParse(txtBloque.Text, out Bloque);
+                                    IsParsableAttention = Int32.TryParse(txtAttention.Text, out Attention);
+                                    try
+                                    {
+                                        if (IsParsableId && IsParsableBloque && IsParsableAttention)
+                                        {
+                                            Enregistrements enregistrements = new Enregistrements();
+                                            enregistrements.Update(Id, vg_TableId, txtNom.Text, txtCode.Text, txtAdresse.Text, txtCodePostal.Text, txtLocalite.Text, txtPays.Text, txtTelephone.Text, txtEmail.Text,
+                                                    txtNumTVA.Text, txtSiteWebUrl.Text, txtObservations.Text, Bloque, txtBlocage.Text, Attention, txtAlerte.Text, Common_functions.CbSelectedValue_Convert_Int(cbParent));
+                                            if (cbLang.Text == "FR")
+                                                Custom_MessageBox.Show("FR", "Enregistrement modifié avec succès", "Enregistrement", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                            else if (cbLang.Text == "EN")
+                                                Custom_MessageBox.Show("EN", "Record updated successfully", "Record", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                            else
+                                                Custom_MessageBox.Show("ES", "Registro alterado", "Registro", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                            lbModifier.Text = Language_Manager.Localize("Modifier", cbLang.Text);
+                                            vg_Update = false;
+                                            Disable();
+                                            Bind_Fields();
+                                        }
 
+                                    }
+                                    catch
+                                    {
+                                        throw;
+                                    }
+                                }
+                                else
+                                {
+                                    if (cbLang.Text == "FR")
+                                        Custom_MessageBox.Show("FR", "Informations incomplètes", "Enregistrement", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                    else if (cbLang.Text == "EN")
+                                        Custom_MessageBox.Show("EN", "Incomplete informations", "Record", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                    else
+                                        Custom_MessageBox.Show("ES", "Información incompleta", "Registro", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                }
                             }
-                            catch
+                            else
                             {
-                                throw;
+                                int Id;
+                                int Bloque;
+                                int Attention;
+                                bool IsParsableId;
+                                bool IsParsableBloque;
+                                bool IsParsableAttention;
+                                IsParsableId = Int32.TryParse(txtId.Text, out Id);
+                                IsParsableBloque = Int32.TryParse(txtBloque.Text, out Bloque);
+                                IsParsableAttention = Int32.TryParse(txtAttention.Text, out Attention);
+                                try
+                                {
+                                    if (IsParsableId && IsParsableBloque && IsParsableAttention)
+                                    {
+                                        Enregistrements enregistrements = new Enregistrements();
+                                        enregistrements.Update(Id, vg_TableId, txtNom.Text, txtCode.Text, txtAdresse.Text, txtCodePostal.Text, txtLocalite.Text, txtPays.Text, txtTelephone.Text, txtEmail.Text,
+                                                txtNumTVA.Text, txtSiteWebUrl.Text, txtObservations.Text, Bloque, txtBlocage.Text, Attention, txtAlerte.Text, Common_functions.CbSelectedValue_Convert_Int(cbParent));
+                                        if (cbLang.Text == "FR")
+                                            Custom_MessageBox.Show("FR", "Enregistrement modifié avec succès", "Enregistrement", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                        else if (cbLang.Text == "EN")
+                                            Custom_MessageBox.Show("EN", "Record updated successfully", "Record", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                        else
+                                            Custom_MessageBox.Show("ES", "Registro alterado", "Registro", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                        lbModifier.Text = Language_Manager.Localize("Modifier", cbLang.Text);
+                                        vg_Update = false;
+                                        Disable();
+                                        Bind_Fields();
+                                    }
+
+                                }
+                                catch
+                                {
+                                    throw;
+                                }
                             }
+                            
                         }
                         else
                         {
@@ -470,7 +543,6 @@ namespace WidraSoft.UI
                 Spain_flag.Visible = false;
                 Language_Manager language_Manager = new Language_Manager();
                 language_Manager.ChangeLanguage("fr", this, typeof(EnregistrementsDetail));
-                Localize_DgvEnregistrements("fr");
             }
 
             if (cbLang.Text == "EN")
@@ -480,7 +552,6 @@ namespace WidraSoft.UI
                 Spain_flag.Visible = false;
                 Language_Manager language_Manager = new Language_Manager();
                 language_Manager.ChangeLanguage("en", this, typeof(EnregistrementsDetail));
-                Localize_DgvEnregistrements("en");
             }
 
             if (cbLang.Text == "ES")
@@ -490,7 +561,6 @@ namespace WidraSoft.UI
                 Spain_flag.Visible = true;
                 Language_Manager language_Manager = new Language_Manager();
                 language_Manager.ChangeLanguage("es", this, typeof(EnregistrementsDetail));
-                Localize_DgvEnregistrements("es");
             }
         }
 
@@ -520,9 +590,11 @@ namespace WidraSoft.UI
            
         }
 
-        private void lbActualiserDgvEnregistrements_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        
+
+        private void cbTablesId_SelectedValueChanged(object sender, EventArgs e)
         {
-            Refresh_DgvEnregistrements();
+
         }
     }
 }

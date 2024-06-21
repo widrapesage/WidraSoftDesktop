@@ -23,14 +23,22 @@ namespace WidraSoft.UI
                 Type controlType = c.GetType();
                 String controlName = controlType.Name;
                 
-                if (controlName == "Panel" || controlName == "GroupBox")
+                if (controlName == "Panel" || controlName == "GroupBox" || controlName == "TabControl" || controlName == "TabPage")
                 {
                     foreach (Control cc in c.Controls)
                     {
-                        if (cc.GetType().Name == controlName)
+                        if (cc.GetType().Name == "Panel" || cc.GetType().Name == "GroupBox" || cc.GetType().Name == "TabControl" || cc.GetType().Name == "TabPage")
                         {
                             foreach (Control sc in cc.Controls)
                             {
+                                if (sc.GetType().Name == "Panel" || sc.GetType().Name == "GroupBox" || sc.GetType().Name == "TabControl" || sc.GetType().Name == "TabPage")
+                                {
+                                    foreach (Control ssc in sc.Controls)
+                                    {
+                                        resources.ApplyResources(ssc, ssc.Name, new CultureInfo(lang));
+                                    }
+                                }
+                                
                                 resources.ApplyResources(sc, sc.Name, new CultureInfo(lang));
                             }
                         }

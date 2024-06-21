@@ -75,6 +75,32 @@ namespace WidraSoft.BL
             }
         }
 
+        public bool IsTableRelated(Int32 TablesId)
+        {
+            try
+            {
+                TablesDA tables = new TablesDA();
+                return tables.IsTableRelated(TablesId);
+            }
+            catch
+            {
+                throw;
+            }
+        }
+
+        public int GetParentTableId(Int32 TablesId)
+        {
+            try
+            {
+                TablesDA tables = new TablesDA();
+                return tables.GetParentTableId(TablesId);
+            }
+            catch
+            {
+                throw;
+            }
+        }
+
         public void Add(String Nom, Int32 InclureDansPesee, Int32 InclureDansTicket, Int32 EstEntrant, Int32 EstSortant, Int32 TableParentId, String Observations)
         {
             try

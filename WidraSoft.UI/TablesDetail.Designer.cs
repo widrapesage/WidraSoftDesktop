@@ -29,8 +29,8 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TablesDetail));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panelLang = new System.Windows.Forms.Panel();
             this.pbUpdating = new System.Windows.Forms.PictureBox();
             this.Spain_flag = new System.Windows.Forms.PictureBox();
@@ -45,6 +45,7 @@
             this.lbAjouter = new System.Windows.Forms.LinkLabel();
             this.lbSupprimer = new System.Windows.Forms.LinkLabel();
             this.panelDetail = new System.Windows.Forms.Panel();
+            this.RqPont = new System.Windows.Forms.PictureBox();
             this.label5 = new System.Windows.Forms.Label();
             this.chx_InclureTicket = new System.Windows.Forms.CheckBox();
             this.label6 = new System.Windows.Forms.Label();
@@ -83,7 +84,6 @@
             this.label1 = new System.Windows.Forms.Label();
             this.txtSortant = new System.Windows.Forms.TextBox();
             this.txtEntrant = new System.Windows.Forms.TextBox();
-            this.RqPont = new System.Windows.Forms.PictureBox();
             this.panelLang.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbUpdating)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Spain_flag)).BeginInit();
@@ -94,6 +94,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.panelDetail.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.RqPont)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvTraductions)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvEnregistrements)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
@@ -102,7 +103,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbRemoveRow)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbAddRow)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.RqPont)).BeginInit();
             this.SuspendLayout();
             // 
             // panelLang
@@ -278,6 +278,13 @@
             resources.ApplyResources(this.panelDetail, "panelDetail");
             this.panelDetail.Name = "panelDetail";
             // 
+            // RqPont
+            // 
+            this.RqPont.Image = global::WidraSoft.UI.Properties.Resources.asterisk;
+            resources.ApplyResources(this.RqPont, "RqPont");
+            this.RqPont.Name = "RqPont";
+            this.RqPont.TabStop = false;
+            // 
             // label5
             // 
             resources.ApplyResources(this.label5, "label5");
@@ -337,14 +344,14 @@
             this.dgvTraductions.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgvTraductions.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.Sunken;
             this.dgvTraductions.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.Honeydew;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Calibri", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(86)))), ((int)(((byte)(81)))));
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvTraductions.DefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.Honeydew;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Calibri", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(86)))), ((int)(((byte)(81)))));
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvTraductions.DefaultCellStyle = dataGridViewCellStyle3;
             resources.ApplyResources(this.dgvTraductions, "dgvTraductions");
             this.dgvTraductions.Name = "dgvTraductions";
             this.dgvTraductions.RowTemplate.Height = 25;
@@ -357,14 +364,14 @@
             this.dgvEnregistrements.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgvEnregistrements.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.Sunken;
             this.dgvEnregistrements.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.Honeydew;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Calibri", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(86)))), ((int)(((byte)(81)))));
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvEnregistrements.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.Honeydew;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Calibri", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(86)))), ((int)(((byte)(81)))));
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvEnregistrements.DefaultCellStyle = dataGridViewCellStyle4;
             resources.ApplyResources(this.dgvEnregistrements, "dgvEnregistrements");
             this.dgvEnregistrements.Name = "dgvEnregistrements";
             this.dgvEnregistrements.RowTemplate.Height = 25;
@@ -399,6 +406,7 @@
             this.lbActualiserDgvTransporteurs.LinkColor = System.Drawing.Color.White;
             this.lbActualiserDgvTransporteurs.Name = "lbActualiserDgvTransporteurs";
             this.lbActualiserDgvTransporteurs.TabStop = true;
+            this.lbActualiserDgvTransporteurs.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lbActualiserDgvTransporteurs_LinkClicked);
             // 
             // pictureBox6
             // 
@@ -427,6 +435,7 @@
             this.lblAddDgvTransporteurs.LinkColor = System.Drawing.Color.White;
             this.lblAddDgvTransporteurs.Name = "lblAddDgvTransporteurs";
             this.lblAddDgvTransporteurs.TabStop = true;
+            this.lblAddDgvTransporteurs.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lblAddDgvTransporteurs_LinkClicked);
             // 
             // lblRetirerDgvTransporteurs
             // 
@@ -485,6 +494,7 @@
             this.lblAddDgvChauffeurs.LinkColor = System.Drawing.Color.White;
             this.lblAddDgvChauffeurs.Name = "lblAddDgvChauffeurs";
             this.lblAddDgvChauffeurs.TabStop = true;
+            this.lblAddDgvChauffeurs.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lblAddDgvChauffeurs_LinkClicked);
             // 
             // lblRetirerDgvChauffeurs
             // 
@@ -495,6 +505,7 @@
             this.lblRetirerDgvChauffeurs.LinkColor = System.Drawing.Color.White;
             this.lblRetirerDgvChauffeurs.Name = "lblRetirerDgvChauffeurs";
             this.lblRetirerDgvChauffeurs.TabStop = true;
+            this.lblRetirerDgvChauffeurs.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lblRetirerDgvChauffeurs_LinkClicked);
             // 
             // txtDateCreation
             // 
@@ -587,13 +598,6 @@
             resources.ApplyResources(this.txtEntrant, "txtEntrant");
             this.txtEntrant.Name = "txtEntrant";
             // 
-            // RqPont
-            // 
-            this.RqPont.Image = global::WidraSoft.UI.Properties.Resources.asterisk;
-            resources.ApplyResources(this.RqPont, "RqPont");
-            this.RqPont.Name = "RqPont";
-            this.RqPont.TabStop = false;
-            // 
             // TablesDetail
             // 
             resources.ApplyResources(this, "$this");
@@ -619,6 +623,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.panelDetail.ResumeLayout(false);
             this.panelDetail.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.RqPont)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvTraductions)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvEnregistrements)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
@@ -627,7 +632,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbRemoveRow)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbAddRow)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.RqPont)).EndInit();
             this.ResumeLayout(false);
 
         }

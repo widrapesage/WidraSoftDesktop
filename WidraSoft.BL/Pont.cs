@@ -49,12 +49,38 @@ namespace WidraSoft.BL
             }
         }
 
+        public DataTable FindByMachineName(String Name)
+        {
+            try
+            {
+                PontDA pont = new PontDA();
+                return pont.FindByMachineName(Name);
+            }
+            catch
+            {
+                throw;
+            }
+        }
+
         public bool IfExists(String Name)
         {
             try
             {
                 PontDA pont = new PontDA();
                 return pont.IfExists(Name);
+            }
+            catch
+            {
+                throw;
+            }
+        }
+
+        public bool IsMultipleParam(Int32 PontId)
+        {
+            try
+            {
+                PontDA pont = new PontDA();
+                return pont.IsMultipleParam(PontId);
             }
             catch
             {
@@ -115,13 +141,13 @@ namespace WidraSoft.BL
         }
 
         public void Add(String Designation, String NumPortCOM, Int32 Weight_SettingsId, Int32 Weighing_SettingsId, Int32 ActiverPoids, Int32 BaudRate,
-                        Int32 DataBits, String StopBits, String Handshake, Int32 ReadTimeOut)
+                        Int32 DataBits, String StopBits, String Handshake, Int32 ReadTimeOut,  String Machine, String Demarrage, Int32 UtilisateurId, Int32 ActiverMultipleParam, Int32 Poids_Detection)
         {
             try
             {
                 PontDA pont = new PontDA();
                 pont.Add(Designation, NumPortCOM, Weight_SettingsId, Weighing_SettingsId, ActiverPoids, BaudRate,
-                         DataBits, StopBits, Handshake, ReadTimeOut);
+                         DataBits, StopBits, Handshake, ReadTimeOut, Machine, Demarrage, UtilisateurId, ActiverMultipleParam, Poids_Detection);
             }
             catch
             {
@@ -130,13 +156,13 @@ namespace WidraSoft.BL
         }
 
         public void Update(Int32 Id, String Designation, String NumPortCOM, Int32 Weight_SettingsId, Int32 Weighing_SettingsId, Int32 ActiverPoids, Int32 BaudRate,
-                        Int32 DataBits, String StopBits, String Handshake, Int32 ReadTimeOut)
+                        Int32 DataBits, String StopBits, String Handshake, Int32 ReadTimeOut, String Machine, String Demarrage, Int32 UtilisateurId, Int32 ActiverMultipleParam, Int32 Poids_Detection)
         {
             try
             {
                 PontDA pont = new PontDA();
                 pont.Update(Id, Designation, NumPortCOM, Weight_SettingsId, Weighing_SettingsId, ActiverPoids, BaudRate,
-                         DataBits, StopBits, Handshake, ReadTimeOut);
+                         DataBits, StopBits, Handshake, ReadTimeOut, Machine, Demarrage, UtilisateurId, ActiverMultipleParam, Poids_Detection);
             }
             catch
             {

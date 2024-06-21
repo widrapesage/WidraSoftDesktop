@@ -88,42 +88,6 @@
   <data name="lbSupprimer.Text" xml:space="preserve">
     <value>Delete</value>
   </data>
-  <data name="label3.Size" type="System.Drawing.Size, System.Drawing">
-    <value>136, 19</value>
-  </data>
-  <data name="label3.Text" xml:space="preserve">
-    <value>This record's tables</value>
-  </data>
-  <data name="pictureBox4.Location" type="System.Drawing.Point, System.Drawing">
-    <value>310, 585</value>
-  </data>
-  <data name="lbActualiserDgvChauffeurs.Location" type="System.Drawing.Point, System.Drawing">
-    <value>327, 584</value>
-  </data>
-  <data name="lbActualiserDgvChauffeurs.Size" type="System.Drawing.Size, System.Drawing">
-    <value>56, 18</value>
-  </data>
-  <data name="lbActualiserDgvChauffeurs.Text" xml:space="preserve">
-    <value>Refresh</value>
-  </data>
-  <data name="pbRemoveRow.Location" type="System.Drawing.Point, System.Drawing">
-    <value>237, 585</value>
-  </data>
-  <data name="lblAddDgvChauffeurs.Size" type="System.Drawing.Size, System.Drawing">
-    <value>33, 18</value>
-  </data>
-  <data name="lblAddDgvChauffeurs.Text" xml:space="preserve">
-    <value>Add</value>
-  </data>
-  <data name="lblRetirerDgvChauffeurs.Location" type="System.Drawing.Point, System.Drawing">
-    <value>253, 584</value>
-  </data>
-  <data name="lblRetirerDgvChauffeurs.Size" type="System.Drawing.Size, System.Drawing">
-    <value>50, 18</value>
-  </data>
-  <data name="lblRetirerDgvChauffeurs.Text" xml:space="preserve">
-    <value>Delete</value>
-  </data>
   <data name="label18.Size" type="System.Drawing.Size, System.Drawing">
     <value>63, 19</value>
   </data>

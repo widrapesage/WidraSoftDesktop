@@ -13,6 +13,9 @@ namespace WidraSoft.UI
         public static List<String> StopBits = new List<String>();
         public static List<String> Handshake = new List<String>();
         public static List<String> WeightSettigs_ModeLecture = new List<String>();
+        public static List<String> Borne_Style = new List<String>();
+        public static List<String> DemarrageType = new List<String>();
+        public static List<String> FormatTicket = new List<String>();
 
         static Values()
         {
@@ -58,6 +61,19 @@ namespace WidraSoft.UI
             //WeightSettings_ModeLecture
             WeightSettigs_ModeLecture.Add("Ligne");
             WeightSettigs_ModeLecture.Add("Tableau");
+
+            //Borne_Style
+            Borne_Style.Add("List");
+            Borne_Style.Add("Scan");
+            Borne_Style.Add("List&Scan");
+            Borne_Style.Add("Text");
+
+            //Borne_Style
+            DemarrageType.Add("Standard");
+            DemarrageType.Add("Terminal");
+
+            //Format_Ticket
+            FormatTicket.Add("A5");
 
 
 

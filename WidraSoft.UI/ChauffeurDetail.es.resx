@@ -88,6 +88,21 @@
   <data name="lbSupprimer.Text" xml:space="preserve">
     <value>Borrar</value>
   </data>
+  <data name="label10.Location" type="System.Drawing.Point, System.Drawing">
+    <value>665, 45</value>
+  </data>
+  <data name="label10.Size" type="System.Drawing.Size, System.Drawing">
+    <value>217, 19</value>
+  </data>
+  <data name="label10.Text" xml:space="preserve">
+    <value>Los camiones de este conductor</value>
+  </data>
+  <data name="DgvCamions.Location" type="System.Drawing.Point, System.Drawing">
+    <value>671, 68</value>
+  </data>
+  <data name="RqPont.Location" type="System.Drawing.Point, System.Drawing">
+    <value>491, 150</value>
+  </data>
   <data name="txtNumeroPermis.Location" type="System.Drawing.Point, System.Drawing">
     <value>191, 213</value>
   </data>

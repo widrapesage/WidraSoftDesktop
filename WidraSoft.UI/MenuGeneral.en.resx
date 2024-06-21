@@ -125,52 +125,88 @@
     <value>Exit</value>
   </data>
   <data name="menuStrip.Size" type="System.Drawing.Size, System.Drawing">
-    <value>161, 755</value>
+    <value>161, 830</value>
+  </data>
+  <data name="toolStripMenuItem2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>219, 30</value>
+  </data>
+  <data name="toolStripMenuItem1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>219, 30</value>
+  </data>
+  <data name="toolStripMenuItem1.Text" xml:space="preserve">
+    <value>ANPR Camera</value>
+  </data>
+  <data name="ParamPoidstoolStripMenuItem1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>219, 30</value>
+  </data>
+  <data name="ParamPoidstoolStripMenuItem1.Text" xml:space="preserve">
+    <value>WeightSettings</value>
   </data>
   <data name="camionsToolStripMenuItem1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>255, 28</value>
+    <value>263, 30</value>
   </data>
   <data name="camionsToolStripMenuItem1.Text" xml:space="preserve">
     <value>Trucks</value>
   </data>
   <data name="produitsToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>255, 28</value>
+    <value>263, 30</value>
   </data>
   <data name="produitsToolStripMenuItem.Text" xml:space="preserve">
     <value>Products</value>
   </data>
   <data name="chauffeursToolStripMenuItem1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>255, 28</value>
+    <value>263, 30</value>
   </data>
   <data name="chauffeursToolStripMenuItem1.Text" xml:space="preserve">
     <value>Drivers</value>
   </data>
   <data name="firmesToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>255, 28</value>
+    <value>263, 30</value>
   </data>
   <data name="firmesToolStripMenuItem.Text" xml:space="preserve">
     <value>Firms</value>
   </data>
   <data name="transporteursToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>255, 28</value>
+    <value>263, 30</value>
   </data>
   <data name="transporteursToolStripMenuItem.Text" xml:space="preserve">
     <value>Carriers</value>
   </data>
   <data name="destinationsProvenancesToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>255, 28</value>
+    <value>263, 30</value>
   </data>
   <data name="destinationsProvenancesToolStripMenuItem.Text" xml:space="preserve">
     <value>Destinations-Origins</value>
   </data>
   <data name="clientsToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>255, 28</value>
+    <value>263, 30</value>
   </data>
   <data name="clientsToolStripMenuItem.Text" xml:space="preserve">
     <value>Clustomers</value>
   </data>
+  <data name="pamamètresDePeséeToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>240, 30</value>
+  </data>
+  <data name="pamamètresDePeséeToolStripMenuItem.Text" xml:space="preserve">
+    <value>Weighing settings</value>
+  </data>
+  <data name="tablesSupplémentairesToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>240, 30</value>
+  </data>
+  <data name="tablesSupplémentairesToolStripMenuItem.Text" xml:space="preserve">
+    <value>Additional tables</value>
+  </data>
+  <data name="tablesToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>188, 30</value>
+  </data>
+  <data name="enregistrementsToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>188, 30</value>
+  </data>
+  <data name="enregistrementsToolStripMenuItem.Text" xml:space="preserve">
+    <value>Records</value>
+  </data>
   <data name="lblChangerMdp.Size" type="System.Drawing.Size, System.Drawing">
-    <value>115, 17</value>
+    <value>113, 17</value>
   </data>
   <data name="lblChangerMdp.Text" xml:space="preserve">
     <value>Change password</value>
@@ -197,19 +233,19 @@
     <value>62, 58</value>
   </data>
   <data name="label1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>101, 17</value>
+    <value>100, 19</value>
   </data>
   <data name="label1.Text" xml:space="preserve">
     <value>Subscription : </value>
   </data>
   <data name="label2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>64, 17</value>
+    <value>69, 19</value>
   </data>
   <data name="label2.Text" xml:space="preserve">
     <value>Validity : </value>
   </data>
   <data name="label3.Size" type="System.Drawing.Size, System.Drawing">
-    <value>79, 17</value>
+    <value>77, 19</value>
   </data>
   <data name="label3.Text" xml:space="preserve">
     <value>Company :</value>
@@ -218,16 +254,16 @@
     <value>161, 154</value>
   </data>
   <data name="panelLayout.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1134, 601</value>
+    <value>1134, 676</value>
   </data>
   <data name="panelFooter.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 560</value>
+    <value>0, 635</value>
   </data>
   <data name="panelFooter.Size" type="System.Drawing.Size, System.Drawing">
     <value>1134, 41</value>
   </data>
   <data name="pictureBox2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1134, 601</value>
+    <value>1134, 676</value>
   </data>
   <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>

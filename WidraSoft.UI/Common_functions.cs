@@ -17,7 +17,23 @@ namespace WidraSoft.UI
             }
             else
             {
-                if (o.Text == "") 
+                if (o.Text == "" || o.Text == "System.Data.DataRowView") 
+                    return 0;
+                else
+                    return (Int32)o.SelectedValue;
+            }
+        }
+
+        //Pour WEIGHING_SETTINGS prendre la valeur SelectedValue meme si Text = "System.Data.DataRowView"
+        public static Int32 CbSelectedValue_Convert_Int_2(ComboBox o)
+        {
+            if (o.SelectedValue == null)
+            {
+                return 0;
+            }
+            else
+            {
+                if (o.Text == "")
                     return 0;
                 else
                     return (Int32)o.SelectedValue;

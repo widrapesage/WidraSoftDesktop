@@ -88,6 +88,42 @@
   <data name="lbSupprimer.Text" xml:space="preserve">
     <value>Delete</value>
   </data>
+  <data name="label18.Location" type="System.Drawing.Point, System.Drawing">
+    <value>404, 254</value>
+  </data>
+  <data name="label18.Size" type="System.Drawing.Size, System.Drawing">
+    <value>61, 19</value>
+  </data>
+  <data name="label18.Text" xml:space="preserve">
+    <value>Settings</value>
+  </data>
+  <data name="label17.Location" type="System.Drawing.Point, System.Drawing">
+    <value>404, 235</value>
+  </data>
+  <data name="label17.Size" type="System.Drawing.Size, System.Drawing">
+    <value>175, 19</value>
+  </data>
+  <data name="label17.Text" xml:space="preserve">
+    <value>Enable multiple Weighing</value>
+  </data>
+  <data name="chx_ActiverMultipleParam.Location" type="System.Drawing.Point, System.Drawing">
+    <value>389, 238</value>
+  </data>
+  <data name="txtActiverMultipleParam.Location" type="System.Drawing.Point, System.Drawing">
+    <value>366, 234</value>
+  </data>
+  <data name="label16.Size" type="System.Drawing.Size, System.Drawing">
+    <value>39, 19</value>
+  </data>
+  <data name="label16.Text" xml:space="preserve">
+    <value>User</value>
+  </data>
+  <data name="label15.Size" type="System.Drawing.Size, System.Drawing">
+    <value>55, 19</value>
+  </data>
+  <data name="label15.Text" xml:space="preserve">
+    <value>Startup</value>
+  </data>
   <data name="label8.Text" xml:space="preserve">
     <value>Weighing Setting</value>
   </data>

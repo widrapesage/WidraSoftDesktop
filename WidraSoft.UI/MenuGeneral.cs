@@ -159,7 +159,7 @@ namespace WidraSoft.UI
 
         private void homeToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Form form = new PeseePontBascule();
+            Form form = new PeseePontBascule(vg_UtilisateurId);
             form.Show();
         }
 

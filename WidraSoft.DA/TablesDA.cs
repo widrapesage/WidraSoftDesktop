@@ -109,6 +109,45 @@ namespace WidraSoft.DA
             }
         }
 
+        public bool IsTableRelated(Int32 TablesId)
+        {
+            String sql = "SELECT TABLEPARENTID FROM TABLES WHERE TABLESID=" + TablesId;
+            conn.ConnectionString = connString;
+            if (conn.State == ConnectionState.Closed)
+                conn.Open();
+            SqlCommand cmd = new SqlCommand(sql, conn);
+            try
+            {
+                Int32 Id = (int)cmd.ExecuteScalar();
+                if (Id > 0)
+                    return true;
+                else
+                    return false;
+            }
+            catch
+            {
+                throw;
+            }
+        }
+
+        public int GetParentTableId(Int32 TablesId)
+        {
+            String sql = "SELECT TABLEPARENTID FROM TABLES WHERE TABLESID=" + TablesId;
+            conn.ConnectionString = connString;
+            if (conn.State == ConnectionState.Closed)
+                conn.Open();
+            SqlCommand cmd = new SqlCommand(sql, conn);
+            try
+            {
+                Int32 Id = (int)cmd.ExecuteScalar();
+                return Id;
+            }
+            catch
+            {
+                throw;
+            }
+        }
+
         public void Add(String Nom, Int32 InclureDansPesee, Int32 InclureDansTicket, Int32 EstEntrant, Int32 EstSortant, Int32 TableParentId, String Observations)
         {
             using (conn)

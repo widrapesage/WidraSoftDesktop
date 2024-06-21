@@ -23,12 +23,12 @@ namespace WidraSoft.BL
             }
         }
 
-        public DataTable SearchBox(string Filter)
+        public DataTable SearchBox(string Filter, Int32 TablesId)
         {
             try
             {
                 EnregistrementsDA enregistrements = new EnregistrementsDA();
-                return enregistrements.SearchBox(Filter);
+                return enregistrements.SearchBox(Filter, TablesId);
             }
             catch
             {
@@ -49,6 +49,58 @@ namespace WidraSoft.BL
             }
         }
 
+        public bool IfExists(String Name, Int32 TablesId, Int32 ParentId)
+        {
+            try
+            {
+                EnregistrementsDA enregistrements = new EnregistrementsDA();
+                return enregistrements.IfExists(Name, TablesId, ParentId);
+            }
+            catch
+            {
+                throw;
+            }
+        }
+
+        public bool IfExistsWithCode(String Name, Int32 TablesId, Int32 ParentId)
+        {
+            try
+            {
+                EnregistrementsDA enregistrements = new EnregistrementsDA();
+                return enregistrements.IfExistsWithCode(Name, TablesId, ParentId);
+            }
+            catch
+            {
+                throw;
+            }
+        }
+
+        public DataTable FindByTableId(Int32 Id)
+        {
+            try
+            {
+                EnregistrementsDA enregistrements = new EnregistrementsDA();
+                return enregistrements.FindByTableId(Id);
+            }
+            catch
+            {
+                throw;
+            }
+        }
+
+        public DataTable FindByTableIdAndParentId(Int32 TablesId, Int32 ParentId)
+        {
+            try
+            {
+                EnregistrementsDA enregistrements = new EnregistrementsDA();
+                return enregistrements.FindByTableIdAndParentId(TablesId, ParentId);
+            }
+            catch
+            {
+                throw;
+            }
+        }
+
         public string GetName(Int32 Id)
         {
             try
@@ -62,15 +114,12 @@ namespace WidraSoft.BL
             }
         }
 
-        public void Add(String Nom, String Adresse, String CodePostal, String Localite, String Pays,
-            String Telephone, String Email, String NumTVA, String SiteWeb_Url, String Observations,
-            Int32 Bloque, String TexteBloque, Int32 Attention, String TexteAttention)
+        public string GetCode(Int32 Id)
         {
             try
             {
                 EnregistrementsDA enregistrements = new EnregistrementsDA();
-                enregistrements.Add(Nom, Adresse, CodePostal, Localite, Pays,Telephone, Email, NumTVA, SiteWeb_Url, Observations,
-                Bloque, TexteBloque, Attention, TexteAttention);
+                return enregistrements.GetCode(Id);
             }
             catch
             {
@@ -78,15 +127,31 @@ namespace WidraSoft.BL
             }
         }
 
-        public void Update(Int32 Id, String Nom, String Adresse, String CodePostal, String Localite, String Pays,
-           String Telephone, String Email, String NumTVA, String SiteWeb_Url, String Observations,
-           Int32 Bloque, String TexteBloque, Int32 Attention, String TexteAttention)
+        public void Add(Int32 TablesId, String Nom, String Code, String Adresse, String CodePostal, String Localite, String Pays,
+            String Telephone, String Email, String NumTVA, String SiteWeb_Url, String Observations,
+            Int32 Bloque, String TexteBloque, Int32 Attention, String TexteAttention, Int32 ParentId)
         {
             try
             {
                 EnregistrementsDA enregistrements = new EnregistrementsDA();
-                enregistrements.Update(Id, Nom, Adresse, CodePostal, Localite, Pays, Telephone, Email, NumTVA, SiteWeb_Url, Observations,
-                Bloque, TexteBloque, Attention, TexteAttention);
+                enregistrements.Add(TablesId, Nom, Code, Adresse, CodePostal, Localite, Pays,Telephone, Email, NumTVA, SiteWeb_Url, Observations,
+                Bloque, TexteBloque, Attention, TexteAttention, ParentId);
+            }
+            catch
+            {
+                throw;
+            }
+        }
+
+        public void Update(Int32 Id, Int32 TablesId, String Nom, String Code, String Adresse, String CodePostal, String Localite, String Pays,
+            String Telephone, String Email, String NumTVA, String SiteWeb_Url, String Observations,
+            Int32 Bloque, String TexteBloque, Int32 Attention, String TexteAttention, Int32 ParentId)
+        {
+            try
+            {
+                EnregistrementsDA enregistrements = new EnregistrementsDA();
+                enregistrements.Update(Id, TablesId, Nom, Code, Adresse, CodePostal, Localite, Pays, Telephone, Email, NumTVA, SiteWeb_Url, Observations,
+                Bloque, TexteBloque, Attention, TexteAttention, ParentId);
             }
             catch
             {

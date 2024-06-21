@@ -90,7 +90,7 @@ namespace WidraSoft.UI
                 England_flag.Visible = false;
                 Spain_flag.Visible = false;
                 Language_Manager language_Manager = new Language_Manager();
-                language_Manager.ChangeLanguage("fr", this, typeof(CamionChauffeur));
+                language_Manager.ChangeLanguage("fr", this, typeof(CamionChauffeurDetail));
                 Localize_Dgv("fr");
 
             }
@@ -101,7 +101,7 @@ namespace WidraSoft.UI
                 England_flag.Visible = true;
                 Spain_flag.Visible = false;
                 Language_Manager language_Manager = new Language_Manager();
-                language_Manager.ChangeLanguage("en", this, typeof(CamionChauffeur));
+                language_Manager.ChangeLanguage("en", this, typeof(CamionChauffeurDetail));
                 Localize_Dgv("en");
 
             }
@@ -112,7 +112,7 @@ namespace WidraSoft.UI
                 England_flag.Visible = false;
                 Spain_flag.Visible = true;
                 Language_Manager language_Manager = new Language_Manager();
-                language_Manager.ChangeLanguage("es", this, typeof(CamionChauffeur));
+                language_Manager.ChangeLanguage("es", this, typeof(CamionChauffeurDetail));
                 Localize_Dgv("es");
             }
         }

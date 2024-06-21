@@ -88,14 +88,107 @@
   <data name="lbSupprimer.Text" xml:space="preserve">
     <value>Borrar</value>
   </data>
+  <data name="label18.Location" type="System.Drawing.Point, System.Drawing">
+    <value>398, 264</value>
+  </data>
+  <data name="label18.Size" type="System.Drawing.Size, System.Drawing">
+    <value>72, 19</value>
+  </data>
+  <data name="label18.Text" xml:space="preserve">
+    <value>de pesaje</value>
+  </data>
+  <data name="label17.Location" type="System.Drawing.Point, System.Drawing">
+    <value>398, 245</value>
+  </data>
+  <data name="label17.Size" type="System.Drawing.Size, System.Drawing">
+    <value>196, 19</value>
+  </data>
+  <data name="label17.Text" xml:space="preserve">
+    <value>Activar múltiples parámetros</value>
+  </data>
+  <data name="chx_ActiverMultipleParam.Location" type="System.Drawing.Point, System.Drawing">
+    <value>383, 248</value>
+  </data>
+  <data name="txtActiverMultipleParam.Location" type="System.Drawing.Point, System.Drawing">
+    <value>366, 244</value>
+  </data>
+  <data name="label16.Location" type="System.Drawing.Point, System.Drawing">
+    <value>62, 510</value>
+  </data>
+  <data name="label16.Size" type="System.Drawing.Size, System.Drawing">
+    <value>59, 19</value>
+  </data>
+  <data name="label16.Text" xml:space="preserve">
+    <value>Usuario</value>
+  </data>
+  <data name="cbUtilisateurId.Location" type="System.Drawing.Point, System.Drawing">
+    <value>196, 507</value>
+  </data>
+  <data name="pictureBox15.Location" type="System.Drawing.Point, System.Drawing">
+    <value>494, 478</value>
+  </data>
+  <data name="label15.Location" type="System.Drawing.Point, System.Drawing">
+    <value>62, 477</value>
+  </data>
+  <data name="label15.Size" type="System.Drawing.Size, System.Drawing">
+    <value>44, 19</value>
+  </data>
+  <data name="label15.Text" xml:space="preserve">
+    <value>Inicio</value>
+  </data>
+  <data name="cbDemarrage.Location" type="System.Drawing.Point, System.Drawing">
+    <value>196, 474</value>
+  </data>
+  <data name="pictureBox14.Location" type="System.Drawing.Point, System.Drawing">
+    <value>494, 444</value>
+  </data>
+  <data name="txtMachine.Location" type="System.Drawing.Point, System.Drawing">
+    <value>196, 441</value>
+  </data>
+  <data name="label9.Location" type="System.Drawing.Point, System.Drawing">
+    <value>62, 443</value>
+  </data>
+  <data name="label9.Size" type="System.Drawing.Size, System.Drawing">
+    <value>66, 19</value>
+  </data>
+  <data name="label9.Text" xml:space="preserve">
+    <value>Máquina</value>
+  </data>
+  <data name="pictureBox13.Location" type="System.Drawing.Point, System.Drawing">
+    <value>318, 411</value>
+  </data>
+  <data name="pictureBox12.Location" type="System.Drawing.Point, System.Drawing">
+    <value>494, 378</value>
+  </data>
+  <data name="pictureBox11.Location" type="System.Drawing.Point, System.Drawing">
+    <value>318, 345</value>
+  </data>
+  <data name="pictureBox10.Location" type="System.Drawing.Point, System.Drawing">
+    <value>318, 312</value>
+  </data>
+  <data name="pictureBox9.Location" type="System.Drawing.Point, System.Drawing">
+    <value>318, 279</value>
+  </data>
+  <data name="pictureBox8.Location" type="System.Drawing.Point, System.Drawing">
+    <value>318, 200</value>
+  </data>
+  <data name="pictureBox7.Location" type="System.Drawing.Point, System.Drawing">
+    <value>494, 166</value>
+  </data>
+  <data name="pictureBox6.Location" type="System.Drawing.Point, System.Drawing">
+    <value>494, 132</value>
+  </data>
+  <data name="pictureBox5.Location" type="System.Drawing.Point, System.Drawing">
+    <value>494, 100</value>
+  </data>
   <data name="label8.Size" type="System.Drawing.Size, System.Drawing">
     <value>127, 19</value>
   </data>
   <data name="label8.Text" xml:space="preserve">
     <value>Parámetro  pesaje</value>
   </data>
-  <data name="comboBox1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>196, 163</value>
+  <data name="cbWeighing_SettingsId.Location" type="System.Drawing.Point, System.Drawing">
+    <value>196, 164</value>
   </data>
   <data name="label5.Size" type="System.Drawing.Size, System.Drawing">
     <value>153, 19</value>
@@ -158,10 +251,10 @@
     <value>196, 64</value>
   </data>
   <data name="txtCOM.Location" type="System.Drawing.Point, System.Drawing">
-    <value>196, 196</value>
+    <value>196, 197</value>
   </data>
   <data name="label4.Location" type="System.Drawing.Point, System.Drawing">
-    <value>61, 199</value>
+    <value>61, 200</value>
   </data>
   <data name="label3.Size" type="System.Drawing.Size, System.Drawing">
     <value>93, 19</value>

@@ -39,6 +39,13 @@ namespace WidraSoft.UI
             cbWeighing_SettingsId.DisplayMember = "DESIGNATION";
             cbWeighing_SettingsId.ValueMember = "WEIGHING_SETTINGSID";
 
+            Utilisateur utilisateur = new Utilisateur();
+            DataTable dt  = utilisateur.List("1=1");
+            dt.Columns.Add("NOMCOMPLET", typeof(String), "PRENOM + ' ' + NOM");
+            cbUtilisateurId.DataSource = dt;
+            cbUtilisateurId.DisplayMember = "NOMCOMPLET";
+            cbUtilisateurId.ValueMember = "ID";
+
             cbBaudRate.DataSource = Values.BaudRate;
             cbBaudRate.ValueMember =null;
             cbBaudRate.DisplayMember = Values.BaudRate[0].ToString();
@@ -54,6 +61,10 @@ namespace WidraSoft.UI
             cbHandshake.DataSource = Values.Handshake;
             cbHandshake.ValueMember = null;
             cbHandshake.DisplayMember = Values.Handshake[0];
+
+            cbDemarrage.DataSource = Values.DemarrageType;
+            cbDemarrage.ValueMember = null;
+            cbDemarrage.DisplayMember = Values.DemarrageType[0];
 
             if (vg_Mode == "Add")
             {
@@ -93,7 +104,7 @@ namespace WidraSoft.UI
         private void Add_Item()
         {
             if (txtId.Text == "" && txtDateCreation.Text == "" && txtDesignation.Text == "" && cbWeight_SettingsId.Text == "" && cbWeighing_SettingsId.Text == "" && txtCOM.Text == "" && txtActiverPoids.Text == "" && cbBaudRate.Text == "" && cbDataBits.Text == ""
-                && cbStopBits.Text == "" && cbHandshake.Text == "" && txtReadTimeOut.Text == "")
+                && cbStopBits.Text == "" && cbHandshake.Text == "" && txtReadTimeOut.Text == "" && txtMachine.Text == ""  && cbDemarrage.Text == "" && cbUtilisateurId.Text == "" && txtActiverMultipleParam.Text == "")
             {
                 lbModifier.Enabled = false;
                 lbModifier.BackColor = Color.Transparent;
@@ -102,6 +113,11 @@ namespace WidraSoft.UI
 
                 txtActiverPoids.Text = "1";
                 chx_ActiverPoids.Checked = true;
+
+                txtActiverMultipleParam.Text = "0";
+                chx_ActiverPoids.Checked = false;
+
+                txtMin.Text = "0";
             }
         }
 
@@ -149,6 +165,18 @@ namespace WidraSoft.UI
                 cbStopBits.Text = row["STOPBITS"].ToString();
                 cbHandshake.Text = row["HANDSHAKE"].ToString();
                 txtReadTimeOut.Text = row["READTIMEOUT"].ToString();
+                txtMachine.Text = row["MACHINE"].ToString();
+                cbDemarrage.Text = row["DEMARRAGE"].ToString();
+                if (row["UTILISATEURID"] is System.DBNull)
+                    cbUtilisateurId.SelectedValue = 0;
+                else
+                    cbUtilisateurId.SelectedValue = (int)row["UTILISATEURID"];
+                txtActiverMultipleParam.Text = row["ACTIVER_MULTIPLE_PARAM"].ToString();
+                if (txtActiverMultipleParam.Text == "1")
+                    chx_ActiverMultipleParam.Checked = true;
+                else
+                    chx_ActiverMultipleParam.Checked = false;
+                txtMin.Text = row["POIDS_DETECTION"].ToString();
             }
         }
 
@@ -161,12 +189,20 @@ namespace WidraSoft.UI
             txtCOM.Enabled = false;
             txtActiverPoids.Enabled = false;
             chx_ActiverPoids.Enabled = false;
+            chx_ActiverMultipleParam.Enabled = false;
+            txtMin.Enabled = false;
             cbBaudRate.Enabled = false;
             cbDataBits.Enabled = false;
             cbStopBits.Enabled = false;
             cbHandshake.Enabled = false;
-            txtReadTimeOut.Enabled = false;      
+            txtReadTimeOut.Enabled = false;   
+            txtMachine.Enabled = false;
+            cbDemarrage.Enabled = false;
+            cbUtilisateurId.Enabled = false;
             dgvFirmes.Enabled = false;
+            lblAddDgvChauffeurs.Enabled = false;
+            lbActualiserDgvChauffeurs.Enabled=false;
+            lblRetirerDgvChauffeurs.Enabled = false;
             pbUpdating.Visible = false;
 
             vg_IsEnabled = false;
@@ -181,12 +217,20 @@ namespace WidraSoft.UI
             txtCOM.Enabled = true;
             txtActiverPoids.Enabled = true;
             chx_ActiverPoids.Enabled = true;
+            txtMin.Enabled = true;
+            chx_ActiverMultipleParam.Enabled = true;
             cbBaudRate.Enabled = true;
             cbDataBits.Enabled = true;
             cbStopBits.Enabled = true;
             cbHandshake.Enabled = true;
             txtReadTimeOut.Enabled = true;
+            txtMachine.Enabled = true;
+            cbDemarrage.Enabled = true;
+            cbUtilisateurId.Enabled = true;
             dgvFirmes.Enabled = true;
+            lblAddDgvChauffeurs.Enabled = true;
+            lbActualiserDgvChauffeurs.Enabled = true;
+            lblRetirerDgvChauffeurs.Enabled = true;
             pbUpdating.Visible = true;
 
             vg_IsEnabled = true;
@@ -201,12 +245,19 @@ namespace WidraSoft.UI
             cbWeighing_SettingsId.Text = "";
             txtCOM.Text = "";
             txtActiverPoids.Text = "";
+            txtMin.Text = "";
             chx_ActiverPoids.Checked = false;
+            txtActiverMultipleParam.Text = "";
+            chx_ActiverMultipleParam.Checked = false;
             cbBaudRate.Text = "";
             cbDataBits.Text = "";
             cbStopBits.Text = "";
             cbHandshake.Text = "";
             txtReadTimeOut.Text = "";
+            txtMachine.Text = "";
+            cbDemarrage.Text = "";
+            cbUtilisateurId.Text = "";
+
         }
 
         private void Bind_DgvFirmes()
@@ -281,27 +332,33 @@ namespace WidraSoft.UI
             try
             {
                 if (txtId.Text == "" && txtDateCreation.Text == "" && txtDesignation.Text != "" && cbWeight_SettingsId.Text != "" && cbWeighing_SettingsId.Text != "" && txtCOM.Text != "" && txtActiverPoids.Text != ""
-                    && cbBaudRate.Text != "" && cbDataBits.Text != "" && cbStopBits.Text != "" && cbHandshake.Text != "" && txtReadTimeOut.Text != "")
+                    && cbBaudRate.Text != "" && cbDataBits.Text != "" && cbStopBits.Text != "" && cbHandshake.Text != "" && txtReadTimeOut.Text != "" && txtActiverMultipleParam.Text != "" && txtMin.Text != "" && txtMachine.Text != "" && cbDemarrage.Text != "")
                 {
                     int ActiverPoids;
+                    int ActiverMultipleParam;
                     int BaudRate;
                     int DataBits;
                     int ReadTimeOut;
+                    int PoidsDetection;
                     bool IsParsableActiverPoids;
                     bool IsParsableBaudRate;
                     bool IsParsableDataBits;
                     bool IsParsableReadTimeOut;
+                    bool IsParsableActiverMultipleParam;
+                    bool IsParsablePoidsDetection;
                     IsParsableActiverPoids = Int32.TryParse(txtActiverPoids.Text, out ActiverPoids);
                     IsParsableBaudRate = Int32.TryParse(cbBaudRate.Text, out BaudRate);
                     IsParsableDataBits = Int32.TryParse(cbDataBits.Text, out DataBits);
                     IsParsableReadTimeOut = Int32.TryParse(txtReadTimeOut.Text, out ReadTimeOut);
+                    IsParsableActiverMultipleParam = Int32.TryParse(txtActiverMultipleParam.Text, out ActiverMultipleParam);
+                    IsParsablePoidsDetection = Int32.TryParse(txtMin.Text, out PoidsDetection);
                     try
                     {
-                        if (IsParsableActiverPoids && IsParsableBaudRate && IsParsableDataBits && IsParsableReadTimeOut)
+                        if (IsParsableActiverPoids && IsParsableBaudRate && IsParsableDataBits && IsParsableReadTimeOut && IsParsableActiverMultipleParam && IsParsablePoidsDetection)
                         {
                             Pont pont = new Pont();
                             pont.Add(txtDesignation.Text, txtCOM.Text, Common_functions.CbSelectedValue_Convert_Int(cbWeight_SettingsId), Common_functions.CbSelectedValue_Convert_Int(cbWeighing_SettingsId),ActiverPoids, BaudRate, DataBits, cbStopBits.Text,
-                                 cbHandshake.Text, ReadTimeOut);
+                                 cbHandshake.Text, ReadTimeOut, txtMachine.Text, cbDemarrage.Text, Common_functions.CbSelectedValue_Convert_Int(cbUtilisateurId), ActiverMultipleParam, PoidsDetection);
                             if (cbLang.Text == "FR")
                                 Custom_MessageBox.Show("FR", "Pont ajouté avec succès", "Pont", MessageBoxButtons.OK, MessageBoxIcon.Information);
                             else if (cbLang.Text == "EN")
@@ -320,11 +377,11 @@ namespace WidraSoft.UI
                 else
                 {
                     if (cbLang.Text == "FR")
-                        Custom_MessageBox.Show("FR", "Informations incomplètes", "Pont", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        Custom_MessageBox.Show("FR", "Informations incomplètes", "Pont", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     else if (cbLang.Text == "EN")
-                        Custom_MessageBox.Show("EN", "Incomplete informations", "Weighbridge", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        Custom_MessageBox.Show("EN", "Incomplete informations", "Weighbridge", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     else
-                        Custom_MessageBox.Show("ES", "Información incompleta", "Puente", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        Custom_MessageBox.Show("ES", "Información incompleta", "Puente", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
             catch
@@ -348,30 +405,36 @@ namespace WidraSoft.UI
                     try
                     {
                         if (txtId.Text != "" && txtDateCreation.Text != "" && txtDesignation.Text != "" && cbWeight_SettingsId.Text != "" && cbWeighing_SettingsId.Text != "" && txtCOM.Text != "" && txtActiverPoids.Text != ""
-                             && cbBaudRate.Text != "" && cbDataBits.Text != "" && cbStopBits.Text != "" && cbHandshake.Text != "" && txtReadTimeOut.Text != "")
+                             && cbBaudRate.Text != "" && cbDataBits.Text != "" && cbStopBits.Text != "" && cbHandshake.Text != "" && txtReadTimeOut.Text != "" && txtActiverMultipleParam.Text != "" && txtMin.Text != "" && txtMachine.Text != "" && cbDemarrage.Text != "")
                         {
                             int Id;
                             int ActiverPoids;
+                            int ActiverMultipleParam;
                             int BaudRate;
                             int DataBits;
                             int ReadTimeOut;
+                            int PoidsDetection;
                             bool IsParsableId;
                             bool IsParsableActiverPoids;
                             bool IsParsableBaudRate;
                             bool IsParsableDataBits;
                             bool IsParsableReadTimeOut;
+                            bool IsParsableActiverMultipleParam;
+                            bool IsParsablePoidsDetection;
                             IsParsableId = Int32.TryParse(txtId.Text, out Id);
                             IsParsableActiverPoids = Int32.TryParse(txtActiverPoids.Text, out ActiverPoids);
                             IsParsableBaudRate = Int32.TryParse(cbBaudRate.Text, out BaudRate);
                             IsParsableDataBits = Int32.TryParse(cbDataBits.Text, out DataBits);
                             IsParsableReadTimeOut = Int32.TryParse(txtReadTimeOut.Text, out ReadTimeOut);
+                            IsParsableActiverMultipleParam = Int32.TryParse(txtActiverMultipleParam.Text, out ActiverMultipleParam);
+                            IsParsablePoidsDetection = Int32.TryParse(txtMin.Text, out PoidsDetection);
                             try
                             {
-                                if (IsParsableActiverPoids && IsParsableBaudRate && IsParsableDataBits && IsParsableReadTimeOut)
+                                if (IsParsableActiverPoids && IsParsableBaudRate && IsParsableDataBits && IsParsableReadTimeOut && IsParsableActiverMultipleParam && IsParsablePoidsDetection)
                                 {
                                     Pont pont = new Pont();
                                     pont.Update(Id, txtDesignation.Text, txtCOM.Text, Common_functions.CbSelectedValue_Convert_Int(cbWeight_SettingsId), Common_functions.CbSelectedValue_Convert_Int(cbWeighing_SettingsId), ActiverPoids, BaudRate, DataBits, cbStopBits.Text,
-                                         cbHandshake.Text, ReadTimeOut);
+                                         cbHandshake.Text, ReadTimeOut, txtMachine.Text, cbDemarrage.Text, Common_functions.CbSelectedValue_Convert_Int(cbUtilisateurId), ActiverMultipleParam, PoidsDetection);
                                     if (cbLang.Text == "FR")
                                         Custom_MessageBox.Show("FR", "Pont modifié avec succès", "Pont", MessageBoxButtons.OK, MessageBoxIcon.Information);
                                     else if (cbLang.Text == "EN")
@@ -392,11 +455,11 @@ namespace WidraSoft.UI
                         else
                         {
                             if (cbLang.Text == "FR")
-                                Custom_MessageBox.Show("FR", "Informations incomplètes", "Pont", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                Custom_MessageBox.Show("FR", "Informations incomplètes", "Pont", MessageBoxButtons.OK, MessageBoxIcon.Error);
                             else if (cbLang.Text == "EN")
-                                Custom_MessageBox.Show("EN", "Incomplete informations", "Weighbridge", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                Custom_MessageBox.Show("EN", "Incomplete informations", "Weighbridge", MessageBoxButtons.OK, MessageBoxIcon.Error);
                             else
-                                Custom_MessageBox.Show("ES", "Información incompleta", "Puente", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                Custom_MessageBox.Show("ES", "Información incompleta", "Puente", MessageBoxButtons.OK, MessageBoxIcon.Error);
                         }
                     }
                     catch
@@ -416,11 +479,11 @@ namespace WidraSoft.UI
             if (vg_Update)
             {
                 if (cbLang.Text == "FR")
-                    Custom_MessageBox.Show("FR", "Vous ne pouvez pas supprimer l'enregistrement tant que la modification n'est pas validée", "Pont", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    Custom_MessageBox.Show("FR", "Vous ne pouvez pas supprimer l'enregistrement tant que la modification n'est pas validée", "Pont", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 else if (cbLang.Text == "EN")
-                    Custom_MessageBox.Show("EN", "You can't delete this record before the update is completed", "Weighbridge", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    Custom_MessageBox.Show("EN", "You can't delete this record before the update is completed", "Weighbridge", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 else
-                    Custom_MessageBox.Show("ES", "No puede eliminar el registro hasta que se confirme el cambio", "Puente", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    Custom_MessageBox.Show("ES", "No puede eliminar el registro hasta que se confirme el cambio", "Puente", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
             else
             {
@@ -565,6 +628,14 @@ namespace WidraSoft.UI
                     Custom_MessageBox.Show("ES", "Ningún registro seleccionado", "Firma", MessageBoxButtons.OK, MessageBoxIcon.Error);
 
             }
+        }
+
+        private void chx_ActiverMultipleParam_CheckedChanged(object sender, EventArgs e)
+        {
+            if (chx_ActiverMultipleParam.Checked)
+                txtActiverMultipleParam.Text = "1";
+            else
+                txtActiverMultipleParam.Text = "0";
         }
     }
 }

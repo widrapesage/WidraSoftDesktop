@@ -58,6 +58,7 @@ namespace WidraSoft.UI
                 }
             }
             Bind_DgvEnregistrements();
+            Bind_DgvTablesTraduction();
             cbLang.DataSource = Language.Languages;
             cbLang.ValueMember = null;
             cbLang.DisplayMember = Language.Languages[0];
@@ -205,24 +206,37 @@ namespace WidraSoft.UI
 
         private void Bind_DgvEnregistrements()
         {
-            TablesEnregistrements tablesEnregistrements = new TablesEnregistrements();
+            Enregistrements Enregistrements = new Enregistrements();
             if (txtId.Text == "")
             {
-                dgvEnregistrements.DataSource = tablesEnregistrements.FindByTablesId(-1);
+                dgvEnregistrements.DataSource = Enregistrements.FindByTableId(-1);
             }
             else
             {
                 int Id;
                 bool IsParsableId;
                 IsParsableId = Int32.TryParse(txtId.Text, out Id);
-                dgvEnregistrements.DataSource = tablesEnregistrements.FindByTablesId(Id);
+                dgvEnregistrements.DataSource = Enregistrements.FindByTableId(Id);
             }
 
             dgvEnregistrements.Columns[0].Visible = false;
-            dgvEnregistrements.Columns["ENREGISTREMENT"].Visible = true;
             dgvEnregistrements.Columns["TABLESID"].Visible = false;
-            dgvEnregistrements.Columns["TABLES"].Visible = false;
-            dgvEnregistrements.Columns["DATECREATION"].Visible = false;
+            dgvEnregistrements.Columns["NOM"].Visible = true;
+            dgvEnregistrements.Columns["ADRESSE"].Visible = false;
+            dgvEnregistrements.Columns["CODEPOSTAL"].Visible = false;
+            dgvEnregistrements.Columns["LOCALITE"].Visible = false;
+            dgvEnregistrements.Columns["PAYS"].Visible = false;
+            dgvEnregistrements.Columns["TELEPHONE"].Visible = false;
+            dgvEnregistrements.Columns["EMAIL"].Visible = false;
+            dgvEnregistrements.Columns["NUMTVA"].Visible = false;
+            dgvEnregistrements.Columns["SITEWEB_URL"].Visible = false;
+            dgvEnregistrements.Columns["OBSERVATIONS"].Visible = false;
+            dgvEnregistrements.Columns["BLOQUE"].Visible = false;
+            dgvEnregistrements.Columns["TEXTEBLOQUE"].Visible = false;
+            dgvEnregistrements.Columns["ATTENTION"].Visible = false;
+            dgvEnregistrements.Columns["TEXTEATTENTION"].Visible = false;
+            dgvEnregistrements.Columns["PARENTID"].Visible = false;
+            dgvEnregistrements.Columns["DATECREATION"].Visible = true;
 
             dgvEnregistrements.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             dgvEnregistrements.ReadOnly = true;
@@ -233,22 +247,19 @@ namespace WidraSoft.UI
         {
             if (lang == "fr")
             {
-                dgvEnregistrements.Columns["ENREGISTREMENT"].HeaderText = "ENREGISTREMENT";
-                dgvEnregistrements.Columns["TABLES"].HeaderText = "TABLES";
+                dgvEnregistrements.Columns["NOM"].HeaderText = "ENREGISTREMENT";
                 dgvEnregistrements.Columns["DATECREATION"].HeaderText = "DATE CREATION";
             }
 
             if (lang == "en")
             {
-                dgvEnregistrements.Columns["ENREGISTREMENT"].HeaderText = "RECORD";
-                dgvEnregistrements.Columns["TABLES"].HeaderText = "TABLES";
+                dgvEnregistrements.Columns["NOM"].HeaderText = "RECORD";
                 dgvEnregistrements.Columns["DATECREATION"].HeaderText = "CREATION DATE";
             }
 
             if (lang == "es")
             {
-                dgvEnregistrements.Columns["ENREGISTREMENT"].HeaderText = "REGISTRO";
-                dgvEnregistrements.Columns["TABLES"].HeaderText = "TABLA";
+                dgvEnregistrements.Columns["NOM"].HeaderText = "REGISTRO";
                 dgvEnregistrements.Columns["DATECREATION"].HeaderText = "FECHA DE CREACIÓN";
             }
         }
@@ -257,10 +268,66 @@ namespace WidraSoft.UI
         {
             int Id;
             bool IsParsableId;
-            TablesEnregistrements tablesEnregistrements = new TablesEnregistrements();
+            Enregistrements Enregistrements = new Enregistrements();
             IsParsableId = Int32.TryParse(txtId.Text, out Id);
-            dgvEnregistrements.DataSource = tablesEnregistrements.FindByTablesId(Id);
+            dgvEnregistrements.DataSource = Enregistrements.FindByTableId(Id);
         }
+
+        private void Bind_DgvTablesTraduction()
+        {
+            TablesTraduction tablesTraduction = new TablesTraduction();
+            if (txtId.Text == "")
+            {
+                dgvTraductions.DataSource = tablesTraduction.FindByTableId(-1);
+            }
+            else
+            {
+                int Id;
+                bool IsParsableId;
+                IsParsableId = Int32.TryParse(txtId.Text, out Id);
+                dgvTraductions.DataSource = tablesTraduction.FindByTableId(Id);
+            }
+
+            dgvTraductions.Columns[0].Visible = false;
+            dgvTraductions.Columns["TABLESID"].Visible = false;
+            dgvTraductions.Columns["CODE_LANG"].Visible = true;
+            dgvTraductions.Columns["VALUE"].Visible = true;
+
+            dgvTraductions.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            dgvTraductions.ReadOnly = true;
+
+        }
+
+        private void Refresh_DgvTablesTraduction()
+        {
+            int Id;
+            bool IsParsableId;
+            TablesTraduction tablesTraduction= new TablesTraduction();
+            IsParsableId = Int32.TryParse(txtId.Text, out Id);
+            dgvTraductions.DataSource = tablesTraduction.FindByTableId(Id);
+        }
+
+        private void Localize_DgvTablesTraduction(string lang)
+        {
+            if (lang == "fr")
+            {
+                dgvTraductions.Columns["CODE_LANG"].HeaderText = "LANGUE";
+                dgvTraductions.Columns["VALUE"].HeaderText = "TRADUCTION";
+            }
+
+            if (lang == "en")
+            {
+                dgvTraductions.Columns["CODE_LANG"].HeaderText = "LANGUAGE";
+                dgvTraductions.Columns["VALUE"].HeaderText = "TRANSLATION";
+            }
+
+            if (lang == "es")
+            {
+                dgvTraductions.Columns["CODE_LANG"].HeaderText = "IDIOMA";
+                dgvTraductions.Columns["VALUE"].HeaderText = "TRADUCCIÓN";
+            }
+        }
+
 
         private void lbActualiserDgvChauffeurs_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
@@ -507,8 +574,8 @@ namespace WidraSoft.UI
                 Spain_flag.Visible = false;
                 Language_Manager language_Manager = new Language_Manager();
                 language_Manager.ChangeLanguage("fr", this, typeof(TablesDetail));
-                //Localize_DgvChauffeurs("fr");
-                //Localize_DgvTransporteurs("fr");
+                Localize_DgvEnregistrements("fr");
+                Localize_DgvTablesTraduction("fr");
 
             }
 
@@ -519,8 +586,8 @@ namespace WidraSoft.UI
                 Spain_flag.Visible = false;
                 Language_Manager language_Manager = new Language_Manager();
                 language_Manager.ChangeLanguage("en", this, typeof(TablesDetail));
-                //Localize_DgvChauffeurs("en");
-                //Localize_DgvTransporteurs("en");
+                Localize_DgvEnregistrements("en");
+                Localize_DgvTablesTraduction("en");
             }
 
             if (cbLang.Text == "ES")
@@ -530,11 +597,93 @@ namespace WidraSoft.UI
                 Spain_flag.Visible = true;
                 Language_Manager language_Manager = new Language_Manager();
                 language_Manager.ChangeLanguage("es", this, typeof(TablesDetail));
-                //Localize_DgvChauffeurs("es");
-                //Localize_DgvTransporteurs("es");
+                Localize_DgvEnregistrements("es");
+                Localize_DgvTablesTraduction("es");
             }
         }
 
-        
+        private void lblAddDgvChauffeurs_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        { 
+            if (txtId.Text != "")
+            {
+                Int32 Id;
+                bool IsParsableId = Int32.TryParse(txtId.Text, out Id);
+                if (IsParsableId)
+                {
+                    if (Id > 0)
+                    {
+                        Form form = new EnregistrementsDetail("Add", 0, Id);
+                        form.Show();
+                    }                    
+                }              
+            }
+              
+        }
+
+        private void lblRetirerDgvChauffeurs_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            Int32[] selectedIds = new Int32[Common_functions.GetDatagridViewSelectedRowsId(dgvEnregistrements).Length];
+            selectedIds = Common_functions.GetDatagridViewSelectedRowsId(dgvEnregistrements);
+            if (Common_functions.GetDatagridViewSelectedRowsId(dgvEnregistrements).Length > 0)
+            {
+                DialogResult result;
+                if (cbLang.Text == "FR")
+                    result = Custom_MessageBox.Show("FR", "Etes vous sur ?", "Supprimer enregistrement(s)", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                else if (cbLang.Text == "EN")
+                    result = Custom_MessageBox.Show("EN", "Are you sure ?", "Delete record(s)", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                else
+                    result = Custom_MessageBox.Show("ES", "¿Está seguro?", "Eliminar registro(s)", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                if (result == DialogResult.Yes)
+                {
+                    for (int i = 0; i < Common_functions.GetDatagridViewSelectedRowsId(dgvEnregistrements).Length; i++)
+                    {
+                        try
+                        {
+                            Enregistrements enregistrements = new Enregistrements();
+                            enregistrements.Delete(selectedIds[i]);
+                        }
+                        catch
+                        {
+                            throw;
+                        }
+                    }
+                    if (cbLang.Text == "FR")
+                        Custom_MessageBox.Show("FR", Common_functions.GetDatagridViewSelectedRowsId(dgvEnregistrements).Length + " enregistrement(s) supprimé(s)", "Enregistrements", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    else if (cbLang.Text == "EN")
+                        Custom_MessageBox.Show("EN", Common_functions.GetDatagridViewSelectedRowsId(dgvEnregistrements).Length + " record(s) deleted", "Records", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    else
+                        Custom_MessageBox.Show("ES", Common_functions.GetDatagridViewSelectedRowsId(dgvEnregistrements).Length + " Registro(s) eliminado(s)", "Registros", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                    Refresh_DgvTransporteurs();
+                }
+                
+            }
+            else
+            {
+
+                if (cbLang.Text == "FR")
+                    Custom_MessageBox.Show("FR", "Aucun enregistrement sélectionné", "Enregistrements", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                else if (cbLang.Text == "EN")
+                    Custom_MessageBox.Show("EN", "No rows selected", "Records", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                else
+                    Custom_MessageBox.Show("ES", "Ningún registro seleccionado", "Registros", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+            }
+        }
+
+        private void lbActualiserDgvTransporteurs_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            Refresh_DgvTablesTraduction();
+        }
+
+        private void lblAddDgvTransporteurs_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            try
+            {
+                Form form = new TableTraductionAdd(vg_Id);
+                form.Show();
+            }
+            catch { throw; }
+        }
     }
 }

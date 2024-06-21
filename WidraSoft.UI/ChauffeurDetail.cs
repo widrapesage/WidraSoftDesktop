@@ -58,6 +58,7 @@ namespace WidraSoft.UI
                 }
             }
 
+            Bind_DgvCamions();
             cbLang.DataSource = Language.Languages;
             cbLang.ValueMember = null;
             cbLang.DisplayMember = Language.Languages[0];
@@ -128,6 +129,48 @@ namespace WidraSoft.UI
                 else
                     chx_Attention.Checked = false;
                 txtAlerte.Text = row["TEXTEATTENTION"].ToString();
+            }
+        }
+
+        private void Bind_DgvCamions()
+        {
+            CamionChauffeur camionChauffeur = new CamionChauffeur();
+            if (vg_Id <= 0)
+            {
+                DgvCamions.DataSource = camionChauffeur.FindByChauffeurId(-1);
+            }
+            else
+            {
+                DgvCamions.DataSource = camionChauffeur.FindByChauffeurId(vg_Id);
+            }
+
+            DgvCamions.Columns[0].Visible = false;
+            DgvCamions.Columns["CAMION"].Visible = true;
+            DgvCamions.Columns["CHAUFFEURID"].Visible = false;
+            DgvCamions.Columns["CHAUFFEUR"].Visible = false;
+            DgvCamions.Columns["DATECREATION"].Visible = false;
+
+            DgvCamions.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            DgvCamions.ReadOnly = true;
+            DgvCamions.RowHeadersVisible = false;
+
+        }
+
+        private void Localize_DgvCamions(string lang)
+        {
+            if (lang == "fr")
+            {
+                DgvCamions.Columns["CAMION"].HeaderText = "CAMION";
+            }
+
+            if (lang == "en")
+            {
+                DgvCamions.Columns["CAMION"].HeaderText = "TRUCK";
+            }
+
+            if (lang == "es")
+            {
+                DgvCamions.Columns["CAMION"].HeaderText = "CAMIÓN";
             }
         }
 
@@ -427,7 +470,7 @@ namespace WidraSoft.UI
                 Spain_flag.Visible = false;
                 Language_Manager language_Manager = new Language_Manager();
                 language_Manager.ChangeLanguage("fr", this, typeof(ChauffeurDetail));
-
+                Localize_DgvCamions("fr");
             }
 
             if (cbLang.Text == "EN")
@@ -437,6 +480,7 @@ namespace WidraSoft.UI
                 Spain_flag.Visible = false;
                 Language_Manager language_Manager = new Language_Manager();
                 language_Manager.ChangeLanguage("en", this, typeof(ChauffeurDetail));
+                Localize_DgvCamions("en");
             }
 
             if (cbLang.Text == "ES")
@@ -446,6 +490,7 @@ namespace WidraSoft.UI
                 Spain_flag.Visible = true;
                 Language_Manager language_Manager = new Language_Manager();
                 language_Manager.ChangeLanguage("es", this, typeof(ChauffeurDetail));
+                Localize_DgvCamions("es");
             }
         }
     }

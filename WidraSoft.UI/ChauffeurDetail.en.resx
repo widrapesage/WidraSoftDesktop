@@ -88,6 +88,12 @@
   <data name="lbSupprimer.Text" xml:space="preserve">
     <value>Delete</value>
   </data>
+  <data name="label10.Size" type="System.Drawing.Size, System.Drawing">
+    <value>131, 19</value>
+  </data>
+  <data name="label10.Text" xml:space="preserve">
+    <value>This driver's trucks</value>
+  </data>
   <data name="txtNumeroPermis.Location" type="System.Drawing.Point, System.Drawing">
     <value>179, 209</value>
   </data>

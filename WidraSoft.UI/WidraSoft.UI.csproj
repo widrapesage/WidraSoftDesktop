@@ -7,6 +7,14 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="PeseePBTicketA5.rdlc" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="PeseePBTicketA5.rdlc" />
+  </ItemGroup>
+
+  <ItemGroup>
     <ProjectReference Include="..\..\NetSDKCS\NetSDKCS.csproj" />
     <ProjectReference Include="..\WidraSoft.BL\WidraSoft.BL.csproj" />
   </ItemGroup>
@@ -43,7 +51,11 @@
   </ItemGroup>
 
   <ItemGroup>
+    <PackageReference Include="Microsoft.SqlServer.Types" Version="160.1000.6" />
+    <PackageReference Include="ReportViewerCore.WinForms" Version="15.1.21" />
     <PackageReference Include="System.IO.Ports" Version="7.0.0" />
+    <PackageReference Include="ZXing.Net" Version="0.16.9" />
+    <PackageReference Include="ZXing.Net.Bindings.SkiaSharp" Version="0.16.14" />
   </ItemGroup>
 
 </Project>
