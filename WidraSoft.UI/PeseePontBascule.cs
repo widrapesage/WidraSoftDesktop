@@ -2381,20 +2381,41 @@ namespace WidraSoft.UI
         {
             if (cbChamp2.Text != "")
             {
+                Tables tables = new Tables();
                 Enregistrements enregistrements = new Enregistrements();
-                if (enregistrements.IfExists(cbChamp2.Text, Table2Id, 0) || enregistrements.IfExistsWithCode(cbChamp2.Text, Table2Id, 0))
+                if(tables.IsTableRelated(Table2Id))
                 {
-                    cbChamp2.BackColor = Color.FromArgb(58, 62, 60);
-                    cbChamp2.ForeColor = Color.White;
-                    btAddChamp2.Visible = false;
+                    if (enregistrements.IfExists(cbChamp2.Text, Table2Id, tables.GetParentTableId(Table2Id)) || enregistrements.IfExistsWithCode(cbChamp2.Text, Table2Id, tables.GetParentTableId(Table2Id)))
+                    {
+                        cbChamp2.BackColor = Color.FromArgb(58, 62, 60);
+                        cbChamp2.ForeColor = Color.White;
+                        btAddChamp2.Visible = false;
+                    }
+                    else
+                    {
+                        cbChamp2.BackColor = Color.Honeydew;
+                        cbChamp2.ForeColor = Color.Black;
+                        if (Table2_Ajout != 0)
+                            btAddChamp2.Visible = true;
+                    }
                 }
                 else
                 {
-                    cbChamp2.BackColor = Color.Honeydew;
-                    cbChamp2.ForeColor = Color.Black;
-                    if (Table2_Ajout != 0)
-                        btAddChamp2.Visible = true;
+                    if (enregistrements.IfExists(cbChamp2.Text, Table2Id, 0) || enregistrements.IfExistsWithCode(cbChamp2.Text, Table2Id, 0))
+                    {
+                        cbChamp2.BackColor = Color.FromArgb(58, 62, 60);
+                        cbChamp2.ForeColor = Color.White;
+                        btAddChamp2.Visible = false;
+                    }
+                    else
+                    {
+                        cbChamp2.BackColor = Color.Honeydew;
+                        cbChamp2.ForeColor = Color.Black;
+                        if (Table2_Ajout != 0)
+                            btAddChamp2.Visible = true;
+                    }
                 }
+                
             }
             else
             {
@@ -2447,19 +2468,39 @@ namespace WidraSoft.UI
         {
             if (cbChamp3.Text != "")
             {
+                Tables tables = new Tables();
                 Enregistrements enregistrements = new Enregistrements();
-                if (enregistrements.IfExists(cbChamp3.Text, Table3Id, 0) || enregistrements.IfExistsWithCode(cbChamp3.Text, Table3Id, 0))
+                if (tables.IsTableRelated(Table3Id))
                 {
-                    cbChamp3.BackColor = Color.FromArgb(58, 62, 60);
-                    cbChamp3.ForeColor = Color.White;
-                    btAddChamp3.Visible = false;
+                    if (enregistrements.IfExists(cbChamp3.Text, Table3Id, tables.GetParentTableId(Table3Id)) || enregistrements.IfExistsWithCode(cbChamp3.Text, Table3Id, tables.GetParentTableId(Table3Id)))
+                    {
+                        cbChamp3.BackColor = Color.FromArgb(58, 62, 60);
+                        cbChamp3.ForeColor = Color.White;
+                        btAddChamp3.Visible = false;
+                    }
+                    else
+                    {
+                        cbChamp3.BackColor = Color.Honeydew;
+                        cbChamp3.ForeColor = Color.Black;
+                        if (Table3_Ajout != 0)
+                            btAddChamp3.Visible = true;
+                    }
                 }
                 else
                 {
-                    cbChamp3.BackColor = Color.Honeydew;
-                    cbChamp3.ForeColor = Color.Black;
-                    if (Table3_Ajout != 0)
-                        btAddChamp3.Visible = true;
+                    if (enregistrements.IfExists(cbChamp3.Text, Table3Id, 0) || enregistrements.IfExistsWithCode(cbChamp3.Text, Table3Id, 0))
+                    {
+                        cbChamp3.BackColor = Color.FromArgb(58, 62, 60);
+                        cbChamp3.ForeColor = Color.White;
+                        btAddChamp3.Visible = false;
+                    }
+                    else
+                    {
+                        cbChamp3.BackColor = Color.Honeydew;
+                        cbChamp3.ForeColor = Color.Black;
+                        if (Table3_Ajout != 0)
+                            btAddChamp3.Visible = true;
+                    }
                 }
             }
             else
@@ -2513,19 +2554,39 @@ namespace WidraSoft.UI
         {
             if (cbChamp4.Text != "")
             {
+                Tables tables = new Tables();
                 Enregistrements enregistrements = new Enregistrements();
-                if (enregistrements.IfExists(cbChamp4.Text, Table4Id, 0) || enregistrements.IfExistsWithCode(cbChamp4.Text, Table4Id, 0))
+                if (tables.IsTableRelated(Table4Id))
                 {
-                    cbChamp4.BackColor = Color.FromArgb(58, 62, 60);
-                    cbChamp4.ForeColor = Color.White;
-                    btAddChamp4.Visible = false;
+                    if (enregistrements.IfExists(cbChamp4.Text, Table4Id, tables.GetParentTableId(Table4Id)) || enregistrements.IfExistsWithCode(cbChamp4.Text, Table4Id, tables.GetParentTableId(Table4Id)))
+                    {
+                        cbChamp4.BackColor = Color.FromArgb(58, 62, 60);
+                        cbChamp4.ForeColor = Color.White;
+                        btAddChamp4.Visible = false;
+                    }
+                    else
+                    {
+                        cbChamp4.BackColor = Color.Honeydew;
+                        cbChamp4.ForeColor = Color.Black;
+                        if (Table4_Ajout != 0)
+                            btAddChamp4.Visible = true;
+                    }
                 }
                 else
                 {
-                    cbChamp4.BackColor = Color.Honeydew;
-                    cbChamp4.ForeColor = Color.Black;
-                    if (Table4_Ajout != 0)
-                        btAddChamp4.Visible = true;
+                    if (enregistrements.IfExists(cbChamp4.Text, Table4Id, 0) || enregistrements.IfExistsWithCode(cbChamp4.Text, Table4Id, 0))
+                    {
+                        cbChamp4.BackColor = Color.FromArgb(58, 62, 60);
+                        cbChamp4.ForeColor = Color.White;
+                        btAddChamp4.Visible = false;
+                    }
+                    else
+                    {
+                        cbChamp4.BackColor = Color.Honeydew;
+                        cbChamp4.ForeColor = Color.Black;
+                        if (Table4_Ajout != 0)
+                            btAddChamp4.Visible = true;
+                    }
                 }
             }
             else
@@ -2579,19 +2640,39 @@ namespace WidraSoft.UI
         {
             if (cbChamp5.Text != "")
             {
+                Tables tables = new Tables();
                 Enregistrements enregistrements = new Enregistrements();
-                if (enregistrements.IfExists(cbChamp5.Text, Table5Id, 0) || enregistrements.IfExistsWithCode(cbChamp5.Text, Table5Id, 0))
+                if (tables.IsTableRelated(Table5Id))
                 {
-                    cbChamp5.BackColor = Color.FromArgb(58, 62, 60);
-                    cbChamp5.ForeColor = Color.White;
-                    btAddChamp5.Visible = false;
+                    if (enregistrements.IfExists(cbChamp5.Text, Table5Id, tables.GetParentTableId(Table5Id)) || enregistrements.IfExistsWithCode(cbChamp5.Text, Table5Id, tables.GetParentTableId(Table5Id)))
+                    {
+                        cbChamp5.BackColor = Color.FromArgb(58, 62, 60);
+                        cbChamp5.ForeColor = Color.White;
+                        btAddChamp5.Visible = false;
+                    }
+                    else
+                    {
+                        cbChamp5.BackColor = Color.Honeydew;
+                        cbChamp5.ForeColor = Color.Black;
+                        if (Table5_Ajout != 0)
+                            btAddChamp5.Visible = true;
+                    }
                 }
                 else
                 {
-                    cbChamp5.BackColor = Color.Honeydew;
-                    cbChamp5.ForeColor = Color.Black;
-                    if (Table5_Ajout != 0)
-                        btAddChamp5.Visible = true;
+                    if (enregistrements.IfExists(cbChamp5.Text, Table5Id, 0) || enregistrements.IfExistsWithCode(cbChamp5.Text, Table5Id, 0))
+                    {
+                        cbChamp5.BackColor = Color.FromArgb(58, 62, 60);
+                        cbChamp5.ForeColor = Color.White;
+                        btAddChamp5.Visible = false;
+                    }
+                    else
+                    {
+                        cbChamp5.BackColor = Color.Honeydew;
+                        cbChamp5.ForeColor = Color.Black;
+                        if (Table5_Ajout != 0)
+                            btAddChamp5.Visible = true;
+                    }
                 }
             }
             else
@@ -2645,19 +2726,39 @@ namespace WidraSoft.UI
         {
             if (cbChamp6.Text != "")
             {
+                Tables tables = new Tables();
                 Enregistrements enregistrements = new Enregistrements();
-                if (enregistrements.IfExists(cbChamp6.Text, Table6Id, 0) || enregistrements.IfExistsWithCode(cbChamp6.Text, Table6Id, 0))
+                if (tables.IsTableRelated(Table6Id))
                 {
-                    cbChamp6.BackColor = Color.FromArgb(58, 62, 60);
-                    cbChamp6.ForeColor = Color.White;
-                    btAddChamp6.Visible = false;
+                    if (enregistrements.IfExists(cbChamp6.Text, Table6Id, tables.GetParentTableId(Table6Id)) || enregistrements.IfExistsWithCode(cbChamp6.Text, Table6Id, tables.GetParentTableId(Table6Id)))
+                    {
+                        cbChamp6.BackColor = Color.FromArgb(58, 62, 60);
+                        cbChamp6.ForeColor = Color.White;
+                        btAddChamp6.Visible = false;
+                    }
+                    else
+                    {
+                        cbChamp6.BackColor = Color.Honeydew;
+                        cbChamp6.ForeColor = Color.Black;
+                        if (Table6_Ajout != 0)
+                            btAddChamp6.Visible = true;
+                    }
                 }
                 else
                 {
-                    cbChamp6.BackColor = Color.Honeydew;
-                    cbChamp6.ForeColor = Color.Black;
-                    if (Table6_Ajout != 0)
-                        btAddChamp6.Visible = true;
+                    if (enregistrements.IfExists(cbChamp6.Text, Table6Id, 0) || enregistrements.IfExistsWithCode(cbChamp6.Text, Table6Id, 0))
+                    {
+                        cbChamp6.BackColor = Color.FromArgb(58, 62, 60);
+                        cbChamp6.ForeColor = Color.White;
+                        btAddChamp6.Visible = false;
+                    }
+                    else
+                    {
+                        cbChamp6.BackColor = Color.Honeydew;
+                        cbChamp6.ForeColor = Color.Black;
+                        if (Table6_Ajout != 0)
+                            btAddChamp6.Visible = true;
+                    }
                 }
             }
             else
@@ -2673,19 +2774,39 @@ namespace WidraSoft.UI
         {
             if (cbChamp7.Text != "")
             {
+                Tables tables = new Tables();
                 Enregistrements enregistrements = new Enregistrements();
-                if (enregistrements.IfExists(cbChamp7.Text, Table7Id, 0) || enregistrements.IfExistsWithCode(cbChamp7.Text, Table7Id, 0))
+                if (tables.IsTableRelated(Table7Id))
                 {
-                    cbChamp7.BackColor = Color.FromArgb(58, 62, 60);
-                    cbChamp7.ForeColor = Color.White;
-                    btAddChamp7.Visible = false;
+                    if (enregistrements.IfExists(cbChamp7.Text, Table7Id, tables.GetParentTableId(Table7Id)) || enregistrements.IfExistsWithCode(cbChamp7.Text, Table7Id, tables.GetParentTableId(Table7Id)))
+                    {
+                        cbChamp7.BackColor = Color.FromArgb(58, 62, 60);
+                        cbChamp7.ForeColor = Color.White;
+                        btAddChamp7.Visible = false;
+                    }
+                    else
+                    {
+                        cbChamp7.BackColor = Color.Honeydew;
+                        cbChamp7.ForeColor = Color.Black;
+                        if (Table7_Ajout != 0)
+                            btAddChamp7.Visible = true;
+                    }
                 }
                 else
                 {
-                    cbChamp7.BackColor = Color.Honeydew;
-                    cbChamp7.ForeColor = Color.Black;
-                    if (Table7_Ajout != 0)
-                        btAddChamp7.Visible = true;
+                    if (enregistrements.IfExists(cbChamp7.Text, Table7Id, 0) || enregistrements.IfExistsWithCode(cbChamp7.Text, Table7Id, 0))
+                    {
+                        cbChamp7.BackColor = Color.FromArgb(58, 62, 60);
+                        cbChamp7.ForeColor = Color.White;
+                        btAddChamp7.Visible = false;
+                    }
+                    else
+                    {
+                        cbChamp7.BackColor = Color.Honeydew;
+                        cbChamp7.ForeColor = Color.Black;
+                        if (Table7_Ajout != 0)
+                            btAddChamp7.Visible = true;
+                    }
                 }
             }
             else
@@ -2763,7 +2884,7 @@ namespace WidraSoft.UI
         private void toolStripSearch_TextChanged(object sender, EventArgs e)
         {
             PeseePB pesee = new PeseePB();
-            DgvList.DataSource = pesee.SearchBox(toolStripSearch.Text);
+            DgvList.DataSource = pesee.SearchBoxPending(toolStripSearch.Text);
         }
 
         private void toolStripSearch_Click(object sender, EventArgs e)
@@ -2913,6 +3034,79 @@ namespace WidraSoft.UI
                 pbOnScale.Visible = false;
             
 
+        }
+
+        private void btAddChamp1_Click(object sender, EventArgs e)
+        {
+            if (cbChamp1.Text != "" && cbChamp1.Text.Trim().Length > 1)
+            {
+                DialogResult result;
+                if (cbLang.Text == "FR")
+                    result = Custom_MessageBox.Show("FR", "Etes vous sur de vouloir ajouter l'enregistrement" + cbChamp1.Text + "?", "Pesée", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                else if (cbLang.Text == "EN")
+                    result = Custom_MessageBox.Show("EN", "Are you sure you want to add the record: " + cbChamp1.Text + "?", "Weighing", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                else
+                    result = Custom_MessageBox.Show("ES", "¿Está seguro de que desea eliminar este registro?", "Pesaje", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                if (result == DialogResult.Yes)
+                {
+                    try
+                    {
+                        Enregistrements enregistrements = new Enregistrements();
+                        enregistrements.Add(Table1Id, cbChamp1.Text,"", "","", "", "", "", "", "", "", "", 0, "", 0, "", 0);                        
+                        DataTable dt = enregistrements.FindByTableId(Table1Id);
+                        cbChamp1.DataSource = dt;
+                        //cbChamp1_SelectedValueChanged(this, EventArgs.Empty);                       
+                        cbChamp1.SelectedIndex = cbChamp1.Items.Count - 1;
+                        cbChamp1_Leave(this, EventArgs.Empty);
+                    }
+                    catch
+                    {
+                        throw;
+                    }
+
+                }
+            }
+        }
+
+        private void btAddChamp2_Click(object sender, EventArgs e)
+        {
+            if (cbChamp2.Text != "" && cbChamp2.Text.Trim().Length > 1)
+            {
+                DialogResult result;
+                if (cbLang.Text == "FR")
+                    result = Custom_MessageBox.Show("FR", "Etes vous sur de vouloir ajouter l'enregistrement" + cbChamp2.Text + "?", "Pesée", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                else if (cbLang.Text == "EN")
+                    result = Custom_MessageBox.Show("EN", "Are you sure you want to add the record: " + cbChamp2.Text + "?", "Weighing", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                else
+                    result = Custom_MessageBox.Show("ES", "¿Está seguro de que desea eliminar este registro?", "Pesaje", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                if (result == DialogResult.Yes)
+                {
+                    Tables tables = new Tables();
+                    Enregistrements enregistrements = new Enregistrements();
+                    if (tables.IsTableRelated(Table2Id))
+                    {
+
+                    }
+                    else
+                    {
+                        try
+                        {                           
+                            enregistrements.Add(Table2Id, cbChamp2.Text, "", "", "", "", "", "", "", "", "", "", 0, "", 0, "", 0);
+                            DataTable dt = enregistrements.FindByTableId(Table2Id);
+                            cbChamp2.DataSource = dt;
+                            //cbChamp1_SelectedValueChanged(this, EventArgs.Empty);                       
+                            cbChamp2.SelectedIndex = cbChamp2.Items.Count - 1;
+                            cbChamp2_Leave(this, EventArgs.Empty);
+                        }
+                        catch
+                        {
+                            throw;
+                        }
+                    }
+                    
+
+                }
+            }
         }
     }
 }

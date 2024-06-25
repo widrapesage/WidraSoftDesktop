@@ -36,6 +36,19 @@ namespace WidraSoft.BL
             }
         }
 
+        public DataTable SearchBoxPending(string filter)
+        {
+            try
+            {
+                PeseePBDA peseePBDA = new PeseePBDA();
+                return peseePBDA.SearchBoxPending(filter);
+            }
+            catch
+            {
+                throw;
+            }
+        }
+
         public DataTable FindById(Int32 Id)
         {
             try

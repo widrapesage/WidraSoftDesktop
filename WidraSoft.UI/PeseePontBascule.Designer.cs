@@ -938,6 +938,7 @@
             this.btAddChamp2.TabIndex = 164;
             this.btAddChamp2.UseVisualStyleBackColor = false;
             this.btAddChamp2.Visible = false;
+            this.btAddChamp2.Click += new System.EventHandler(this.btAddChamp2_Click);
             // 
             // cbWeighingSettingsId
             // 
@@ -1038,6 +1039,7 @@
             this.btAddChamp1.TabIndex = 150;
             this.btAddChamp1.UseVisualStyleBackColor = false;
             this.btAddChamp1.Visible = false;
+            this.btAddChamp1.Click += new System.EventHandler(this.btAddChamp1_Click);
             // 
             // cbChamp3
             // 
@@ -1722,9 +1724,9 @@
             this.DgvList.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.DgvList.Cursor = System.Windows.Forms.Cursors.Hand;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.Honeydew;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.MistyRose;
             dataGridViewCellStyle2.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black;
             dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(86)))), ((int)(((byte)(81)))));
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.White;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
@@ -1764,8 +1766,7 @@
             // 
             // toolStripSearch
             // 
-            this.toolStripSearch.BackColor = System.Drawing.Color.Honeydew;
-            this.toolStripSearch.Enabled = false;
+            this.toolStripSearch.BackColor = System.Drawing.Color.MistyRose;
             this.toolStripSearch.Margin = new System.Windows.Forms.Padding(150, 10, 1, 10);
             this.toolStripSearch.Name = "toolStripSearch";
             this.toolStripSearch.Size = new System.Drawing.Size(220, 23);

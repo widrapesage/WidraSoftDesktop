@@ -53,6 +53,25 @@ namespace WidraSoft.DA
             }
         }
 
+        public DataTable SearchBoxPending(string filter)
+        {
+            String sql = "SELECT * FROM VW_PESEEPB_PENDING WHERE CAMION LIKE '%" + filter + "%' OR PRODUIT LIKE '%" + filter + "%' OR PESEEPBID LIKE '%" + filter + "%'";
+            conn.ConnectionString = connString;
+            if (conn.State == ConnectionState.Closed)
+                conn.Open();
+            SqlCommand cmd = new SqlCommand(sql, conn);
+            try
+            {
+                SqlDataReader reader = cmd.ExecuteReader();
+                dt.Load(reader);
+                return dt;
+            }
+            catch
+            {
+                throw;
+            }
+        }
+
         public DataTable FindById(Int32 Id)
         {
             String sql = "SELECT * FROM VW_PESEEPB WHERE PESEEPBID=" + Id;
@@ -74,7 +93,7 @@ namespace WidraSoft.DA
 
         public DataTable FindWeighingsInProgress()
         {
-            String sql = "SELECT * FROM VW_PESEEPB WHERE ETATPESEE='Pending' ORDER BY PESEEPBID DESC";
+            String sql = "SELECT * FROM VW_PESEEPB_PENDING ORDER BY PESEEPBID DESC";
             conn.ConnectionString = connString;
             if (conn.State == ConnectionState.Closed)
                 conn.Open();
