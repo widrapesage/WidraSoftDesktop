@@ -58,203 +58,140 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="homeToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>158, 153</value>
+  <data name="ActualiserToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>96, 28</value>
   </data>
-  <data name="camionsToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>158, 56</value>
+  <data name="ActualiserToolStripMenuItem.Text" xml:space="preserve">
+    <value>Refresh</value>
   </data>
-  <data name="camionsToolStripMenuItem.Text" xml:space="preserve">
-    <value>Usuarios</value>
+  <data name="exporterVersToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>91, 28</value>
   </data>
-  <data name="chauffeursToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>158, 56</value>
+  <data name="exporterVersToolStripMenuItem.Text" xml:space="preserve">
+    <value>Search</value>
   </data>
-  <data name="chauffeursToolStripMenuItem.Text" xml:space="preserve">
-    <value>Grupos</value>
+  <data name="Excel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>90, 28</value>
   </data>
-  <data name="pontsToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>158, 56</value>
-  </data>
-  <data name="pontsToolStripMenuItem.Text" xml:space="preserve">
-    <value>Básculas</value>
-  </data>
-  <data name="pToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>158, 56</value>
-  </data>
-  <data name="pToolStripMenuItem.Text" xml:space="preserve">
-    <value>Periféricos</value>
-  </data>
-  <data name="gérerToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>158, 56</value>
-  </data>
-  <data name="gérerToolStripMenuItem.Text" xml:space="preserve">
-    <value>Administrar</value>
-  </data>
-  <data name="BorneToolpStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>158, 56</value>
-  </data>
-  <data name="BorneToolpStripMenuItem.Text" xml:space="preserve">
-    <value>Terminales</value>
-  </data>
-  <data name="paramètresToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>158, 56</value>
-  </data>
-  <data name="paramètresToolStripMenuItem.Text" xml:space="preserve">
-    <value>Configuraciones</value>
-  </data>
-  <data name="reportingToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>158, 56</value>
-  </data>
-  <data name="reportingToolStripMenuItem.Text" xml:space="preserve">
-    <value>Informes</value>
-  </data>
-  <data name="synchronisationToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>158, 52</value>
-  </data>
-  <data name="synchronisationToolStripMenuItem.Text" xml:space="preserve">
-    <value>Sincronización</value>
-  </data>
-  <data name="aideToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>158, 56</value>
-  </data>
-  <data name="aideToolStripMenuItem.Text" xml:space="preserve">
-    <value>Ayuda</value>
-  </data>
-  <data name="quitterToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>158, 56</value>
-  </data>
-  <data name="quitterToolStripMenuItem.Text" xml:space="preserve">
-    <value>Dejar</value>
-  </data>
-  <data name="menuStrip.Size" type="System.Drawing.Size, System.Drawing">
-    <value>159, 830</value>
-  </data>
-  <data name="toolStripMenuItem2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>239, 28</value>
+  <data name="Excel.Text" xml:space="preserve">
+    <value>Export</value>
   </data>
   <data name="toolStripMenuItem1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>239, 28</value>
+    <value>79, 28</value>
   </data>
   <data name="toolStripMenuItem1.Text" xml:space="preserve">
-    <value>Cámara ANPR</value>
+    <value>Print</value>
   </data>
-  <data name="ParamPoidstoolStripMenuItem1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>239, 28</value>
+  <data name="groupBox1.Text" xml:space="preserve">
+    <value>Status</value>
   </data>
-  <data name="ParamPoidstoolStripMenuItem1.Text" xml:space="preserve">
-    <value>Parámetro de peso</value>
+  <data name="label8.Size" type="System.Drawing.Size, System.Drawing">
+    <value>69, 18</value>
   </data>
-  <data name="camionsToolStripMenuItem1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>208, 30</value>
+  <data name="label8.Text" xml:space="preserve">
+    <value>Complete</value>
   </data>
-  <data name="camionsToolStripMenuItem1.Text" xml:space="preserve">
-    <value>Camiones</value>
+  <data name="label13.Size" type="System.Drawing.Size, System.Drawing">
+    <value>25, 18</value>
   </data>
-  <data name="produitsToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>208, 30</value>
+  <data name="label13.Text" xml:space="preserve">
+    <value>All</value>
   </data>
-  <data name="produitsToolStripMenuItem.Text" xml:space="preserve">
-    <value>Productos</value>
+  <data name="label15.Text" xml:space="preserve">
+    <value>Pending</value>
   </data>
-  <data name="chauffeursToolStripMenuItem1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>208, 30</value>
+  <data name="gbPeriode.Text" xml:space="preserve">
+    <value>Period</value>
   </data>
-  <data name="chauffeursToolStripMenuItem1.Text" xml:space="preserve">
-    <value>Conductores</value>
+  <data name="lnjour.Size" type="System.Drawing.Size, System.Drawing">
+    <value>58, 18</value>
   </data>
-  <data name="firmesToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>208, 30</value>
+  <data name="lnjour.Text" xml:space="preserve">
+    <value>This day</value>
   </data>
-  <data name="firmesToolStripMenuItem.Text" xml:space="preserve">
-    <value>Empresas </value>
+  <data name="label12.Size" type="System.Drawing.Size, System.Drawing">
+    <value>25, 18</value>
   </data>
-  <data name="transporteursToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>208, 30</value>
+  <data name="label12.Text" xml:space="preserve">
+    <value>All</value>
   </data>
-  <data name="transporteursToolStripMenuItem.Text" xml:space="preserve">
-    <value>Transportistas</value>
+  <data name="label19.Size" type="System.Drawing.Size, System.Drawing">
+    <value>77, 18</value>
   </data>
-  <data name="clientsToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>208, 30</value>
+  <data name="label19.Text" xml:space="preserve">
+    <value>This month</value>
   </data>
-  <data name="clientsToolStripMenuItem.Text" xml:space="preserve">
-    <value>Clientes</value>
+  <data name="label9.Size" type="System.Drawing.Size, System.Drawing">
+    <value>54, 19</value>
   </data>
-  <data name="pamamètresDePeséeToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>253, 28</value>
+  <data name="label9.Text" xml:space="preserve">
+    <value>Setting</value>
   </data>
-  <data name="pamamètresDePeséeToolStripMenuItem.Text" xml:space="preserve">
-    <value>Parámetro de pesaje</value>
+  <data name="label6.Size" type="System.Drawing.Size, System.Drawing">
+    <value>37, 19</value>
   </data>
-  <data name="tablesSupplémentairesToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>253, 28</value>
+  <data name="label6.Text" xml:space="preserve">
+    <value>Firm</value>
   </data>
-  <data name="tablesSupplémentairesToolStripMenuItem.Text" xml:space="preserve">
-    <value>Tablas adicionales</value>
+  <data name="label11.Size" type="System.Drawing.Size, System.Drawing">
+    <value>24, 19</value>
   </data>
-  <data name="tablesToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>159, 28</value>
+  <data name="label11.Text" xml:space="preserve">
+    <value>To</value>
   </data>
-  <data name="tablesToolStripMenuItem.Text" xml:space="preserve">
-    <value>Tablas</value>
+  <data name="label10.Size" type="System.Drawing.Size, System.Drawing">
+    <value>41, 19</value>
   </data>
-  <data name="enregistrementsToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>159, 28</value>
+  <data name="label10.Text" xml:space="preserve">
+    <value>From</value>
   </data>
-  <data name="enregistrementsToolStripMenuItem.Text" xml:space="preserve">
-    <value>Registros</value>
+  <data name="dtDebut.Location" type="System.Drawing.Point, System.Drawing">
+    <value>77, 116</value>
   </data>
-  <data name="lblChangerMdp.Size" type="System.Drawing.Size, System.Drawing">
-    <value>134, 17</value>
+  <data name="dtDebut.Size" type="System.Drawing.Size, System.Drawing">
+    <value>248, 23</value>
   </data>
-  <data name="lblChangerMdp.Text" xml:space="preserve">
-    <value>Cambia la contraseña</value>
+  <data name="label5.Size" type="System.Drawing.Size, System.Drawing">
+    <value>58, 19</value>
   </data>
-  <data name="lblMonCompte.Size" type="System.Drawing.Size, System.Drawing">
-    <value>67, 17</value>
+  <data name="label5.Text" xml:space="preserve">
+    <value>Product</value>
   </data>
-  <data name="lblMonCompte.Text" xml:space="preserve">
-    <value>Mi cuenta</value>
+  <data name="label4.Size" type="System.Drawing.Size, System.Drawing">
+    <value>71, 19</value>
   </data>
-  <data name="panelUserInfo.Location" type="System.Drawing.Point, System.Drawing">
-    <value>159, 0</value>
-  </data>
-  <data name="panelUserInfo.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1136, 153</value>
-  </data>
-  <data name="panelLicenceInfo.Location" type="System.Drawing.Point, System.Drawing">
-    <value>627, 0</value>
-  </data>
-  <data name="label1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>142, 19</value>
-  </data>
-  <data name="label1.Text" xml:space="preserve">
-    <value>Tipo de suscripción :</value>
-  </data>
-  <data name="label2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>67, 19</value>
-  </data>
-  <data name="label2.Text" xml:space="preserve">
-    <value>Validez : </value>
+  <data name="label4.Text" xml:space="preserve">
+    <value>Customer</value>
   </data>
   <data name="label3.Size" type="System.Drawing.Size, System.Drawing">
-    <value>82, 19</value>
+    <value>91, 19</value>
   </data>
   <data name="label3.Text" xml:space="preserve">
-    <value>Compañía :</value>
+    <value>Weighbridge</value>
   </data>
-  <data name="panelLayout.Location" type="System.Drawing.Point, System.Drawing">
-    <value>159, 153</value>
+  <data name="cbPont.Location" type="System.Drawing.Point, System.Drawing">
+    <value>106, 41</value>
   </data>
-  <data name="panelLayout.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1136, 677</value>
+  <data name="cbPont.Size" type="System.Drawing.Size, System.Drawing">
+    <value>164, 27</value>
   </data>
-  <data name="panelFooter.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1136, 41</value>
+  <data name="label2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>53, 19</value>
   </data>
-  <data name="pictureBox2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1136, 677</value>
+  <data name="label2.Text" xml:space="preserve">
+    <value>Carrier</value>
+  </data>
+  <data name="label1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>48, 19</value>
+  </data>
+  <data name="label1.Text" xml:space="preserve">
+    <value>Driver</value>
+  </data>
+  <data name="label7.Size" type="System.Drawing.Size, System.Drawing">
+    <value>43, 19</value>
+  </data>
+  <data name="label7.Text" xml:space="preserve">
+    <value>Truck</value>
   </data>
   <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -793,8 +730,5 @@
         AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
         AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==
 </value>
-  </data>
-  <data name="$this.Text" xml:space="preserve">
-    <value>Menú principal</value>
   </data>
 </root>

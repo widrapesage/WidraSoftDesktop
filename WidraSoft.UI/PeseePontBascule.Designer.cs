@@ -118,7 +118,7 @@
             this.menuStrip = new System.Windows.Forms.MenuStrip();
             this.toolStripMenuItem4 = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
-            this.pontsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.ListePeséesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.gérerToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.camionsToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.produitsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -1324,7 +1324,7 @@
             this.menuStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripMenuItem4,
             this.toolStripMenuItem2,
-            this.pontsToolStripMenuItem,
+            this.ListePeséesToolStripMenuItem,
             this.gérerToolStripMenuItem,
             this.paramètresToolStripMenuItem});
             this.menuStrip.Location = new System.Drawing.Point(0, 0);
@@ -1360,18 +1360,18 @@
             this.toolStripMenuItem2.Text = "Images";
             this.toolStripMenuItem2.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             // 
-            // pontsToolStripMenuItem
+            // ListePeséesToolStripMenuItem
             // 
-            this.pontsToolStripMenuItem.Font = new System.Drawing.Font("Corbel", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.pontsToolStripMenuItem.ForeColor = System.Drawing.Color.White;
-            this.pontsToolStripMenuItem.Image = global::WidraSoft.UI.Properties.Resources.scale;
-            this.pontsToolStripMenuItem.Margin = new System.Windows.Forms.Padding(0, 80, 0, 0);
-            this.pontsToolStripMenuItem.Name = "pontsToolStripMenuItem";
-            this.pontsToolStripMenuItem.Padding = new System.Windows.Forms.Padding(4, 1, 4, 3);
-            this.pontsToolStripMenuItem.Size = new System.Drawing.Size(107, 54);
-            this.pontsToolStripMenuItem.Text = "Ponts";
-            this.pontsToolStripMenuItem.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.pontsToolStripMenuItem.Click += new System.EventHandler(this.pontsToolStripMenuItem_Click);
+            this.ListePeséesToolStripMenuItem.Font = new System.Drawing.Font("Corbel", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.ListePeséesToolStripMenuItem.ForeColor = System.Drawing.Color.White;
+            this.ListePeséesToolStripMenuItem.Image = global::WidraSoft.UI.Properties.Resources.lignes;
+            this.ListePeséesToolStripMenuItem.Margin = new System.Windows.Forms.Padding(0, 80, 0, 0);
+            this.ListePeséesToolStripMenuItem.Name = "ListePeséesToolStripMenuItem";
+            this.ListePeséesToolStripMenuItem.Padding = new System.Windows.Forms.Padding(4, 1, 4, 3);
+            this.ListePeséesToolStripMenuItem.Size = new System.Drawing.Size(107, 54);
+            this.ListePeséesToolStripMenuItem.Text = "Liste";
+            this.ListePeséesToolStripMenuItem.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.ListePeséesToolStripMenuItem.Click += new System.EventHandler(this.pontsToolStripMenuItem_Click);
             // 
             // gérerToolStripMenuItem
             // 
@@ -2148,7 +2148,7 @@
         private System.Windows.Forms.DataGridView DgvList;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.MenuStrip menuStrip;
-        private System.Windows.Forms.ToolStripMenuItem pontsToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem ListePeséesToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem gérerToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem camionsToolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem produitsToolStripMenuItem;

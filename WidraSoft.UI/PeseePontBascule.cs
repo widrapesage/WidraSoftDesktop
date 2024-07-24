@@ -200,7 +200,7 @@ namespace WidraSoft.UI
                 Poids_Detection = (int)row["POIDS_DETECTION"];
                 try
                 {
-                    com.Open();
+                    //com.Open();
                 }
                 catch { throw; }
 
@@ -222,7 +222,7 @@ namespace WidraSoft.UI
                 TimerInterval = (int)r["TIMERINTERVAL"];
                 Weight_Timer.Interval = TimerInterval;
                 JaugeTimer.Interval = TimerInterval;
-                Weight_Timer.Start();
+                //Weight_Timer.Start();
                 JaugeTimer.Start();
                 LongueurMinChaine = (int)r["LONGUEURMINCHAINE"];
                 PositionDebut = (int)r["POSITIONDEBUT"];
@@ -2193,7 +2193,7 @@ namespace WidraSoft.UI
 
         private void pontsToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Form form = new PontsListe("1=1");
+            Form form = new PeseePBList("1=1");
             form.Show();
         }
 

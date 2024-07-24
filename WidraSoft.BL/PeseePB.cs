@@ -49,6 +49,19 @@ namespace WidraSoft.BL
             }
         }
 
+        public int GetCountPendingByFilter(string filter)
+        {
+            try
+            {
+                PeseePBDA peseePBDA = new PeseePBDA();
+                return peseePBDA.GetCountPendingByFilter(filter);
+            }
+            catch
+            {
+                throw;
+            }
+        }
+
         public DataTable FindById(Int32 Id)
         {
             try

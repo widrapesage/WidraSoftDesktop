@@ -72,6 +72,24 @@ namespace WidraSoft.DA
             }
         }
 
+        public int GetCountPendingByFilter(string filter)
+        {
+            String sql = "SELECT COUNT(*) FROM VW_PESEEPB_PENDING WHERE " + filter;
+            conn.ConnectionString = connString;
+            if (conn.State == ConnectionState.Closed)
+                conn.Open();
+            SqlCommand cmd = new SqlCommand(sql, conn);
+            try
+            {
+                Int32 Id = (int)cmd.ExecuteScalar();
+                return Id;
+            }
+            catch
+            {
+                throw;
+            }
+        }
+
         public DataTable FindById(Int32 Id)
         {
             String sql = "SELECT * FROM VW_PESEEPB WHERE PESEEPBID=" + Id;

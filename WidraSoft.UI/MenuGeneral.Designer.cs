@@ -45,7 +45,6 @@ namespace WidraSoft.UI
             this.chauffeursToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.firmesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.transporteursToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.destinationsProvenancesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.clientsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.BorneToolpStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.paramètresToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -197,7 +196,6 @@ namespace WidraSoft.UI
             this.chauffeursToolStripMenuItem1,
             this.firmesToolStripMenuItem,
             this.transporteursToolStripMenuItem,
-            this.destinationsProvenancesToolStripMenuItem,
             this.clientsToolStripMenuItem});
             resources.ApplyResources(this.gérerToolStripMenuItem, "gérerToolStripMenuItem");
             this.gérerToolStripMenuItem.ForeColor = System.Drawing.Color.White;
@@ -250,14 +248,6 @@ namespace WidraSoft.UI
             this.transporteursToolStripMenuItem.Name = "transporteursToolStripMenuItem";
             resources.ApplyResources(this.transporteursToolStripMenuItem, "transporteursToolStripMenuItem");
             this.transporteursToolStripMenuItem.Click += new System.EventHandler(this.transporteursToolStripMenuItem_Click);
-            // 
-            // destinationsProvenancesToolStripMenuItem
-            // 
-            this.destinationsProvenancesToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(62)))), ((int)(((byte)(60)))));
-            this.destinationsProvenancesToolStripMenuItem.ForeColor = System.Drawing.Color.White;
-            this.destinationsProvenancesToolStripMenuItem.Image = global::WidraSoft.UI.Properties.Resources.destination1;
-            this.destinationsProvenancesToolStripMenuItem.Name = "destinationsProvenancesToolStripMenuItem";
-            resources.ApplyResources(this.destinationsProvenancesToolStripMenuItem, "destinationsProvenancesToolStripMenuItem");
             // 
             // clientsToolStripMenuItem
             // 
@@ -586,7 +576,6 @@ namespace WidraSoft.UI
         private System.Windows.Forms.ToolStripMenuItem chauffeursToolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem firmesToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem transporteursToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem destinationsProvenancesToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem clientsToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem pToolStripMenuItem;
         private System.Windows.Forms.PictureBox pictureBox1;
