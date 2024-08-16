@@ -204,5 +204,11 @@ namespace WidraSoft.UI
             Form form = new TestANPR();
             form.Show();
         }
+
+        private void BorneToolpStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Form form = new Borne_Home();
+            form.Show();
+        }
     }
 }

@@ -267,6 +267,7 @@ namespace WidraSoft.UI
             this.BorneToolpStripMenuItem.Margin = new System.Windows.Forms.Padding(0, 4, 0, 0);
             this.BorneToolpStripMenuItem.Name = "BorneToolpStripMenuItem";
             this.BorneToolpStripMenuItem.Padding = new System.Windows.Forms.Padding(4, 1, 4, 3);
+            this.BorneToolpStripMenuItem.Click += new System.EventHandler(this.BorneToolpStripMenuItem_Click);
             // 
             // paramètresToolStripMenuItem
             // 
