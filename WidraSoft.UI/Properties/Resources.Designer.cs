@@ -243,6 +243,16 @@ namespace WidraSoft.UI.Properties {
         /// <summary>
         ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Chargement {
+            get {
+                object obj = ResourceManager.GetObject("Chargement", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap check {
             get {
                 object obj = ResourceManager.GetObject("check", resourceCulture);
@@ -306,6 +316,16 @@ namespace WidraSoft.UI.Properties {
         internal static System.Drawing.Bitmap Customers {
             get {
                 object obj = ResourceManager.GetObject("Customers", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Dechargement {
+            get {
+                object obj = ResourceManager.GetObject("Dechargement", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -593,6 +613,16 @@ namespace WidraSoft.UI.Properties {
         /// <summary>
         ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap imprimante_borne {
+            get {
+                object obj = ResourceManager.GetObject("imprimante_borne", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap industry {
             get {
                 object obj = ResourceManager.GetObject("industry", resourceCulture);
@@ -743,6 +773,16 @@ namespace WidraSoft.UI.Properties {
         /// <summary>
         ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap pave_numerique {
+            get {
+                object obj = ResourceManager.GetObject("pave-numerique", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap pencil {
             get {
                 object obj = ResourceManager.GetObject("pencil", resourceCulture);
@@ -766,6 +806,16 @@ namespace WidraSoft.UI.Properties {
         internal static System.Drawing.Bitmap Peser {
             get {
                 object obj = ResourceManager.GetObject("Peser", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Peser_Borne {
+            get {
+                object obj = ResourceManager.GetObject("Peser_Borne", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -936,6 +986,16 @@ namespace WidraSoft.UI.Properties {
         internal static System.Drawing.Bitmap scale {
             get {
                 object obj = ResourceManager.GetObject("scale", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Scan {
+            get {
+                object obj = ResourceManager.GetObject("Scan", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
