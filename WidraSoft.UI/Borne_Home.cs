@@ -15,6 +15,7 @@ namespace WidraSoft.UI
     public partial class Borne_Home : Form
     {
         int vg_PontId;
+        string Lang;
         public Borne_Home()
         {
             InitializeComponent();
@@ -28,7 +29,8 @@ namespace WidraSoft.UI
             select_EN.Visible = false;
             select_ES.Visible = false;
             Language_Manager language_Manager = new Language_Manager();
-            language_Manager.ChangeLanguage("fr", this, typeof(Borne_Home));
+            Lang = "fr";
+            language_Manager.ChangeLanguage(Lang, this, typeof(Borne_Home));
 
             vg_PontId = GetPontId();
             lbDate.Text = DateTime.Now.ToShortDateString() + ' ' + DateTime.Now.ToShortTimeString();
@@ -111,46 +113,33 @@ namespace WidraSoft.UI
 
         private void France_flag_Click(object sender, EventArgs e)
         {
-
-        }
-
-        private void France_flag_DoubleClick(object sender, EventArgs e)
-        {
             select_FR.Visible = true;
             select_EN.Visible = false;
             select_ES.Visible = false;
             Language_Manager language_Manager = new Language_Manager();
-            language_Manager.ChangeLanguage("fr", this, typeof(Borne_Home));
-
+            Lang = "fr";
+            language_Manager.ChangeLanguage(Lang, this, typeof(Borne_Home));
             lbDate.Text = DateTime.Now.ToShortDateString() + ' ' + DateTime.Now.ToShortTimeString();
+        }
+
+        private void France_flag_DoubleClick(object sender, EventArgs e)
+        {
+            
         }
 
         private void England_flag_DoubleClick(object sender, EventArgs e)
         {
-            select_FR.Visible = false;
-            select_EN.Visible = true;
-            select_ES.Visible = false;
-            Language_Manager language_Manager = new Language_Manager();
-            language_Manager.ChangeLanguage("en", this, typeof(Borne_Home));
-
-            lbDate.Text = DateTime.Now.ToShortDateString() + ' ' + DateTime.Now.ToShortTimeString();
+            
         }
 
         private void Spain_flag_DoubleClick(object sender, EventArgs e)
         {
-            select_FR.Visible = false;
-            select_EN.Visible = false;
-            select_ES.Visible = true;
-            Language_Manager language_Manager = new Language_Manager();
-            language_Manager.ChangeLanguage("es", this, typeof(Borne_Home));
-
-            lbDate.Text = DateTime.Now.ToShortDateString() + ' ' + DateTime.Now.ToShortTimeString();
+            
         }
 
         private void btAddPont_Click(object sender, EventArgs e)
         {
-            Form form = new Borne_PremierePesee(GetPontId(), GetWeighingSettingsType(GetPontId()));
-            form.Show();
+            
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -161,6 +150,48 @@ namespace WidraSoft.UI
         private void button5_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void txtPoids_TextChanged(object sender, EventArgs e)
+        {
+            int P = 0;
+            P = Convert.ToInt32(txtPoids.Text);
+            if (P > 500)
+            {
+                Form form = new Borne_ChoixTypePesee(Lang, GetPontId(), GetWeighingSettingsType(GetPontId()), P);
+                form.Show();
+                txtPoids.Text = "0";
+            }
+        }
+
+        private void txtPoids_DoubleClick(object sender, EventArgs e)
+        {
+            string input = Microsoft.VisualBasic.Interaction.InputBox("Entrez un poids", "Simulateur Poids");
+            txtPoids.Text = input;
+        }
+
+        private void England_flag_Click(object sender, EventArgs e)
+        {
+            select_FR.Visible = false;
+            select_EN.Visible = true;
+            select_ES.Visible = false;
+            Language_Manager language_Manager = new Language_Manager();
+            Lang = "en";
+            language_Manager.ChangeLanguage(Lang, this, typeof(Borne_Home));
+
+            lbDate.Text = DateTime.Now.ToShortDateString() + ' ' + DateTime.Now.ToShortTimeString();
+        }
+
+        private void Spain_flag_Click(object sender, EventArgs e)
+        {
+            select_FR.Visible = false;
+            select_EN.Visible = false;
+            select_ES.Visible = true;
+            Language_Manager language_Manager = new Language_Manager();
+            Lang = "es";
+            language_Manager.ChangeLanguage(Lang, this, typeof(Borne_Home));
+
+            lbDate.Text = DateTime.Now.ToShortDateString() + ' ' + DateTime.Now.ToShortTimeString();
         }
     }
 }

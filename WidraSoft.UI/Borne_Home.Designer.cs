@@ -60,6 +60,9 @@
             this.txtPoids.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtPoids.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(112)))), ((int)(((byte)(228)))), ((int)(((byte)(132)))));
             this.txtPoids.Name = "txtPoids";
+            this.txtPoids.TabStop = false;
+            this.txtPoids.TextChanged += new System.EventHandler(this.txtPoids_TextChanged);
+            this.txtPoids.DoubleClick += new System.EventHandler(this.txtPoids_DoubleClick);
             // 
             // button2
             // 
@@ -82,6 +85,7 @@
             this.Spain_flag.Image = global::WidraSoft.UI.Properties.Resources.spain_borne;
             this.Spain_flag.Name = "Spain_flag";
             this.Spain_flag.TabStop = false;
+            this.Spain_flag.Click += new System.EventHandler(this.Spain_flag_Click);
             this.Spain_flag.DoubleClick += new System.EventHandler(this.Spain_flag_DoubleClick);
             // 
             // England_flag
@@ -92,6 +96,7 @@
             this.England_flag.Image = global::WidraSoft.UI.Properties.Resources.united_kingdom_borne;
             this.England_flag.Name = "England_flag";
             this.England_flag.TabStop = false;
+            this.England_flag.Click += new System.EventHandler(this.England_flag_Click);
             this.England_flag.DoubleClick += new System.EventHandler(this.England_flag_DoubleClick);
             // 
             // France_flag

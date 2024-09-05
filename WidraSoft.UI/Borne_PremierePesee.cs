@@ -21,41 +21,44 @@ namespace WidraSoft.UI
         int TransporteurId;
         int ProduitId;
         int ClientId;
+        int vg_ScanCamionId;
+        string vg_Flux;
+        int vg_P;
 
         int Enregistrement1Id;
-        string Enregistrement1;
+        string Enregistrement1 = "";
         int Tables1Id;
-        string Tables1Name; 
+        string Tables1Name = ""; 
         
         int Enregistrement2Id;
-        string Enregistrement2;
+        string Enregistrement2 = "";
         int Tables2Id;
-        string Tables2Name;
+        string Tables2Name = "";
 
         int Enregistrement3Id;
-        string Enregistrement3;
+        string Enregistrement3 = "";
         int Tables3Id;
-        string Tables3Name;
+        string Tables3Name = "";
 
         int Enregistrement4Id;
-        string Enregistrement4;
+        string Enregistrement4 = "";
         int Tables4Id;
-        string Tables4Name;
+        string Tables4Name = "";
 
         int Enregistrement5Id;
-        string Enregistrement5;
+        string Enregistrement5 = "";
         int Tables5Id;
-        string Tables5Name;
+        string Tables5Name = "";
 
         int Enregistrement6Id;
-        string Enregistrement6;
+        string Enregistrement6 = "";
         int Tables6Id;
-        string Tables6Name;
+        string Tables6Name = "";
 
         int Enregistrement7Id;
-        string Enregistrement7;
+        string Enregistrement7 = "";
         int Tables7Id;
-        string Tables7Name;
+        string Tables7Name = "";
 
         bool vg_Demander_Parametre;
         string Etape = "";
@@ -110,11 +113,14 @@ namespace WidraSoft.UI
         int PontFirme;
         int CamionChauffeur;
         int CamionTransporteur;
-        public Borne_PremierePesee(int PontId, bool Demander_Paramatre)
+        public Borne_PremierePesee(string Lang,  int PontId, bool Demander_Paramatre, string Flux, int ScanCamionId, int P)
         {
             InitializeComponent();
             vg_PontId = PontId;
             vg_Demander_Parametre = Demander_Paramatre;
+            vg_ScanCamionId = ScanCamionId;
+            vg_Flux = Flux;
+            vg_P = P;
         }
 
         private void radioButton1_CheckedChanged(object sender, EventArgs e)
@@ -219,15 +225,45 @@ namespace WidraSoft.UI
                 else
                 {   Pont pont = new Pont();
                     WeighingSettingsId = pont.GetWeighingSettingsId(vg_PontId);
-                    Etape = "Firme";
+                    Etape = "Camion";
                 }
 
+                
+            }
+           
+            if (Etape == "Camion")
+            {
+                ApplyWeighingSettings(WeighingSettingsId);
+                if (vg_ScanCamionId <= 0)
+                {
+                    if (EnableCamion > 0)
+                    {
+                        lbTexte.Text = "Choisir le camion";
+                        Camion camion = new Camion();
+                        DataTable dt = new DataTable();
+                        dt = camion.List("1=1");
+                        DgvList.DataSource = dt;
+                        Bind_Camions();
+                    }
+                    else
+                    {
+                        CamionId = 0;
+                        Etape = "Firme";
+                        Gestion_Etapes();
+                    }
+                }
+                else
+                {
+                    CamionId = vg_ScanCamionId;
+                    Etape = "Firme";
+                    Gestion_Etapes();
+                }
                 
             }
 
             if (Etape == "Firme")
             {
-                ApplyWeighingSettings(WeighingSettingsId);
+                
                 if (EnableFirme > 0)
                 {
                     lbTexte.Text = "Choisir la firme";
@@ -240,25 +276,6 @@ namespace WidraSoft.UI
                 else
                 {
                     FirmeId = 0;
-                    Etape = "Camion";
-                    Gestion_Etapes();
-                }
-            }
-
-            if (Etape == "Camion")
-            {
-                if (EnableCamion > 0)
-                {
-                    lbTexte.Text = "Choisir le camion";
-                    Camion camion = new Camion();
-                    DataTable dt = new DataTable();
-                    dt = camion.List("1=1");
-                    DgvList.DataSource = dt;
-                    Bind_Camions();
-                }
-                else
-                {
-                    CamionId = 0;
                     Etape = "Chauffeur";
                     Gestion_Etapes();
                 }
@@ -386,10 +403,7 @@ namespace WidraSoft.UI
                         lbTexte.Text = "Choisir " + table_name;
                         Enregistrements enregistrements = new Enregistrements();
                         dt = enregistrements.FindByTableId(Table2Id);
-                    }
-                    
-
-
+                    }                    
                     DgvList.DataSource = dt;
                     Bind_Enregistrements();
                 }
@@ -410,10 +424,21 @@ namespace WidraSoft.UI
                     string table_name = tables.GetName(Table3Id);
                     Tables3Name = table_name;
                     Tables3Id = Table3Id;
-                    lbTexte.Text = "Choisir " + table_name;
-                    Enregistrements enregistrements = new Enregistrements();
                     DataTable dt = new DataTable();
-                    dt = enregistrements.FindByTableId(Table3Id);
+                    if (tables.IsTableRelated(Table3Id) && tables.GetParentTableId(Table3Id) == Tables2Id)
+                    {
+                        lbTexte.Text = "Choisir " + table_name + " De " + Enregistrement2;
+                        Enregistrements enregistrements = new Enregistrements();
+
+                        dt = enregistrements.FindByTableIdAndParentId(Table3Id, Enregistrement2Id);
+
+                    }
+                    else
+                    {
+                        lbTexte.Text = "Choisir " + table_name;
+                        Enregistrements enregistrements = new Enregistrements();
+                        dt = enregistrements.FindByTableId(Table3Id);
+                    }
                     DgvList.DataSource = dt;
                     Bind_Enregistrements();
                 }
@@ -434,10 +459,21 @@ namespace WidraSoft.UI
                     string table_name = tables.GetName(Table4Id);
                     Tables4Name = table_name;
                     Tables4Id = Table4Id;
-                    lbTexte.Text = "Choisir " + table_name;
-                    Enregistrements enregistrements = new Enregistrements();
                     DataTable dt = new DataTable();
-                    dt = enregistrements.FindByTableId(Table4Id);
+                    if (tables.IsTableRelated(Table4Id) && tables.GetParentTableId(Table4Id) == Tables3Id)
+                    {
+                        lbTexte.Text = "Choisir " + table_name + " De " + Enregistrement3;
+                        Enregistrements enregistrements = new Enregistrements();
+
+                        dt = enregistrements.FindByTableIdAndParentId(Table4Id, Enregistrement3Id);
+
+                    }
+                    else
+                    {
+                        lbTexte.Text = "Choisir " + table_name;
+                        Enregistrements enregistrements = new Enregistrements();
+                        dt = enregistrements.FindByTableId(Table4Id);
+                    }
                     DgvList.DataSource = dt;
                     Bind_Enregistrements();
                 }
@@ -458,10 +494,21 @@ namespace WidraSoft.UI
                     string table_name = tables.GetName(Table5Id);
                     Tables5Name = table_name;
                     Tables5Id = Table5Id;
-                    lbTexte.Text = "Choisir " + table_name;
-                    Enregistrements enregistrements = new Enregistrements();
                     DataTable dt = new DataTable();
-                    dt = enregistrements.FindByTableId(Table5Id);
+                    if (tables.IsTableRelated(Table5Id) && tables.GetParentTableId(Table5Id) == Tables4Id)
+                    {
+                        lbTexte.Text = "Choisir " + table_name + " De " + Enregistrement4;
+                        Enregistrements enregistrements = new Enregistrements();
+
+                        dt = enregistrements.FindByTableIdAndParentId(Table5Id, Enregistrement4Id);
+
+                    }
+                    else
+                    {
+                        lbTexte.Text = "Choisir " + table_name;
+                        Enregistrements enregistrements = new Enregistrements();
+                        dt = enregistrements.FindByTableId(Table5Id);
+                    }
                     DgvList.DataSource = dt;
                     Bind_Enregistrements();
                 }
@@ -482,10 +529,21 @@ namespace WidraSoft.UI
                     string table_name = tables.GetName(Table6Id);
                     Tables6Name = table_name;
                     Tables6Id = Table6Id;
-                    lbTexte.Text = "Choisir " + table_name;
-                    Enregistrements enregistrements = new Enregistrements();
                     DataTable dt = new DataTable();
-                    dt = enregistrements.FindByTableId(Table6Id);
+                    if (tables.IsTableRelated(Table6Id) && tables.GetParentTableId(Table6Id) == Tables5Id)
+                    {
+                        lbTexte.Text = "Choisir " + table_name + " De " + Enregistrement5;
+                        Enregistrements enregistrements = new Enregistrements();
+
+                        dt = enregistrements.FindByTableIdAndParentId(Table6Id, Enregistrement5Id);
+
+                    }
+                    else
+                    {
+                        lbTexte.Text = "Choisir " + table_name;
+                        Enregistrements enregistrements = new Enregistrements();
+                        dt = enregistrements.FindByTableId(Table6Id);
+                    }
                     DgvList.DataSource = dt;
                     Bind_Enregistrements();
                 }
@@ -506,18 +564,45 @@ namespace WidraSoft.UI
                     string table_name = tables.GetName(Table7Id);
                     Tables7Name = table_name;
                     Tables7Id = Table7Id;
-                    lbTexte.Text = "Choisir " + table_name;
-                    Enregistrements enregistrements = new Enregistrements();
                     DataTable dt = new DataTable();
-                    dt = enregistrements.FindByTableId(Table7Id);
+                    if (tables.IsTableRelated(Table7Id) && tables.GetParentTableId(Table7Id) == Tables6Id)
+                    {
+                        lbTexte.Text = "Choisir " + table_name + " De " + Enregistrement6;
+                        Enregistrements enregistrements = new Enregistrements();
+
+                        dt = enregistrements.FindByTableIdAndParentId(Table7Id, Enregistrement6Id);
+
+                    }
+                    else
+                    {
+                        lbTexte.Text = "Choisir " + table_name;
+                        Enregistrements enregistrements = new Enregistrements();
+                        dt = enregistrements.FindByTableId(Table7Id);
+                    }
                     DgvList.DataSource = dt;
                     Bind_Enregistrements();
                 }
                 else
                 {
-                    Close();
+                    Enregistrement7Id = 0;
+                    Tables7Id = 0;
+                    Etape = "Fin";
+                    lbTexte.Text = "Première Pesée terminée veuillez quitter la bascule";
+                    try
+                    {
+                        PeseePB pesee = new PeseePB();
+                        pesee.Add("2x", vg_Flux, vg_PontId, WeighingSettingsId, FirmeId, CamionId, ChauffeurId, TransporteurId, ProduitId, ClientId, Enregistrement1Id, Tables1Id, Tables1Name, Enregistrement1,
+                            Enregistrement2Id, Tables2Id, Tables2Name, Enregistrement2, Enregistrement3Id, Table3Id, Tables3Name, Enregistrement3, Enregistrement4Id, Table4Id, Tables4Name, Enregistrement4,
+                            Enregistrement5Id, Table5Id, Tables5Name, Enregistrement5, Enregistrement6Id, Table6Id, Tables6Name, Enregistrement6, Enregistrement7Id, Table7Id, Tables7Name, Enregistrement7, 0, DateTime.Now, vg_P,
+                            DateTime.Now, 0, "Borne", "Pending");
+                        Close();
+                    }
+                    catch
+                    { throw; }
                 }
             }
+
+            
 
         }
 
@@ -786,22 +871,34 @@ namespace WidraSoft.UI
             if (Etape == "Parametre")
             {
                 WeighingSettingsId = Common_functions.GetDatagridViewSelectedId(DgvList);
-                Etape = "Firme";
-                Gestion_Etapes();
-                return;
-            }
-
-            if (Etape == "Firme")
-            {
-                FirmeId = Common_functions.GetDatagridViewSelectedId(DgvList);
                 Etape = "Camion";
                 Gestion_Etapes();
                 return;
             }
 
+            
             if (Etape == "Camion")
             {
                 CamionId = Common_functions.GetDatagridViewSelectedId(DgvList);
+                Camion camion = new Camion();
+                if (camion.IfIsPending(camion.GetName(CamionId)))
+                {
+                    Form form = new Borne_DeuxiemePesee(vg_P, camion.GetPendingId(camion.GetName(CamionId)), camion.GetName(CamionId));
+                    form.Show();
+                    Close();
+                }
+                else
+                {
+                    Etape = "Firme";
+                    Gestion_Etapes();
+                    return;
+                }
+                
+            }
+
+            if (Etape == "Firme")
+            {
+                FirmeId = Common_functions.GetDatagridViewSelectedId(DgvList);
                 Etape = "Chauffeur";
                 Gestion_Etapes();
                 return;
@@ -912,13 +1009,19 @@ namespace WidraSoft.UI
                 Enregistrement7Id = Common_functions.GetDatagridViewSelectedId(DgvList);
                 Enregistrement7 = enregistrements.GetName(Enregistrement7Id);
                 Etape = "Fin";
-                Close();
+                Gestion_Etapes();
+                return; 
             }
         }
 
         private void btAnnuler_Click(object sender, EventArgs e)
         {
             Close();
+        }
+
+        private void btUp_Click(object sender, EventArgs e)
+        {
+            
         }
     }
 }

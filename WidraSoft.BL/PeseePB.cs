@@ -49,6 +49,8 @@ namespace WidraSoft.BL
             }
         }
 
+
+
         public int GetCountPendingByFilter(string filter)
         {
             try
@@ -101,6 +103,18 @@ namespace WidraSoft.BL
             }
         }
 
+        public String GetShortResume(Int32 Id)
+        {
+            try
+            {
+                PeseePBDA peseePBDA = new PeseePBDA();
+                return peseePBDA.GetShortResume(Id);
+            }
+            catch
+            {
+                throw;
+            }
+        }
 
         public void Add(String TypePesee, String Flux, Int32 PontId, Int32 WeighingSettingsId, Int32 FirmeId, Int32 CamionId, Int32 ChauffeurId, Int32 TransporteurId, Int32 ProduitId, Int32 ClientId, Int32 EnregistrementsId1,
             Int32 TablesId1, String TablesName1, String Enregistrements1, Int32 EnregistrementsId2, Int32 TablesId2, String TablesName2, String Enregistrements2, Int32 EnregistrementsId3, Int32 TablesId3, String TablesName3, String Enregistrements3,

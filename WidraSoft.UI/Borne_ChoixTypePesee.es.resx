@@ -57,11 +57,17 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="button3.Text" xml:space="preserve">
-    <value>  Ayuda</value>
+  <data name="btPeser.Text" xml:space="preserve">
+    <value>Pesar</value>
   </data>
-  <data name="button5.Text" xml:space="preserve">
-    <value>  Lista</value>
+  <data name="btTareManuelle.Text" xml:space="preserve">
+    <value>Tara manual</value>
+  </data>
+  <data name="lbBadge.Text" xml:space="preserve">
+    <value>Por favor presente su insignia </value>
+  </data>
+  <data name="btReimpressionTicket.Text" xml:space="preserve">
+    <value>Reimprimir billete</value>
   </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">

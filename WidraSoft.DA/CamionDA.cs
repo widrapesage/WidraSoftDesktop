@@ -93,6 +93,46 @@ namespace WidraSoft.DA
             }
         }
 
+        public bool IfIsPending(String Name)
+        {
+            String sql = "SELECT COUNT(*) FROM VW_PESEEPB WHERE CAMION='" + Name + "' AND ETATPESEE='Pending'";
+            conn.ConnectionString = connString;
+            if (conn.State == ConnectionState.Closed)
+                conn.Open();
+            SqlCommand cmd = new SqlCommand(sql, conn);
+            try
+            {
+                Int32 nb = (int)cmd.ExecuteScalar();
+                if (nb > 0)
+                    return true;
+                else
+                    return false;
+            }
+            catch
+            {
+                throw;
+            }
+        }
+
+        public int GetPendingId(string Name)
+        {
+
+            String sql = "SELECT TOP(1) PESEEPBID FROM VW_PESEEPB WHERE CAMION='" + Name + "' AND ETATPESEE='Pending'";
+            conn.ConnectionString = connString;
+            if (conn.State == ConnectionState.Closed)
+                conn.Open();
+            SqlCommand cmd = new SqlCommand(sql, conn);
+            try
+            {
+                int id = (int)cmd.ExecuteScalar();
+                return id;
+            }
+            catch
+            {
+                throw;
+            }
+        }
+
         public string GetName(Int32 Id)
         {
 
@@ -105,6 +145,25 @@ namespace WidraSoft.DA
             {
                 String name = (string)cmd.ExecuteScalar();
                 return name;
+            }
+            catch
+            {
+                throw;
+            }
+        }
+
+        public int GetIdByName(string Name)
+        {
+
+            String sql = "SELECT CAMIONID FROM CAMION WHERE PLAQUE='" + Name + "'";
+            conn.ConnectionString = connString;
+            if (conn.State == ConnectionState.Closed)
+                conn.Open();
+            SqlCommand cmd = new SqlCommand(sql, conn);
+            try
+            {
+                int id = (int)cmd.ExecuteScalar();
+                return id;
             }
             catch
             {

@@ -146,6 +146,24 @@ namespace WidraSoft.DA
             }
         }
 
+        public String GetShortResume(Int32 Id)
+        {
+            String sql = "SELECT CONCAT(DATEHEUREPOIDS2, '  ', POIDS2 , ' Kg  ',  PRODUIT ) FROM VW_PESEEPB WHERE PESEEPBID=" + Id;
+            conn.ConnectionString = connString;
+            if (conn.State == ConnectionState.Closed)
+                conn.Open();
+            SqlCommand cmd = new SqlCommand(sql, conn);
+            try
+            {
+                String Resume = (String)cmd.ExecuteScalar();
+                return Resume;
+            }
+            catch
+            {
+                throw;
+            }
+        }
+
         public void Add(String TypePesee, String Flux, Int32 PontId, Int32 WeighingSettingsId, Int32 FirmeId, Int32 CamionId, Int32 ChauffeurId, Int32 TransporteurId, Int32 ProduitId, Int32 ClientId, Int32 EnregistrementsId1,
             Int32 TablesId1, String TablesName1, String Enregistrements1, Int32 EnregistrementsId2, Int32 TablesId2, String TablesName2, String Enregistrements2, Int32 EnregistrementsId3, Int32 TablesId3, String TablesName3, String Enregistrements3,
             Int32 EnregistrementsId4, Int32 TablesId4, String TablesName4, String Enregistrements4, Int32 EnregistrementsId5, Int32 TablesId5, String TablesName5, String Enregistrements5, Int32 EnregistrementsId6, Int32 TablesId6, String TablesName6, String Enregistrements6,

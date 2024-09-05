@@ -62,12 +62,51 @@ namespace WidraSoft.BL
             }
         }
 
+        public bool IfIsPending(String Name)
+        {
+            try
+            {
+                CamionDA camion = new CamionDA();
+                return camion.IfIsPending(Name);
+            }
+            catch
+            {
+                throw;
+            }
+        }
+
+        public int GetPendingId(string Name)
+        {
+            try
+            {
+                CamionDA camion = new CamionDA();
+                return camion.GetPendingId(Name);
+            }
+            catch
+            {
+                throw;
+            }
+        }
+
         public string GetName(Int32 Id)
         {
             try
             {
                 CamionDA camion = new CamionDA();
                 return camion.GetName(Id);
+            }
+            catch
+            {
+                throw;
+            }
+        }
+
+        public int GetIdByName(string Name)
+        {
+            try
+            {
+                CamionDA camion = new CamionDA();
+                return camion.GetIdByName(Name);
             }
             catch
             {

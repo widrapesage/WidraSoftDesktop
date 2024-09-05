@@ -41,6 +41,8 @@
             this.Spain_flag = new System.Windows.Forms.PictureBox();
             this.England_flag = new System.Windows.Forms.PictureBox();
             this.France_flag = new System.Windows.Forms.PictureBox();
+            this.btUp = new System.Windows.Forms.Button();
+            this.btDown = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.DgvList)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Spain_flag)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.England_flag)).BeginInit();
@@ -87,7 +89,7 @@
             this.DgvList.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.DgvList.RowHeadersWidth = 62;
             this.DgvList.RowTemplate.Height = 70;
-            this.DgvList.Size = new System.Drawing.Size(728, 331);
+            this.DgvList.Size = new System.Drawing.Size(648, 331);
             this.DgvList.TabIndex = 2;
             // 
             // lbTexte
@@ -104,6 +106,7 @@
             // 
             // btValider
             // 
+            this.btValider.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btValider.BackColor = System.Drawing.Color.Black;
             this.btValider.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btValider.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(112)))), ((int)(((byte)(228)))), ((int)(((byte)(132)))));
@@ -121,6 +124,7 @@
             // 
             // btAnnuler
             // 
+            this.btAnnuler.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btAnnuler.BackColor = System.Drawing.Color.Black;
             this.btAnnuler.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btAnnuler.FlatAppearance.BorderColor = System.Drawing.Color.Tomato;
@@ -138,6 +142,7 @@
             // 
             // btClavier
             // 
+            this.btClavier.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btClavier.BackColor = System.Drawing.Color.Black;
             this.btClavier.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btClavier.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(112)))), ((int)(((byte)(228)))), ((int)(((byte)(132)))));
@@ -154,6 +159,7 @@
             // 
             // btAjouter
             // 
+            this.btAjouter.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btAjouter.BackColor = System.Drawing.Color.Black;
             this.btAjouter.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btAjouter.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(112)))), ((int)(((byte)(228)))), ((int)(((byte)(132)))));
@@ -170,6 +176,7 @@
             // 
             // Spain_flag
             // 
+            this.Spain_flag.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.Spain_flag.BackColor = System.Drawing.Color.Transparent;
             this.Spain_flag.Cursor = System.Windows.Forms.Cursors.Hand;
             this.Spain_flag.Image = global::WidraSoft.UI.Properties.Resources.spain;
@@ -183,6 +190,7 @@
             // 
             // England_flag
             // 
+            this.England_flag.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.England_flag.BackColor = System.Drawing.Color.Transparent;
             this.England_flag.Cursor = System.Windows.Forms.Cursors.Hand;
             this.England_flag.Image = global::WidraSoft.UI.Properties.Resources.united_kingdom;
@@ -196,6 +204,7 @@
             // 
             // France_flag
             // 
+            this.France_flag.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.France_flag.BackColor = System.Drawing.Color.Transparent;
             this.France_flag.Cursor = System.Windows.Forms.Cursors.Hand;
             this.France_flag.Image = global::WidraSoft.UI.Properties.Resources.france;
@@ -207,12 +216,49 @@
             this.France_flag.TabIndex = 123;
             this.France_flag.TabStop = false;
             // 
+            // btUp
+            // 
+            this.btUp.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btUp.BackColor = System.Drawing.Color.Black;
+            this.btUp.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btUp.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(112)))), ((int)(((byte)(228)))), ((int)(((byte)(132)))));
+            this.btUp.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(86)))), ((int)(((byte)(81)))));
+            this.btUp.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btUp.Font = new System.Drawing.Font("Corbel", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btUp.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(112)))), ((int)(((byte)(228)))), ((int)(((byte)(132)))));
+            this.btUp.Image = global::WidraSoft.UI.Properties.Resources.Up;
+            this.btUp.Location = new System.Drawing.Point(670, 197);
+            this.btUp.Name = "btUp";
+            this.btUp.Size = new System.Drawing.Size(57, 65);
+            this.btUp.TabIndex = 126;
+            this.btUp.UseVisualStyleBackColor = false;
+            this.btUp.Click += new System.EventHandler(this.btUp_Click);
+            // 
+            // btDown
+            // 
+            this.btDown.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btDown.BackColor = System.Drawing.Color.Black;
+            this.btDown.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btDown.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(112)))), ((int)(((byte)(228)))), ((int)(((byte)(132)))));
+            this.btDown.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(86)))), ((int)(((byte)(81)))));
+            this.btDown.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btDown.Font = new System.Drawing.Font("Corbel", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btDown.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(112)))), ((int)(((byte)(228)))), ((int)(((byte)(132)))));
+            this.btDown.Image = global::WidraSoft.UI.Properties.Resources.down;
+            this.btDown.Location = new System.Drawing.Point(670, 272);
+            this.btDown.Name = "btDown";
+            this.btDown.Size = new System.Drawing.Size(57, 65);
+            this.btDown.TabIndex = 127;
+            this.btDown.UseVisualStyleBackColor = false;
+            // 
             // Borne_PremierePesee
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(62)))), ((int)(((byte)(60)))));
             this.ClientSize = new System.Drawing.Size(929, 453);
+            this.Controls.Add(this.btDown);
+            this.Controls.Add(this.btUp);
             this.Controls.Add(this.Spain_flag);
             this.Controls.Add(this.England_flag);
             this.Controls.Add(this.France_flag);
@@ -245,5 +291,7 @@
         private System.Windows.Forms.PictureBox Spain_flag;
         private System.Windows.Forms.PictureBox England_flag;
         private System.Windows.Forms.PictureBox France_flag;
+        private System.Windows.Forms.Button btUp;
+        private System.Windows.Forms.Button btDown;
     }
 }

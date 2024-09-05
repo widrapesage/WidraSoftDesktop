@@ -65,6 +65,8 @@
             this.France_flag = new System.Windows.Forms.PictureBox();
             this.cbLang = new System.Windows.Forms.ComboBox();
             this.panelNavigation = new System.Windows.Forms.Panel();
+            this.pictureBox8 = new System.Windows.Forms.PictureBox();
+            this.linkLabel1 = new System.Windows.Forms.LinkLabel();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.lbModifier = new System.Windows.Forms.LinkLabel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
@@ -95,6 +97,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.England_flag)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.France_flag)).BeginInit();
             this.panelNavigation.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -344,6 +347,8 @@
             // 
             this.panelNavigation.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(62)))), ((int)(((byte)(60)))));
             this.panelNavigation.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panelNavigation.Controls.Add(this.pictureBox8);
+            this.panelNavigation.Controls.Add(this.linkLabel1);
             this.panelNavigation.Controls.Add(this.pictureBox3);
             this.panelNavigation.Controls.Add(this.lbModifier);
             this.panelNavigation.Controls.Add(this.pictureBox1);
@@ -352,6 +357,26 @@
             this.panelNavigation.Controls.Add(this.lbSupprimer);
             resources.ApplyResources(this.panelNavigation, "panelNavigation");
             this.panelNavigation.Name = "panelNavigation";
+            // 
+            // pictureBox8
+            // 
+            this.pictureBox8.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox8.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pictureBox8.Image = global::WidraSoft.UI.Properties.Resources.printer;
+            resources.ApplyResources(this.pictureBox8, "pictureBox8");
+            this.pictureBox8.Name = "pictureBox8";
+            this.pictureBox8.TabStop = false;
+            // 
+            // linkLabel1
+            // 
+            this.linkLabel1.ActiveLinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(190)))), ((int)(((byte)(117)))));
+            resources.ApplyResources(this.linkLabel1, "linkLabel1");
+            this.linkLabel1.BackColor = System.Drawing.Color.Transparent;
+            this.linkLabel1.ForeColor = System.Drawing.Color.White;
+            this.linkLabel1.LinkColor = System.Drawing.Color.White;
+            this.linkLabel1.Name = "linkLabel1";
+            this.linkLabel1.TabStop = true;
+            this.linkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
             // 
             // pictureBox3
             // 
@@ -663,6 +688,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.France_flag)).EndInit();
             this.panelNavigation.ResumeLayout(false);
             this.panelNavigation.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
@@ -740,5 +766,7 @@
         private System.Windows.Forms.DataGridView dgvChauffeurs;
         private System.Windows.Forms.DataGridView dgvTransporteurs;
         private System.Windows.Forms.PictureBox RqPont;
+        private System.Windows.Forms.PictureBox pictureBox8;
+        private System.Windows.Forms.LinkLabel linkLabel1;
     }
 }

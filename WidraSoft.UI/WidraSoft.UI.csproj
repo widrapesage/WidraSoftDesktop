@@ -7,10 +7,12 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="AccesCamionQR.rdlc" />
     <None Remove="PeseePBTicketA5.rdlc" />
   </ItemGroup>
 
   <ItemGroup>
+    <EmbeddedResource Include="AccesCamionQR.rdlc" />
     <EmbeddedResource Include="PeseePBTicketA5.rdlc" />
   </ItemGroup>
 

@@ -36,6 +36,7 @@
             this.France_flag = new System.Windows.Forms.PictureBox();
             this.btAnnuler = new System.Windows.Forms.Button();
             this.lbTexte = new System.Windows.Forms.Label();
+            this.lbMessage = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.Spain_flag)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.England_flag)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.France_flag)).BeginInit();
@@ -52,6 +53,7 @@
             this.btChargement.Image = global::WidraSoft.UI.Properties.Resources.Chargement;
             this.btChargement.Name = "btChargement";
             this.btChargement.UseVisualStyleBackColor = false;
+            this.btChargement.Click += new System.EventHandler(this.btChargement_Click);
             // 
             // btDechargement
             // 
@@ -64,6 +66,7 @@
             this.btDechargement.Image = global::WidraSoft.UI.Properties.Resources.Dechargement;
             this.btDechargement.Name = "btDechargement";
             this.btDechargement.UseVisualStyleBackColor = false;
+            this.btDechargement.Click += new System.EventHandler(this.btDechargement_Click);
             // 
             // Spain_flag
             // 
@@ -109,11 +112,18 @@
             this.lbTexte.ForeColor = System.Drawing.Color.White;
             this.lbTexte.Name = "lbTexte";
             // 
+            // lbMessage
+            // 
+            resources.ApplyResources(this.lbMessage, "lbMessage");
+            this.lbMessage.ForeColor = System.Drawing.Color.White;
+            this.lbMessage.Name = "lbMessage";
+            // 
             // Borne_ChoixFlux
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(62)))), ((int)(((byte)(60)))));
+            this.Controls.Add(this.lbMessage);
             this.Controls.Add(this.lbTexte);
             this.Controls.Add(this.btAnnuler);
             this.Controls.Add(this.Spain_flag);
@@ -140,5 +150,6 @@
         private System.Windows.Forms.PictureBox France_flag;
         private System.Windows.Forms.Button btAnnuler;
         private System.Windows.Forms.Label lbTexte;
+        private System.Windows.Forms.Label lbMessage;
     }
 }

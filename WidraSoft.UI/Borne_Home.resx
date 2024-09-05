@@ -277,7 +277,7 @@
     <value>134</value>
   </data>
   <data name="button5.Text" xml:space="preserve">
-    <value>  Imprimer</value>
+    <value>  Liste</value>
   </data>
   <data name="button5.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
     <value>MiddleRight</value>
