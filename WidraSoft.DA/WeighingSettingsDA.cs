@@ -115,8 +115,10 @@ namespace WidraSoft.DA
             Int32 Chauffeur_AjoutF, Int32 Transporteur_AjoutF, Int32 Produit_AjoutF, Int32 Client_AjoutF, Int32 Firme_AjoutF, Int32 Table1Id, Int32 Table2Id, Int32 Table3Id, Int32 Table4Id, Int32 Table5Id, Int32 Table6Id,
             Int32 Table7Id, Int32 Table1_Obl, Int32 Table2_Obl, Int32 Table3_Obl, Int32 Table4_Obl, Int32 Table5_Obl, Int32 Table6_Obl, Int32 Table7_Obl, Int32 Table1_Code, Int32 Table2_Code, Int32 Table3_Code, Int32 Table4_Code,
             Int32 Table5_Code, Int32 Table6_Code, Int32 Table7_Code, String Table1_Borne, String Table2_Borne, String Table3_Borne, String Table4_Borne, String Table5_Borne, String Table6_Borne, String Table7_Borne, Int32 Table1_Ticket,
-            Int32 Table2_Ticket, Int32 Table3_Ticket, Int32 Table4_Ticket, Int32 Table5_Ticket, Int32 Table6_Ticket, Int32 Table7_Ticket, Int32 Table1_AjoutF, Int32 Table2_AjoutF, Int32 Table3_AjoutF, Int32 Table4_AjoutF, Int32 Table5_AjoutF, 
-            Int32 Table6_AjoutF, Int32 Table7_AjoutF, Int32 PontFirme, Int32 CamionChauffeur, Int32 CamionTransporteur, String Format, String Titre1, String Titre2, String Footer)
+            Int32 Table2_Ticket, Int32 Table3_Ticket, Int32 Table4_Ticket, Int32 Table5_Ticket, Int32 Table6_Ticket, Int32 Table7_Ticket, Int32 Table1_AjoutF, Int32 Table2_AjoutF, Int32 Table3_AjoutF, Int32 Table4_AjoutF, Int32 Table5_AjoutF,
+            Int32 Table6_AjoutF, Int32 Table7_AjoutF, String ChampLibre1, String ChampLibre2, String ChampLibre3, String ChampLibre4, Int32 ChampLibre1_Obl, Int32 ChampLibre2_Obl, Int32 ChampLibre3_Obl, Int32 ChampLibre4_Obl,
+            Int32 ChampLibre1_Ticket, Int32 ChampLibre2_Ticket, Int32 ChampLibre3_Ticket, Int32 ChampLibre4_Ticket, String ChampLibre1_Borne, String ChampLibre2_Borne, String ChampLibre3_Borne, String ChampLibre4_Borne,
+            Int32 PontFirme, Int32 CamionChauffeur, Int32 CamionTransporteur, String Format, String Titre1, String Titre2, String Footer)
         {
             using (conn)
             {
@@ -192,6 +194,22 @@ namespace WidraSoft.DA
                 cmd.Parameters.Add("@TABLE5_AJOUT_F", SqlDbType.Int).Value = Table5_AjoutF;
                 cmd.Parameters.Add("@TABLE6_AJOUT_F", SqlDbType.Int).Value = Table6_AjoutF;
                 cmd.Parameters.Add("@TABLE7_AJOUT_F", SqlDbType.Int).Value = Table7_AjoutF;
+                cmd.Parameters.Add("@CHAMPLIBRE1", SqlDbType.VarChar).Value = ChampLibre1;
+                cmd.Parameters.Add("@CHAMPLIBRE2", SqlDbType.VarChar).Value = ChampLibre2;
+                cmd.Parameters.Add("@CHAMPLIBRE3", SqlDbType.VarChar).Value = ChampLibre3;
+                cmd.Parameters.Add("@CHAMPLIBRE4", SqlDbType.VarChar).Value = ChampLibre4;
+                cmd.Parameters.Add("@CHAMPLIBRE1_OBL", SqlDbType.Int).Value = ChampLibre1_Obl;
+                cmd.Parameters.Add("@CHAMPLIBRE2_OBL", SqlDbType.Int).Value = ChampLibre2_Obl;
+                cmd.Parameters.Add("@CHAMPLIBRE3_OBL", SqlDbType.Int).Value = ChampLibre3_Obl;
+                cmd.Parameters.Add("@CHAMPLIBRE4_OBL", SqlDbType.Int).Value = ChampLibre4_Obl;
+                cmd.Parameters.Add("@CHAMPLIBRE1_TICKET", SqlDbType.Int).Value = ChampLibre1_Ticket;
+                cmd.Parameters.Add("@CHAMPLIBRE2_TICKET", SqlDbType.Int).Value = ChampLibre2_Ticket;
+                cmd.Parameters.Add("@CHAMPLIBRE3_TICKET", SqlDbType.Int).Value = ChampLibre3_Ticket;
+                cmd.Parameters.Add("@CHAMPLIBRE4_TICKET", SqlDbType.Int).Value = ChampLibre4_Ticket;
+                cmd.Parameters.Add("@CHAMPLIBRE1_BORNE", SqlDbType.VarChar).Value = ChampLibre1_Borne;
+                cmd.Parameters.Add("@CHAMPLIBRE2_BORNE", SqlDbType.VarChar).Value = ChampLibre2_Borne;
+                cmd.Parameters.Add("@CHAMPLIBRE3_BORNE", SqlDbType.VarChar).Value = ChampLibre3_Borne;
+                cmd.Parameters.Add("@CHAMPLIBRE4_BORNE", SqlDbType.VarChar).Value = ChampLibre4_Borne;
                 cmd.Parameters.Add("@PONTFIRME", SqlDbType.Int).Value = PontFirme;
                 cmd.Parameters.Add("@CAMIONCHAUFFEUR", SqlDbType.Int).Value = CamionChauffeur;
                 cmd.Parameters.Add("@CAMIONTRANSPORTEUR", SqlDbType.Int).Value = CamionTransporteur;
@@ -216,7 +234,9 @@ namespace WidraSoft.DA
             Int32 Table7Id, Int32 Table1_Obl, Int32 Table2_Obl, Int32 Table3_Obl, Int32 Table4_Obl, Int32 Table5_Obl, Int32 Table6_Obl, Int32 Table7_Obl, Int32 Table1_Code, Int32 Table2_Code, Int32 Table3_Code, Int32 Table4_Code,
             Int32 Table5_Code, Int32 Table6_Code, Int32 Table7_Code, String Table1_Borne, String Table2_Borne, String Table3_Borne, String Table4_Borne, String Table5_Borne, String Table6_Borne, String Table7_Borne, Int32 Table1_Ticket,
             Int32 Table2_Ticket, Int32 Table3_Ticket, Int32 Table4_Ticket, Int32 Table5_Ticket, Int32 Table6_Ticket, Int32 Table7_Ticket, Int32 Table1_AjoutF, Int32 Table2_AjoutF, Int32 Table3_AjoutF, Int32 Table4_AjoutF, Int32 Table5_AjoutF,
-            Int32 Table6_AjoutF, Int32 Table7_AjoutF, Int32 PontFirme, Int32 CamionChauffeur, Int32 CamionTransporteur, String Format, String Titre1, String Titre2, String Footer)
+            Int32 Table6_AjoutF, Int32 Table7_AjoutF, String ChampLibre1, String ChampLibre2, String ChampLibre3, String ChampLibre4, Int32 ChampLibre1_Obl, Int32 ChampLibre2_Obl, Int32 ChampLibre3_Obl, Int32 ChampLibre4_Obl,
+            Int32 ChampLibre1_Ticket, Int32 ChampLibre2_Ticket, Int32 ChampLibre3_Ticket, Int32 ChampLibre4_Ticket, String ChampLibre1_Borne, String ChampLibre2_Borne, String ChampLibre3_Borne, String ChampLibre4_Borne, 
+            Int32 PontFirme, Int32 CamionChauffeur, Int32 CamionTransporteur, String Format, String Titre1, String Titre2, String Footer)
         {
             using (conn)
             {
@@ -293,6 +313,22 @@ namespace WidraSoft.DA
                 cmd.Parameters.Add("@TABLE5_AJOUT_F", SqlDbType.Int).Value = Table5_AjoutF;
                 cmd.Parameters.Add("@TABLE6_AJOUT_F", SqlDbType.Int).Value = Table6_AjoutF;
                 cmd.Parameters.Add("@TABLE7_AJOUT_F", SqlDbType.Int).Value = Table7_AjoutF;
+                cmd.Parameters.Add("@CHAMPLIBRE1", SqlDbType.VarChar).Value = ChampLibre1;
+                cmd.Parameters.Add("@CHAMPLIBRE2", SqlDbType.VarChar).Value = ChampLibre2;
+                cmd.Parameters.Add("@CHAMPLIBRE3", SqlDbType.VarChar).Value = ChampLibre3;
+                cmd.Parameters.Add("@CHAMPLIBRE4", SqlDbType.VarChar).Value = ChampLibre4;
+                cmd.Parameters.Add("@CHAMPLIBRE1_OBL", SqlDbType.Int).Value = ChampLibre1_Obl;
+                cmd.Parameters.Add("@CHAMPLIBRE2_OBL", SqlDbType.Int).Value = ChampLibre2_Obl;
+                cmd.Parameters.Add("@CHAMPLIBRE3_OBL", SqlDbType.Int).Value = ChampLibre3_Obl;
+                cmd.Parameters.Add("@CHAMPLIBRE4_OBL", SqlDbType.Int).Value = ChampLibre4_Obl;
+                cmd.Parameters.Add("@CHAMPLIBRE1_TICKET", SqlDbType.Int).Value = ChampLibre1_Ticket;
+                cmd.Parameters.Add("@CHAMPLIBRE2_TICKET", SqlDbType.Int).Value = ChampLibre2_Ticket;
+                cmd.Parameters.Add("@CHAMPLIBRE3_TICKET", SqlDbType.Int).Value = ChampLibre3_Ticket;
+                cmd.Parameters.Add("@CHAMPLIBRE4_TICKET", SqlDbType.Int).Value = ChampLibre4_Ticket;
+                cmd.Parameters.Add("@CHAMPLIBRE1_BORNE", SqlDbType.VarChar).Value = ChampLibre1_Borne;
+                cmd.Parameters.Add("@CHAMPLIBRE2_BORNE", SqlDbType.VarChar).Value = ChampLibre2_Borne;
+                cmd.Parameters.Add("@CHAMPLIBRE3_BORNE", SqlDbType.VarChar).Value = ChampLibre3_Borne;
+                cmd.Parameters.Add("@CHAMPLIBRE4_BORNE", SqlDbType.VarChar).Value = ChampLibre4_Borne;
                 cmd.Parameters.Add("@PONTFIRME", SqlDbType.Int).Value = PontFirme;
                 cmd.Parameters.Add("@CAMIONCHAUFFEUR", SqlDbType.Int).Value = CamionChauffeur;
                 cmd.Parameters.Add("@CAMIONTRANSPORTEUR", SqlDbType.Int).Value = CamionTransporteur;

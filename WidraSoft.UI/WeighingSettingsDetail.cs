@@ -128,6 +128,19 @@ namespace WidraSoft.UI
             List<String> BorneChamp7 = new List<String>();
             BorneChamp7.Add("List"); BorneChamp7.Add("Scan"); BorneChamp7.Add("List&Scan"); BorneChamp7.Add("Text");
 
+            List<String> BorneChampLibre1 = new List<String>();
+            BorneChampLibre1.Add("String"); BorneChampLibre1.Add("Numeric");
+
+            List<String> BorneChampLibre2 = new List<String>();
+            BorneChampLibre2.Add("String"); BorneChampLibre2.Add("Numeric");
+
+            List<String> BorneChampLibre3 = new List<String>();
+            BorneChampLibre3.Add("String"); BorneChampLibre3.Add("Numeric");
+
+            List<String> BorneChampLibre4 = new List<String>();
+            BorneChampLibre4.Add("String"); BorneChampLibre4.Add("Numeric");
+
+
             cbBorneChamp1.DataSource = BorneChamp1;
             cbBorneChamp1.ValueMember = null;
             cbBorneChamp1.DisplayMember = BorneChamp1[0];
@@ -155,6 +168,22 @@ namespace WidraSoft.UI
             cbBorneChamp7.DataSource = BorneChamp7;
             cbBorneChamp7.ValueMember = null;
             cbBorneChamp7.DisplayMember = BorneChamp7[0];
+
+            cbBorneChampLibre1.DataSource = BorneChampLibre1;
+            cbBorneChampLibre1.ValueMember = null;
+            cbBorneChampLibre1.DisplayMember = BorneChampLibre1[0];
+
+            cbBorneChampLibre2.DataSource = BorneChampLibre2;
+            cbBorneChampLibre2.ValueMember = null;
+            cbBorneChampLibre2.DisplayMember = BorneChampLibre2[0];
+
+            cbBorneChampLibre3.DataSource = BorneChampLibre3;
+            cbBorneChampLibre3.ValueMember = null;
+            cbBorneChampLibre3.DisplayMember = BorneChampLibre3[0];
+
+            cbBorneChampLibre4.DataSource = BorneChampLibre4;
+            cbBorneChampLibre4.ValueMember = null;
+            cbBorneChampLibre4.DisplayMember = BorneChampLibre4[0];
 
             if (vg_Mode == "Add")
             {
@@ -201,7 +230,9 @@ namespace WidraSoft.UI
                 && cbBorneChamp3.Text == "" && cbBorneChamp4.Text == "" && cbBorneChamp5.Text == "" && cbBorneChamp6.Text == "" && cbBorneChamp7.Text == "" && txtTicketChamp1.Text == "" && txtTicketChamp2.Text == "" 
                 && txtTicketChamp3.Text == "" && txtTicketChamp4.Text == "" && txtTicketChamp5.Text == "" && txtTicketChamp6.Text == "" && txtTicketChamp7.Text == "" && txtAjoutChamp1.Text == "" && txtAjoutChamp2.Text == ""
                 && txtAjoutChamp3.Text == "" && txtAjoutChamp4.Text == "" && txtAjoutChamp5.Text == "" && txtAjoutChamp6.Text == "" && txtAjoutChamp7.Text == "" && cbFormat.Text == "" && txtTitre1.Text == ""
-                && txtTitre2.Text == "" && txtFooter.Text == "")
+                && txtTitre2.Text == "" && txtFooter.Text == "" && txtChampLibre1.Text == "" && txtChampLibre2.Text == "" && txtChampLibre3.Text == "" && txtChampLibre4.Text == "" && txtLibreObligatoire1.Text == ""
+                && txtLibreObligatoire2.Text == "" && txtLibreObligatoire3.Text == "" && txtLibreObligatoire4.Text == "" && txtTicketChampLibre1.Text == "" && txtTicketChampLibre2.Text == "" && txtTicketChampLibre3.Text == ""
+                && txtTicketChampLibre4.Text == "" && cbBorneChampLibre1.Text == "" && cbBorneChampLibre2.Text == "" && cbBorneChampLibre3.Text == "" && cbBorneChampLibre4.Text == "")
             {
                 lbModifier.Enabled = false;
                 lbModifier.BackColor = Color.Transparent;
@@ -337,6 +368,36 @@ namespace WidraSoft.UI
                 chx_AjoutChamp6.Checked = false;
                 txtAjoutChamp7.Text = "0";
                 chx_AjoutChamp7.Checked = false;
+
+                txtTicketChampLibre1.Text = "";
+                txtTicketChampLibre2.Text = "";
+                txtTicketChampLibre3.Text = "";
+                txtTicketChampLibre4.Text = "";
+
+                txtLibreObligatoire1.Text = "0";
+                chx_LibreObligatoire1.Checked = false;
+                txtLibreObligatoire2.Text = "0";
+                chx_LibreObligatoire2.Checked = false;
+                txtLibreObligatoire3.Text = "0";
+                chx_LibreObligatoire3.Checked = false;
+                txtLibreObligatoire4.Text = "0";
+                chx_LibreObligatoire4.Checked = false;
+
+                txtTicketChampLibre1.Text = "0";
+                cbx_TicketChampLibre1.Checked = false;
+                txtTicketChampLibre2.Text = "0";
+                cbx_TicketChampLibre2.Checked = false;
+                txtTicketChampLibre3.Text = "0";
+                cbx_TicketChampLibre3.Checked = false;
+                txtTicketChampLibre4.Text = "0";
+                cbx_TicketChampLibre4.Checked = false;
+
+                cbBorneChampLibre1.SelectedIndex = -1; cbBorneChampLibre1.Text = "";
+                cbBorneChampLibre2.SelectedIndex = -1; cbBorneChampLibre2.Text = "";
+                cbBorneChampLibre3.SelectedIndex = -1; cbBorneChampLibre3.Text = "";
+                cbBorneChampLibre4.SelectedIndex = -1; cbBorneChampLibre4.Text = "";
+
+
 
                 cbFormat.Text = "A5";
             }
@@ -1377,6 +1438,14 @@ namespace WidraSoft.UI
                     int AjoutChamp5;
                     int AjoutChamp6;
                     int AjoutChamp7;
+                    int LibreObligatoire1; 
+                    int LibreObligatoire2;
+                    int LibreObligatoire3;
+                    int LibreObligatoire4;
+                    int LibreTicket1; 
+                    int LibreTicket2;
+                    int LibreTicket3;
+                    int LibreTicket4;
                     int PontFirme;
                     int CamionChauffeur;
                     int CamionTransporteur;
@@ -1427,6 +1496,14 @@ namespace WidraSoft.UI
                     bool IsParsableAjoutChamp5;
                     bool IsParsableAjoutChamp6;
                     bool IsParsableAjoutChamp7;
+                    bool IsParsableLibreObligatoire1;
+                    bool IsParsableLibreObligatoire2;
+                    bool IsParsableLibreObligatoire3;
+                    bool IsParsableLibreObligatoire4;
+                    bool IsParsableLibreTicket1;
+                    bool IsParsableLibreTicket2;
+                    bool IsParsableLibreTicket3;
+                    bool IsParsableLibreTicket4;
                     bool IsParsablePontFirme;
                     bool IsParsableCamionChauffeur;
                     bool IsParsableCamionTransporteur;
@@ -1478,6 +1555,14 @@ namespace WidraSoft.UI
                     IsParsableAjoutChamp5 = Int32.TryParse(txtAjoutChamp5.Text, out AjoutChamp5);
                     IsParsableAjoutChamp6 = Int32.TryParse(txtAjoutChamp6.Text, out AjoutChamp6);
                     IsParsableAjoutChamp7 = Int32.TryParse(txtAjoutChamp7.Text, out AjoutChamp7);
+                    IsParsableLibreObligatoire1 = Int32.TryParse(txtLibreObligatoire1.Text, out LibreObligatoire1);
+                    IsParsableLibreObligatoire2 = Int32.TryParse(txtLibreObligatoire2.Text, out LibreObligatoire2);
+                    IsParsableLibreObligatoire3 = Int32.TryParse(txtLibreObligatoire3.Text, out LibreObligatoire3);
+                    IsParsableLibreObligatoire4 = Int32.TryParse(txtLibreObligatoire4.Text, out LibreObligatoire4);
+                    IsParsableLibreTicket1 = Int32.TryParse(txtTicketChampLibre1.Text, out LibreTicket1);
+                    IsParsableLibreTicket2 = Int32.TryParse(txtTicketChampLibre2.Text, out LibreTicket2);
+                    IsParsableLibreTicket3 = Int32.TryParse(txtTicketChampLibre3.Text, out LibreTicket3);
+                    IsParsableLibreTicket4 = Int32.TryParse(txtTicketChampLibre4.Text, out LibreTicket4);
                     IsParsablePontFirme = Int32.TryParse(txtPontFirme.Text, out PontFirme);
                     IsParsableCamionChauffeur = Int32.TryParse(txtCamionChauffeur.Text, out CamionChauffeur);
                     IsParsableCamionTransporteur = Int32.TryParse(txtCamionTransporteur.Text, out CamionTransporteur);
@@ -1493,7 +1578,8 @@ namespace WidraSoft.UI
                     && IsParsableTableObligatoire2 && IsParsableTableObligatoire3 && IsParsableTableObligatoire4 && IsParsableTableObligatoire5 && IsParsableTableObligatoire6  && IsParsableTableObligatoire7
                     && IsParsableAfficherCode1 && IsParsableAfficherCode2 && IsParsableAfficherCode3 && IsParsableAfficherCode4 && IsParsableAfficherCode5 && IsParsableAfficherCode6 && IsParsableAfficherCode7
                     && IsParsableTicket1 && IsParsableTicket2 && IsParsableTicket3 && IsParsableTicket4 && IsParsableTicket5 && IsParsableTicket6 && IsParsableTicket7 && IsParsableAjoutChamp1 && IsParsableAjoutChamp2
-                    && IsParsableAjoutChamp3 && IsParsableAjoutChamp4 && IsParsableAjoutChamp5 && IsParsableAjoutChamp6 && IsParsableAjoutChamp7 && IsParsablePontFirme && IsParsableCamionChauffeur && IsParsableCamionTransporteur)
+                    && IsParsableAjoutChamp3 && IsParsableAjoutChamp4 && IsParsableAjoutChamp5 && IsParsableAjoutChamp6 && IsParsableAjoutChamp7 && IsParsableLibreObligatoire1 && IsParsableLibreObligatoire2 && IsParsableLibreObligatoire3
+                    && IsParsableLibreObligatoire4 && IsParsableLibreTicket1 && IsParsableLibreTicket2 && IsParsableLibreTicket3 && IsParsableLibreTicket4 && IsParsablePontFirme && IsParsableCamionChauffeur && IsParsableCamionTransporteur)
                         {
                             WeighingSettings weighingSettings = new WeighingSettings();
                             weighingSettings.Add(txtDesignation.Text, Camion, Chauffeur, Transporteur, Produit, Client, Firme, CamionObligatoire, ChauffeurObligatoire, TransporteurObligatoire, ProduitObligatoire, ClientObligatoire
@@ -1502,7 +1588,10 @@ namespace WidraSoft.UI
                                 Common_functions.CbSelectedValue_Convert_Int(cbChamp4), Common_functions.CbSelectedValue_Convert_Int(cbChamp5), Common_functions.CbSelectedValue_Convert_Int(cbChamp6), Common_functions.CbSelectedValue_Convert_Int(cbChamp7),
                                 TableObligatoire1, TableObligatoire2, TableObligatoire3, TableObligatoire4, TableObligatoire5, TableObligatoire6, TableObligatoire7, AfficherCode1, AfficherCode2, AfficherCode3, AfficherCode4, AfficherCode5, AfficherCode6, 
                                 AfficherCode7, cbBorneChamp1.Text, cbBorneChamp2.Text, cbBorneChamp3.Text, cbBorneChamp4.Text, cbBorneChamp5.Text, cbBorneChamp6.Text, cbBorneChamp7.Text, Ticket1, Ticket2, Ticket3, Ticket4, Ticket5, Ticket6, Ticket7, 
-                                AjoutChamp1, AjoutChamp2, AjoutChamp3, AjoutChamp4, AjoutChamp5, AjoutChamp6, AjoutChamp7, PontFirme, CamionChauffeur, CamionTransporteur, cbFormat.Text, txtTitre1.Text, txtTitre2.Text, txtFooter.Text);
+                                AjoutChamp1, AjoutChamp2, AjoutChamp3, AjoutChamp4, AjoutChamp5, AjoutChamp6, AjoutChamp7, txtChampLibre1.Text, txtChampLibre2.Text, txtChampLibre3.Text, txtChampLibre4.Text, LibreObligatoire1, LibreObligatoire2, LibreObligatoire3,
+                                LibreObligatoire4, LibreTicket1,LibreTicket2, LibreTicket3, LibreTicket4,  
+                                cbBorneChampLibre1.Text, cbBorneChampLibre2.Text, cbBorneChampLibre3.Text, cbBorneChampLibre4.Text,
+                                PontFirme, CamionChauffeur, CamionTransporteur, cbFormat.Text, txtTitre1.Text, txtTitre2.Text, txtFooter.Text);
                             if (cbLang.Text == "FR")
                                 Custom_MessageBox.Show("FR", "Paramètre ajouté avec succès", "Paramètre de pesée", MessageBoxButtons.OK, MessageBoxIcon.Information);
                             else if (cbLang.Text == "EN")
@@ -1599,6 +1688,14 @@ namespace WidraSoft.UI
                             int AjoutChamp5;
                             int AjoutChamp6;
                             int AjoutChamp7;
+                            int LibreObligatoire1;
+                            int LibreObligatoire2;
+                            int LibreObligatoire3;
+                            int LibreObligatoire4;
+                            int LibreTicket1;
+                            int LibreTicket2;
+                            int LibreTicket3;
+                            int LibreTicket4;
                             int PontFirme;
                             int CamionChauffeur;
                             int CamionTransporteur;
@@ -1650,6 +1747,14 @@ namespace WidraSoft.UI
                             bool IsParsableAjoutChamp5;
                             bool IsParsableAjoutChamp6;
                             bool IsParsableAjoutChamp7;
+                            bool IsParsableLibreObligatoire1;
+                            bool IsParsableLibreObligatoire2;
+                            bool IsParsableLibreObligatoire3;
+                            bool IsParsableLibreObligatoire4;
+                            bool IsParsableLibreTicket1;
+                            bool IsParsableLibreTicket2;
+                            bool IsParsableLibreTicket3;
+                            bool IsParsableLibreTicket4;
                             bool IsParsablePontFirme;
                             bool IsParsableCamionChauffeur;
                             bool IsParsableCamionTransporteur;
@@ -1701,6 +1806,14 @@ namespace WidraSoft.UI
                             IsParsableAjoutChamp5 = Int32.TryParse(txtAjoutChamp5.Text, out AjoutChamp5);
                             IsParsableAjoutChamp6 = Int32.TryParse(txtAjoutChamp6.Text, out AjoutChamp6);
                             IsParsableAjoutChamp7 = Int32.TryParse(txtAjoutChamp7.Text, out AjoutChamp7);
+                            IsParsableLibreObligatoire1 = Int32.TryParse(txtLibreObligatoire1.Text, out LibreObligatoire1);
+                            IsParsableLibreObligatoire2 = Int32.TryParse(txtLibreObligatoire2.Text, out LibreObligatoire2);
+                            IsParsableLibreObligatoire3 = Int32.TryParse(txtLibreObligatoire3.Text, out LibreObligatoire3);
+                            IsParsableLibreObligatoire4 = Int32.TryParse(txtLibreObligatoire4.Text, out LibreObligatoire4);
+                            IsParsableLibreTicket1 = Int32.TryParse(txtTicketChampLibre1.Text, out LibreTicket1);
+                            IsParsableLibreTicket2 = Int32.TryParse(txtTicketChampLibre2.Text, out LibreTicket2);
+                            IsParsableLibreTicket3 = Int32.TryParse(txtTicketChampLibre3.Text, out LibreTicket3);
+                            IsParsableLibreTicket4 = Int32.TryParse(txtTicketChampLibre4.Text, out LibreTicket4);
                             IsParsablePontFirme = Int32.TryParse(txtPontFirme.Text, out PontFirme);
                             IsParsableCamionChauffeur = Int32.TryParse(txtCamionChauffeur.Text, out CamionChauffeur);
                             IsParsableCamionTransporteur = Int32.TryParse(txtCamionTransporteur.Text, out CamionTransporteur);
@@ -1713,7 +1826,8 @@ namespace WidraSoft.UI
                             && IsParsableTableObligatoire2 && IsParsableTableObligatoire3 && IsParsableTableObligatoire4 && IsParsableTableObligatoire5 && IsParsableTableObligatoire6 && IsParsableTableObligatoire7
                             && IsParsableAfficherCode1 && IsParsableAfficherCode2 && IsParsableAfficherCode3 && IsParsableAfficherCode4 && IsParsableAfficherCode5 && IsParsableAfficherCode6 && IsParsableAfficherCode7
                             && IsParsableTicket1 && IsParsableTicket2 && IsParsableTicket3 && IsParsableTicket4 && IsParsableTicket5 && IsParsableTicket6 && IsParsableTicket7 && IsParsableAjoutChamp1 && IsParsableAjoutChamp2
-                            && IsParsableAjoutChamp3 && IsParsableAjoutChamp4 && IsParsableAjoutChamp5 && IsParsableAjoutChamp6 && IsParsableAjoutChamp7 && IsParsablePontFirme && IsParsableCamionChauffeur && IsParsableCamionTransporteur)
+                            && IsParsableAjoutChamp3 && IsParsableAjoutChamp4 && IsParsableAjoutChamp5 && IsParsableAjoutChamp6 && IsParsableAjoutChamp7 && IsParsableLibreObligatoire1 && IsParsableLibreObligatoire2 && IsParsableLibreObligatoire3
+                    && IsParsableLibreObligatoire4 && IsParsableLibreTicket1 && IsParsableLibreTicket2 && IsParsableLibreTicket3 && IsParsableLibreTicket4 && IsParsablePontFirme && IsParsableCamionChauffeur && IsParsableCamionTransporteur)
                                 {
                                     WeighingSettings weighingSettings = new WeighingSettings();
                                     weighingSettings.Update(Id, txtDesignation.Text, Camion, Chauffeur, Transporteur, Produit, Client, Firme, CamionObligatoire, ChauffeurObligatoire, TransporteurObligatoire, ProduitObligatoire, ClientObligatoire
@@ -1722,7 +1836,9 @@ namespace WidraSoft.UI
                                 Common_functions.CbSelectedValue_Convert_Int(cbChamp4), Common_functions.CbSelectedValue_Convert_Int(cbChamp5), Common_functions.CbSelectedValue_Convert_Int(cbChamp6), Common_functions.CbSelectedValue_Convert_Int(cbChamp7),
                                 TableObligatoire1, TableObligatoire2, TableObligatoire3, TableObligatoire4, TableObligatoire5, TableObligatoire6, TableObligatoire7, AfficherCode1, AfficherCode2, AfficherCode3, AfficherCode4, AfficherCode5, AfficherCode6,
                                 AfficherCode7, cbBorneChamp1.Text, cbBorneChamp2.Text, cbBorneChamp3.Text, cbBorneChamp4.Text, cbBorneChamp5.Text, cbBorneChamp6.Text, cbBorneChamp7.Text, Ticket1, Ticket2, Ticket3, Ticket4, Ticket5, Ticket6, Ticket7,
-                                AjoutChamp1, AjoutChamp2, AjoutChamp3, AjoutChamp4, AjoutChamp5, AjoutChamp6, AjoutChamp7, PontFirme, CamionChauffeur, CamionTransporteur, cbFormat.Text, txtTitre1.Text, txtTitre2.Text, txtFooter.Text);
+                                AjoutChamp1, AjoutChamp2, AjoutChamp3, AjoutChamp4, AjoutChamp5, AjoutChamp6, AjoutChamp7, txtChampLibre1.Text, txtChampLibre2.Text, txtChampLibre3.Text, txtChampLibre4.Text, LibreObligatoire1, LibreObligatoire2, LibreObligatoire3,
+                                LibreObligatoire4, LibreTicket1, LibreTicket2, LibreTicket3, LibreTicket4,
+                                cbBorneChampLibre1.Text, cbBorneChampLibre2.Text, cbBorneChampLibre3.Text, cbBorneChampLibre4.Text, PontFirme, CamionChauffeur, CamionTransporteur, cbFormat.Text, txtTitre1.Text, txtTitre2.Text, txtFooter.Text);
                                     if (cbLang.Text == "FR")
                                         Custom_MessageBox.Show("FR", "Paramètre modifié avec succès", "Paramètre de pesée", MessageBoxButtons.OK, MessageBoxIcon.Information);
                                     else if (cbLang.Text == "EN")

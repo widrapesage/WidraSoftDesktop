@@ -208,6 +208,37 @@
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.label25 = new System.Windows.Forms.Label();
             this.txtTitre1 = new System.Windows.Forms.TextBox();
+            this.lbChampLibre1 = new System.Windows.Forms.Label();
+            this.txtChampLibre1 = new System.Windows.Forms.TextBox();
+            this.txtLibreObligatoire1 = new System.Windows.Forms.TextBox();
+            this.chx_LibreObligatoire1 = new System.Windows.Forms.CheckBox();
+            this.txtTicketChampLibre1 = new System.Windows.Forms.TextBox();
+            this.cbx_TicketChampLibre1 = new System.Windows.Forms.CheckBox();
+            this.label32 = new System.Windows.Forms.Label();
+            this.label33 = new System.Windows.Forms.Label();
+            this.cbBorneChampLibre1 = new System.Windows.Forms.ComboBox();
+            this.label35 = new System.Windows.Forms.Label();
+            this.cbBorneChampLibre2 = new System.Windows.Forms.ComboBox();
+            this.txtTicketChampLibre2 = new System.Windows.Forms.TextBox();
+            this.cbx_TicketChampLibre2 = new System.Windows.Forms.CheckBox();
+            this.txtLibreObligatoire2 = new System.Windows.Forms.TextBox();
+            this.chx_LibreObligatoire2 = new System.Windows.Forms.CheckBox();
+            this.label36 = new System.Windows.Forms.Label();
+            this.txtChampLibre2 = new System.Windows.Forms.TextBox();
+            this.cbBorneChampLibre3 = new System.Windows.Forms.ComboBox();
+            this.txtTicketChampLibre3 = new System.Windows.Forms.TextBox();
+            this.cbx_TicketChampLibre3 = new System.Windows.Forms.CheckBox();
+            this.txtLibreObligatoire3 = new System.Windows.Forms.TextBox();
+            this.chx_LibreObligatoire3 = new System.Windows.Forms.CheckBox();
+            this.label37 = new System.Windows.Forms.Label();
+            this.txtChampLibre3 = new System.Windows.Forms.TextBox();
+            this.cbBorneChampLibre4 = new System.Windows.Forms.ComboBox();
+            this.txtTicketChampLibre4 = new System.Windows.Forms.TextBox();
+            this.cbx_TicketChampLibre4 = new System.Windows.Forms.CheckBox();
+            this.txtLibreObligatoire4 = new System.Windows.Forms.TextBox();
+            this.chx_LibreObligatoire4 = new System.Windows.Forms.CheckBox();
+            this.label38 = new System.Windows.Forms.Label();
+            this.txtChampLibre4 = new System.Windows.Forms.TextBox();
             this.panelLang.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbUpdating)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Spain_flag)).BeginInit();
@@ -230,54 +261,54 @@
             // 
             // panelLang
             // 
-            resources.ApplyResources(this.panelLang, "panelLang");
             this.panelLang.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(86)))), ((int)(((byte)(81)))));
             this.panelLang.Controls.Add(this.pbUpdating);
             this.panelLang.Controls.Add(this.Spain_flag);
             this.panelLang.Controls.Add(this.England_flag);
             this.panelLang.Controls.Add(this.France_flag);
             this.panelLang.Controls.Add(this.cbLang);
+            resources.ApplyResources(this.panelLang, "panelLang");
             this.panelLang.Name = "panelLang";
             // 
             // pbUpdating
             // 
-            resources.ApplyResources(this.pbUpdating, "pbUpdating");
             this.pbUpdating.Image = global::WidraSoft.UI.Properties.Resources.pencil;
+            resources.ApplyResources(this.pbUpdating, "pbUpdating");
             this.pbUpdating.Name = "pbUpdating";
             this.pbUpdating.TabStop = false;
             // 
             // Spain_flag
             // 
-            resources.ApplyResources(this.Spain_flag, "Spain_flag");
             this.Spain_flag.BackColor = System.Drawing.Color.Transparent;
             this.Spain_flag.Cursor = System.Windows.Forms.Cursors.Hand;
             this.Spain_flag.Image = global::WidraSoft.UI.Properties.Resources.spain;
+            resources.ApplyResources(this.Spain_flag, "Spain_flag");
             this.Spain_flag.Name = "Spain_flag";
             this.Spain_flag.TabStop = false;
             // 
             // England_flag
             // 
-            resources.ApplyResources(this.England_flag, "England_flag");
             this.England_flag.BackColor = System.Drawing.Color.Transparent;
             this.England_flag.Cursor = System.Windows.Forms.Cursors.Hand;
             this.England_flag.Image = global::WidraSoft.UI.Properties.Resources.united_kingdom;
+            resources.ApplyResources(this.England_flag, "England_flag");
             this.England_flag.Name = "England_flag";
             this.England_flag.TabStop = false;
             // 
             // France_flag
             // 
-            resources.ApplyResources(this.France_flag, "France_flag");
             this.France_flag.BackColor = System.Drawing.Color.Transparent;
             this.France_flag.Cursor = System.Windows.Forms.Cursors.Hand;
             this.France_flag.Image = global::WidraSoft.UI.Properties.Resources.france;
+            resources.ApplyResources(this.France_flag, "France_flag");
             this.France_flag.Name = "France_flag";
             this.France_flag.TabStop = false;
             // 
             // cbLang
             // 
-            resources.ApplyResources(this.cbLang, "cbLang");
             this.cbLang.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(86)))), ((int)(((byte)(77)))));
             this.cbLang.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            resources.ApplyResources(this.cbLang, "cbLang");
             this.cbLang.ForeColor = System.Drawing.Color.White;
             this.cbLang.FormattingEnabled = true;
             this.cbLang.Name = "cbLang";
@@ -285,7 +316,6 @@
             // 
             // panelNavigation
             // 
-            resources.ApplyResources(this.panelNavigation, "panelNavigation");
             this.panelNavigation.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(62)))), ((int)(((byte)(60)))));
             this.panelNavigation.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panelNavigation.Controls.Add(this.pictureBox3);
@@ -294,21 +324,22 @@
             this.panelNavigation.Controls.Add(this.pictureBox2);
             this.panelNavigation.Controls.Add(this.lbAjouter);
             this.panelNavigation.Controls.Add(this.lbSupprimer);
+            resources.ApplyResources(this.panelNavigation, "panelNavigation");
             this.panelNavigation.Name = "panelNavigation";
             // 
             // pictureBox3
             // 
-            resources.ApplyResources(this.pictureBox3, "pictureBox3");
             this.pictureBox3.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox3.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBox3.Image = global::WidraSoft.UI.Properties.Resources.update;
+            resources.ApplyResources(this.pictureBox3, "pictureBox3");
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.TabStop = false;
             // 
             // lbModifier
             // 
-            resources.ApplyResources(this.lbModifier, "lbModifier");
             this.lbModifier.ActiveLinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(190)))), ((int)(((byte)(117)))));
+            resources.ApplyResources(this.lbModifier, "lbModifier");
             this.lbModifier.BackColor = System.Drawing.Color.Transparent;
             this.lbModifier.ForeColor = System.Drawing.Color.White;
             this.lbModifier.LinkColor = System.Drawing.Color.White;
@@ -318,26 +349,26 @@
             // 
             // pictureBox1
             // 
-            resources.ApplyResources(this.pictureBox1, "pictureBox1");
             this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBox1.Image = global::WidraSoft.UI.Properties.Resources.remove;
+            resources.ApplyResources(this.pictureBox1, "pictureBox1");
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.TabStop = false;
             // 
             // pictureBox2
             // 
-            resources.ApplyResources(this.pictureBox2, "pictureBox2");
             this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox2.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBox2.Image = global::WidraSoft.UI.Properties.Resources.add;
+            resources.ApplyResources(this.pictureBox2, "pictureBox2");
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.TabStop = false;
             // 
             // lbAjouter
             // 
-            resources.ApplyResources(this.lbAjouter, "lbAjouter");
             this.lbAjouter.ActiveLinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(190)))), ((int)(((byte)(117)))));
+            resources.ApplyResources(this.lbAjouter, "lbAjouter");
             this.lbAjouter.BackColor = System.Drawing.Color.Transparent;
             this.lbAjouter.ForeColor = System.Drawing.Color.White;
             this.lbAjouter.LinkColor = System.Drawing.Color.White;
@@ -347,8 +378,8 @@
             // 
             // lbSupprimer
             // 
-            resources.ApplyResources(this.lbSupprimer, "lbSupprimer");
             this.lbSupprimer.ActiveLinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(190)))), ((int)(((byte)(117)))));
+            resources.ApplyResources(this.lbSupprimer, "lbSupprimer");
             this.lbSupprimer.BackColor = System.Drawing.Color.Transparent;
             this.lbSupprimer.ForeColor = System.Drawing.Color.White;
             this.lbSupprimer.LinkColor = System.Drawing.Color.White;
@@ -358,7 +389,6 @@
             // 
             // gbFiltres
             // 
-            resources.ApplyResources(this.gbFiltres, "gbFiltres");
             this.gbFiltres.Controls.Add(this.label15);
             this.gbFiltres.Controls.Add(this.txtPontFirme);
             this.gbFiltres.Controls.Add(this.label16);
@@ -368,6 +398,7 @@
             this.gbFiltres.Controls.Add(this.chx_CamionTransporteur);
             this.gbFiltres.Controls.Add(this.chx_PontFirme);
             this.gbFiltres.Controls.Add(this.chx_CamionChauffeur);
+            resources.ApplyResources(this.gbFiltres, "gbFiltres");
             this.gbFiltres.ForeColor = System.Drawing.Color.White;
             this.gbFiltres.Name = "gbFiltres";
             this.gbFiltres.TabStop = false;
@@ -431,7 +462,6 @@
             // 
             // gbChampsPesée
             // 
-            resources.ApplyResources(this.gbChampsPesée, "gbChampsPesée");
             this.gbChampsPesée.Controls.Add(this.txtAjoutFirme);
             this.gbChampsPesée.Controls.Add(this.txtAjoutClient);
             this.gbChampsPesée.Controls.Add(this.chx_AjoutClient);
@@ -483,6 +513,7 @@
             this.gbChampsPesée.Controls.Add(this.chx_Transporteur);
             this.gbChampsPesée.Controls.Add(this.chx_Camion);
             this.gbChampsPesée.Controls.Add(this.chx_Chauffeur);
+            resources.ApplyResources(this.gbChampsPesée, "gbChampsPesée");
             this.gbChampsPesée.ForeColor = System.Drawing.Color.White;
             this.gbChampsPesée.Name = "gbChampsPesée";
             this.gbChampsPesée.TabStop = false;
@@ -573,43 +604,43 @@
             // 
             // cbClientBorne
             // 
-            resources.ApplyResources(this.cbClientBorne, "cbClientBorne");
             this.cbClientBorne.BackColor = System.Drawing.Color.Honeydew;
+            resources.ApplyResources(this.cbClientBorne, "cbClientBorne");
             this.cbClientBorne.FormattingEnabled = true;
             this.cbClientBorne.Name = "cbClientBorne";
             // 
             // cbProduitBorne
             // 
-            resources.ApplyResources(this.cbProduitBorne, "cbProduitBorne");
             this.cbProduitBorne.BackColor = System.Drawing.Color.Honeydew;
+            resources.ApplyResources(this.cbProduitBorne, "cbProduitBorne");
             this.cbProduitBorne.FormattingEnabled = true;
             this.cbProduitBorne.Name = "cbProduitBorne";
             // 
             // cbTransporteurBorne
             // 
-            resources.ApplyResources(this.cbTransporteurBorne, "cbTransporteurBorne");
             this.cbTransporteurBorne.BackColor = System.Drawing.Color.Honeydew;
+            resources.ApplyResources(this.cbTransporteurBorne, "cbTransporteurBorne");
             this.cbTransporteurBorne.FormattingEnabled = true;
             this.cbTransporteurBorne.Name = "cbTransporteurBorne";
             // 
             // cbChauffeurBorne
             // 
-            resources.ApplyResources(this.cbChauffeurBorne, "cbChauffeurBorne");
             this.cbChauffeurBorne.BackColor = System.Drawing.Color.Honeydew;
+            resources.ApplyResources(this.cbChauffeurBorne, "cbChauffeurBorne");
             this.cbChauffeurBorne.FormattingEnabled = true;
             this.cbChauffeurBorne.Name = "cbChauffeurBorne";
             // 
             // cbCamionBorne
             // 
-            resources.ApplyResources(this.cbCamionBorne, "cbCamionBorne");
             this.cbCamionBorne.BackColor = System.Drawing.Color.Honeydew;
+            resources.ApplyResources(this.cbCamionBorne, "cbCamionBorne");
             this.cbCamionBorne.FormattingEnabled = true;
             this.cbCamionBorne.Name = "cbCamionBorne";
             // 
             // cbFirmeBorne
             // 
-            resources.ApplyResources(this.cbFirmeBorne, "cbFirmeBorne");
             this.cbFirmeBorne.BackColor = System.Drawing.Color.Honeydew;
+            resources.ApplyResources(this.cbFirmeBorne, "cbFirmeBorne");
             this.cbFirmeBorne.FormattingEnabled = true;
             this.cbFirmeBorne.Name = "cbFirmeBorne";
             // 
@@ -819,8 +850,8 @@
             // 
             // txtDateCreation
             // 
-            resources.ApplyResources(this.txtDateCreation, "txtDateCreation");
             this.txtDateCreation.BackColor = System.Drawing.Color.Honeydew;
+            resources.ApplyResources(this.txtDateCreation, "txtDateCreation");
             this.txtDateCreation.ForeColor = System.Drawing.Color.Black;
             this.txtDateCreation.Name = "txtDateCreation";
             this.txtDateCreation.ReadOnly = true;
@@ -833,8 +864,8 @@
             // 
             // txtId
             // 
-            resources.ApplyResources(this.txtId, "txtId");
             this.txtId.BackColor = System.Drawing.Color.Honeydew;
+            resources.ApplyResources(this.txtId, "txtId");
             this.txtId.ForeColor = System.Drawing.Color.Black;
             this.txtId.Name = "txtId";
             // 
@@ -846,8 +877,8 @@
             // 
             // txtDesignation
             // 
-            resources.ApplyResources(this.txtDesignation, "txtDesignation");
             this.txtDesignation.BackColor = System.Drawing.Color.Honeydew;
+            resources.ApplyResources(this.txtDesignation, "txtDesignation");
             this.txtDesignation.ForeColor = System.Drawing.Color.Black;
             this.txtDesignation.Name = "txtDesignation";
             // 
@@ -859,16 +890,15 @@
             // 
             // tabControl2
             // 
-            resources.ApplyResources(this.tabControl2, "tabControl2");
             this.tabControl2.Controls.Add(this.General);
             this.tabControl2.Controls.Add(this.ChampsSupplementaire);
             this.tabControl2.Controls.Add(this.Ticket);
+            resources.ApplyResources(this.tabControl2, "tabControl2");
             this.tabControl2.Name = "tabControl2";
             this.tabControl2.SelectedIndex = 0;
             // 
             // General
             // 
-            resources.ApplyResources(this.General, "General");
             this.General.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(86)))), ((int)(((byte)(81)))));
             this.General.Controls.Add(this.RqPont);
             this.General.Controls.Add(this.gbFiltres);
@@ -879,19 +909,50 @@
             this.General.Controls.Add(this.label3);
             this.General.Controls.Add(this.txtDesignation);
             this.General.Controls.Add(this.label2);
+            resources.ApplyResources(this.General, "General");
             this.General.Name = "General";
             // 
             // RqPont
             // 
-            resources.ApplyResources(this.RqPont, "RqPont");
             this.RqPont.Image = global::WidraSoft.UI.Properties.Resources.asterisk;
+            resources.ApplyResources(this.RqPont, "RqPont");
             this.RqPont.Name = "RqPont";
             this.RqPont.TabStop = false;
             // 
             // ChampsSupplementaire
             // 
-            resources.ApplyResources(this.ChampsSupplementaire, "ChampsSupplementaire");
             this.ChampsSupplementaire.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(86)))), ((int)(((byte)(81)))));
+            this.ChampsSupplementaire.Controls.Add(this.cbBorneChampLibre4);
+            this.ChampsSupplementaire.Controls.Add(this.txtTicketChampLibre4);
+            this.ChampsSupplementaire.Controls.Add(this.cbx_TicketChampLibre4);
+            this.ChampsSupplementaire.Controls.Add(this.txtLibreObligatoire4);
+            this.ChampsSupplementaire.Controls.Add(this.chx_LibreObligatoire4);
+            this.ChampsSupplementaire.Controls.Add(this.label38);
+            this.ChampsSupplementaire.Controls.Add(this.txtChampLibre4);
+            this.ChampsSupplementaire.Controls.Add(this.cbBorneChampLibre3);
+            this.ChampsSupplementaire.Controls.Add(this.txtTicketChampLibre3);
+            this.ChampsSupplementaire.Controls.Add(this.cbx_TicketChampLibre3);
+            this.ChampsSupplementaire.Controls.Add(this.txtLibreObligatoire3);
+            this.ChampsSupplementaire.Controls.Add(this.chx_LibreObligatoire3);
+            this.ChampsSupplementaire.Controls.Add(this.label37);
+            this.ChampsSupplementaire.Controls.Add(this.txtChampLibre3);
+            this.ChampsSupplementaire.Controls.Add(this.cbBorneChampLibre2);
+            this.ChampsSupplementaire.Controls.Add(this.txtTicketChampLibre2);
+            this.ChampsSupplementaire.Controls.Add(this.cbx_TicketChampLibre2);
+            this.ChampsSupplementaire.Controls.Add(this.txtLibreObligatoire2);
+            this.ChampsSupplementaire.Controls.Add(this.chx_LibreObligatoire2);
+            this.ChampsSupplementaire.Controls.Add(this.label36);
+            this.ChampsSupplementaire.Controls.Add(this.txtChampLibre2);
+            this.ChampsSupplementaire.Controls.Add(this.cbBorneChampLibre1);
+            this.ChampsSupplementaire.Controls.Add(this.label35);
+            this.ChampsSupplementaire.Controls.Add(this.label32);
+            this.ChampsSupplementaire.Controls.Add(this.label33);
+            this.ChampsSupplementaire.Controls.Add(this.txtTicketChampLibre1);
+            this.ChampsSupplementaire.Controls.Add(this.cbx_TicketChampLibre1);
+            this.ChampsSupplementaire.Controls.Add(this.txtLibreObligatoire1);
+            this.ChampsSupplementaire.Controls.Add(this.chx_LibreObligatoire1);
+            this.ChampsSupplementaire.Controls.Add(this.lbChampLibre1);
+            this.ChampsSupplementaire.Controls.Add(this.txtChampLibre1);
             this.ChampsSupplementaire.Controls.Add(this.txtAjoutChamp7);
             this.ChampsSupplementaire.Controls.Add(this.chx_AjoutChamp7);
             this.ChampsSupplementaire.Controls.Add(this.txtAjoutChamp6);
@@ -974,6 +1035,7 @@
             this.ChampsSupplementaire.Controls.Add(this.cbChamp2);
             this.ChampsSupplementaire.Controls.Add(this.label11);
             this.ChampsSupplementaire.Controls.Add(this.cbChamp1);
+            resources.ApplyResources(this.ChampsSupplementaire, "ChampsSupplementaire");
             this.ChampsSupplementaire.Name = "ChampsSupplementaire";
             // 
             // txtAjoutChamp7
@@ -1172,50 +1234,50 @@
             // 
             // cbBorneChamp7
             // 
-            resources.ApplyResources(this.cbBorneChamp7, "cbBorneChamp7");
             this.cbBorneChamp7.BackColor = System.Drawing.Color.Honeydew;
+            resources.ApplyResources(this.cbBorneChamp7, "cbBorneChamp7");
             this.cbBorneChamp7.FormattingEnabled = true;
             this.cbBorneChamp7.Name = "cbBorneChamp7";
             // 
             // cbBorneChamp6
             // 
-            resources.ApplyResources(this.cbBorneChamp6, "cbBorneChamp6");
             this.cbBorneChamp6.BackColor = System.Drawing.Color.Honeydew;
+            resources.ApplyResources(this.cbBorneChamp6, "cbBorneChamp6");
             this.cbBorneChamp6.FormattingEnabled = true;
             this.cbBorneChamp6.Name = "cbBorneChamp6";
             // 
             // cbBorneChamp5
             // 
-            resources.ApplyResources(this.cbBorneChamp5, "cbBorneChamp5");
             this.cbBorneChamp5.BackColor = System.Drawing.Color.Honeydew;
+            resources.ApplyResources(this.cbBorneChamp5, "cbBorneChamp5");
             this.cbBorneChamp5.FormattingEnabled = true;
             this.cbBorneChamp5.Name = "cbBorneChamp5";
             // 
             // cbBorneChamp4
             // 
-            resources.ApplyResources(this.cbBorneChamp4, "cbBorneChamp4");
             this.cbBorneChamp4.BackColor = System.Drawing.Color.Honeydew;
+            resources.ApplyResources(this.cbBorneChamp4, "cbBorneChamp4");
             this.cbBorneChamp4.FormattingEnabled = true;
             this.cbBorneChamp4.Name = "cbBorneChamp4";
             // 
             // cbBorneChamp3
             // 
-            resources.ApplyResources(this.cbBorneChamp3, "cbBorneChamp3");
             this.cbBorneChamp3.BackColor = System.Drawing.Color.Honeydew;
+            resources.ApplyResources(this.cbBorneChamp3, "cbBorneChamp3");
             this.cbBorneChamp3.FormattingEnabled = true;
             this.cbBorneChamp3.Name = "cbBorneChamp3";
             // 
             // cbBorneChamp2
             // 
-            resources.ApplyResources(this.cbBorneChamp2, "cbBorneChamp2");
             this.cbBorneChamp2.BackColor = System.Drawing.Color.Honeydew;
+            resources.ApplyResources(this.cbBorneChamp2, "cbBorneChamp2");
             this.cbBorneChamp2.FormattingEnabled = true;
             this.cbBorneChamp2.Name = "cbBorneChamp2";
             // 
             // cbBorneChamp1
             // 
-            resources.ApplyResources(this.cbBorneChamp1, "cbBorneChamp1");
             this.cbBorneChamp1.BackColor = System.Drawing.Color.Honeydew;
+            resources.ApplyResources(this.cbBorneChamp1, "cbBorneChamp1");
             this.cbBorneChamp1.FormattingEnabled = true;
             this.cbBorneChamp1.Name = "cbBorneChamp1";
             // 
@@ -1259,8 +1321,8 @@
             // 
             // cbChamp7
             // 
-            resources.ApplyResources(this.cbChamp7, "cbChamp7");
             this.cbChamp7.BackColor = System.Drawing.Color.Honeydew;
+            resources.ApplyResources(this.cbChamp7, "cbChamp7");
             this.cbChamp7.FormattingEnabled = true;
             this.cbChamp7.Name = "cbChamp7";
             // 
@@ -1298,8 +1360,8 @@
             // 
             // cbChamp6
             // 
-            resources.ApplyResources(this.cbChamp6, "cbChamp6");
             this.cbChamp6.BackColor = System.Drawing.Color.Honeydew;
+            resources.ApplyResources(this.cbChamp6, "cbChamp6");
             this.cbChamp6.FormattingEnabled = true;
             this.cbChamp6.Name = "cbChamp6";
             // 
@@ -1453,8 +1515,8 @@
             // 
             // cbChamp5
             // 
-            resources.ApplyResources(this.cbChamp5, "cbChamp5");
             this.cbChamp5.BackColor = System.Drawing.Color.Honeydew;
+            resources.ApplyResources(this.cbChamp5, "cbChamp5");
             this.cbChamp5.FormattingEnabled = true;
             this.cbChamp5.Name = "cbChamp5";
             // 
@@ -1466,8 +1528,8 @@
             // 
             // cbChamp4
             // 
-            resources.ApplyResources(this.cbChamp4, "cbChamp4");
             this.cbChamp4.BackColor = System.Drawing.Color.Honeydew;
+            resources.ApplyResources(this.cbChamp4, "cbChamp4");
             this.cbChamp4.FormattingEnabled = true;
             this.cbChamp4.Name = "cbChamp4";
             // 
@@ -1479,8 +1541,8 @@
             // 
             // cbChamp3
             // 
-            resources.ApplyResources(this.cbChamp3, "cbChamp3");
             this.cbChamp3.BackColor = System.Drawing.Color.Honeydew;
+            resources.ApplyResources(this.cbChamp3, "cbChamp3");
             this.cbChamp3.FormattingEnabled = true;
             this.cbChamp3.Name = "cbChamp3";
             // 
@@ -1492,8 +1554,8 @@
             // 
             // cbChamp2
             // 
-            resources.ApplyResources(this.cbChamp2, "cbChamp2");
             this.cbChamp2.BackColor = System.Drawing.Color.Honeydew;
+            resources.ApplyResources(this.cbChamp2, "cbChamp2");
             this.cbChamp2.FormattingEnabled = true;
             this.cbChamp2.Name = "cbChamp2";
             // 
@@ -1505,14 +1567,13 @@
             // 
             // cbChamp1
             // 
-            resources.ApplyResources(this.cbChamp1, "cbChamp1");
             this.cbChamp1.BackColor = System.Drawing.Color.Honeydew;
+            resources.ApplyResources(this.cbChamp1, "cbChamp1");
             this.cbChamp1.FormattingEnabled = true;
             this.cbChamp1.Name = "cbChamp1";
             // 
             // Ticket
             // 
-            resources.ApplyResources(this.Ticket, "Ticket");
             this.Ticket.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(86)))), ((int)(((byte)(81)))));
             this.Ticket.Controls.Add(this.pbLogo);
             this.Ticket.Controls.Add(this.label30);
@@ -1525,12 +1586,13 @@
             this.Ticket.Controls.Add(this.pictureBox4);
             this.Ticket.Controls.Add(this.label25);
             this.Ticket.Controls.Add(this.txtTitre1);
+            resources.ApplyResources(this.Ticket, "Ticket");
             this.Ticket.Name = "Ticket";
             // 
             // pbLogo
             // 
-            resources.ApplyResources(this.pbLogo, "pbLogo");
             this.pbLogo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(62)))), ((int)(((byte)(60)))));
+            resources.ApplyResources(this.pbLogo, "pbLogo");
             this.pbLogo.Name = "pbLogo";
             this.pbLogo.TabStop = false;
             // 
@@ -1548,8 +1610,8 @@
             // 
             // cbFormat
             // 
-            resources.ApplyResources(this.cbFormat, "cbFormat");
             this.cbFormat.BackColor = System.Drawing.Color.Honeydew;
+            resources.ApplyResources(this.cbFormat, "cbFormat");
             this.cbFormat.FormattingEnabled = true;
             this.cbFormat.Name = "cbFormat";
             // 
@@ -1561,8 +1623,8 @@
             // 
             // txtFooter
             // 
-            resources.ApplyResources(this.txtFooter, "txtFooter");
             this.txtFooter.BackColor = System.Drawing.Color.Honeydew;
+            resources.ApplyResources(this.txtFooter, "txtFooter");
             this.txtFooter.ForeColor = System.Drawing.Color.Black;
             this.txtFooter.Name = "txtFooter";
             // 
@@ -1574,15 +1636,15 @@
             // 
             // txtTitre2
             // 
-            resources.ApplyResources(this.txtTitre2, "txtTitre2");
             this.txtTitre2.BackColor = System.Drawing.Color.Honeydew;
+            resources.ApplyResources(this.txtTitre2, "txtTitre2");
             this.txtTitre2.ForeColor = System.Drawing.Color.Black;
             this.txtTitre2.Name = "txtTitre2";
             // 
             // pictureBox4
             // 
-            resources.ApplyResources(this.pictureBox4, "pictureBox4");
             this.pictureBox4.Image = global::WidraSoft.UI.Properties.Resources.asterisk;
+            resources.ApplyResources(this.pictureBox4, "pictureBox4");
             this.pictureBox4.Name = "pictureBox4";
             this.pictureBox4.TabStop = false;
             // 
@@ -1594,10 +1656,204 @@
             // 
             // txtTitre1
             // 
-            resources.ApplyResources(this.txtTitre1, "txtTitre1");
             this.txtTitre1.BackColor = System.Drawing.Color.Honeydew;
+            resources.ApplyResources(this.txtTitre1, "txtTitre1");
             this.txtTitre1.ForeColor = System.Drawing.Color.Black;
             this.txtTitre1.Name = "txtTitre1";
+            // 
+            // lbChampLibre1
+            // 
+            resources.ApplyResources(this.lbChampLibre1, "lbChampLibre1");
+            this.lbChampLibre1.ForeColor = System.Drawing.Color.White;
+            this.lbChampLibre1.Name = "lbChampLibre1";
+            // 
+            // txtChampLibre1
+            // 
+            this.txtChampLibre1.BackColor = System.Drawing.Color.Honeydew;
+            resources.ApplyResources(this.txtChampLibre1, "txtChampLibre1");
+            this.txtChampLibre1.ForeColor = System.Drawing.Color.Black;
+            this.txtChampLibre1.Name = "txtChampLibre1";
+            // 
+            // txtLibreObligatoire1
+            // 
+            resources.ApplyResources(this.txtLibreObligatoire1, "txtLibreObligatoire1");
+            this.txtLibreObligatoire1.Name = "txtLibreObligatoire1";
+            // 
+            // chx_LibreObligatoire1
+            // 
+            resources.ApplyResources(this.chx_LibreObligatoire1, "chx_LibreObligatoire1");
+            this.chx_LibreObligatoire1.ForeColor = System.Drawing.Color.White;
+            this.chx_LibreObligatoire1.Name = "chx_LibreObligatoire1";
+            this.chx_LibreObligatoire1.UseVisualStyleBackColor = true;
+            // 
+            // txtTicketChampLibre1
+            // 
+            resources.ApplyResources(this.txtTicketChampLibre1, "txtTicketChampLibre1");
+            this.txtTicketChampLibre1.Name = "txtTicketChampLibre1";
+            // 
+            // cbx_TicketChampLibre1
+            // 
+            resources.ApplyResources(this.cbx_TicketChampLibre1, "cbx_TicketChampLibre1");
+            this.cbx_TicketChampLibre1.ForeColor = System.Drawing.Color.White;
+            this.cbx_TicketChampLibre1.Name = "cbx_TicketChampLibre1";
+            this.cbx_TicketChampLibre1.UseVisualStyleBackColor = true;
+            // 
+            // label32
+            // 
+            resources.ApplyResources(this.label32, "label32");
+            this.label32.ForeColor = System.Drawing.Color.White;
+            this.label32.Name = "label32";
+            // 
+            // label33
+            // 
+            resources.ApplyResources(this.label33, "label33");
+            this.label33.ForeColor = System.Drawing.Color.White;
+            this.label33.Name = "label33";
+            // 
+            // cbBorneChampLibre1
+            // 
+            this.cbBorneChampLibre1.BackColor = System.Drawing.Color.Honeydew;
+            resources.ApplyResources(this.cbBorneChampLibre1, "cbBorneChampLibre1");
+            this.cbBorneChampLibre1.FormattingEnabled = true;
+            this.cbBorneChampLibre1.Name = "cbBorneChampLibre1";
+            // 
+            // label35
+            // 
+            resources.ApplyResources(this.label35, "label35");
+            this.label35.ForeColor = System.Drawing.Color.White;
+            this.label35.Name = "label35";
+            // 
+            // cbBorneChampLibre2
+            // 
+            this.cbBorneChampLibre2.BackColor = System.Drawing.Color.Honeydew;
+            resources.ApplyResources(this.cbBorneChampLibre2, "cbBorneChampLibre2");
+            this.cbBorneChampLibre2.FormattingEnabled = true;
+            this.cbBorneChampLibre2.Name = "cbBorneChampLibre2";
+            // 
+            // txtTicketChampLibre2
+            // 
+            resources.ApplyResources(this.txtTicketChampLibre2, "txtTicketChampLibre2");
+            this.txtTicketChampLibre2.Name = "txtTicketChampLibre2";
+            // 
+            // cbx_TicketChampLibre2
+            // 
+            resources.ApplyResources(this.cbx_TicketChampLibre2, "cbx_TicketChampLibre2");
+            this.cbx_TicketChampLibre2.ForeColor = System.Drawing.Color.White;
+            this.cbx_TicketChampLibre2.Name = "cbx_TicketChampLibre2";
+            this.cbx_TicketChampLibre2.UseVisualStyleBackColor = true;
+            // 
+            // txtLibreObligatoire2
+            // 
+            resources.ApplyResources(this.txtLibreObligatoire2, "txtLibreObligatoire2");
+            this.txtLibreObligatoire2.Name = "txtLibreObligatoire2";
+            // 
+            // chx_LibreObligatoire2
+            // 
+            resources.ApplyResources(this.chx_LibreObligatoire2, "chx_LibreObligatoire2");
+            this.chx_LibreObligatoire2.ForeColor = System.Drawing.Color.White;
+            this.chx_LibreObligatoire2.Name = "chx_LibreObligatoire2";
+            this.chx_LibreObligatoire2.UseVisualStyleBackColor = true;
+            // 
+            // label36
+            // 
+            resources.ApplyResources(this.label36, "label36");
+            this.label36.ForeColor = System.Drawing.Color.White;
+            this.label36.Name = "label36";
+            // 
+            // txtChampLibre2
+            // 
+            this.txtChampLibre2.BackColor = System.Drawing.Color.Honeydew;
+            resources.ApplyResources(this.txtChampLibre2, "txtChampLibre2");
+            this.txtChampLibre2.ForeColor = System.Drawing.Color.Black;
+            this.txtChampLibre2.Name = "txtChampLibre2";
+            // 
+            // cbBorneChampLibre3
+            // 
+            this.cbBorneChampLibre3.BackColor = System.Drawing.Color.Honeydew;
+            resources.ApplyResources(this.cbBorneChampLibre3, "cbBorneChampLibre3");
+            this.cbBorneChampLibre3.FormattingEnabled = true;
+            this.cbBorneChampLibre3.Name = "cbBorneChampLibre3";
+            // 
+            // txtTicketChampLibre3
+            // 
+            resources.ApplyResources(this.txtTicketChampLibre3, "txtTicketChampLibre3");
+            this.txtTicketChampLibre3.Name = "txtTicketChampLibre3";
+            // 
+            // cbx_TicketChampLibre3
+            // 
+            resources.ApplyResources(this.cbx_TicketChampLibre3, "cbx_TicketChampLibre3");
+            this.cbx_TicketChampLibre3.ForeColor = System.Drawing.Color.White;
+            this.cbx_TicketChampLibre3.Name = "cbx_TicketChampLibre3";
+            this.cbx_TicketChampLibre3.UseVisualStyleBackColor = true;
+            // 
+            // txtLibreObligatoire3
+            // 
+            resources.ApplyResources(this.txtLibreObligatoire3, "txtLibreObligatoire3");
+            this.txtLibreObligatoire3.Name = "txtLibreObligatoire3";
+            // 
+            // chx_LibreObligatoire3
+            // 
+            resources.ApplyResources(this.chx_LibreObligatoire3, "chx_LibreObligatoire3");
+            this.chx_LibreObligatoire3.ForeColor = System.Drawing.Color.White;
+            this.chx_LibreObligatoire3.Name = "chx_LibreObligatoire3";
+            this.chx_LibreObligatoire3.UseVisualStyleBackColor = true;
+            // 
+            // label37
+            // 
+            resources.ApplyResources(this.label37, "label37");
+            this.label37.ForeColor = System.Drawing.Color.White;
+            this.label37.Name = "label37";
+            // 
+            // txtChampLibre3
+            // 
+            this.txtChampLibre3.BackColor = System.Drawing.Color.Honeydew;
+            resources.ApplyResources(this.txtChampLibre3, "txtChampLibre3");
+            this.txtChampLibre3.ForeColor = System.Drawing.Color.Black;
+            this.txtChampLibre3.Name = "txtChampLibre3";
+            // 
+            // cbBorneChampLibre4
+            // 
+            this.cbBorneChampLibre4.BackColor = System.Drawing.Color.Honeydew;
+            resources.ApplyResources(this.cbBorneChampLibre4, "cbBorneChampLibre4");
+            this.cbBorneChampLibre4.FormattingEnabled = true;
+            this.cbBorneChampLibre4.Name = "cbBorneChampLibre4";
+            // 
+            // txtTicketChampLibre4
+            // 
+            resources.ApplyResources(this.txtTicketChampLibre4, "txtTicketChampLibre4");
+            this.txtTicketChampLibre4.Name = "txtTicketChampLibre4";
+            // 
+            // cbx_TicketChampLibre4
+            // 
+            resources.ApplyResources(this.cbx_TicketChampLibre4, "cbx_TicketChampLibre4");
+            this.cbx_TicketChampLibre4.ForeColor = System.Drawing.Color.White;
+            this.cbx_TicketChampLibre4.Name = "cbx_TicketChampLibre4";
+            this.cbx_TicketChampLibre4.UseVisualStyleBackColor = true;
+            // 
+            // txtLibreObligatoire4
+            // 
+            resources.ApplyResources(this.txtLibreObligatoire4, "txtLibreObligatoire4");
+            this.txtLibreObligatoire4.Name = "txtLibreObligatoire4";
+            // 
+            // chx_LibreObligatoire4
+            // 
+            resources.ApplyResources(this.chx_LibreObligatoire4, "chx_LibreObligatoire4");
+            this.chx_LibreObligatoire4.ForeColor = System.Drawing.Color.White;
+            this.chx_LibreObligatoire4.Name = "chx_LibreObligatoire4";
+            this.chx_LibreObligatoire4.UseVisualStyleBackColor = true;
+            // 
+            // label38
+            // 
+            resources.ApplyResources(this.label38, "label38");
+            this.label38.ForeColor = System.Drawing.Color.White;
+            this.label38.Name = "label38";
+            // 
+            // txtChampLibre4
+            // 
+            this.txtChampLibre4.BackColor = System.Drawing.Color.Honeydew;
+            resources.ApplyResources(this.txtChampLibre4, "txtChampLibre4");
+            this.txtChampLibre4.ForeColor = System.Drawing.Color.Black;
+            this.txtChampLibre4.Name = "txtChampLibre4";
             // 
             // WeighingSettingsDetail
             // 
@@ -1821,5 +2077,36 @@
         private System.Windows.Forms.ComboBox cbFormat;
         private System.Windows.Forms.Label label30;
         private System.Windows.Forms.PictureBox pbLogo;
+        private System.Windows.Forms.Label lbChampLibre1;
+        private System.Windows.Forms.TextBox txtChampLibre1;
+        private System.Windows.Forms.Label label32;
+        private System.Windows.Forms.Label label33;
+        private System.Windows.Forms.TextBox txtTicketChampLibre1;
+        private System.Windows.Forms.CheckBox cbx_TicketChampLibre1;
+        private System.Windows.Forms.TextBox txtLibreObligatoire1;
+        private System.Windows.Forms.CheckBox chx_LibreObligatoire1;
+        private System.Windows.Forms.ComboBox cbBorneChampLibre1;
+        private System.Windows.Forms.Label label35;
+        private System.Windows.Forms.ComboBox cbBorneChampLibre4;
+        private System.Windows.Forms.TextBox txtTicketChampLibre4;
+        private System.Windows.Forms.CheckBox cbx_TicketChampLibre4;
+        private System.Windows.Forms.TextBox txtLibreObligatoire4;
+        private System.Windows.Forms.CheckBox chx_LibreObligatoire4;
+        private System.Windows.Forms.Label label38;
+        private System.Windows.Forms.TextBox txtChampLibre4;
+        private System.Windows.Forms.ComboBox cbBorneChampLibre3;
+        private System.Windows.Forms.TextBox txtTicketChampLibre3;
+        private System.Windows.Forms.CheckBox cbx_TicketChampLibre3;
+        private System.Windows.Forms.TextBox txtLibreObligatoire3;
+        private System.Windows.Forms.CheckBox chx_LibreObligatoire3;
+        private System.Windows.Forms.Label label37;
+        private System.Windows.Forms.TextBox txtChampLibre3;
+        private System.Windows.Forms.ComboBox cbBorneChampLibre2;
+        private System.Windows.Forms.TextBox txtTicketChampLibre2;
+        private System.Windows.Forms.CheckBox cbx_TicketChampLibre2;
+        private System.Windows.Forms.TextBox txtLibreObligatoire2;
+        private System.Windows.Forms.CheckBox chx_LibreObligatoire2;
+        private System.Windows.Forms.Label label36;
+        private System.Windows.Forms.TextBox txtChampLibre2;
     }
 }
