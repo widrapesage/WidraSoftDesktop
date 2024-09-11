@@ -171,6 +171,10 @@ namespace WidraSoft.UI
             DgvList.Columns["ENREGISTREMENTSID5"].Visible = false;
             DgvList.Columns["ENREGISTREMENTSID6"].Visible = false;
             DgvList.Columns["ENREGISTREMENTSID7"].Visible = false;
+            DgvList.Columns["CHAMPLIBRE1"].Visible = false;
+            DgvList.Columns["CHAMPLIBRE2"].Visible = false;
+            DgvList.Columns["CHAMPLIBRE3"].Visible = false;
+            DgvList.Columns["CHAMPLIBRE4"].Visible = false;
             DgvList.Columns["TABLES_SUPPLEMENTAIRES_STRING"].Visible = false;
             DgvList.Columns["PARAMPESEE"].Visible = true;
             DgvList.Columns["PARAMPESEE"].HeaderText = "PARAMETRE";

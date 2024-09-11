@@ -57,96 +57,11 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="&gt;&gt;pbUpdating.Name" xml:space="preserve">
-    <value>pbUpdating</value>
-  </data>
-  <data name="&gt;&gt;pbUpdating.Type" xml:space="preserve">
-    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;pbUpdating.Parent" xml:space="preserve">
-    <value>panelLang</value>
-  </data>
-  <data name="&gt;&gt;pbUpdating.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;Spain_flag.Name" xml:space="preserve">
-    <value>Spain_flag</value>
-  </data>
-  <data name="&gt;&gt;Spain_flag.Type" xml:space="preserve">
-    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;Spain_flag.Parent" xml:space="preserve">
-    <value>panelLang</value>
-  </data>
-  <data name="&gt;&gt;Spain_flag.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="&gt;&gt;England_flag.Name" xml:space="preserve">
-    <value>England_flag</value>
-  </data>
-  <data name="&gt;&gt;England_flag.Type" xml:space="preserve">
-    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;England_flag.Parent" xml:space="preserve">
-    <value>panelLang</value>
-  </data>
-  <data name="&gt;&gt;England_flag.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="&gt;&gt;France_flag.Name" xml:space="preserve">
-    <value>France_flag</value>
-  </data>
-  <data name="&gt;&gt;France_flag.Type" xml:space="preserve">
-    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;France_flag.Parent" xml:space="preserve">
-    <value>panelLang</value>
-  </data>
-  <data name="&gt;&gt;France_flag.ZOrder" xml:space="preserve">
-    <value>3</value>
-  </data>
-  <data name="&gt;&gt;cbLang.Name" xml:space="preserve">
-    <value>cbLang</value>
-  </data>
-  <data name="&gt;&gt;cbLang.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;cbLang.Parent" xml:space="preserve">
-    <value>panelLang</value>
-  </data>
-  <data name="&gt;&gt;cbLang.ZOrder" xml:space="preserve">
-    <value>4</value>
-  </data>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="panelLang.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Top</value>
-  </data>
-  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="panelLang.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 0</value>
-  </data>
-  <data name="panelLang.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1048, 35</value>
-  </data>
-  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="panelLang.TabIndex" type="System.Int32, mscorlib">
-    <value>74</value>
-  </data>
-  <data name="&gt;&gt;panelLang.Name" xml:space="preserve">
-    <value>panelLang</value>
-  </data>
-  <data name="&gt;&gt;panelLang.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Panel, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;panelLang.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;panelLang.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
   <data name="pbUpdating.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="pbUpdating.Location" type="System.Drawing.Point, System.Drawing">
     <value>1017, 5</value>
   </data>
@@ -156,6 +71,7 @@
   <data name="pbUpdating.SizeMode" type="System.Windows.Forms.PictureBoxSizeMode, System.Windows.Forms">
     <value>AutoSize</value>
   </data>
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="pbUpdating.TabIndex" type="System.Int32, mscorlib">
     <value>28</value>
   </data>
@@ -279,101 +195,29 @@
   <data name="&gt;&gt;cbLang.ZOrder" xml:space="preserve">
     <value>4</value>
   </data>
-  <data name="&gt;&gt;pictureBox3.Name" xml:space="preserve">
-    <value>pictureBox3</value>
-  </data>
-  <data name="&gt;&gt;pictureBox3.Type" xml:space="preserve">
-    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;pictureBox3.Parent" xml:space="preserve">
-    <value>panelNavigation</value>
-  </data>
-  <data name="&gt;&gt;pictureBox3.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;lbModifier.Name" xml:space="preserve">
-    <value>lbModifier</value>
-  </data>
-  <data name="&gt;&gt;lbModifier.Type" xml:space="preserve">
-    <value>System.Windows.Forms.LinkLabel, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;lbModifier.Parent" xml:space="preserve">
-    <value>panelNavigation</value>
-  </data>
-  <data name="&gt;&gt;lbModifier.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="&gt;&gt;pictureBox1.Name" xml:space="preserve">
-    <value>pictureBox1</value>
-  </data>
-  <data name="&gt;&gt;pictureBox1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;pictureBox1.Parent" xml:space="preserve">
-    <value>panelNavigation</value>
-  </data>
-  <data name="&gt;&gt;pictureBox1.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="&gt;&gt;pictureBox2.Name" xml:space="preserve">
-    <value>pictureBox2</value>
-  </data>
-  <data name="&gt;&gt;pictureBox2.Type" xml:space="preserve">
-    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;pictureBox2.Parent" xml:space="preserve">
-    <value>panelNavigation</value>
-  </data>
-  <data name="&gt;&gt;pictureBox2.ZOrder" xml:space="preserve">
-    <value>3</value>
-  </data>
-  <data name="&gt;&gt;lbAjouter.Name" xml:space="preserve">
-    <value>lbAjouter</value>
-  </data>
-  <data name="&gt;&gt;lbAjouter.Type" xml:space="preserve">
-    <value>System.Windows.Forms.LinkLabel, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;lbAjouter.Parent" xml:space="preserve">
-    <value>panelNavigation</value>
-  </data>
-  <data name="&gt;&gt;lbAjouter.ZOrder" xml:space="preserve">
-    <value>4</value>
-  </data>
-  <data name="&gt;&gt;lbSupprimer.Name" xml:space="preserve">
-    <value>lbSupprimer</value>
-  </data>
-  <data name="&gt;&gt;lbSupprimer.Type" xml:space="preserve">
-    <value>System.Windows.Forms.LinkLabel, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;lbSupprimer.Parent" xml:space="preserve">
-    <value>panelNavigation</value>
-  </data>
-  <data name="&gt;&gt;lbSupprimer.ZOrder" xml:space="preserve">
-    <value>5</value>
-  </data>
-  <data name="panelNavigation.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+  <data name="panelLang.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Top</value>
   </data>
-  <data name="panelNavigation.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 35</value>
+  <data name="panelLang.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
   </data>
-  <data name="panelNavigation.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="panelLang.Size" type="System.Drawing.Size, System.Drawing">
     <value>1048, 35</value>
   </data>
-  <data name="panelNavigation.TabIndex" type="System.Int32, mscorlib">
-    <value>82</value>
+  <data name="panelLang.TabIndex" type="System.Int32, mscorlib">
+    <value>74</value>
   </data>
-  <data name="&gt;&gt;panelNavigation.Name" xml:space="preserve">
-    <value>panelNavigation</value>
+  <data name="&gt;&gt;panelLang.Name" xml:space="preserve">
+    <value>panelLang</value>
   </data>
-  <data name="&gt;&gt;panelNavigation.Type" xml:space="preserve">
+  <data name="&gt;&gt;panelLang.Type" xml:space="preserve">
     <value>System.Windows.Forms.Panel, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;panelNavigation.Parent" xml:space="preserve">
+  <data name="&gt;&gt;panelLang.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
-  <data name="&gt;&gt;panelNavigation.ZOrder" xml:space="preserve">
-    <value>1</value>
+  <data name="&gt;&gt;panelLang.ZOrder" xml:space="preserve">
+    <value>2</value>
   </data>
   <data name="pictureBox3.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
@@ -567,139 +411,28 @@
   <data name="&gt;&gt;lbSupprimer.ZOrder" xml:space="preserve">
     <value>5</value>
   </data>
-  <data name="&gt;&gt;label15.Name" xml:space="preserve">
-    <value>label15</value>
+  <data name="panelNavigation.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Top</value>
   </data>
-  <data name="&gt;&gt;label15.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="panelNavigation.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 35</value>
   </data>
-  <data name="&gt;&gt;label15.Parent" xml:space="preserve">
-    <value>gbFiltres</value>
+  <data name="panelNavigation.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1048, 35</value>
   </data>
-  <data name="&gt;&gt;label15.ZOrder" xml:space="preserve">
-    <value>0</value>
+  <data name="panelNavigation.TabIndex" type="System.Int32, mscorlib">
+    <value>82</value>
   </data>
-  <data name="&gt;&gt;txtPontFirme.Name" xml:space="preserve">
-    <value>txtPontFirme</value>
+  <data name="&gt;&gt;panelNavigation.Name" xml:space="preserve">
+    <value>panelNavigation</value>
   </data>
-  <data name="&gt;&gt;txtPontFirme.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="&gt;&gt;panelNavigation.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;txtPontFirme.Parent" xml:space="preserve">
-    <value>gbFiltres</value>
+  <data name="&gt;&gt;panelNavigation.Parent" xml:space="preserve">
+    <value>$this</value>
   </data>
-  <data name="&gt;&gt;txtPontFirme.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="&gt;&gt;label16.Name" xml:space="preserve">
-    <value>label16</value>
-  </data>
-  <data name="&gt;&gt;label16.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;label16.Parent" xml:space="preserve">
-    <value>gbFiltres</value>
-  </data>
-  <data name="&gt;&gt;label16.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="&gt;&gt;txtCamionChauffeur.Name" xml:space="preserve">
-    <value>txtCamionChauffeur</value>
-  </data>
-  <data name="&gt;&gt;txtCamionChauffeur.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;txtCamionChauffeur.Parent" xml:space="preserve">
-    <value>gbFiltres</value>
-  </data>
-  <data name="&gt;&gt;txtCamionChauffeur.ZOrder" xml:space="preserve">
-    <value>3</value>
-  </data>
-  <data name="&gt;&gt;label17.Name" xml:space="preserve">
-    <value>label17</value>
-  </data>
-  <data name="&gt;&gt;label17.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;label17.Parent" xml:space="preserve">
-    <value>gbFiltres</value>
-  </data>
-  <data name="&gt;&gt;label17.ZOrder" xml:space="preserve">
-    <value>4</value>
-  </data>
-  <data name="&gt;&gt;txtCamionTransporteur.Name" xml:space="preserve">
-    <value>txtCamionTransporteur</value>
-  </data>
-  <data name="&gt;&gt;txtCamionTransporteur.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;txtCamionTransporteur.Parent" xml:space="preserve">
-    <value>gbFiltres</value>
-  </data>
-  <data name="&gt;&gt;txtCamionTransporteur.ZOrder" xml:space="preserve">
-    <value>5</value>
-  </data>
-  <data name="&gt;&gt;chx_CamionTransporteur.Name" xml:space="preserve">
-    <value>chx_CamionTransporteur</value>
-  </data>
-  <data name="&gt;&gt;chx_CamionTransporteur.Type" xml:space="preserve">
-    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;chx_CamionTransporteur.Parent" xml:space="preserve">
-    <value>gbFiltres</value>
-  </data>
-  <data name="&gt;&gt;chx_CamionTransporteur.ZOrder" xml:space="preserve">
-    <value>6</value>
-  </data>
-  <data name="&gt;&gt;chx_PontFirme.Name" xml:space="preserve">
-    <value>chx_PontFirme</value>
-  </data>
-  <data name="&gt;&gt;chx_PontFirme.Type" xml:space="preserve">
-    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;chx_PontFirme.Parent" xml:space="preserve">
-    <value>gbFiltres</value>
-  </data>
-  <data name="&gt;&gt;chx_PontFirme.ZOrder" xml:space="preserve">
-    <value>7</value>
-  </data>
-  <data name="&gt;&gt;chx_CamionChauffeur.Name" xml:space="preserve">
-    <value>chx_CamionChauffeur</value>
-  </data>
-  <data name="&gt;&gt;chx_CamionChauffeur.Type" xml:space="preserve">
-    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;chx_CamionChauffeur.Parent" xml:space="preserve">
-    <value>gbFiltres</value>
-  </data>
-  <data name="&gt;&gt;chx_CamionChauffeur.ZOrder" xml:space="preserve">
-    <value>8</value>
-  </data>
-  <data name="gbFiltres.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Calibri, 12pt</value>
-  </data>
-  <data name="gbFiltres.Location" type="System.Drawing.Point, System.Drawing">
-    <value>723, 137</value>
-  </data>
-  <data name="gbFiltres.Size" type="System.Drawing.Size, System.Drawing">
-    <value>296, 341</value>
-  </data>
-  <data name="gbFiltres.TabIndex" type="System.Int32, mscorlib">
-    <value>83</value>
-  </data>
-  <data name="gbFiltres.Text" xml:space="preserve">
-    <value>Filtres de la pesée</value>
-  </data>
-  <data name="&gt;&gt;gbFiltres.Name" xml:space="preserve">
-    <value>gbFiltres</value>
-  </data>
-  <data name="&gt;&gt;gbFiltres.Type" xml:space="preserve">
-    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;gbFiltres.Parent" xml:space="preserve">
-    <value>General</value>
-  </data>
-  <data name="&gt;&gt;gbFiltres.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;panelNavigation.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
   <data name="label15.AutoSize" type="System.Boolean, mscorlib">
@@ -972,644 +705,32 @@
   <data name="&gt;&gt;chx_CamionChauffeur.ZOrder" xml:space="preserve">
     <value>8</value>
   </data>
-  <data name="&gt;&gt;txtAjoutFirme.Name" xml:space="preserve">
-    <value>txtAjoutFirme</value>
-  </data>
-  <data name="&gt;&gt;txtAjoutFirme.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;txtAjoutFirme.Parent" xml:space="preserve">
-    <value>gbChampsPesée</value>
-  </data>
-  <data name="&gt;&gt;txtAjoutFirme.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;txtAjoutClient.Name" xml:space="preserve">
-    <value>txtAjoutClient</value>
-  </data>
-  <data name="&gt;&gt;txtAjoutClient.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;txtAjoutClient.Parent" xml:space="preserve">
-    <value>gbChampsPesée</value>
-  </data>
-  <data name="&gt;&gt;txtAjoutClient.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="&gt;&gt;chx_AjoutClient.Name" xml:space="preserve">
-    <value>chx_AjoutClient</value>
-  </data>
-  <data name="&gt;&gt;chx_AjoutClient.Type" xml:space="preserve">
-    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;chx_AjoutClient.Parent" xml:space="preserve">
-    <value>gbChampsPesée</value>
-  </data>
-  <data name="&gt;&gt;chx_AjoutClient.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="&gt;&gt;txtAjoutProduit.Name" xml:space="preserve">
-    <value>txtAjoutProduit</value>
-  </data>
-  <data name="&gt;&gt;txtAjoutProduit.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;txtAjoutProduit.Parent" xml:space="preserve">
-    <value>gbChampsPesée</value>
-  </data>
-  <data name="&gt;&gt;txtAjoutProduit.ZOrder" xml:space="preserve">
-    <value>3</value>
-  </data>
-  <data name="&gt;&gt;chx_AjoutProduit.Name" xml:space="preserve">
-    <value>chx_AjoutProduit</value>
-  </data>
-  <data name="&gt;&gt;chx_AjoutProduit.Type" xml:space="preserve">
-    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;chx_AjoutProduit.Parent" xml:space="preserve">
-    <value>gbChampsPesée</value>
-  </data>
-  <data name="&gt;&gt;chx_AjoutProduit.ZOrder" xml:space="preserve">
-    <value>4</value>
-  </data>
-  <data name="&gt;&gt;txtAjoutTransporteur.Name" xml:space="preserve">
-    <value>txtAjoutTransporteur</value>
-  </data>
-  <data name="&gt;&gt;txtAjoutTransporteur.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;txtAjoutTransporteur.Parent" xml:space="preserve">
-    <value>gbChampsPesée</value>
-  </data>
-  <data name="&gt;&gt;txtAjoutTransporteur.ZOrder" xml:space="preserve">
-    <value>5</value>
-  </data>
-  <data name="&gt;&gt;chx_AjoutTransporteur.Name" xml:space="preserve">
-    <value>chx_AjoutTransporteur</value>
-  </data>
-  <data name="&gt;&gt;chx_AjoutTransporteur.Type" xml:space="preserve">
-    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;chx_AjoutTransporteur.Parent" xml:space="preserve">
-    <value>gbChampsPesée</value>
-  </data>
-  <data name="&gt;&gt;chx_AjoutTransporteur.ZOrder" xml:space="preserve">
-    <value>6</value>
-  </data>
-  <data name="&gt;&gt;txtAjoutChauffeur.Name" xml:space="preserve">
-    <value>txtAjoutChauffeur</value>
-  </data>
-  <data name="&gt;&gt;txtAjoutChauffeur.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;txtAjoutChauffeur.Parent" xml:space="preserve">
-    <value>gbChampsPesée</value>
-  </data>
-  <data name="&gt;&gt;txtAjoutChauffeur.ZOrder" xml:space="preserve">
-    <value>7</value>
-  </data>
-  <data name="&gt;&gt;chx_AjoutChauffeur.Name" xml:space="preserve">
-    <value>chx_AjoutChauffeur</value>
-  </data>
-  <data name="&gt;&gt;chx_AjoutChauffeur.Type" xml:space="preserve">
-    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;chx_AjoutChauffeur.Parent" xml:space="preserve">
-    <value>gbChampsPesée</value>
-  </data>
-  <data name="&gt;&gt;chx_AjoutChauffeur.ZOrder" xml:space="preserve">
-    <value>8</value>
-  </data>
-  <data name="&gt;&gt;txtAjoutCamion.Name" xml:space="preserve">
-    <value>txtAjoutCamion</value>
-  </data>
-  <data name="&gt;&gt;txtAjoutCamion.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;txtAjoutCamion.Parent" xml:space="preserve">
-    <value>gbChampsPesée</value>
-  </data>
-  <data name="&gt;&gt;txtAjoutCamion.ZOrder" xml:space="preserve">
-    <value>9</value>
-  </data>
-  <data name="&gt;&gt;chx_AjoutCamion.Name" xml:space="preserve">
-    <value>chx_AjoutCamion</value>
-  </data>
-  <data name="&gt;&gt;chx_AjoutCamion.Type" xml:space="preserve">
-    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;chx_AjoutCamion.Parent" xml:space="preserve">
-    <value>gbChampsPesée</value>
-  </data>
-  <data name="&gt;&gt;chx_AjoutCamion.ZOrder" xml:space="preserve">
-    <value>10</value>
-  </data>
-  <data name="&gt;&gt;label24.Name" xml:space="preserve">
-    <value>label24</value>
-  </data>
-  <data name="&gt;&gt;label24.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;label24.Parent" xml:space="preserve">
-    <value>gbChampsPesée</value>
-  </data>
-  <data name="&gt;&gt;label24.ZOrder" xml:space="preserve">
-    <value>11</value>
-  </data>
-  <data name="&gt;&gt;chx_AjoutFirme.Name" xml:space="preserve">
-    <value>chx_AjoutFirme</value>
-  </data>
-  <data name="&gt;&gt;chx_AjoutFirme.Type" xml:space="preserve">
-    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;chx_AjoutFirme.Parent" xml:space="preserve">
-    <value>gbChampsPesée</value>
-  </data>
-  <data name="&gt;&gt;chx_AjoutFirme.ZOrder" xml:space="preserve">
-    <value>12</value>
-  </data>
-  <data name="&gt;&gt;cbClientBorne.Name" xml:space="preserve">
-    <value>cbClientBorne</value>
-  </data>
-  <data name="&gt;&gt;cbClientBorne.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;cbClientBorne.Parent" xml:space="preserve">
-    <value>gbChampsPesée</value>
-  </data>
-  <data name="&gt;&gt;cbClientBorne.ZOrder" xml:space="preserve">
-    <value>13</value>
-  </data>
-  <data name="&gt;&gt;cbProduitBorne.Name" xml:space="preserve">
-    <value>cbProduitBorne</value>
-  </data>
-  <data name="&gt;&gt;cbProduitBorne.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;cbProduitBorne.Parent" xml:space="preserve">
-    <value>gbChampsPesée</value>
-  </data>
-  <data name="&gt;&gt;cbProduitBorne.ZOrder" xml:space="preserve">
-    <value>14</value>
-  </data>
-  <data name="&gt;&gt;cbTransporteurBorne.Name" xml:space="preserve">
-    <value>cbTransporteurBorne</value>
-  </data>
-  <data name="&gt;&gt;cbTransporteurBorne.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;cbTransporteurBorne.Parent" xml:space="preserve">
-    <value>gbChampsPesée</value>
-  </data>
-  <data name="&gt;&gt;cbTransporteurBorne.ZOrder" xml:space="preserve">
-    <value>15</value>
-  </data>
-  <data name="&gt;&gt;cbChauffeurBorne.Name" xml:space="preserve">
-    <value>cbChauffeurBorne</value>
-  </data>
-  <data name="&gt;&gt;cbChauffeurBorne.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;cbChauffeurBorne.Parent" xml:space="preserve">
-    <value>gbChampsPesée</value>
-  </data>
-  <data name="&gt;&gt;cbChauffeurBorne.ZOrder" xml:space="preserve">
-    <value>16</value>
-  </data>
-  <data name="&gt;&gt;cbCamionBorne.Name" xml:space="preserve">
-    <value>cbCamionBorne</value>
-  </data>
-  <data name="&gt;&gt;cbCamionBorne.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;cbCamionBorne.Parent" xml:space="preserve">
-    <value>gbChampsPesée</value>
-  </data>
-  <data name="&gt;&gt;cbCamionBorne.ZOrder" xml:space="preserve">
-    <value>17</value>
-  </data>
-  <data name="&gt;&gt;cbFirmeBorne.Name" xml:space="preserve">
-    <value>cbFirmeBorne</value>
-  </data>
-  <data name="&gt;&gt;cbFirmeBorne.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;cbFirmeBorne.Parent" xml:space="preserve">
-    <value>gbChampsPesée</value>
-  </data>
-  <data name="&gt;&gt;cbFirmeBorne.ZOrder" xml:space="preserve">
-    <value>18</value>
-  </data>
-  <data name="&gt;&gt;label22.Name" xml:space="preserve">
-    <value>label22</value>
-  </data>
-  <data name="&gt;&gt;label22.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;label22.Parent" xml:space="preserve">
-    <value>gbChampsPesée</value>
-  </data>
-  <data name="&gt;&gt;label22.ZOrder" xml:space="preserve">
-    <value>19</value>
-  </data>
-  <data name="&gt;&gt;txtClientObligatoire.Name" xml:space="preserve">
-    <value>txtClientObligatoire</value>
-  </data>
-  <data name="&gt;&gt;txtClientObligatoire.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;txtClientObligatoire.Parent" xml:space="preserve">
-    <value>gbChampsPesée</value>
-  </data>
-  <data name="&gt;&gt;txtClientObligatoire.ZOrder" xml:space="preserve">
-    <value>20</value>
-  </data>
-  <data name="&gt;&gt;chx_ClientObligatoire.Name" xml:space="preserve">
-    <value>chx_ClientObligatoire</value>
-  </data>
-  <data name="&gt;&gt;chx_ClientObligatoire.Type" xml:space="preserve">
-    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;chx_ClientObligatoire.Parent" xml:space="preserve">
-    <value>gbChampsPesée</value>
-  </data>
-  <data name="&gt;&gt;chx_ClientObligatoire.ZOrder" xml:space="preserve">
-    <value>21</value>
-  </data>
-  <data name="&gt;&gt;txtProduitObligatoire.Name" xml:space="preserve">
-    <value>txtProduitObligatoire</value>
-  </data>
-  <data name="&gt;&gt;txtProduitObligatoire.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;txtProduitObligatoire.Parent" xml:space="preserve">
-    <value>gbChampsPesée</value>
-  </data>
-  <data name="&gt;&gt;txtProduitObligatoire.ZOrder" xml:space="preserve">
-    <value>22</value>
-  </data>
-  <data name="&gt;&gt;chx_ProduitObligatoire.Name" xml:space="preserve">
-    <value>chx_ProduitObligatoire</value>
-  </data>
-  <data name="&gt;&gt;chx_ProduitObligatoire.Type" xml:space="preserve">
-    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;chx_ProduitObligatoire.Parent" xml:space="preserve">
-    <value>gbChampsPesée</value>
-  </data>
-  <data name="&gt;&gt;chx_ProduitObligatoire.ZOrder" xml:space="preserve">
-    <value>23</value>
-  </data>
-  <data name="&gt;&gt;txtTransporteurObligatoire.Name" xml:space="preserve">
-    <value>txtTransporteurObligatoire</value>
-  </data>
-  <data name="&gt;&gt;txtTransporteurObligatoire.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;txtTransporteurObligatoire.Parent" xml:space="preserve">
-    <value>gbChampsPesée</value>
-  </data>
-  <data name="&gt;&gt;txtTransporteurObligatoire.ZOrder" xml:space="preserve">
-    <value>24</value>
-  </data>
-  <data name="&gt;&gt;chx_TransporteurObligatoire.Name" xml:space="preserve">
-    <value>chx_TransporteurObligatoire</value>
-  </data>
-  <data name="&gt;&gt;chx_TransporteurObligatoire.Type" xml:space="preserve">
-    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;chx_TransporteurObligatoire.Parent" xml:space="preserve">
-    <value>gbChampsPesée</value>
-  </data>
-  <data name="&gt;&gt;chx_TransporteurObligatoire.ZOrder" xml:space="preserve">
-    <value>25</value>
-  </data>
-  <data name="&gt;&gt;txtChauffeurObligatoire.Name" xml:space="preserve">
-    <value>txtChauffeurObligatoire</value>
-  </data>
-  <data name="&gt;&gt;txtChauffeurObligatoire.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;txtChauffeurObligatoire.Parent" xml:space="preserve">
-    <value>gbChampsPesée</value>
-  </data>
-  <data name="&gt;&gt;txtChauffeurObligatoire.ZOrder" xml:space="preserve">
-    <value>26</value>
-  </data>
-  <data name="&gt;&gt;chx_ChauffeurObligatoire.Name" xml:space="preserve">
-    <value>chx_ChauffeurObligatoire</value>
-  </data>
-  <data name="&gt;&gt;chx_ChauffeurObligatoire.Type" xml:space="preserve">
-    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;chx_ChauffeurObligatoire.Parent" xml:space="preserve">
-    <value>gbChampsPesée</value>
-  </data>
-  <data name="&gt;&gt;chx_ChauffeurObligatoire.ZOrder" xml:space="preserve">
-    <value>27</value>
-  </data>
-  <data name="&gt;&gt;txtCamionObligatoire.Name" xml:space="preserve">
-    <value>txtCamionObligatoire</value>
-  </data>
-  <data name="&gt;&gt;txtCamionObligatoire.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;txtCamionObligatoire.Parent" xml:space="preserve">
-    <value>gbChampsPesée</value>
-  </data>
-  <data name="&gt;&gt;txtCamionObligatoire.ZOrder" xml:space="preserve">
-    <value>28</value>
-  </data>
-  <data name="&gt;&gt;chx_CamionObligatoire.Name" xml:space="preserve">
-    <value>chx_CamionObligatoire</value>
-  </data>
-  <data name="&gt;&gt;chx_CamionObligatoire.Type" xml:space="preserve">
-    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;chx_CamionObligatoire.Parent" xml:space="preserve">
-    <value>gbChampsPesée</value>
-  </data>
-  <data name="&gt;&gt;chx_CamionObligatoire.ZOrder" xml:space="preserve">
-    <value>29</value>
-  </data>
-  <data name="&gt;&gt;label10.Name" xml:space="preserve">
-    <value>label10</value>
-  </data>
-  <data name="&gt;&gt;label10.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;label10.Parent" xml:space="preserve">
-    <value>gbChampsPesée</value>
-  </data>
-  <data name="&gt;&gt;label10.ZOrder" xml:space="preserve">
-    <value>30</value>
-  </data>
-  <data name="&gt;&gt;txtFirmeObligatoire.Name" xml:space="preserve">
-    <value>txtFirmeObligatoire</value>
-  </data>
-  <data name="&gt;&gt;txtFirmeObligatoire.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;txtFirmeObligatoire.Parent" xml:space="preserve">
-    <value>gbChampsPesée</value>
-  </data>
-  <data name="&gt;&gt;txtFirmeObligatoire.ZOrder" xml:space="preserve">
-    <value>31</value>
-  </data>
-  <data name="&gt;&gt;chx_FirmeObligatoire.Name" xml:space="preserve">
-    <value>chx_FirmeObligatoire</value>
-  </data>
-  <data name="&gt;&gt;chx_FirmeObligatoire.Type" xml:space="preserve">
-    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;chx_FirmeObligatoire.Parent" xml:space="preserve">
-    <value>gbChampsPesée</value>
-  </data>
-  <data name="&gt;&gt;chx_FirmeObligatoire.ZOrder" xml:space="preserve">
-    <value>32</value>
-  </data>
-  <data name="&gt;&gt;label6.Name" xml:space="preserve">
-    <value>label6</value>
-  </data>
-  <data name="&gt;&gt;label6.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;label6.Parent" xml:space="preserve">
-    <value>gbChampsPesée</value>
-  </data>
-  <data name="&gt;&gt;label6.ZOrder" xml:space="preserve">
-    <value>33</value>
-  </data>
-  <data name="&gt;&gt;txtFirme.Name" xml:space="preserve">
-    <value>txtFirme</value>
-  </data>
-  <data name="&gt;&gt;txtFirme.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;txtFirme.Parent" xml:space="preserve">
-    <value>gbChampsPesée</value>
-  </data>
-  <data name="&gt;&gt;txtFirme.ZOrder" xml:space="preserve">
-    <value>34</value>
-  </data>
-  <data name="&gt;&gt;chx_Firme.Name" xml:space="preserve">
-    <value>chx_Firme</value>
-  </data>
-  <data name="&gt;&gt;chx_Firme.Type" xml:space="preserve">
-    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;chx_Firme.Parent" xml:space="preserve">
-    <value>gbChampsPesée</value>
-  </data>
-  <data name="&gt;&gt;chx_Firme.ZOrder" xml:space="preserve">
-    <value>35</value>
-  </data>
-  <data name="&gt;&gt;label5.Name" xml:space="preserve">
-    <value>label5</value>
-  </data>
-  <data name="&gt;&gt;label5.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;label5.Parent" xml:space="preserve">
-    <value>gbChampsPesée</value>
-  </data>
-  <data name="&gt;&gt;label5.ZOrder" xml:space="preserve">
-    <value>36</value>
-  </data>
-  <data name="&gt;&gt;txtClient.Name" xml:space="preserve">
-    <value>txtClient</value>
-  </data>
-  <data name="&gt;&gt;txtClient.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;txtClient.Parent" xml:space="preserve">
-    <value>gbChampsPesée</value>
-  </data>
-  <data name="&gt;&gt;txtClient.ZOrder" xml:space="preserve">
-    <value>37</value>
-  </data>
-  <data name="&gt;&gt;chx_Client.Name" xml:space="preserve">
-    <value>chx_Client</value>
-  </data>
-  <data name="&gt;&gt;chx_Client.Type" xml:space="preserve">
-    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;chx_Client.Parent" xml:space="preserve">
-    <value>gbChampsPesée</value>
-  </data>
-  <data name="&gt;&gt;chx_Client.ZOrder" xml:space="preserve">
-    <value>38</value>
-  </data>
-  <data name="&gt;&gt;label4.Name" xml:space="preserve">
-    <value>label4</value>
-  </data>
-  <data name="&gt;&gt;label4.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;label4.Parent" xml:space="preserve">
-    <value>gbChampsPesée</value>
-  </data>
-  <data name="&gt;&gt;label4.ZOrder" xml:space="preserve">
-    <value>39</value>
-  </data>
-  <data name="&gt;&gt;txtProduit.Name" xml:space="preserve">
-    <value>txtProduit</value>
-  </data>
-  <data name="&gt;&gt;txtProduit.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;txtProduit.Parent" xml:space="preserve">
-    <value>gbChampsPesée</value>
-  </data>
-  <data name="&gt;&gt;txtProduit.ZOrder" xml:space="preserve">
-    <value>40</value>
-  </data>
-  <data name="&gt;&gt;chx_Produit.Name" xml:space="preserve">
-    <value>chx_Produit</value>
-  </data>
-  <data name="&gt;&gt;chx_Produit.Type" xml:space="preserve">
-    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;chx_Produit.Parent" xml:space="preserve">
-    <value>gbChampsPesée</value>
-  </data>
-  <data name="&gt;&gt;chx_Produit.ZOrder" xml:space="preserve">
-    <value>41</value>
-  </data>
-  <data name="&gt;&gt;label7.Name" xml:space="preserve">
-    <value>label7</value>
-  </data>
-  <data name="&gt;&gt;label7.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;label7.Parent" xml:space="preserve">
-    <value>gbChampsPesée</value>
-  </data>
-  <data name="&gt;&gt;label7.ZOrder" xml:space="preserve">
-    <value>42</value>
-  </data>
-  <data name="&gt;&gt;txtCamion.Name" xml:space="preserve">
-    <value>txtCamion</value>
-  </data>
-  <data name="&gt;&gt;txtCamion.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;txtCamion.Parent" xml:space="preserve">
-    <value>gbChampsPesée</value>
-  </data>
-  <data name="&gt;&gt;txtCamion.ZOrder" xml:space="preserve">
-    <value>43</value>
-  </data>
-  <data name="&gt;&gt;label9.Name" xml:space="preserve">
-    <value>label9</value>
-  </data>
-  <data name="&gt;&gt;label9.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;label9.Parent" xml:space="preserve">
-    <value>gbChampsPesée</value>
-  </data>
-  <data name="&gt;&gt;label9.ZOrder" xml:space="preserve">
-    <value>44</value>
-  </data>
-  <data name="&gt;&gt;txtChauffeur.Name" xml:space="preserve">
-    <value>txtChauffeur</value>
-  </data>
-  <data name="&gt;&gt;txtChauffeur.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;txtChauffeur.Parent" xml:space="preserve">
-    <value>gbChampsPesée</value>
-  </data>
-  <data name="&gt;&gt;txtChauffeur.ZOrder" xml:space="preserve">
-    <value>45</value>
-  </data>
-  <data name="&gt;&gt;label8.Name" xml:space="preserve">
-    <value>label8</value>
-  </data>
-  <data name="&gt;&gt;label8.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;label8.Parent" xml:space="preserve">
-    <value>gbChampsPesée</value>
-  </data>
-  <data name="&gt;&gt;label8.ZOrder" xml:space="preserve">
-    <value>46</value>
-  </data>
-  <data name="&gt;&gt;txtTransporteur.Name" xml:space="preserve">
-    <value>txtTransporteur</value>
-  </data>
-  <data name="&gt;&gt;txtTransporteur.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;txtTransporteur.Parent" xml:space="preserve">
-    <value>gbChampsPesée</value>
-  </data>
-  <data name="&gt;&gt;txtTransporteur.ZOrder" xml:space="preserve">
-    <value>47</value>
-  </data>
-  <data name="&gt;&gt;chx_Transporteur.Name" xml:space="preserve">
-    <value>chx_Transporteur</value>
-  </data>
-  <data name="&gt;&gt;chx_Transporteur.Type" xml:space="preserve">
-    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;chx_Transporteur.Parent" xml:space="preserve">
-    <value>gbChampsPesée</value>
-  </data>
-  <data name="&gt;&gt;chx_Transporteur.ZOrder" xml:space="preserve">
-    <value>48</value>
-  </data>
-  <data name="&gt;&gt;chx_Camion.Name" xml:space="preserve">
-    <value>chx_Camion</value>
-  </data>
-  <data name="&gt;&gt;chx_Camion.Type" xml:space="preserve">
-    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;chx_Camion.Parent" xml:space="preserve">
-    <value>gbChampsPesée</value>
-  </data>
-  <data name="&gt;&gt;chx_Camion.ZOrder" xml:space="preserve">
-    <value>49</value>
-  </data>
-  <data name="&gt;&gt;chx_Chauffeur.Name" xml:space="preserve">
-    <value>chx_Chauffeur</value>
-  </data>
-  <data name="&gt;&gt;chx_Chauffeur.Type" xml:space="preserve">
-    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;chx_Chauffeur.Parent" xml:space="preserve">
-    <value>gbChampsPesée</value>
-  </data>
-  <data name="&gt;&gt;chx_Chauffeur.ZOrder" xml:space="preserve">
-    <value>50</value>
-  </data>
-  <data name="gbChampsPesée.Font" type="System.Drawing.Font, System.Drawing">
+  <data name="gbFiltres.Font" type="System.Drawing.Font, System.Drawing">
     <value>Calibri, 12pt</value>
   </data>
-  <data name="gbChampsPesée.Location" type="System.Drawing.Point, System.Drawing">
-    <value>174, 137</value>
+  <data name="gbFiltres.Location" type="System.Drawing.Point, System.Drawing">
+    <value>723, 137</value>
   </data>
-  <data name="gbChampsPesée.Size" type="System.Drawing.Size, System.Drawing">
-    <value>543, 341</value>
+  <data name="gbFiltres.Size" type="System.Drawing.Size, System.Drawing">
+    <value>296, 341</value>
   </data>
-  <data name="gbChampsPesée.TabIndex" type="System.Int32, mscorlib">
-    <value>71</value>
+  <data name="gbFiltres.TabIndex" type="System.Int32, mscorlib">
+    <value>83</value>
   </data>
-  <data name="gbChampsPesée.Text" xml:space="preserve">
-    <value>Champs de la pesée</value>
+  <data name="gbFiltres.Text" xml:space="preserve">
+    <value>Filtres de la pesée</value>
   </data>
-  <data name="&gt;&gt;gbChampsPesée.Name" xml:space="preserve">
-    <value>gbChampsPesée</value>
+  <data name="&gt;&gt;gbFiltres.Name" xml:space="preserve">
+    <value>gbFiltres</value>
   </data>
-  <data name="&gt;&gt;gbChampsPesée.Type" xml:space="preserve">
+  <data name="&gt;&gt;gbFiltres.Type" xml:space="preserve">
     <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;gbChampsPesée.Parent" xml:space="preserve">
+  <data name="&gt;&gt;gbFiltres.Parent" xml:space="preserve">
     <value>General</value>
   </data>
-  <data name="&gt;&gt;gbChampsPesée.ZOrder" xml:space="preserve">
-    <value>2</value>
+  <data name="&gt;&gt;gbFiltres.ZOrder" xml:space="preserve">
+    <value>1</value>
   </data>
   <data name="txtAjoutFirme.Enabled" type="System.Boolean, mscorlib">
     <value>False</value>
@@ -3097,6 +2218,33 @@
   <data name="&gt;&gt;chx_Chauffeur.ZOrder" xml:space="preserve">
     <value>50</value>
   </data>
+  <data name="gbChampsPesée.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Calibri, 12pt</value>
+  </data>
+  <data name="gbChampsPesée.Location" type="System.Drawing.Point, System.Drawing">
+    <value>174, 137</value>
+  </data>
+  <data name="gbChampsPesée.Size" type="System.Drawing.Size, System.Drawing">
+    <value>543, 341</value>
+  </data>
+  <data name="gbChampsPesée.TabIndex" type="System.Int32, mscorlib">
+    <value>71</value>
+  </data>
+  <data name="gbChampsPesée.Text" xml:space="preserve">
+    <value>Champs de la pesée</value>
+  </data>
+  <data name="&gt;&gt;gbChampsPesée.Name" xml:space="preserve">
+    <value>gbChampsPesée</value>
+  </data>
+  <data name="&gt;&gt;gbChampsPesée.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;gbChampsPesée.Parent" xml:space="preserve">
+    <value>General</value>
+  </data>
+  <data name="&gt;&gt;gbChampsPesée.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
   <data name="txtDateCreation.Font" type="System.Drawing.Font, System.Drawing">
     <value>Calibri, 12pt</value>
   </data>
@@ -3270,6 +2418,18 @@
   </data>
   <data name="&gt;&gt;label1.ZOrder" xml:space="preserve">
     <value>5</value>
+  </data>
+  <data name="RqPont.Location" type="System.Drawing.Point, System.Drawing">
+    <value>472, 99</value>
+  </data>
+  <data name="RqPont.Size" type="System.Drawing.Size, System.Drawing">
+    <value>28, 22</value>
+  </data>
+  <data name="RqPont.SizeMode" type="System.Windows.Forms.PictureBoxSizeMode, System.Windows.Forms">
+    <value>CenterImage</value>
+  </data>
+  <data name="RqPont.TabIndex" type="System.Int32, mscorlib">
+    <value>130</value>
   </data>
   <data name="&gt;&gt;RqPont.Name" xml:space="preserve">
     <value>RqPont</value>
@@ -3475,9 +2635,6 @@
   <data name="label38.Text" xml:space="preserve">
     <value>Champ libre 4</value>
   </data>
-  <data name="label38.Visible" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
   <data name="&gt;&gt;label38.Name" xml:space="preserve">
     <value>label38</value>
   </data>
@@ -3501,9 +2658,6 @@
   </data>
   <data name="txtChampLibre4.TabIndex" type="System.Int32, mscorlib">
     <value>220</value>
-  </data>
-  <data name="txtChampLibre4.Visible" type="System.Boolean, mscorlib">
-    <value>False</value>
   </data>
   <data name="&gt;&gt;txtChampLibre4.Name" xml:space="preserve">
     <value>txtChampLibre4</value>
@@ -3682,9 +2836,6 @@
   <data name="label37.Text" xml:space="preserve">
     <value>Champ libre 3</value>
   </data>
-  <data name="label37.Visible" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
   <data name="&gt;&gt;label37.Name" xml:space="preserve">
     <value>label37</value>
   </data>
@@ -3708,9 +2859,6 @@
   </data>
   <data name="txtChampLibre3.TabIndex" type="System.Int32, mscorlib">
     <value>213</value>
-  </data>
-  <data name="txtChampLibre3.Visible" type="System.Boolean, mscorlib">
-    <value>False</value>
   </data>
   <data name="&gt;&gt;txtChampLibre3.Name" xml:space="preserve">
     <value>txtChampLibre3</value>
@@ -3889,9 +3037,6 @@
   <data name="label36.Text" xml:space="preserve">
     <value>Champ libre 2</value>
   </data>
-  <data name="label36.Visible" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
   <data name="&gt;&gt;label36.Name" xml:space="preserve">
     <value>label36</value>
   </data>
@@ -3915,9 +3060,6 @@
   </data>
   <data name="txtChampLibre2.TabIndex" type="System.Int32, mscorlib">
     <value>206</value>
-  </data>
-  <data name="txtChampLibre2.Visible" type="System.Boolean, mscorlib">
-    <value>False</value>
   </data>
   <data name="&gt;&gt;txtChampLibre2.Name" xml:space="preserve">
     <value>txtChampLibre2</value>
@@ -4195,9 +3337,6 @@
   <data name="lbChampLibre1.Text" xml:space="preserve">
     <value>Champ libre 1</value>
   </data>
-  <data name="lbChampLibre1.Visible" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
   <data name="&gt;&gt;lbChampLibre1.Name" xml:space="preserve">
     <value>lbChampLibre1</value>
   </data>
@@ -4221,9 +3360,6 @@
   </data>
   <data name="txtChampLibre1.TabIndex" type="System.Int32, mscorlib">
     <value>196</value>
-  </data>
-  <data name="txtChampLibre1.Visible" type="System.Boolean, mscorlib">
-    <value>False</value>
   </data>
   <data name="&gt;&gt;txtChampLibre1.Name" xml:space="preserve">
     <value>txtChampLibre1</value>
@@ -6655,213 +5791,6 @@
   <data name="&gt;&gt;ChampsSupplementaire.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
-  <data name="&gt;&gt;pbLogo.Name" xml:space="preserve">
-    <value>pbLogo</value>
-  </data>
-  <data name="&gt;&gt;pbLogo.Type" xml:space="preserve">
-    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;pbLogo.Parent" xml:space="preserve">
-    <value>Ticket</value>
-  </data>
-  <data name="&gt;&gt;pbLogo.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;label30.Name" xml:space="preserve">
-    <value>label30</value>
-  </data>
-  <data name="&gt;&gt;label30.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;label30.Parent" xml:space="preserve">
-    <value>Ticket</value>
-  </data>
-  <data name="&gt;&gt;label30.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="&gt;&gt;label29.Name" xml:space="preserve">
-    <value>label29</value>
-  </data>
-  <data name="&gt;&gt;label29.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;label29.Parent" xml:space="preserve">
-    <value>Ticket</value>
-  </data>
-  <data name="&gt;&gt;label29.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="&gt;&gt;cbFormat.Name" xml:space="preserve">
-    <value>cbFormat</value>
-  </data>
-  <data name="&gt;&gt;cbFormat.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;cbFormat.Parent" xml:space="preserve">
-    <value>Ticket</value>
-  </data>
-  <data name="&gt;&gt;cbFormat.ZOrder" xml:space="preserve">
-    <value>3</value>
-  </data>
-  <data name="&gt;&gt;label27.Name" xml:space="preserve">
-    <value>label27</value>
-  </data>
-  <data name="&gt;&gt;label27.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;label27.Parent" xml:space="preserve">
-    <value>Ticket</value>
-  </data>
-  <data name="&gt;&gt;label27.ZOrder" xml:space="preserve">
-    <value>4</value>
-  </data>
-  <data name="&gt;&gt;txtFooter.Name" xml:space="preserve">
-    <value>txtFooter</value>
-  </data>
-  <data name="&gt;&gt;txtFooter.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;txtFooter.Parent" xml:space="preserve">
-    <value>Ticket</value>
-  </data>
-  <data name="&gt;&gt;txtFooter.ZOrder" xml:space="preserve">
-    <value>5</value>
-  </data>
-  <data name="&gt;&gt;label26.Name" xml:space="preserve">
-    <value>label26</value>
-  </data>
-  <data name="&gt;&gt;label26.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;label26.Parent" xml:space="preserve">
-    <value>Ticket</value>
-  </data>
-  <data name="&gt;&gt;label26.ZOrder" xml:space="preserve">
-    <value>6</value>
-  </data>
-  <data name="&gt;&gt;txtTitre2.Name" xml:space="preserve">
-    <value>txtTitre2</value>
-  </data>
-  <data name="&gt;&gt;txtTitre2.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;txtTitre2.Parent" xml:space="preserve">
-    <value>Ticket</value>
-  </data>
-  <data name="&gt;&gt;txtTitre2.ZOrder" xml:space="preserve">
-    <value>7</value>
-  </data>
-  <data name="&gt;&gt;pictureBox4.Name" xml:space="preserve">
-    <value>pictureBox4</value>
-  </data>
-  <data name="&gt;&gt;pictureBox4.Type" xml:space="preserve">
-    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;pictureBox4.Parent" xml:space="preserve">
-    <value>Ticket</value>
-  </data>
-  <data name="&gt;&gt;pictureBox4.ZOrder" xml:space="preserve">
-    <value>8</value>
-  </data>
-  <data name="&gt;&gt;label25.Name" xml:space="preserve">
-    <value>label25</value>
-  </data>
-  <data name="&gt;&gt;label25.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;label25.Parent" xml:space="preserve">
-    <value>Ticket</value>
-  </data>
-  <data name="&gt;&gt;label25.ZOrder" xml:space="preserve">
-    <value>9</value>
-  </data>
-  <data name="&gt;&gt;txtTitre1.Name" xml:space="preserve">
-    <value>txtTitre1</value>
-  </data>
-  <data name="&gt;&gt;txtTitre1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;txtTitre1.Parent" xml:space="preserve">
-    <value>Ticket</value>
-  </data>
-  <data name="&gt;&gt;txtTitre1.ZOrder" xml:space="preserve">
-    <value>10</value>
-  </data>
-  <data name="Ticket.Location" type="System.Drawing.Point, System.Drawing">
-    <value>4, 24</value>
-  </data>
-  <data name="Ticket.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>3, 3, 3, 3</value>
-  </data>
-  <data name="Ticket.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1040, 486</value>
-  </data>
-  <data name="Ticket.TabIndex" type="System.Int32, mscorlib">
-    <value>2</value>
-  </data>
-  <data name="Ticket.Text" xml:space="preserve">
-    <value>Ticket</value>
-  </data>
-  <data name="&gt;&gt;Ticket.Name" xml:space="preserve">
-    <value>Ticket</value>
-  </data>
-  <data name="&gt;&gt;Ticket.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;Ticket.Parent" xml:space="preserve">
-    <value>tabControl2</value>
-  </data>
-  <data name="&gt;&gt;Ticket.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="tabControl2.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Fill</value>
-  </data>
-  <data name="tabControl2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 70</value>
-  </data>
-  <data name="tabControl2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1048, 514</value>
-  </data>
-  <data name="tabControl2.TabIndex" type="System.Int32, mscorlib">
-    <value>84</value>
-  </data>
-  <data name="&gt;&gt;tabControl2.Name" xml:space="preserve">
-    <value>tabControl2</value>
-  </data>
-  <data name="&gt;&gt;tabControl2.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TabControl, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;tabControl2.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;tabControl2.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="RqPont.Location" type="System.Drawing.Point, System.Drawing">
-    <value>472, 99</value>
-  </data>
-  <data name="RqPont.Size" type="System.Drawing.Size, System.Drawing">
-    <value>28, 22</value>
-  </data>
-  <data name="RqPont.SizeMode" type="System.Windows.Forms.PictureBoxSizeMode, System.Windows.Forms">
-    <value>CenterImage</value>
-  </data>
-  <data name="RqPont.TabIndex" type="System.Int32, mscorlib">
-    <value>130</value>
-  </data>
-  <data name="&gt;&gt;RqPont.Name" xml:space="preserve">
-    <value>RqPont</value>
-  </data>
-  <data name="&gt;&gt;RqPont.Type" xml:space="preserve">
-    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;RqPont.Parent" xml:space="preserve">
-    <value>General</value>
-  </data>
-  <data name="&gt;&gt;RqPont.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
   <data name="pbLogo.Location" type="System.Drawing.Point, System.Drawing">
     <value>137, 216</value>
   </data>
@@ -7173,6 +6102,57 @@
   </data>
   <data name="&gt;&gt;txtTitre1.ZOrder" xml:space="preserve">
     <value>10</value>
+  </data>
+  <data name="Ticket.Location" type="System.Drawing.Point, System.Drawing">
+    <value>4, 24</value>
+  </data>
+  <data name="Ticket.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 3, 3, 3</value>
+  </data>
+  <data name="Ticket.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1040, 486</value>
+  </data>
+  <data name="Ticket.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="Ticket.Text" xml:space="preserve">
+    <value>Ticket</value>
+  </data>
+  <data name="&gt;&gt;Ticket.Name" xml:space="preserve">
+    <value>Ticket</value>
+  </data>
+  <data name="&gt;&gt;Ticket.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Ticket.Parent" xml:space="preserve">
+    <value>tabControl2</value>
+  </data>
+  <data name="&gt;&gt;Ticket.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="tabControl2.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="tabControl2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 70</value>
+  </data>
+  <data name="tabControl2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1048, 514</value>
+  </data>
+  <data name="tabControl2.TabIndex" type="System.Int32, mscorlib">
+    <value>84</value>
+  </data>
+  <data name="&gt;&gt;tabControl2.Name" xml:space="preserve">
+    <value>tabControl2</value>
+  </data>
+  <data name="&gt;&gt;tabControl2.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TabControl, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;tabControl2.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;tabControl2.ZOrder" xml:space="preserve">
+    <value>0</value>
   </data>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>

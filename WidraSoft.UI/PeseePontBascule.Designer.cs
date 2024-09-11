@@ -60,6 +60,10 @@
             this.rb2x1 = new System.Windows.Forms.RadioButton();
             this.rb1x = new System.Windows.Forms.RadioButton();
             this.panelData = new System.Windows.Forms.Panel();
+            this.RqChampLibre4 = new System.Windows.Forms.PictureBox();
+            this.RqChampLibre3 = new System.Windows.Forms.PictureBox();
+            this.RqChampLibre2 = new System.Windows.Forms.PictureBox();
+            this.RqChampLibre1 = new System.Windows.Forms.PictureBox();
             this.lbChampLibre4 = new System.Windows.Forms.Label();
             this.txtChampLibre4 = new System.Windows.Forms.TextBox();
             this.lbChampLibre3 = new System.Windows.Forms.Label();
@@ -168,7 +172,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.panelWeightDisplay = new System.Windows.Forms.Panel();
             this.lbWeighingSettings = new System.Windows.Forms.Label();
-            this.button2 = new System.Windows.Forms.Button();
+            this.btParametrePoids = new System.Windows.Forms.Button();
             this.btSimulateur = new System.Windows.Forms.Button();
             this.txtPoids = new System.Windows.Forms.TextBox();
             this.lbWeightSettings = new System.Windows.Forms.Label();
@@ -182,6 +186,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.France_flag)).BeginInit();
             this.gbTypePesee.SuspendLayout();
             this.panelData.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.RqChampLibre4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.RqChampLibre3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.RqChampLibre2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.RqChampLibre1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbOnScale)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Filter7)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Filter6)).BeginInit();
@@ -567,6 +575,10 @@
             // panelData
             // 
             this.panelData.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(86)))), ((int)(((byte)(81)))));
+            this.panelData.Controls.Add(this.RqChampLibre4);
+            this.panelData.Controls.Add(this.RqChampLibre3);
+            this.panelData.Controls.Add(this.RqChampLibre2);
+            this.panelData.Controls.Add(this.RqChampLibre1);
             this.panelData.Controls.Add(this.lbChampLibre4);
             this.panelData.Controls.Add(this.txtChampLibre4);
             this.panelData.Controls.Add(this.lbChampLibre3);
@@ -659,8 +671,48 @@
             this.panelData.Dock = System.Windows.Forms.DockStyle.Left;
             this.panelData.Location = new System.Drawing.Point(0, 0);
             this.panelData.Name = "panelData";
-            this.panelData.Size = new System.Drawing.Size(755, 617);
+            this.panelData.Size = new System.Drawing.Size(768, 617);
             this.panelData.TabIndex = 109;
+            // 
+            // RqChampLibre4
+            // 
+            this.RqChampLibre4.Image = global::WidraSoft.UI.Properties.Resources.asterisk;
+            this.RqChampLibre4.Location = new System.Drawing.Point(539, 332);
+            this.RqChampLibre4.Name = "RqChampLibre4";
+            this.RqChampLibre4.Size = new System.Drawing.Size(28, 22);
+            this.RqChampLibre4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.RqChampLibre4.TabIndex = 199;
+            this.RqChampLibre4.TabStop = false;
+            // 
+            // RqChampLibre3
+            // 
+            this.RqChampLibre3.Image = global::WidraSoft.UI.Properties.Resources.asterisk;
+            this.RqChampLibre3.Location = new System.Drawing.Point(539, 269);
+            this.RqChampLibre3.Name = "RqChampLibre3";
+            this.RqChampLibre3.Size = new System.Drawing.Size(28, 22);
+            this.RqChampLibre3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.RqChampLibre3.TabIndex = 198;
+            this.RqChampLibre3.TabStop = false;
+            // 
+            // RqChampLibre2
+            // 
+            this.RqChampLibre2.Image = global::WidraSoft.UI.Properties.Resources.asterisk;
+            this.RqChampLibre2.Location = new System.Drawing.Point(539, 205);
+            this.RqChampLibre2.Name = "RqChampLibre2";
+            this.RqChampLibre2.Size = new System.Drawing.Size(28, 22);
+            this.RqChampLibre2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.RqChampLibre2.TabIndex = 197;
+            this.RqChampLibre2.TabStop = false;
+            // 
+            // RqChampLibre1
+            // 
+            this.RqChampLibre1.Image = global::WidraSoft.UI.Properties.Resources.asterisk;
+            this.RqChampLibre1.Location = new System.Drawing.Point(539, 140);
+            this.RqChampLibre1.Name = "RqChampLibre1";
+            this.RqChampLibre1.Size = new System.Drawing.Size(28, 22);
+            this.RqChampLibre1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.RqChampLibre1.TabIndex = 196;
+            this.RqChampLibre1.TabStop = false;
             // 
             // lbChampLibre4
             // 
@@ -668,7 +720,7 @@
             this.lbChampLibre4.Font = new System.Drawing.Font("Calibri", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.lbChampLibre4.ForeColor = System.Drawing.Color.White;
             this.lbChampLibre4.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.lbChampLibre4.Location = new System.Drawing.Point(613, 526);
+            this.lbChampLibre4.Location = new System.Drawing.Point(567, 334);
             this.lbChampLibre4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbChampLibre4.Name = "lbChampLibre4";
             this.lbChampLibre4.Size = new System.Drawing.Size(93, 18);
@@ -681,9 +733,9 @@
             this.txtChampLibre4.BackColor = System.Drawing.Color.Honeydew;
             this.txtChampLibre4.Font = new System.Drawing.Font("Calibri", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.txtChampLibre4.ForeColor = System.Drawing.Color.Black;
-            this.txtChampLibre4.Location = new System.Drawing.Point(572, 548);
+            this.txtChampLibre4.Location = new System.Drawing.Point(543, 356);
             this.txtChampLibre4.Name = "txtChampLibre4";
-            this.txtChampLibre4.Size = new System.Drawing.Size(177, 25);
+            this.txtChampLibre4.Size = new System.Drawing.Size(204, 25);
             this.txtChampLibre4.TabIndex = 194;
             this.txtChampLibre4.Visible = false;
             // 
@@ -693,7 +745,7 @@
             this.lbChampLibre3.Font = new System.Drawing.Font("Calibri", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.lbChampLibre3.ForeColor = System.Drawing.Color.White;
             this.lbChampLibre3.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.lbChampLibre3.Location = new System.Drawing.Point(613, 464);
+            this.lbChampLibre3.Location = new System.Drawing.Point(567, 271);
             this.lbChampLibre3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbChampLibre3.Name = "lbChampLibre3";
             this.lbChampLibre3.Size = new System.Drawing.Size(93, 18);
@@ -706,9 +758,9 @@
             this.txtChampLibre3.BackColor = System.Drawing.Color.Honeydew;
             this.txtChampLibre3.Font = new System.Drawing.Font("Calibri", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.txtChampLibre3.ForeColor = System.Drawing.Color.Black;
-            this.txtChampLibre3.Location = new System.Drawing.Point(572, 486);
+            this.txtChampLibre3.Location = new System.Drawing.Point(543, 293);
             this.txtChampLibre3.Name = "txtChampLibre3";
-            this.txtChampLibre3.Size = new System.Drawing.Size(177, 25);
+            this.txtChampLibre3.Size = new System.Drawing.Size(204, 25);
             this.txtChampLibre3.TabIndex = 192;
             this.txtChampLibre3.Visible = false;
             // 
@@ -718,7 +770,7 @@
             this.lbChampLibre2.Font = new System.Drawing.Font("Calibri", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.lbChampLibre2.ForeColor = System.Drawing.Color.White;
             this.lbChampLibre2.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.lbChampLibre2.Location = new System.Drawing.Point(613, 398);
+            this.lbChampLibre2.Location = new System.Drawing.Point(567, 207);
             this.lbChampLibre2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbChampLibre2.Name = "lbChampLibre2";
             this.lbChampLibre2.Size = new System.Drawing.Size(93, 18);
@@ -731,9 +783,9 @@
             this.txtChampLibre2.BackColor = System.Drawing.Color.Honeydew;
             this.txtChampLibre2.Font = new System.Drawing.Font("Calibri", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.txtChampLibre2.ForeColor = System.Drawing.Color.Black;
-            this.txtChampLibre2.Location = new System.Drawing.Point(572, 420);
+            this.txtChampLibre2.Location = new System.Drawing.Point(543, 229);
             this.txtChampLibre2.Name = "txtChampLibre2";
-            this.txtChampLibre2.Size = new System.Drawing.Size(177, 25);
+            this.txtChampLibre2.Size = new System.Drawing.Size(204, 25);
             this.txtChampLibre2.TabIndex = 190;
             this.txtChampLibre2.Visible = false;
             // 
@@ -743,7 +795,7 @@
             this.lbChampLibre1.Font = new System.Drawing.Font("Calibri", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.lbChampLibre1.ForeColor = System.Drawing.Color.White;
             this.lbChampLibre1.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.lbChampLibre1.Location = new System.Drawing.Point(613, 334);
+            this.lbChampLibre1.Location = new System.Drawing.Point(567, 142);
             this.lbChampLibre1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbChampLibre1.Name = "lbChampLibre1";
             this.lbChampLibre1.Size = new System.Drawing.Size(93, 18);
@@ -756,9 +808,9 @@
             this.txtChampLibre1.BackColor = System.Drawing.Color.Honeydew;
             this.txtChampLibre1.Font = new System.Drawing.Font("Calibri", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.txtChampLibre1.ForeColor = System.Drawing.Color.Black;
-            this.txtChampLibre1.Location = new System.Drawing.Point(572, 356);
+            this.txtChampLibre1.Location = new System.Drawing.Point(543, 164);
             this.txtChampLibre1.Name = "txtChampLibre1";
-            this.txtChampLibre1.Size = new System.Drawing.Size(177, 25);
+            this.txtChampLibre1.Size = new System.Drawing.Size(204, 25);
             this.txtChampLibre1.TabIndex = 188;
             this.txtChampLibre1.Visible = false;
             // 
@@ -778,7 +830,7 @@
             this.T50PLUS.BackColor = System.Drawing.Color.Red;
             this.T50PLUS.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.T50PLUS.Font = new System.Drawing.Font("Segoe UI", 3F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.T50PLUS.Location = new System.Drawing.Point(679, 8);
+            this.T50PLUS.Location = new System.Drawing.Point(693, 8);
             this.T50PLUS.Name = "T50PLUS";
             this.T50PLUS.ReadOnly = true;
             this.T50PLUS.Size = new System.Drawing.Size(72, 6);
@@ -790,7 +842,7 @@
             this.T30A50.BackColor = System.Drawing.Color.Tomato;
             this.T30A50.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.T30A50.Font = new System.Drawing.Font("Segoe UI", 3F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.T30A50.Location = new System.Drawing.Point(679, 27);
+            this.T30A50.Location = new System.Drawing.Point(693, 27);
             this.T30A50.Name = "T30A50";
             this.T30A50.ReadOnly = true;
             this.T30A50.Size = new System.Drawing.Size(72, 6);
@@ -802,7 +854,7 @@
             this.T20A30.BackColor = System.Drawing.Color.DarkOrange;
             this.T20A30.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.T20A30.Font = new System.Drawing.Font("Segoe UI", 3F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.T20A30.Location = new System.Drawing.Point(679, 47);
+            this.T20A30.Location = new System.Drawing.Point(693, 47);
             this.T20A30.Name = "T20A30";
             this.T20A30.ReadOnly = true;
             this.T20A30.Size = new System.Drawing.Size(72, 6);
@@ -814,7 +866,7 @@
             this.T13A20.BackColor = System.Drawing.Color.Orange;
             this.T13A20.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.T13A20.Font = new System.Drawing.Font("Segoe UI", 3F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.T13A20.Location = new System.Drawing.Point(697, 68);
+            this.T13A20.Location = new System.Drawing.Point(711, 68);
             this.T13A20.Name = "T13A20";
             this.T13A20.ReadOnly = true;
             this.T13A20.Size = new System.Drawing.Size(54, 6);
@@ -827,7 +879,7 @@
             this.T10A13.BackColor = System.Drawing.Color.Goldenrod;
             this.T10A13.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.T10A13.Font = new System.Drawing.Font("Segoe UI", 3F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.T10A13.Location = new System.Drawing.Point(714, 89);
+            this.T10A13.Location = new System.Drawing.Point(728, 89);
             this.T10A13.Name = "T10A13";
             this.T10A13.ReadOnly = true;
             this.T10A13.Size = new System.Drawing.Size(37, 6);
@@ -839,7 +891,7 @@
             this.T7A10.BackColor = System.Drawing.Color.Gold;
             this.T7A10.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.T7A10.Font = new System.Drawing.Font("Segoe UI", 3F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.T7A10.Location = new System.Drawing.Point(727, 110);
+            this.T7A10.Location = new System.Drawing.Point(741, 110);
             this.T7A10.Name = "T7A10";
             this.T7A10.ReadOnly = true;
             this.T7A10.Size = new System.Drawing.Size(24, 6);
@@ -851,7 +903,7 @@
             this.T5A7.BackColor = System.Drawing.Color.Khaki;
             this.T5A7.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.T5A7.Font = new System.Drawing.Font("Segoe UI", 3F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.T5A7.Location = new System.Drawing.Point(738, 133);
+            this.T5A7.Location = new System.Drawing.Point(752, 133);
             this.T5A7.Name = "T5A7";
             this.T5A7.ReadOnly = true;
             this.T5A7.Size = new System.Drawing.Size(13, 6);
@@ -863,7 +915,7 @@
             this.T2A5.BackColor = System.Drawing.Color.GreenYellow;
             this.T2A5.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.T2A5.Font = new System.Drawing.Font("Segoe UI", 3F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.T2A5.Location = new System.Drawing.Point(738, 156);
+            this.T2A5.Location = new System.Drawing.Point(752, 156);
             this.T2A5.Name = "T2A5";
             this.T2A5.ReadOnly = true;
             this.T2A5.Size = new System.Drawing.Size(13, 6);
@@ -875,7 +927,7 @@
             this.T0A2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(112)))), ((int)(((byte)(228)))), ((int)(((byte)(132)))));
             this.T0A2.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.T0A2.Font = new System.Drawing.Font("Segoe UI", 3F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.T0A2.Location = new System.Drawing.Point(738, 178);
+            this.T0A2.Location = new System.Drawing.Point(752, 178);
             this.T0A2.Name = "T0A2";
             this.T0A2.ReadOnly = true;
             this.T0A2.Size = new System.Drawing.Size(13, 6);
@@ -1428,7 +1480,7 @@
             this.panel3.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panel3.Location = new System.Drawing.Point(108, 590);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(647, 27);
+            this.panel3.Size = new System.Drawing.Size(660, 27);
             this.panel3.TabIndex = 3;
             // 
             // menuStrip
@@ -1750,7 +1802,7 @@
             this.lbTareCamion.Font = new System.Drawing.Font("Calibri", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.lbTareCamion.ForeColor = System.Drawing.Color.White;
             this.lbTareCamion.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.lbTareCamion.Location = new System.Drawing.Point(572, 175);
+            this.lbTareCamion.Location = new System.Drawing.Point(543, 81);
             this.lbTareCamion.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbTareCamion.Name = "lbTareCamion";
             this.lbTareCamion.Size = new System.Drawing.Size(62, 18);
@@ -1763,9 +1815,9 @@
             this.txtTareCamion.BackColor = System.Drawing.Color.Honeydew;
             this.txtTareCamion.Font = new System.Drawing.Font("Calibri", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.txtTareCamion.ForeColor = System.Drawing.Color.Black;
-            this.txtTareCamion.Location = new System.Drawing.Point(572, 197);
+            this.txtTareCamion.Location = new System.Drawing.Point(543, 102);
             this.txtTareCamion.Name = "txtTareCamion";
-            this.txtTareCamion.Size = new System.Drawing.Size(74, 25);
+            this.txtTareCamion.Size = new System.Drawing.Size(91, 25);
             this.txtTareCamion.TabIndex = 111;
             this.txtTareCamion.Visible = false;
             // 
@@ -1848,7 +1900,7 @@
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.DgvList.DefaultCellStyle = dataGridViewCellStyle2;
             this.DgvList.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.DgvList.Location = new System.Drawing.Point(755, 233);
+            this.DgvList.Location = new System.Drawing.Point(768, 233);
             this.DgvList.Name = "DgvList";
             this.DgvList.ReadOnly = true;
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
@@ -1861,7 +1913,7 @@
             this.DgvList.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.DgvList.RowHeadersWidth = 62;
             this.DgvList.RowTemplate.Height = 33;
-            this.DgvList.Size = new System.Drawing.Size(516, 357);
+            this.DgvList.Size = new System.Drawing.Size(503, 357);
             this.DgvList.TabIndex = 1;
             this.DgvList.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DgvList_CellDoubleClick);
             // 
@@ -1872,11 +1924,11 @@
             this.menuStrip1.ImageScalingSize = new System.Drawing.Size(24, 24);
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripSearch});
-            this.menuStrip1.Location = new System.Drawing.Point(755, 189);
+            this.menuStrip1.Location = new System.Drawing.Point(768, 189);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Padding = new System.Windows.Forms.Padding(0, 0, 0, 1);
             this.menuStrip1.RenderMode = System.Windows.Forms.ToolStripRenderMode.Professional;
-            this.menuStrip1.Size = new System.Drawing.Size(516, 44);
+            this.menuStrip1.Size = new System.Drawing.Size(503, 44);
             this.menuStrip1.TabIndex = 129;
             this.menuStrip1.Text = "menuStripDgv";
             // 
@@ -1892,9 +1944,9 @@
             // panel2
             // 
             this.panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel2.Location = new System.Drawing.Point(755, 590);
+            this.panel2.Location = new System.Drawing.Point(768, 590);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(516, 27);
+            this.panel2.Size = new System.Drawing.Size(503, 27);
             this.panel2.TabIndex = 2;
             // 
             // panelWeightDetails
@@ -1910,9 +1962,9 @@
             this.panelWeightDetails.Controls.Add(this.label2);
             this.panelWeightDetails.Controls.Add(this.label1);
             this.panelWeightDetails.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelWeightDetails.Location = new System.Drawing.Point(755, 101);
+            this.panelWeightDetails.Location = new System.Drawing.Point(768, 101);
             this.panelWeightDetails.Name = "panelWeightDetails";
-            this.panelWeightDetails.Size = new System.Drawing.Size(516, 88);
+            this.panelWeightDetails.Size = new System.Drawing.Size(503, 88);
             this.panelWeightDetails.TabIndex = 112;
             // 
             // lbDateHeurePoidsTare
@@ -2039,16 +2091,16 @@
             // 
             this.panelWeightDisplay.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(62)))), ((int)(((byte)(60)))));
             this.panelWeightDisplay.Controls.Add(this.lbWeighingSettings);
-            this.panelWeightDisplay.Controls.Add(this.button2);
+            this.panelWeightDisplay.Controls.Add(this.btParametrePoids);
             this.panelWeightDisplay.Controls.Add(this.btSimulateur);
             this.panelWeightDisplay.Controls.Add(this.txtPoids);
             this.panelWeightDisplay.Controls.Add(this.lbWeightSettings);
             this.panelWeightDisplay.Controls.Add(this.lbCOM);
             this.panelWeightDisplay.Controls.Add(this.lbStatus);
             this.panelWeightDisplay.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelWeightDisplay.Location = new System.Drawing.Point(755, 0);
+            this.panelWeightDisplay.Location = new System.Drawing.Point(768, 0);
             this.panelWeightDisplay.Name = "panelWeightDisplay";
-            this.panelWeightDisplay.Size = new System.Drawing.Size(516, 101);
+            this.panelWeightDisplay.Size = new System.Drawing.Size(503, 101);
             this.panelWeightDisplay.TabIndex = 111;
             // 
             // lbWeighingSettings
@@ -2064,19 +2116,21 @@
             this.lbWeighingSettings.TabIndex = 120;
             this.lbWeighingSettings.Text = "COM";
             // 
-            // button2
+            // btParametrePoids
             // 
-            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(62)))), ((int)(((byte)(60)))));
-            this.button2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button2.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(112)))), ((int)(((byte)(228)))), ((int)(((byte)(132)))));
-            this.button2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(86)))), ((int)(((byte)(81)))));
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Image = global::WidraSoft.UI.Properties.Resources.expand_arrows;
-            this.button2.Location = new System.Drawing.Point(0, 52);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(49, 48);
-            this.button2.TabIndex = 119;
-            this.button2.UseVisualStyleBackColor = false;
+            this.btParametrePoids.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(62)))), ((int)(((byte)(60)))));
+            this.btParametrePoids.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btParametrePoids.Enabled = false;
+            this.btParametrePoids.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(112)))), ((int)(((byte)(228)))), ((int)(((byte)(132)))));
+            this.btParametrePoids.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(86)))), ((int)(((byte)(81)))));
+            this.btParametrePoids.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btParametrePoids.Image = global::WidraSoft.UI.Properties.Resources.expand_arrows;
+            this.btParametrePoids.Location = new System.Drawing.Point(0, 52);
+            this.btParametrePoids.Name = "btParametrePoids";
+            this.btParametrePoids.Size = new System.Drawing.Size(49, 48);
+            this.btParametrePoids.TabIndex = 119;
+            this.btParametrePoids.UseVisualStyleBackColor = false;
+            this.btParametrePoids.Click += new System.EventHandler(this.btSaisirPoids_Click);
             // 
             // btSimulateur
             // 
@@ -2100,7 +2154,7 @@
             this.txtPoids.Dock = System.Windows.Forms.DockStyle.Right;
             this.txtPoids.Font = new System.Drawing.Font("Calibri", 60F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point);
             this.txtPoids.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(112)))), ((int)(((byte)(228)))), ((int)(((byte)(132)))));
-            this.txtPoids.Location = new System.Drawing.Point(246, 0);
+            this.txtPoids.Location = new System.Drawing.Point(233, 0);
             this.txtPoids.Name = "txtPoids";
             this.txtPoids.Size = new System.Drawing.Size(270, 98);
             this.txtPoids.TabIndex = 113;
@@ -2165,6 +2219,10 @@
             this.gbTypePesee.PerformLayout();
             this.panelData.ResumeLayout(false);
             this.panelData.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.RqChampLibre4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.RqChampLibre3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.RqChampLibre2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.RqChampLibre1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbOnScale)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Filter7)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Filter6)).EndInit();
@@ -2248,7 +2306,7 @@
         private System.Windows.Forms.TextBox txtPoids;
         private System.Windows.Forms.TextBox txtId;
         private System.Windows.Forms.Button btSimulateur;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button btParametrePoids;
         private System.Windows.Forms.Label lbDateHeurePoidsTare;
         private System.Windows.Forms.Label lbDateHeurePoidsBrut;
         private System.Windows.Forms.Label lbTareCamion;
@@ -2347,5 +2405,9 @@
         private System.Windows.Forms.TextBox txtChampLibre3;
         private System.Windows.Forms.Label lbChampLibre4;
         private System.Windows.Forms.TextBox txtChampLibre4;
+        private System.Windows.Forms.PictureBox RqChampLibre3;
+        private System.Windows.Forms.PictureBox RqChampLibre2;
+        private System.Windows.Forms.PictureBox RqChampLibre1;
+        private System.Windows.Forms.PictureBox RqChampLibre4;
     }
 }

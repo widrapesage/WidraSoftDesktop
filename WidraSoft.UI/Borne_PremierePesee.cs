@@ -591,10 +591,10 @@ namespace WidraSoft.UI
                     try
                     {
                         PeseePB pesee = new PeseePB();
-                        pesee.Add("2x", vg_Flux, vg_PontId, WeighingSettingsId, FirmeId, CamionId, ChauffeurId, TransporteurId, ProduitId, ClientId, Enregistrement1Id, Tables1Id, Tables1Name, Enregistrement1,
+                        /*pesee.Add("2x", vg_Flux, vg_PontId, WeighingSettingsId, FirmeId, CamionId, ChauffeurId, TransporteurId, ProduitId, ClientId, Enregistrement1Id, Tables1Id, Tables1Name, Enregistrement1,
                             Enregistrement2Id, Tables2Id, Tables2Name, Enregistrement2, Enregistrement3Id, Table3Id, Tables3Name, Enregistrement3, Enregistrement4Id, Table4Id, Tables4Name, Enregistrement4,
                             Enregistrement5Id, Table5Id, Tables5Name, Enregistrement5, Enregistrement6Id, Table6Id, Tables6Name, Enregistrement6, Enregistrement7Id, Table7Id, Tables7Name, Enregistrement7, 0, DateTime.Now, vg_P,
-                            DateTime.Now, 0, "Borne", "Pending");
+                            DateTime.Now, 0, "Borne", "Pending");*/
                         Close();
                     }
                     catch

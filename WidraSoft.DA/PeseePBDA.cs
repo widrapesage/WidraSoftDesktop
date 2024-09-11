@@ -33,6 +33,8 @@ namespace WidraSoft.DA
             }
         }
 
+       
+
         public DataTable SearchBox(string filter)
         {
             String sql = "SELECT * FROM VW_PESEEPB WHERE PONT LIKE '%" + filter + "%' OR FIRME LIKE '%" + filter + "%' OR CAMION LIKE '%" + filter + "%' OR CHAUFFEUR LIKE '%" + filter + "%' OR TRANSPORTEUR LIKE '%" + filter + "%' " +
@@ -128,6 +130,25 @@ namespace WidraSoft.DA
             }
         }
 
+        public DataTable FindWeighingsInProgressById(Int32 Id)
+        {
+            String sql = "SELECT * FROM VW_PESEEPB_PENDING WHERE PESEEPBID=" + Id;
+            conn.ConnectionString = connString;
+            if (conn.State == ConnectionState.Closed)
+                conn.Open();
+            SqlCommand cmd = new SqlCommand(sql, conn);
+            try
+            {
+                SqlDataReader reader = cmd.ExecuteReader();
+                dt.Load(reader);
+                return dt;
+            }
+            catch
+            {
+                throw;
+            }
+        }
+
         public Int32 GetMaxIdByPontId(Int32 Id)
         {
             String sql = "SELECT MAX(PESEEPBID) FROM PESEEPB WHERE PONTID=" + Id;
@@ -168,7 +189,8 @@ namespace WidraSoft.DA
             Int32 TablesId1, String TablesName1, String Enregistrements1, Int32 EnregistrementsId2, Int32 TablesId2, String TablesName2, String Enregistrements2, Int32 EnregistrementsId3, Int32 TablesId3, String TablesName3, String Enregistrements3,
             Int32 EnregistrementsId4, Int32 TablesId4, String TablesName4, String Enregistrements4, Int32 EnregistrementsId5, Int32 TablesId5, String TablesName5, String Enregistrements5, Int32 EnregistrementsId6, Int32 TablesId6, String TablesName6, String Enregistrements6,
             Int32 EnregistrementsId7, Int32 TablesId7, String TablesName7, String Enregistrements7,
-            Int32 Poids1, DateTime DateHeurePoids1, Int32 Poids2, DateTime DateHeurePoids2, Int32 PoidsNet, String UserInfo, String EtatPesee)
+            Int32 Poids1, DateTime DateHeurePoids1, Int32 Poids2, DateTime DateHeurePoids2, Int32 PoidsNet, String UserInfo, String EtatPesee, String ChampLibreName1, String ChampLibre1, String ChampLibreName2, String ChampLibre2, String ChampLibreName3, String ChampLibre3,
+            String ChampLibreName4, String ChampLibre4)
         {
             using (conn)
             {
@@ -222,6 +244,15 @@ namespace WidraSoft.DA
                 cmd.Parameters.Add("@POIDSNET", SqlDbType.Int).Value = PoidsNet;
                 cmd.Parameters.Add("@USER_INFO", SqlDbType.VarChar).Value = UserInfo;
                 cmd.Parameters.Add("@ETATPESEE", SqlDbType.VarChar).Value = EtatPesee;
+                cmd.Parameters.Add("@CHAMPLIBRENAME1", SqlDbType.VarChar).Value = ChampLibreName1;
+                cmd.Parameters.Add("@CHAMPLIBRE1", SqlDbType.VarChar).Value = ChampLibre1;
+                cmd.Parameters.Add("@CHAMPLIBRENAME2", SqlDbType.VarChar).Value = ChampLibreName2;
+                cmd.Parameters.Add("@CHAMPLIBRE2", SqlDbType.VarChar).Value = ChampLibre2;
+                cmd.Parameters.Add("@CHAMPLIBRENAME3", SqlDbType.VarChar).Value = ChampLibreName3;
+                cmd.Parameters.Add("@CHAMPLIBRE3", SqlDbType.VarChar).Value = ChampLibre3;
+                cmd.Parameters.Add("@CHAMPLIBRENAME4", SqlDbType.VarChar).Value = ChampLibreName4;
+                cmd.Parameters.Add("@CHAMPLIBRE4", SqlDbType.VarChar).Value = ChampLibre4;
+                
                 try
                 {
                     cmd.ExecuteNonQuery();
@@ -237,7 +268,8 @@ namespace WidraSoft.DA
             Int32 TablesId1, String TablesName1, String Enregistrements1, Int32 EnregistrementsId2, Int32 TablesId2, String TablesName2, String Enregistrements2, Int32 EnregistrementsId3, Int32 TablesId3, String TablesName3, String Enregistrements3,
             Int32 EnregistrementsId4, Int32 TablesId4, String TablesName4, String Enregistrements4, Int32 EnregistrementsId5, Int32 TablesId5, String TablesName5, String Enregistrements5, Int32 EnregistrementsId6, Int32 TablesId6, String TablesName6, String Enregistrements6,
             Int32 EnregistrementsId7, Int32 TablesId7, String TablesName7, String Enregistrements7,
-            Int32 Poids1, DateTime DateHeurePoids1, Int32 Poids2, DateTime DateHeurePoids2, Int32 PoidsNet, String UserInfo, String EtatPesee)
+            Int32 Poids1, DateTime DateHeurePoids1, Int32 Poids2, DateTime DateHeurePoids2, Int32 PoidsNet, String UserInfo, String EtatPesee, String ChampLibreName1, String ChampLibre1, String ChampLibreName2, String ChampLibre2, String ChampLibreName3, String ChampLibre3,
+            String ChampLibreName4, String ChampLibre4)
         {
             using (conn)
             {
@@ -292,6 +324,14 @@ namespace WidraSoft.DA
                 cmd.Parameters.Add("@POIDSNET", SqlDbType.Int).Value = PoidsNet;
                 cmd.Parameters.Add("@USER_INFO", SqlDbType.VarChar).Value = UserInfo;
                 cmd.Parameters.Add("@ETATPESEE", SqlDbType.VarChar).Value = EtatPesee;
+                cmd.Parameters.Add("@CHAMPLIBRENAME1", SqlDbType.VarChar).Value = ChampLibreName1;
+                cmd.Parameters.Add("@CHAMPLIBRE1", SqlDbType.VarChar).Value = ChampLibre1;
+                cmd.Parameters.Add("@CHAMPLIBRENAME2", SqlDbType.VarChar).Value = ChampLibreName2;
+                cmd.Parameters.Add("@CHAMPLIBRE2", SqlDbType.VarChar).Value = ChampLibre2;
+                cmd.Parameters.Add("@CHAMPLIBRENAME3", SqlDbType.VarChar).Value = ChampLibreName3;
+                cmd.Parameters.Add("@CHAMPLIBRE3", SqlDbType.VarChar).Value = ChampLibre3;
+                cmd.Parameters.Add("@CHAMPLIBRENAME4", SqlDbType.VarChar).Value = ChampLibreName4;
+                cmd.Parameters.Add("@CHAMPLIBRE4", SqlDbType.VarChar).Value = ChampLibre4;
                 try
                 {
                     cmd.ExecuteNonQuery();

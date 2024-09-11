@@ -693,6 +693,57 @@ namespace WidraSoft.UI
                     chx_AjoutChamp7.Checked = true;
                 else
                     chx_AjoutChamp7.Checked = false;
+
+                txtChampLibre1.Text = row["CHAMPLIBRE1"].ToString();
+                txtChampLibre2.Text = row["CHAMPLIBRE2"].ToString();
+                txtChampLibre3.Text = row["CHAMPLIBRE3"].ToString();
+                txtChampLibre4.Text = row["CHAMPLIBRE4"].ToString();
+                txtLibreObligatoire1.Text = row["CHAMPLIBRE1_OBL"].ToString();
+                if (txtLibreObligatoire1.Text == "1")
+                    chx_LibreObligatoire1.Checked = true;
+                else
+                    chx_LibreObligatoire1.Checked = false;
+                txtLibreObligatoire2.Text = row["CHAMPLIBRE2_OBL"].ToString();
+                if (txtLibreObligatoire2.Text == "1")
+                    chx_LibreObligatoire2.Checked = true;
+                else
+                    chx_LibreObligatoire2.Checked = false;
+                txtLibreObligatoire3.Text = row["CHAMPLIBRE3_OBL"].ToString();
+                if (txtLibreObligatoire3.Text == "1")
+                    chx_LibreObligatoire3.Checked = true;
+                else
+                    chx_LibreObligatoire3.Checked = false;
+                txtLibreObligatoire4.Text = row["CHAMPLIBRE4_OBL"].ToString();
+                if (txtLibreObligatoire4.Text == "1")
+                    chx_LibreObligatoire4.Checked = true;
+                else
+                    chx_LibreObligatoire4.Checked = false;
+                txtTicketChampLibre1.Text = row["CHAMPLIBRE1_TICKET"].ToString();
+                if (txtTicketChampLibre1.Text == "1")
+                    cbx_TicketChampLibre1.Checked = true;
+                else
+                    cbx_TicketChampLibre1.Checked = false;
+                txtTicketChampLibre2.Text = row["CHAMPLIBRE2_TICKET"].ToString();
+                if (txtTicketChampLibre2.Text == "1")
+                    cbx_TicketChampLibre2.Checked = true;
+                else
+                    cbx_TicketChampLibre2.Checked = false;
+                txtTicketChampLibre3.Text = row["CHAMPLIBRE3_TICKET"].ToString();
+                if (txtTicketChampLibre3.Text == "1")
+                    cbx_TicketChampLibre3.Checked = true;
+                else
+                    cbx_TicketChampLibre3.Checked = false;
+                txtTicketChampLibre4.Text = row["CHAMPLIBRE4_TICKET"].ToString();
+                if (txtTicketChampLibre4.Text == "1")
+                    cbx_TicketChampLibre4.Checked = true;
+                else
+                    cbx_TicketChampLibre4.Checked = false;
+
+                cbBorneChampLibre1.Text = row["CHAMPLIBRE1_BORNE"].ToString();
+                cbBorneChampLibre2.Text = row["CHAMPLIBRE2_BORNE"].ToString();
+                cbBorneChampLibre3.Text = row["CHAMPLIBRE3_BORNE"].ToString();
+                cbBorneChampLibre4.Text = row["CHAMPLIBRE4_BORNE"].ToString();
+
                 txtPontFirme.Text = row["PONTFIRME"].ToString();
                 if (txtPontFirme.Text == "1")
                     chx_PontFirme.Checked = true;
@@ -708,6 +759,8 @@ namespace WidraSoft.UI
                     chx_CamionTransporteur.Checked = true;
                 else
                     chx_CamionTransporteur.Checked = false;
+
+                
 
                 cbFormat.Text = row["FORMAT"].ToString();
                 txtTitre1.Text = row["TITRE1"].ToString();
@@ -799,6 +852,27 @@ namespace WidraSoft.UI
             chx_AjoutChamp5.Enabled = false;
             chx_AjoutChamp6.Enabled = false;
             chx_AjoutChamp7.Enabled = false;
+
+            txtChampLibre1.Enabled = false;
+            txtChampLibre2.Enabled = false;
+            txtChampLibre3.Enabled = false;
+            txtChampLibre4.Enabled = false;
+
+            chx_LibreObligatoire1.Enabled = false;
+            chx_LibreObligatoire2.Enabled = false;
+            chx_LibreObligatoire3.Enabled = false;
+            chx_LibreObligatoire4.Enabled = false;
+
+            cbx_TicketChampLibre1.Enabled = false;
+            cbx_TicketChampLibre2.Enabled = false;
+            cbx_TicketChampLibre3.Enabled = false;
+            cbx_TicketChampLibre4.Enabled = false;
+
+            cbBorneChampLibre1.Enabled = false;
+            cbBorneChampLibre2.Enabled = false;
+            cbBorneChampLibre3.Enabled = false;
+            cbBorneChampLibre4.Enabled = false;
+
 
             cbFormat.Enabled = false;
             txtTitre1.Enabled = false;
@@ -893,6 +967,26 @@ namespace WidraSoft.UI
             chx_AjoutChamp6.Enabled = true;
             chx_AjoutChamp7.Enabled = true;
 
+            txtChampLibre1.Enabled = true;
+            txtChampLibre2.Enabled = true;
+            txtChampLibre3.Enabled = true;
+            txtChampLibre4.Enabled = true;
+
+            chx_LibreObligatoire1.Enabled = true;
+            chx_LibreObligatoire2.Enabled = true;
+            chx_LibreObligatoire3.Enabled = true;
+            chx_LibreObligatoire4.Enabled = true;
+
+            cbx_TicketChampLibre1.Enabled = true;
+            cbx_TicketChampLibre2.Enabled = true;
+            cbx_TicketChampLibre3.Enabled = true;
+            cbx_TicketChampLibre4.Enabled = true;
+
+            cbBorneChampLibre1.Enabled = true;
+            cbBorneChampLibre2.Enabled = true;
+            cbBorneChampLibre3.Enabled = true;
+            cbBorneChampLibre4.Enabled = true;
+
             cbFormat.Enabled = true;
             txtTitre1.Enabled = true;
             txtTitre2.Enabled = true;
@@ -986,6 +1080,26 @@ namespace WidraSoft.UI
             chx_AjoutChamp5.Checked = false;
             chx_AjoutChamp6.Checked = false;
             chx_AjoutChamp7.Checked = false;
+
+            txtChampLibre1.Text = "";
+            txtChampLibre2.Text = "";
+            txtChampLibre3.Text = "";
+            txtChampLibre4.Text = "";
+
+            chx_LibreObligatoire1.Checked = false;
+            chx_LibreObligatoire2.Checked = false;
+            chx_LibreObligatoire3.Checked = false;
+            chx_LibreObligatoire4.Checked = false;
+
+            cbx_TicketChampLibre1.Checked = false;
+            cbx_TicketChampLibre2.Checked = false;
+            cbx_TicketChampLibre3.Checked = false;
+            cbx_TicketChampLibre4.Checked = false;
+
+            cbBorneChampLibre1.Text = "";
+            cbBorneChampLibre2.Text = "";
+            cbBorneChampLibre3.Text = "";
+            cbBorneChampLibre4.Text = "";
 
             cbFormat.Text = "";
             txtTitre1.Text = "";
@@ -1383,6 +1497,70 @@ namespace WidraSoft.UI
                 txtAjoutChamp7.Text = "1";
             else
                 txtAjoutChamp7.Text = "0";
+        }
+
+        private void chx_LibreObligatoire1_CheckedChanged(object sender, EventArgs e)
+        {
+            if (chx_LibreObligatoire1.Checked)
+                txtLibreObligatoire1.Text = "1";
+            else
+                txtLibreObligatoire1.Text = "0";
+        }
+
+        private void chx_LibreObligatoire2_CheckedChanged(object sender, EventArgs e)
+        {
+            if (chx_LibreObligatoire2.Checked)
+                txtLibreObligatoire2.Text = "1";
+            else
+                txtLibreObligatoire2.Text = "0";
+        }
+
+        private void chx_LibreObligatoire3_CheckedChanged(object sender, EventArgs e)
+        {
+            if (chx_LibreObligatoire3.Checked)
+                txtLibreObligatoire3.Text = "1";
+            else
+                txtLibreObligatoire3.Text = "0";
+        }
+
+        private void chx_LibreObligatoire4_CheckedChanged(object sender, EventArgs e)
+        {
+            if (chx_LibreObligatoire4.Checked)
+                txtLibreObligatoire4.Text = "1";
+            else
+                txtLibreObligatoire4.Text = "0";
+        }
+
+        private void cbx_TicketChampLibre1_CheckedChanged(object sender, EventArgs e)
+        {
+            if (cbx_TicketChampLibre1.Checked)
+                txtTicketChampLibre1.Text = "1";
+            else
+                txtTicketChampLibre1.Text = "0";
+        }
+
+        private void cbx_TicketChampLibre2_CheckedChanged(object sender, EventArgs e)
+        {
+            if (cbx_TicketChampLibre2.Checked)
+                txtTicketChampLibre2.Text = "1";
+            else
+                txtTicketChampLibre2.Text = "0";
+        }
+
+        private void cbx_TicketChampLibre3_CheckedChanged(object sender, EventArgs e)
+        {
+            if (cbx_TicketChampLibre3.Checked)
+                txtTicketChampLibre3.Text = "1";
+            else
+                txtTicketChampLibre3.Text = "0";
+        }
+
+        private void cbx_TicketChampLibre4_CheckedChanged(object sender, EventArgs e)
+        {
+            if (cbx_TicketChampLibre4.Checked)
+                txtTicketChampLibre4.Text = "1";
+            else
+                txtTicketChampLibre4.Text = "0";
         }
 
         private void lbAjouter_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
@@ -1827,7 +2005,7 @@ namespace WidraSoft.UI
                             && IsParsableAfficherCode1 && IsParsableAfficherCode2 && IsParsableAfficherCode3 && IsParsableAfficherCode4 && IsParsableAfficherCode5 && IsParsableAfficherCode6 && IsParsableAfficherCode7
                             && IsParsableTicket1 && IsParsableTicket2 && IsParsableTicket3 && IsParsableTicket4 && IsParsableTicket5 && IsParsableTicket6 && IsParsableTicket7 && IsParsableAjoutChamp1 && IsParsableAjoutChamp2
                             && IsParsableAjoutChamp3 && IsParsableAjoutChamp4 && IsParsableAjoutChamp5 && IsParsableAjoutChamp6 && IsParsableAjoutChamp7 && IsParsableLibreObligatoire1 && IsParsableLibreObligatoire2 && IsParsableLibreObligatoire3
-                    && IsParsableLibreObligatoire4 && IsParsableLibreTicket1 && IsParsableLibreTicket2 && IsParsableLibreTicket3 && IsParsableLibreTicket4 && IsParsablePontFirme && IsParsableCamionChauffeur && IsParsableCamionTransporteur)
+                            && IsParsableLibreObligatoire4 && IsParsableLibreTicket1 && IsParsableLibreTicket2 && IsParsableLibreTicket3 && IsParsableLibreTicket4 && IsParsablePontFirme && IsParsableCamionChauffeur && IsParsableCamionTransporteur)
                                 {
                                     WeighingSettings weighingSettings = new WeighingSettings();
                                     weighingSettings.Update(Id, txtDesignation.Text, Camion, Chauffeur, Transporteur, Produit, Client, Firme, CamionObligatoire, ChauffeurObligatoire, TransporteurObligatoire, ProduitObligatoire, ClientObligatoire

@@ -22,6 +22,7 @@ namespace WidraSoft.UI
         int PositionDebut;
         int LongueurChaine;
         int Poids_Detection;
+        int ActiverPoids;
         string CaractereSeparation;
         string ModeLecture;
         int Stabilite;
@@ -91,6 +92,18 @@ namespace WidraSoft.UI
         int Table5_Ajout;
         int Table6_Ajout;
         int Table7_Ajout;
+        string ChampLibre1Name = "";
+        string ChampLibre2Name = "";
+        string ChampLibre3Name = "";
+        string ChampLibre4Name = "";
+        int ChampLibre1_Obl;
+        int ChampLibre2_Obl;
+        int ChampLibre3_Obl;
+        int ChampLibre4_Obl;
+        int ChampLibre1_Ticket;
+        int ChampLibre2_Ticket;
+        int ChampLibre3_Ticket;
+        int ChampLibre4_Ticket;
         int PontFirme;
         int CamionChauffeur;
         int CamionTransporteur;
@@ -165,6 +178,8 @@ namespace WidraSoft.UI
                 }
             }
 
+            btSimulateur.Enabled = false;
+
             Initialize_WeighBridgeSettings(pontId);
             
             Initialize_Data();
@@ -198,9 +213,17 @@ namespace WidraSoft.UI
                 com.DataBits = (int)row["DATABITS"];
                 com.Handshake = Handshake.None;
                 Poids_Detection = (int)row["POIDS_DETECTION"];
+                ActiverPoids = (int)row["ACTIVERPOIDS"];
                 try
                 {
-                    //com.Open();
+                    if (ActiverPoids == 1) 
+                    {
+                        com.Open();
+                    }
+                    else
+                    {
+                        btSimulateur.Enabled = true;
+                    }
                 }
                 catch { throw; }
 
@@ -222,7 +245,11 @@ namespace WidraSoft.UI
                 TimerInterval = (int)r["TIMERINTERVAL"];
                 Weight_Timer.Interval = TimerInterval;
                 JaugeTimer.Interval = TimerInterval;
-                //Weight_Timer.Start();
+                if (ActiverPoids == 1)
+                {
+                    Weight_Timer.Start();
+                    
+                }
                 JaugeTimer.Start();
                 LongueurMinChaine = (int)r["LONGUEURMINCHAINE"];
                 PositionDebut = (int)r["POSITIONDEBUT"];
@@ -610,7 +637,12 @@ namespace WidraSoft.UI
                     cbChamp7.SelectedValue = 0;
                 else
                     cbChamp7.SelectedValue = (int)row["ENREGISTREMENTSID7"];
-                
+
+                txtChampLibre1.Text = row["CHAMPLIBRE1"].ToString();
+                txtChampLibre2.Text = row["CHAMPLIBRE2"].ToString();
+                txtChampLibre3.Text = row["CHAMPLIBRE3"].ToString();
+                txtChampLibre4.Text = row["CHAMPLIBRE4"].ToString();
+
 
                 lbPoidsBrut.Text = row["POIDS1"].ToString();
                 lbDateHeurePoidsBrut.Text = row["DATEHEUREPOIDS1"].ToString();
@@ -683,6 +715,21 @@ namespace WidraSoft.UI
                 Table5_Ajout = (int)ro["TABLE5_AJOUT_F"];
                 Table6_Ajout = (int)ro["TABLE6_AJOUT_F"];
                 Table7_Ajout = (int)ro["TABLE7_AJOUT_F"];
+
+                ChampLibre1_Obl = (int)ro["CHAMPLIBRE1_OBL"];
+                ChampLibre2_Obl = (int)ro["CHAMPLIBRE2_OBL"];
+                ChampLibre3_Obl = (int)ro["CHAMPLIBRE3_OBL"];
+                ChampLibre4_Obl = (int)ro["CHAMPLIBRE4_OBL"];
+
+                ChampLibre1_Ticket = (int)ro["CHAMPLIBRE1_TICKET"];
+                ChampLibre2_Ticket = (int)ro["CHAMPLIBRE2_TICKET"];
+                ChampLibre3_Ticket = (int)ro["CHAMPLIBRE3_TICKET"];
+                ChampLibre4_Ticket = (int)ro["CHAMPLIBRE4_TICKET"];
+
+                ChampLibre1Name = ro["CHAMPLIBRE1"].ToString();
+                ChampLibre2Name = ro["CHAMPLIBRE2"].ToString();
+                ChampLibre3Name = ro["CHAMPLIBRE3"].ToString();
+                ChampLibre4Name = ro["CHAMPLIBRE4"].ToString();
 
                 PontFirme = (int)ro["PONTFIRME"];
                 CamionChauffeur = (int)ro["CAMIONCHAUFFEUR"];
@@ -1025,6 +1072,74 @@ namespace WidraSoft.UI
                 cbChamp7_Leave(this, EventArgs.Empty);
             }
 
+            if (ChampLibre1Name.Trim().Length > 2)
+            {
+                lbChampLibre1.Visible = true;
+                txtChampLibre1.Visible = true;
+                lbChampLibre1.Text = ChampLibre1Name;
+                if (ChampLibre1_Obl != 0)
+                    RqChampLibre1.Visible = true;
+                else
+                    RqChampLibre1.Visible = false;               
+            }
+            else 
+            {
+                lbChampLibre1.Visible = false;
+                txtChampLibre1.Visible = false;
+                RqChampLibre1.Visible = false;
+            }
+
+            if (ChampLibre2Name.Trim().Length > 2)
+            {
+                lbChampLibre2.Visible = true;
+                txtChampLibre2.Visible = true;
+                lbChampLibre2.Text = ChampLibre2Name;
+                if (ChampLibre2_Obl != 0)
+                    RqChampLibre2.Visible = true;
+                else
+                    RqChampLibre2.Visible = false;
+            }
+            else
+            {
+                lbChampLibre2.Visible = false;
+                txtChampLibre2.Visible = false;
+                RqChampLibre2.Visible = false;
+            }
+
+            if (ChampLibre3Name.Trim().Length > 2)
+            {
+                lbChampLibre3.Visible = true;
+                txtChampLibre3.Visible = true;
+                lbChampLibre3.Text = ChampLibre3Name;
+                if (ChampLibre3_Obl != 0)
+                    RqChampLibre3.Visible = true;
+                else
+                    RqChampLibre3.Visible = false;
+            }
+            else
+            {
+                lbChampLibre3.Visible = false;
+                txtChampLibre3.Visible = false;
+                RqChampLibre3.Visible = false;
+            }
+
+            if (ChampLibre4Name.Trim().Length > 2)
+            {
+                lbChampLibre4.Visible = true;
+                txtChampLibre4.Visible = true;
+                lbChampLibre4.Text = ChampLibre4Name;
+                if (ChampLibre4_Obl != 0)
+                    RqChampLibre4.Visible = true;
+                else
+                    RqChampLibre4.Visible = false;
+            }
+            else
+            {
+                lbChampLibre4.Visible = false;
+                txtChampLibre4.Visible = false;
+                RqChampLibre4.Visible = false;
+            }
+
             //InitializeWeighingSettings(Common_functions.CbSelectedValue_Convert_Int(cbPont));
 
             if (Clear_fields)
@@ -1035,7 +1150,8 @@ namespace WidraSoft.UI
         {
             bool vl_return;
             if (txtId.Text != ""  || cbFirme.Text != "" || cbCamion.Text != "" || cbChauffeur.Text != "" || cbTransporteur.Text != "" || cbProduit.Text != "" || cbClient.Text != "" || cbChamp1.Text != ""
-                || cbChamp2.Text != "" || cbChamp3.Text != "" || cbChamp4.Text != "" || cbChamp5.Text != "" || cbChamp6.Text != "" || cbChamp7.Text != "")
+                || cbChamp2.Text != "" || cbChamp3.Text != "" || cbChamp4.Text != "" || cbChamp5.Text != "" || cbChamp6.Text != "" || cbChamp7.Text != "" || txtChampLibre1.Text != "" || txtChampLibre2.Text != ""
+                || txtChampLibre3.Text != "" || txtChampLibre4.Text != "")
                 vl_return = true;
             else 
                 vl_return = false;
@@ -1048,6 +1164,7 @@ namespace WidraSoft.UI
             bool vl_Chauffeur;
             bool vl_Transporteur;
             bool vl_Produit;
+            bool vl_Firme;
             bool vl_Client;
             bool vl_Champ1;
             bool vl_Champ2;
@@ -1056,6 +1173,10 @@ namespace WidraSoft.UI
             bool vl_Champ5;
             bool vl_Champ6;
             bool vl_Champ7;
+            bool vl_ChampLibre1;
+            bool vl_ChampLibre2;
+            bool vl_ChampLibre3;
+            bool vl_ChampLibre4;
 
             if (EnableCamion != 0 && Camion_Obl != 0)
             {
@@ -1093,6 +1214,15 @@ namespace WidraSoft.UI
             }
             else
                 vl_Produit = true;
+            if (EnableFirme != 0 && Firme_Obl != 0)
+            {
+                if (cbFirme.Text != "" && cbFirme.SelectedIndex != -1)
+                    vl_Firme = true;
+                else
+                    vl_Firme = false;
+            }
+            else
+                vl_Firme = true;
             if (EnableClient != 0 && Client_Obl != 0)
             {
                 if (cbClient.Text != "" && cbClient.SelectedIndex != -1)
@@ -1165,10 +1295,47 @@ namespace WidraSoft.UI
             }
             else
                 vl_Champ7 = true;
+            if (ChampLibre1Name.Trim().Length > 2 && ChampLibre1_Obl != 0)
+            {
+                if (txtChampLibre1.Text.Trim() != "")
+                    vl_ChampLibre1 = true;
+                else
+                    vl_ChampLibre1 = false;
+            }
+            else
+                vl_ChampLibre1 = true;
+            if (ChampLibre2Name.Trim().Length > 2 && ChampLibre2_Obl != 0)
+            {
+                if (txtChampLibre2.Text.Trim() != "")
+                    vl_ChampLibre2 = true;
+                else
+                    vl_ChampLibre2 = false;
+            }
+            else
+                vl_ChampLibre2 = true;
+            if (ChampLibre3Name.Trim().Length > 2 && ChampLibre3_Obl != 0)
+            {
+                if (txtChampLibre3.Text.Trim() != "")
+                    vl_ChampLibre3 = true;
+                else
+                    vl_ChampLibre3 = false;
+            }
+            else
+                vl_ChampLibre3 = true;
+            if (ChampLibre4Name.Trim().Length > 2 && ChampLibre4_Obl != 0)
+            {
+                if (txtChampLibre4.Text.Trim() != "")
+                    vl_ChampLibre4 = true;
+                else
+                    vl_ChampLibre4 = false;
+            }
+            else
+                vl_ChampLibre4 = true;
 
 
-            if (vl_Camion && vl_Chauffeur && vl_Transporteur && vl_Produit && vl_Client 
-                && vl_Champ1 && vl_Champ2 && vl_Champ3 && vl_Champ4 && vl_Champ5 && vl_Champ6 && vl_Champ7)
+            if (vl_Camion && vl_Chauffeur && vl_Transporteur && vl_Produit && vl_Firme && vl_Client 
+                && vl_Champ1 && vl_Champ2 && vl_Champ3 && vl_Champ4 && vl_Champ5 && vl_Champ6 && vl_Champ7
+                && vl_ChampLibre1 && vl_ChampLibre2 && vl_ChampLibre3 && vl_ChampLibre4)
             {
                 if (TypePesee == "1x")
                 {
@@ -1255,6 +1422,10 @@ namespace WidraSoft.UI
             cbChamp7.ForeColor = Color.Black;
             btAddChamp7.Visible = false;
 
+            txtChampLibre1.Text = "";
+            txtChampLibre2.Text = "";
+            txtChampLibre3.Text = "";
+            txtChampLibre4.Text = "";
 
             if (txtTareCamion.Visible)
                 txtTareCamion.Text = "";
@@ -1293,6 +1464,10 @@ namespace WidraSoft.UI
             cbChamp5.Enabled = false;
             cbChamp6.Enabled = false;
             cbChamp7.Enabled = false;
+            txtChampLibre1.Enabled = false;
+            txtChampLibre2.Enabled = false;
+            txtChampLibre3.Enabled = false;
+            txtChampLibre4.Enabled = false;
             btPeser.Enabled = false;
             if (txtTareCamion.Visible)
                 txtTareCamion.Enabled = false;
@@ -1318,6 +1493,10 @@ namespace WidraSoft.UI
             cbChamp5.Enabled = true;
             cbChamp6.Enabled = true;
             cbChamp7.Enabled = true;
+            txtChampLibre1.Enabled = true;
+            txtChampLibre2.Enabled = true;
+            txtChampLibre3.Enabled = true;
+            txtChampLibre4.Enabled = true;
             btPeser.Enabled = true;
             if (txtTareCamion.Visible)
                 txtTareCamion.Enabled = true;
@@ -1473,7 +1652,7 @@ namespace WidraSoft.UI
                                     Common_functions.CbSelectedValue_Convert_Int(cbClient), Common_functions.CbSelectedValue_Convert_Int(cbChamp1), Table1Id, Table1Name, cbChamp1.Text,Common_functions.CbSelectedValue_Convert_Int(cbChamp2), Table2Id,  Table2Name, cbChamp2.Text,
                                     Common_functions.CbSelectedValue_Convert_Int(cbChamp3), Table3Id, Table3Name, cbChamp3.Text, Common_functions.CbSelectedValue_Convert_Int(cbChamp4), Table4Id, Table4Name, cbChamp4.Text, Common_functions.CbSelectedValue_Convert_Int(cbChamp5), Table5Id, Table5Name, cbChamp5.Text,
                                     Common_functions.CbSelectedValue_Convert_Int(cbChamp6), Table6Id, Table6Name, cbChamp6.Text, Common_functions.CbSelectedValue_Convert_Int(cbChamp7), Table7Id, Table7Name, cbChamp7.Text
-                                    , Poids, DateHeurePoidsBrut, Tare, DateHeurePoidsTare, PoidsNet, lblusername.Text, lbStatus.Text);
+                                    , Poids, DateHeurePoidsBrut, Tare, DateHeurePoidsTare, PoidsNet, lblusername.Text, lbStatus.Text, ChampLibre1Name, txtChampLibre1.Text, ChampLibre2Name, txtChampLibre2.Text, ChampLibre3Name, txtChampLibre3.Text, ChampLibre4Name, txtChampLibre4.Text);
                                 
                                 getMaxId();
                                 int Id;
@@ -1561,7 +1740,7 @@ namespace WidraSoft.UI
                                     Common_functions.CbSelectedValue_Convert_Int(cbClient), Common_functions.CbSelectedValue_Convert_Int(cbChamp1), Table1Id, Table1Name, cbChamp1.Text, Common_functions.CbSelectedValue_Convert_Int(cbChamp2), Table2Id, Table2Name, cbChamp2.Text,
                                     Common_functions.CbSelectedValue_Convert_Int(cbChamp3), Table3Id, Table3Name, cbChamp3.Text, Common_functions.CbSelectedValue_Convert_Int(cbChamp4), Table4Id, Table4Name, cbChamp4.Text, Common_functions.CbSelectedValue_Convert_Int(cbChamp5), Table5Id, Table5Name, cbChamp5.Text,
                                     Common_functions.CbSelectedValue_Convert_Int(cbChamp6), Table6Id, Table6Name, cbChamp6.Text, Common_functions.CbSelectedValue_Convert_Int(cbChamp7), Table7Id, Table7Name, cbChamp7.Text
-                                    , 0, DateHeurePoidsTare, Tare, DateHeurePoidsTare, 0, lblusername.Text, lbStatus.Text);
+                                    , 0, DateHeurePoidsTare, Tare, DateHeurePoidsTare, 0, lblusername.Text, lbStatus.Text, ChampLibre1Name, txtChampLibre1.Text, ChampLibre2Name, txtChampLibre2.Text, ChampLibre3Name, txtChampLibre3.Text, ChampLibre4Name, txtChampLibre4.Text);
                                                               
                                 
                                 
@@ -1641,7 +1820,7 @@ namespace WidraSoft.UI
                                     Common_functions.CbSelectedValue_Convert_Int(cbClient), Common_functions.CbSelectedValue_Convert_Int(cbChamp1), Table1Id, Table1Name, cbChamp1.Text, Common_functions.CbSelectedValue_Convert_Int(cbChamp2), Table2Id, Table2Name, cbChamp2.Text,
                                     Common_functions.CbSelectedValue_Convert_Int(cbChamp3), Table3Id, Table3Name, cbChamp3.Text, Common_functions.CbSelectedValue_Convert_Int(cbChamp4), Table4Id, Table4Name, cbChamp4.Text, Common_functions.CbSelectedValue_Convert_Int(cbChamp5), Table5Id, Table5Name, cbChamp5.Text,
                                     Common_functions.CbSelectedValue_Convert_Int(cbChamp6), Table6Id, Table6Name, cbChamp6.Text, Common_functions.CbSelectedValue_Convert_Int(cbChamp7), Table7Id, Table7Name, cbChamp7.Text
-                                    , Brut, DateHeurePoidsBrut, Tare, DateHeurePoidsTare, PoidsNet, lblusername.Text, lbStatus.Text);
+                                    , Brut, DateHeurePoidsBrut, Tare, DateHeurePoidsTare, PoidsNet, lblusername.Text, lbStatus.Text, ChampLibre1Name, txtChampLibre1.Text, ChampLibre2Name, txtChampLibre2.Text, ChampLibre3Name, txtChampLibre3.Text, ChampLibre4Name, txtChampLibre4.Text);
                                 
                                 
                                 if (cbLang.Text == "FR")
@@ -3190,6 +3369,11 @@ namespace WidraSoft.UI
 
                 }
             }*/
+        }
+
+        private void btSaisirPoids_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
