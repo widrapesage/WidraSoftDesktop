@@ -29,9 +29,9 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(PeseePBList));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.ActualiserToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.exporterVersToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -100,8 +100,8 @@
             // 
             // menuStrip1
             // 
-            resources.ApplyResources(this.menuStrip1, "menuStrip1");
             this.menuStrip1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(62)))), ((int)(((byte)(60)))));
+            resources.ApplyResources(this.menuStrip1, "menuStrip1");
             this.menuStrip1.ImageScalingSize = new System.Drawing.Size(24, 24);
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.ActualiserToolStripMenuItem,
@@ -142,7 +142,6 @@
             // 
             // panelTitleBar
             // 
-            resources.ApplyResources(this.panelTitleBar, "panelTitleBar");
             this.panelTitleBar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(86)))), ((int)(((byte)(81)))));
             this.panelTitleBar.Controls.Add(this.label18);
             this.panelTitleBar.Controls.Add(this.txtNum);
@@ -174,6 +173,7 @@
             this.panelTitleBar.Controls.Add(this.label7);
             this.panelTitleBar.Controls.Add(this.cbCamion);
             this.panelTitleBar.Controls.Add(this.panel1);
+            resources.ApplyResources(this.panelTitleBar, "panelTitleBar");
             this.panelTitleBar.Name = "panelTitleBar";
             this.panelTitleBar.Paint += new System.Windows.Forms.PaintEventHandler(this.panelTitleBar_Paint);
             // 
@@ -185,20 +185,20 @@
             // 
             // txtNum
             // 
-            resources.ApplyResources(this.txtNum, "txtNum");
             this.txtNum.BackColor = System.Drawing.Color.Honeydew;
+            resources.ApplyResources(this.txtNum, "txtNum");
             this.txtNum.ForeColor = System.Drawing.Color.Black;
             this.txtNum.Name = "txtNum";
             // 
             // groupBox1
             // 
-            resources.ApplyResources(this.groupBox1, "groupBox1");
             this.groupBox1.Controls.Add(this.rbToutEtat);
             this.groupBox1.Controls.Add(this.label8);
             this.groupBox1.Controls.Add(this.rbPending);
             this.groupBox1.Controls.Add(this.rbComplete);
             this.groupBox1.Controls.Add(this.label13);
             this.groupBox1.Controls.Add(this.label15);
+            resources.ApplyResources(this.groupBox1, "groupBox1");
             this.groupBox1.ForeColor = System.Drawing.Color.White;
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.TabStop = false;
@@ -247,13 +247,13 @@
             // 
             // gbPeriode
             // 
-            resources.ApplyResources(this.gbPeriode, "gbPeriode");
             this.gbPeriode.Controls.Add(this.rbToutDate);
             this.gbPeriode.Controls.Add(this.lnjour);
             this.gbPeriode.Controls.Add(this.rbMois);
             this.gbPeriode.Controls.Add(this.rbJour);
             this.gbPeriode.Controls.Add(this.label12);
             this.gbPeriode.Controls.Add(this.label19);
+            resources.ApplyResources(this.gbPeriode, "gbPeriode");
             this.gbPeriode.ForeColor = System.Drawing.Color.White;
             this.gbPeriode.Name = "gbPeriode";
             this.gbPeriode.TabStop = false;
@@ -309,8 +309,8 @@
             // 
             // cbWeighingSettingsId
             // 
-            resources.ApplyResources(this.cbWeighingSettingsId, "cbWeighingSettingsId");
             this.cbWeighingSettingsId.BackColor = System.Drawing.Color.Honeydew;
+            resources.ApplyResources(this.cbWeighingSettingsId, "cbWeighingSettingsId");
             this.cbWeighingSettingsId.FormattingEnabled = true;
             this.cbWeighingSettingsId.Name = "cbWeighingSettingsId";
             this.cbWeighingSettingsId.SelectedIndexChanged += new System.EventHandler(this.cbWeighingSettingsId_SelectedIndexChanged);
@@ -323,8 +323,8 @@
             // 
             // cbType
             // 
-            resources.ApplyResources(this.cbType, "cbType");
             this.cbType.BackColor = System.Drawing.Color.Honeydew;
+            resources.ApplyResources(this.cbType, "cbType");
             this.cbType.FormattingEnabled = true;
             this.cbType.Name = "cbType";
             // 
@@ -336,8 +336,8 @@
             // 
             // cbFirme
             // 
-            resources.ApplyResources(this.cbFirme, "cbFirme");
             this.cbFirme.BackColor = System.Drawing.Color.Honeydew;
+            resources.ApplyResources(this.cbFirme, "cbFirme");
             this.cbFirme.FormattingEnabled = true;
             this.cbFirme.Name = "cbFirme";
             // 
@@ -390,8 +390,8 @@
             // 
             // cbProduit
             // 
-            resources.ApplyResources(this.cbProduit, "cbProduit");
             this.cbProduit.BackColor = System.Drawing.Color.Honeydew;
+            resources.ApplyResources(this.cbProduit, "cbProduit");
             this.cbProduit.FormattingEnabled = true;
             this.cbProduit.Name = "cbProduit";
             // 
@@ -403,8 +403,8 @@
             // 
             // cbClient
             // 
-            resources.ApplyResources(this.cbClient, "cbClient");
             this.cbClient.BackColor = System.Drawing.Color.Honeydew;
+            resources.ApplyResources(this.cbClient, "cbClient");
             this.cbClient.FormattingEnabled = true;
             this.cbClient.Name = "cbClient";
             // 
@@ -416,8 +416,8 @@
             // 
             // cbPont
             // 
-            resources.ApplyResources(this.cbPont, "cbPont");
             this.cbPont.BackColor = System.Drawing.Color.Honeydew;
+            resources.ApplyResources(this.cbPont, "cbPont");
             this.cbPont.FormattingEnabled = true;
             this.cbPont.Name = "cbPont";
             // 
@@ -429,8 +429,8 @@
             // 
             // cbTransporteur
             // 
-            resources.ApplyResources(this.cbTransporteur, "cbTransporteur");
             this.cbTransporteur.BackColor = System.Drawing.Color.Honeydew;
+            resources.ApplyResources(this.cbTransporteur, "cbTransporteur");
             this.cbTransporteur.FormattingEnabled = true;
             this.cbTransporteur.Name = "cbTransporteur";
             // 
@@ -442,8 +442,8 @@
             // 
             // cbChauffeur
             // 
-            resources.ApplyResources(this.cbChauffeur, "cbChauffeur");
             this.cbChauffeur.BackColor = System.Drawing.Color.Honeydew;
+            resources.ApplyResources(this.cbChauffeur, "cbChauffeur");
             this.cbChauffeur.FormattingEnabled = true;
             this.cbChauffeur.Name = "cbChauffeur";
             // 
@@ -455,52 +455,52 @@
             // 
             // cbCamion
             // 
-            resources.ApplyResources(this.cbCamion, "cbCamion");
             this.cbCamion.BackColor = System.Drawing.Color.Honeydew;
+            resources.ApplyResources(this.cbCamion, "cbCamion");
             this.cbCamion.FormattingEnabled = true;
             this.cbCamion.Name = "cbCamion";
             // 
             // panel1
             // 
-            resources.ApplyResources(this.panel1, "panel1");
             this.panel1.Controls.Add(this.Spain_flag);
             this.panel1.Controls.Add(this.England_flag);
             this.panel1.Controls.Add(this.France_flag);
             this.panel1.Controls.Add(this.cbLang);
+            resources.ApplyResources(this.panel1, "panel1");
             this.panel1.Name = "panel1";
             // 
             // Spain_flag
             // 
-            resources.ApplyResources(this.Spain_flag, "Spain_flag");
             this.Spain_flag.BackColor = System.Drawing.Color.Transparent;
             this.Spain_flag.Cursor = System.Windows.Forms.Cursors.Hand;
             this.Spain_flag.Image = global::WidraSoft.UI.Properties.Resources.spain;
+            resources.ApplyResources(this.Spain_flag, "Spain_flag");
             this.Spain_flag.Name = "Spain_flag";
             this.Spain_flag.TabStop = false;
             // 
             // England_flag
             // 
-            resources.ApplyResources(this.England_flag, "England_flag");
             this.England_flag.BackColor = System.Drawing.Color.Transparent;
             this.England_flag.Cursor = System.Windows.Forms.Cursors.Hand;
             this.England_flag.Image = global::WidraSoft.UI.Properties.Resources.united_kingdom;
+            resources.ApplyResources(this.England_flag, "England_flag");
             this.England_flag.Name = "England_flag";
             this.England_flag.TabStop = false;
             // 
             // France_flag
             // 
-            resources.ApplyResources(this.France_flag, "France_flag");
             this.France_flag.BackColor = System.Drawing.Color.Transparent;
             this.France_flag.Cursor = System.Windows.Forms.Cursors.Hand;
             this.France_flag.Image = global::WidraSoft.UI.Properties.Resources.france;
+            resources.ApplyResources(this.France_flag, "France_flag");
             this.France_flag.Name = "France_flag";
             this.France_flag.TabStop = false;
             // 
             // cbLang
             // 
-            resources.ApplyResources(this.cbLang, "cbLang");
             this.cbLang.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(86)))), ((int)(((byte)(77)))));
             this.cbLang.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            resources.ApplyResources(this.cbLang, "cbLang");
             this.cbLang.ForeColor = System.Drawing.Color.White;
             this.cbLang.FormattingEnabled = true;
             this.cbLang.Name = "cbLang";
@@ -508,45 +508,46 @@
             // 
             // panelList
             // 
-            resources.ApplyResources(this.panelList, "panelList");
             this.panelList.Controls.Add(this.DgvList);
+            resources.ApplyResources(this.panelList, "panelList");
             this.panelList.Name = "panelList";
             // 
             // DgvList
             // 
-            resources.ApplyResources(this.DgvList, "DgvList");
             this.DgvList.AllowUserToAddRows = false;
             this.DgvList.AllowUserToDeleteRows = false;
             this.DgvList.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(86)))), ((int)(((byte)(81)))));
             this.DgvList.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.Sunken;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(86)))), ((int)(((byte)(77)))));
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Corbel", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(190)))), ((int)(((byte)(117)))));
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.DgvList.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(86)))), ((int)(((byte)(77)))));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Corbel", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(190)))), ((int)(((byte)(117)))));
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.DgvList.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.DgvList.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle5.BackColor = System.Drawing.Color.Honeydew;
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(86)))), ((int)(((byte)(81)))));
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.DgvList.DefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.Honeydew;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(86)))), ((int)(((byte)(81)))));
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.DgvList.DefaultCellStyle = dataGridViewCellStyle2;
+            resources.ApplyResources(this.DgvList, "DgvList");
             this.DgvList.Name = "DgvList";
             this.DgvList.ReadOnly = true;
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle6.BackColor = System.Drawing.Color.Honeydew;
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Corbel", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.MediumSeaGreen;
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.DgvList.RowHeadersDefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.Honeydew;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Corbel", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.MediumSeaGreen;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.DgvList.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.DgvList.RowTemplate.Height = 33;
+            this.DgvList.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DgvList_CellDoubleClick);
             // 
             // PeseePBList
             // 

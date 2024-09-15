@@ -315,5 +315,11 @@ namespace WidraSoft.UI
             
 
         }
+
+        private void DgvList_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            Form form = new PeseePBDetail(0, Common_functions.GetDatagridViewSelectedId(DgvList));
+            form.Show();
+        }
     }
 }

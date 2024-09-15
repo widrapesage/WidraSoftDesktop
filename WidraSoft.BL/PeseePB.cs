@@ -95,7 +95,7 @@ namespace WidraSoft.BL
             try
             {
                 PeseePBDA peseePBDA = new PeseePBDA();
-                return peseePBDA.FindWeighingsInProgress();
+                return peseePBDA.FindWeighingsInProgressById(Id);
             }
             catch
             {

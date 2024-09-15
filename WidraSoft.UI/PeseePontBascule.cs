@@ -554,9 +554,11 @@ namespace WidraSoft.UI
         private void Bind_Fields()
         {
             DataTable dt = new DataTable();
+            DataTable dt2 = new DataTable();
             PeseePB peseePB = new PeseePB();
             dt = peseePB.FindById(vg_Id);
-            DgvList.DataSource = dt;
+            dt2 = peseePB.FindWeighingsInProgressById(vg_Id);
+            DgvList.DataSource = dt2;
             foreach (DataRow row in dt.Rows)
             {
                 int Id = (int)row["PESEEPBID"];
@@ -652,6 +654,7 @@ namespace WidraSoft.UI
                 lbStatus.Text = row["ETATPESEE"].ToString();
             }
         }
+
         private void ApplyWeighingSettings(Int32 WeighingSettingsId, bool Clear_fields)
         {
             WeighingSettings weighingSettings = new WeighingSettings();
