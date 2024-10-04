@@ -321,5 +321,31 @@ namespace WidraSoft.UI
             Form form = new PeseePBDetail(0, Common_functions.GetDatagridViewSelectedId(DgvList));
             form.Show();
         }
+
+        private void DgvList_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
+        {
+            if (DgvList.Columns[e.ColumnIndex].Name.Equals("ETATPESEE"))
+            {
+                //Int32 intValue;
+                if ((String)e.Value == "Pending")
+                {
+                    e.CellStyle.ForeColor = Color.White;
+                    e.CellStyle.BackColor = Color.FromArgb(214, 60, 60);
+                    e.CellStyle.SelectionBackColor = Color.DarkRed;
+                }
+                if ((String)e.Value == "Complete")
+                {
+                    e.CellStyle.ForeColor = Color.White;
+                    e.CellStyle.BackColor = Color.FromArgb(23, 117, 63);
+                    e.CellStyle.SelectionBackColor = Color.DarkSeaGreen;
+                }
+                
+            }
+        }
+
+        private void Excel_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

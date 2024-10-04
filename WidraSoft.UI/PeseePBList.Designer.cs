@@ -132,6 +132,7 @@
             this.Excel.ForeColor = System.Drawing.Color.White;
             this.Excel.Image = global::WidraSoft.UI.Properties.Resources.export;
             this.Excel.Name = "Excel";
+            this.Excel.Click += new System.EventHandler(this.Excel_Click);
             // 
             // toolStripMenuItem1
             // 
@@ -548,6 +549,7 @@
             this.DgvList.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.DgvList.RowTemplate.Height = 33;
             this.DgvList.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DgvList_CellDoubleClick);
+            this.DgvList.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.DgvList_CellFormatting);
             // 
             // PeseePBList
             // 
