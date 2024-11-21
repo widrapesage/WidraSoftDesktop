@@ -836,21 +836,10 @@ namespace WidraSoft.UI
                 btAddChamp1.Visible = true;
                 string table_name = tables.GetName(Table1Id);
                 lbChamp1.Text = table_name;
-                Table1Name = table_name;
-                if (Table1_Code != 0)
-                {
-                    DataTable dt = enregistrements.FindByTableId(Table1Id);
-                    dt.Columns.Add("NOMCOMPLET", typeof(String), "NOM + ' (' + CODE + ')'");
-                    cbChamp1.DataSource = dt;
-                    cbChamp1.DisplayMember = "NOMCOMPLET";
-                    cbChamp1.ValueMember = "ENREGISTREMENTSID";
-                }
-                else
-                {
-                    cbChamp1.DataSource = enregistrements.FindByTableId(Table1Id);
-                    cbChamp1.DisplayMember = "NOM";
-                    cbChamp1.ValueMember = "ENREGISTREMENTSID";
-                }
+                Table1Name = table_name;                              
+                cbChamp1.DataSource = enregistrements.FindByTableId(Table1Id);
+                cbChamp1.DisplayMember = "NOM";
+                cbChamp1.ValueMember = "ENREGISTREMENTSID";              
                 //cbChamp1_SelectedValueChanged(this, EventArgs.Empty);
                 cbChamp1_Leave(this, EventArgs.Empty);
 
@@ -875,21 +864,10 @@ namespace WidraSoft.UI
                 btAddChamp2.Visible = true;
                 string table_name = tables.GetName(Table2Id);
                 lbChamp2.Text = table_name;
-                Table2Name = table_name;
-                if (Table2_Code != 0)
-                {
-                    DataTable dt = enregistrements.FindByTableId(Table2Id);
-                    dt.Columns.Add("NOMCOMPLET", typeof(String), "NOM + ' (' + CODE + ')'");
-                    cbChamp2.DataSource = dt;
-                    cbChamp2.DisplayMember = "NOMCOMPLET";
-                    cbChamp2.ValueMember = "ENREGISTREMENTSID";
-                }
-                else
-                {
-                    cbChamp2.DataSource = enregistrements.FindByTableId(Table2Id);
-                    cbChamp2.DisplayMember = "NOM";
-                    cbChamp2.ValueMember = "ENREGISTREMENTSID";
-                }
+                Table2Name = table_name;                              
+                cbChamp2.DataSource = enregistrements.FindByTableId(Table2Id);
+                cbChamp2.DisplayMember = "NOM";
+                cbChamp2.ValueMember = "ENREGISTREMENTSID";               
                 //cbChamp2_SelectedValueChanged(this, EventArgs.Empty);
                 cbChamp2_Leave(this, EventArgs.Empty);
             }
@@ -912,21 +890,10 @@ namespace WidraSoft.UI
                 btAddChamp3.Visible = true;
                 string table_name = tables.GetName(Table3Id);
                 lbChamp3.Text = table_name;
-                Table3Name = table_name;
-                if (Table3_Code != 0)
-                {
-                    DataTable dt = enregistrements.FindByTableId(Table3Id);
-                    dt.Columns.Add("NOMCOMPLET", typeof(String), "NOM + ' (' + CODE + ')'");
-                    cbChamp3.DataSource = dt;
-                    cbChamp3.DisplayMember = "NOMCOMPLET";
-                    cbChamp3.ValueMember = "ENREGISTREMENTSID";
-                }
-                else
-                {
-                    cbChamp3.DataSource = enregistrements.FindByTableId(Table3Id);
-                    cbChamp3.DisplayMember = "NOM";
-                    cbChamp3.ValueMember = "ENREGISTREMENTSID";
-                }
+                Table3Name = table_name;                
+                cbChamp3.DataSource = enregistrements.FindByTableId(Table3Id);
+                cbChamp3.DisplayMember = "NOM";
+                cbChamp3.ValueMember = "ENREGISTREMENTSID";               
                 //cbChamp3_SelectedValueChanged(this, EventArgs.Empty);
                 cbChamp3_Leave(this, EventArgs.Empty);
             }
@@ -949,21 +916,10 @@ namespace WidraSoft.UI
                 btAddChamp4.Visible = true;
                 string table_name = tables.GetName(Table4Id);
                 lbChamp4.Text = table_name;
-                Table4Name = table_name;
-                if (Table4_Code != 0)
-                {
-                    DataTable dt = enregistrements.FindByTableId(Table4Id);
-                    dt.Columns.Add("NOMCOMPLET", typeof(String), "NOM + ' (' + CODE + ')'");
-                    cbChamp4.DataSource = dt;
-                    cbChamp4.DisplayMember = "NOMCOMPLET";
-                    cbChamp4.ValueMember = "ENREGISTREMENTSID";
-                }
-                else
-                {
-                    cbChamp4.DataSource = enregistrements.FindByTableId(Table4Id);
-                    cbChamp4.DisplayMember = "NOM";
-                    cbChamp4.ValueMember = "ENREGISTREMENTSID";
-                }
+                Table4Name = table_name;                
+                cbChamp4.DataSource = enregistrements.FindByTableId(Table4Id);
+                cbChamp4.DisplayMember = "NOM";
+                cbChamp4.ValueMember = "ENREGISTREMENTSID";                
                 cbChamp4_Leave(this, EventArgs.Empty);
             }
 
@@ -985,21 +941,10 @@ namespace WidraSoft.UI
                 btAddChamp5.Visible = true;
                 string table_name = tables.GetName(Table5Id);
                 lbChamp5.Text = table_name;
-                Table5Name = table_name;
-                if (Table5_Code != 0)
-                {
-                    DataTable dt = enregistrements.FindByTableId(Table5Id);
-                    dt.Columns.Add("NOMCOMPLET", typeof(String), "NOM + ' (' + CODE + ')'");
-                    cbChamp5.DataSource = dt;
-                    cbChamp5.DisplayMember = "NOMCOMPLET";
-                    cbChamp5.ValueMember = "ENREGISTREMENTSID";
-                }
-                else
-                {
-                    cbChamp5.DataSource = enregistrements.FindByTableId(Table5Id);
-                    cbChamp5.DisplayMember = "NOM";
-                    cbChamp5.ValueMember = "ENREGISTREMENTSID";
-                }
+                Table5Name = table_name;               
+                cbChamp5.DataSource = enregistrements.FindByTableId(Table5Id);
+                cbChamp5.DisplayMember = "NOM";
+                cbChamp5.ValueMember = "ENREGISTREMENTSID";                
                 cbChamp5_Leave(this, EventArgs.Empty);
             }
 
@@ -1022,20 +967,9 @@ namespace WidraSoft.UI
                 string table_name = tables.GetName(Table6Id);
                 lbChamp6.Text = table_name;
                 Table6Name = table_name;
-                if (Table6_Code != 0)
-                {
-                    DataTable dt = enregistrements.FindByTableId(Table6Id);
-                    dt.Columns.Add("NOMCOMPLET", typeof(String), "NOM + ' (' + CODE + ')'");
-                    cbChamp6.DataSource = dt;
-                    cbChamp6.DisplayMember = "NOMCOMPLET";
-                    cbChamp6.ValueMember = "ENREGISTREMENTSID";
-                }
-                else
-                {
-                    cbChamp6.DataSource = enregistrements.FindByTableId(Table6Id);
-                    cbChamp6.DisplayMember = "NOM";
-                    cbChamp6.ValueMember = "ENREGISTREMENTSID";
-                }
+                cbChamp6.DataSource = enregistrements.FindByTableId(Table6Id);
+                cbChamp6.DisplayMember = "NOM";
+                cbChamp6.ValueMember = "ENREGISTREMENTSID";               
                 cbChamp6_Leave(this, EventArgs.Empty);
             }
 
@@ -1057,21 +991,10 @@ namespace WidraSoft.UI
                 btAddChamp7.Visible = true;
                 string table_name = tables.GetName(Table7Id);
                 lbChamp7.Text = table_name;
-                Table7Name = table_name;
-                if (Table7_Code != 0)
-                {
-                    DataTable dt = enregistrements.FindByTableId(Table7Id);
-                    dt.Columns.Add("NOMCOMPLET", typeof(String), "NOM + ' (' + CODE + ')'");
-                    cbChamp7.DataSource = dt;
-                    cbChamp7.DisplayMember = "NOMCOMPLET";
-                    cbChamp7.ValueMember = "ENREGISTREMENTSID";
-                }
-                else
-                {
-                    cbChamp7.DataSource = enregistrements.FindByTableId(Table7Id);
-                    cbChamp7.DisplayMember = "NOM";
-                    cbChamp7.ValueMember = "ENREGISTREMENTSID";
-                }
+                Table7Name = table_name;                
+                cbChamp7.DataSource = enregistrements.FindByTableId(Table7Id);
+                cbChamp7.DisplayMember = "NOM";
+                cbChamp7.ValueMember = "ENREGISTREMENTSID";               
                 cbChamp7_Leave(this, EventArgs.Empty);
             }
 
@@ -2067,33 +1990,7 @@ namespace WidraSoft.UI
 
         private void btAddPont_Click(object sender, EventArgs e)
         {
-            /*if (cbPont.Text != "" && cbPont.Text.Trim().Length > 1)
-            {
-                DialogResult result;
-                if (cbLang.Text == "FR")
-                    result = Custom_MessageBox.Show("FR", "Etes vous sur de vouloir ajouter le pont: " + cbPont.Text + "?", "Pesée", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-                else if (cbLang.Text == "EN")
-                    result = Custom_MessageBox.Show("EN", "Are you sure you want to add the weighbridge: " + cbPont.Text + "?", "Weighing", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-                else
-                    result = Custom_MessageBox.Show("ES", "¿Está seguro de que desea eliminar este registro?", "Pesaje", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-                if (result == DialogResult.Yes)
-                {
-                    try
-                    {
-                        Pont pont = new Pont();
-                        pont.Add(cbPont.Text, "1", 0, 0, 1, 9600, 8, "1", "None", 1000,"","");
-                        cbPont.DataSource = pont.List("1=1");
-                        cbPont.SelectedIndex = cbPont.Items.Count - 1;
-                        cbPont.Focus();
-                        cbFirme.Focus();
-                    }
-                    catch
-                    {
-                        throw;
-                    }
-
-                }
-            }*/
+            
         }
 
         private void btAddFirme_Click(object sender, EventArgs e)
@@ -2457,10 +2354,10 @@ namespace WidraSoft.UI
 
         private void cbChamp1_Leave(object sender, EventArgs e)
         {
-            if (cbChamp1.Text != "")
+            if (cbChamp1.Text.Trim() != "")
             {
                 Enregistrements enregistrements = new Enregistrements();
-                if (enregistrements.IfExists(cbChamp1.Text, Table1Id, 0) || enregistrements.IfExistsWithCode(cbChamp1.Text, Table1Id, 0))
+                if (enregistrements.IfExists(cbChamp1.Text, Table1Id, 0))
                 {
                     cbChamp1.BackColor = Color.FromArgb(58, 62, 60);
                     cbChamp1.ForeColor = Color.White;
@@ -2485,34 +2382,22 @@ namespace WidraSoft.UI
 
         private void cbChamp1_SelectedValueChanged(object sender, EventArgs e)
         {
-            if (init_WeighingSettings && Table1Id != 0 && cbChamp1.Text != "")
+            if (init_WeighingSettings && Table1Id != 0 && cbChamp1.Text.Trim() != "")
             {
                 Tables tables = new Tables();
                 Enregistrements enregistrements = new Enregistrements();
                 if (Table2Id != 0 && tables.IsTableRelated(Table2Id))
                 {
                     if (tables.GetParentTableId(Table2Id) == Table1Id)
-                    {
-                        if (Table2_Code != 0)
-                        {
-                            DataTable dt = enregistrements.FindByTableIdAndParentId(Table2Id, Common_functions.CbSelectedValue_Convert_Int(cbChamp1));
-                            dt.Columns.Add("NOMCOMPLET", typeof(String), "NOM + ' (' + CODE + ')'");
-                            cbChamp2.DataSource = dt;
-                            cbChamp2.DisplayMember = "NOMCOMPLET";
-                            cbChamp2.ValueMember = "ENREGISTREMENTSID";
-                        }
-                        else
-                        {
-                            cbChamp2.DataSource = enregistrements.FindByTableIdAndParentId(Table2Id, Common_functions.CbSelectedValue_Convert_Int(cbChamp1));
-                            cbChamp2.DisplayMember = "NOM";
-                            cbChamp2.ValueMember = "ENREGISTREMENTSID";
-                        }
+                    {                        
+                        cbChamp2.DataSource = enregistrements.FindByTableIdAndParentId(Table2Id, Common_functions.CbSelectedValue_Convert_Int(cbChamp1));
+                        cbChamp2.DisplayMember = "NOM";
+                        cbChamp2.ValueMember = "ENREGISTREMENTSID";                      
                         cbChamp2.Text = "";
                         cbChamp2.SelectedIndex = -1;
                         cbChamp2.BackColor = Color.Honeydew;
                         cbChamp2.ForeColor = Color.Black;
                         btAddChamp2.Visible = false;
-
                         Filter2.Visible = true;
                     }
                 }
@@ -2523,34 +2408,22 @@ namespace WidraSoft.UI
 
         private void cbChamp2_SelectedValueChanged(object sender, EventArgs e)
         {
-            if (init_WeighingSettings && Table2Id != 0  && cbChamp2.Text != "")
+            if (init_WeighingSettings && Table2Id != 0  && cbChamp2.Text.Trim() != "")
             {
                 Tables tables = new Tables();
                 Enregistrements enregistrements = new Enregistrements();
                 if (Table3Id != 0 && tables.IsTableRelated(Table3Id))
                 {
                     if (tables.GetParentTableId(Table3Id) == Table2Id)
-                    {
-                        if (Table3_Code != 0)
-                        {
-                            DataTable dt = enregistrements.FindByTableIdAndParentId(Table3Id, Common_functions.CbSelectedValue_Convert_Int(cbChamp2));
-                            dt.Columns.Add("NOMCOMPLET", typeof(String), "NOM + ' (' + CODE + ')'");
-                            cbChamp3.DataSource = dt;
-                            cbChamp3.DisplayMember = "NOMCOMPLET";
-                            cbChamp3.ValueMember = "ENREGISTREMENTSID";
-                        }
-                        else
-                        {
-                            cbChamp3.DataSource = enregistrements.FindByTableIdAndParentId(Table3Id, Common_functions.CbSelectedValue_Convert_Int(cbChamp2));
-                            cbChamp3.DisplayMember = "NOM";
-                            cbChamp3.ValueMember = "ENREGISTREMENTSID";
-                        }
+                    {                      
+                        cbChamp3.DataSource = enregistrements.FindByTableIdAndParentId(Table3Id, Common_functions.CbSelectedValue_Convert_Int(cbChamp2));
+                        cbChamp3.DisplayMember = "NOM";
+                        cbChamp3.ValueMember = "ENREGISTREMENTSID";                       
                         cbChamp3.Text = "";
                         cbChamp3.SelectedIndex = -1;
                         cbChamp3.BackColor = Color.Honeydew;
                         cbChamp3.ForeColor = Color.Black;
                         btAddChamp3.Visible = false;
-
                         Filter3.Visible = true;
                     }
                 }
@@ -2561,13 +2434,13 @@ namespace WidraSoft.UI
 
         private void cbChamp2_Leave(object sender, EventArgs e)
         {
-            if (cbChamp2.Text != "")
+            if (cbChamp2.Text.Trim() != "")
             {
                 Tables tables = new Tables();
                 Enregistrements enregistrements = new Enregistrements();
                 if(tables.IsTableRelated(Table2Id))
                 {
-                    /*if (enregistrements.IfExists(cbChamp2.Text, Table2Id, tables.GetParentTableId(Table2Id)) || enregistrements.IfExistsWithCode(cbChamp2.Text, Table2Id, tables.GetParentTableId(Table2Id)))
+                    if (enregistrements.IfExists(cbChamp2.Text, Table2Id, Common_functions.CbSelectedValue_Convert_Int(cbChamp1)))
                     {
                         cbChamp2.BackColor = Color.FromArgb(58, 62, 60);
                         cbChamp2.ForeColor = Color.White;
@@ -2579,25 +2452,11 @@ namespace WidraSoft.UI
                         cbChamp2.ForeColor = Color.Black;
                         if (Table2_Ajout != 0)
                             btAddChamp2.Visible = true;
-                    }*/
-
-                    if (enregistrements.IfExists(cbChamp2.Text, Table2Id, 0) || enregistrements.IfExistsWithCode(cbChamp2.Text, Table2Id, 0))
-                    {
-                        cbChamp2.BackColor = Color.FromArgb(58, 62, 60);
-                        cbChamp2.ForeColor = Color.White;
-                        btAddChamp2.Visible = false;
-                    }
-                    else
-                    {
-                        cbChamp2.BackColor = Color.Honeydew;
-                        cbChamp2.ForeColor = Color.Black;
-                        if (Table2_Ajout != 0)
-                            btAddChamp2.Visible = true;
-                    }
+                    }                  
                 }
                 else
                 {
-                    if (enregistrements.IfExists(cbChamp2.Text, Table2Id, 0) || enregistrements.IfExistsWithCode(cbChamp2.Text, Table2Id, 0))
+                    if (enregistrements.IfExists(cbChamp2.Text, Table2Id, 0))
                     {
                         cbChamp2.BackColor = Color.FromArgb(58, 62, 60);
                         cbChamp2.ForeColor = Color.White;
@@ -2624,34 +2483,22 @@ namespace WidraSoft.UI
 
         private void cbChamp3_SelectedValueChanged(object sender, EventArgs e)
         {
-            if (init_WeighingSettings && Table3Id != 0  && cbChamp3.Text != "")
+            if (init_WeighingSettings && Table3Id != 0  && cbChamp3.Text.Trim() != "")
             {
                 Tables tables = new Tables();
                 Enregistrements enregistrements = new Enregistrements();
                 if (Table4Id != 0 && tables.IsTableRelated(Table4Id))
                 {
                     if (tables.GetParentTableId(Table4Id) == Table3Id)
-                    {
-                        if (Table4_Code != 0)
-                        {
-                            DataTable dt = enregistrements.FindByTableIdAndParentId(Table4Id, Common_functions.CbSelectedValue_Convert_Int(cbChamp3));
-                            dt.Columns.Add("NOMCOMPLET", typeof(String), "NOM + ' (' + CODE + ')'");
-                            cbChamp4.DataSource = dt;
-                            cbChamp4.DisplayMember = "NOMCOMPLET";
-                            cbChamp4.ValueMember = "ENREGISTREMENTSID";
-                        }
-                        else
-                        {
-                            cbChamp4.DataSource = enregistrements.FindByTableIdAndParentId(Table4Id, Common_functions.CbSelectedValue_Convert_Int(cbChamp3));
-                            cbChamp4.DisplayMember = "NOM";
-                            cbChamp4.ValueMember = "ENREGISTREMENTSID";
-                        }
+                    {                      
+                        cbChamp4.DataSource = enregistrements.FindByTableIdAndParentId(Table4Id, Common_functions.CbSelectedValue_Convert_Int(cbChamp3));
+                        cbChamp4.DisplayMember = "NOM";
+                        cbChamp4.ValueMember = "ENREGISTREMENTSID";
                         cbChamp4.Text = "";
                         cbChamp4.SelectedIndex = -1;
                         cbChamp4.BackColor = Color.Honeydew;
                         cbChamp4.ForeColor = Color.Black;
                         btAddChamp4.Visible = false;
-
                         Filter4.Visible = true;
                     }
                 }
@@ -2662,26 +2509,13 @@ namespace WidraSoft.UI
 
         private void cbChamp3_Leave(object sender, EventArgs e)
         {
-            if (cbChamp3.Text != "")
+            if (cbChamp3.Text.Trim() != "")
             {
                 Tables tables = new Tables();
                 Enregistrements enregistrements = new Enregistrements();
                 if (tables.IsTableRelated(Table3Id))
                 {
-                    /*if (enregistrements.IfExists(cbChamp3.Text, Table3Id, tables.GetParentTableId(Table3Id)) || enregistrements.IfExistsWithCode(cbChamp3.Text, Table3Id, tables.GetParentTableId(Table3Id)))
-                    {
-                        cbChamp3.BackColor = Color.FromArgb(58, 62, 60);
-                        cbChamp3.ForeColor = Color.White;
-                        btAddChamp3.Visible = false;
-                    }
-                    else
-                    {
-                        cbChamp3.BackColor = Color.Honeydew;
-                        cbChamp3.ForeColor = Color.Black;
-                        if (Table3_Ajout != 0)
-                            btAddChamp3.Visible = true;
-                    }*/
-                    if (enregistrements.IfExists(cbChamp3.Text, Table3Id, 0) || enregistrements.IfExistsWithCode(cbChamp3.Text, Table3Id, 0))
+                    if (enregistrements.IfExists(cbChamp3.Text, Table3Id, Common_functions.CbSelectedValue_Convert_Int(cbChamp2)))
                     {
                         cbChamp3.BackColor = Color.FromArgb(58, 62, 60);
                         cbChamp3.ForeColor = Color.White;
@@ -2694,10 +2528,11 @@ namespace WidraSoft.UI
                         if (Table3_Ajout != 0)
                             btAddChamp3.Visible = true;
                     }
+                    
                 }
                 else
                 {
-                    if (enregistrements.IfExists(cbChamp3.Text, Table3Id, 0) || enregistrements.IfExistsWithCode(cbChamp3.Text, Table3Id, 0))
+                    if (enregistrements.IfExists(cbChamp3.Text, Table3Id, 0))
                     {
                         cbChamp3.BackColor = Color.FromArgb(58, 62, 60);
                         cbChamp3.ForeColor = Color.White;
@@ -2723,34 +2558,22 @@ namespace WidraSoft.UI
 
         private void cbChamp4_SelectedValueChanged(object sender, EventArgs e)
         {
-            if (init_WeighingSettings && Table4Id != 0  && cbChamp4.Text != "")
+            if (init_WeighingSettings && Table4Id != 0  && cbChamp4.Text.Trim() != "")
             {
                 Tables tables = new Tables();
                 Enregistrements enregistrements = new Enregistrements();
                 if (Table5Id != 0 && tables.IsTableRelated(Table5Id))
                 {
                     if (tables.GetParentTableId(Table5Id) == Table4Id)
-                    {
-                        if (Table5_Code != 0)
-                        {
-                            DataTable dt = enregistrements.FindByTableIdAndParentId(Table5Id, Common_functions.CbSelectedValue_Convert_Int(cbChamp4));
-                            dt.Columns.Add("NOMCOMPLET", typeof(String), "NOM + ' (' + CODE + ')'");
-                            cbChamp5.DataSource = dt;
-                            cbChamp5.DisplayMember = "NOMCOMPLET";
-                            cbChamp5.ValueMember = "ENREGISTREMENTSID";
-                        }
-                        else
-                        {
-                            cbChamp5.DataSource = enregistrements.FindByTableIdAndParentId(Table5Id, Common_functions.CbSelectedValue_Convert_Int(cbChamp4));
-                            cbChamp5.DisplayMember = "NOM";
-                            cbChamp5.ValueMember = "ENREGISTREMENTSID";
-                        }
+                    {                       
+                        cbChamp5.DataSource = enregistrements.FindByTableIdAndParentId(Table5Id, Common_functions.CbSelectedValue_Convert_Int(cbChamp4));
+                        cbChamp5.DisplayMember = "NOM";
+                        cbChamp5.ValueMember = "ENREGISTREMENTSID";                       
                         cbChamp5.Text = "";
                         cbChamp5.SelectedIndex = -1;
                         cbChamp5.BackColor = Color.Honeydew;
                         cbChamp5.ForeColor = Color.Black;
                         btAddChamp5.Visible = false;
-
                         Filter5.Visible = true;
                     }
                 }
@@ -2761,27 +2584,13 @@ namespace WidraSoft.UI
 
         private void cbChamp4_Leave(object sender, EventArgs e)
         {
-            if (cbChamp4.Text != "")
+            if (cbChamp4.Text.Trim() != "")
             {
                 Tables tables = new Tables();
                 Enregistrements enregistrements = new Enregistrements();
                 if (tables.IsTableRelated(Table4Id))
                 {
-                    /*if (enregistrements.IfExists(cbChamp4.Text, Table4Id, tables.GetParentTableId(Table4Id)) || enregistrements.IfExistsWithCode(cbChamp4.Text, Table4Id, tables.GetParentTableId(Table4Id)))
-                    {
-                        cbChamp4.BackColor = Color.FromArgb(58, 62, 60);
-                        cbChamp4.ForeColor = Color.White;
-                        btAddChamp4.Visible = false;
-                    }
-                    else
-                    {
-                        cbChamp4.BackColor = Color.Honeydew;
-                        cbChamp4.ForeColor = Color.Black;
-                        if (Table4_Ajout != 0)
-                            btAddChamp4.Visible = true;
-                    }*/
-
-                    if (enregistrements.IfExists(cbChamp4.Text, Table4Id, 0) || enregistrements.IfExistsWithCode(cbChamp4.Text, Table4Id, 0))
+                    if (enregistrements.IfExists(cbChamp4.Text, Table4Id, Common_functions.CbSelectedValue_Convert_Int(cbChamp3)))
                     {
                         cbChamp4.BackColor = Color.FromArgb(58, 62, 60);
                         cbChamp4.ForeColor = Color.White;
@@ -2797,7 +2606,7 @@ namespace WidraSoft.UI
                 }
                 else
                 {
-                    if (enregistrements.IfExists(cbChamp4.Text, Table4Id, 0) || enregistrements.IfExistsWithCode(cbChamp4.Text, Table4Id, 0))
+                    if (enregistrements.IfExists(cbChamp4.Text, Table4Id, 0))
                     {
                         cbChamp4.BackColor = Color.FromArgb(58, 62, 60);
                         cbChamp4.ForeColor = Color.White;
@@ -2823,34 +2632,22 @@ namespace WidraSoft.UI
 
         private void cbChamp5_SelectedValueChanged(object sender, EventArgs e)
         {
-            if (init_WeighingSettings && Table5Id != 0  && cbChamp5.Text != "")
+            if (init_WeighingSettings && Table5Id != 0  && cbChamp5.Text.Trim() != "")
             {
                 Tables tables = new Tables();
                 Enregistrements enregistrements = new Enregistrements();
                 if (Table6Id != 0 && tables.IsTableRelated(Table6Id))
                 {
                     if (tables.GetParentTableId(Table6Id) == Table5Id)
-                    {
-                        if (Table6_Code != 0)
-                        {
-                            DataTable dt = enregistrements.FindByTableIdAndParentId(Table6Id, Common_functions.CbSelectedValue_Convert_Int(cbChamp5));
-                            dt.Columns.Add("NOMCOMPLET", typeof(String), "NOM + ' (' + CODE + ')'");
-                            cbChamp6.DataSource = dt;
-                            cbChamp6.DisplayMember = "NOMCOMPLET";
-                            cbChamp6.ValueMember = "ENREGISTREMENTSID";
-                        }
-                        else
-                        {
-                            cbChamp6.DataSource = enregistrements.FindByTableIdAndParentId(Table6Id, Common_functions.CbSelectedValue_Convert_Int(cbChamp5));
-                            cbChamp6.DisplayMember = "NOM";
-                            cbChamp6.ValueMember = "ENREGISTREMENTSID";
-                        }
+                    {                        
+                        cbChamp6.DataSource = enregistrements.FindByTableIdAndParentId(Table6Id, Common_functions.CbSelectedValue_Convert_Int(cbChamp5));
+                        cbChamp6.DisplayMember = "NOM";
+                        cbChamp6.ValueMember = "ENREGISTREMENTSID";                       
                         cbChamp6.Text = "";
                         cbChamp6.SelectedIndex = -1;
                         cbChamp6.BackColor = Color.Honeydew;
                         cbChamp6.ForeColor = Color.Black;
                         btAddChamp6.Visible = false;
-
                         Filter6.Visible = true;
                     }
                 }
@@ -2861,27 +2658,13 @@ namespace WidraSoft.UI
 
         private void cbChamp5_Leave(object sender, EventArgs e)
         {
-            if (cbChamp5.Text != "")
+            if (cbChamp5.Text.Trim() != "")
             {
                 Tables tables = new Tables();
                 Enregistrements enregistrements = new Enregistrements();
                 if (tables.IsTableRelated(Table5Id))
                 {
-                    /*if (enregistrements.IfExists(cbChamp5.Text, Table5Id, tables.GetParentTableId(Table5Id)) || enregistrements.IfExistsWithCode(cbChamp5.Text, Table5Id, tables.GetParentTableId(Table5Id)))
-                    {
-                        cbChamp5.BackColor = Color.FromArgb(58, 62, 60);
-                        cbChamp5.ForeColor = Color.White;
-                        btAddChamp5.Visible = false;
-                    }
-                    else
-                    {
-                        cbChamp5.BackColor = Color.Honeydew;
-                        cbChamp5.ForeColor = Color.Black;
-                        if (Table5_Ajout != 0)
-                            btAddChamp5.Visible = true;
-                    }*/
-
-                    if (enregistrements.IfExists(cbChamp5.Text, Table5Id, 0) || enregistrements.IfExistsWithCode(cbChamp5.Text, Table5Id, 0))
+                    if (enregistrements.IfExists(cbChamp5.Text, Table5Id, Common_functions.CbSelectedValue_Convert_Int(cbChamp4)))
                     {
                         cbChamp5.BackColor = Color.FromArgb(58, 62, 60);
                         cbChamp5.ForeColor = Color.White;
@@ -2897,7 +2680,7 @@ namespace WidraSoft.UI
                 }
                 else
                 {
-                    if (enregistrements.IfExists(cbChamp5.Text, Table5Id, 0) || enregistrements.IfExistsWithCode(cbChamp5.Text, Table5Id, 0))
+                    if (enregistrements.IfExists(cbChamp5.Text, Table5Id, 0))
                     {
                         cbChamp5.BackColor = Color.FromArgb(58, 62, 60);
                         cbChamp5.ForeColor = Color.White;
@@ -2923,34 +2706,22 @@ namespace WidraSoft.UI
 
         private void cbChamp6_SelectedValueChanged(object sender, EventArgs e)
         {
-            if (init_WeighingSettings && Table6Id != 0  && cbChamp6.Text != "")
+            if (init_WeighingSettings && Table6Id != 0  && cbChamp6.Text.Trim() != "")
             {
                 Tables tables = new Tables();
                 Enregistrements enregistrements = new Enregistrements();
                 if (Table7Id != 0 && tables.IsTableRelated(Table7Id))
                 {
                     if (tables.GetParentTableId(Table7Id) == Table6Id)
-                    {
-                        if (Table7_Code != 0)
-                        {
-                            DataTable dt = enregistrements.FindByTableIdAndParentId(Table7Id, Common_functions.CbSelectedValue_Convert_Int(cbChamp6));
-                            dt.Columns.Add("NOMCOMPLET", typeof(String), "NOM + ' (' + CODE + ')'");
-                            cbChamp7.DataSource = dt;
-                            cbChamp7.DisplayMember = "NOMCOMPLET";
-                            cbChamp7.ValueMember = "ENREGISTREMENTSID";
-                        }
-                        else
-                        {
-                            cbChamp7.DataSource = enregistrements.FindByTableIdAndParentId(Table7Id, Common_functions.CbSelectedValue_Convert_Int(cbChamp6));
-                            cbChamp7.DisplayMember = "NOM";
-                            cbChamp7.ValueMember = "ENREGISTREMENTSID";
-                        }
+                    {                       
+                        cbChamp7.DataSource = enregistrements.FindByTableIdAndParentId(Table7Id, Common_functions.CbSelectedValue_Convert_Int(cbChamp6));
+                        cbChamp7.DisplayMember = "NOM";
+                        cbChamp7.ValueMember = "ENREGISTREMENTSID";                        
                         cbChamp7.Text = "";
                         cbChamp7.SelectedIndex = -1;
                         cbChamp7.BackColor = Color.Honeydew;
                         cbChamp7.ForeColor = Color.Black;
                         btAddChamp7.Visible = false;
-
                         Filter7.Visible = true;
                     }
                 }
@@ -2961,27 +2732,13 @@ namespace WidraSoft.UI
 
         private void cbChamp6_Leave(object sender, EventArgs e)
         {
-            if (cbChamp6.Text != "")
+            if (cbChamp6.Text.Trim() != "")
             {
                 Tables tables = new Tables();
                 Enregistrements enregistrements = new Enregistrements();
                 if (tables.IsTableRelated(Table6Id))
                 {
-                    /*if (enregistrements.IfExists(cbChamp6.Text, Table6Id, tables.GetParentTableId(Table6Id)) || enregistrements.IfExistsWithCode(cbChamp6.Text, Table6Id, tables.GetParentTableId(Table6Id)))
-                    {
-                        cbChamp6.BackColor = Color.FromArgb(58, 62, 60);
-                        cbChamp6.ForeColor = Color.White;
-                        btAddChamp6.Visible = false;
-                    }
-                    else
-                    {
-                        cbChamp6.BackColor = Color.Honeydew;
-                        cbChamp6.ForeColor = Color.Black;
-                        if (Table6_Ajout != 0)
-                            btAddChamp6.Visible = true;
-                    }*/
-
-                    if (enregistrements.IfExists(cbChamp6.Text, Table6Id, 0) || enregistrements.IfExistsWithCode(cbChamp6.Text, Table6Id, 0))
+                    if (enregistrements.IfExists(cbChamp6.Text, Table6Id, Common_functions.CbSelectedValue_Convert_Int(cbChamp5)))
                     {
                         cbChamp6.BackColor = Color.FromArgb(58, 62, 60);
                         cbChamp6.ForeColor = Color.White;
@@ -2997,7 +2754,7 @@ namespace WidraSoft.UI
                 }
                 else
                 {
-                    if (enregistrements.IfExists(cbChamp6.Text, Table6Id, 0) || enregistrements.IfExistsWithCode(cbChamp6.Text, Table6Id, 0))
+                    if (enregistrements.IfExists(cbChamp6.Text, Table6Id, 0))
                     {
                         cbChamp6.BackColor = Color.FromArgb(58, 62, 60);
                         cbChamp6.ForeColor = Color.White;
@@ -3023,27 +2780,13 @@ namespace WidraSoft.UI
 
         private void cbChamp7_Leave(object sender, EventArgs e)
         {
-            if (cbChamp7.Text != "")
+            if (cbChamp7.Text.Trim() != "")
             {
                 Tables tables = new Tables();
                 Enregistrements enregistrements = new Enregistrements();
                 if (tables.IsTableRelated(Table7Id))
                 {
-                    /*if (enregistrements.IfExists(cbChamp7.Text, Table7Id, tables.GetParentTableId(Table7Id)) || enregistrements.IfExistsWithCode(cbChamp7.Text, Table7Id, tables.GetParentTableId(Table7Id)))
-                    {
-                        cbChamp7.BackColor = Color.FromArgb(58, 62, 60);
-                        cbChamp7.ForeColor = Color.White;
-                        btAddChamp7.Visible = false;
-                    }
-                    else
-                    {
-                        cbChamp7.BackColor = Color.Honeydew;
-                        cbChamp7.ForeColor = Color.Black;
-                        if (Table7_Ajout != 0)
-                            btAddChamp7.Visible = true;
-                    }*/
-
-                    if (enregistrements.IfExists(cbChamp7.Text, Table7Id, 0) || enregistrements.IfExistsWithCode(cbChamp7.Text, Table7Id, 0))
+                    if (enregistrements.IfExists(cbChamp7.Text, Table7Id, Common_functions.CbSelectedValue_Convert_Int(cbChamp6)))
                     {
                         cbChamp7.BackColor = Color.FromArgb(58, 62, 60);
                         cbChamp7.ForeColor = Color.White;
@@ -3059,7 +2802,7 @@ namespace WidraSoft.UI
                 }
                 else
                 {
-                    if (enregistrements.IfExists(cbChamp7.Text, Table7Id, 0) || enregistrements.IfExistsWithCode(cbChamp7.Text, Table7Id, 0))
+                    if (enregistrements.IfExists(cbChamp7.Text, Table7Id, 0))
                     {
                         cbChamp7.BackColor = Color.FromArgb(58, 62, 60);
                         cbChamp7.ForeColor = Color.White;
@@ -3123,8 +2866,7 @@ namespace WidraSoft.UI
                     Edit_Item_2x2();
                 }
             }
-            
-            
+                      
         }
 
         private void toolStripMenuItem4_Click(object sender, EventArgs e)
@@ -3303,7 +3045,7 @@ namespace WidraSoft.UI
 
         private void btAddChamp1_Click(object sender, EventArgs e)
         {
-            /*if (cbChamp1.Text != "" && cbChamp1.Text.Trim().Length > 1)
+            if (cbChamp1.Text != "" && cbChamp1.Text.Trim().Length > 1)
             {
                 DialogResult result;
                 if (cbLang.Text == "FR")
@@ -3317,25 +3059,26 @@ namespace WidraSoft.UI
                     try
                     {
                         Enregistrements enregistrements = new Enregistrements();
-                        enregistrements.Add(Table1Id, cbChamp1.Text,"", "","", "", "", "", "", "", "", "", 0, "", 0, "", 0);                        
-                        DataTable dt = enregistrements.FindByTableId(Table1Id);
-                        cbChamp1.DataSource = dt;
+                        enregistrements.Add(Table1Id, cbChamp1.Text,"", "","", "", "", "", "", "", "", "", 0, "", 0, "", 0);                     
+                        cbChamp1.DataSource = enregistrements.FindByTableId(Table1Id); ;
+                        cbChamp1.DisplayMember = "NOM";
+                        cbChamp1.ValueMember = "ENREGISTREMENTSID";
                         //cbChamp1_SelectedValueChanged(this, EventArgs.Empty);                       
                         cbChamp1.SelectedIndex = cbChamp1.Items.Count - 1;
                         cbChamp1_Leave(this, EventArgs.Empty);
-                    }SSSS
+                    }
                     catch
                     {
                         throw;
                     }
 
                 }
-            }*/
+            }
         }
 
         private void btAddChamp2_Click(object sender, EventArgs e)
         {
-            /*if (cbChamp2.Text != "" && cbChamp2.Text.Trim().Length > 1)
+            if (cbChamp2.Text != "" && cbChamp2.Text.Trim().Length > 1)
             {
                 DialogResult result;
                 if (cbLang.Text == "FR")
@@ -3350,15 +3093,55 @@ namespace WidraSoft.UI
                     Enregistrements enregistrements = new Enregistrements();
                     if (tables.IsTableRelated(Table2Id))
                     {
-
+                        try
+                        {   
+                            if (tables.GetParentTableId(Table2Id) == Table1Id)
+                            {
+                                if (cbChamp1.Text != "" && cbChamp1.Text.Trim().Length > 1)
+                                {
+                                    enregistrements.Add(Table2Id, cbChamp2.Text, "", "", "", "", "", "", "", "", "", "", 0, "", 0, "", Common_functions.CbSelectedValue_Convert_Int(cbChamp1));
+                                    cbChamp2.DataSource = enregistrements.FindByTableId(Table2Id); ;
+                                    cbChamp2.DisplayMember = "NOM";
+                                    cbChamp2.ValueMember = "ENREGISTREMENTSID";
+                                    //cbChamp1_SelectedValueChanged(this, EventArgs.Empty);                       
+                                    cbChamp2.SelectedIndex = cbChamp2.Items.Count - 1;
+                                    cbChamp2_Leave(this, EventArgs.Empty);
+                                }
+                                else
+                                {
+                                    if (cbLang.Text == "FR")
+                                        Custom_MessageBox.Show("FR", "L'enregistrement parent est obligatoire.", "Pesée", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                                    else if (cbLang.Text == "EN")
+                                        Custom_MessageBox.Show("EN", "Parent record is required", "Weighing", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                                    else
+                                        Custom_MessageBox.Show("ES", "¿Está seguro de que desea eliminar este registro?", "Pesaje", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                                }
+                                
+                            }
+                            else
+                            {
+                                if (cbLang.Text == "FR")
+                                     Custom_MessageBox.Show("FR", "Il y'a une incoherence dans le parmétrage des liens entre les tables.", "Pesée", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                                else if (cbLang.Text == "EN")
+                                     Custom_MessageBox.Show("EN", "There is an error in the links between the tables", "Weighing", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                                else
+                                    Custom_MessageBox.Show("ES", "¿Está seguro de que desea eliminar este registro?", "Pesaje", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            }
+                            
+                        }
+                        catch
+                        {
+                            throw;
+                        }
                     }
                     else
                     {
                         try
                         {                           
                             enregistrements.Add(Table2Id, cbChamp2.Text, "", "", "", "", "", "", "", "", "", "", 0, "", 0, "", 0);
-                            DataTable dt = enregistrements.FindByTableId(Table2Id);
-                            cbChamp2.DataSource = dt;
+                            cbChamp2.DataSource = enregistrements.FindByTableId(Table2Id); ;
+                            cbChamp2.DisplayMember = "NOM";
+                            cbChamp2.ValueMember = "ENREGISTREMENTSID";
                             //cbChamp1_SelectedValueChanged(this, EventArgs.Empty);                       
                             cbChamp2.SelectedIndex = cbChamp2.Items.Count - 1;
                             cbChamp2_Leave(this, EventArgs.Empty);
@@ -3367,16 +3150,409 @@ namespace WidraSoft.UI
                         {
                             throw;
                         }
-                    }
-                    
-
+                    }                   
                 }
-            }*/
+            }
         }
 
         private void btSaisirPoids_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void btAddChamp3_Click(object sender, EventArgs e)
+        {
+            if (cbChamp3.Text != "" && cbChamp3.Text.Trim().Length > 1)
+            {
+                DialogResult result;
+                if (cbLang.Text == "FR")
+                    result = Custom_MessageBox.Show("FR", "Etes vous sur de vouloir ajouter l'enregistrement" + cbChamp3.Text + "?", "Pesée", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                else if (cbLang.Text == "EN")
+                    result = Custom_MessageBox.Show("EN", "Are you sure you want to add the record: " + cbChamp3.Text + "?", "Weighing", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                else
+                    result = Custom_MessageBox.Show("ES", "¿Está seguro de que desea eliminar este registro?", "Pesaje", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                if (result == DialogResult.Yes)
+                {
+                    Tables tables = new Tables();
+                    Enregistrements enregistrements = new Enregistrements();
+                    if (tables.IsTableRelated(Table3Id))
+                    {
+                        try
+                        {
+                            if (tables.GetParentTableId(Table3Id) == Table2Id)
+                            {
+                                if (cbChamp2.Text != "" && cbChamp2.Text.Trim().Length > 1)
+                                {
+                                    enregistrements.Add(Table3Id, cbChamp3.Text, "", "", "", "", "", "", "", "", "", "", 0, "", 0, "", Common_functions.CbSelectedValue_Convert_Int(cbChamp2));
+                                    cbChamp3.DataSource = enregistrements.FindByTableId(Table3Id); ;
+                                    cbChamp3.DisplayMember = "NOM";
+                                    cbChamp3.ValueMember = "ENREGISTREMENTSID";
+                                    //cbChamp1_SelectedValueChanged(this, EventArgs.Empty);                       
+                                    cbChamp3.SelectedIndex = cbChamp3.Items.Count - 1;
+                                    cbChamp3_Leave(this, EventArgs.Empty);
+                                }
+                                else
+                                {
+                                    if (cbLang.Text == "FR")
+                                        Custom_MessageBox.Show("FR", "L'enregistrement parent est obligatoire.", "Pesée", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                                    else if (cbLang.Text == "EN")
+                                        Custom_MessageBox.Show("EN", "Parent record is required", "Weighing", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                                    else
+                                        Custom_MessageBox.Show("ES", "¿Está seguro de que desea eliminar este registro?", "Pesaje", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                                }
+
+                            }
+                            else
+                            {
+                                if (cbLang.Text == "FR")
+                                    Custom_MessageBox.Show("FR", "Il y'a une incoherence dans le parmétrage des liens entre les tables.", "Pesée", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                                else if (cbLang.Text == "EN")
+                                    Custom_MessageBox.Show("EN", "There is an error in the links between the tables", "Weighing", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                                else
+                                    Custom_MessageBox.Show("ES", "¿Está seguro de que desea eliminar este registro?", "Pesaje", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            }
+
+                        }
+                        catch
+                        {
+                            throw;
+                        }
+                    }
+                    else
+                    {
+                        try
+                        {
+                            enregistrements.Add(Table3Id, cbChamp3.Text, "", "", "", "", "", "", "", "", "", "", 0, "", 0, "", 0);
+                            cbChamp3.DataSource = enregistrements.FindByTableId(Table3Id); ;
+                            cbChamp3.DisplayMember = "NOM";
+                            cbChamp3.ValueMember = "ENREGISTREMENTSID";
+                            //cbChamp1_SelectedValueChanged(this, EventArgs.Empty);                       
+                            cbChamp3.SelectedIndex = cbChamp3.Items.Count - 1;
+                            cbChamp3_Leave(this, EventArgs.Empty);
+                        }
+                        catch
+                        {
+                            throw;
+                        }
+                    }
+                }
+            }
+        }
+
+        private void btAddChamp4_Click(object sender, EventArgs e)
+        {
+            if (cbChamp4.Text != "" && cbChamp4.Text.Trim().Length > 1)
+            {
+                DialogResult result;
+                if (cbLang.Text == "FR")
+                    result = Custom_MessageBox.Show("FR", "Etes vous sur de vouloir ajouter l'enregistrement" + cbChamp4.Text + "?", "Pesée", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                else if (cbLang.Text == "EN")
+                    result = Custom_MessageBox.Show("EN", "Are you sure you want to add the record: " + cbChamp4.Text + "?", "Weighing", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                else
+                    result = Custom_MessageBox.Show("ES", "¿Está seguro de que desea eliminar este registro?", "Pesaje", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                if (result == DialogResult.Yes)
+                {
+                    Tables tables = new Tables();
+                    Enregistrements enregistrements = new Enregistrements();
+                    if (tables.IsTableRelated(Table4Id))
+                    {
+                        try
+                        {
+                            if (tables.GetParentTableId(Table4Id) == Table3Id)
+                            {
+                                if (cbChamp3.Text != "" && cbChamp3.Text.Trim().Length > 1)
+                                {
+                                    enregistrements.Add(Table4Id, cbChamp4.Text, "", "", "", "", "", "", "", "", "", "", 0, "", 0, "", Common_functions.CbSelectedValue_Convert_Int(cbChamp3));
+                                    cbChamp4.DataSource = enregistrements.FindByTableId(Table4Id); ;
+                                    cbChamp4.DisplayMember = "NOM";
+                                    cbChamp4.ValueMember = "ENREGISTREMENTSID";
+                                    //cbChamp1_SelectedValueChanged(this, EventArgs.Empty);                       
+                                    cbChamp4.SelectedIndex = cbChamp4.Items.Count - 1;
+                                    cbChamp4_Leave(this, EventArgs.Empty);
+                                }
+                                else
+                                {
+                                    if (cbLang.Text == "FR")
+                                        Custom_MessageBox.Show("FR", "L'enregistrement parent est obligatoire.", "Pesée", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                                    else if (cbLang.Text == "EN")
+                                        Custom_MessageBox.Show("EN", "Parent record is required", "Weighing", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                                    else
+                                        Custom_MessageBox.Show("ES", "¿Está seguro de que desea eliminar este registro?", "Pesaje", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                                }
+
+                            }
+                            else
+                            {
+                                if (cbLang.Text == "FR")
+                                    Custom_MessageBox.Show("FR", "Il y'a une incoherence dans le parmétrage des liens entre les tables.", "Pesée", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                                else if (cbLang.Text == "EN")
+                                    Custom_MessageBox.Show("EN", "There is an error in the links between the tables", "Weighing", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                                else
+                                    Custom_MessageBox.Show("ES", "¿Está seguro de que desea eliminar este registro?", "Pesaje", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            }
+
+                        }
+                        catch
+                        {
+                            throw;
+                        }
+                    }
+                    else
+                    {
+                        try
+                        {
+                            enregistrements.Add(Table4Id, cbChamp4.Text, "", "", "", "", "", "", "", "", "", "", 0, "", 0, "", 0);
+                            cbChamp4.DataSource = enregistrements.FindByTableId(Table4Id); ;
+                            cbChamp4.DisplayMember = "NOM";
+                            cbChamp4.ValueMember = "ENREGISTREMENTSID";
+                            //cbChamp1_SelectedValueChanged(this, EventArgs.Empty);                       
+                            cbChamp4.SelectedIndex = cbChamp4.Items.Count - 1;
+                            cbChamp4_Leave(this, EventArgs.Empty);
+                        }
+                        catch
+                        {
+                            throw;
+                        }
+                    }
+                }
+            }
+        }
+
+        private void btAddChamp5_Click(object sender, EventArgs e)
+        {
+            if (cbChamp5.Text != "" && cbChamp5.Text.Trim().Length > 1)
+            {
+                DialogResult result;
+                if (cbLang.Text == "FR")
+                    result = Custom_MessageBox.Show("FR", "Etes vous sur de vouloir ajouter l'enregistrement" + cbChamp5.Text + "?", "Pesée", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                else if (cbLang.Text == "EN")
+                    result = Custom_MessageBox.Show("EN", "Are you sure you want to add the record: " + cbChamp5.Text + "?", "Weighing", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                else
+                    result = Custom_MessageBox.Show("ES", "¿Está seguro de que desea eliminar este registro?", "Pesaje", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                if (result == DialogResult.Yes)
+                {
+                    Tables tables = new Tables();
+                    Enregistrements enregistrements = new Enregistrements();
+                    if (tables.IsTableRelated(Table5Id))
+                    {
+                        try
+                        {
+                            if (tables.GetParentTableId(Table5Id) == Table4Id)
+                            {
+                                if (cbChamp4.Text != "" && cbChamp4.Text.Trim().Length > 1)
+                                {
+                                    enregistrements.Add(Table5Id, cbChamp5.Text, "", "", "", "", "", "", "", "", "", "", 0, "", 0, "", Common_functions.CbSelectedValue_Convert_Int(cbChamp4));
+                                    cbChamp5.DataSource = enregistrements.FindByTableId(Table5Id); ;
+                                    cbChamp5.DisplayMember = "NOM";
+                                    cbChamp5.ValueMember = "ENREGISTREMENTSID";
+                                    //cbChamp1_SelectedValueChanged(this, EventArgs.Empty);                       
+                                    cbChamp5.SelectedIndex = cbChamp5.Items.Count - 1;
+                                    cbChamp5_Leave(this, EventArgs.Empty);
+                                }
+                                else
+                                {
+                                    if (cbLang.Text == "FR")
+                                        Custom_MessageBox.Show("FR", "L'enregistrement parent est obligatoire.", "Pesée", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                                    else if (cbLang.Text == "EN")
+                                        Custom_MessageBox.Show("EN", "Parent record is required", "Weighing", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                                    else
+                                        Custom_MessageBox.Show("ES", "¿Está seguro de que desea eliminar este registro?", "Pesaje", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                                }
+
+                            }
+                            else
+                            {
+                                if (cbLang.Text == "FR")
+                                    Custom_MessageBox.Show("FR", "Il y'a une incoherence dans le parmétrage des liens entre les tables.", "Pesée", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                                else if (cbLang.Text == "EN")
+                                    Custom_MessageBox.Show("EN", "There is an error in the links between the tables", "Weighing", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                                else
+                                    Custom_MessageBox.Show("ES", "¿Está seguro de que desea eliminar este registro?", "Pesaje", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            }
+
+                        }
+                        catch
+                        {
+                            throw;
+                        }
+                    }
+                    else
+                    {
+                        try
+                        {
+                            enregistrements.Add(Table5Id, cbChamp5.Text, "", "", "", "", "", "", "", "", "", "", 0, "", 0, "", 0);
+                            cbChamp5.DataSource = enregistrements.FindByTableId(Table5Id); ;
+                            cbChamp5.DisplayMember = "NOM";
+                            cbChamp5.ValueMember = "ENREGISTREMENTSID";
+                            //cbChamp1_SelectedValueChanged(this, EventArgs.Empty);                       
+                            cbChamp5.SelectedIndex = cbChamp5.Items.Count - 1;
+                            cbChamp5_Leave(this, EventArgs.Empty);
+                        }
+                        catch
+                        {
+                            throw;
+                        }
+                    }
+                }
+            }
+        }
+
+        private void btAddChamp6_Click(object sender, EventArgs e)
+        {
+            if (cbChamp6.Text != "" && cbChamp6.Text.Trim().Length > 1)
+            {
+                DialogResult result;
+                if (cbLang.Text == "FR")
+                    result = Custom_MessageBox.Show("FR", "Etes vous sur de vouloir ajouter l'enregistrement" + cbChamp6.Text + "?", "Pesée", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                else if (cbLang.Text == "EN")
+                    result = Custom_MessageBox.Show("EN", "Are you sure you want to add the record: " + cbChamp6.Text + "?", "Weighing", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                else
+                    result = Custom_MessageBox.Show("ES", "¿Está seguro de que desea eliminar este registro?", "Pesaje", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                if (result == DialogResult.Yes)
+                {
+                    Tables tables = new Tables();
+                    Enregistrements enregistrements = new Enregistrements();
+                    if (tables.IsTableRelated(Table6Id))
+                    {
+                        try
+                        {
+                            if (tables.GetParentTableId(Table6Id) == Table5Id)
+                            {
+                                if (cbChamp5.Text != "" && cbChamp5.Text.Trim().Length > 1)
+                                {
+                                    enregistrements.Add(Table6Id, cbChamp6.Text, "", "", "", "", "", "", "", "", "", "", 0, "", 0, "", Common_functions.CbSelectedValue_Convert_Int(cbChamp5));
+                                    cbChamp6.DataSource = enregistrements.FindByTableId(Table6Id); ;
+                                    cbChamp6.DisplayMember = "NOM";
+                                    cbChamp6.ValueMember = "ENREGISTREMENTSID";
+                                    //cbChamp1_SelectedValueChanged(this, EventArgs.Empty);                       
+                                    cbChamp6.SelectedIndex = cbChamp6.Items.Count - 1;
+                                    cbChamp6_Leave(this, EventArgs.Empty);
+                                }
+                                else
+                                {
+                                    if (cbLang.Text == "FR")
+                                        Custom_MessageBox.Show("FR", "L'enregistrement parent est obligatoire.", "Pesée", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                                    else if (cbLang.Text == "EN")
+                                        Custom_MessageBox.Show("EN", "Parent record is required", "Weighing", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                                    else
+                                        Custom_MessageBox.Show("ES", "¿Está seguro de que desea eliminar este registro?", "Pesaje", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                                }
+
+                            }
+                            else
+                            {
+                                if (cbLang.Text == "FR")
+                                    Custom_MessageBox.Show("FR", "Il y'a une incoherence dans le parmétrage des liens entre les tables.", "Pesée", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                                else if (cbLang.Text == "EN")
+                                    Custom_MessageBox.Show("EN", "There is an error in the links between the tables", "Weighing", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                                else
+                                    Custom_MessageBox.Show("ES", "¿Está seguro de que desea eliminar este registro?", "Pesaje", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            }
+
+                        }
+                        catch
+                        {
+                            throw;
+                        }
+                    }
+                    else
+                    {
+                        try
+                        {
+                            enregistrements.Add(Table6Id, cbChamp6.Text, "", "", "", "", "", "", "", "", "", "", 0, "", 0, "", 0);
+                            cbChamp6.DataSource = enregistrements.FindByTableId(Table6Id); ;
+                            cbChamp6.DisplayMember = "NOM";
+                            cbChamp6.ValueMember = "ENREGISTREMENTSID";
+                            //cbChamp1_SelectedValueChanged(this, EventArgs.Empty);                       
+                            cbChamp6.SelectedIndex = cbChamp6.Items.Count - 1;
+                            cbChamp6_Leave(this, EventArgs.Empty);
+                        }
+                        catch
+                        {
+                            throw;
+                        }
+                    }
+                }
+            }
+        }
+
+        private void btAddChamp7_Click(object sender, EventArgs e)
+        {
+            if (cbChamp7.Text != "" && cbChamp7.Text.Trim().Length > 1)
+            {
+                DialogResult result;
+                if (cbLang.Text == "FR")
+                    result = Custom_MessageBox.Show("FR", "Etes vous sur de vouloir ajouter l'enregistrement" + cbChamp7.Text + "?", "Pesée", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                else if (cbLang.Text == "EN")
+                    result = Custom_MessageBox.Show("EN", "Are you sure you want to add the record: " + cbChamp7.Text + "?", "Weighing", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                else
+                    result = Custom_MessageBox.Show("ES", "¿Está seguro de que desea eliminar este registro?", "Pesaje", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                if (result == DialogResult.Yes)
+                {
+                    Tables tables = new Tables();
+                    Enregistrements enregistrements = new Enregistrements();
+                    if (tables.IsTableRelated(Table7Id))
+                    {
+                        try
+                        {
+                            if (tables.GetParentTableId(Table7Id) == Table6Id)
+                            {
+                                if (cbChamp6.Text != "" && cbChamp6.Text.Trim().Length > 1)
+                                {
+                                    enregistrements.Add(Table7Id, cbChamp7.Text, "", "", "", "", "", "", "", "", "", "", 0, "", 0, "", Common_functions.CbSelectedValue_Convert_Int(cbChamp6));
+                                    cbChamp7.DataSource = enregistrements.FindByTableId(Table7Id); ;
+                                    cbChamp7.DisplayMember = "NOM";
+                                    cbChamp7.ValueMember = "ENREGISTREMENTSID";
+                                    //cbChamp1_SelectedValueChanged(this, EventArgs.Empty);                       
+                                    cbChamp7.SelectedIndex = cbChamp7.Items.Count - 1;
+                                    cbChamp7_Leave(this, EventArgs.Empty);
+                                }
+                                else
+                                {
+                                    if (cbLang.Text == "FR")
+                                        Custom_MessageBox.Show("FR", "L'enregistrement parent est obligatoire.", "Pesée", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                                    else if (cbLang.Text == "EN")
+                                        Custom_MessageBox.Show("EN", "Parent record is required", "Weighing", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                                    else
+                                        Custom_MessageBox.Show("ES", "¿Está seguro de que desea eliminar este registro?", "Pesaje", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                                }
+
+                            }
+                            else
+                            {
+                                if (cbLang.Text == "FR")
+                                    Custom_MessageBox.Show("FR", "Il y'a une incoherence dans le parmétrage des liens entre les tables.", "Pesée", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                                else if (cbLang.Text == "EN")
+                                    Custom_MessageBox.Show("EN", "There is an error in the links between the tables", "Weighing", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                                else
+                                    Custom_MessageBox.Show("ES", "¿Está seguro de que desea eliminar este registro?", "Pesaje", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            }
+
+                        }
+                        catch
+                        {
+                            throw;
+                        }
+                    }
+                    else
+                    {
+                        try
+                        {
+                            enregistrements.Add(Table7Id, cbChamp7.Text, "", "", "", "", "", "", "", "", "", "", 0, "", 0, "", 0);
+                            cbChamp7.DataSource = enregistrements.FindByTableId(Table7Id); ;
+                            cbChamp7.DisplayMember = "NOM";
+                            cbChamp7.ValueMember = "ENREGISTREMENTSID";
+                            //cbChamp1_SelectedValueChanged(this, EventArgs.Empty);                       
+                            cbChamp7.SelectedIndex = cbChamp7.Items.Count - 1;
+                            cbChamp7_Leave(this, EventArgs.Empty);
+                        }
+                        catch
+                        {
+                            throw;
+                        }
+                    }
+                }
+            }
         }
     }
 }

@@ -80,7 +80,7 @@ namespace WidraSoft.UI
             comHoneywell.Handshake = Handshake.None;
             try
             {
-                comHoneywell.Open();
+                //comHoneywell.Open();
             }
             catch
             {
@@ -88,7 +88,7 @@ namespace WidraSoft.UI
             }
 
             timerHoneywell.Interval = 300;
-            timerHoneywell.Start();
+            //timerHoneywell.Start();
 
 
         }

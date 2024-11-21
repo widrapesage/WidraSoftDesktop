@@ -121,6 +121,8 @@ namespace WidraSoft.UI
             vg_ScanCamionId = ScanCamionId;
             vg_Flux = Flux;
             vg_P = P;
+            panelClavier.Visible = false;
+            lbMessage.Visible = false;
         }
 
         private void radioButton1_CheckedChanged(object sender, EventArgs e)
@@ -209,8 +211,7 @@ namespace WidraSoft.UI
         }
 
         private void Gestion_Etapes()
-        {
-            
+        {          
             if (Etape == "Parametre")
             {
                 if (vg_Demander_Parametre)
@@ -591,18 +592,31 @@ namespace WidraSoft.UI
                     try
                     {
                         PeseePB pesee = new PeseePB();
-                        /*pesee.Add("2x", vg_Flux, vg_PontId, WeighingSettingsId, FirmeId, CamionId, ChauffeurId, TransporteurId, ProduitId, ClientId, Enregistrement1Id, Tables1Id, Tables1Name, Enregistrement1,
+                        pesee.Add("2x", vg_Flux, vg_PontId, WeighingSettingsId, FirmeId, CamionId, ChauffeurId, TransporteurId, ProduitId, ClientId, Enregistrement1Id, Tables1Id, Tables1Name, Enregistrement1,
                             Enregistrement2Id, Tables2Id, Tables2Name, Enregistrement2, Enregistrement3Id, Table3Id, Tables3Name, Enregistrement3, Enregistrement4Id, Table4Id, Tables4Name, Enregistrement4,
                             Enregistrement5Id, Table5Id, Tables5Name, Enregistrement5, Enregistrement6Id, Table6Id, Tables6Name, Enregistrement6, Enregistrement7Id, Table7Id, Tables7Name, Enregistrement7, 0, DateTime.Now, vg_P,
-                            DateTime.Now, 0, "Borne", "Pending");*/
+                            DateTime.Now, 0, "Borne", "Pending","","","","","","","","");
+                        System.Threading.Thread.Sleep(1000);
                         Close();
                     }
                     catch
                     { throw; }
                 }
+
+                
             }
 
-            
+            DgvList.Focus();
+            if (DgvList.RowCount > 4)
+            {
+                btDoubleDown.Visible = true;
+                btDoubleUp.Visible = true;
+            }
+            else
+            {
+                btDoubleDown.Visible = false;
+                btDoubleUp.Visible = false;
+            }
 
         }
 
@@ -676,6 +690,22 @@ namespace WidraSoft.UI
             DgvList.Columns["TABLE5_AJOUT_F"].Visible = false;
             DgvList.Columns["TABLE6_AJOUT_F"].Visible = false;
             DgvList.Columns["TABLE7_AJOUT_F"].Visible = false;
+            DgvList.Columns["CHAMPLIBRE1"].Visible = false;
+            DgvList.Columns["CHAMPLIBRE2"].Visible = false;
+            DgvList.Columns["CHAMPLIBRE3"].Visible = false;
+            DgvList.Columns["CHAMPLIBRE4"].Visible = false;
+            DgvList.Columns["CHAMPLIBRE1_OBL"].Visible = false;
+            DgvList.Columns["CHAMPLIBRE2_OBL"].Visible = false;
+            DgvList.Columns["CHAMPLIBRE3_OBL"].Visible = false;
+            DgvList.Columns["CHAMPLIBRE4_OBL"].Visible = false;
+            DgvList.Columns["CHAMPLIBRE1_TICKET"].Visible = false;
+            DgvList.Columns["CHAMPLIBRE2_TICKET"].Visible = false;
+            DgvList.Columns["CHAMPLIBRE3_TICKET"].Visible = false;
+            DgvList.Columns["CHAMPLIBRE4_TICKET"].Visible = false;
+            DgvList.Columns["CHAMPLIBRE1_BORNE"].Visible = false;
+            DgvList.Columns["CHAMPLIBRE2_BORNE"].Visible = false;
+            DgvList.Columns["CHAMPLIBRE3_BORNE"].Visible = false;
+            DgvList.Columns["CHAMPLIBRE4_BORNE"].Visible = false;
             DgvList.Columns["PONTFIRME"].Visible = false;
             DgvList.Columns["CAMIONCHAUFFEUR"].Visible = false;
             DgvList.Columns["CAMIONTRANSPORTEUR"].Visible = false;
@@ -1021,7 +1051,100 @@ namespace WidraSoft.UI
 
         private void btUp_Click(object sender, EventArgs e)
         {
-            
+            int i; 
+            if (Etape == "Parametre" || Etape == "Produit")
+            {
+                i = 1;
+            }
+            else
+            {
+                i = 2;
+            }
+            int currentRow = DgvList.CurrentCell.RowIndex;
+            if (currentRow > 0)
+            {
+                DgvList.Rows[currentRow - 1].Cells[i].Selected = true;
+                DgvList.CurrentCell = DgvList.Rows[currentRow - 1].Cells[i];
+            }
+        }
+
+        private void btDown_Click(object sender, EventArgs e)
+        {
+            int i;
+            if (Etape == "Parametre" || Etape == "Produit")
+            {
+                i = 1;
+            }
+            else
+            {
+                i = 2;
+            }
+            int currentRow = DgvList.CurrentCell.RowIndex;
+            if (currentRow < DgvList.RowCount - 1)
+            {
+                DgvList.Rows[currentRow + 1].Cells[i].Selected = true;
+                DgvList.CurrentCell = DgvList.Rows[currentRow + 1].Cells[i];
+            }
+        }
+
+        private void btDoubleUp_Click(object sender, EventArgs e)
+        {
+            int i;
+            if (Etape == "Parametre" || Etape == "Produit")
+            {
+                i = 1;
+            }
+            else
+            {
+                i = 2;
+            }
+            int currentRow = DgvList.CurrentCell.RowIndex;
+            if (currentRow > 3)
+            {
+                DgvList.Rows[currentRow - 3].Cells[i].Selected = true;
+                DgvList.CurrentCell = DgvList.Rows[currentRow - 3].Cells[i];
+            }
+            else 
+            {
+                DgvList.Rows[0].Cells[i].Selected = true;
+                DgvList.CurrentCell = DgvList.Rows[0].Cells[i];
+            }
+        }
+
+        private void btDoubleDown_Click(object sender, EventArgs e)
+        {
+            int i;
+            if (Etape == "Parametre" || Etape == "Produit")
+            {
+                i = 1;
+            }
+            else
+            {
+                i = 2;
+            }
+            int currentRow = DgvList.CurrentCell.RowIndex;
+            if (currentRow < DgvList.RowCount - 3)
+            {
+                DgvList.Rows[currentRow + 3].Cells[i].Selected = true;
+                DgvList.CurrentCell = DgvList.Rows[currentRow + 3].Cells[i];
+            }
+            else 
+            {
+                DgvList.Rows[DgvList.RowCount - 1].Cells[i].Selected = true;
+                DgvList.CurrentCell = DgvList.Rows[DgvList.RowCount - 1].Cells[i];
+            }
+        }
+
+        private void btClavier_Click(object sender, EventArgs e)
+        {
+            if (panelClavier.Visible)
+                panelClavier.Visible = false;
+            else
+                panelClavier.Visible = true;
+            if (lbMessage.Visible)
+                lbMessage.Visible = false;
+            else
+                lbMessage.Visible = true;   
         }
     }
 }

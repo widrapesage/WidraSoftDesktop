@@ -108,7 +108,7 @@
     <value>4, 1, 0, 1</value>
   </data>
   <data name="menuStrip1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1151, 30</value>
+    <value>1208, 30</value>
   </data>
   <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="menuStrip1.TabIndex" type="System.Int32, mscorlib">
@@ -140,7 +140,7 @@
     <value>NoControl</value>
   </data>
   <data name="label18.Location" type="System.Drawing.Point, System.Drawing">
-    <value>11, 153</value>
+    <value>11, 151</value>
   </data>
   <data name="label18.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>2, 0, 2, 0</value>
@@ -170,7 +170,7 @@
     <value>Calibri, 12pt</value>
   </data>
   <data name="txtNum.Location" type="System.Drawing.Point, System.Drawing">
-    <value>68, 150</value>
+    <value>68, 148</value>
   </data>
   <data name="txtNum.Size" type="System.Drawing.Size, System.Drawing">
     <value>202, 27</value>
@@ -833,7 +833,7 @@
     <value>True</value>
   </data>
   <data name="chx_Date.Location" type="System.Drawing.Point, System.Drawing">
-    <value>11, 120</value>
+    <value>11, 118</value>
   </data>
   <data name="chx_Date.Size" type="System.Drawing.Size, System.Drawing">
     <value>15, 14</value>
@@ -863,7 +863,7 @@
     <value>NoControl</value>
   </data>
   <data name="label11.Location" type="System.Drawing.Point, System.Drawing">
-    <value>329, 116</value>
+    <value>334, 114</value>
   </data>
   <data name="label11.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>2, 0, 2, 0</value>
@@ -890,7 +890,7 @@
     <value>13</value>
   </data>
   <data name="dtFin.Location" type="System.Drawing.Point, System.Drawing">
-    <value>361, 116</value>
+    <value>366, 114</value>
   </data>
   <data name="dtFin.Size" type="System.Drawing.Size, System.Drawing">
     <value>256, 23</value>
@@ -920,7 +920,7 @@
     <value>NoControl</value>
   </data>
   <data name="label10.Location" type="System.Drawing.Point, System.Drawing">
-    <value>31, 116</value>
+    <value>31, 114</value>
   </data>
   <data name="label10.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>2, 0, 2, 0</value>
@@ -947,7 +947,7 @@
     <value>15</value>
   </data>
   <data name="dtDebut.Location" type="System.Drawing.Point, System.Drawing">
-    <value>63, 116</value>
+    <value>68, 114</value>
   </data>
   <data name="dtDebut.Size" type="System.Drawing.Size, System.Drawing">
     <value>256, 23</value>
@@ -1457,7 +1457,7 @@
     <value>Right</value>
   </data>
   <data name="panel1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>871, 0</value>
+    <value>928, 0</value>
   </data>
   <data name="panel1.Size" type="System.Drawing.Size, System.Drawing">
     <value>280, 211</value>
@@ -1487,7 +1487,7 @@
     <value>4, 4, 4, 4</value>
   </data>
   <data name="panelTitleBar.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1151, 211</value>
+    <value>1208, 211</value>
   </data>
   <data name="panelTitleBar.TabIndex" type="System.Int32, mscorlib">
     <value>6</value>
@@ -1514,7 +1514,7 @@
     <value>62</value>
   </data>
   <data name="DgvList.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1151, 455</value>
+    <value>1208, 455</value>
   </data>
   <data name="DgvList.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -1541,7 +1541,7 @@
     <value>4, 4, 4, 4</value>
   </data>
   <data name="panelList.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1151, 455</value>
+    <value>1208, 455</value>
   </data>
   <data name="panelList.TabIndex" type="System.Int32, mscorlib">
     <value>7</value>
@@ -1565,7 +1565,7 @@
     <value>7, 15</value>
   </data>
   <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
-    <value>1151, 696</value>
+    <value>1208, 696</value>
   </data>
   <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>

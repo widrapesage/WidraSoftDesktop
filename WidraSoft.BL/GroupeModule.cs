@@ -46,6 +46,18 @@ namespace WidraSoft.BL
             }
         }
 
+        public bool IsAuthorized(Int32 GroupeId, Int32 ModuleId)
+        {
+            try
+            {
+                GroupeModuleDA groupemodule = new GroupeModuleDA();
+                return groupemodule.IsAuthorized(GroupeId, ModuleId);
+            }
+            catch
+            {
+                throw;
+            }
+        }
 
         public DataTable FindByGroupeId(Int32 Id)
         {

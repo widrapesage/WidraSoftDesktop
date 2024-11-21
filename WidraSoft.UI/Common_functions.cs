@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using WidraSoft.BL;
 
 namespace WidraSoft.UI
 {
@@ -69,6 +70,24 @@ namespace WidraSoft.UI
 
                 }
                 return Selected;
+            }
+            catch
+            {
+                throw;
+            }
+        }
+
+        public static bool GetAccess(Int32 GroupeId, String CodeModule)
+        {
+            bool IsAuthorized = false;
+            int ModuleId = 0;
+            try
+            {
+                Module module = new Module();
+                GroupeModule groupeModule = new GroupeModule();
+                ModuleId = module.GetIdByCode(CodeModule);
+                IsAuthorized = groupeModule.IsAuthorized(GroupeId, ModuleId);
+                return IsAuthorized;
             }
             catch
             {

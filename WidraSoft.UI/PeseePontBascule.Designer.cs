@@ -1031,6 +1031,7 @@
             this.btAddChamp7.TabIndex = 169;
             this.btAddChamp7.UseVisualStyleBackColor = false;
             this.btAddChamp7.Visible = false;
+            this.btAddChamp7.Click += new System.EventHandler(this.btAddChamp7_Click);
             // 
             // btAddChamp6
             // 
@@ -1046,6 +1047,7 @@
             this.btAddChamp6.TabIndex = 168;
             this.btAddChamp6.UseVisualStyleBackColor = false;
             this.btAddChamp6.Visible = false;
+            this.btAddChamp6.Click += new System.EventHandler(this.btAddChamp6_Click);
             // 
             // btAddChamp5
             // 
@@ -1061,6 +1063,7 @@
             this.btAddChamp5.TabIndex = 167;
             this.btAddChamp5.UseVisualStyleBackColor = false;
             this.btAddChamp5.Visible = false;
+            this.btAddChamp5.Click += new System.EventHandler(this.btAddChamp5_Click);
             // 
             // btAddChamp4
             // 
@@ -1076,6 +1079,7 @@
             this.btAddChamp4.TabIndex = 166;
             this.btAddChamp4.UseVisualStyleBackColor = false;
             this.btAddChamp4.Visible = false;
+            this.btAddChamp4.Click += new System.EventHandler(this.btAddChamp4_Click);
             // 
             // btAddChamp3
             // 
@@ -1091,6 +1095,7 @@
             this.btAddChamp3.TabIndex = 165;
             this.btAddChamp3.UseVisualStyleBackColor = false;
             this.btAddChamp3.Visible = false;
+            this.btAddChamp3.Click += new System.EventHandler(this.btAddChamp3_Click);
             // 
             // btAddChamp2
             // 
@@ -2156,8 +2161,10 @@
             this.txtPoids.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(112)))), ((int)(((byte)(228)))), ((int)(((byte)(132)))));
             this.txtPoids.Location = new System.Drawing.Point(233, 0);
             this.txtPoids.Name = "txtPoids";
+            this.txtPoids.ReadOnly = true;
             this.txtPoids.Size = new System.Drawing.Size(270, 98);
             this.txtPoids.TabIndex = 113;
+            this.txtPoids.TabStop = false;
             this.txtPoids.Text = "00000";
             this.txtPoids.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 

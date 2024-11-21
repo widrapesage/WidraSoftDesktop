@@ -69,6 +69,27 @@ namespace WidraSoft.DA
             }
         }
 
+        public bool IsAuthorized(Int32 GroupeId, Int32 ModuleId)
+        {
+            String sql = "SELECT COUNT(*) FROM GROUPEMODULE WHERE GROUPEID =" + GroupeId + " AND MODULEID =" + ModuleId;
+            conn.ConnectionString = connString;
+            if (conn.State == ConnectionState.Closed)
+                conn.Open();
+            SqlCommand cmd = new SqlCommand(sql, conn);
+            try
+            {
+                int Count = (int)cmd.ExecuteScalar();
+                if (Count > 0)
+                    return true;
+                else
+                    return false;
+            }
+            catch
+            {
+                throw;
+            }
+        }
+
         public DataTable FindByGroupeId(Int32 Id)
         {
             String sql = "SELECT * FROM GROUPEMODULE WHERE GROUPEID=" + Id;
@@ -125,6 +146,9 @@ namespace WidraSoft.DA
             }
             return max;
         }
+
+
+
         public void Add(Int32 GroupeId, Int32 ModuleId, Int32 Access, String TypeAcess)
         {
             using (conn)

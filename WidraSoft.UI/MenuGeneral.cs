@@ -10,12 +10,14 @@ using System.Windows.Forms;
 using WidraSoft.BL;
 using System.Globalization;
 using System.Threading;
+using CustomMessageBox;
 
 namespace WidraSoft.UI
 {
     public partial class MenuGeneral : Form
     {
         int vg_UtilisateurId;
+        int vg_GroupeId;
         public MenuGeneral(Int32 UtilisateurId)
         {
             InitializeComponent();
@@ -41,6 +43,7 @@ namespace WidraSoft.UI
 
             Utilisateur utilisateur = new Utilisateur();
             lblusername.Text = utilisateur.GetFullUsername(vg_UtilisateurId);
+            vg_GroupeId = utilisateur.GetGroupeIdById(vg_UtilisateurId);
 
             txtEntreprise.Text = "WIDRA";
             txtTypeAbonnement.Text = "Demo";
@@ -58,57 +61,157 @@ namespace WidraSoft.UI
 
         private void camionsToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Form form = new UtilisateursList("1=1");
-            form.Show();
+            //Utilisateurs
+            if (Common_functions.GetAccess(vg_GroupeId, "UTI"))
+            {
+                Form form = new UtilisateursList("1=1");
+                form.Show();
+            }
+            else
+            {
+                if (cbLang.Text == "FR")
+                    Custom_MessageBox.Show("FR", "Vous n'avez pas les autorisations nécessaires pour accéder à ce module.", "WidraSoft - Gestionnaires d'accès", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                else if (cbLang.Text == "EN")
+                    Custom_MessageBox.Show("EN", "You d'ont have the permission to access this module.", "WidraSoft - Access manager", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+            }    
         }
 
         private void chauffeursToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Form form = new GroupesList("1=1");
-            form.Show();
+            //Groupes
+            if (Common_functions.GetAccess(vg_GroupeId, "GRO"))
+            {
+                Form form = new GroupesList("1=1");
+                form.Show();
+            }
+            else
+            {
+                if (cbLang.Text == "FR")
+                    Custom_MessageBox.Show("FR", "Vous n'avez pas les autorisations nécessaires pour accéder à ce module.", "WidraSoft - Gestionnaires d'accès", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                else if (cbLang.Text == "EN")
+                    Custom_MessageBox.Show("EN", "You d'ont have the permission to access this module.", "WidraSoft - Access manager", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }    
         }
 
         private void btFirmes_Click(object sender, EventArgs e)
         {
-            Form form = new FirmesList("1=1");
-            form.Show();
+            //Firmes
+            if (Common_functions.GetAccess(vg_GroupeId, "FIR"))
+            {
+                Form form = new FirmesList("1=1");
+                form.Show();
+            }
+            else
+            {
+                if (cbLang.Text == "FR")
+                    Custom_MessageBox.Show("FR", "Vous n'avez pas les autorisations nécessaires pour accéder à ce module.", "WidraSoft - Gestionnaires d'accès", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                else if (cbLang.Text == "EN")
+                    Custom_MessageBox.Show("EN", "You d'ont have the permission to access this module.", "WidraSoft - Access manager", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         private void btCamions_Click(object sender, EventArgs e)
         {
-            Form form = new CamionsListe("1=1");
-            form.Show();
+            //Camions
+            if (Common_functions.GetAccess(vg_GroupeId, "CAM"))
+            {
+                Form form = new CamionsListe("1=1");
+                form.Show();
+            }
+            else
+            {
+                if (cbLang.Text == "FR")
+                    Custom_MessageBox.Show("FR", "Vous n'avez pas les autorisations nécessaires pour accéder à ce module.", "WidraSoft - Gestionnaires d'accès", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                else if (cbLang.Text == "EN")
+                    Custom_MessageBox.Show("EN", "You d'ont have the permission to access this module.", "WidraSoft - Access manager", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         private void firmesToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Form form = new FirmesList("1=1");
-            form.Show();
+            //Firmes
+            if (Common_functions.GetAccess(vg_GroupeId, "FIR"))
+            {
+                Form form = new FirmesList("1=1");
+                form.Show();
+            }
+            else
+            {
+                if (cbLang.Text == "FR")
+                    Custom_MessageBox.Show("FR", "Vous n'avez pas les autorisations nécessaires pour accéder à ce module.", "WidraSoft - Gestionnaires d'accès", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                else if (cbLang.Text == "EN")
+                    Custom_MessageBox.Show("EN", "You d'ont have the permission to access this module.", "WidraSoft - Access manager", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         private void camionsToolStripMenuItem1_Click(object sender, EventArgs e)
         {
-            Form form = new CamionsListe("1=1");
-            form.Show();
+            //Camions
+            if (Common_functions.GetAccess(vg_GroupeId, "CAM"))
+            {
+                Form form = new CamionsListe("1=1");
+                form.Show();
+            }
+            else
+            {
+                if (cbLang.Text == "FR")
+                    Custom_MessageBox.Show("FR", "Vous n'avez pas les autorisations nécessaires pour accéder à ce module.", "WidraSoft - Gestionnaires d'accès", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                else if (cbLang.Text == "EN")
+                    Custom_MessageBox.Show("EN", "You d'ont have the permission to access this module.", "WidraSoft - Access manager", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         private void produitsToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Form form = new ProduitsListe("1=1");
-            form.Show();
+            //Produits
+            if (Common_functions.GetAccess(vg_GroupeId, "PRO"))
+            {
+                Form form = new ProduitsListe("1=1");
+                form.Show();
+            }
+            else
+            {
+                if (cbLang.Text == "FR")
+                    Custom_MessageBox.Show("FR", "Vous n'avez pas les autorisations nécessaires pour accéder à ce module.", "WidraSoft - Gestionnaires d'accès", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                else if (cbLang.Text == "EN")
+                    Custom_MessageBox.Show("EN", "You d'ont have the permission to access this module.", "WidraSoft - Access manager", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         private void chauffeursToolStripMenuItem1_Click(object sender, EventArgs e)
         {
-            Form form = new ChauffeursListe("1=1");
-            form.Show();
+            //Chauffeurs
+            if (Common_functions.GetAccess(vg_GroupeId, "CHAU"))
+            {
+                Form form = new ChauffeursListe("1=1");
+                form.Show();
+            }
+            else
+            {
+                if (cbLang.Text == "FR")
+                    Custom_MessageBox.Show("FR", "Vous n'avez pas les autorisations nécessaires pour accéder à ce module.", "WidraSoft - Gestionnaires d'accès", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                else if (cbLang.Text == "EN")
+                    Custom_MessageBox.Show("EN", "You d'ont have the permission to access this module.", "WidraSoft - Access manager", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
 
         private void transporteursToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Form form = new TransporteursListe("1=1");
-            form.Show();
+            //Transporteurs
+            if (Common_functions.GetAccess(vg_GroupeId, "TRA"))
+            {
+                Form form = new TransporteursListe("1=1");
+                form.Show();
+            }
+            else
+            {
+                if (cbLang.Text == "FR")
+                    Custom_MessageBox.Show("FR", "Vous n'avez pas les autorisations nécessaires pour accéder à ce module.", "WidraSoft - Gestionnaires d'accès", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                else if (cbLang.Text == "EN")
+                    Custom_MessageBox.Show("EN", "You d'ont have the permission to access this module.", "WidraSoft - Access manager", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         private void panelUserInfo_MouseDown(object sender, MouseEventArgs e)
@@ -153,32 +256,87 @@ namespace WidraSoft.UI
 
         private void pontsToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Form form = new PontsListe("1=1");
-            form.Show();
+            //Ponts
+            if (Common_functions.GetAccess(vg_GroupeId, "PON"))
+            {
+                Form form = new PontsListe("1=1");
+                form.Show();
+            }
+            else
+            {
+                if (cbLang.Text == "FR")
+                    Custom_MessageBox.Show("FR", "Vous n'avez pas les autorisations nécessaires pour accéder à ce module.", "WidraSoft - Gestionnaires d'accès", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                else if (cbLang.Text == "EN")
+                    Custom_MessageBox.Show("EN", "You d'ont have the permission to access this module.", "WidraSoft - Access manager", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         private void homeToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Form form = new PeseePontBascule(vg_UtilisateurId);
-            form.Show();
+            //Pesee pont bascule
+            if (Common_functions.GetAccess(vg_GroupeId, "PES"))
+            {
+                Form form = new PeseePontBascule(vg_UtilisateurId);
+                form.Show();
+            }
+            else
+            {
+                if (cbLang.Text == "FR")
+                    Custom_MessageBox.Show("FR", "Vous n'avez pas les autorisations nécessaires pour accéder à ce module.", "WidraSoft - Gestionnaires d'accès", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                else if (cbLang.Text == "EN")
+                    Custom_MessageBox.Show("EN", "You d'ont have the permission to access this module.", "WidraSoft - Access manager", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         private void clientsToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Form form = new ClientsListe("1=1");
-            form.Show();
+            //Clients
+            if (Common_functions.GetAccess(vg_GroupeId, "CLI"))
+            {
+                Form form = new ClientsListe("1=1");
+                form.Show();
+            }
+            else
+            {
+                if (cbLang.Text == "FR")
+                    Custom_MessageBox.Show("FR", "Vous n'avez pas les autorisations nécessaires pour accéder à ce module.", "WidraSoft - Gestionnaires d'accès", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                else if (cbLang.Text == "EN")
+                    Custom_MessageBox.Show("EN", "You d'ont have the permission to access this module.", "WidraSoft - Access manager", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         private void ParamPoidstoolStripMenuItem1_Click(object sender, EventArgs e)
         {
-            Form form = new WeightSettingsList("1=1");
-            form.Show();
+            //Parametres poids
+            if (Common_functions.GetAccess(vg_GroupeId, "PPO"))
+            {
+                Form form = new WeightSettingsList("1=1");
+                form.Show();
+            }
+            else
+            {
+                if (cbLang.Text == "FR")
+                    Custom_MessageBox.Show("FR", "Vous n'avez pas les autorisations nécessaires pour accéder à ce module.", "WidraSoft - Gestionnaires d'accès", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                else if (cbLang.Text == "EN")
+                    Custom_MessageBox.Show("EN", "You d'ont have the permission to access this module.", "WidraSoft - Access manager", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         private void pamamètresDePeséeToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Form form = new WeighingSettingsList("1=1");
-            form.Show();
+            //Parametres pesée
+            if (Common_functions.GetAccess(vg_GroupeId, "PPE"))
+            {
+                Form form = new WeighingSettingsList("1=1");
+                form.Show();
+            }
+            else
+            {
+                if (cbLang.Text == "FR")
+                    Custom_MessageBox.Show("FR", "Vous n'avez pas les autorisations nécessaires pour accéder à ce module.", "WidraSoft - Gestionnaires d'accès", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                else if (cbLang.Text == "EN")
+                    Custom_MessageBox.Show("EN", "You d'ont have the permission to access this module.", "WidraSoft - Access manager", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
 
         }
 
@@ -189,14 +347,36 @@ namespace WidraSoft.UI
 
         private void tablesToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Form form = new TablesList("1=1");
-            form.Show();
+            //Tables supplementaires
+            if (Common_functions.GetAccess(vg_GroupeId, "TAB"))
+            {
+                Form form = new TablesList("1=1");
+                form.Show();
+            }
+            else
+            {
+                if (cbLang.Text == "FR")
+                    Custom_MessageBox.Show("FR", "Vous n'avez pas les autorisations nécessaires pour accéder à ce module.", "WidraSoft - Gestionnaires d'accès", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                else if (cbLang.Text == "EN")
+                    Custom_MessageBox.Show("EN", "You d'ont have the permission to access this module.", "WidraSoft - Access manager", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         private void enregistrementsToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Form form = new EnregistrementsListe("1=1");
-            form.Show();
+            //Enregistrements
+            if (Common_functions.GetAccess(vg_GroupeId, "ENR"))
+            {
+                Form form = new EnregistrementsListe("1=1");
+                form.Show();
+            }
+            else
+            {
+                if (cbLang.Text == "FR")
+                    Custom_MessageBox.Show("FR", "Vous n'avez pas les autorisations nécessaires pour accéder à ce module.", "WidraSoft - Gestionnaires d'accès", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                else if (cbLang.Text == "EN")
+                    Custom_MessageBox.Show("EN", "You d'ont have the permission to access this module.", "WidraSoft - Access manager", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         private void toolStripMenuItem1_Click(object sender, EventArgs e)
@@ -209,6 +389,23 @@ namespace WidraSoft.UI
         {
             Form form = new Borne_Home();
             form.Show();
+        }
+
+        private void listePeseesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            //Liste pesées
+            if (Common_functions.GetAccess(vg_GroupeId, "LISP"))
+            {
+                Form form = new PeseePBList("1=1");
+                form.Show();
+            }
+            else
+            {
+                if (cbLang.Text == "FR")
+                    Custom_MessageBox.Show("FR", "Vous n'avez pas les autorisations nécessaires pour accéder à ce module.", "WidraSoft - Gestionnaires d'accès", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                else if (cbLang.Text == "EN")
+                    Custom_MessageBox.Show("EN", "You d'ont have the permission to access this module.", "WidraSoft - Access manager", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
     }
 }

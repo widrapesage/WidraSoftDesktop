@@ -30,13 +30,22 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(PeseePBDetail));
             this.panelLang = new System.Windows.Forms.Panel();
-            this.txtId = new System.Windows.Forms.TextBox();
             this.lblusername = new System.Windows.Forms.Label();
             this.Spain_flag = new System.Windows.Forms.PictureBox();
             this.England_flag = new System.Windows.Forms.PictureBox();
             this.France_flag = new System.Windows.Forms.PictureBox();
             this.cbLang = new System.Windows.Forms.ComboBox();
+            this.txtId = new System.Windows.Forms.TextBox();
             this.panelData = new System.Windows.Forms.Panel();
+            this.txtEtatPesee = new System.Windows.Forms.TextBox();
+            this.panelNavigation = new System.Windows.Forms.Panel();
+            this.pbUpdating = new System.Windows.Forms.PictureBox();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.lbModifier = new System.Windows.Forms.LinkLabel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.lbAjouter = new System.Windows.Forms.LinkLabel();
+            this.lbSupprimer = new System.Windows.Forms.LinkLabel();
             this.Filter7 = new System.Windows.Forms.PictureBox();
             this.Filter6 = new System.Windows.Forms.PictureBox();
             this.Filter5 = new System.Windows.Forms.PictureBox();
@@ -110,8 +119,6 @@
             this.RqFirme = new System.Windows.Forms.PictureBox();
             this.RqPont = new System.Windows.Forms.PictureBox();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.lbTareCamion = new System.Windows.Forms.Label();
-            this.txtTareCamion = new System.Windows.Forms.TextBox();
             this.gbFlux = new System.Windows.Forms.GroupBox();
             this.rbxSortant = new System.Windows.Forms.RadioButton();
             this.rbxEntrant = new System.Windows.Forms.RadioButton();
@@ -137,6 +144,11 @@
             ((System.ComponentModel.ISupportInitialize)(this.England_flag)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.France_flag)).BeginInit();
             this.panelData.SuspendLayout();
+            this.panelNavigation.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbUpdating)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Filter7)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Filter6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Filter5)).BeginInit();
@@ -169,8 +181,7 @@
             // 
             // panelLang
             // 
-            this.panelLang.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(62)))), ((int)(((byte)(60)))));
-            this.panelLang.Controls.Add(this.txtId);
+            this.panelLang.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(86)))), ((int)(((byte)(81)))));
             this.panelLang.Controls.Add(this.lblusername);
             this.panelLang.Controls.Add(this.Spain_flag);
             this.panelLang.Controls.Add(this.England_flag);
@@ -181,20 +192,6 @@
             this.panelLang.Name = "panelLang";
             this.panelLang.Size = new System.Drawing.Size(1020, 35);
             this.panelLang.TabIndex = 75;
-            // 
-            // txtId
-            // 
-            this.txtId.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(62)))), ((int)(((byte)(60)))));
-            this.txtId.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtId.Font = new System.Drawing.Font("Calibri", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.txtId.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(112)))), ((int)(((byte)(228)))), ((int)(((byte)(132)))));
-            this.txtId.Location = new System.Drawing.Point(11, 5);
-            this.txtId.Margin = new System.Windows.Forms.Padding(2);
-            this.txtId.Name = "txtId";
-            this.txtId.ReadOnly = true;
-            this.txtId.Size = new System.Drawing.Size(135, 25);
-            this.txtId.TabIndex = 110;
-            this.txtId.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // lblusername
             // 
@@ -217,7 +214,7 @@
             this.Spain_flag.Cursor = System.Windows.Forms.Cursors.Hand;
             this.Spain_flag.Image = global::WidraSoft.UI.Properties.Resources.spain;
             this.Spain_flag.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.Spain_flag.Location = new System.Drawing.Point(165, 5);
+            this.Spain_flag.Location = new System.Drawing.Point(12, 5);
             this.Spain_flag.Name = "Spain_flag";
             this.Spain_flag.Size = new System.Drawing.Size(24, 24);
             this.Spain_flag.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -230,7 +227,7 @@
             this.England_flag.Cursor = System.Windows.Forms.Cursors.Hand;
             this.England_flag.Image = global::WidraSoft.UI.Properties.Resources.united_kingdom;
             this.England_flag.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.England_flag.Location = new System.Drawing.Point(165, 5);
+            this.England_flag.Location = new System.Drawing.Point(12, 5);
             this.England_flag.Name = "England_flag";
             this.England_flag.Size = new System.Drawing.Size(24, 24);
             this.England_flag.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -243,7 +240,7 @@
             this.France_flag.Cursor = System.Windows.Forms.Cursors.Hand;
             this.France_flag.Image = global::WidraSoft.UI.Properties.Resources.france;
             this.France_flag.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.France_flag.Location = new System.Drawing.Point(165, 5);
+            this.France_flag.Location = new System.Drawing.Point(12, 5);
             this.France_flag.Name = "France_flag";
             this.France_flag.Size = new System.Drawing.Size(24, 24);
             this.France_flag.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -252,20 +249,38 @@
             // 
             // cbLang
             // 
-            this.cbLang.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(62)))), ((int)(((byte)(60)))));
+            this.cbLang.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(86)))), ((int)(((byte)(81)))));
             this.cbLang.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbLang.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cbLang.Font = new System.Drawing.Font("Corbel", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.cbLang.ForeColor = System.Drawing.Color.White;
             this.cbLang.FormattingEnabled = true;
-            this.cbLang.Location = new System.Drawing.Point(195, 7);
+            this.cbLang.Location = new System.Drawing.Point(42, 7);
             this.cbLang.Name = "cbLang";
             this.cbLang.Size = new System.Drawing.Size(158, 22);
             this.cbLang.TabIndex = 23;
+            this.cbLang.SelectedIndexChanged += new System.EventHandler(this.cbLang_SelectedIndexChanged);
+            // 
+            // txtId
+            // 
+            this.txtId.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(62)))), ((int)(((byte)(60)))));
+            this.txtId.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtId.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.txtId.ForeColor = System.Drawing.Color.White;
+            this.txtId.Location = new System.Drawing.Point(26, 64);
+            this.txtId.Margin = new System.Windows.Forms.Padding(2);
+            this.txtId.Name = "txtId";
+            this.txtId.ReadOnly = true;
+            this.txtId.Size = new System.Drawing.Size(125, 20);
+            this.txtId.TabIndex = 110;
+            this.txtId.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // panelData
             // 
             this.panelData.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(86)))), ((int)(((byte)(81)))));
+            this.panelData.Controls.Add(this.txtEtatPesee);
+            this.panelData.Controls.Add(this.panelNavigation);
+            this.panelData.Controls.Add(this.txtId);
             this.panelData.Controls.Add(this.Filter7);
             this.panelData.Controls.Add(this.Filter6);
             this.panelData.Controls.Add(this.Filter5);
@@ -331,8 +346,6 @@
             this.panelData.Controls.Add(this.RqFirme);
             this.panelData.Controls.Add(this.RqPont);
             this.panelData.Controls.Add(this.panel3);
-            this.panelData.Controls.Add(this.lbTareCamion);
-            this.panelData.Controls.Add(this.txtTareCamion);
             this.panelData.Controls.Add(this.gbFlux);
             this.panelData.Controls.Add(this.cbCamion);
             this.panelData.Controls.Add(this.gbTypePesee);
@@ -352,14 +365,153 @@
             this.panelData.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelData.Location = new System.Drawing.Point(0, 35);
             this.panelData.Name = "panelData";
-            this.panelData.Size = new System.Drawing.Size(1020, 569);
+            this.panelData.Size = new System.Drawing.Size(1020, 616);
             this.panelData.TabIndex = 110;
             this.panelData.Paint += new System.Windows.Forms.PaintEventHandler(this.panelData_Paint);
+            // 
+            // txtEtatPesee
+            // 
+            this.txtEtatPesee.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(86)))), ((int)(((byte)(81)))));
+            this.txtEtatPesee.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtEtatPesee.Font = new System.Drawing.Font("Calibri", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.txtEtatPesee.ForeColor = System.Drawing.Color.White;
+            this.txtEtatPesee.Location = new System.Drawing.Point(26, 105);
+            this.txtEtatPesee.Margin = new System.Windows.Forms.Padding(2);
+            this.txtEtatPesee.Name = "txtEtatPesee";
+            this.txtEtatPesee.ReadOnly = true;
+            this.txtEtatPesee.Size = new System.Drawing.Size(125, 18);
+            this.txtEtatPesee.TabIndex = 222;
+            this.txtEtatPesee.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // panelNavigation
+            // 
+            this.panelNavigation.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(62)))), ((int)(((byte)(60)))));
+            this.panelNavigation.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panelNavigation.Controls.Add(this.pbUpdating);
+            this.panelNavigation.Controls.Add(this.pictureBox3);
+            this.panelNavigation.Controls.Add(this.lbModifier);
+            this.panelNavigation.Controls.Add(this.pictureBox1);
+            this.panelNavigation.Controls.Add(this.pictureBox2);
+            this.panelNavigation.Controls.Add(this.lbAjouter);
+            this.panelNavigation.Controls.Add(this.lbSupprimer);
+            this.panelNavigation.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panelNavigation.Location = new System.Drawing.Point(0, 0);
+            this.panelNavigation.Name = "panelNavigation";
+            this.panelNavigation.Size = new System.Drawing.Size(1020, 35);
+            this.panelNavigation.TabIndex = 221;
+            // 
+            // pbUpdating
+            // 
+            this.pbUpdating.Image = global::WidraSoft.UI.Properties.Resources.pencil;
+            this.pbUpdating.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.pbUpdating.Location = new System.Drawing.Point(991, 4);
+            this.pbUpdating.Name = "pbUpdating";
+            this.pbUpdating.Size = new System.Drawing.Size(24, 24);
+            this.pbUpdating.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.pbUpdating.TabIndex = 84;
+            this.pbUpdating.TabStop = false;
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox3.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pictureBox3.Image = global::WidraSoft.UI.Properties.Resources.update;
+            this.pictureBox3.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.pictureBox3.Location = new System.Drawing.Point(153, 9);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(21, 22);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.pictureBox3.TabIndex = 83;
+            this.pictureBox3.TabStop = false;
+            // 
+            // lbModifier
+            // 
+            this.lbModifier.ActiveLinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(190)))), ((int)(((byte)(117)))));
+            this.lbModifier.AutoSize = true;
+            this.lbModifier.BackColor = System.Drawing.Color.Transparent;
+            this.lbModifier.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.lbModifier.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.lbModifier.ForeColor = System.Drawing.Color.White;
+            this.lbModifier.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.lbModifier.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.lbModifier.LinkColor = System.Drawing.Color.White;
+            this.lbModifier.Location = new System.Drawing.Point(177, 8);
+            this.lbModifier.Name = "lbModifier";
+            this.lbModifier.Size = new System.Drawing.Size(68, 19);
+            this.lbModifier.TabIndex = 82;
+            this.lbModifier.TabStop = true;
+            this.lbModifier.Text = "Modifier";
+            this.lbModifier.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.lbModifier.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lbModifier_LinkClicked);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pictureBox1.Image = global::WidraSoft.UI.Properties.Resources.remove;
+            this.pictureBox1.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.pictureBox1.Location = new System.Drawing.Point(260, 8);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(21, 22);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.pictureBox1.TabIndex = 81;
+            this.pictureBox1.TabStop = false;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox2.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pictureBox2.Image = global::WidraSoft.UI.Properties.Resources.printer;
+            this.pictureBox2.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.pictureBox2.Location = new System.Drawing.Point(44, 8);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(21, 22);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.pictureBox2.TabIndex = 80;
+            this.pictureBox2.TabStop = false;
+            // 
+            // lbAjouter
+            // 
+            this.lbAjouter.ActiveLinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(190)))), ((int)(((byte)(117)))));
+            this.lbAjouter.AutoSize = true;
+            this.lbAjouter.BackColor = System.Drawing.Color.Transparent;
+            this.lbAjouter.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.lbAjouter.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.lbAjouter.ForeColor = System.Drawing.Color.White;
+            this.lbAjouter.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.lbAjouter.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.lbAjouter.LinkColor = System.Drawing.Color.White;
+            this.lbAjouter.Location = new System.Drawing.Point(66, 8);
+            this.lbAjouter.Name = "lbAjouter";
+            this.lbAjouter.Size = new System.Drawing.Size(72, 19);
+            this.lbAjouter.TabIndex = 79;
+            this.lbAjouter.TabStop = true;
+            this.lbAjouter.Text = "Imprimer";
+            this.lbAjouter.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.lbAjouter.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lbAjouter_LinkClicked);
+            // 
+            // lbSupprimer
+            // 
+            this.lbSupprimer.ActiveLinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(190)))), ((int)(((byte)(117)))));
+            this.lbSupprimer.AutoSize = true;
+            this.lbSupprimer.BackColor = System.Drawing.Color.Transparent;
+            this.lbSupprimer.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.lbSupprimer.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.lbSupprimer.ForeColor = System.Drawing.Color.White;
+            this.lbSupprimer.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.lbSupprimer.LinkColor = System.Drawing.Color.White;
+            this.lbSupprimer.Location = new System.Drawing.Point(284, 8);
+            this.lbSupprimer.Name = "lbSupprimer";
+            this.lbSupprimer.Size = new System.Drawing.Size(81, 19);
+            this.lbSupprimer.TabIndex = 78;
+            this.lbSupprimer.TabStop = true;
+            this.lbSupprimer.Text = "Supprimer";
+            this.lbSupprimer.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lbSupprimer_LinkClicked);
             // 
             // Filter7
             // 
             this.Filter7.Image = global::WidraSoft.UI.Properties.Resources.Filter;
-            this.Filter7.Location = new System.Drawing.Point(981, 333);
+            this.Filter7.Location = new System.Drawing.Point(981, 373);
             this.Filter7.Name = "Filter7";
             this.Filter7.Size = new System.Drawing.Size(28, 22);
             this.Filter7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
@@ -369,7 +521,7 @@
             // Filter6
             // 
             this.Filter6.Image = global::WidraSoft.UI.Properties.Resources.Filter;
-            this.Filter6.Location = new System.Drawing.Point(981, 301);
+            this.Filter6.Location = new System.Drawing.Point(981, 341);
             this.Filter6.Name = "Filter6";
             this.Filter6.Size = new System.Drawing.Size(28, 22);
             this.Filter6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
@@ -379,7 +531,7 @@
             // Filter5
             // 
             this.Filter5.Image = global::WidraSoft.UI.Properties.Resources.Filter;
-            this.Filter5.Location = new System.Drawing.Point(981, 269);
+            this.Filter5.Location = new System.Drawing.Point(981, 309);
             this.Filter5.Name = "Filter5";
             this.Filter5.Size = new System.Drawing.Size(28, 22);
             this.Filter5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
@@ -389,7 +541,7 @@
             // Filter4
             // 
             this.Filter4.Image = global::WidraSoft.UI.Properties.Resources.Filter;
-            this.Filter4.Location = new System.Drawing.Point(981, 237);
+            this.Filter4.Location = new System.Drawing.Point(981, 277);
             this.Filter4.Name = "Filter4";
             this.Filter4.Size = new System.Drawing.Size(28, 22);
             this.Filter4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
@@ -399,7 +551,7 @@
             // Filter3
             // 
             this.Filter3.Image = global::WidraSoft.UI.Properties.Resources.Filter;
-            this.Filter3.Location = new System.Drawing.Point(981, 205);
+            this.Filter3.Location = new System.Drawing.Point(981, 245);
             this.Filter3.Name = "Filter3";
             this.Filter3.Size = new System.Drawing.Size(28, 22);
             this.Filter3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
@@ -409,7 +561,7 @@
             // Filter2
             // 
             this.Filter2.Image = global::WidraSoft.UI.Properties.Resources.Filter;
-            this.Filter2.Location = new System.Drawing.Point(981, 173);
+            this.Filter2.Location = new System.Drawing.Point(981, 213);
             this.Filter2.Name = "Filter2";
             this.Filter2.Size = new System.Drawing.Size(28, 22);
             this.Filter2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
@@ -424,7 +576,7 @@
             this.btAddChamp7.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(86)))), ((int)(((byte)(81)))));
             this.btAddChamp7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btAddChamp7.Image = global::WidraSoft.UI.Properties.Resources.plus_Weighing;
-            this.btAddChamp7.Location = new System.Drawing.Point(954, 331);
+            this.btAddChamp7.Location = new System.Drawing.Point(954, 371);
             this.btAddChamp7.Name = "btAddChamp7";
             this.btAddChamp7.Size = new System.Drawing.Size(25, 24);
             this.btAddChamp7.TabIndex = 214;
@@ -439,7 +591,7 @@
             this.btAddChamp6.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(86)))), ((int)(((byte)(81)))));
             this.btAddChamp6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btAddChamp6.Image = global::WidraSoft.UI.Properties.Resources.plus_Weighing;
-            this.btAddChamp6.Location = new System.Drawing.Point(954, 299);
+            this.btAddChamp6.Location = new System.Drawing.Point(954, 339);
             this.btAddChamp6.Name = "btAddChamp6";
             this.btAddChamp6.Size = new System.Drawing.Size(25, 24);
             this.btAddChamp6.TabIndex = 213;
@@ -454,7 +606,7 @@
             this.btAddChamp5.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(86)))), ((int)(((byte)(81)))));
             this.btAddChamp5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btAddChamp5.Image = global::WidraSoft.UI.Properties.Resources.plus_Weighing;
-            this.btAddChamp5.Location = new System.Drawing.Point(954, 267);
+            this.btAddChamp5.Location = new System.Drawing.Point(954, 307);
             this.btAddChamp5.Name = "btAddChamp5";
             this.btAddChamp5.Size = new System.Drawing.Size(25, 24);
             this.btAddChamp5.TabIndex = 212;
@@ -469,7 +621,7 @@
             this.btAddChamp4.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(86)))), ((int)(((byte)(81)))));
             this.btAddChamp4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btAddChamp4.Image = global::WidraSoft.UI.Properties.Resources.plus_Weighing;
-            this.btAddChamp4.Location = new System.Drawing.Point(954, 235);
+            this.btAddChamp4.Location = new System.Drawing.Point(954, 275);
             this.btAddChamp4.Name = "btAddChamp4";
             this.btAddChamp4.Size = new System.Drawing.Size(25, 24);
             this.btAddChamp4.TabIndex = 211;
@@ -484,7 +636,7 @@
             this.btAddChamp3.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(86)))), ((int)(((byte)(81)))));
             this.btAddChamp3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btAddChamp3.Image = global::WidraSoft.UI.Properties.Resources.plus_Weighing;
-            this.btAddChamp3.Location = new System.Drawing.Point(954, 203);
+            this.btAddChamp3.Location = new System.Drawing.Point(954, 243);
             this.btAddChamp3.Name = "btAddChamp3";
             this.btAddChamp3.Size = new System.Drawing.Size(25, 24);
             this.btAddChamp3.TabIndex = 210;
@@ -499,7 +651,7 @@
             this.btAddChamp2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(86)))), ((int)(((byte)(81)))));
             this.btAddChamp2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btAddChamp2.Image = global::WidraSoft.UI.Properties.Resources.plus_Weighing;
-            this.btAddChamp2.Location = new System.Drawing.Point(954, 171);
+            this.btAddChamp2.Location = new System.Drawing.Point(954, 211);
             this.btAddChamp2.Name = "btAddChamp2";
             this.btAddChamp2.Size = new System.Drawing.Size(25, 24);
             this.btAddChamp2.TabIndex = 209;
@@ -514,7 +666,7 @@
             this.btAddChamp1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(86)))), ((int)(((byte)(81)))));
             this.btAddChamp1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btAddChamp1.Image = global::WidraSoft.UI.Properties.Resources.plus_Weighing;
-            this.btAddChamp1.Location = new System.Drawing.Point(954, 139);
+            this.btAddChamp1.Location = new System.Drawing.Point(954, 179);
             this.btAddChamp1.Name = "btAddChamp1";
             this.btAddChamp1.Size = new System.Drawing.Size(25, 24);
             this.btAddChamp1.TabIndex = 208;
@@ -529,7 +681,7 @@
             this.btAddPont.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(86)))), ((int)(((byte)(81)))));
             this.btAddPont.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btAddPont.Image = global::WidraSoft.UI.Properties.Resources.plus_Weighing;
-            this.btAddPont.Location = new System.Drawing.Point(421, 140);
+            this.btAddPont.Location = new System.Drawing.Point(421, 180);
             this.btAddPont.Name = "btAddPont";
             this.btAddPont.Size = new System.Drawing.Size(25, 24);
             this.btAddPont.TabIndex = 207;
@@ -544,7 +696,7 @@
             this.btAddClient.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(86)))), ((int)(((byte)(81)))));
             this.btAddClient.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btAddClient.Image = global::WidraSoft.UI.Properties.Resources.plus_Weighing;
-            this.btAddClient.Location = new System.Drawing.Point(421, 331);
+            this.btAddClient.Location = new System.Drawing.Point(421, 371);
             this.btAddClient.Name = "btAddClient";
             this.btAddClient.Size = new System.Drawing.Size(25, 25);
             this.btAddClient.TabIndex = 206;
@@ -560,7 +712,7 @@
             this.btAddProduit.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(86)))), ((int)(((byte)(81)))));
             this.btAddProduit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btAddProduit.Image = global::WidraSoft.UI.Properties.Resources.plus_Weighing;
-            this.btAddProduit.Location = new System.Drawing.Point(421, 299);
+            this.btAddProduit.Location = new System.Drawing.Point(421, 339);
             this.btAddProduit.Name = "btAddProduit";
             this.btAddProduit.Size = new System.Drawing.Size(25, 25);
             this.btAddProduit.TabIndex = 205;
@@ -576,7 +728,7 @@
             this.btAddTransporteur.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(86)))), ((int)(((byte)(81)))));
             this.btAddTransporteur.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btAddTransporteur.Image = global::WidraSoft.UI.Properties.Resources.plus_Weighing;
-            this.btAddTransporteur.Location = new System.Drawing.Point(421, 267);
+            this.btAddTransporteur.Location = new System.Drawing.Point(421, 307);
             this.btAddTransporteur.Name = "btAddTransporteur";
             this.btAddTransporteur.Size = new System.Drawing.Size(25, 25);
             this.btAddTransporteur.TabIndex = 204;
@@ -592,7 +744,7 @@
             this.btAddChauffeur.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(86)))), ((int)(((byte)(81)))));
             this.btAddChauffeur.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btAddChauffeur.Image = global::WidraSoft.UI.Properties.Resources.plus_Weighing;
-            this.btAddChauffeur.Location = new System.Drawing.Point(421, 235);
+            this.btAddChauffeur.Location = new System.Drawing.Point(421, 275);
             this.btAddChauffeur.Name = "btAddChauffeur";
             this.btAddChauffeur.Size = new System.Drawing.Size(25, 25);
             this.btAddChauffeur.TabIndex = 203;
@@ -608,7 +760,7 @@
             this.btAddCamion.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(86)))), ((int)(((byte)(81)))));
             this.btAddCamion.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btAddCamion.Image = global::WidraSoft.UI.Properties.Resources.plus_Weighing;
-            this.btAddCamion.Location = new System.Drawing.Point(421, 203);
+            this.btAddCamion.Location = new System.Drawing.Point(421, 243);
             this.btAddCamion.Name = "btAddCamion";
             this.btAddCamion.Size = new System.Drawing.Size(25, 25);
             this.btAddCamion.TabIndex = 202;
@@ -624,7 +776,7 @@
             this.btAddFirme.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(86)))), ((int)(((byte)(81)))));
             this.btAddFirme.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btAddFirme.Image = global::WidraSoft.UI.Properties.Resources.plus_Weighing;
-            this.btAddFirme.Location = new System.Drawing.Point(421, 171);
+            this.btAddFirme.Location = new System.Drawing.Point(421, 211);
             this.btAddFirme.Name = "btAddFirme";
             this.btAddFirme.Size = new System.Drawing.Size(25, 24);
             this.btAddFirme.TabIndex = 201;
@@ -644,7 +796,7 @@
             this.panelWeightDetails.Controls.Add(this.label2);
             this.panelWeightDetails.Controls.Add(this.label1);
             this.panelWeightDetails.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panelWeightDetails.Location = new System.Drawing.Point(0, 454);
+            this.panelWeightDetails.Location = new System.Drawing.Point(0, 501);
             this.panelWeightDetails.Name = "panelWeightDetails";
             this.panelWeightDetails.Size = new System.Drawing.Size(1020, 88);
             this.panelWeightDetails.TabIndex = 200;
@@ -756,7 +908,7 @@
             // RqChampLibre4
             // 
             this.RqChampLibre4.Image = global::WidraSoft.UI.Properties.Resources.asterisk;
-            this.RqChampLibre4.Location = new System.Drawing.Point(548, 414);
+            this.RqChampLibre4.Location = new System.Drawing.Point(548, 454);
             this.RqChampLibre4.Name = "RqChampLibre4";
             this.RqChampLibre4.Size = new System.Drawing.Size(28, 22);
             this.RqChampLibre4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
@@ -766,7 +918,7 @@
             // RqChampLibre3
             // 
             this.RqChampLibre3.Image = global::WidraSoft.UI.Properties.Resources.asterisk;
-            this.RqChampLibre3.Location = new System.Drawing.Point(548, 382);
+            this.RqChampLibre3.Location = new System.Drawing.Point(548, 422);
             this.RqChampLibre3.Name = "RqChampLibre3";
             this.RqChampLibre3.Size = new System.Drawing.Size(28, 22);
             this.RqChampLibre3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
@@ -776,7 +928,7 @@
             // RqChampLibre2
             // 
             this.RqChampLibre2.Image = global::WidraSoft.UI.Properties.Resources.asterisk;
-            this.RqChampLibre2.Location = new System.Drawing.Point(26, 414);
+            this.RqChampLibre2.Location = new System.Drawing.Point(26, 454);
             this.RqChampLibre2.Name = "RqChampLibre2";
             this.RqChampLibre2.Size = new System.Drawing.Size(28, 22);
             this.RqChampLibre2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
@@ -786,7 +938,7 @@
             // RqChampLibre1
             // 
             this.RqChampLibre1.Image = global::WidraSoft.UI.Properties.Resources.asterisk;
-            this.RqChampLibre1.Location = new System.Drawing.Point(26, 382);
+            this.RqChampLibre1.Location = new System.Drawing.Point(26, 422);
             this.RqChampLibre1.Name = "RqChampLibre1";
             this.RqChampLibre1.Size = new System.Drawing.Size(28, 22);
             this.RqChampLibre1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
@@ -800,7 +952,7 @@
             this.lbChampLibre4.Font = new System.Drawing.Font("Calibri", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.lbChampLibre4.ForeColor = System.Drawing.Color.White;
             this.lbChampLibre4.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.lbChampLibre4.Location = new System.Drawing.Point(576, 416);
+            this.lbChampLibre4.Location = new System.Drawing.Point(576, 456);
             this.lbChampLibre4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbChampLibre4.Name = "lbChampLibre4";
             this.lbChampLibre4.Size = new System.Drawing.Size(93, 18);
@@ -813,7 +965,7 @@
             this.txtChampLibre4.BackColor = System.Drawing.Color.Honeydew;
             this.txtChampLibre4.Font = new System.Drawing.Font("Calibri", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.txtChampLibre4.ForeColor = System.Drawing.Color.Black;
-            this.txtChampLibre4.Location = new System.Drawing.Point(701, 413);
+            this.txtChampLibre4.Location = new System.Drawing.Point(701, 453);
             this.txtChampLibre4.Name = "txtChampLibre4";
             this.txtChampLibre4.Size = new System.Drawing.Size(252, 25);
             this.txtChampLibre4.TabIndex = 194;
@@ -825,7 +977,7 @@
             this.lbChampLibre3.Font = new System.Drawing.Font("Calibri", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.lbChampLibre3.ForeColor = System.Drawing.Color.White;
             this.lbChampLibre3.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.lbChampLibre3.Location = new System.Drawing.Point(576, 384);
+            this.lbChampLibre3.Location = new System.Drawing.Point(576, 424);
             this.lbChampLibre3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbChampLibre3.Name = "lbChampLibre3";
             this.lbChampLibre3.Size = new System.Drawing.Size(93, 18);
@@ -838,7 +990,7 @@
             this.txtChampLibre3.BackColor = System.Drawing.Color.Honeydew;
             this.txtChampLibre3.Font = new System.Drawing.Font("Calibri", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.txtChampLibre3.ForeColor = System.Drawing.Color.Black;
-            this.txtChampLibre3.Location = new System.Drawing.Point(701, 381);
+            this.txtChampLibre3.Location = new System.Drawing.Point(701, 421);
             this.txtChampLibre3.Name = "txtChampLibre3";
             this.txtChampLibre3.Size = new System.Drawing.Size(252, 25);
             this.txtChampLibre3.TabIndex = 192;
@@ -850,7 +1002,7 @@
             this.lbChampLibre2.Font = new System.Drawing.Font("Calibri", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.lbChampLibre2.ForeColor = System.Drawing.Color.White;
             this.lbChampLibre2.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.lbChampLibre2.Location = new System.Drawing.Point(54, 416);
+            this.lbChampLibre2.Location = new System.Drawing.Point(54, 456);
             this.lbChampLibre2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbChampLibre2.Name = "lbChampLibre2";
             this.lbChampLibre2.Size = new System.Drawing.Size(93, 18);
@@ -863,7 +1015,7 @@
             this.txtChampLibre2.BackColor = System.Drawing.Color.Honeydew;
             this.txtChampLibre2.Font = new System.Drawing.Font("Calibri", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.txtChampLibre2.ForeColor = System.Drawing.Color.Black;
-            this.txtChampLibre2.Location = new System.Drawing.Point(168, 413);
+            this.txtChampLibre2.Location = new System.Drawing.Point(168, 453);
             this.txtChampLibre2.Name = "txtChampLibre2";
             this.txtChampLibre2.Size = new System.Drawing.Size(252, 25);
             this.txtChampLibre2.TabIndex = 190;
@@ -875,7 +1027,7 @@
             this.lbChampLibre1.Font = new System.Drawing.Font("Calibri", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.lbChampLibre1.ForeColor = System.Drawing.Color.White;
             this.lbChampLibre1.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.lbChampLibre1.Location = new System.Drawing.Point(54, 384);
+            this.lbChampLibre1.Location = new System.Drawing.Point(54, 424);
             this.lbChampLibre1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbChampLibre1.Name = "lbChampLibre1";
             this.lbChampLibre1.Size = new System.Drawing.Size(93, 18);
@@ -889,7 +1041,7 @@
             this.txtChampLibre1.BackColor = System.Drawing.Color.Honeydew;
             this.txtChampLibre1.Font = new System.Drawing.Font("Calibri", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.txtChampLibre1.ForeColor = System.Drawing.Color.Black;
-            this.txtChampLibre1.Location = new System.Drawing.Point(168, 381);
+            this.txtChampLibre1.Location = new System.Drawing.Point(168, 421);
             this.txtChampLibre1.Name = "txtChampLibre1";
             this.txtChampLibre1.Size = new System.Drawing.Size(252, 25);
             this.txtChampLibre1.TabIndex = 188;
@@ -898,7 +1050,7 @@
             // pictureBox8
             // 
             this.pictureBox8.Image = global::WidraSoft.UI.Properties.Resources.Settings;
-            this.pictureBox8.Location = new System.Drawing.Point(26, 110);
+            this.pictureBox8.Location = new System.Drawing.Point(26, 150);
             this.pictureBox8.Name = "pictureBox8";
             this.pictureBox8.Size = new System.Drawing.Size(28, 22);
             this.pictureBox8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -911,7 +1063,7 @@
             this.label11.Font = new System.Drawing.Font("Calibri", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label11.ForeColor = System.Drawing.Color.White;
             this.label11.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label11.Location = new System.Drawing.Point(54, 111);
+            this.label11.Location = new System.Drawing.Point(54, 151);
             this.label11.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(73, 18);
@@ -920,22 +1072,23 @@
             // 
             // cbWeighingSettingsId
             // 
-            this.cbWeighingSettingsId.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(62)))), ((int)(((byte)(60)))));
+            this.cbWeighingSettingsId.BackColor = System.Drawing.Color.Honeydew;
             this.cbWeighingSettingsId.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbWeighingSettingsId.Enabled = false;
             this.cbWeighingSettingsId.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.cbWeighingSettingsId.Font = new System.Drawing.Font("Corbel", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.cbWeighingSettingsId.Font = new System.Drawing.Font("Corbel", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.cbWeighingSettingsId.ForeColor = System.Drawing.Color.White;
             this.cbWeighingSettingsId.FormattingEnabled = true;
-            this.cbWeighingSettingsId.Location = new System.Drawing.Point(168, 108);
+            this.cbWeighingSettingsId.Location = new System.Drawing.Point(168, 148);
             this.cbWeighingSettingsId.Name = "cbWeighingSettingsId";
-            this.cbWeighingSettingsId.Size = new System.Drawing.Size(252, 22);
+            this.cbWeighingSettingsId.Size = new System.Drawing.Size(252, 23);
             this.cbWeighingSettingsId.TabIndex = 130;
             this.cbWeighingSettingsId.SelectedValueChanged += new System.EventHandler(this.cbWeighingSettingsId_SelectedValueChanged);
             // 
             // RqChamp7
             // 
             this.RqChamp7.Image = global::WidraSoft.UI.Properties.Resources.asterisk;
-            this.RqChamp7.Location = new System.Drawing.Point(548, 331);
+            this.RqChamp7.Location = new System.Drawing.Point(548, 371);
             this.RqChamp7.Name = "RqChamp7";
             this.RqChamp7.Size = new System.Drawing.Size(28, 22);
             this.RqChamp7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
@@ -945,7 +1098,7 @@
             // RqChamp6
             // 
             this.RqChamp6.Image = global::WidraSoft.UI.Properties.Resources.asterisk;
-            this.RqChamp6.Location = new System.Drawing.Point(548, 299);
+            this.RqChamp6.Location = new System.Drawing.Point(548, 339);
             this.RqChamp6.Name = "RqChamp6";
             this.RqChamp6.Size = new System.Drawing.Size(28, 22);
             this.RqChamp6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
@@ -955,7 +1108,7 @@
             // RqChamp5
             // 
             this.RqChamp5.Image = global::WidraSoft.UI.Properties.Resources.asterisk;
-            this.RqChamp5.Location = new System.Drawing.Point(548, 267);
+            this.RqChamp5.Location = new System.Drawing.Point(548, 307);
             this.RqChamp5.Name = "RqChamp5";
             this.RqChamp5.Size = new System.Drawing.Size(28, 22);
             this.RqChamp5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
@@ -965,7 +1118,7 @@
             // RqChamp4
             // 
             this.RqChamp4.Image = global::WidraSoft.UI.Properties.Resources.asterisk;
-            this.RqChamp4.Location = new System.Drawing.Point(548, 235);
+            this.RqChamp4.Location = new System.Drawing.Point(548, 275);
             this.RqChamp4.Name = "RqChamp4";
             this.RqChamp4.Size = new System.Drawing.Size(28, 22);
             this.RqChamp4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
@@ -975,7 +1128,7 @@
             // RqChamp3
             // 
             this.RqChamp3.Image = global::WidraSoft.UI.Properties.Resources.asterisk;
-            this.RqChamp3.Location = new System.Drawing.Point(548, 203);
+            this.RqChamp3.Location = new System.Drawing.Point(548, 243);
             this.RqChamp3.Name = "RqChamp3";
             this.RqChamp3.Size = new System.Drawing.Size(28, 22);
             this.RqChamp3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
@@ -985,7 +1138,7 @@
             // RqChamp2
             // 
             this.RqChamp2.Image = global::WidraSoft.UI.Properties.Resources.asterisk;
-            this.RqChamp2.Location = new System.Drawing.Point(548, 172);
+            this.RqChamp2.Location = new System.Drawing.Point(548, 212);
             this.RqChamp2.Name = "RqChamp2";
             this.RqChamp2.Size = new System.Drawing.Size(28, 22);
             this.RqChamp2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
@@ -995,7 +1148,7 @@
             // RqChamp1
             // 
             this.RqChamp1.Image = global::WidraSoft.UI.Properties.Resources.asterisk;
-            this.RqChamp1.Location = new System.Drawing.Point(548, 140);
+            this.RqChamp1.Location = new System.Drawing.Point(548, 180);
             this.RqChamp1.Name = "RqChamp1";
             this.RqChamp1.Size = new System.Drawing.Size(28, 22);
             this.RqChamp1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
@@ -1009,7 +1162,7 @@
             this.cbChamp3.BackColor = System.Drawing.Color.Honeydew;
             this.cbChamp3.Font = new System.Drawing.Font("Calibri", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.cbChamp3.FormattingEnabled = true;
-            this.cbChamp3.Location = new System.Drawing.Point(701, 202);
+            this.cbChamp3.Location = new System.Drawing.Point(701, 242);
             this.cbChamp3.Margin = new System.Windows.Forms.Padding(2);
             this.cbChamp3.Name = "cbChamp3";
             this.cbChamp3.Size = new System.Drawing.Size(252, 26);
@@ -1024,7 +1177,7 @@
             this.cbChamp1.BackColor = System.Drawing.Color.Honeydew;
             this.cbChamp1.Font = new System.Drawing.Font("Calibri", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.cbChamp1.FormattingEnabled = true;
-            this.cbChamp1.Location = new System.Drawing.Point(701, 138);
+            this.cbChamp1.Location = new System.Drawing.Point(701, 178);
             this.cbChamp1.Margin = new System.Windows.Forms.Padding(2);
             this.cbChamp1.Name = "cbChamp1";
             this.cbChamp1.Size = new System.Drawing.Size(252, 26);
@@ -1038,7 +1191,7 @@
             this.lbChamp7.Font = new System.Drawing.Font("Calibri", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.lbChamp7.ForeColor = System.Drawing.Color.White;
             this.lbChamp7.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.lbChamp7.Location = new System.Drawing.Point(576, 333);
+            this.lbChamp7.Location = new System.Drawing.Point(576, 373);
             this.lbChamp7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbChamp7.Name = "lbChamp7";
             this.lbChamp7.Size = new System.Drawing.Size(61, 18);
@@ -1051,7 +1204,7 @@
             this.lbChamp1.Font = new System.Drawing.Font("Calibri", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.lbChamp1.ForeColor = System.Drawing.Color.White;
             this.lbChamp1.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.lbChamp1.Location = new System.Drawing.Point(576, 141);
+            this.lbChamp1.Location = new System.Drawing.Point(576, 181);
             this.lbChamp1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbChamp1.Name = "lbChamp1";
             this.lbChamp1.Size = new System.Drawing.Size(61, 18);
@@ -1065,7 +1218,7 @@
             this.cbChamp7.BackColor = System.Drawing.Color.Honeydew;
             this.cbChamp7.Font = new System.Drawing.Font("Calibri", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.cbChamp7.FormattingEnabled = true;
-            this.cbChamp7.Location = new System.Drawing.Point(701, 330);
+            this.cbChamp7.Location = new System.Drawing.Point(701, 370);
             this.cbChamp7.Margin = new System.Windows.Forms.Padding(2);
             this.cbChamp7.Name = "cbChamp7";
             this.cbChamp7.Size = new System.Drawing.Size(252, 26);
@@ -1079,7 +1232,7 @@
             this.cbChamp2.BackColor = System.Drawing.Color.Honeydew;
             this.cbChamp2.Font = new System.Drawing.Font("Calibri", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.cbChamp2.FormattingEnabled = true;
-            this.cbChamp2.Location = new System.Drawing.Point(701, 170);
+            this.cbChamp2.Location = new System.Drawing.Point(701, 210);
             this.cbChamp2.Margin = new System.Windows.Forms.Padding(2);
             this.cbChamp2.Name = "cbChamp2";
             this.cbChamp2.Size = new System.Drawing.Size(252, 26);
@@ -1093,7 +1246,7 @@
             this.lbChamp6.Font = new System.Drawing.Font("Calibri", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.lbChamp6.ForeColor = System.Drawing.Color.White;
             this.lbChamp6.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.lbChamp6.Location = new System.Drawing.Point(576, 301);
+            this.lbChamp6.Location = new System.Drawing.Point(576, 341);
             this.lbChamp6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbChamp6.Name = "lbChamp6";
             this.lbChamp6.Size = new System.Drawing.Size(61, 18);
@@ -1106,7 +1259,7 @@
             this.lbChamp2.Font = new System.Drawing.Font("Calibri", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.lbChamp2.ForeColor = System.Drawing.Color.White;
             this.lbChamp2.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.lbChamp2.Location = new System.Drawing.Point(576, 173);
+            this.lbChamp2.Location = new System.Drawing.Point(576, 213);
             this.lbChamp2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbChamp2.Name = "lbChamp2";
             this.lbChamp2.Size = new System.Drawing.Size(61, 18);
@@ -1120,7 +1273,7 @@
             this.cbChamp6.BackColor = System.Drawing.Color.Honeydew;
             this.cbChamp6.Font = new System.Drawing.Font("Calibri", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.cbChamp6.FormattingEnabled = true;
-            this.cbChamp6.Location = new System.Drawing.Point(701, 298);
+            this.cbChamp6.Location = new System.Drawing.Point(701, 338);
             this.cbChamp6.Margin = new System.Windows.Forms.Padding(2);
             this.cbChamp6.Name = "cbChamp6";
             this.cbChamp6.Size = new System.Drawing.Size(252, 26);
@@ -1134,7 +1287,7 @@
             this.lbChamp3.Font = new System.Drawing.Font("Calibri", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.lbChamp3.ForeColor = System.Drawing.Color.White;
             this.lbChamp3.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.lbChamp3.Location = new System.Drawing.Point(576, 205);
+            this.lbChamp3.Location = new System.Drawing.Point(576, 245);
             this.lbChamp3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbChamp3.Name = "lbChamp3";
             this.lbChamp3.Size = new System.Drawing.Size(61, 18);
@@ -1147,7 +1300,7 @@
             this.lbChamp5.Font = new System.Drawing.Font("Calibri", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.lbChamp5.ForeColor = System.Drawing.Color.White;
             this.lbChamp5.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.lbChamp5.Location = new System.Drawing.Point(576, 269);
+            this.lbChamp5.Location = new System.Drawing.Point(576, 309);
             this.lbChamp5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbChamp5.Name = "lbChamp5";
             this.lbChamp5.Size = new System.Drawing.Size(61, 18);
@@ -1161,7 +1314,7 @@
             this.cbChamp4.BackColor = System.Drawing.Color.Honeydew;
             this.cbChamp4.Font = new System.Drawing.Font("Calibri", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.cbChamp4.FormattingEnabled = true;
-            this.cbChamp4.Location = new System.Drawing.Point(701, 234);
+            this.cbChamp4.Location = new System.Drawing.Point(701, 274);
             this.cbChamp4.Margin = new System.Windows.Forms.Padding(2);
             this.cbChamp4.Name = "cbChamp4";
             this.cbChamp4.Size = new System.Drawing.Size(252, 26);
@@ -1176,7 +1329,7 @@
             this.cbChamp5.BackColor = System.Drawing.Color.Honeydew;
             this.cbChamp5.Font = new System.Drawing.Font("Calibri", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.cbChamp5.FormattingEnabled = true;
-            this.cbChamp5.Location = new System.Drawing.Point(701, 266);
+            this.cbChamp5.Location = new System.Drawing.Point(701, 306);
             this.cbChamp5.Margin = new System.Windows.Forms.Padding(2);
             this.cbChamp5.Name = "cbChamp5";
             this.cbChamp5.Size = new System.Drawing.Size(252, 26);
@@ -1190,7 +1343,7 @@
             this.lbChamp4.Font = new System.Drawing.Font("Calibri", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.lbChamp4.ForeColor = System.Drawing.Color.White;
             this.lbChamp4.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.lbChamp4.Location = new System.Drawing.Point(576, 237);
+            this.lbChamp4.Location = new System.Drawing.Point(576, 277);
             this.lbChamp4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbChamp4.Name = "lbChamp4";
             this.lbChamp4.Size = new System.Drawing.Size(61, 18);
@@ -1200,7 +1353,7 @@
             // RqClient
             // 
             this.RqClient.Image = global::WidraSoft.UI.Properties.Resources.asterisk;
-            this.RqClient.Location = new System.Drawing.Point(26, 331);
+            this.RqClient.Location = new System.Drawing.Point(26, 371);
             this.RqClient.Name = "RqClient";
             this.RqClient.Size = new System.Drawing.Size(28, 22);
             this.RqClient.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
@@ -1210,7 +1363,7 @@
             // RqProduit
             // 
             this.RqProduit.Image = global::WidraSoft.UI.Properties.Resources.asterisk;
-            this.RqProduit.Location = new System.Drawing.Point(26, 299);
+            this.RqProduit.Location = new System.Drawing.Point(26, 339);
             this.RqProduit.Name = "RqProduit";
             this.RqProduit.Size = new System.Drawing.Size(28, 22);
             this.RqProduit.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
@@ -1220,7 +1373,7 @@
             // RqTransporteur
             // 
             this.RqTransporteur.Image = global::WidraSoft.UI.Properties.Resources.asterisk;
-            this.RqTransporteur.Location = new System.Drawing.Point(26, 267);
+            this.RqTransporteur.Location = new System.Drawing.Point(26, 307);
             this.RqTransporteur.Name = "RqTransporteur";
             this.RqTransporteur.Size = new System.Drawing.Size(28, 22);
             this.RqTransporteur.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
@@ -1230,7 +1383,7 @@
             // RqChauffeur
             // 
             this.RqChauffeur.Image = global::WidraSoft.UI.Properties.Resources.asterisk;
-            this.RqChauffeur.Location = new System.Drawing.Point(26, 235);
+            this.RqChauffeur.Location = new System.Drawing.Point(26, 275);
             this.RqChauffeur.Name = "RqChauffeur";
             this.RqChauffeur.Size = new System.Drawing.Size(28, 22);
             this.RqChauffeur.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
@@ -1240,7 +1393,7 @@
             // RqCamion
             // 
             this.RqCamion.Image = global::WidraSoft.UI.Properties.Resources.asterisk;
-            this.RqCamion.Location = new System.Drawing.Point(26, 203);
+            this.RqCamion.Location = new System.Drawing.Point(26, 243);
             this.RqCamion.Name = "RqCamion";
             this.RqCamion.Size = new System.Drawing.Size(28, 22);
             this.RqCamion.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
@@ -1250,7 +1403,7 @@
             // RqFirme
             // 
             this.RqFirme.Image = global::WidraSoft.UI.Properties.Resources.asterisk;
-            this.RqFirme.Location = new System.Drawing.Point(26, 172);
+            this.RqFirme.Location = new System.Drawing.Point(26, 212);
             this.RqFirme.Name = "RqFirme";
             this.RqFirme.Size = new System.Drawing.Size(28, 22);
             this.RqFirme.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
@@ -1260,7 +1413,7 @@
             // RqPont
             // 
             this.RqPont.Image = global::WidraSoft.UI.Properties.Resources.asterisk;
-            this.RqPont.Location = new System.Drawing.Point(26, 141);
+            this.RqPont.Location = new System.Drawing.Point(26, 181);
             this.RqPont.Name = "RqPont";
             this.RqPont.Size = new System.Drawing.Size(28, 22);
             this.RqPont.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
@@ -1271,35 +1424,10 @@
             // 
             this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(62)))), ((int)(((byte)(60)))));
             this.panel3.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel3.Location = new System.Drawing.Point(0, 542);
+            this.panel3.Location = new System.Drawing.Point(0, 589);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(1020, 27);
             this.panel3.TabIndex = 3;
-            // 
-            // lbTareCamion
-            // 
-            this.lbTareCamion.AutoSize = true;
-            this.lbTareCamion.Font = new System.Drawing.Font("Calibri", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.lbTareCamion.ForeColor = System.Drawing.Color.White;
-            this.lbTareCamion.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.lbTareCamion.Location = new System.Drawing.Point(451, 182);
-            this.lbTareCamion.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lbTareCamion.Name = "lbTareCamion";
-            this.lbTareCamion.Size = new System.Drawing.Size(62, 18);
-            this.lbTareCamion.TabIndex = 112;
-            this.lbTareCamion.Text = "Tare (Kg)";
-            this.lbTareCamion.Visible = false;
-            // 
-            // txtTareCamion
-            // 
-            this.txtTareCamion.BackColor = System.Drawing.Color.Honeydew;
-            this.txtTareCamion.Font = new System.Drawing.Font("Calibri", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.txtTareCamion.ForeColor = System.Drawing.Color.Black;
-            this.txtTareCamion.Location = new System.Drawing.Point(451, 203);
-            this.txtTareCamion.Name = "txtTareCamion";
-            this.txtTareCamion.Size = new System.Drawing.Size(91, 25);
-            this.txtTareCamion.TabIndex = 111;
-            this.txtTareCamion.Visible = false;
             // 
             // gbFlux
             // 
@@ -1307,7 +1435,7 @@
             this.gbFlux.Controls.Add(this.rbxEntrant);
             this.gbFlux.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.gbFlux.ForeColor = System.Drawing.Color.White;
-            this.gbFlux.Location = new System.Drawing.Point(297, 13);
+            this.gbFlux.Location = new System.Drawing.Point(297, 53);
             this.gbFlux.Name = "gbFlux";
             this.gbFlux.Size = new System.Drawing.Size(123, 72);
             this.gbFlux.TabIndex = 109;
@@ -1347,7 +1475,7 @@
             this.cbCamion.BackColor = System.Drawing.Color.Honeydew;
             this.cbCamion.Font = new System.Drawing.Font("Calibri", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.cbCamion.FormattingEnabled = true;
-            this.cbCamion.Location = new System.Drawing.Point(168, 202);
+            this.cbCamion.Location = new System.Drawing.Point(168, 242);
             this.cbCamion.Margin = new System.Windows.Forms.Padding(2);
             this.cbCamion.Name = "cbCamion";
             this.cbCamion.Size = new System.Drawing.Size(252, 26);
@@ -1360,7 +1488,7 @@
             this.gbTypePesee.Controls.Add(this.rb1x);
             this.gbTypePesee.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.gbTypePesee.ForeColor = System.Drawing.Color.White;
-            this.gbTypePesee.Location = new System.Drawing.Point(168, 13);
+            this.gbTypePesee.Location = new System.Drawing.Point(168, 53);
             this.gbTypePesee.Name = "gbTypePesee";
             this.gbTypePesee.Size = new System.Drawing.Size(125, 72);
             this.gbTypePesee.TabIndex = 108;
@@ -1400,9 +1528,10 @@
             this.cbPont.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
             this.cbPont.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
             this.cbPont.BackColor = System.Drawing.Color.Honeydew;
+            this.cbPont.Enabled = false;
             this.cbPont.Font = new System.Drawing.Font("Calibri", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.cbPont.FormattingEnabled = true;
-            this.cbPont.Location = new System.Drawing.Point(168, 138);
+            this.cbPont.Location = new System.Drawing.Point(168, 178);
             this.cbPont.Margin = new System.Windows.Forms.Padding(2);
             this.cbPont.Name = "cbPont";
             this.cbPont.Size = new System.Drawing.Size(252, 26);
@@ -1415,7 +1544,7 @@
             this.lbClient.Font = new System.Drawing.Font("Calibri", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.lbClient.ForeColor = System.Drawing.Color.White;
             this.lbClient.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.lbClient.Location = new System.Drawing.Point(54, 333);
+            this.lbClient.Location = new System.Drawing.Point(54, 373);
             this.lbClient.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbClient.Name = "lbClient";
             this.lbClient.Size = new System.Drawing.Size(45, 18);
@@ -1428,7 +1557,7 @@
             this.lbPont.Font = new System.Drawing.Font("Calibri", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.lbPont.ForeColor = System.Drawing.Color.White;
             this.lbPont.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.lbPont.Location = new System.Drawing.Point(54, 141);
+            this.lbPont.Location = new System.Drawing.Point(54, 181);
             this.lbPont.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbPont.Name = "lbPont";
             this.lbPont.Size = new System.Drawing.Size(37, 18);
@@ -1442,7 +1571,7 @@
             this.cbClient.BackColor = System.Drawing.Color.Honeydew;
             this.cbClient.Font = new System.Drawing.Font("Calibri", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.cbClient.FormattingEnabled = true;
-            this.cbClient.Location = new System.Drawing.Point(168, 330);
+            this.cbClient.Location = new System.Drawing.Point(168, 370);
             this.cbClient.Margin = new System.Windows.Forms.Padding(2);
             this.cbClient.Name = "cbClient";
             this.cbClient.Size = new System.Drawing.Size(252, 26);
@@ -1456,7 +1585,7 @@
             this.cbFirme.BackColor = System.Drawing.Color.Honeydew;
             this.cbFirme.Font = new System.Drawing.Font("Calibri", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.cbFirme.FormattingEnabled = true;
-            this.cbFirme.Location = new System.Drawing.Point(168, 170);
+            this.cbFirme.Location = new System.Drawing.Point(168, 210);
             this.cbFirme.Margin = new System.Windows.Forms.Padding(2);
             this.cbFirme.Name = "cbFirme";
             this.cbFirme.Size = new System.Drawing.Size(252, 26);
@@ -1469,7 +1598,7 @@
             this.lbProduit.Font = new System.Drawing.Font("Calibri", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.lbProduit.ForeColor = System.Drawing.Color.White;
             this.lbProduit.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.lbProduit.Location = new System.Drawing.Point(54, 301);
+            this.lbProduit.Location = new System.Drawing.Point(54, 341);
             this.lbProduit.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbProduit.Name = "lbProduit";
             this.lbProduit.Size = new System.Drawing.Size(54, 18);
@@ -1482,7 +1611,7 @@
             this.lbFirme.Font = new System.Drawing.Font("Calibri", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.lbFirme.ForeColor = System.Drawing.Color.White;
             this.lbFirme.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.lbFirme.Location = new System.Drawing.Point(54, 173);
+            this.lbFirme.Location = new System.Drawing.Point(54, 213);
             this.lbFirme.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbFirme.Name = "lbFirme";
             this.lbFirme.Size = new System.Drawing.Size(44, 18);
@@ -1496,7 +1625,7 @@
             this.cbProduit.BackColor = System.Drawing.Color.Honeydew;
             this.cbProduit.Font = new System.Drawing.Font("Calibri", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.cbProduit.FormattingEnabled = true;
-            this.cbProduit.Location = new System.Drawing.Point(168, 298);
+            this.cbProduit.Location = new System.Drawing.Point(168, 338);
             this.cbProduit.Margin = new System.Windows.Forms.Padding(2);
             this.cbProduit.Name = "cbProduit";
             this.cbProduit.Size = new System.Drawing.Size(252, 26);
@@ -1509,7 +1638,7 @@
             this.lbCamion.Font = new System.Drawing.Font("Calibri", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.lbCamion.ForeColor = System.Drawing.Color.White;
             this.lbCamion.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.lbCamion.Location = new System.Drawing.Point(54, 205);
+            this.lbCamion.Location = new System.Drawing.Point(54, 245);
             this.lbCamion.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbCamion.Name = "lbCamion";
             this.lbCamion.Size = new System.Drawing.Size(55, 18);
@@ -1522,7 +1651,7 @@
             this.lbTransporteur.Font = new System.Drawing.Font("Calibri", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.lbTransporteur.ForeColor = System.Drawing.Color.White;
             this.lbTransporteur.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.lbTransporteur.Location = new System.Drawing.Point(54, 269);
+            this.lbTransporteur.Location = new System.Drawing.Point(54, 309);
             this.lbTransporteur.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbTransporteur.Name = "lbTransporteur";
             this.lbTransporteur.Size = new System.Drawing.Size(87, 18);
@@ -1536,7 +1665,7 @@
             this.cbChauffeur.BackColor = System.Drawing.Color.Honeydew;
             this.cbChauffeur.Font = new System.Drawing.Font("Calibri", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.cbChauffeur.FormattingEnabled = true;
-            this.cbChauffeur.Location = new System.Drawing.Point(168, 234);
+            this.cbChauffeur.Location = new System.Drawing.Point(168, 274);
             this.cbChauffeur.Margin = new System.Windows.Forms.Padding(2);
             this.cbChauffeur.Name = "cbChauffeur";
             this.cbChauffeur.Size = new System.Drawing.Size(252, 26);
@@ -1550,7 +1679,7 @@
             this.cbTransporteur.BackColor = System.Drawing.Color.Honeydew;
             this.cbTransporteur.Font = new System.Drawing.Font("Calibri", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.cbTransporteur.FormattingEnabled = true;
-            this.cbTransporteur.Location = new System.Drawing.Point(168, 266);
+            this.cbTransporteur.Location = new System.Drawing.Point(168, 306);
             this.cbTransporteur.Margin = new System.Windows.Forms.Padding(2);
             this.cbTransporteur.Name = "cbTransporteur";
             this.cbTransporteur.Size = new System.Drawing.Size(252, 26);
@@ -1563,7 +1692,7 @@
             this.lbChauffeur.Font = new System.Drawing.Font("Calibri", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.lbChauffeur.ForeColor = System.Drawing.Color.White;
             this.lbChauffeur.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.lbChauffeur.Location = new System.Drawing.Point(54, 237);
+            this.lbChauffeur.Location = new System.Drawing.Point(54, 277);
             this.lbChauffeur.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbChauffeur.Name = "lbChauffeur";
             this.lbChauffeur.Size = new System.Drawing.Size(69, 18);
@@ -1574,12 +1703,14 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1020, 604);
+            this.ClientSize = new System.Drawing.Size(1020, 651);
             this.Controls.Add(this.panelData);
             this.Controls.Add(this.panelLang);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
             this.Name = "PeseePBDetail";
             this.Text = "Detail pesée";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.PeseePBDetail_FormClosing);
             this.Load += new System.EventHandler(this.PeseePBDetail_Load);
             this.panelLang.ResumeLayout(false);
             this.panelLang.PerformLayout();
@@ -1588,6 +1719,12 @@
             ((System.ComponentModel.ISupportInitialize)(this.France_flag)).EndInit();
             this.panelData.ResumeLayout(false);
             this.panelData.PerformLayout();
+            this.panelNavigation.ResumeLayout(false);
+            this.panelNavigation.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbUpdating)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Filter7)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Filter6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Filter5)).EndInit();
@@ -1676,8 +1813,6 @@
         private System.Windows.Forms.PictureBox RqFirme;
         private System.Windows.Forms.PictureBox RqPont;
         private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.Label lbTareCamion;
-        private System.Windows.Forms.TextBox txtTareCamion;
         private System.Windows.Forms.GroupBox gbFlux;
         private System.Windows.Forms.RadioButton rbxSortant;
         private System.Windows.Forms.RadioButton rbxEntrant;
@@ -1728,5 +1863,14 @@
         private System.Windows.Forms.PictureBox Filter4;
         private System.Windows.Forms.PictureBox Filter3;
         private System.Windows.Forms.PictureBox Filter2;
+        private System.Windows.Forms.Panel panelNavigation;
+        private System.Windows.Forms.PictureBox pictureBox3;
+        private System.Windows.Forms.LinkLabel lbModifier;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.LinkLabel lbAjouter;
+        private System.Windows.Forms.LinkLabel lbSupprimer;
+        private System.Windows.Forms.PictureBox pbUpdating;
+        private System.Windows.Forms.TextBox txtEtatPesee;
     }
 }

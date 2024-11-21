@@ -74,6 +74,20 @@ namespace WidraSoft.BL
             }
         }
 
+        public Int32 GetGroupeIdById(Int32 Id)
+        {
+            try
+            {
+                UtilisateurDA utilisateur = new UtilisateurDA();
+                Int32 GroupeId = utilisateur.GetGroupeIdById(Id);
+                return GroupeId;
+            }
+            catch
+            {
+                throw;
+            }
+        }
+
         public string GetFullUsername(Int32 Id)
         {
             try

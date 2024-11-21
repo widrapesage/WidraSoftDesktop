@@ -151,7 +151,7 @@
             // lbDate
             // 
             resources.ApplyResources(this.lbDate, "lbDate");
-            this.lbDate.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(86)))), ((int)(((byte)(85)))));
+            this.lbDate.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(62)))), ((int)(((byte)(60)))));
             this.lbDate.ForeColor = System.Drawing.Color.White;
             this.lbDate.Name = "lbDate";
             // 
@@ -185,7 +185,7 @@
             // lbMessage
             // 
             resources.ApplyResources(this.lbMessage, "lbMessage");
-            this.lbMessage.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(86)))), ((int)(((byte)(85)))));
+            this.lbMessage.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(62)))), ((int)(((byte)(60)))));
             this.lbMessage.ForeColor = System.Drawing.Color.White;
             this.lbMessage.Name = "lbMessage";
             // 
@@ -193,7 +193,7 @@
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(86)))), ((int)(((byte)(85)))));
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(62)))), ((int)(((byte)(60)))));
             this.Controls.Add(this.lbMessage);
             this.Controls.Add(this.select_ES);
             this.Controls.Add(this.select_EN);

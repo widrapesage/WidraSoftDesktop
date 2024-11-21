@@ -124,6 +124,29 @@ namespace WidraSoft.DA
             }
  
         }
+
+        public Int32 GetGroupeIdById(Int32 Id)
+        {
+            String sql = "SELECT GROUPEID FROM UTILISATEUR WHERE UTILISATEURID=" + Id;
+            conn.ConnectionString = connString;
+            using (conn)
+            {
+                if (conn.State == ConnectionState.Closed)
+                    conn.Open();
+                SqlCommand cmd = new SqlCommand(sql, conn);
+                try
+                {
+                    Int32 GroupeId = (Int32)cmd.ExecuteScalar();
+                    return GroupeId;
+                }
+                catch
+                {
+                    throw;
+                }
+            }
+
+        }
+
         public string GetFullUsername(Int32 Id)
         {
      

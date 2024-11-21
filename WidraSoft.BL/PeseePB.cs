@@ -173,6 +173,26 @@ namespace WidraSoft.BL
             }
         }
 
+        public void Update_UI(Int32 Id,String Flux, Int32 FirmeId, Int32 CamionId, Int32 ChauffeurId, Int32 TransporteurId, Int32 ProduitId, Int32 ClientId, Int32 EnregistrementsId1,
+            Int32 TablesId1, String TablesName1, String Enregistrements1, Int32 EnregistrementsId2, Int32 TablesId2, String TablesName2, String Enregistrements2, Int32 EnregistrementsId3, Int32 TablesId3, String TablesName3, String Enregistrements3,
+            Int32 EnregistrementsId4, Int32 TablesId4, String TablesName4, String Enregistrements4, Int32 EnregistrementsId5, Int32 TablesId5, String TablesName5, String Enregistrements5, Int32 EnregistrementsId6, Int32 TablesId6, String TablesName6, String Enregistrements6,
+            Int32 EnregistrementsId7, Int32 TablesId7, String TablesName7, String Enregistrements7, String ChampLibreName1, String ChampLibre1, String ChampLibreName2, String ChampLibre2, String ChampLibreName3, String ChampLibre3,
+            String ChampLibreName4, String ChampLibre4)
+        {
+            try
+            {
+                PeseePBDA peseePBDA = new PeseePBDA();
+                peseePBDA.Update_UI(Id, Flux, FirmeId, CamionId, ChauffeurId, TransporteurId, ProduitId, ClientId, EnregistrementsId1, TablesId1, TablesName1, Enregistrements1,
+                    EnregistrementsId2, TablesId2, TablesName2, Enregistrements2, EnregistrementsId3, TablesId3, TablesName3, Enregistrements3, EnregistrementsId4, TablesId4, TablesName4, Enregistrements4,
+                    EnregistrementsId5, TablesId5, TablesName5, Enregistrements5, EnregistrementsId6, TablesId6, TablesName6, Enregistrements6, EnregistrementsId7, TablesId7, TablesName7, Enregistrements7,
+                    ChampLibreName1, ChampLibre1, ChampLibreName2, ChampLibre2, ChampLibreName3, ChampLibre3, ChampLibreName4, ChampLibre4);
+            }
+            catch
+            {
+                throw;
+            }
+        }
+
         public void Delete(Int32 Id)
         {
             try

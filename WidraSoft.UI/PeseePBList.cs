@@ -1,4 +1,5 @@
-﻿using System;
+﻿using CustomMessageBox;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -106,6 +107,21 @@ namespace WidraSoft.UI
             cbType.Items.Add("1x");
             cbType.Items.Add("2x");
 
+            //Selection de dates 
+            if (chx_Date.Checked)
+            {
+                dtDebut.Enabled = true;
+                dtFin.Enabled = true;
+                rbToutDate.Checked = true;
+                gbPeriode.Enabled = false;
+            }
+            else
+            {
+                dtDebut.Enabled = false;
+                dtFin.Enabled = false;
+                gbPeriode.Enabled = true;
+            }
+
             //Produit
             Produit produit = new Produit();
             cbProduit.DataSource = produit.List("1=1");
@@ -120,6 +136,7 @@ namespace WidraSoft.UI
             cbCamion.Text = "";
             cbChauffeur.Text = "";
             cbTransporteur.Text = "";
+            cbPont.Text = "";
             cbClient.Text = "";
             cbProduit.Text = "";
             cbTransporteur.Text = "";
@@ -346,6 +363,25 @@ namespace WidraSoft.UI
         private void Excel_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void toolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            if (DgvList.Rows.Count > 0)
+            {
+                DgvList.Focus();
+                Form form = new PeseePBTicketA5(Common_functions.GetDatagridViewSelectedId(DgvList));
+                form.Show();
+            }
+            else
+            {
+                if (cbLang.Text == "FR")
+                    Custom_MessageBox.Show("FR", "Vous ne pouvez pas supprimer l'enregistrement tant que la modification n'est pas validée", "Liste des pesées", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                else if (cbLang.Text == "EN")
+                    Custom_MessageBox.Show("EN", "You can't delete this record before the update is completed", "Weighing's list", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                else
+                    Custom_MessageBox.Show("ES", "No puede eliminar el registro hasta que se confirme el cambio", "Pesaje", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
     }
 }
