@@ -36,6 +36,19 @@ namespace WidraSoft.BL
             }
         }
 
+        public DataTable SearchBox_Terminal(string Filter)
+        {
+            try
+            {
+                CamionDA camion = new CamionDA();
+                return camion.SearchBox_Terminal(Filter);
+            }
+            catch
+            {
+                throw;
+            }
+        }
+
         public DataTable FindById(Int32 Id)
         {
             try

@@ -144,6 +144,22 @@ namespace WidraSoft.UI
                 else return_Value = "Ignorer";
             }
 
+            if (text == "MASQUER CLAVIER")
+            {
+                if (lang == "FR") return_Value = "MASQUER CLAVIER";
+                else if (lang == "EN") return_Value = "HIDE KEYBOARD";
+                else if (lang == "ES") return_Value = "OCULTAR TECLADO";
+                else return_Value = "MASQUER CLAVIER";
+            }
+
+            if (text == "AFFICHER CLAVIER")
+            {
+                if (lang == "FR") return_Value = "AFFICHER CLAVIER";
+                else if (lang == "EN") return_Value = "SHOW KEYBOARD";
+                else if (lang == "ES") return_Value = "MOSTRAR TECLADO";
+                else return_Value = "AFFICHER CLAVIER";
+            }
+
             return return_Value;
         }
     }

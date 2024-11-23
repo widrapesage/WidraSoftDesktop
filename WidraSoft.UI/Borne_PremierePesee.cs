@@ -24,6 +24,7 @@ namespace WidraSoft.UI
         int vg_ScanCamionId;
         string vg_Flux;
         int vg_P;
+        string vg_Lang;
 
         int Enregistrement1Id;
         string Enregistrement1 = "";
@@ -121,8 +122,7 @@ namespace WidraSoft.UI
             vg_ScanCamionId = ScanCamionId;
             vg_Flux = Flux;
             vg_P = P;
-            panelClavier.Visible = false;
-            lbMessage.Visible = false;
+            vg_Lang = Lang;
         }
 
         private void radioButton1_CheckedChanged(object sender, EventArgs e)
@@ -133,10 +133,35 @@ namespace WidraSoft.UI
         private void Borne_PremierePesee_Load(object sender, EventArgs e)
         {
             this.CenterToScreen();
-            btAjouter.Visible = false;
-            France_flag.Visible = true;
-            Spain_flag.Visible = false;
-            England_flag.Visible = false;
+
+            if (vg_Lang == "fr")
+            {
+                France_flag.Visible = true;
+                England_flag.Visible = false;
+                Spain_flag.Visible = false;
+                Language_Manager language_Manager = new Language_Manager();
+                language_Manager.ChangeLanguage("fr", this, typeof(Borne_PremierePesee));
+            }
+
+            if (vg_Lang == "en")
+            {
+                France_flag.Visible = false;
+                England_flag.Visible = true;
+                Spain_flag.Visible = false;
+                Language_Manager language_Manager = new Language_Manager();
+                language_Manager.ChangeLanguage("en", this, typeof(Borne_PremierePesee));
+            }
+
+            if (vg_Lang == "es")
+            {
+                France_flag.Visible = false;
+                England_flag.Visible = false;
+                Spain_flag.Visible = true;
+                Language_Manager language_Manager = new Language_Manager();
+                language_Manager.ChangeLanguage("es", this, typeof(Borne_PremierePesee));
+            }
+
+            
             Etape = "Parametre";
             Gestion_Etapes();
         }
@@ -147,9 +172,7 @@ namespace WidraSoft.UI
             DataTable dtWeighingSettings = new DataTable();
             dtWeighingSettings = weighingSettings.FindById(WeighingSettingsId);
             foreach (DataRow ro in dtWeighingSettings.Rows)
-            {
-                
-
+            {              
                 EnableCamion = (int)ro["CAMION"];
                 EnableChauffeur = (int)ro["CHAUFFEUR"];
                 EnableTransporteur = (int)ro["TRANSPORTEUR"];
@@ -210,8 +233,19 @@ namespace WidraSoft.UI
             }
         }
 
+        private void Init_Keyboard()
+        {
+            panelClavier.Visible = false;
+            lbMessage.Text = "";
+            //lbMessage.Visible = false;
+            btRecherche.Text = Language_Manager.Localize("AFFICHER CLAVIER", vg_Lang);
+            btAjouter.Visible = false;
+            btAnnulerRecherche.Visible = false;
+        }
+
         private void Gestion_Etapes()
-        {          
+        {
+            Init_Keyboard();
             if (Etape == "Parametre")
             {
                 if (vg_Demander_Parametre)
@@ -607,6 +641,7 @@ namespace WidraSoft.UI
             }
 
             DgvList.Focus();
+            lbCount.Text = DgvList.RowCount.ToString();
             if (DgvList.RowCount > 4)
             {
                 btDoubleDown.Visible = true;
@@ -1138,13 +1173,317 @@ namespace WidraSoft.UI
         private void btClavier_Click(object sender, EventArgs e)
         {
             if (panelClavier.Visible)
+            {
                 panelClavier.Visible = false;
+                //lbMessage.Visible = false;
+                btRecherche.Text = Language_Manager.Localize("AFFICHER CLAVIER", vg_Lang); 
+            }
             else
+            {
                 panelClavier.Visible = true;
-            if (lbMessage.Visible)
-                lbMessage.Visible = false;
-            else
-                lbMessage.Visible = true;   
+                //lbMessage.Visible = true;
+                btRecherche.Text = Language_Manager.Localize("MASQUER CLAVIER", vg_Lang); 
+            }
+                   
+        }
+
+        private void Search(String text, string Etape)
+        {
+            if (Etape == "Parametre")
+            {
+                WeighingSettings weighingSettings = new WeighingSettings();
+                DataTable dt = new DataTable();
+                dt = weighingSettings.SearchBox(text);
+                DgvList.DataSource = dt;
+            }
+
+            if (Etape == "Camion")
+            {
+                Camion camion = new Camion();
+                DataTable dt = new DataTable();
+                dt = camion.SearchBox(text);
+                DgvList.DataSource = dt;
+            }
+
+            if (Etape == "Firme")
+            {
+                Firme firme = new Firme();
+                DataTable dt = new DataTable();
+                dt = firme.SearchBox(text);
+                DgvList.DataSource = dt;
+            }
+
+            if (Etape == "Chauffeur")
+            {
+                Chauffeur chauffeur = new Chauffeur();
+                DataTable dt = new DataTable();
+                dt = chauffeur.SearchBox(text);
+                DgvList.DataSource = dt;
+            }
+
+            if (Etape == "Transporteur")
+            {
+                Transporteur transporteur = new Transporteur();
+                DataTable dt = new DataTable();
+                dt = transporteur.SearchBox(text);
+                DgvList.DataSource = dt;
+            }
+
+            if (Etape == "Produit")
+            {
+                Produit produit = new Produit();
+                DataTable dt = new DataTable();
+                dt = produit.SearchBox(text);
+                DgvList.DataSource = dt;
+            }
+
+            if (Etape == "Client")
+            {
+                Client client = new Client();
+                DataTable dt = new DataTable();
+                dt = client.SearchBox(text);
+                DgvList.DataSource = dt;
+            }
+        }
+
+        private void A_Click(object sender, EventArgs e)
+        {
+            if (lbMessage.Text.Length < 15)
+                lbMessage.Text = lbMessage.Text + "A";
+        }
+
+        private void B_Click(object sender, EventArgs e)
+        {
+            if (lbMessage.Text.Length < 15)
+                lbMessage.Text = lbMessage.Text + "B";
+        }
+
+        private void C_Click(object sender, EventArgs e)
+        {
+            if (lbMessage.Text.Length < 15)
+                lbMessage.Text = lbMessage.Text + "C";
+        }
+
+        private void D_Click(object sender, EventArgs e)
+        {
+            if (lbMessage.Text.Length < 15)
+                lbMessage.Text = lbMessage.Text + "D";
+        }
+
+        private void E_Click(object sender, EventArgs e)
+        {
+            if (lbMessage.Text.Length < 15)
+                lbMessage.Text = lbMessage.Text + "E";
+        }
+
+        private void F_Click(object sender, EventArgs e)
+        {
+            if (lbMessage.Text.Length < 15)
+                lbMessage.Text = lbMessage.Text + "F";
+        }
+
+        private void G_Click(object sender, EventArgs e)
+        {
+            if (lbMessage.Text.Length < 15)
+                lbMessage.Text = lbMessage.Text + "G";
+        }
+
+        private void H_Click(object sender, EventArgs e)
+        {
+            if (lbMessage.Text.Length < 15)
+                lbMessage.Text = lbMessage.Text + "H";
+        }
+
+        private void I_Click(object sender, EventArgs e)
+        {
+            if (lbMessage.Text.Length < 15)
+                lbMessage.Text = lbMessage.Text + "I";
+        }
+
+        private void J_Click(object sender, EventArgs e)
+        {
+            if (lbMessage.Text.Length < 15)
+                lbMessage.Text = lbMessage.Text + "J";
+        }
+
+        private void K_Click(object sender, EventArgs e)
+        {
+            if (lbMessage.Text.Length < 15)
+                lbMessage.Text = lbMessage.Text + "K";
+        }
+
+        private void L_Click(object sender, EventArgs e)
+        {
+            if (lbMessage.Text.Length < 15)
+                lbMessage.Text = lbMessage.Text + "L";
+        }
+
+        private void M_Click(object sender, EventArgs e)
+        {
+            if (lbMessage.Text.Length < 15)
+                lbMessage.Text = lbMessage.Text + "M";
+        }
+
+        private void N_Click(object sender, EventArgs e)
+        {
+            if (lbMessage.Text.Length < 15)
+                lbMessage.Text = lbMessage.Text + "N";
+        }
+
+        private void O_Click(object sender, EventArgs e)
+        {
+            if (lbMessage.Text.Length < 15)
+                lbMessage.Text = lbMessage.Text + "O";
+        }
+
+        private void P_Click(object sender, EventArgs e)
+        {
+            if (lbMessage.Text.Length < 15)
+                lbMessage.Text = lbMessage.Text + "P";
+        }
+
+        private void Q_Click(object sender, EventArgs e)
+        {
+            if (lbMessage.Text.Length < 15)
+                lbMessage.Text = lbMessage.Text + "Q";
+        }
+
+        private void R_Click(object sender, EventArgs e)
+        {
+            if (lbMessage.Text.Length < 15)
+                lbMessage.Text = lbMessage.Text + "R";
+        }
+
+        private void S_Click(object sender, EventArgs e)
+        {
+            if (lbMessage.Text.Length < 15)
+                lbMessage.Text = lbMessage.Text + "S";
+        }
+
+        private void T_Click(object sender, EventArgs e)
+        {
+            if (lbMessage.Text.Length < 15)
+                lbMessage.Text = lbMessage.Text + "T";
+        }
+
+        private void U_Click(object sender, EventArgs e)
+        {
+            if (lbMessage.Text.Length < 15)
+                lbMessage.Text = lbMessage.Text + "U";
+        }
+
+        private void V_Click(object sender, EventArgs e)
+        {
+            if (lbMessage.Text.Length < 15)
+                lbMessage.Text = lbMessage.Text + "V";
+        }
+
+        private void W_Click(object sender, EventArgs e)
+        {
+            if (lbMessage.Text.Length < 15)
+                lbMessage.Text = lbMessage.Text + "W";
+        }
+
+        private void X_Click(object sender, EventArgs e)
+        {
+            if (lbMessage.Text.Length < 15)
+                lbMessage.Text = lbMessage.Text + "X";
+        }
+
+        private void Y_Click(object sender, EventArgs e)
+        {
+            if (lbMessage.Text.Length < 15)
+                lbMessage.Text = lbMessage.Text + "Y";
+        }
+
+        private void Z_Click(object sender, EventArgs e)
+        {
+            if (lbMessage.Text.Length < 15)
+                lbMessage.Text = lbMessage.Text + "Z";
+        }
+
+        private void bt_1_Click(object sender, EventArgs e)
+        {
+            if (lbMessage.Text.Length < 15)
+                lbMessage.Text = lbMessage.Text + "1";
+        }
+
+        private void bt_2_Click(object sender, EventArgs e)
+        {
+            if (lbMessage.Text.Length < 15)
+                lbMessage.Text = lbMessage.Text + "2";
+        }
+
+        private void bt_3_Click(object sender, EventArgs e)
+        {
+            if (lbMessage.Text.Length < 15)
+                lbMessage.Text = lbMessage.Text + "3";
+        }
+
+        private void bt_4_Click(object sender, EventArgs e)
+        {
+            if (lbMessage.Text.Length < 15)
+                lbMessage.Text = lbMessage.Text + "4";
+        }
+
+        private void bt_5_Click(object sender, EventArgs e)
+        {
+            if (lbMessage.Text.Length < 15)
+                lbMessage.Text = lbMessage.Text + "5";
+        }
+
+        private void bt_6_Click(object sender, EventArgs e)
+        {
+            if (lbMessage.Text.Length < 15)
+                lbMessage.Text = lbMessage.Text + "6";
+        }
+
+        private void bt_7_Click(object sender, EventArgs e)
+        {
+            if (lbMessage.Text.Length < 15)
+                lbMessage.Text = lbMessage.Text + "7";
+        }
+
+        private void bt_8_Click(object sender, EventArgs e)
+        {
+            if (lbMessage.Text.Length < 15)
+                lbMessage.Text = lbMessage.Text + "8";
+        }
+
+        private void bt_9_Click(object sender, EventArgs e)
+        {
+            if (lbMessage.Text.Length < 15)
+                lbMessage.Text = lbMessage.Text + "9";
+        }
+
+        private void bt_0_Click(object sender, EventArgs e)
+        {
+            if (lbMessage.Text.Length < 15)
+                lbMessage.Text = lbMessage.Text + "0";
+        }
+
+        private void Tiret_Click(object sender, EventArgs e)
+        {
+            if (lbMessage.Text.Length < 15)
+                lbMessage.Text = lbMessage.Text + "-";
+        }
+
+        private void Slash_Click(object sender, EventArgs e)
+        {
+            if (lbMessage.Text.Length < 15)
+                lbMessage.Text = lbMessage.Text + "/";
+        }
+
+        private void btEffacer_Click(object sender, EventArgs e)
+        {
+            if (lbMessage.Text.Length > 0)
+                lbMessage.Text = lbMessage.Text.Remove(lbMessage.Text.Length - 1); 
+        }
+
+        private void lbMessage_TextChanged(object sender, EventArgs e)
+        {
+            Search(lbMessage.Text, Etape);
+            lbCount.Text = DgvList.RowCount.ToString();
         }
     }
 }
