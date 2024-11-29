@@ -161,6 +161,25 @@ namespace WidraSoft.DA
             }
         }
 
+        public DataTable SearchBoxWithParentId(string filter, Int32 TablesId, Int32 ParentId)
+        {
+            String sql = "SELECT * FROM ENREGISTREMENTS WHERE NOM LIKE '%" + filter + "%' AND TABLESID=" + TablesId + " AND PARENTID=" + ParentId;
+            conn.ConnectionString = connString;
+            if (conn.State == ConnectionState.Closed)
+                conn.Open();
+            SqlCommand cmd = new SqlCommand(sql, conn);
+            try
+            {
+                SqlDataReader reader = cmd.ExecuteReader();
+                dt.Load(reader);
+                return dt;
+            }
+            catch
+            {
+                throw;
+            }
+        }
+
         public string GetName(Int32 Id)
         {
 

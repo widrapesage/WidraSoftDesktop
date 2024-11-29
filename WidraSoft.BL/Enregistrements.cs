@@ -101,6 +101,19 @@ namespace WidraSoft.BL
             }
         }
 
+        public DataTable SearchBoxWithParentId(string filter, Int32 TablesId, Int32 ParentId)
+        {
+            try
+            {
+                EnregistrementsDA enregistrements = new EnregistrementsDA();
+                return enregistrements.SearchBoxWithParentId(filter, TablesId, ParentId);
+            }
+            catch
+            {
+                throw;
+            }
+        }
+
         public string GetName(Int32 Id)
         {
             try

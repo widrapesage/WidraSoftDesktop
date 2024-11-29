@@ -85,7 +85,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;DgvList.ZOrder" xml:space="preserve">
-    <value>16</value>
+    <value>17</value>
   </data>
   <data name="lbTexte.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>None</value>
@@ -97,7 +97,7 @@
     <value>Corbel, 22pt, style=Bold</value>
   </data>
   <data name="lbTexte.Location" type="System.Drawing.Point, System.Drawing">
-    <value>12, 8</value>
+    <value>12, 7</value>
   </data>
   <data name="lbTexte.Size" type="System.Drawing.Size, System.Drawing">
     <value>44, 37</value>
@@ -118,7 +118,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;lbTexte.ZOrder" xml:space="preserve">
-    <value>15</value>
+    <value>16</value>
   </data>
   <data name="btValider.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>None</value>
@@ -130,7 +130,7 @@
     <value>Corbel, 15pt, style=Bold</value>
   </data>
   <data name="btValider.Location" type="System.Drawing.Point, System.Drawing">
-    <value>746, 101</value>
+    <value>746, 116</value>
   </data>
   <data name="btValider.Size" type="System.Drawing.Size, System.Drawing">
     <value>177, 61</value>
@@ -151,7 +151,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;btValider.ZOrder" xml:space="preserve">
-    <value>14</value>
+    <value>15</value>
   </data>
   <data name="btAnnuler.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>None</value>
@@ -163,7 +163,7 @@
     <value>Corbel, 15pt, style=Bold</value>
   </data>
   <data name="btAnnuler.Location" type="System.Drawing.Point, System.Drawing">
-    <value>746, 173</value>
+    <value>746, 184</value>
   </data>
   <data name="btAnnuler.Size" type="System.Drawing.Size, System.Drawing">
     <value>177, 61</value>
@@ -184,7 +184,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;btAnnuler.ZOrder" xml:space="preserve">
-    <value>13</value>
+    <value>14</value>
   </data>
   <data name="btRecherche.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>None</value>
@@ -196,7 +196,7 @@
     <value>Corbel, 15pt, style=Bold</value>
   </data>
   <data name="btRecherche.Location" type="System.Drawing.Point, System.Drawing">
-    <value>746, 245</value>
+    <value>746, 251</value>
   </data>
   <data name="btRecherche.Size" type="System.Drawing.Size, System.Drawing">
     <value>177, 61</value>
@@ -217,7 +217,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;btRecherche.ZOrder" xml:space="preserve">
-    <value>12</value>
+    <value>13</value>
   </data>
   <data name="btAjouter.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>None</value>
@@ -250,7 +250,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;btAjouter.ZOrder" xml:space="preserve">
-    <value>11</value>
+    <value>12</value>
   </data>
   <data name="Spain_flag.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>None</value>
@@ -280,7 +280,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;Spain_flag.ZOrder" xml:space="preserve">
-    <value>8</value>
+    <value>9</value>
   </data>
   <data name="England_flag.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>None</value>
@@ -310,7 +310,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;England_flag.ZOrder" xml:space="preserve">
-    <value>9</value>
+    <value>10</value>
   </data>
   <data name="France_flag.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>None</value>
@@ -340,7 +340,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;France_flag.ZOrder" xml:space="preserve">
-    <value>10</value>
+    <value>11</value>
   </data>
   <data name="btUp.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>None</value>
@@ -370,7 +370,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;btUp.ZOrder" xml:space="preserve">
-    <value>7</value>
+    <value>8</value>
   </data>
   <data name="btDown.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>None</value>
@@ -400,7 +400,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;btDown.ZOrder" xml:space="preserve">
-    <value>6</value>
+    <value>7</value>
   </data>
   <data name="btDoubleUp.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>None</value>
@@ -433,7 +433,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;btDoubleUp.ZOrder" xml:space="preserve">
-    <value>5</value>
+    <value>6</value>
   </data>
   <data name="btDoubleDown.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>None</value>
@@ -466,10 +466,544 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;btDoubleDown.ZOrder" xml:space="preserve">
-    <value>4</value>
+    <value>5</value>
   </data>
   <data name="panelClavier.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>None</value>
+  </data>
+  <data name="&gt;&gt;Space.Name" xml:space="preserve">
+    <value>Space</value>
+  </data>
+  <data name="&gt;&gt;Space.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Space.Parent" xml:space="preserve">
+    <value>panelClavier</value>
+  </data>
+  <data name="&gt;&gt;Space.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;btEffacer.Name" xml:space="preserve">
+    <value>btEffacer</value>
+  </data>
+  <data name="&gt;&gt;btEffacer.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btEffacer.Parent" xml:space="preserve">
+    <value>panelClavier</value>
+  </data>
+  <data name="&gt;&gt;btEffacer.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;Slash.Name" xml:space="preserve">
+    <value>Slash</value>
+  </data>
+  <data name="&gt;&gt;Slash.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Slash.Parent" xml:space="preserve">
+    <value>panelClavier</value>
+  </data>
+  <data name="&gt;&gt;Slash.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;Tiret.Name" xml:space="preserve">
+    <value>Tiret</value>
+  </data>
+  <data name="&gt;&gt;Tiret.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Tiret.Parent" xml:space="preserve">
+    <value>panelClavier</value>
+  </data>
+  <data name="&gt;&gt;Tiret.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;bt_0.Name" xml:space="preserve">
+    <value>bt_0</value>
+  </data>
+  <data name="&gt;&gt;bt_0.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;bt_0.Parent" xml:space="preserve">
+    <value>panelClavier</value>
+  </data>
+  <data name="&gt;&gt;bt_0.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="&gt;&gt;bt_9.Name" xml:space="preserve">
+    <value>bt_9</value>
+  </data>
+  <data name="&gt;&gt;bt_9.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;bt_9.Parent" xml:space="preserve">
+    <value>panelClavier</value>
+  </data>
+  <data name="&gt;&gt;bt_9.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="&gt;&gt;bt_8.Name" xml:space="preserve">
+    <value>bt_8</value>
+  </data>
+  <data name="&gt;&gt;bt_8.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;bt_8.Parent" xml:space="preserve">
+    <value>panelClavier</value>
+  </data>
+  <data name="&gt;&gt;bt_8.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="&gt;&gt;bt_7.Name" xml:space="preserve">
+    <value>bt_7</value>
+  </data>
+  <data name="&gt;&gt;bt_7.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;bt_7.Parent" xml:space="preserve">
+    <value>panelClavier</value>
+  </data>
+  <data name="&gt;&gt;bt_7.ZOrder" xml:space="preserve">
+    <value>7</value>
+  </data>
+  <data name="&gt;&gt;bt_6.Name" xml:space="preserve">
+    <value>bt_6</value>
+  </data>
+  <data name="&gt;&gt;bt_6.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;bt_6.Parent" xml:space="preserve">
+    <value>panelClavier</value>
+  </data>
+  <data name="&gt;&gt;bt_6.ZOrder" xml:space="preserve">
+    <value>8</value>
+  </data>
+  <data name="&gt;&gt;bt_5.Name" xml:space="preserve">
+    <value>bt_5</value>
+  </data>
+  <data name="&gt;&gt;bt_5.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;bt_5.Parent" xml:space="preserve">
+    <value>panelClavier</value>
+  </data>
+  <data name="&gt;&gt;bt_5.ZOrder" xml:space="preserve">
+    <value>9</value>
+  </data>
+  <data name="&gt;&gt;bt_4.Name" xml:space="preserve">
+    <value>bt_4</value>
+  </data>
+  <data name="&gt;&gt;bt_4.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;bt_4.Parent" xml:space="preserve">
+    <value>panelClavier</value>
+  </data>
+  <data name="&gt;&gt;bt_4.ZOrder" xml:space="preserve">
+    <value>10</value>
+  </data>
+  <data name="&gt;&gt;bt_3.Name" xml:space="preserve">
+    <value>bt_3</value>
+  </data>
+  <data name="&gt;&gt;bt_3.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;bt_3.Parent" xml:space="preserve">
+    <value>panelClavier</value>
+  </data>
+  <data name="&gt;&gt;bt_3.ZOrder" xml:space="preserve">
+    <value>11</value>
+  </data>
+  <data name="&gt;&gt;bt_2.Name" xml:space="preserve">
+    <value>bt_2</value>
+  </data>
+  <data name="&gt;&gt;bt_2.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;bt_2.Parent" xml:space="preserve">
+    <value>panelClavier</value>
+  </data>
+  <data name="&gt;&gt;bt_2.ZOrder" xml:space="preserve">
+    <value>12</value>
+  </data>
+  <data name="&gt;&gt;bt_1.Name" xml:space="preserve">
+    <value>bt_1</value>
+  </data>
+  <data name="&gt;&gt;bt_1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;bt_1.Parent" xml:space="preserve">
+    <value>panelClavier</value>
+  </data>
+  <data name="&gt;&gt;bt_1.ZOrder" xml:space="preserve">
+    <value>13</value>
+  </data>
+  <data name="&gt;&gt;Z.Name" xml:space="preserve">
+    <value>Z</value>
+  </data>
+  <data name="&gt;&gt;Z.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Z.Parent" xml:space="preserve">
+    <value>panelClavier</value>
+  </data>
+  <data name="&gt;&gt;Z.ZOrder" xml:space="preserve">
+    <value>14</value>
+  </data>
+  <data name="&gt;&gt;Y.Name" xml:space="preserve">
+    <value>Y</value>
+  </data>
+  <data name="&gt;&gt;Y.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Y.Parent" xml:space="preserve">
+    <value>panelClavier</value>
+  </data>
+  <data name="&gt;&gt;Y.ZOrder" xml:space="preserve">
+    <value>15</value>
+  </data>
+  <data name="&gt;&gt;X.Name" xml:space="preserve">
+    <value>X</value>
+  </data>
+  <data name="&gt;&gt;X.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;X.Parent" xml:space="preserve">
+    <value>panelClavier</value>
+  </data>
+  <data name="&gt;&gt;X.ZOrder" xml:space="preserve">
+    <value>16</value>
+  </data>
+  <data name="&gt;&gt;W.Name" xml:space="preserve">
+    <value>W</value>
+  </data>
+  <data name="&gt;&gt;W.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;W.Parent" xml:space="preserve">
+    <value>panelClavier</value>
+  </data>
+  <data name="&gt;&gt;W.ZOrder" xml:space="preserve">
+    <value>17</value>
+  </data>
+  <data name="&gt;&gt;V.Name" xml:space="preserve">
+    <value>V</value>
+  </data>
+  <data name="&gt;&gt;V.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;V.Parent" xml:space="preserve">
+    <value>panelClavier</value>
+  </data>
+  <data name="&gt;&gt;V.ZOrder" xml:space="preserve">
+    <value>18</value>
+  </data>
+  <data name="&gt;&gt;U.Name" xml:space="preserve">
+    <value>U</value>
+  </data>
+  <data name="&gt;&gt;U.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;U.Parent" xml:space="preserve">
+    <value>panelClavier</value>
+  </data>
+  <data name="&gt;&gt;U.ZOrder" xml:space="preserve">
+    <value>19</value>
+  </data>
+  <data name="&gt;&gt;T.Name" xml:space="preserve">
+    <value>T</value>
+  </data>
+  <data name="&gt;&gt;T.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;T.Parent" xml:space="preserve">
+    <value>panelClavier</value>
+  </data>
+  <data name="&gt;&gt;T.ZOrder" xml:space="preserve">
+    <value>20</value>
+  </data>
+  <data name="&gt;&gt;S.Name" xml:space="preserve">
+    <value>S</value>
+  </data>
+  <data name="&gt;&gt;S.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;S.Parent" xml:space="preserve">
+    <value>panelClavier</value>
+  </data>
+  <data name="&gt;&gt;S.ZOrder" xml:space="preserve">
+    <value>21</value>
+  </data>
+  <data name="&gt;&gt;R.Name" xml:space="preserve">
+    <value>R</value>
+  </data>
+  <data name="&gt;&gt;R.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;R.Parent" xml:space="preserve">
+    <value>panelClavier</value>
+  </data>
+  <data name="&gt;&gt;R.ZOrder" xml:space="preserve">
+    <value>22</value>
+  </data>
+  <data name="&gt;&gt;Q.Name" xml:space="preserve">
+    <value>Q</value>
+  </data>
+  <data name="&gt;&gt;Q.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Q.Parent" xml:space="preserve">
+    <value>panelClavier</value>
+  </data>
+  <data name="&gt;&gt;Q.ZOrder" xml:space="preserve">
+    <value>23</value>
+  </data>
+  <data name="&gt;&gt;P.Name" xml:space="preserve">
+    <value>P</value>
+  </data>
+  <data name="&gt;&gt;P.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;P.Parent" xml:space="preserve">
+    <value>panelClavier</value>
+  </data>
+  <data name="&gt;&gt;P.ZOrder" xml:space="preserve">
+    <value>24</value>
+  </data>
+  <data name="&gt;&gt;O.Name" xml:space="preserve">
+    <value>O</value>
+  </data>
+  <data name="&gt;&gt;O.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;O.Parent" xml:space="preserve">
+    <value>panelClavier</value>
+  </data>
+  <data name="&gt;&gt;O.ZOrder" xml:space="preserve">
+    <value>25</value>
+  </data>
+  <data name="&gt;&gt;N.Name" xml:space="preserve">
+    <value>N</value>
+  </data>
+  <data name="&gt;&gt;N.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;N.Parent" xml:space="preserve">
+    <value>panelClavier</value>
+  </data>
+  <data name="&gt;&gt;N.ZOrder" xml:space="preserve">
+    <value>26</value>
+  </data>
+  <data name="&gt;&gt;M.Name" xml:space="preserve">
+    <value>M</value>
+  </data>
+  <data name="&gt;&gt;M.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;M.Parent" xml:space="preserve">
+    <value>panelClavier</value>
+  </data>
+  <data name="&gt;&gt;M.ZOrder" xml:space="preserve">
+    <value>27</value>
+  </data>
+  <data name="&gt;&gt;L.Name" xml:space="preserve">
+    <value>L</value>
+  </data>
+  <data name="&gt;&gt;L.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;L.Parent" xml:space="preserve">
+    <value>panelClavier</value>
+  </data>
+  <data name="&gt;&gt;L.ZOrder" xml:space="preserve">
+    <value>28</value>
+  </data>
+  <data name="&gt;&gt;K.Name" xml:space="preserve">
+    <value>K</value>
+  </data>
+  <data name="&gt;&gt;K.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;K.Parent" xml:space="preserve">
+    <value>panelClavier</value>
+  </data>
+  <data name="&gt;&gt;K.ZOrder" xml:space="preserve">
+    <value>29</value>
+  </data>
+  <data name="&gt;&gt;J.Name" xml:space="preserve">
+    <value>J</value>
+  </data>
+  <data name="&gt;&gt;J.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;J.Parent" xml:space="preserve">
+    <value>panelClavier</value>
+  </data>
+  <data name="&gt;&gt;J.ZOrder" xml:space="preserve">
+    <value>30</value>
+  </data>
+  <data name="&gt;&gt;I.Name" xml:space="preserve">
+    <value>I</value>
+  </data>
+  <data name="&gt;&gt;I.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;I.Parent" xml:space="preserve">
+    <value>panelClavier</value>
+  </data>
+  <data name="&gt;&gt;I.ZOrder" xml:space="preserve">
+    <value>31</value>
+  </data>
+  <data name="&gt;&gt;G.Name" xml:space="preserve">
+    <value>G</value>
+  </data>
+  <data name="&gt;&gt;G.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;G.Parent" xml:space="preserve">
+    <value>panelClavier</value>
+  </data>
+  <data name="&gt;&gt;G.ZOrder" xml:space="preserve">
+    <value>32</value>
+  </data>
+  <data name="&gt;&gt;H.Name" xml:space="preserve">
+    <value>H</value>
+  </data>
+  <data name="&gt;&gt;H.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;H.Parent" xml:space="preserve">
+    <value>panelClavier</value>
+  </data>
+  <data name="&gt;&gt;H.ZOrder" xml:space="preserve">
+    <value>33</value>
+  </data>
+  <data name="&gt;&gt;F.Name" xml:space="preserve">
+    <value>F</value>
+  </data>
+  <data name="&gt;&gt;F.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;F.Parent" xml:space="preserve">
+    <value>panelClavier</value>
+  </data>
+  <data name="&gt;&gt;F.ZOrder" xml:space="preserve">
+    <value>34</value>
+  </data>
+  <data name="&gt;&gt;E.Name" xml:space="preserve">
+    <value>E</value>
+  </data>
+  <data name="&gt;&gt;E.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;E.Parent" xml:space="preserve">
+    <value>panelClavier</value>
+  </data>
+  <data name="&gt;&gt;E.ZOrder" xml:space="preserve">
+    <value>35</value>
+  </data>
+  <data name="&gt;&gt;D.Name" xml:space="preserve">
+    <value>D</value>
+  </data>
+  <data name="&gt;&gt;D.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;D.Parent" xml:space="preserve">
+    <value>panelClavier</value>
+  </data>
+  <data name="&gt;&gt;D.ZOrder" xml:space="preserve">
+    <value>36</value>
+  </data>
+  <data name="&gt;&gt;C.Name" xml:space="preserve">
+    <value>C</value>
+  </data>
+  <data name="&gt;&gt;C.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;C.Parent" xml:space="preserve">
+    <value>panelClavier</value>
+  </data>
+  <data name="&gt;&gt;C.ZOrder" xml:space="preserve">
+    <value>37</value>
+  </data>
+  <data name="&gt;&gt;A.Name" xml:space="preserve">
+    <value>A</value>
+  </data>
+  <data name="&gt;&gt;A.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;A.Parent" xml:space="preserve">
+    <value>panelClavier</value>
+  </data>
+  <data name="&gt;&gt;A.ZOrder" xml:space="preserve">
+    <value>38</value>
+  </data>
+  <data name="&gt;&gt;B.Name" xml:space="preserve">
+    <value>B</value>
+  </data>
+  <data name="&gt;&gt;B.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;B.Parent" xml:space="preserve">
+    <value>panelClavier</value>
+  </data>
+  <data name="&gt;&gt;B.ZOrder" xml:space="preserve">
+    <value>39</value>
+  </data>
+  <data name="panelClavier.Location" type="System.Drawing.Point, System.Drawing">
+    <value>13, 204</value>
+  </data>
+  <data name="panelClavier.Size" type="System.Drawing.Size, System.Drawing">
+    <value>645, 243</value>
+  </data>
+  <data name="panelClavier.TabIndex" type="System.Int32, mscorlib">
+    <value>130</value>
+  </data>
+  <data name="&gt;&gt;panelClavier.Name" xml:space="preserve">
+    <value>panelClavier</value>
+  </data>
+  <data name="&gt;&gt;panelClavier.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;panelClavier.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;panelClavier.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="Space.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>None</value>
+  </data>
+  <data name="Space.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>Flat</value>
+  </data>
+  <data name="Space.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Corbel, 20pt, style=Bold</value>
+  </data>
+  <data name="Space.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="Space.Location" type="System.Drawing.Point, System.Drawing">
+    <value>578, 70</value>
+  </data>
+  <data name="Space.Size" type="System.Drawing.Size, System.Drawing">
+    <value>57, 53</value>
+  </data>
+  <data name="Space.TabIndex" type="System.Int32, mscorlib">
+    <value>170</value>
+  </data>
+  <data name="&gt;&gt;Space.Name" xml:space="preserve">
+    <value>Space</value>
+  </data>
+  <data name="&gt;&gt;Space.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Space.Parent" xml:space="preserve">
+    <value>panelClavier</value>
+  </data>
+  <data name="&gt;&gt;Space.ZOrder" xml:space="preserve">
+    <value>0</value>
   </data>
   <data name="btEffacer.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>None</value>
@@ -484,7 +1018,7 @@
     <value>578, 13</value>
   </data>
   <data name="btEffacer.Size" type="System.Drawing.Size, System.Drawing">
-    <value>57, 110</value>
+    <value>57, 53</value>
   </data>
   <data name="btEffacer.TabIndex" type="System.Int32, mscorlib">
     <value>169</value>
@@ -502,7 +1036,7 @@
     <value>panelClavier</value>
   </data>
   <data name="&gt;&gt;btEffacer.ZOrder" xml:space="preserve">
-    <value>0</value>
+    <value>1</value>
   </data>
   <data name="Slash.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>None</value>
@@ -535,7 +1069,7 @@
     <value>panelClavier</value>
   </data>
   <data name="&gt;&gt;Slash.ZOrder" xml:space="preserve">
-    <value>1</value>
+    <value>2</value>
   </data>
   <data name="Tiret.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>None</value>
@@ -568,7 +1102,7 @@
     <value>panelClavier</value>
   </data>
   <data name="&gt;&gt;Tiret.ZOrder" xml:space="preserve">
-    <value>2</value>
+    <value>3</value>
   </data>
   <data name="bt_0.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>None</value>
@@ -601,7 +1135,7 @@
     <value>panelClavier</value>
   </data>
   <data name="&gt;&gt;bt_0.ZOrder" xml:space="preserve">
-    <value>3</value>
+    <value>4</value>
   </data>
   <data name="bt_9.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>None</value>
@@ -634,7 +1168,7 @@
     <value>panelClavier</value>
   </data>
   <data name="&gt;&gt;bt_9.ZOrder" xml:space="preserve">
-    <value>4</value>
+    <value>5</value>
   </data>
   <data name="bt_8.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>None</value>
@@ -667,7 +1201,7 @@
     <value>panelClavier</value>
   </data>
   <data name="&gt;&gt;bt_8.ZOrder" xml:space="preserve">
-    <value>5</value>
+    <value>6</value>
   </data>
   <data name="bt_7.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>None</value>
@@ -700,7 +1234,7 @@
     <value>panelClavier</value>
   </data>
   <data name="&gt;&gt;bt_7.ZOrder" xml:space="preserve">
-    <value>6</value>
+    <value>7</value>
   </data>
   <data name="bt_6.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>None</value>
@@ -733,7 +1267,7 @@
     <value>panelClavier</value>
   </data>
   <data name="&gt;&gt;bt_6.ZOrder" xml:space="preserve">
-    <value>7</value>
+    <value>8</value>
   </data>
   <data name="bt_5.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>None</value>
@@ -766,7 +1300,7 @@
     <value>panelClavier</value>
   </data>
   <data name="&gt;&gt;bt_5.ZOrder" xml:space="preserve">
-    <value>8</value>
+    <value>9</value>
   </data>
   <data name="bt_4.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>None</value>
@@ -799,7 +1333,7 @@
     <value>panelClavier</value>
   </data>
   <data name="&gt;&gt;bt_4.ZOrder" xml:space="preserve">
-    <value>9</value>
+    <value>10</value>
   </data>
   <data name="bt_3.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>None</value>
@@ -832,7 +1366,7 @@
     <value>panelClavier</value>
   </data>
   <data name="&gt;&gt;bt_3.ZOrder" xml:space="preserve">
-    <value>10</value>
+    <value>11</value>
   </data>
   <data name="bt_2.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>None</value>
@@ -865,7 +1399,7 @@
     <value>panelClavier</value>
   </data>
   <data name="&gt;&gt;bt_2.ZOrder" xml:space="preserve">
-    <value>11</value>
+    <value>12</value>
   </data>
   <data name="bt_1.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>None</value>
@@ -898,7 +1432,7 @@
     <value>panelClavier</value>
   </data>
   <data name="&gt;&gt;bt_1.ZOrder" xml:space="preserve">
-    <value>12</value>
+    <value>13</value>
   </data>
   <data name="Z.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>None</value>
@@ -931,7 +1465,7 @@
     <value>panelClavier</value>
   </data>
   <data name="&gt;&gt;Z.ZOrder" xml:space="preserve">
-    <value>13</value>
+    <value>14</value>
   </data>
   <data name="Y.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>None</value>
@@ -964,7 +1498,7 @@
     <value>panelClavier</value>
   </data>
   <data name="&gt;&gt;Y.ZOrder" xml:space="preserve">
-    <value>14</value>
+    <value>15</value>
   </data>
   <data name="X.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>None</value>
@@ -997,7 +1531,7 @@
     <value>panelClavier</value>
   </data>
   <data name="&gt;&gt;X.ZOrder" xml:space="preserve">
-    <value>15</value>
+    <value>16</value>
   </data>
   <data name="W.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>None</value>
@@ -1030,7 +1564,7 @@
     <value>panelClavier</value>
   </data>
   <data name="&gt;&gt;W.ZOrder" xml:space="preserve">
-    <value>16</value>
+    <value>17</value>
   </data>
   <data name="V.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>None</value>
@@ -1063,7 +1597,7 @@
     <value>panelClavier</value>
   </data>
   <data name="&gt;&gt;V.ZOrder" xml:space="preserve">
-    <value>17</value>
+    <value>18</value>
   </data>
   <data name="U.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>None</value>
@@ -1096,7 +1630,7 @@
     <value>panelClavier</value>
   </data>
   <data name="&gt;&gt;U.ZOrder" xml:space="preserve">
-    <value>18</value>
+    <value>19</value>
   </data>
   <data name="T.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>None</value>
@@ -1129,7 +1663,7 @@
     <value>panelClavier</value>
   </data>
   <data name="&gt;&gt;T.ZOrder" xml:space="preserve">
-    <value>19</value>
+    <value>20</value>
   </data>
   <data name="S.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>None</value>
@@ -1162,7 +1696,7 @@
     <value>panelClavier</value>
   </data>
   <data name="&gt;&gt;S.ZOrder" xml:space="preserve">
-    <value>20</value>
+    <value>21</value>
   </data>
   <data name="R.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>None</value>
@@ -1195,7 +1729,7 @@
     <value>panelClavier</value>
   </data>
   <data name="&gt;&gt;R.ZOrder" xml:space="preserve">
-    <value>21</value>
+    <value>22</value>
   </data>
   <data name="Q.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>None</value>
@@ -1228,7 +1762,7 @@
     <value>panelClavier</value>
   </data>
   <data name="&gt;&gt;Q.ZOrder" xml:space="preserve">
-    <value>22</value>
+    <value>23</value>
   </data>
   <data name="P.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>None</value>
@@ -1261,7 +1795,7 @@
     <value>panelClavier</value>
   </data>
   <data name="&gt;&gt;P.ZOrder" xml:space="preserve">
-    <value>23</value>
+    <value>24</value>
   </data>
   <data name="O.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>None</value>
@@ -1294,7 +1828,7 @@
     <value>panelClavier</value>
   </data>
   <data name="&gt;&gt;O.ZOrder" xml:space="preserve">
-    <value>24</value>
+    <value>25</value>
   </data>
   <data name="N.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>None</value>
@@ -1327,7 +1861,7 @@
     <value>panelClavier</value>
   </data>
   <data name="&gt;&gt;N.ZOrder" xml:space="preserve">
-    <value>25</value>
+    <value>26</value>
   </data>
   <data name="M.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>None</value>
@@ -1360,7 +1894,7 @@
     <value>panelClavier</value>
   </data>
   <data name="&gt;&gt;M.ZOrder" xml:space="preserve">
-    <value>26</value>
+    <value>27</value>
   </data>
   <data name="L.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>None</value>
@@ -1393,7 +1927,7 @@
     <value>panelClavier</value>
   </data>
   <data name="&gt;&gt;L.ZOrder" xml:space="preserve">
-    <value>27</value>
+    <value>28</value>
   </data>
   <data name="K.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>None</value>
@@ -1426,7 +1960,7 @@
     <value>panelClavier</value>
   </data>
   <data name="&gt;&gt;K.ZOrder" xml:space="preserve">
-    <value>28</value>
+    <value>29</value>
   </data>
   <data name="J.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>None</value>
@@ -1459,7 +1993,7 @@
     <value>panelClavier</value>
   </data>
   <data name="&gt;&gt;J.ZOrder" xml:space="preserve">
-    <value>29</value>
+    <value>30</value>
   </data>
   <data name="I.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>None</value>
@@ -1492,7 +2026,7 @@
     <value>panelClavier</value>
   </data>
   <data name="&gt;&gt;I.ZOrder" xml:space="preserve">
-    <value>30</value>
+    <value>31</value>
   </data>
   <data name="G.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>None</value>
@@ -1525,7 +2059,7 @@
     <value>panelClavier</value>
   </data>
   <data name="&gt;&gt;G.ZOrder" xml:space="preserve">
-    <value>31</value>
+    <value>32</value>
   </data>
   <data name="H.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>None</value>
@@ -1558,7 +2092,7 @@
     <value>panelClavier</value>
   </data>
   <data name="&gt;&gt;H.ZOrder" xml:space="preserve">
-    <value>32</value>
+    <value>33</value>
   </data>
   <data name="F.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>None</value>
@@ -1591,7 +2125,7 @@
     <value>panelClavier</value>
   </data>
   <data name="&gt;&gt;F.ZOrder" xml:space="preserve">
-    <value>33</value>
+    <value>34</value>
   </data>
   <data name="E.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>None</value>
@@ -1624,7 +2158,7 @@
     <value>panelClavier</value>
   </data>
   <data name="&gt;&gt;E.ZOrder" xml:space="preserve">
-    <value>34</value>
+    <value>35</value>
   </data>
   <data name="D.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>None</value>
@@ -1657,7 +2191,7 @@
     <value>panelClavier</value>
   </data>
   <data name="&gt;&gt;D.ZOrder" xml:space="preserve">
-    <value>35</value>
+    <value>36</value>
   </data>
   <data name="C.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>None</value>
@@ -1690,7 +2224,7 @@
     <value>panelClavier</value>
   </data>
   <data name="&gt;&gt;C.ZOrder" xml:space="preserve">
-    <value>36</value>
+    <value>37</value>
   </data>
   <data name="A.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>None</value>
@@ -1723,7 +2257,7 @@
     <value>panelClavier</value>
   </data>
   <data name="&gt;&gt;A.ZOrder" xml:space="preserve">
-    <value>37</value>
+    <value>38</value>
   </data>
   <data name="B.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>None</value>
@@ -1756,28 +2290,7 @@
     <value>panelClavier</value>
   </data>
   <data name="&gt;&gt;B.ZOrder" xml:space="preserve">
-    <value>38</value>
-  </data>
-  <data name="panelClavier.Location" type="System.Drawing.Point, System.Drawing">
-    <value>13, 204</value>
-  </data>
-  <data name="panelClavier.Size" type="System.Drawing.Size, System.Drawing">
-    <value>645, 243</value>
-  </data>
-  <data name="panelClavier.TabIndex" type="System.Int32, mscorlib">
-    <value>130</value>
-  </data>
-  <data name="&gt;&gt;panelClavier.Name" xml:space="preserve">
-    <value>panelClavier</value>
-  </data>
-  <data name="&gt;&gt;panelClavier.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Panel, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;panelClavier.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;panelClavier.ZOrder" xml:space="preserve">
-    <value>3</value>
+    <value>39</value>
   </data>
   <data name="lbMessage.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>None</value>
@@ -1789,7 +2302,7 @@
     <value>Corbel, 18pt, style=Bold</value>
   </data>
   <data name="lbMessage.Location" type="System.Drawing.Point, System.Drawing">
-    <value>12, 54</value>
+    <value>12, 52</value>
   </data>
   <data name="lbMessage.Size" type="System.Drawing.Size, System.Drawing">
     <value>34, 29</value>
@@ -1810,7 +2323,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;lbMessage.ZOrder" xml:space="preserve">
-    <value>2</value>
+    <value>3</value>
   </data>
   <data name="btAnnulerRecherche.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>None</value>
@@ -1822,7 +2335,7 @@
     <value>Corbel, 15pt, style=Bold</value>
   </data>
   <data name="btAnnulerRecherche.Location" type="System.Drawing.Point, System.Drawing">
-    <value>746, 316</value>
+    <value>746, 319</value>
   </data>
   <data name="btAnnulerRecherche.Size" type="System.Drawing.Size, System.Drawing">
     <value>177, 61</value>
@@ -1843,7 +2356,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;btAnnulerRecherche.ZOrder" xml:space="preserve">
-    <value>1</value>
+    <value>2</value>
   </data>
   <data name="lbCount.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>None</value>
@@ -1852,16 +2365,16 @@
     <value>True</value>
   </data>
   <data name="lbCount.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Corbel, 20pt, style=Bold</value>
+    <value>Corbel, 18pt, style=Bold</value>
   </data>
   <data name="lbCount.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
   <data name="lbCount.Location" type="System.Drawing.Point, System.Drawing">
-    <value>624, 54</value>
+    <value>624, 52</value>
   </data>
   <data name="lbCount.Size" type="System.Drawing.Size, System.Drawing">
-    <value>39, 33</value>
+    <value>34, 29</value>
   </data>
   <data name="lbCount.TabIndex" type="System.Int32, mscorlib">
     <value>133</value>
@@ -1882,6 +2395,42 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;lbCount.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="btIgnorer.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>None</value>
+  </data>
+  <data name="btIgnorer.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>Flat</value>
+  </data>
+  <data name="btIgnorer.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Corbel, 15pt, style=Bold</value>
+  </data>
+  <data name="btIgnorer.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="btIgnorer.Location" type="System.Drawing.Point, System.Drawing">
+    <value>746, 49</value>
+  </data>
+  <data name="btIgnorer.Size" type="System.Drawing.Size, System.Drawing">
+    <value>177, 61</value>
+  </data>
+  <data name="btIgnorer.TabIndex" type="System.Int32, mscorlib">
+    <value>134</value>
+  </data>
+  <data name="btIgnorer.Text" xml:space="preserve">
+    <value>IGNORER</value>
+  </data>
+  <data name="&gt;&gt;btIgnorer.Name" xml:space="preserve">
+    <value>btIgnorer</value>
+  </data>
+  <data name="&gt;&gt;btIgnorer.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btIgnorer.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;btIgnorer.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">

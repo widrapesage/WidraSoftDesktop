@@ -29,9 +29,10 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Borne_PremierePesee));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
             this.DgvList = new System.Windows.Forms.DataGridView();
             this.lbTexte = new System.Windows.Forms.Label();
             this.btValider = new System.Windows.Forms.Button();
@@ -46,6 +47,7 @@
             this.btDoubleUp = new System.Windows.Forms.Button();
             this.btDoubleDown = new System.Windows.Forms.Button();
             this.panelClavier = new System.Windows.Forms.Panel();
+            this.Space = new System.Windows.Forms.Button();
             this.btEffacer = new System.Windows.Forms.Button();
             this.Slash = new System.Windows.Forms.Button();
             this.Tiret = new System.Windows.Forms.Button();
@@ -88,6 +90,7 @@
             this.lbMessage = new System.Windows.Forms.Label();
             this.btAnnulerRecherche = new System.Windows.Forms.Button();
             this.lbCount = new System.Windows.Forms.Label();
+            this.btIgnorer = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.DgvList)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Spain_flag)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.England_flag)).BeginInit();
@@ -103,35 +106,37 @@
             this.DgvList.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(62)))), ((int)(((byte)(60)))));
             this.DgvList.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.DgvList.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.Sunken;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(86)))), ((int)(((byte)(77)))));
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Corbel", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(190)))), ((int)(((byte)(117)))));
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.DgvList.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(86)))), ((int)(((byte)(77)))));
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Corbel", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(190)))), ((int)(((byte)(117)))));
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.DgvList.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
             this.DgvList.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.DgvList.Cursor = System.Windows.Forms.Cursors.Hand;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(62)))), ((int)(((byte)(60)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Calibri", 27F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.Padding = new System.Windows.Forms.Padding(0, 2, 0, 2);
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(112)))), ((int)(((byte)(228)))), ((int)(((byte)(132)))));
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.DgvList.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(62)))), ((int)(((byte)(60)))));
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Calibri", 27F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle6.Padding = new System.Windows.Forms.Padding(0, 2, 0, 2);
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(112)))), ((int)(((byte)(228)))), ((int)(((byte)(132)))));
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.DgvList.DefaultCellStyle = dataGridViewCellStyle6;
             this.DgvList.Name = "DgvList";
             this.DgvList.ReadOnly = true;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.Honeydew;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Corbel", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.MediumSeaGreen;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.DgvList.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle7.BackColor = System.Drawing.Color.Honeydew;
+            dataGridViewCellStyle7.Font = new System.Drawing.Font("Corbel", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            dataGridViewCellStyle7.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.Color.MediumSeaGreen;
+            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.DgvList.RowHeadersDefaultCellStyle = dataGridViewCellStyle7;
+            dataGridViewCellStyle8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(62)))), ((int)(((byte)(60)))));
+            this.DgvList.RowsDefaultCellStyle = dataGridViewCellStyle8;
             this.DgvList.RowTemplate.Height = 70;
             // 
             // lbTexte
@@ -270,6 +275,7 @@
             // 
             resources.ApplyResources(this.panelClavier, "panelClavier");
             this.panelClavier.BackColor = System.Drawing.Color.Transparent;
+            this.panelClavier.Controls.Add(this.Space);
             this.panelClavier.Controls.Add(this.btEffacer);
             this.panelClavier.Controls.Add(this.Slash);
             this.panelClavier.Controls.Add(this.Tiret);
@@ -310,6 +316,18 @@
             this.panelClavier.Controls.Add(this.A);
             this.panelClavier.Controls.Add(this.B);
             this.panelClavier.Name = "panelClavier";
+            // 
+            // Space
+            // 
+            resources.ApplyResources(this.Space, "Space");
+            this.Space.BackColor = System.Drawing.Color.Black;
+            this.Space.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.Space.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(112)))), ((int)(((byte)(228)))), ((int)(((byte)(132)))));
+            this.Space.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(86)))), ((int)(((byte)(81)))));
+            this.Space.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(112)))), ((int)(((byte)(228)))), ((int)(((byte)(132)))));
+            this.Space.Name = "Space";
+            this.Space.UseVisualStyleBackColor = false;
+            this.Space.Click += new System.EventHandler(this.Space_Click);
             // 
             // btEffacer
             // 
@@ -785,6 +803,7 @@
             this.lbMessage.ForeColor = System.Drawing.Color.White;
             this.lbMessage.Name = "lbMessage";
             this.lbMessage.TextChanged += new System.EventHandler(this.lbMessage_TextChanged);
+            this.lbMessage.Click += new System.EventHandler(this.lbMessage_Click);
             // 
             // btAnnulerRecherche
             // 
@@ -796,6 +815,7 @@
             this.btAnnulerRecherche.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(112)))), ((int)(((byte)(228)))), ((int)(((byte)(132)))));
             this.btAnnulerRecherche.Name = "btAnnulerRecherche";
             this.btAnnulerRecherche.UseVisualStyleBackColor = false;
+            this.btAnnulerRecherche.Click += new System.EventHandler(this.btAnnulerRecherche_Click);
             // 
             // lbCount
             // 
@@ -803,11 +823,23 @@
             this.lbCount.ForeColor = System.Drawing.Color.White;
             this.lbCount.Name = "lbCount";
             // 
+            // btIgnorer
+            // 
+            resources.ApplyResources(this.btIgnorer, "btIgnorer");
+            this.btIgnorer.BackColor = System.Drawing.Color.Black;
+            this.btIgnorer.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btIgnorer.FlatAppearance.BorderColor = System.Drawing.Color.Tomato;
+            this.btIgnorer.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(86)))), ((int)(((byte)(81)))));
+            this.btIgnorer.ForeColor = System.Drawing.Color.Tomato;
+            this.btIgnorer.Name = "btIgnorer";
+            this.btIgnorer.UseVisualStyleBackColor = false;
+            // 
             // Borne_PremierePesee
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(62)))), ((int)(((byte)(60)))));
+            this.Controls.Add(this.btIgnorer);
             this.Controls.Add(this.lbCount);
             this.Controls.Add(this.btAnnulerRecherche);
             this.Controls.Add(this.lbMessage);
@@ -895,5 +927,7 @@
         private System.Windows.Forms.Label lbMessage;
         private System.Windows.Forms.Button btAnnulerRecherche;
         private System.Windows.Forms.Label lbCount;
+        private System.Windows.Forms.Button Space;
+        private System.Windows.Forms.Button btIgnorer;
     }
 }

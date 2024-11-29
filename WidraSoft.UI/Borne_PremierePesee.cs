@@ -132,7 +132,7 @@ namespace WidraSoft.UI
 
         private void Borne_PremierePesee_Load(object sender, EventArgs e)
         {
-            this.CenterToScreen();
+             this.CenterToScreen();
 
             if (vg_Lang == "fr")
             {
@@ -241,6 +241,7 @@ namespace WidraSoft.UI
             btRecherche.Text = Language_Manager.Localize("AFFICHER CLAVIER", vg_Lang);
             btAjouter.Visible = false;
             btAnnulerRecherche.Visible = false;
+            btIgnorer.Visible = false;
         }
 
         private void Gestion_Etapes()
@@ -261,9 +262,7 @@ namespace WidraSoft.UI
                 {   Pont pont = new Pont();
                     WeighingSettingsId = pont.GetWeighingSettingsId(vg_PontId);
                     Etape = "Camion";
-                }
-
-                
+                }                
             }
            
             if (Etape == "Camion")
@@ -279,6 +278,10 @@ namespace WidraSoft.UI
                         dt = camion.List("1=1");
                         DgvList.DataSource = dt;
                         Bind_Camions();
+                        if (Camion_Obl > 0)
+                            btIgnorer.Visible = false;
+                        else
+                            btIgnorer.Visible = true;
                     }
                     else
                     {
@@ -307,6 +310,10 @@ namespace WidraSoft.UI
                     dt = firme.List("1=1");
                     DgvList.DataSource = dt;
                     Bind_Firmes();
+                    if (Firme_Obl > 0)
+                        btIgnorer.Visible = false;
+                    else
+                        btIgnorer.Visible = true;
                 }
                 else
                 {
@@ -326,6 +333,10 @@ namespace WidraSoft.UI
                     dt = chauffeur.List("1=1");
                     DgvList.DataSource = dt;
                     Bind_Chauffeurs();
+                    if (Chauffeur_Obl > 0)
+                        btIgnorer.Visible = false;
+                    else
+                        btIgnorer.Visible = true;
                 }
                 else
                 {
@@ -345,6 +356,10 @@ namespace WidraSoft.UI
                     dt = transporteur.List("1=1");
                     DgvList.DataSource = dt;
                     Bind_Transporteurs();
+                    if (Transporteur_Obl > 0)
+                        btIgnorer.Visible = false;
+                    else
+                        btIgnorer.Visible = true;
                 }
                 else
                 {
@@ -364,6 +379,10 @@ namespace WidraSoft.UI
                     dt = produit.List("1=1");
                     DgvList.DataSource = dt;
                     Bind_Produits();
+                    if (Produit_Obl > 0)
+                        btIgnorer.Visible = false;
+                    else
+                        btIgnorer.Visible = true;
                 }
                 else
                 {
@@ -383,6 +402,10 @@ namespace WidraSoft.UI
                     dt = client.List("1=1");
                     DgvList.DataSource = dt;
                     Bind_Clients();
+                    if (Client_Obl > 0)
+                        btIgnorer.Visible = false;
+                    else
+                        btIgnorer.Visible = true;
                 }
                 else
                 {
@@ -406,6 +429,10 @@ namespace WidraSoft.UI
                     dt = enregistrements.FindByTableId(Table1Id);
                     DgvList.DataSource = dt;
                     Bind_Enregistrements();
+                    if (Table1_Obl > 0)
+                        btIgnorer.Visible = false;
+                    else
+                        btIgnorer.Visible = true;
                 }
                 else
                 {
@@ -428,10 +455,8 @@ namespace WidraSoft.UI
                     if (tables.IsTableRelated(Table2Id) && tables.GetParentTableId(Table2Id) == Tables1Id)
                     {                        
                         lbTexte.Text = "Choisir " + table_name + " De " + Enregistrement1;
-                        Enregistrements enregistrements = new Enregistrements();
-                       
+                        Enregistrements enregistrements = new Enregistrements();                       
                         dt = enregistrements.FindByTableIdAndParentId(Table2Id, Enregistrement1Id);
-
                     }
                     else
                     {
@@ -441,6 +466,10 @@ namespace WidraSoft.UI
                     }                    
                     DgvList.DataSource = dt;
                     Bind_Enregistrements();
+                    if (Table2_Obl > 0)
+                        btIgnorer.Visible = false;
+                    else
+                        btIgnorer.Visible = true;
                 }
                 else
                 {
@@ -464,7 +493,6 @@ namespace WidraSoft.UI
                     {
                         lbTexte.Text = "Choisir " + table_name + " De " + Enregistrement2;
                         Enregistrements enregistrements = new Enregistrements();
-
                         dt = enregistrements.FindByTableIdAndParentId(Table3Id, Enregistrement2Id);
 
                     }
@@ -476,6 +504,10 @@ namespace WidraSoft.UI
                     }
                     DgvList.DataSource = dt;
                     Bind_Enregistrements();
+                    if (Table3_Obl > 0)
+                        btIgnorer.Visible = false;
+                    else
+                        btIgnorer.Visible = true;
                 }
                 else
                 {
@@ -499,7 +531,6 @@ namespace WidraSoft.UI
                     {
                         lbTexte.Text = "Choisir " + table_name + " De " + Enregistrement3;
                         Enregistrements enregistrements = new Enregistrements();
-
                         dt = enregistrements.FindByTableIdAndParentId(Table4Id, Enregistrement3Id);
 
                     }
@@ -511,6 +542,10 @@ namespace WidraSoft.UI
                     }
                     DgvList.DataSource = dt;
                     Bind_Enregistrements();
+                    if (Table4_Obl > 0)
+                        btIgnorer.Visible = false;
+                    else
+                        btIgnorer.Visible = true;
                 }
                 else
                 {
@@ -534,9 +569,7 @@ namespace WidraSoft.UI
                     {
                         lbTexte.Text = "Choisir " + table_name + " De " + Enregistrement4;
                         Enregistrements enregistrements = new Enregistrements();
-
                         dt = enregistrements.FindByTableIdAndParentId(Table5Id, Enregistrement4Id);
-
                     }
                     else
                     {
@@ -546,6 +579,10 @@ namespace WidraSoft.UI
                     }
                     DgvList.DataSource = dt;
                     Bind_Enregistrements();
+                    if (Table5_Obl > 0)
+                        btIgnorer.Visible = false;
+                    else
+                        btIgnorer.Visible = true;
                 }
                 else
                 {
@@ -569,9 +606,7 @@ namespace WidraSoft.UI
                     {
                         lbTexte.Text = "Choisir " + table_name + " De " + Enregistrement5;
                         Enregistrements enregistrements = new Enregistrements();
-
                         dt = enregistrements.FindByTableIdAndParentId(Table6Id, Enregistrement5Id);
-
                     }
                     else
                     {
@@ -581,6 +616,10 @@ namespace WidraSoft.UI
                     }
                     DgvList.DataSource = dt;
                     Bind_Enregistrements();
+                    if (Table6_Obl > 0)
+                        btIgnorer.Visible = false;
+                    else
+                        btIgnorer.Visible = true;
                 }
                 else
                 {
@@ -604,9 +643,7 @@ namespace WidraSoft.UI
                     {
                         lbTexte.Text = "Choisir " + table_name + " De " + Enregistrement6;
                         Enregistrements enregistrements = new Enregistrements();
-
                         dt = enregistrements.FindByTableIdAndParentId(Table7Id, Enregistrement6Id);
-
                     }
                     else
                     {
@@ -616,6 +653,10 @@ namespace WidraSoft.UI
                     }
                     DgvList.DataSource = dt;
                     Bind_Enregistrements();
+                    if (Table7_Obl > 0)
+                        btIgnorer.Visible = false;
+                    else
+                        btIgnorer.Visible = true;
                 }
                 else
                 {
@@ -652,6 +693,8 @@ namespace WidraSoft.UI
                 btDoubleDown.Visible = false;
                 btDoubleUp.Visible = false;
             }
+            if (btIgnorer.Visible)
+                btIgnorer.Focus();
 
         }
 
@@ -940,8 +983,7 @@ namespace WidraSoft.UI
                 Gestion_Etapes();
                 return;
             }
-
-            
+           
             if (Etape == "Camion")
             {
                 CamionId = Common_functions.GetDatagridViewSelectedId(DgvList);
@@ -957,8 +999,7 @@ namespace WidraSoft.UI
                     Etape = "Firme";
                     Gestion_Etapes();
                     return;
-                }
-                
+                }               
             }
 
             if (Etape == "Firme")
@@ -1201,7 +1242,7 @@ namespace WidraSoft.UI
             {
                 Camion camion = new Camion();
                 DataTable dt = new DataTable();
-                dt = camion.SearchBox(text);
+                dt = camion.SearchBox_Terminal(text);
                 DgvList.DataSource = dt;
             }
 
@@ -1242,6 +1283,285 @@ namespace WidraSoft.UI
                 Client client = new Client();
                 DataTable dt = new DataTable();
                 dt = client.SearchBox(text);
+                DgvList.DataSource = dt;
+            }
+
+            if (Etape == "Table1")
+            {
+                Enregistrements enregistrements = new Enregistrements();
+                DataTable dt = new DataTable();
+                dt = enregistrements.SearchBox(text, Table1Id);
+                DgvList.DataSource = dt;
+            }
+
+            if (Etape == "Table2")
+            {
+                Tables tables = new Tables();
+                DataTable dt = new DataTable();
+                if (tables.IsTableRelated(Table2Id) && tables.GetParentTableId(Table2Id) == Table1Id)
+                {
+                    Enregistrements enregistrements = new Enregistrements();
+                    dt = enregistrements.SearchBoxWithParentId(text, Table2Id, Enregistrement1Id);
+                }
+                else
+                {
+                    Enregistrements enregistrements = new Enregistrements();
+                    dt = enregistrements.SearchBox(text, Table2Id);
+                }
+                DgvList.DataSource = dt;
+            }
+
+            if (Etape == "Table3")
+            {
+                Tables tables = new Tables();
+                DataTable dt = new DataTable();
+                if (tables.IsTableRelated(Table3Id) && tables.GetParentTableId(Table3Id) == Table2Id)
+                {
+                    Enregistrements enregistrements = new Enregistrements();
+                    dt = enregistrements.SearchBoxWithParentId(text, Table3Id, Enregistrement2Id);
+                }
+                else
+                {
+                    Enregistrements enregistrements = new Enregistrements();
+                    dt = enregistrements.SearchBox(text, Table3Id);
+                }
+                DgvList.DataSource = dt;
+            }
+
+            if (Etape == "Table4")
+            {
+                Tables tables = new Tables();
+                DataTable dt = new DataTable();
+                if (tables.IsTableRelated(Table4Id) && tables.GetParentTableId(Table4Id) == Table3Id)
+                {
+                    Enregistrements enregistrements = new Enregistrements();
+                    dt = enregistrements.SearchBoxWithParentId(text, Table4Id, Enregistrement3Id);
+                }
+                else
+                {
+                    Enregistrements enregistrements = new Enregistrements();
+                    dt = enregistrements.SearchBox(text, Table4Id);
+                }
+                DgvList.DataSource = dt;
+            }
+
+            if (Etape == "Table5")
+            {
+                Tables tables = new Tables();
+                DataTable dt = new DataTable();
+                if (tables.IsTableRelated(Table5Id) && tables.GetParentTableId(Table5Id) == Table4Id)
+                {
+                    Enregistrements enregistrements = new Enregistrements();
+                    dt = enregistrements.SearchBoxWithParentId(text, Table5Id, Enregistrement4Id);
+                }
+                else
+                {
+                    Enregistrements enregistrements = new Enregistrements();
+                    dt = enregistrements.SearchBox(text, Table5Id);
+                }
+                DgvList.DataSource = dt;
+            }
+
+            if (Etape == "Table6")
+            {
+                Tables tables = new Tables();
+                DataTable dt = new DataTable();
+                if (tables.IsTableRelated(Table6Id) && tables.GetParentTableId(Table6Id) == Table5Id)
+                {
+                    Enregistrements enregistrements = new Enregistrements();
+                    dt = enregistrements.SearchBoxWithParentId(text, Table6Id, Enregistrement5Id);
+                }
+                else
+                {
+                    Enregistrements enregistrements = new Enregistrements();
+                    dt = enregistrements.SearchBox(text, Table6Id);
+                }
+                DgvList.DataSource = dt;
+            }
+
+            if (Etape == "Table7")
+            {
+                Tables tables = new Tables();
+                DataTable dt = new DataTable();
+                if (tables.IsTableRelated(Table7Id) && tables.GetParentTableId(Table7Id) == Table6Id)
+                {
+                    Enregistrements enregistrements = new Enregistrements();
+                    dt = enregistrements.SearchBoxWithParentId(text, Table7Id, Enregistrement6Id);
+                }
+                else
+                {
+                    Enregistrements enregistrements = new Enregistrements();
+                    dt = enregistrements.SearchBox(text, Table7Id);
+                }
+                DgvList.DataSource = dt;
+            }
+        }
+
+        private void Cancel_Search(String text, string Etape)
+        {
+            if (Etape == "Parametre")
+            {
+                WeighingSettings weighingSettings = new WeighingSettings();
+                DataTable dt = new DataTable();
+                dt = weighingSettings.List("1=1");
+                DgvList.DataSource = dt;
+            }
+
+            if (Etape == "Camion")
+            {
+                Camion camion = new Camion();
+                DataTable dt = new DataTable();
+                dt = camion.List("1=1");
+                DgvList.DataSource = dt;
+            }
+
+            if (Etape == "Firme")
+            {
+                Firme firme = new Firme();
+                DataTable dt = new DataTable();
+                dt = firme.List("1=1");
+                DgvList.DataSource = dt;
+            }
+
+            if (Etape == "Chauffeur")
+            {
+                Chauffeur chauffeur = new Chauffeur();
+                DataTable dt = new DataTable();
+                dt = chauffeur.List("1=1");
+                DgvList.DataSource = dt;
+            }
+
+            if (Etape == "Transporteur")
+            {
+                Transporteur transporteur = new Transporteur();
+                DataTable dt = new DataTable();
+                dt = transporteur.List("1=1");
+                DgvList.DataSource = dt;
+            }
+
+            if (Etape == "Produit")
+            {
+                Produit produit = new Produit();
+                DataTable dt = new DataTable();
+                dt = produit.List("1=1");
+                DgvList.DataSource = dt;
+            }
+
+            if (Etape == "Client")
+            {
+                Client client = new Client();
+                DataTable dt = new DataTable();
+                dt = client.List("1=1");
+                DgvList.DataSource = dt;
+            }
+
+            if (Etape == "Table1")
+            {
+                Enregistrements enregistrements = new Enregistrements();
+                DataTable dt = new DataTable();
+                dt = enregistrements.FindByTableId(Table1Id);
+                DgvList.DataSource = dt;
+            }
+
+            if (Etape == "Table2")
+            {
+                Tables tables = new Tables();
+                DataTable dt = new DataTable();
+                if (tables.IsTableRelated(Table2Id) && tables.GetParentTableId(Table2Id) == Table1Id)
+                {
+                    Enregistrements enregistrements = new Enregistrements();
+                    dt = enregistrements.FindByTableIdAndParentId(Table2Id, Enregistrement1Id);
+                }
+                else
+                {
+                    Enregistrements enregistrements = new Enregistrements();
+                    dt = enregistrements.FindByTableId(Table2Id);
+                }
+                DgvList.DataSource = dt;
+            }
+
+            if (Etape == "Table3")
+            {
+                Tables tables = new Tables();
+                DataTable dt = new DataTable();
+                if (tables.IsTableRelated(Table3Id) && tables.GetParentTableId(Table3Id) == Table2Id)
+                {
+                    Enregistrements enregistrements = new Enregistrements();
+                    dt = enregistrements.FindByTableIdAndParentId(Table3Id, Enregistrement2Id);
+                }
+                else
+                {
+                    Enregistrements enregistrements = new Enregistrements();
+                    dt = enregistrements.FindByTableId(Table3Id);
+                }
+                DgvList.DataSource = dt;
+            }
+
+            if (Etape == "Table4")
+            {
+                Tables tables = new Tables();
+                DataTable dt = new DataTable();
+                if (tables.IsTableRelated(Table4Id) && tables.GetParentTableId(Table4Id) == Table3Id)
+                {
+                    Enregistrements enregistrements = new Enregistrements();
+                    dt = enregistrements.FindByTableIdAndParentId(Table4Id, Enregistrement3Id);
+                }
+                else
+                {
+                    Enregistrements enregistrements = new Enregistrements();
+                    dt = enregistrements.FindByTableId(Table4Id);
+                }
+                DgvList.DataSource = dt;
+            }
+
+            if (Etape == "Table5")
+            {
+                Tables tables = new Tables();
+                DataTable dt = new DataTable();
+                if (tables.IsTableRelated(Table5Id) && tables.GetParentTableId(Table5Id) == Table4Id)
+                {
+                    Enregistrements enregistrements = new Enregistrements();
+                    dt = enregistrements.FindByTableIdAndParentId(Table5Id, Enregistrement4Id);
+                }
+                else
+                {
+                    Enregistrements enregistrements = new Enregistrements();
+                    dt = enregistrements.FindByTableId(Table5Id);
+                }
+                DgvList.DataSource = dt;
+            }
+
+            if (Etape == "Table6")
+            {
+                Tables tables = new Tables();
+                DataTable dt = new DataTable();
+                if (tables.IsTableRelated(Table6Id) && tables.GetParentTableId(Table6Id) == Table5Id)
+                {
+                    Enregistrements enregistrements = new Enregistrements();
+                    dt = enregistrements.FindByTableIdAndParentId(Table6Id, Enregistrement5Id);
+                }
+                else
+                {
+                    Enregistrements enregistrements = new Enregistrements();
+                    dt = enregistrements.FindByTableId(Table6Id);
+                }
+                DgvList.DataSource = dt;
+            }
+
+            if (Etape == "Table7")
+            {
+                Tables tables = new Tables();
+                DataTable dt = new DataTable();
+                if (tables.IsTableRelated(Table7Id) && tables.GetParentTableId(Table7Id) == Table6Id)
+                {
+                    Enregistrements enregistrements = new Enregistrements();
+                    dt = enregistrements.FindByTableIdAndParentId(Table7Id, Enregistrement6Id);
+                }
+                else
+                {
+                    Enregistrements enregistrements = new Enregistrements();
+                    dt = enregistrements.FindByTableId(Table7Id);
+                }
                 DgvList.DataSource = dt;
             }
         }
@@ -1477,13 +1797,43 @@ namespace WidraSoft.UI
         private void btEffacer_Click(object sender, EventArgs e)
         {
             if (lbMessage.Text.Length > 0)
-                lbMessage.Text = lbMessage.Text.Remove(lbMessage.Text.Length - 1); 
+            {
+                lbMessage.Text = lbMessage.Text.Remove(lbMessage.Text.Length - 1);
+                if (lbMessage.Text.Length <= 0)
+                {
+                    Cancel_Search(lbMessage.Text, Etape);
+                    lbCount.Text = DgvList.RowCount.ToString();
+                    Init_Keyboard();
+                }
+            }              
         }
 
         private void lbMessage_TextChanged(object sender, EventArgs e)
         {
-            Search(lbMessage.Text, Etape);
+            if (lbMessage.Text.Length > 0)
+            {
+                Search(lbMessage.Text, Etape);
+                lbCount.Text = DgvList.RowCount.ToString();
+                btAnnulerRecherche.Visible = true;
+            }           
+        }
+
+        private void btAnnulerRecherche_Click(object sender, EventArgs e)
+        {
+            Cancel_Search(lbMessage.Text, Etape);
             lbCount.Text = DgvList.RowCount.ToString();
+            Init_Keyboard();
+        }
+
+        private void lbMessage_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Space_Click(object sender, EventArgs e)
+        {
+            if (lbMessage.Text.Length < 15)
+                lbMessage.Text = lbMessage.Text + " ";
         }
     }
 }
