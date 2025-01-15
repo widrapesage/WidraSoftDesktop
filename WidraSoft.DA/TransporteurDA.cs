@@ -111,6 +111,25 @@ namespace WidraSoft.DA
             }
         }
 
+        public int GetMaxId()
+        {
+
+            String sql = "SELECT MAX(TRANSPORTEURID) FROM TRANSPORTEUR";
+            conn.ConnectionString = connString;
+            if (conn.State == ConnectionState.Closed)
+                conn.Open();
+            SqlCommand cmd = new SqlCommand(sql, conn);
+            try
+            {
+                int id = (int)cmd.ExecuteScalar();
+                return id;
+            }
+            catch
+            {
+                throw;
+            }
+        }
+
         public void Add(String Licence, String Nom, String Adresse, String CodePostal, String Localite, String Pays,
             String Telephone, String Email, String NumTVA, String SiteWeb_Url, String Observations,
             Int32 Valide, Int32 Bloque, String TexteBloque, Int32 Attention, String TexteAttention)

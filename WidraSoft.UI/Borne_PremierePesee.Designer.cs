@@ -29,10 +29,10 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Borne_PremierePesee));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.DgvList = new System.Windows.Forms.DataGridView();
             this.lbTexte = new System.Windows.Forms.Label();
             this.btValider = new System.Windows.Forms.Button();
@@ -91,6 +91,9 @@
             this.btAnnulerRecherche = new System.Windows.Forms.Button();
             this.lbCount = new System.Windows.Forms.Label();
             this.btIgnorer = new System.Windows.Forms.Button();
+            this.lbNotFound = new System.Windows.Forms.Label();
+            this.lbRequired = new System.Windows.Forms.Label();
+            this.lbOptional = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.DgvList)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Spain_flag)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.England_flag)).BeginInit();
@@ -106,37 +109,37 @@
             this.DgvList.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(62)))), ((int)(((byte)(60)))));
             this.DgvList.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.DgvList.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.Sunken;
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(86)))), ((int)(((byte)(77)))));
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Corbel", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(190)))), ((int)(((byte)(117)))));
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.DgvList.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(86)))), ((int)(((byte)(77)))));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Corbel", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(190)))), ((int)(((byte)(117)))));
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.DgvList.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.DgvList.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.DgvList.Cursor = System.Windows.Forms.Cursors.Hand;
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(62)))), ((int)(((byte)(60)))));
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Calibri", 27F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle6.Padding = new System.Windows.Forms.Padding(0, 2, 0, 2);
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(112)))), ((int)(((byte)(228)))), ((int)(((byte)(132)))));
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.DgvList.DefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(62)))), ((int)(((byte)(60)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Calibri", 27F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.Padding = new System.Windows.Forms.Padding(0, 2, 0, 2);
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(112)))), ((int)(((byte)(228)))), ((int)(((byte)(132)))));
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.DgvList.DefaultCellStyle = dataGridViewCellStyle2;
             this.DgvList.Name = "DgvList";
             this.DgvList.ReadOnly = true;
-            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle7.BackColor = System.Drawing.Color.Honeydew;
-            dataGridViewCellStyle7.Font = new System.Drawing.Font("Corbel", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            dataGridViewCellStyle7.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.Color.MediumSeaGreen;
-            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.DgvList.RowHeadersDefaultCellStyle = dataGridViewCellStyle7;
-            dataGridViewCellStyle8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(62)))), ((int)(((byte)(60)))));
-            this.DgvList.RowsDefaultCellStyle = dataGridViewCellStyle8;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.Honeydew;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Corbel", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.MediumSeaGreen;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.DgvList.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(62)))), ((int)(((byte)(60)))));
+            this.DgvList.RowsDefaultCellStyle = dataGridViewCellStyle4;
             this.DgvList.RowTemplate.Height = 70;
             // 
             // lbTexte
@@ -191,6 +194,7 @@
             this.btAjouter.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(112)))), ((int)(((byte)(228)))), ((int)(((byte)(132)))));
             this.btAjouter.Name = "btAjouter";
             this.btAjouter.UseVisualStyleBackColor = false;
+            this.btAjouter.Click += new System.EventHandler(this.btAjouter_Click);
             // 
             // Spain_flag
             // 
@@ -800,6 +804,7 @@
             // lbMessage
             // 
             resources.ApplyResources(this.lbMessage, "lbMessage");
+            this.lbMessage.BackColor = System.Drawing.Color.Black;
             this.lbMessage.ForeColor = System.Drawing.Color.White;
             this.lbMessage.Name = "lbMessage";
             this.lbMessage.TextChanged += new System.EventHandler(this.lbMessage_TextChanged);
@@ -810,9 +815,9 @@
             resources.ApplyResources(this.btAnnulerRecherche, "btAnnulerRecherche");
             this.btAnnulerRecherche.BackColor = System.Drawing.Color.Black;
             this.btAnnulerRecherche.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btAnnulerRecherche.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(112)))), ((int)(((byte)(228)))), ((int)(((byte)(132)))));
+            this.btAnnulerRecherche.FlatAppearance.BorderColor = System.Drawing.Color.Wheat;
             this.btAnnulerRecherche.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(86)))), ((int)(((byte)(81)))));
-            this.btAnnulerRecherche.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(112)))), ((int)(((byte)(228)))), ((int)(((byte)(132)))));
+            this.btAnnulerRecherche.ForeColor = System.Drawing.Color.Wheat;
             this.btAnnulerRecherche.Name = "btAnnulerRecherche";
             this.btAnnulerRecherche.UseVisualStyleBackColor = false;
             this.btAnnulerRecherche.Click += new System.EventHandler(this.btAnnulerRecherche_Click);
@@ -828,17 +833,39 @@
             resources.ApplyResources(this.btIgnorer, "btIgnorer");
             this.btIgnorer.BackColor = System.Drawing.Color.Black;
             this.btIgnorer.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btIgnorer.FlatAppearance.BorderColor = System.Drawing.Color.Tomato;
+            this.btIgnorer.FlatAppearance.BorderColor = System.Drawing.Color.Orange;
             this.btIgnorer.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(86)))), ((int)(((byte)(81)))));
-            this.btIgnorer.ForeColor = System.Drawing.Color.Tomato;
+            this.btIgnorer.ForeColor = System.Drawing.Color.Orange;
             this.btIgnorer.Name = "btIgnorer";
             this.btIgnorer.UseVisualStyleBackColor = false;
+            this.btIgnorer.Click += new System.EventHandler(this.btIgnorer_Click);
+            // 
+            // lbNotFound
+            // 
+            resources.ApplyResources(this.lbNotFound, "lbNotFound");
+            this.lbNotFound.ForeColor = System.Drawing.Color.Tomato;
+            this.lbNotFound.Name = "lbNotFound";
+            // 
+            // lbRequired
+            // 
+            resources.ApplyResources(this.lbRequired, "lbRequired");
+            this.lbRequired.ForeColor = System.Drawing.Color.Tomato;
+            this.lbRequired.Name = "lbRequired";
+            // 
+            // lbOptional
+            // 
+            resources.ApplyResources(this.lbOptional, "lbOptional");
+            this.lbOptional.ForeColor = System.Drawing.Color.Orange;
+            this.lbOptional.Name = "lbOptional";
             // 
             // Borne_PremierePesee
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(62)))), ((int)(((byte)(60)))));
+            this.Controls.Add(this.lbOptional);
+            this.Controls.Add(this.lbRequired);
+            this.Controls.Add(this.lbNotFound);
             this.Controls.Add(this.btIgnorer);
             this.Controls.Add(this.lbCount);
             this.Controls.Add(this.btAnnulerRecherche);
@@ -929,5 +956,8 @@
         private System.Windows.Forms.Label lbCount;
         private System.Windows.Forms.Button Space;
         private System.Windows.Forms.Button btIgnorer;
+        private System.Windows.Forms.Label lbNotFound;
+        private System.Windows.Forms.Label lbRequired;
+        private System.Windows.Forms.Label lbOptional;
     }
 }

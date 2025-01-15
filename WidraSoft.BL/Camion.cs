@@ -127,6 +127,19 @@ namespace WidraSoft.BL
             }
         }
 
+        public int GetMaxId()
+        {
+            try
+            {
+                CamionDA camion = new CamionDA();
+                return camion.GetMaxId();
+            }
+            catch
+            {
+                throw;
+            }
+        }
+
         public void Add(String Code, String Plaque, String Badge, Int32 Tare, Int32 Valide,
            Int32 Bloque, String TexteBloque, Int32 Attention, String TexteAttention, String Observations)
         {

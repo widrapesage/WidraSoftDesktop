@@ -190,6 +190,25 @@ namespace WidraSoft.DA
             }
         }
 
+        public int GetMaxId()
+        {
+
+            String sql = "SELECT MAX(CAMIONID) FROM CAMION";
+            conn.ConnectionString = connString;
+            if (conn.State == ConnectionState.Closed)
+                conn.Open();
+            SqlCommand cmd = new SqlCommand(sql, conn);
+            try
+            {
+                int id = (int)cmd.ExecuteScalar();
+                return id;
+            }
+            catch
+            {
+                throw;
+            }
+        }
+
         public void Add(String Code, String Plaque,  String Badge, Int32 Tare, Int32 Valide,
            Int32 Bloque, String TexteBloque, Int32 Attention, String TexteAttention, String Observations )
         {

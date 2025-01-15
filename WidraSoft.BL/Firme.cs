@@ -76,6 +76,19 @@ namespace WidraSoft.BL
             }
         }
 
+        public int GetMaxId()
+        {
+            try
+            {
+                FirmeDA firme = new FirmeDA();
+                return firme.GetMaxId();
+            }
+            catch
+            {
+                throw;
+            }
+        }
+
         public void Add(String Badge, String Designation, String Adresse, String CodePostal, String Localite, 
             String Pays, String Telephone,
             String Email, String NumTVA, String SiteWeb_Url, String Observations, Int32 Valide, Int32 Bloque, 

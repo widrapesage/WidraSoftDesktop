@@ -33,7 +33,8 @@ namespace WidraSoft.UI
 
         private void btTareManuelle_Click(object sender, EventArgs e)
         {
-            
+            Form form = new Borne_Tare(vg_Lang, vg_PontId, vg_Demander_Paramatre, vg_P);
+            form.Show();
         }
 
         private void Borne_ChoixTypePesee_Load(object sender, EventArgs e)
@@ -125,7 +126,7 @@ namespace WidraSoft.UI
 
         private void btPeser_Click(object sender, EventArgs e)
         {
-            Form form = new Borne_ChoixFlux(vg_Lang, vg_PontId, vg_Demander_Paramatre, -1, Convert.ToInt32(txtPoids.Text));
+            Form form = new Borne_ChoixFlux(vg_Lang, vg_PontId, vg_Demander_Paramatre, -1, Convert.ToInt32(txtPoids.Text), 0);
             form.Show();
         }
 
@@ -161,13 +162,13 @@ namespace WidraSoft.UI
                     {
                         if (camion.IfIsPending(s))
                         {
-                            Form form = new Borne_DeuxiemePesee(Convert.ToInt32(txtPoids.Text), camion.GetPendingId(s), s);
+                            Form form = new Borne_DeuxiemePesee(Convert.ToInt32(txtPoids.Text), camion.GetPendingId(s), s, vg_Lang);
                             form.Show();
                         }
                         else
                         {
                             ScanCamionId = camion.GetIdByName(s);
-                            Form form = new Borne_ChoixFlux(vg_Lang, vg_PontId, vg_Demander_Paramatre, ScanCamionId, Convert.ToInt32(txtPoids.Text));
+                            Form form = new Borne_ChoixFlux(vg_Lang, vg_PontId, vg_Demander_Paramatre, ScanCamionId, Convert.ToInt32(txtPoids.Text), 0);
                             form.Show();
                         }
                         

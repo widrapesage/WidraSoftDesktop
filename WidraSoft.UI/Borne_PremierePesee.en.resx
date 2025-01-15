@@ -72,7 +72,31 @@
   <data name="btAnnulerRecherche.Text" xml:space="preserve">
     <value>CANCEL SEARCH</value>
   </data>
+  <data name="btIgnorer.Text" xml:space="preserve">
+    <value>IGNORE</value>
+  </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="lbNotFound.Location" type="System.Drawing.Point, System.Drawing">
+    <value>466, 57</value>
+  </data>
+  <data name="lbNotFound.Size" type="System.Drawing.Size, System.Drawing">
+    <value>95, 23</value>
+  </data>
+  <data name="lbNotFound.Text" xml:space="preserve">
+    <value>Not found</value>
+  </data>
+  <data name="lbRequired.Size" type="System.Drawing.Size, System.Drawing">
+    <value>85, 23</value>
+  </data>
+  <data name="lbRequired.Text" xml:space="preserve">
+    <value>Required</value>
+  </data>
+  <data name="lbOptional.Size" type="System.Drawing.Size, System.Drawing">
+    <value>83, 23</value>
+  </data>
+  <data name="lbOptional.Text" xml:space="preserve">
+    <value>Optional</value>
+  </data>
   <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         AAABAAQAEBAAAAEAIABoBAAARgAAACAgAAABACAAqBAAAK4EAAAwMAAAAQAgAKglAABWFQAAQEAAAAEA

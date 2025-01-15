@@ -167,9 +167,27 @@ namespace WidraSoft.DA
             }
         }
 
+        public Int32 GetPoids2ById(Int32 Id)
+        {
+            String sql = "SELECT POIDS2 FROM PESEEPB WHERE PESEEPBID=" + Id;
+            conn.ConnectionString = connString;
+            if (conn.State == ConnectionState.Closed)
+                conn.Open();
+            SqlCommand cmd = new SqlCommand(sql, conn);
+            try
+            {
+                Int32 Poids2 = (Int32)cmd.ExecuteScalar();
+                return Poids2;
+            }
+            catch
+            {
+                throw;
+            }
+        }
+
         public String GetShortResume(Int32 Id)
         {
-            String sql = "SELECT CONCAT(DATEHEUREPOIDS2, '  ', POIDS2 , ' Kg  ',  PRODUIT ) FROM VW_PESEEPB WHERE PESEEPBID=" + Id;
+            String sql = "SELECT CONCAT(CAMION, ' ', DATEHEUREPOIDS2, '  ', POIDS2 , ' Kg  ',  PRODUIT ) FROM VW_PESEEPB WHERE PESEEPBID=" + Id;
             conn.ConnectionString = connString;
             if (conn.State == ConnectionState.Closed)
                 conn.Open();
@@ -332,6 +350,32 @@ namespace WidraSoft.DA
                 cmd.Parameters.Add("@CHAMPLIBRE3", SqlDbType.VarChar).Value = ChampLibre3;
                 cmd.Parameters.Add("@CHAMPLIBRENAME4", SqlDbType.VarChar).Value = ChampLibreName4;
                 cmd.Parameters.Add("@CHAMPLIBRE4", SqlDbType.VarChar).Value = ChampLibre4;
+                try
+                {
+                    cmd.ExecuteNonQuery();
+                }
+                catch
+                {
+                    throw;
+                }
+            }
+        }
+
+        public void Update_Borne(Int32 Id, Int32 Poids1, DateTime DateHeurePoids1, Int32 PoidsNet, String UserInfo, String EtatPesee)
+        {
+            using (conn)
+            {
+                conn.ConnectionString = connString;
+                if (conn.State == ConnectionState.Closed)
+                    conn.Open();
+                SqlCommand cmd = new SqlCommand("PS_UPDATE_PESEEPB_BORNE", conn);
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Parameters.Add("@ID", SqlDbType.Int).Value = Id;               
+                cmd.Parameters.Add("@POIDS1", SqlDbType.Int).Value = Poids1;
+                cmd.Parameters.Add("@DATEHEUREPOIDS1", SqlDbType.DateTime).Value = DateHeurePoids1;
+                cmd.Parameters.Add("@POIDSNET", SqlDbType.Int).Value = PoidsNet;
+                cmd.Parameters.Add("@USER_INFO", SqlDbType.VarChar).Value = UserInfo;
+                cmd.Parameters.Add("@ETATPESEE", SqlDbType.VarChar).Value = EtatPesee;
                 try
                 {
                     cmd.ExecuteNonQuery();

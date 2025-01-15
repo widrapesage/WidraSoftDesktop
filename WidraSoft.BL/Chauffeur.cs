@@ -75,6 +75,19 @@ namespace WidraSoft.BL
             }
         }
 
+        public int GetMaxId()
+        {
+            try
+            {
+                ChauffeurDA chauffeur = new ChauffeurDA();
+                return chauffeur.GetMaxId();
+            }
+            catch
+            {
+                throw;
+            }
+        }
+
         public void Add(String Badge, String Nom, String NumeroNational, String NumeroPermis, String Adresse, String CodePostal, String Localite, String Pays,
            String Telephone, String Observations, Int32 Valide, Int32 Bloque, String TexteBloque, Int32 Attention, String TexteAttention)
         {

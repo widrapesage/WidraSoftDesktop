@@ -140,6 +140,19 @@ namespace WidraSoft.BL
             }
         }
 
+        public int GetMaxId()
+        {
+            try
+            {
+                EnregistrementsDA enregistrements = new EnregistrementsDA();
+                return enregistrements.GetMaxId();
+            }
+            catch
+            {
+                throw;
+            }
+        }
+
         public void Add(Int32 TablesId, String Nom, String Code, String Adresse, String CodePostal, String Localite, String Pays,
             String Telephone, String Email, String NumTVA, String SiteWeb_Url, String Observations,
             Int32 Bloque, String TexteBloque, Int32 Attention, String TexteAttention, Int32 ParentId)

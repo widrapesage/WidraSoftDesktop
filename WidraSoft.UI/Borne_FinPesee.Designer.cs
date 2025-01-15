@@ -1,6 +1,6 @@
 ﻿namespace WidraSoft.UI
 {
-    partial class Borne_DeuxiemePesee
+    partial class Borne_FinPesee
     {
         /// <summary>
         /// Required designer variable.
@@ -28,19 +28,28 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Borne_DeuxiemePesee));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Borne_FinPesee));
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.lbTexte = new System.Windows.Forms.Label();
-            this.btAnnuler = new System.Windows.Forms.Button();
-            this.btValider = new System.Windows.Forms.Button();
-            this.txtPoids = new System.Windows.Forms.TextBox();
-            this.lbMessage = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.Spain_flag = new System.Windows.Forms.PictureBox();
             this.England_flag = new System.Windows.Forms.PictureBox();
             this.France_flag = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Spain_flag)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.England_flag)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.France_flag)).BeginInit();
             this.SuspendLayout();
+            // 
+            // pictureBox2
+            // 
+            resources.ApplyResources(this.pictureBox2, "pictureBox2");
+            this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox2.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pictureBox2.Image = global::WidraSoft.UI.Properties.Resources.Bye1;
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.TabStop = false;
             // 
             // lbTexte
             // 
@@ -48,45 +57,14 @@
             this.lbTexte.ForeColor = System.Drawing.Color.White;
             this.lbTexte.Name = "lbTexte";
             // 
-            // btAnnuler
+            // pictureBox1
             // 
-            resources.ApplyResources(this.btAnnuler, "btAnnuler");
-            this.btAnnuler.BackColor = System.Drawing.Color.Black;
-            this.btAnnuler.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btAnnuler.FlatAppearance.BorderColor = System.Drawing.Color.Tomato;
-            this.btAnnuler.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(86)))), ((int)(((byte)(81)))));
-            this.btAnnuler.ForeColor = System.Drawing.Color.Tomato;
-            this.btAnnuler.Name = "btAnnuler";
-            this.btAnnuler.UseVisualStyleBackColor = false;
-            this.btAnnuler.Click += new System.EventHandler(this.btAnnuler_Click);
-            // 
-            // btValider
-            // 
-            resources.ApplyResources(this.btValider, "btValider");
-            this.btValider.BackColor = System.Drawing.Color.Black;
-            this.btValider.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btValider.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(112)))), ((int)(((byte)(228)))), ((int)(((byte)(132)))));
-            this.btValider.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(86)))), ((int)(((byte)(81)))));
-            this.btValider.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(112)))), ((int)(((byte)(228)))), ((int)(((byte)(132)))));
-            this.btValider.Name = "btValider";
-            this.btValider.UseVisualStyleBackColor = false;
-            this.btValider.Click += new System.EventHandler(this.btValider_Click);
-            // 
-            // txtPoids
-            // 
-            resources.ApplyResources(this.txtPoids, "txtPoids");
-            this.txtPoids.BackColor = System.Drawing.Color.Black;
-            this.txtPoids.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtPoids.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(112)))), ((int)(((byte)(228)))), ((int)(((byte)(132)))));
-            this.txtPoids.Name = "txtPoids";
-            this.txtPoids.ReadOnly = true;
-            this.txtPoids.TabStop = false;
-            // 
-            // lbMessage
-            // 
-            resources.ApplyResources(this.lbMessage, "lbMessage");
-            this.lbMessage.ForeColor = System.Drawing.Color.White;
-            this.lbMessage.Name = "lbMessage";
+            resources.ApplyResources(this.pictureBox1, "pictureBox1");
+            this.pictureBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(62)))), ((int)(((byte)(60)))));
+            this.pictureBox1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pictureBox1.Image = global::WidraSoft.UI.Properties.Resources.logo_Widra_250;
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.TabStop = false;
             // 
             // Spain_flag
             // 
@@ -115,7 +93,7 @@
             this.France_flag.Name = "France_flag";
             this.France_flag.TabStop = false;
             // 
-            // Borne_DeuxiemePesee
+            // Borne_FinPesee
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -123,15 +101,15 @@
             this.Controls.Add(this.Spain_flag);
             this.Controls.Add(this.England_flag);
             this.Controls.Add(this.France_flag);
-            this.Controls.Add(this.lbMessage);
-            this.Controls.Add(this.txtPoids);
-            this.Controls.Add(this.btAnnuler);
-            this.Controls.Add(this.btValider);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.lbTexte);
+            this.Controls.Add(this.pictureBox2);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
-            this.Name = "Borne_DeuxiemePesee";
-            this.Load += new System.EventHandler(this.Borne_DeuxiemePesee_Load);
+            this.Name = "Borne_FinPesee";
+            this.Load += new System.EventHandler(this.Borne_FinPesee_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Spain_flag)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.England_flag)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.France_flag)).EndInit();
@@ -142,11 +120,9 @@
 
         #endregion
 
+        private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Label lbTexte;
-        private System.Windows.Forms.Button btAnnuler;
-        private System.Windows.Forms.Button btValider;
-        private System.Windows.Forms.TextBox txtPoids;
-        private System.Windows.Forms.Label lbMessage;
+        private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.PictureBox Spain_flag;
         private System.Windows.Forms.PictureBox England_flag;
         private System.Windows.Forms.PictureBox France_flag;

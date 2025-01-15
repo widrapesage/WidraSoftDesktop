@@ -25,6 +25,7 @@ namespace WidraSoft.UI
         string vg_Flux;
         int vg_P;
         string vg_Lang;
+        int vg_Tare;
 
         int Enregistrement1Id;
         string Enregistrement1 = "";
@@ -61,7 +62,21 @@ namespace WidraSoft.UI
         int Tables7Id;
         string Tables7Name = "";
 
+        string ChampLibreName1;
+        string ChampLibre1;
+
+        string ChampLibreName2;
+        string ChampLibre2;
+
+
+        string ChampLibreName3;
+        string ChampLibre3;
+
+        string ChampLibreName4;
+        string ChampLibre4;
+
         bool vg_Demander_Parametre;
+        bool vg_ChampLibre;
         string Etape = "";
 
         // Weighing Settings Informations
@@ -111,10 +126,22 @@ namespace WidraSoft.UI
         int Table5_Ajout;
         int Table6_Ajout;
         int Table7_Ajout;
+        string ChampLibre1Name = "";
+        string ChampLibre2Name = "";
+        string ChampLibre3Name = "";
+        string ChampLibre4Name = "";
+        int ChampLibre1_Obl;
+        int ChampLibre2_Obl;
+        int ChampLibre3_Obl;
+        int ChampLibre4_Obl;
+        int ChampLibre1_Ticket;
+        int ChampLibre2_Ticket;
+        int ChampLibre3_Ticket;
+        int ChampLibre4_Ticket;
         int PontFirme;
         int CamionChauffeur;
         int CamionTransporteur;
-        public Borne_PremierePesee(string Lang,  int PontId, bool Demander_Paramatre, string Flux, int ScanCamionId, int P)
+        public Borne_PremierePesee(string Lang,  int PontId, bool Demander_Paramatre, string Flux, int ScanCamionId, int P, int Tare)
         {
             InitializeComponent();
             vg_PontId = PontId;
@@ -123,6 +150,7 @@ namespace WidraSoft.UI
             vg_Flux = Flux;
             vg_P = P;
             vg_Lang = Lang;
+            vg_Tare = Tare;
         }
 
         private void radioButton1_CheckedChanged(object sender, EventArgs e)
@@ -226,6 +254,21 @@ namespace WidraSoft.UI
                 Table6_Ajout = (int)ro["TABLE6_AJOUT_F"];
                 Table7_Ajout = (int)ro["TABLE7_AJOUT_F"];
 
+                ChampLibre1_Obl = (int)ro["CHAMPLIBRE1_OBL"];
+                ChampLibre2_Obl = (int)ro["CHAMPLIBRE2_OBL"];
+                ChampLibre3_Obl = (int)ro["CHAMPLIBRE3_OBL"];
+                ChampLibre4_Obl = (int)ro["CHAMPLIBRE4_OBL"];
+
+                ChampLibre1_Ticket = (int)ro["CHAMPLIBRE1_TICKET"];
+                ChampLibre2_Ticket = (int)ro["CHAMPLIBRE2_TICKET"];
+                ChampLibre3_Ticket = (int)ro["CHAMPLIBRE3_TICKET"];
+                ChampLibre4_Ticket = (int)ro["CHAMPLIBRE4_TICKET"];
+
+                ChampLibre1Name = ro["CHAMPLIBRE1"].ToString();
+                ChampLibre2Name = ro["CHAMPLIBRE2"].ToString();
+                ChampLibre3Name = ro["CHAMPLIBRE3"].ToString();
+                ChampLibre4Name = ro["CHAMPLIBRE4"].ToString();
+
                 PontFirme = (int)ro["PONTFIRME"];
                 CamionChauffeur = (int)ro["CAMIONCHAUFFEUR"];
                 CamionTransporteur = (int)ro["CAMIONTRANSPORTEUR"];
@@ -242,11 +285,16 @@ namespace WidraSoft.UI
             btAjouter.Visible = false;
             btAnnulerRecherche.Visible = false;
             btIgnorer.Visible = false;
+            lbNotFound.Visible = false;
+            lbRequired.Visible = false;
+            lbOptional.Visible = false;
         }
 
         private void Gestion_Etapes()
         {
             Init_Keyboard();
+            vg_ChampLibre = false;
+            
             if (Etape == "Parametre")
             {
                 if (vg_Demander_Parametre)
@@ -279,9 +327,16 @@ namespace WidraSoft.UI
                         DgvList.DataSource = dt;
                         Bind_Camions();
                         if (Camion_Obl > 0)
+                        {
                             btIgnorer.Visible = false;
+                            lbRequired.Visible = true;
+                        }
                         else
+                        {
                             btIgnorer.Visible = true;
+                            lbOptional.Visible = true;
+                        }
+                            
                     }
                     else
                     {
@@ -311,9 +366,15 @@ namespace WidraSoft.UI
                     DgvList.DataSource = dt;
                     Bind_Firmes();
                     if (Firme_Obl > 0)
+                    {
                         btIgnorer.Visible = false;
+                        lbRequired.Visible = true;
+                    }
                     else
+                    {
                         btIgnorer.Visible = true;
+                        lbOptional.Visible = true;
+                    }
                 }
                 else
                 {
@@ -334,9 +395,15 @@ namespace WidraSoft.UI
                     DgvList.DataSource = dt;
                     Bind_Chauffeurs();
                     if (Chauffeur_Obl > 0)
+                    {
                         btIgnorer.Visible = false;
+                        lbRequired.Visible = true;
+                    }
                     else
+                    {
                         btIgnorer.Visible = true;
+                        lbOptional.Visible = true;
+                    }
                 }
                 else
                 {
@@ -357,9 +424,15 @@ namespace WidraSoft.UI
                     DgvList.DataSource = dt;
                     Bind_Transporteurs();
                     if (Transporteur_Obl > 0)
+                    {
                         btIgnorer.Visible = false;
+                        lbRequired.Visible = true;
+                    }
                     else
+                    {
                         btIgnorer.Visible = true;
+                        lbOptional.Visible = true;
+                    }
                 }
                 else
                 {
@@ -380,9 +453,15 @@ namespace WidraSoft.UI
                     DgvList.DataSource = dt;
                     Bind_Produits();
                     if (Produit_Obl > 0)
+                    {
                         btIgnorer.Visible = false;
+                        lbRequired.Visible = true;
+                    }
                     else
+                    {
                         btIgnorer.Visible = true;
+                        lbOptional.Visible = true;
+                    }
                 }
                 else
                 {
@@ -403,9 +482,15 @@ namespace WidraSoft.UI
                     DgvList.DataSource = dt;
                     Bind_Clients();
                     if (Client_Obl > 0)
+                    {
                         btIgnorer.Visible = false;
+                        lbRequired.Visible = true;
+                    }
                     else
+                    {
                         btIgnorer.Visible = true;
+                        lbOptional.Visible = true;
+                    }
                 }
                 else
                 {
@@ -430,9 +515,15 @@ namespace WidraSoft.UI
                     DgvList.DataSource = dt;
                     Bind_Enregistrements();
                     if (Table1_Obl > 0)
+                    {
                         btIgnorer.Visible = false;
+                        lbRequired.Visible = true;
+                    }
                     else
+                    {
                         btIgnorer.Visible = true;
+                        lbOptional.Visible = true;
+                    }
                 }
                 else
                 {
@@ -467,9 +558,15 @@ namespace WidraSoft.UI
                     DgvList.DataSource = dt;
                     Bind_Enregistrements();
                     if (Table2_Obl > 0)
+                    {
                         btIgnorer.Visible = false;
+                        lbRequired.Visible = true;
+                    }
                     else
+                    {
                         btIgnorer.Visible = true;
+                        lbOptional.Visible = true;
+                    }
                 }
                 else
                 {
@@ -505,9 +602,15 @@ namespace WidraSoft.UI
                     DgvList.DataSource = dt;
                     Bind_Enregistrements();
                     if (Table3_Obl > 0)
+                    {
                         btIgnorer.Visible = false;
+                        lbRequired.Visible = true;
+                    }
                     else
+                    {
                         btIgnorer.Visible = true;
+                        lbOptional.Visible = true;
+                    }
                 }
                 else
                 {
@@ -543,9 +646,15 @@ namespace WidraSoft.UI
                     DgvList.DataSource = dt;
                     Bind_Enregistrements();
                     if (Table4_Obl > 0)
+                    {
                         btIgnorer.Visible = false;
+                        lbRequired.Visible = true;
+                    }
                     else
+                    {
                         btIgnorer.Visible = true;
+                        lbOptional.Visible = true;
+                    }
                 }
                 else
                 {
@@ -580,9 +689,15 @@ namespace WidraSoft.UI
                     DgvList.DataSource = dt;
                     Bind_Enregistrements();
                     if (Table5_Obl > 0)
+                    {
                         btIgnorer.Visible = false;
+                        lbRequired.Visible = true;
+                    }
                     else
+                    {
                         btIgnorer.Visible = true;
+                        lbOptional.Visible = true;
+                    }
                 }
                 else
                 {
@@ -617,9 +732,15 @@ namespace WidraSoft.UI
                     DgvList.DataSource = dt;
                     Bind_Enregistrements();
                     if (Table6_Obl > 0)
+                    {
                         btIgnorer.Visible = false;
+                        lbRequired.Visible = true;
+                    }
                     else
+                    {
                         btIgnorer.Visible = true;
+                        lbOptional.Visible = true;
+                    }
                 }
                 else
                 {
@@ -633,7 +754,7 @@ namespace WidraSoft.UI
             if (Etape == "Table7")
             {
                 if (Table7Id > 0)
-                {
+                {                    
                     Tables tables = new Tables();
                     string table_name = tables.GetName(Table7Id);
                     Tables7Name = table_name;
@@ -654,47 +775,211 @@ namespace WidraSoft.UI
                     DgvList.DataSource = dt;
                     Bind_Enregistrements();
                     if (Table7_Obl > 0)
+                    {
                         btIgnorer.Visible = false;
+                        lbRequired.Visible = true;
+                    }
                     else
+                    {
                         btIgnorer.Visible = true;
+                        lbOptional.Visible = true;
+                    }
                 }
                 else
                 {
                     Enregistrement7Id = 0;
                     Tables7Id = 0;
+                    Etape = "ChampLibre1";
+                    Gestion_Etapes();
+                }               
+            }
+
+            if (Etape == "ChampLibre1")
+            {
+                if (ChampLibre1Name.Trim().Length > 2)
+                {
+                    vg_ChampLibre = true;
+                    lbTexte.Text = "Entrez " + ChampLibre1Name;
+                    DgvList.Visible = false;
+                    btUp.Visible = false;
+                    btDown.Visible = false;
+                    btDoubleUp.Visible = false;
+                    btDoubleDown.Visible = false;
+                    if (ChampLibre1_Obl > 0)
+                    {
+                        btIgnorer.Visible = false;
+                        lbRequired.Visible = true;
+                    }
+                    else
+                    {
+                        btIgnorer.Visible = true;
+                        lbOptional.Visible = true;
+                    }
+
+                }
+                else
+                {
+                    ChampLibreName1 = "";
+                    ChampLibre1 = "";
+                    Etape = "ChampLibre2";
+                    Gestion_Etapes();
+                }
+            }
+
+            if (Etape == "ChampLibre2")
+            {
+                if (ChampLibre2Name.Trim().Length > 2)
+                {
+                    vg_ChampLibre = true;
+                    lbTexte.Text = "Entrez " + ChampLibre2Name;
+                    DgvList.Visible = false;
+                    btUp.Visible = false;
+                    btDown.Visible = false;
+                    btDoubleUp.Visible = false;
+                    btDoubleDown.Visible = false;
+                    if (ChampLibre2_Obl > 0)
+                    {
+                        btIgnorer.Visible = false;
+                        lbRequired.Visible = true;
+                    }
+                    else
+                    {
+                        btIgnorer.Visible = true;
+                        lbOptional.Visible = true;
+                    }
+
+                }
+                else
+                {
+                    ChampLibreName2 = "";
+                    ChampLibre2 = "";
+                    Etape = "ChampLibre3";
+                    Gestion_Etapes();
+                }
+            }
+
+            if (Etape == "ChampLibre3")
+            {
+                if (ChampLibre3Name.Trim().Length > 2)
+                {
+                    vg_ChampLibre = true;
+                    lbTexte.Text = "Entrez " + ChampLibre3Name;
+                    DgvList.Visible = false;
+                    btUp.Visible = false;
+                    btDown.Visible = false;
+                    btDoubleUp.Visible = false;
+                    btDoubleDown.Visible = false;
+                    if (ChampLibre3_Obl > 0)
+                    {
+                        btIgnorer.Visible = false;
+                        lbRequired.Visible = true;
+                    }
+                    else
+                    {
+                        btIgnorer.Visible = true;
+                        lbOptional.Visible = true;
+                    }
+
+                }
+                else
+                {
+                    ChampLibreName3 = "";
+                    ChampLibre3 = "";
+                    Etape = "ChampLibre4";
+                    Gestion_Etapes();
+                }
+            }
+
+            if (Etape == "ChampLibre4")
+            {
+                if (ChampLibre4Name.Trim().Length > 2)
+                {
+                    vg_ChampLibre = true;
+                    lbTexte.Text = "Entrez " + ChampLibre4Name;
+                    DgvList.Visible = false;
+                    btUp.Visible = false;
+                    btDown.Visible = false;
+                    btDoubleUp.Visible = false;
+                    btDoubleDown.Visible = false;
+                    if (ChampLibre4_Obl > 0)
+                    {
+                        btIgnorer.Visible = false;
+                        lbRequired.Visible = true;
+                    }
+                    else
+                    {
+                        btIgnorer.Visible = true;
+                        lbOptional.Visible = true;
+                    }
+
+                }
+                else
+                {
+                    ChampLibreName4 = "";
+                    ChampLibre4 = "";
                     Etape = "Fin";
-                    lbTexte.Text = "Première Pesée terminée veuillez quitter la bascule";
-                    try
+                    //Gestion_Etapes();
+                }
+            }
+
+            if (Etape == "Fin")
+            {
+                lbTexte.Text = "";
+                try
+                {
+                    if (vg_Tare <= 0)
                     {
                         PeseePB pesee = new PeseePB();
                         pesee.Add("2x", vg_Flux, vg_PontId, WeighingSettingsId, FirmeId, CamionId, ChauffeurId, TransporteurId, ProduitId, ClientId, Enregistrement1Id, Tables1Id, Tables1Name, Enregistrement1,
                             Enregistrement2Id, Tables2Id, Tables2Name, Enregistrement2, Enregistrement3Id, Table3Id, Tables3Name, Enregistrement3, Enregistrement4Id, Table4Id, Tables4Name, Enregistrement4,
                             Enregistrement5Id, Table5Id, Tables5Name, Enregistrement5, Enregistrement6Id, Table6Id, Tables6Name, Enregistrement6, Enregistrement7Id, Table7Id, Tables7Name, Enregistrement7, 0, DateTime.Now, vg_P,
-                            DateTime.Now, 0, "Borne", "Pending","","","","","","","","");
-                        System.Threading.Thread.Sleep(1000);
+                            DateTime.Now, 0, "Borne", "Pending", ChampLibreName1, ChampLibre1, ChampLibreName2, ChampLibre2, ChampLibreName3, ChampLibre3, ChampLibreName4, ChampLibre4);
+                        Form form = new Borne_FinPesee(vg_Lang, "2x1", pesee.GetMaxIdByPontId(vg_PontId));
+                        form.Show();
                         Close();
                     }
-                    catch
-                    { throw; }
+                    else
+                    {
+                        PeseePB pesee = new PeseePB();
+                        pesee.Add("1x", vg_Flux, vg_PontId, WeighingSettingsId, FirmeId, CamionId, ChauffeurId, TransporteurId, ProduitId, ClientId, Enregistrement1Id, Tables1Id, Tables1Name, Enregistrement1,
+                            Enregistrement2Id, Tables2Id, Tables2Name, Enregistrement2, Enregistrement3Id, Table3Id, Tables3Name, Enregistrement3, Enregistrement4Id, Table4Id, Tables4Name, Enregistrement4,
+                            Enregistrement5Id, Table5Id, Tables5Name, Enregistrement5, Enregistrement6Id, Table6Id, Tables6Name, Enregistrement6, Enregistrement7Id, Table7Id, Tables7Name, Enregistrement7, vg_P, DateTime.Now, vg_Tare,
+                            DateTime.Now, Math.Abs(vg_P - vg_Tare), "Borne", "Complete", ChampLibreName1, ChampLibre1, ChampLibreName2, ChampLibre2, ChampLibreName3, ChampLibre3, ChampLibreName4, ChampLibre4);
+                        Form form = new Borne_FinPesee(vg_Lang, "2x2", pesee.GetMaxIdByPontId(vg_PontId));
+                        form.Show();
+                        Close();
+                    }
+                    
                 }
-
-                
+                catch
+                { throw; }
             }
 
-            DgvList.Focus();
-            lbCount.Text = DgvList.RowCount.ToString();
-            if (DgvList.RowCount > 4)
+            
+
+            if (Etape == "ChampLibre1" || Etape == "ChampLibre2" || Etape == "ChampLibre3" || Etape == "ChampLibre4")
             {
-                btDoubleDown.Visible = true;
-                btDoubleUp.Visible = true;
+                lbCount.Text = "";
+                panelClavier.Visible = true;
+                btRecherche.Text = Language_Manager.Localize("MASQUER CLAVIER", vg_Lang);               
             }
             else
             {
-                btDoubleDown.Visible = false;
-                btDoubleUp.Visible = false;
+                
+                lbCount.Text = DgvList.RowCount.ToString();
+                if (DgvList.RowCount > 4)
+                {
+                    btDoubleDown.Visible = true;
+                    btDoubleUp.Visible = true;
+                }
+                else
+                {
+                    btDoubleDown.Visible = false;
+                    btDoubleUp.Visible = false;
+                }
             }
-            if (btIgnorer.Visible)
-                btIgnorer.Focus();
+
+            DgvList.Focus();
 
         }
 
@@ -795,6 +1080,8 @@ namespace WidraSoft.UI
 
             DgvList.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             DgvList.ReadOnly = true;
+
+            DgvList.Focus();
         }
 
         private void Bind_Firmes()
@@ -823,6 +1110,8 @@ namespace WidraSoft.UI
             DgvList.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             DgvList.ReadOnly = true;
 
+            DgvList.Focus();
+
         }
 
         private void Bind_Camions()
@@ -844,6 +1133,8 @@ namespace WidraSoft.UI
 
             DgvList.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             DgvList.ReadOnly = true;
+
+            DgvList.Focus();
         }
 
         private void Bind_Chauffeurs()
@@ -868,6 +1159,8 @@ namespace WidraSoft.UI
 
             DgvList.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             DgvList.ReadOnly = true;
+
+            DgvList.Focus();
 
         }
 
@@ -895,6 +1188,8 @@ namespace WidraSoft.UI
             DgvList.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             DgvList.ReadOnly = true;
 
+            DgvList.Focus();
+
         }
 
 
@@ -916,6 +1211,8 @@ namespace WidraSoft.UI
 
             DgvList.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             DgvList.ReadOnly = true;
+
+            DgvList.Focus();
         }
 
         private void Bind_Clients()
@@ -945,6 +1242,7 @@ namespace WidraSoft.UI
             DgvList.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             DgvList.ReadOnly = true;
 
+            DgvList.Focus();
         }
 
         private void Bind_Enregistrements()
@@ -972,151 +1270,241 @@ namespace WidraSoft.UI
             DgvList.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             DgvList.ReadOnly = true;
 
+            DgvList.Focus();
+
         }
 
         private void btValider_Click(object sender, EventArgs e)
         {
             if (Etape == "Parametre")
             {
-                WeighingSettingsId = Common_functions.GetDatagridViewSelectedId(DgvList);
-                Etape = "Camion";
-                Gestion_Etapes();
+                if (DgvList.RowCount > 0)
+                {
+                    WeighingSettingsId = Common_functions.GetDatagridViewSelectedId(DgvList);
+                    Etape = "Camion";
+                    Gestion_Etapes();
+                }               
                 return;
             }
            
             if (Etape == "Camion")
             {
-                CamionId = Common_functions.GetDatagridViewSelectedId(DgvList);
-                Camion camion = new Camion();
-                if (camion.IfIsPending(camion.GetName(CamionId)))
+                if (DgvList.RowCount > 0)
                 {
-                    Form form = new Borne_DeuxiemePesee(vg_P, camion.GetPendingId(camion.GetName(CamionId)), camion.GetName(CamionId));
-                    form.Show();
-                    Close();
+                    CamionId = Common_functions.GetDatagridViewSelectedId(DgvList);
+                    Camion camion = new Camion();
+                    if (camion.IfIsPending(camion.GetName(CamionId)))
+                    {
+                        Form form = new Borne_DeuxiemePesee(vg_P, camion.GetPendingId(camion.GetName(CamionId)), camion.GetName(CamionId), vg_Lang);
+                        form.Show();
+                        Close();
+                    }
+                    else
+                    {
+                        Etape = "Firme";
+                        Gestion_Etapes();
+                        return;
+                    }
                 }
                 else
                 {
-                    Etape = "Firme";
-                    Gestion_Etapes();
                     return;
-                }               
+                }
+                            
             }
 
             if (Etape == "Firme")
             {
-                FirmeId = Common_functions.GetDatagridViewSelectedId(DgvList);
-                Etape = "Chauffeur";
-                Gestion_Etapes();
+                if (DgvList.RowCount > 0)
+                {
+                    FirmeId = Common_functions.GetDatagridViewSelectedId(DgvList);
+                    Etape = "Chauffeur";
+                    Gestion_Etapes();
+                }                   
                 return;
             }
 
             if (Etape == "Chauffeur")
             {
-                ChauffeurId = Common_functions.GetDatagridViewSelectedId(DgvList);
-                Etape = "Transporteur";
-                Gestion_Etapes();
+                if (DgvList.RowCount > 0)
+                {
+                    ChauffeurId = Common_functions.GetDatagridViewSelectedId(DgvList);
+                    Etape = "Transporteur";
+                    Gestion_Etapes();
+                }                  
                 return;
             }
 
             if (Etape == "Transporteur")
             {
-                TransporteurId = Common_functions.GetDatagridViewSelectedId(DgvList);
-                Etape = "Produit";
-                Gestion_Etapes();
+                if (DgvList.RowCount > 0)
+                {
+                    TransporteurId = Common_functions.GetDatagridViewSelectedId(DgvList);
+                    Etape = "Produit";
+                    Gestion_Etapes();
+                }                  
                 return;
             }
 
             if (Etape == "Produit")
             {
-                ProduitId = Common_functions.GetDatagridViewSelectedId(DgvList);
-                Etape = "Client";
-                Gestion_Etapes();
+                if (DgvList.RowCount > 0)
+                {
+                    ProduitId = Common_functions.GetDatagridViewSelectedId(DgvList);
+                    Etape = "Client";
+                    Gestion_Etapes();
+                }                   
                 return;
             }
 
             if (Etape == "Client")
             {
-                ClientId = Common_functions.GetDatagridViewSelectedId(DgvList);
-                Etape = "Table1";
-                Gestion_Etapes();
+                if (DgvList.RowCount > 0)
+                {
+                    ClientId = Common_functions.GetDatagridViewSelectedId(DgvList);
+                    Etape = "Table1";
+                    Gestion_Etapes();
+                }                   
                 return;
             }
 
             if (Etape == "Table1")
             {
-                Enregistrements enregistrements = new Enregistrements();
-
-                Enregistrement1Id = Common_functions.GetDatagridViewSelectedId(DgvList);
-                Enregistrement1 = enregistrements.GetName(Enregistrement1Id);
-                Etape = "Table2";
-                Gestion_Etapes();
+                if (DgvList.RowCount > 0)
+                {
+                    Enregistrements enregistrements = new Enregistrements();
+                    Enregistrement1Id = Common_functions.GetDatagridViewSelectedId(DgvList);
+                    Enregistrement1 = enregistrements.GetName(Enregistrement1Id);
+                    Etape = "Table2";
+                    Gestion_Etapes();
+                }                  
                 return;
             }
 
             if (Etape == "Table2")
             {
-                Enregistrements enregistrements = new Enregistrements();
-
-                Enregistrement2Id = Common_functions.GetDatagridViewSelectedId(DgvList);
-                Enregistrement2 = enregistrements.GetName(Enregistrement2Id);
-                Etape = "Table3";
-                Gestion_Etapes();
+                if (DgvList.RowCount > 0)
+                {
+                    Enregistrements enregistrements = new Enregistrements();
+                    Enregistrement2Id = Common_functions.GetDatagridViewSelectedId(DgvList);
+                    Enregistrement2 = enregistrements.GetName(Enregistrement2Id);
+                    Etape = "Table3";
+                    Gestion_Etapes();
+                }                   
                 return;
             }
 
             if (Etape == "Table3")
             {
-                Enregistrements enregistrements = new Enregistrements();
-
-                Enregistrement3Id = Common_functions.GetDatagridViewSelectedId(DgvList);
-                Enregistrement3 = enregistrements.GetName(Enregistrement3Id);
-                Etape = "Table4";
-                Gestion_Etapes();
+                if (DgvList.RowCount > 0)
+                {
+                    Enregistrements enregistrements = new Enregistrements();
+                    Enregistrement3Id = Common_functions.GetDatagridViewSelectedId(DgvList);
+                    Enregistrement3 = enregistrements.GetName(Enregistrement3Id);
+                    Etape = "Table4";
+                    Gestion_Etapes();
+                }                  
                 return;
             }
 
             if (Etape == "Table4")
             {
-                Enregistrements enregistrements = new Enregistrements();
-
-                Enregistrement4Id = Common_functions.GetDatagridViewSelectedId(DgvList);
-                Enregistrement4 = enregistrements.GetName(Enregistrement4Id);
-                Etape = "Table5";
-                Gestion_Etapes();
+                if (DgvList.RowCount > 0)
+                {
+                    Enregistrements enregistrements = new Enregistrements();
+                    Enregistrement4Id = Common_functions.GetDatagridViewSelectedId(DgvList);
+                    Enregistrement4 = enregistrements.GetName(Enregistrement4Id);
+                    Etape = "Table5";
+                    Gestion_Etapes();
+                }                   
                 return;
             }
 
             if (Etape == "Table5")
             {
-                Enregistrements enregistrements = new Enregistrements();
-
-                Enregistrement5Id = Common_functions.GetDatagridViewSelectedId(DgvList);
-                Enregistrement5 = enregistrements.GetName(Enregistrement5Id);
-                Etape = "Table6";
-                Gestion_Etapes();
+                if (DgvList.RowCount > 0)
+                {
+                    Enregistrements enregistrements = new Enregistrements();
+                    Enregistrement5Id = Common_functions.GetDatagridViewSelectedId(DgvList);
+                    Enregistrement5 = enregistrements.GetName(Enregistrement5Id);
+                    Etape = "Table6";
+                    Gestion_Etapes();
+                }                    
                 return;
             }
 
             if (Etape == "Table6")
             {
-                Enregistrements enregistrements = new Enregistrements();
-
-                Enregistrement6Id = Common_functions.GetDatagridViewSelectedId(DgvList);
-                Enregistrement6 = enregistrements.GetName(Enregistrement6Id);
-                Etape = "Table7";
-                Gestion_Etapes();
+                if (DgvList.RowCount > 0)
+                {
+                    Enregistrements enregistrements = new Enregistrements();
+                    Enregistrement6Id = Common_functions.GetDatagridViewSelectedId(DgvList);
+                    Enregistrement6 = enregistrements.GetName(Enregistrement6Id);
+                    Etape = "Table7";
+                    Gestion_Etapes();
+                }                   
                 return;
             }
 
             if (Etape == "Table7")
             {
-                Enregistrements enregistrements = new Enregistrements();
-
-                Enregistrement7Id = Common_functions.GetDatagridViewSelectedId(DgvList);
-                Enregistrement7 = enregistrements.GetName(Enregistrement7Id);
-                Etape = "Fin";
-                Gestion_Etapes();
+                if (DgvList.RowCount > 0)
+                {
+                    Enregistrements enregistrements = new Enregistrements();
+                    Enregistrement7Id = Common_functions.GetDatagridViewSelectedId(DgvList);
+                    Enregistrement7 = enregistrements.GetName(Enregistrement7Id);
+                    Etape = "ChampLibre1";
+                    Gestion_Etapes();
+                }                   
                 return; 
+            }
+
+            if (Etape == "ChampLibre1")
+            {
+                if (lbMessage.Text.Trim().Length >= 2)
+                {
+                    ChampLibreName1 = ChampLibre1Name;
+                    ChampLibre1 = lbMessage.Text;
+                    Etape = "ChampLibre2";
+                    Gestion_Etapes();
+                }
+                return;
+            }
+
+            if (Etape == "ChampLibre2")
+            {
+                if (lbMessage.Text.Trim().Length >= 2)
+                {
+                    ChampLibreName2 = ChampLibre2Name;
+                    ChampLibre2 = lbMessage.Text;
+                    Etape = "ChampLibre3";
+                    Gestion_Etapes();
+                }
+                return;
+            }
+
+            if (Etape == "ChampLibre3")
+            {
+                if (lbMessage.Text.Trim().Length >= 2)
+                {
+                    ChampLibreName3 = ChampLibre3Name;
+                    ChampLibre3 = lbMessage.Text;
+                    Etape = "ChampLibre4";
+                    Gestion_Etapes();
+                }
+                return;
+            }
+
+            if (Etape == "ChampLibre4")
+            {
+                if (lbMessage.Text.Trim().Length >= 2)
+                {
+                    ChampLibreName4 = ChampLibre4Name;
+                    ChampLibre4 = lbMessage.Text;
+                    Etape = "Fin";
+                    Gestion_Etapes();
+                }
+                return;
             }
         }
 
@@ -1213,19 +1601,23 @@ namespace WidraSoft.UI
 
         private void btClavier_Click(object sender, EventArgs e)
         {
+            Clavier();
+        }
+
+        private void Clavier()
+        {
             if (panelClavier.Visible)
             {
                 panelClavier.Visible = false;
                 //lbMessage.Visible = false;
-                btRecherche.Text = Language_Manager.Localize("AFFICHER CLAVIER", vg_Lang); 
+                btRecherche.Text = Language_Manager.Localize("AFFICHER CLAVIER", vg_Lang);
             }
             else
             {
                 panelClavier.Visible = true;
                 //lbMessage.Visible = true;
-                btRecherche.Text = Language_Manager.Localize("MASQUER CLAVIER", vg_Lang); 
+                btRecherche.Text = Language_Manager.Localize("MASQUER CLAVIER", vg_Lang);
             }
-                   
         }
 
         private void Search(String text, string Etape)
@@ -1244,6 +1636,22 @@ namespace WidraSoft.UI
                 DataTable dt = new DataTable();
                 dt = camion.SearchBox_Terminal(text);
                 DgvList.DataSource = dt;
+                int RowsCount = dt.Rows.Count;
+                if (RowsCount <= 0)
+                    lbNotFound.Visible = true;
+                else
+                    lbNotFound.Visible = false;
+                if (Camion_Ajout > 0)
+                {
+                    if (text.Length > 1)
+                    {
+                        if (RowsCount <= 0)
+                            btAjouter.Visible = true;
+                        else
+                            btAjouter.Visible = false;
+                    }
+                }
+
             }
 
             if (Etape == "Firme")
@@ -1252,6 +1660,21 @@ namespace WidraSoft.UI
                 DataTable dt = new DataTable();
                 dt = firme.SearchBox(text);
                 DgvList.DataSource = dt;
+                int RowsCount = dt.Rows.Count;
+                if (RowsCount <= 0)
+                    lbNotFound.Visible = true;
+                else
+                    lbNotFound.Visible = false;
+                if (Firme_Ajout > 0)
+                {
+                    if (text.Length > 1)
+                    {
+                        if (dt.Rows.Count <= 0)
+                            btAjouter.Visible = true;
+                        else
+                            btAjouter.Visible = false;
+                    }
+                }
             }
 
             if (Etape == "Chauffeur")
@@ -1260,6 +1683,21 @@ namespace WidraSoft.UI
                 DataTable dt = new DataTable();
                 dt = chauffeur.SearchBox(text);
                 DgvList.DataSource = dt;
+                int RowsCount = dt.Rows.Count;
+                if (RowsCount <= 0)
+                    lbNotFound.Visible = true;
+                else
+                    lbNotFound.Visible = false;
+                if (Chauffeur_Ajout > 0)
+                {
+                    if (text.Length > 1)
+                    {
+                        if (dt.Rows.Count <= 0)
+                            btAjouter.Visible = true;
+                        else
+                            btAjouter.Visible = false;
+                    }
+                }
             }
 
             if (Etape == "Transporteur")
@@ -1268,6 +1706,21 @@ namespace WidraSoft.UI
                 DataTable dt = new DataTable();
                 dt = transporteur.SearchBox(text);
                 DgvList.DataSource = dt;
+                int RowsCount = dt.Rows.Count;
+                if (RowsCount <= 0)
+                    lbNotFound.Visible = true;
+                else
+                    lbNotFound.Visible = false;
+                if (Transporteur_Ajout > 0)
+                {
+                    if (text.Length > 1)
+                    {
+                        if (dt.Rows.Count <= 0)
+                            btAjouter.Visible = true;
+                        else
+                            btAjouter.Visible = false;
+                    }
+                }
             }
 
             if (Etape == "Produit")
@@ -1276,6 +1729,21 @@ namespace WidraSoft.UI
                 DataTable dt = new DataTable();
                 dt = produit.SearchBox(text);
                 DgvList.DataSource = dt;
+                int RowsCount = dt.Rows.Count;
+                if (RowsCount <= 0)
+                    lbNotFound.Visible = true;
+                else
+                    lbNotFound.Visible = false;
+                if (Produit_Ajout > 0)
+                {
+                    if (text.Length > 1)
+                    {
+                        if (dt.Rows.Count <= 0)
+                            btAjouter.Visible = true;
+                        else
+                            btAjouter.Visible = false;
+                    }
+                }
             }
 
             if (Etape == "Client")
@@ -1284,6 +1752,21 @@ namespace WidraSoft.UI
                 DataTable dt = new DataTable();
                 dt = client.SearchBox(text);
                 DgvList.DataSource = dt;
+                int RowsCount = dt.Rows.Count;
+                if (RowsCount <= 0)
+                    lbNotFound.Visible = true;
+                else
+                    lbNotFound.Visible = false;
+                if (Client_Ajout > 0)
+                {
+                    if (text.Length > 1)
+                    {
+                        if (dt.Rows.Count <= 0)
+                            btAjouter.Visible = true;
+                        else
+                            btAjouter.Visible = false;
+                    }
+                }
             }
 
             if (Etape == "Table1")
@@ -1292,6 +1775,21 @@ namespace WidraSoft.UI
                 DataTable dt = new DataTable();
                 dt = enregistrements.SearchBox(text, Table1Id);
                 DgvList.DataSource = dt;
+                int RowsCount = dt.Rows.Count;
+                if (RowsCount <= 0)
+                    lbNotFound.Visible = true;
+                else
+                    lbNotFound.Visible = false;
+                if (Table1_Ajout > 0)
+                {
+                    if (text.Length > 1)
+                    {
+                        if (dt.Rows.Count <= 0)
+                            btAjouter.Visible = true;
+                        else
+                            btAjouter.Visible = false;
+                    }
+                }
             }
 
             if (Etape == "Table2")
@@ -1309,6 +1807,21 @@ namespace WidraSoft.UI
                     dt = enregistrements.SearchBox(text, Table2Id);
                 }
                 DgvList.DataSource = dt;
+                int RowsCount = dt.Rows.Count;
+                if (RowsCount <= 0)
+                    lbNotFound.Visible = true;
+                else
+                    lbNotFound.Visible = false;
+                if (Table2_Ajout > 0)
+                {
+                    if (text.Length > 1)
+                    {
+                        if (dt.Rows.Count <= 0)
+                            btAjouter.Visible = true;
+                        else
+                            btAjouter.Visible = false;
+                    }
+                }
             }
 
             if (Etape == "Table3")
@@ -1326,6 +1839,21 @@ namespace WidraSoft.UI
                     dt = enregistrements.SearchBox(text, Table3Id);
                 }
                 DgvList.DataSource = dt;
+                int RowsCount = dt.Rows.Count;
+                if (RowsCount <= 0)
+                    lbNotFound.Visible = true;
+                else
+                    lbNotFound.Visible = false;
+                if (Table3_Ajout > 0)
+                {
+                    if (text.Length > 1)
+                    {
+                        if (dt.Rows.Count <= 0)
+                            btAjouter.Visible = true;
+                        else
+                            btAjouter.Visible = false;
+                    }
+                }
             }
 
             if (Etape == "Table4")
@@ -1343,6 +1871,21 @@ namespace WidraSoft.UI
                     dt = enregistrements.SearchBox(text, Table4Id);
                 }
                 DgvList.DataSource = dt;
+                int RowsCount = dt.Rows.Count;
+                if (RowsCount <= 0)
+                    lbNotFound.Visible = true;
+                else
+                    lbNotFound.Visible = false;
+                if (Table4_Ajout > 0)
+                {
+                    if (text.Length > 1)
+                    {
+                        if (dt.Rows.Count <= 0)
+                            btAjouter.Visible = true;
+                        else
+                            btAjouter.Visible = false;
+                    }
+                }
             }
 
             if (Etape == "Table5")
@@ -1360,6 +1903,21 @@ namespace WidraSoft.UI
                     dt = enregistrements.SearchBox(text, Table5Id);
                 }
                 DgvList.DataSource = dt;
+                int RowsCount = dt.Rows.Count;
+                if (RowsCount <= 0)
+                    lbNotFound.Visible = true;
+                else
+                    lbNotFound.Visible = false;
+                if (Table5_Ajout > 0)
+                {
+                    if (text.Length > 1)
+                    {
+                        if (dt.Rows.Count <= 0)
+                            btAjouter.Visible = true;
+                        else
+                            btAjouter.Visible = false;
+                    }
+                }
             }
 
             if (Etape == "Table6")
@@ -1377,6 +1935,21 @@ namespace WidraSoft.UI
                     dt = enregistrements.SearchBox(text, Table6Id);
                 }
                 DgvList.DataSource = dt;
+                int RowsCount = dt.Rows.Count;
+                if (RowsCount <= 0)
+                    lbNotFound.Visible = true;
+                else
+                    lbNotFound.Visible = false;
+                if (Table6_Ajout > 0)
+                {
+                    if (text.Length > 1)
+                    {
+                        if (dt.Rows.Count <= 0)
+                            btAjouter.Visible = true;
+                        else
+                            btAjouter.Visible = false;
+                    }
+                }
             }
 
             if (Etape == "Table7")
@@ -1394,6 +1967,21 @@ namespace WidraSoft.UI
                     dt = enregistrements.SearchBox(text, Table7Id);
                 }
                 DgvList.DataSource = dt;
+                int RowsCount = dt.Rows.Count;
+                if (RowsCount <= 0)
+                    lbNotFound.Visible = true;
+                else
+                    lbNotFound.Visible = false;
+                if (Table7_Ajout > 0)
+                {
+                    if (text.Length > 1)
+                    {
+                        if (dt.Rows.Count <= 0)
+                            btAjouter.Visible = true;
+                        else
+                            btAjouter.Visible = false;
+                    }
+                }
             }
         }
 
@@ -1801,9 +2389,17 @@ namespace WidraSoft.UI
                 lbMessage.Text = lbMessage.Text.Remove(lbMessage.Text.Length - 1);
                 if (lbMessage.Text.Length <= 0)
                 {
-                    Cancel_Search(lbMessage.Text, Etape);
-                    lbCount.Text = DgvList.RowCount.ToString();
-                    Init_Keyboard();
+                    if (vg_ChampLibre)
+                    {
+                        lbCount.Text = "";
+                    }
+                    else
+                    {
+                        Cancel_Search(lbMessage.Text, Etape);
+                        lbCount.Text = DgvList.RowCount.ToString();
+                        Init_Keyboard();
+                    }
+                    
                 }
             }              
         }
@@ -1812,9 +2408,17 @@ namespace WidraSoft.UI
         {
             if (lbMessage.Text.Length > 0)
             {
-                Search(lbMessage.Text, Etape);
-                lbCount.Text = DgvList.RowCount.ToString();
-                btAnnulerRecherche.Visible = true;
+                if (vg_ChampLibre)
+                {
+                    lbCount.Text = "";
+                }
+                else
+                {
+                    Search(lbMessage.Text, Etape);
+                    lbCount.Text = DgvList.RowCount.ToString();
+                    btAnnulerRecherche.Visible = true;
+                }
+                
             }           
         }
 
@@ -1834,6 +2438,494 @@ namespace WidraSoft.UI
         {
             if (lbMessage.Text.Length < 15)
                 lbMessage.Text = lbMessage.Text + " ";
+        }
+
+        private void btAjouter_Click(object sender, EventArgs e)
+        {
+            if (Etape == "Camion")
+            {
+                Camion camion = new Camion();
+                int maxid = 0;
+                try
+                {
+                    camion.Add("", lbMessage.Text, "", 0, 1, 0, "", 0, "", "");
+                    maxid = camion.GetMaxId();
+                }
+                catch
+                {
+                    throw;
+                }
+                CamionId = maxid;                               
+                Etape = "Firme";
+                Gestion_Etapes();
+                return;
+                
+            }
+
+            if (Etape == "Firme")
+            {
+                Firme firme = new Firme();
+                int maxid = 0;
+                try
+                {
+                    firme.Add("", lbMessage.Text, "", "", "", "", "", "", "", "", "", 1, 0, "", 0, "");
+                    maxid = firme.GetMaxId();
+                }
+                catch
+                {
+                    throw;
+                }
+                FirmeId = maxid;
+                Etape = "Chauffeur";
+                Gestion_Etapes();
+                return;
+            }
+
+            if (Etape == "Chauffeur")
+            {
+                Chauffeur chauffeur = new Chauffeur();
+                int maxid = 0;
+                try
+                {
+                    chauffeur.Add("", lbMessage.Text, "", "", "", "", "", "", "", "", 1, 0, "", 0, "");
+                    maxid = chauffeur.GetMaxId();
+                }
+                catch
+                {
+                    throw;
+                }
+                ChauffeurId = maxid;
+                Etape = "Transporteur";
+                Gestion_Etapes();
+                return;
+            }
+
+            if (Etape == "Transporteur")
+            {
+                Transporteur transporteur = new Transporteur();
+                int maxid = 0;
+                try
+                {
+                    transporteur.Add("", lbMessage.Text, "", "", "", "", "", "", "", "", "", 1, 0, "", 0, "");
+                    maxid = transporteur.GetMaxId();
+                }
+                catch
+                {
+                    throw;
+                }
+                TransporteurId = maxid;
+                Etape = "Produit";
+                Gestion_Etapes();
+                return;
+            }
+
+            if (Etape == "Produit")
+            {
+                Produit produit = new Produit();
+                int maxid = 0;
+                try
+                {
+                    produit.Add(lbMessage.Text, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0);
+                    maxid = produit.GetMaxId();
+                }
+                catch
+                {
+                    throw;
+                }
+                ProduitId = maxid;
+                Etape = "Client";
+                Gestion_Etapes();
+                return;
+            }
+
+            if (Etape == "Client")
+            {
+                Client client = new Client();
+                int maxid = 0;
+                try
+                {
+                    client.Add("", lbMessage.Text, 0, "", "", "", "", "", "", "", "", "", 1, 0, "", 0, "");
+                    maxid = client.GetMaxId();
+                }
+                catch
+                {
+                    throw;
+                }
+                ClientId = maxid;
+                Etape = "Table1";
+                Gestion_Etapes();
+                return;
+            }
+
+            if (Etape == "Table1")
+            {
+                Enregistrements enregistrements = new Enregistrements();
+                int maxid = 0;
+                try
+                {
+                    enregistrements.Add(Table1Id, lbMessage.Text, "", "", "", "", "", "", "", "", "", "", 0, "", 0, "", 0);
+                    maxid = enregistrements.GetMaxId();
+                }
+                catch
+                {
+                    throw;
+                }
+                Enregistrement1Id = maxid;
+                Enregistrement1 = enregistrements.GetName(Enregistrement1Id);
+                Etape = "Table2";
+                Gestion_Etapes();
+                return;
+            }
+
+            if (Etape == "Table2")
+            {
+                Tables tables = new Tables();
+                Enregistrements enregistrements = new Enregistrements();
+                int maxid = 0;
+                try
+                {
+                    if (tables.IsTableRelated(Table2Id))
+                    {
+                        if (tables.GetParentTableId(Table2Id) == Table1Id)
+                        {
+                            enregistrements.Add(Table2Id, lbMessage.Text, "", "", "", "", "", "", "", "", "", "", 0, "", 0, "", Enregistrement1Id);
+                            maxid = enregistrements.GetMaxId();
+                        }
+                    }
+                    else
+                    {
+                        enregistrements.Add(Table2Id, lbMessage.Text, "", "", "", "", "", "", "", "", "", "", 0, "", 0, "", 0);
+                        maxid = enregistrements.GetMaxId();
+                    }
+                }
+                catch
+                {
+                    throw;
+                }
+                
+                Enregistrement2Id = maxid;
+                Enregistrement2 = enregistrements.GetName(Enregistrement2Id);
+                Etape = "Table3";
+                Gestion_Etapes();
+                return;
+            }
+
+            if (Etape == "Table3")
+            {
+                Tables tables = new Tables();
+                Enregistrements enregistrements = new Enregistrements();
+                int maxid = 0;
+                try
+                {
+                    if (tables.IsTableRelated(Table3Id))
+                    {
+                        if (tables.GetParentTableId(Table3Id) == Table2Id)
+                        {
+                            enregistrements.Add(Table3Id, lbMessage.Text, "", "", "", "", "", "", "", "", "", "", 0, "", 0, "", Enregistrement2Id);
+                            maxid = enregistrements.GetMaxId();
+                        }
+                    }
+                    else
+                    {
+                        enregistrements.Add(Table3Id, lbMessage.Text, "", "", "", "", "", "", "", "", "", "", 0, "", 0, "", 0);
+                        maxid = enregistrements.GetMaxId();
+                    }
+                }
+                catch
+                {
+                    throw;
+                }
+
+                Enregistrement3Id = maxid;
+                Enregistrement3 = enregistrements.GetName(Enregistrement3Id);
+                Etape = "Table4";
+                Gestion_Etapes();
+                return;
+            }
+
+            if (Etape == "Table4")
+            {
+                Tables tables = new Tables();
+                Enregistrements enregistrements = new Enregistrements();
+                int maxid = 0;
+                try
+                {
+                    if (tables.IsTableRelated(Table4Id))
+                    {
+                        if (tables.GetParentTableId(Table4Id) == Table3Id)
+                        {
+                            enregistrements.Add(Table4Id, lbMessage.Text, "", "", "", "", "", "", "", "", "", "", 0, "", 0, "", Enregistrement3Id);
+                            maxid = enregistrements.GetMaxId();
+                        }
+                    }
+                    else
+                    {
+                        enregistrements.Add(Table4Id, lbMessage.Text, "", "", "", "", "", "", "", "", "", "", 0, "", 0, "", 0);
+                        maxid = enregistrements.GetMaxId();
+                    }
+                }
+                catch
+                {
+                    throw;
+                }
+
+                Enregistrement4Id = maxid;
+                Enregistrement4 = enregistrements.GetName(Enregistrement4Id);
+                Etape = "Table5";
+                Gestion_Etapes();
+                return;
+            }
+
+            if (Etape == "Table5")
+            {
+                Tables tables = new Tables();
+                Enregistrements enregistrements = new Enregistrements();
+                int maxid = 0;
+                try
+                {
+                    if (tables.IsTableRelated(Table5Id))
+                    {
+                        if (tables.GetParentTableId(Table5Id) == Table4Id)
+                        {
+                            enregistrements.Add(Table5Id, lbMessage.Text, "", "", "", "", "", "", "", "", "", "", 0, "", 0, "", Enregistrement4Id);
+                            maxid = enregistrements.GetMaxId();
+                        }
+                    }
+                    else
+                    {
+                        enregistrements.Add(Table5Id, lbMessage.Text, "", "", "", "", "", "", "", "", "", "", 0, "", 0, "", 0);
+                        maxid = enregistrements.GetMaxId();
+                    }
+                }
+                catch
+                {
+                    throw;
+                }
+
+                Enregistrement5Id = maxid;
+                Enregistrement5 = enregistrements.GetName(Enregistrement5Id);
+                Etape = "Table6";
+                Gestion_Etapes();
+                return;
+            }
+
+            if (Etape == "Table6")
+            {
+                Tables tables = new Tables();
+                Enregistrements enregistrements = new Enregistrements();
+                int maxid = 0;
+                try
+                {
+                    if (tables.IsTableRelated(Table6Id))
+                    {
+                        if (tables.GetParentTableId(Table6Id) == Table5Id)
+                        {
+                            enregistrements.Add(Table6Id, lbMessage.Text, "", "", "", "", "", "", "", "", "", "", 0, "", 0, "", Enregistrement5Id);
+                            maxid = enregistrements.GetMaxId();
+                        }
+                    }
+                    else
+                    {
+                        enregistrements.Add(Table6Id, lbMessage.Text, "", "", "", "", "", "", "", "", "", "", 0, "", 0, "", 0);
+                        maxid = enregistrements.GetMaxId();
+                    }
+                }
+                catch
+                {
+                    throw;
+                }
+
+                Enregistrement6Id = maxid;
+                Enregistrement6 = enregistrements.GetName(Enregistrement6Id);
+                Etape = "Table7";
+                Gestion_Etapes();
+                return;
+            }
+
+            if (Etape == "Table7")
+            {
+                Tables tables = new Tables();
+                Enregistrements enregistrements = new Enregistrements();
+                int maxid = 0;
+                try
+                {
+                    if (tables.IsTableRelated(Table7Id))
+                    {
+                        if (tables.GetParentTableId(Table7Id) == Table6Id)
+                        {
+                            enregistrements.Add(Table7Id, lbMessage.Text, "", "", "", "", "", "", "", "", "", "", 0, "", 0, "", Enregistrement6Id);
+                            maxid = enregistrements.GetMaxId();
+                        }
+                    }
+                    else
+                    {
+                        enregistrements.Add(Table7Id, lbMessage.Text, "", "", "", "", "", "", "", "", "", "", 0, "", 0, "", 0);
+                        maxid = enregistrements.GetMaxId();
+                    }
+                }
+                catch
+                {
+                    throw;
+                }
+
+                Enregistrement7Id = maxid;
+                Enregistrement7 = enregistrements.GetName(Enregistrement7Id);
+                Etape = "Fin";
+                Gestion_Etapes();
+                return;
+            }
+        }
+
+        private void btIgnorer_Click(object sender, EventArgs e)
+        {
+            if (Etape == "Camion")
+            {
+                CamionId = 0;
+                Etape = "Firme";
+                Gestion_Etapes();
+                return;
+            }
+
+            if (Etape == "Firme")
+            {          
+                FirmeId = 0;
+                Etape = "Chauffeur";
+                Gestion_Etapes();               
+                return;
+            }
+
+            if (Etape == "Chauffeur")
+            {
+                ChauffeurId = 0;
+                Etape = "Transporteur";
+                Gestion_Etapes();               
+                return;
+            }
+
+            if (Etape == "Transporteur")
+            {
+                TransporteurId = 0;
+                Etape = "Produit";
+                Gestion_Etapes(); 
+                return;
+            }
+
+            if (Etape == "Produit")
+            {
+                ProduitId = 0;
+                Etape = "Client";
+                Gestion_Etapes();
+                return;
+            }
+
+            if (Etape == "Client")
+            {
+                ClientId = 0;
+                Etape = "Table1";
+                Gestion_Etapes();
+                return;
+            }
+
+            if (Etape == "Table1")
+            {;
+                Enregistrement1Id = 0;
+                Enregistrement1 = "";
+                Etape = "Table2";
+                Gestion_Etapes();
+                return;
+            }
+
+            if (Etape == "Table2")
+            {
+                Enregistrement2Id = 0;
+                Enregistrement2 = "";
+                Etape = "Table3";
+                Gestion_Etapes();
+                return;
+            }
+
+            if (Etape == "Table3")
+            {
+                Enregistrement3Id = 0;
+                Enregistrement3 = "";
+                Etape = "Table4";
+                Gestion_Etapes();
+                return;
+            }
+
+            if (Etape == "Table4")
+            {
+                Enregistrement4Id = 0;
+                Enregistrement4 = "";
+                Etape = "Table5";
+                Gestion_Etapes();
+                return;
+            }
+
+            if (Etape == "Table5")
+            {
+         
+                Enregistrement5Id = 0;
+                Enregistrement5 = "";
+                Etape = "Table6";
+                Gestion_Etapes();
+                return;
+            }
+
+            if (Etape == "Table6")
+            {
+                
+                Enregistrement6Id = 0;
+                Enregistrement6 = "";
+                Etape = "Table7";
+                Gestion_Etapes();
+                return;
+            }
+
+            if (Etape == "Table7")
+            {
+                Enregistrement7Id = 0;
+                Enregistrement7 = "";
+                Etape = "ChampLibre1";
+                Gestion_Etapes();
+                return;
+            }
+
+            if (Etape == "ChampLibre1")
+            {
+                ChampLibreName1 = "";
+                ChampLibre1 = "";
+                Etape = "ChampLibre2";
+                Gestion_Etapes();
+                return;
+            }
+
+            if (Etape == "ChampLibre2")
+            {
+                ChampLibreName2 = "";
+                ChampLibre2 = "";
+                Etape = "ChampLibre3";
+                Gestion_Etapes();
+                return;
+            }
+
+            if (Etape == "ChampLibre3")
+            {
+                ChampLibreName3 = "";
+                ChampLibre3 = "";
+                Etape = "ChampLibre4";
+                Gestion_Etapes();
+                return;
+            }
+
+            if (Etape == "ChampLibre4")
+            {
+                ChampLibreName4 = "";
+                ChampLibre4 = "";
+                Etape = "Fin";
+                Gestion_Etapes();
+                return;
+            }
         }
     }
 }

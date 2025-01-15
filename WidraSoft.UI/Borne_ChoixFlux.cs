@@ -18,7 +18,8 @@ namespace WidraSoft.UI
         bool vg_DemanderParametre;
         int vg_ScanCamionId;
         int vg_P;
-        public Borne_ChoixFlux(string Lang, int PontId, bool Demander_Paramatre, int ScanCamionId, int P)
+        int vg_Tare;
+        public Borne_ChoixFlux(string Lang, int PontId, bool Demander_Paramatre, int ScanCamionId, int P, int Tare)
         {
             InitializeComponent();
             vg_Lang = Lang;
@@ -26,6 +27,7 @@ namespace WidraSoft.UI
             vg_DemanderParametre = Demander_Paramatre;
             vg_ScanCamionId = ScanCamionId;
             vg_P = P;
+            vg_Tare = Tare;
         }
 
         private void Borne_ChoixFlux_Load(object sender, EventArgs e)
@@ -91,14 +93,14 @@ namespace WidraSoft.UI
 
         private void btChargement_Click(object sender, EventArgs e)
         {
-            Form form = new Borne_PremierePesee(vg_Lang, vg_PontId, vg_DemanderParametre, "Out", vg_ScanCamionId, vg_P);
+            Form form = new Borne_PremierePesee(vg_Lang, vg_PontId, vg_DemanderParametre, "Out", vg_ScanCamionId, vg_P, vg_Tare);
             form.Show();
             Close();
         }
 
         private void btDechargement_Click(object sender, EventArgs e)
         {
-            Form form = new Borne_PremierePesee(vg_Lang, vg_PontId, vg_DemanderParametre, "In", vg_ScanCamionId, vg_P);
+            Form form = new Borne_PremierePesee(vg_Lang, vg_PontId, vg_DemanderParametre, "In", vg_ScanCamionId, vg_P, vg_Tare);
             form.Show();
             Close();
         }

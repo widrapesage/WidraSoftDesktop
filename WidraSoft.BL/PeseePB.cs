@@ -116,6 +116,19 @@ namespace WidraSoft.BL
             }
         }
 
+        public Int32 GetPoids2ById(Int32 Id)
+        {
+            try
+            {
+                PeseePBDA peseePBDA = new PeseePBDA();
+                return peseePBDA.GetPoids2ById(Id);
+            }
+            catch
+            {
+                throw;
+            }
+        }
+
         public String GetShortResume(Int32 Id)
         {
             try
@@ -172,6 +185,21 @@ namespace WidraSoft.BL
                 throw;
             }
         }
+
+        public void Update_Borne(Int32 Id, Int32 Poids1, DateTime DateHeurePoids1, Int32 PoidsNet, String UserInfo, String EtatPesee)
+        {
+            try
+            {
+                PeseePBDA peseePBDA = new PeseePBDA();
+                peseePBDA.Update_Borne(Id, Poids1, DateHeurePoids1, PoidsNet,
+                            UserInfo, EtatPesee);
+            }
+            catch
+            {
+                throw;
+            }
+        }
+
 
         public void Update_UI(Int32 Id,String Flux, Int32 FirmeId, Int32 CamionId, Int32 ChauffeurId, Int32 TransporteurId, Int32 ProduitId, Int32 ClientId, Int32 EnregistrementsId1,
             Int32 TablesId1, String TablesName1, String Enregistrements1, Int32 EnregistrementsId2, Int32 TablesId2, String TablesName2, String Enregistrements2, Int32 EnregistrementsId3, Int32 TablesId3, String TablesName3, String Enregistrements3,

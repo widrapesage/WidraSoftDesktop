@@ -76,6 +76,19 @@ namespace WidraSoft.BL
             }
         }
 
+        public int GetMaxId()
+        {
+            try
+            {
+                ProduitDA produit = new ProduitDA();
+                return produit.GetMaxId();
+            }
+            catch
+            {
+                throw;
+            }
+        }
+
         public void Add(String Designation, Int32 GroupeProduitId, Int32 EstEntrant, Int32 EstSortant, Int32 Valide,
            Int32 PoidsAlerteMin, Int32 ActiverAlerteMin, Int32 PoidsAlerteMax, Int32 ActiverAlerteMax, Int32 EmpecherTicketSiAlerte,
            Int32 Dechet, Int32 TypeDechetId)

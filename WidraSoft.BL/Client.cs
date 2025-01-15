@@ -75,6 +75,19 @@ namespace WidraSoft.BL
             }
         }
 
+        public int GetMaxId()
+        {
+            try
+            {
+                ClientDA client = new ClientDA();
+                return client.GetMaxId();
+            }
+            catch
+            {
+                throw;
+            }
+        }
+
         public void Add(String Badge, String Designation, Int32 TypeClientId, String Adresse, String CodePostal, String Localite,
             String Pays, String Telephone,
             String Email, String NumTVA, String SiteWeb_Url, String Observations, Int32 Valide, Int32 Bloque,

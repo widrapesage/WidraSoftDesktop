@@ -58,121 +58,22 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="lbTexte.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>None</value>
-  </data>
-  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="lbTexte.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="lbTexte.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Corbel, 28pt, style=Bold</value>
-  </data>
-  <data name="lbTexte.Location" type="System.Drawing.Point, System.Drawing">
-    <value>282, 243</value>
-  </data>
-  <data name="lbTexte.Size" type="System.Drawing.Size, System.Drawing">
-    <value>343, 46</value>
-  </data>
-  <data name="lbTexte.TabIndex" type="System.Int32, mscorlib">
-    <value>4</value>
-  </data>
-  <data name="lbTexte.Text" xml:space="preserve">
-    <value>Confirmer le poids 2</value>
-  </data>
-  <data name="&gt;&gt;lbTexte.Name" xml:space="preserve">
-    <value>lbTexte</value>
-  </data>
-  <data name="&gt;&gt;lbTexte.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;lbTexte.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;lbTexte.ZOrder" xml:space="preserve">
-    <value>7</value>
-  </data>
-  <data name="btAnnuler.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>None</value>
-  </data>
-  <data name="btAnnuler.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
-    <value>Flat</value>
-  </data>
-  <data name="btAnnuler.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Corbel, 15pt, style=Bold</value>
-  </data>
-  <data name="btAnnuler.Location" type="System.Drawing.Point, System.Drawing">
-    <value>568, 310</value>
-  </data>
-  <data name="btAnnuler.Size" type="System.Drawing.Size, System.Drawing">
-    <value>177, 104</value>
-  </data>
-  <data name="btAnnuler.TabIndex" type="System.Int32, mscorlib">
-    <value>122</value>
-  </data>
-  <data name="btAnnuler.Text" xml:space="preserve">
-    <value>ANNULER</value>
-  </data>
-  <data name="&gt;&gt;btAnnuler.Name" xml:space="preserve">
-    <value>btAnnuler</value>
-  </data>
-  <data name="&gt;&gt;btAnnuler.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;btAnnuler.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;btAnnuler.ZOrder" xml:space="preserve">
-    <value>5</value>
-  </data>
-  <data name="btValider.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>None</value>
-  </data>
-  <data name="btValider.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
-    <value>Flat</value>
-  </data>
-  <data name="btValider.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Corbel, 15pt, style=Bold</value>
-  </data>
-  <data name="btValider.Location" type="System.Drawing.Point, System.Drawing">
-    <value>209, 310</value>
-  </data>
-  <data name="btValider.Size" type="System.Drawing.Size, System.Drawing">
-    <value>177, 104</value>
-  </data>
-  <data name="btValider.TabIndex" type="System.Int32, mscorlib">
-    <value>121</value>
-  </data>
-  <data name="btValider.Text" xml:space="preserve">
-    <value>CONFIRMER</value>
-  </data>
-  <data name="&gt;&gt;btValider.Name" xml:space="preserve">
-    <value>btValider</value>
-  </data>
-  <data name="&gt;&gt;btValider.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;btValider.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;btValider.ZOrder" xml:space="preserve">
-    <value>6</value>
-  </data>
   <data name="txtPoids.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>None</value>
   </data>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="txtPoids.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Calibri, 60pt, style=Bold, Italic</value>
+    <value>Calibri, 40pt, style=Bold, Italic</value>
   </data>
   <data name="txtPoids.Location" type="System.Drawing.Point, System.Drawing">
-    <value>209, 14</value>
+    <value>224, 12</value>
   </data>
   <data name="txtPoids.Size" type="System.Drawing.Size, System.Drawing">
-    <value>536, 98</value>
+    <value>444, 66</value>
   </data>
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="txtPoids.TabIndex" type="System.Int32, mscorlib">
-    <value>139</value>
+    <value>140</value>
   </data>
   <data name="txtPoids.TextAlign" type="System.Windows.Forms.HorizontalAlignment, System.Windows.Forms">
     <value>Center</value>
@@ -187,52 +88,649 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;txtPoids.ZOrder" xml:space="preserve">
-    <value>4</value>
+    <value>6</value>
   </data>
-  <data name="lbMessage.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+  <data name="panelClavier.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>None</value>
   </data>
-  <data name="lbMessage.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Calibri, 18pt, style=Bold</value>
+  <data name="&gt;&gt;btEffacer.Name" xml:space="preserve">
+    <value>btEffacer</value>
   </data>
-  <data name="lbMessage.Location" type="System.Drawing.Point, System.Drawing">
-    <value>209, 117</value>
+  <data name="&gt;&gt;btEffacer.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="lbMessage.Size" type="System.Drawing.Size, System.Drawing">
-    <value>536, 118</value>
+  <data name="&gt;&gt;btEffacer.Parent" xml:space="preserve">
+    <value>panelClavier</value>
   </data>
-  <data name="lbMessage.TabIndex" type="System.Int32, mscorlib">
-    <value>140</value>
+  <data name="&gt;&gt;btEffacer.ZOrder" xml:space="preserve">
+    <value>0</value>
   </data>
-  <data name="lbMessage.Text" xml:space="preserve">
-    <value>..</value>
+  <data name="&gt;&gt;bt_0.Name" xml:space="preserve">
+    <value>bt_0</value>
   </data>
-  <data name="lbMessage.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>MiddleCenter</value>
+  <data name="&gt;&gt;bt_0.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;lbMessage.Name" xml:space="preserve">
-    <value>lbMessage</value>
+  <data name="&gt;&gt;bt_0.Parent" xml:space="preserve">
+    <value>panelClavier</value>
   </data>
-  <data name="&gt;&gt;lbMessage.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="&gt;&gt;bt_0.ZOrder" xml:space="preserve">
+    <value>1</value>
   </data>
-  <data name="&gt;&gt;lbMessage.Parent" xml:space="preserve">
+  <data name="&gt;&gt;bt_9.Name" xml:space="preserve">
+    <value>bt_9</value>
+  </data>
+  <data name="&gt;&gt;bt_9.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;bt_9.Parent" xml:space="preserve">
+    <value>panelClavier</value>
+  </data>
+  <data name="&gt;&gt;bt_9.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;bt_8.Name" xml:space="preserve">
+    <value>bt_8</value>
+  </data>
+  <data name="&gt;&gt;bt_8.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;bt_8.Parent" xml:space="preserve">
+    <value>panelClavier</value>
+  </data>
+  <data name="&gt;&gt;bt_8.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;bt_7.Name" xml:space="preserve">
+    <value>bt_7</value>
+  </data>
+  <data name="&gt;&gt;bt_7.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;bt_7.Parent" xml:space="preserve">
+    <value>panelClavier</value>
+  </data>
+  <data name="&gt;&gt;bt_7.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="&gt;&gt;bt_6.Name" xml:space="preserve">
+    <value>bt_6</value>
+  </data>
+  <data name="&gt;&gt;bt_6.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;bt_6.Parent" xml:space="preserve">
+    <value>panelClavier</value>
+  </data>
+  <data name="&gt;&gt;bt_6.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="&gt;&gt;bt_5.Name" xml:space="preserve">
+    <value>bt_5</value>
+  </data>
+  <data name="&gt;&gt;bt_5.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;bt_5.Parent" xml:space="preserve">
+    <value>panelClavier</value>
+  </data>
+  <data name="&gt;&gt;bt_5.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="&gt;&gt;bt_4.Name" xml:space="preserve">
+    <value>bt_4</value>
+  </data>
+  <data name="&gt;&gt;bt_4.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;bt_4.Parent" xml:space="preserve">
+    <value>panelClavier</value>
+  </data>
+  <data name="&gt;&gt;bt_4.ZOrder" xml:space="preserve">
+    <value>7</value>
+  </data>
+  <data name="&gt;&gt;bt_3.Name" xml:space="preserve">
+    <value>bt_3</value>
+  </data>
+  <data name="&gt;&gt;bt_3.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;bt_3.Parent" xml:space="preserve">
+    <value>panelClavier</value>
+  </data>
+  <data name="&gt;&gt;bt_3.ZOrder" xml:space="preserve">
+    <value>8</value>
+  </data>
+  <data name="&gt;&gt;bt_2.Name" xml:space="preserve">
+    <value>bt_2</value>
+  </data>
+  <data name="&gt;&gt;bt_2.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;bt_2.Parent" xml:space="preserve">
+    <value>panelClavier</value>
+  </data>
+  <data name="&gt;&gt;bt_2.ZOrder" xml:space="preserve">
+    <value>9</value>
+  </data>
+  <data name="&gt;&gt;bt_1.Name" xml:space="preserve">
+    <value>bt_1</value>
+  </data>
+  <data name="&gt;&gt;bt_1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;bt_1.Parent" xml:space="preserve">
+    <value>panelClavier</value>
+  </data>
+  <data name="&gt;&gt;bt_1.ZOrder" xml:space="preserve">
+    <value>10</value>
+  </data>
+  <data name="panelClavier.Location" type="System.Drawing.Point, System.Drawing">
+    <value>224, 89</value>
+  </data>
+  <data name="panelClavier.Size" type="System.Drawing.Size, System.Drawing">
+    <value>444, 265</value>
+  </data>
+  <data name="panelClavier.TabIndex" type="System.Int32, mscorlib">
+    <value>141</value>
+  </data>
+  <data name="&gt;&gt;panelClavier.Name" xml:space="preserve">
+    <value>panelClavier</value>
+  </data>
+  <data name="&gt;&gt;panelClavier.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;panelClavier.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
-  <data name="&gt;&gt;lbMessage.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;panelClavier.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="btEffacer.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>None</value>
+  </data>
+  <data name="btEffacer.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>Flat</value>
+  </data>
+  <data name="btEffacer.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Corbel, 16pt, style=Bold</value>
+  </data>
+  <data name="btEffacer.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="btEffacer.Location" type="System.Drawing.Point, System.Drawing">
+    <value>252, 191</value>
+  </data>
+  <data name="btEffacer.Size" type="System.Drawing.Size, System.Drawing">
+    <value>57, 53</value>
+  </data>
+  <data name="btEffacer.TabIndex" type="System.Int32, mscorlib">
+    <value>169</value>
+  </data>
+  <data name="btEffacer.Text" xml:space="preserve">
+    <value>&lt;---</value>
+  </data>
+  <data name="&gt;&gt;btEffacer.Name" xml:space="preserve">
+    <value>btEffacer</value>
+  </data>
+  <data name="&gt;&gt;btEffacer.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btEffacer.Parent" xml:space="preserve">
+    <value>panelClavier</value>
+  </data>
+  <data name="&gt;&gt;btEffacer.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="bt_0.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>None</value>
+  </data>
+  <data name="bt_0.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>Flat</value>
+  </data>
+  <data name="bt_0.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Corbel, 20pt, style=Bold</value>
+  </data>
+  <data name="bt_0.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="bt_0.Location" type="System.Drawing.Point, System.Drawing">
+    <value>189, 191</value>
+  </data>
+  <data name="bt_0.Size" type="System.Drawing.Size, System.Drawing">
+    <value>57, 53</value>
+  </data>
+  <data name="bt_0.TabIndex" type="System.Int32, mscorlib">
+    <value>166</value>
+  </data>
+  <data name="bt_0.Text" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;bt_0.Name" xml:space="preserve">
+    <value>bt_0</value>
+  </data>
+  <data name="&gt;&gt;bt_0.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;bt_0.Parent" xml:space="preserve">
+    <value>panelClavier</value>
+  </data>
+  <data name="&gt;&gt;bt_0.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="bt_9.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>None</value>
+  </data>
+  <data name="bt_9.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>Flat</value>
+  </data>
+  <data name="bt_9.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Corbel, 20pt, style=Bold</value>
+  </data>
+  <data name="bt_9.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="bt_9.Location" type="System.Drawing.Point, System.Drawing">
+    <value>252, 132</value>
+  </data>
+  <data name="bt_9.Size" type="System.Drawing.Size, System.Drawing">
+    <value>57, 53</value>
+  </data>
+  <data name="bt_9.TabIndex" type="System.Int32, mscorlib">
+    <value>165</value>
+  </data>
+  <data name="bt_9.Text" xml:space="preserve">
+    <value>9</value>
+  </data>
+  <data name="&gt;&gt;bt_9.Name" xml:space="preserve">
+    <value>bt_9</value>
+  </data>
+  <data name="&gt;&gt;bt_9.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;bt_9.Parent" xml:space="preserve">
+    <value>panelClavier</value>
+  </data>
+  <data name="&gt;&gt;bt_9.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="bt_8.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>None</value>
+  </data>
+  <data name="bt_8.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>Flat</value>
+  </data>
+  <data name="bt_8.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Corbel, 20pt, style=Bold</value>
+  </data>
+  <data name="bt_8.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="bt_8.Location" type="System.Drawing.Point, System.Drawing">
+    <value>189, 132</value>
+  </data>
+  <data name="bt_8.Size" type="System.Drawing.Size, System.Drawing">
+    <value>57, 53</value>
+  </data>
+  <data name="bt_8.TabIndex" type="System.Int32, mscorlib">
+    <value>164</value>
+  </data>
+  <data name="bt_8.Text" xml:space="preserve">
+    <value>8</value>
+  </data>
+  <data name="&gt;&gt;bt_8.Name" xml:space="preserve">
+    <value>bt_8</value>
+  </data>
+  <data name="&gt;&gt;bt_8.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;bt_8.Parent" xml:space="preserve">
+    <value>panelClavier</value>
+  </data>
+  <data name="&gt;&gt;bt_8.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="bt_7.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>None</value>
+  </data>
+  <data name="bt_7.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>Flat</value>
+  </data>
+  <data name="bt_7.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Corbel, 20pt, style=Bold</value>
+  </data>
+  <data name="bt_7.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="bt_7.Location" type="System.Drawing.Point, System.Drawing">
+    <value>126, 132</value>
+  </data>
+  <data name="bt_7.Size" type="System.Drawing.Size, System.Drawing">
+    <value>57, 53</value>
+  </data>
+  <data name="bt_7.TabIndex" type="System.Int32, mscorlib">
+    <value>163</value>
+  </data>
+  <data name="bt_7.Text" xml:space="preserve">
+    <value>7</value>
+  </data>
+  <data name="&gt;&gt;bt_7.Name" xml:space="preserve">
+    <value>bt_7</value>
+  </data>
+  <data name="&gt;&gt;bt_7.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;bt_7.Parent" xml:space="preserve">
+    <value>panelClavier</value>
+  </data>
+  <data name="&gt;&gt;bt_7.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="bt_6.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>None</value>
+  </data>
+  <data name="bt_6.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>Flat</value>
+  </data>
+  <data name="bt_6.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Corbel, 20pt, style=Bold</value>
+  </data>
+  <data name="bt_6.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="bt_6.Location" type="System.Drawing.Point, System.Drawing">
+    <value>252, 73</value>
+  </data>
+  <data name="bt_6.Size" type="System.Drawing.Size, System.Drawing">
+    <value>57, 53</value>
+  </data>
+  <data name="bt_6.TabIndex" type="System.Int32, mscorlib">
+    <value>162</value>
+  </data>
+  <data name="bt_6.Text" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="&gt;&gt;bt_6.Name" xml:space="preserve">
+    <value>bt_6</value>
+  </data>
+  <data name="&gt;&gt;bt_6.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;bt_6.Parent" xml:space="preserve">
+    <value>panelClavier</value>
+  </data>
+  <data name="&gt;&gt;bt_6.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="bt_5.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>None</value>
+  </data>
+  <data name="bt_5.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>Flat</value>
+  </data>
+  <data name="bt_5.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Corbel, 20pt, style=Bold</value>
+  </data>
+  <data name="bt_5.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="bt_5.Location" type="System.Drawing.Point, System.Drawing">
+    <value>189, 73</value>
+  </data>
+  <data name="bt_5.Size" type="System.Drawing.Size, System.Drawing">
+    <value>57, 53</value>
+  </data>
+  <data name="bt_5.TabIndex" type="System.Int32, mscorlib">
+    <value>161</value>
+  </data>
+  <data name="bt_5.Text" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="&gt;&gt;bt_5.Name" xml:space="preserve">
+    <value>bt_5</value>
+  </data>
+  <data name="&gt;&gt;bt_5.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;bt_5.Parent" xml:space="preserve">
+    <value>panelClavier</value>
+  </data>
+  <data name="&gt;&gt;bt_5.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="bt_4.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>None</value>
+  </data>
+  <data name="bt_4.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>Flat</value>
+  </data>
+  <data name="bt_4.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Corbel, 20pt, style=Bold</value>
+  </data>
+  <data name="bt_4.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="bt_4.Location" type="System.Drawing.Point, System.Drawing">
+    <value>126, 73</value>
+  </data>
+  <data name="bt_4.Size" type="System.Drawing.Size, System.Drawing">
+    <value>57, 53</value>
+  </data>
+  <data name="bt_4.TabIndex" type="System.Int32, mscorlib">
+    <value>160</value>
+  </data>
+  <data name="bt_4.Text" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="&gt;&gt;bt_4.Name" xml:space="preserve">
+    <value>bt_4</value>
+  </data>
+  <data name="&gt;&gt;bt_4.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;bt_4.Parent" xml:space="preserve">
+    <value>panelClavier</value>
+  </data>
+  <data name="&gt;&gt;bt_4.ZOrder" xml:space="preserve">
+    <value>7</value>
+  </data>
+  <data name="bt_3.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>None</value>
+  </data>
+  <data name="bt_3.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>Flat</value>
+  </data>
+  <data name="bt_3.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Corbel, 20pt, style=Bold</value>
+  </data>
+  <data name="bt_3.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="bt_3.Location" type="System.Drawing.Point, System.Drawing">
+    <value>252, 14</value>
+  </data>
+  <data name="bt_3.Size" type="System.Drawing.Size, System.Drawing">
+    <value>57, 53</value>
+  </data>
+  <data name="bt_3.TabIndex" type="System.Int32, mscorlib">
+    <value>159</value>
+  </data>
+  <data name="bt_3.Text" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;bt_3.Name" xml:space="preserve">
+    <value>bt_3</value>
+  </data>
+  <data name="&gt;&gt;bt_3.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;bt_3.Parent" xml:space="preserve">
+    <value>panelClavier</value>
+  </data>
+  <data name="&gt;&gt;bt_3.ZOrder" xml:space="preserve">
+    <value>8</value>
+  </data>
+  <data name="bt_2.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>None</value>
+  </data>
+  <data name="bt_2.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>Flat</value>
+  </data>
+  <data name="bt_2.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Corbel, 20pt, style=Bold</value>
+  </data>
+  <data name="bt_2.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="bt_2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>189, 14</value>
+  </data>
+  <data name="bt_2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>57, 53</value>
+  </data>
+  <data name="bt_2.TabIndex" type="System.Int32, mscorlib">
+    <value>158</value>
+  </data>
+  <data name="bt_2.Text" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;bt_2.Name" xml:space="preserve">
+    <value>bt_2</value>
+  </data>
+  <data name="&gt;&gt;bt_2.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;bt_2.Parent" xml:space="preserve">
+    <value>panelClavier</value>
+  </data>
+  <data name="&gt;&gt;bt_2.ZOrder" xml:space="preserve">
+    <value>9</value>
+  </data>
+  <data name="bt_1.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>None</value>
+  </data>
+  <data name="bt_1.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>Flat</value>
+  </data>
+  <data name="bt_1.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Corbel, 20pt, style=Bold</value>
+  </data>
+  <data name="bt_1.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="bt_1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>126, 14</value>
+  </data>
+  <data name="bt_1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>57, 53</value>
+  </data>
+  <data name="bt_1.TabIndex" type="System.Int32, mscorlib">
+    <value>157</value>
+  </data>
+  <data name="bt_1.Text" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;bt_1.Name" xml:space="preserve">
+    <value>bt_1</value>
+  </data>
+  <data name="&gt;&gt;bt_1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;bt_1.Parent" xml:space="preserve">
+    <value>panelClavier</value>
+  </data>
+  <data name="&gt;&gt;bt_1.ZOrder" xml:space="preserve">
+    <value>10</value>
+  </data>
+  <data name="btValider.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>None</value>
+  </data>
+  <data name="btValider.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>Flat</value>
+  </data>
+  <data name="btValider.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Corbel, 15pt, style=Bold</value>
+  </data>
+  <data name="btValider.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="btValider.Location" type="System.Drawing.Point, System.Drawing">
+    <value>224, 364</value>
+  </data>
+  <data name="btValider.Size" type="System.Drawing.Size, System.Drawing">
+    <value>177, 61</value>
+  </data>
+  <data name="btValider.TabIndex" type="System.Int32, mscorlib">
+    <value>142</value>
+  </data>
+  <data name="btValider.Text" xml:space="preserve">
+    <value>VALIDER</value>
+  </data>
+  <data name="&gt;&gt;btValider.Name" xml:space="preserve">
+    <value>btValider</value>
+  </data>
+  <data name="&gt;&gt;btValider.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btValider.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;btValider.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="btAnnuler.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>None</value>
+  </data>
+  <data name="btAnnuler.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>Flat</value>
+  </data>
+  <data name="btAnnuler.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Corbel, 15pt, style=Bold</value>
+  </data>
+  <data name="btAnnuler.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="btAnnuler.Location" type="System.Drawing.Point, System.Drawing">
+    <value>491, 364</value>
+  </data>
+  <data name="btAnnuler.Size" type="System.Drawing.Size, System.Drawing">
+    <value>177, 61</value>
+  </data>
+  <data name="btAnnuler.TabIndex" type="System.Int32, mscorlib">
+    <value>143</value>
+  </data>
+  <data name="btAnnuler.Text" xml:space="preserve">
+    <value>ANNULER</value>
+  </data>
+  <data name="&gt;&gt;btAnnuler.Name" xml:space="preserve">
+    <value>btAnnuler</value>
+  </data>
+  <data name="&gt;&gt;btAnnuler.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btAnnuler.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;btAnnuler.ZOrder" xml:space="preserve">
     <value>3</value>
   </data>
   <data name="Spain_flag.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>None</value>
   </data>
+  <data name="Spain_flag.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
   <data name="Spain_flag.Location" type="System.Drawing.Point, System.Drawing">
-    <value>895, 14</value>
+    <value>902, 12</value>
   </data>
   <data name="Spain_flag.Size" type="System.Drawing.Size, System.Drawing">
-    <value>31, 30</value>
+    <value>24, 24</value>
+  </data>
+  <data name="Spain_flag.SizeMode" type="System.Windows.Forms.PictureBoxSizeMode, System.Windows.Forms">
+    <value>AutoSize</value>
   </data>
   <data name="Spain_flag.TabIndex" type="System.Int32, mscorlib">
-    <value>159</value>
+    <value>146</value>
   </data>
   <data name="&gt;&gt;Spain_flag.Name" xml:space="preserve">
     <value>Spain_flag</value>
@@ -249,14 +747,20 @@
   <data name="England_flag.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>None</value>
   </data>
+  <data name="England_flag.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
   <data name="England_flag.Location" type="System.Drawing.Point, System.Drawing">
-    <value>895, 14</value>
+    <value>902, 12</value>
   </data>
   <data name="England_flag.Size" type="System.Drawing.Size, System.Drawing">
-    <value>31, 30</value>
+    <value>24, 24</value>
+  </data>
+  <data name="England_flag.SizeMode" type="System.Windows.Forms.PictureBoxSizeMode, System.Windows.Forms">
+    <value>AutoSize</value>
   </data>
   <data name="England_flag.TabIndex" type="System.Int32, mscorlib">
-    <value>158</value>
+    <value>145</value>
   </data>
   <data name="&gt;&gt;England_flag.Name" xml:space="preserve">
     <value>England_flag</value>
@@ -273,14 +777,20 @@
   <data name="France_flag.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>None</value>
   </data>
+  <data name="France_flag.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
   <data name="France_flag.Location" type="System.Drawing.Point, System.Drawing">
-    <value>895, 14</value>
+    <value>902, 12</value>
   </data>
   <data name="France_flag.Size" type="System.Drawing.Size, System.Drawing">
-    <value>31, 30</value>
+    <value>24, 24</value>
+  </data>
+  <data name="France_flag.SizeMode" type="System.Windows.Forms.PictureBoxSizeMode, System.Windows.Forms">
+    <value>AutoSize</value>
   </data>
   <data name="France_flag.TabIndex" type="System.Int32, mscorlib">
-    <value>157</value>
+    <value>144</value>
   </data>
   <data name="&gt;&gt;France_flag.Name" xml:space="preserve">
     <value>France_flag</value>
@@ -842,7 +1352,7 @@
 </value>
   </data>
   <data name="&gt;&gt;$this.Name" xml:space="preserve">
-    <value>Borne_DeuxiemePesee</value>
+    <value>Borne_Tare</value>
   </data>
   <data name="&gt;&gt;$this.Type" xml:space="preserve">
     <value>System.Windows.Forms.Form, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>

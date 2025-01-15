@@ -111,6 +111,25 @@ namespace WidraSoft.DA
             }
         }
 
+        public int GetMaxId()
+        {
+
+            String sql = "SELECT MAX(PRODUITID) FROM PRODUIT";
+            conn.ConnectionString = connString;
+            if (conn.State == ConnectionState.Closed)
+                conn.Open();
+            SqlCommand cmd = new SqlCommand(sql, conn);
+            try
+            {
+                int id = (int)cmd.ExecuteScalar();
+                return id;
+            }
+            catch
+            {
+                throw;
+            }
+        }
+
         public void Add(String Designation, Int32 GroupeProduitId, Int32 EstEntrant, Int32 EstSortant, Int32 Valide,
            Int32 PoidsAlerteMin, Int32 ActiverAlerteMin, Int32 PoidsAlerteMax, Int32 ActiverAlerteMax, Int32 EmpecherTicketSiAlerte,
            Int32 Dechet, Int32 TypeDechetId)
