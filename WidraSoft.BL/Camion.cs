@@ -140,6 +140,45 @@ namespace WidraSoft.BL
             }
         }
 
+        public int GetIdByBadge(string Name)
+        {
+            try
+            {
+                CamionDA camion = new CamionDA();
+                return camion.GetIdByBadge(Name);
+            }
+            catch
+            {
+                throw;
+            }
+        }
+
+        public int CountByBadge(string Name)
+        {
+            try
+            {
+                CamionDA camion = new CamionDA();
+                return camion.CountByBadge(Name);
+            }
+            catch
+            {
+                throw;
+            }
+        }
+
+        public string GetBadge(Int32 Id)
+        {
+            try
+            {
+                CamionDA camion = new CamionDA();
+                return camion.GetBadge(Id);
+            }
+            catch
+            {
+                throw;
+            }
+        }
+
         public void Add(String Code, String Plaque, String Badge, Int32 Tare, Int32 Valide,
            Int32 Bloque, String TexteBloque, Int32 Attention, String TexteAttention, String Observations)
         {

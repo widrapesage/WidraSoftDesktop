@@ -1,4 +1,64 @@
-﻿<root>
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!--
+    Microsoft ResX Schema
+
+    Version 2.0
+
+    The primary goals of this format is to allow a simple XML format
+    that is mostly human readable. The generation and parsing of the
+    various data types are done through the TypeConverter classes
+    associated with the data types.
+
+    Example:
+
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+
+    There are any number of "resheader" rows that contain simple
+    name/value pairs.
+
+    Each data row contains a name, and value. The row also contains a
+    type or mimetype. Type corresponds to a .NET class that support
+    text/value conversion through the TypeConverter architecture.
+    Classes that don't support this are serialized and stored with the
+    mimetype set.
+
+    The mimetype is used for serialized objects, and tells the
+    ResXResourceReader how to depersist the object. This is currently not
+    extensible. For a given mimetype the value must be set accordingly:
+
+    Note - application/x-microsoft.net.object.binary.base64 is the format
+    that the ResXResourceWriter will generate, however the reader can
+    read any of the formats listed below.
+
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
   <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
     <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
     <xsd:element name="root" msdata:IsDataSet="true">
@@ -66,7 +126,7 @@
     <value>Calibri, 40pt, style=Bold, Italic</value>
   </data>
   <data name="txtPoids.Location" type="System.Drawing.Point, System.Drawing">
-    <value>224, 12</value>
+    <value>329, 70</value>
   </data>
   <data name="txtPoids.Size" type="System.Drawing.Size, System.Drawing">
     <value>444, 66</value>
@@ -85,10 +145,10 @@
     <value>System.Windows.Forms.TextBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;txtPoids.Parent" xml:space="preserve">
-    <value>$this</value>
+    <value>panel1</value>
   </data>
   <data name="&gt;&gt;txtPoids.ZOrder" xml:space="preserve">
-    <value>6</value>
+    <value>0</value>
   </data>
   <data name="panelClavier.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>None</value>
@@ -226,10 +286,10 @@
     <value>10</value>
   </data>
   <data name="panelClavier.Location" type="System.Drawing.Point, System.Drawing">
-    <value>224, 89</value>
+    <value>329, 147</value>
   </data>
   <data name="panelClavier.Size" type="System.Drawing.Size, System.Drawing">
-    <value>444, 265</value>
+    <value>444, 285</value>
   </data>
   <data name="panelClavier.TabIndex" type="System.Int32, mscorlib">
     <value>141</value>
@@ -241,10 +301,10 @@
     <value>System.Windows.Forms.Panel, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;panelClavier.Parent" xml:space="preserve">
-    <value>$this</value>
+    <value>panel1</value>
   </data>
   <data name="&gt;&gt;panelClavier.ZOrder" xml:space="preserve">
-    <value>5</value>
+    <value>3</value>
   </data>
   <data name="btEffacer.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>None</value>
@@ -259,10 +319,10 @@
     <value>NoControl</value>
   </data>
   <data name="btEffacer.Location" type="System.Drawing.Point, System.Drawing">
-    <value>252, 191</value>
+    <value>264, 203</value>
   </data>
   <data name="btEffacer.Size" type="System.Drawing.Size, System.Drawing">
-    <value>57, 53</value>
+    <value>65, 60</value>
   </data>
   <data name="btEffacer.TabIndex" type="System.Int32, mscorlib">
     <value>169</value>
@@ -295,10 +355,10 @@
     <value>NoControl</value>
   </data>
   <data name="bt_0.Location" type="System.Drawing.Point, System.Drawing">
-    <value>189, 191</value>
+    <value>189, 203</value>
   </data>
   <data name="bt_0.Size" type="System.Drawing.Size, System.Drawing">
-    <value>57, 53</value>
+    <value>65, 60</value>
   </data>
   <data name="bt_0.TabIndex" type="System.Int32, mscorlib">
     <value>166</value>
@@ -331,10 +391,10 @@
     <value>NoControl</value>
   </data>
   <data name="bt_9.Location" type="System.Drawing.Point, System.Drawing">
-    <value>252, 132</value>
+    <value>264, 141</value>
   </data>
   <data name="bt_9.Size" type="System.Drawing.Size, System.Drawing">
-    <value>57, 53</value>
+    <value>65, 60</value>
   </data>
   <data name="bt_9.TabIndex" type="System.Int32, mscorlib">
     <value>165</value>
@@ -367,10 +427,10 @@
     <value>NoControl</value>
   </data>
   <data name="bt_8.Location" type="System.Drawing.Point, System.Drawing">
-    <value>189, 132</value>
+    <value>189, 141</value>
   </data>
   <data name="bt_8.Size" type="System.Drawing.Size, System.Drawing">
-    <value>57, 53</value>
+    <value>65, 60</value>
   </data>
   <data name="bt_8.TabIndex" type="System.Int32, mscorlib">
     <value>164</value>
@@ -403,10 +463,10 @@
     <value>NoControl</value>
   </data>
   <data name="bt_7.Location" type="System.Drawing.Point, System.Drawing">
-    <value>126, 132</value>
+    <value>114, 141</value>
   </data>
   <data name="bt_7.Size" type="System.Drawing.Size, System.Drawing">
-    <value>57, 53</value>
+    <value>65, 60</value>
   </data>
   <data name="bt_7.TabIndex" type="System.Int32, mscorlib">
     <value>163</value>
@@ -439,10 +499,10 @@
     <value>NoControl</value>
   </data>
   <data name="bt_6.Location" type="System.Drawing.Point, System.Drawing">
-    <value>252, 73</value>
+    <value>264, 79</value>
   </data>
   <data name="bt_6.Size" type="System.Drawing.Size, System.Drawing">
-    <value>57, 53</value>
+    <value>65, 60</value>
   </data>
   <data name="bt_6.TabIndex" type="System.Int32, mscorlib">
     <value>162</value>
@@ -475,10 +535,10 @@
     <value>NoControl</value>
   </data>
   <data name="bt_5.Location" type="System.Drawing.Point, System.Drawing">
-    <value>189, 73</value>
+    <value>189, 79</value>
   </data>
   <data name="bt_5.Size" type="System.Drawing.Size, System.Drawing">
-    <value>57, 53</value>
+    <value>65, 60</value>
   </data>
   <data name="bt_5.TabIndex" type="System.Int32, mscorlib">
     <value>161</value>
@@ -511,10 +571,10 @@
     <value>NoControl</value>
   </data>
   <data name="bt_4.Location" type="System.Drawing.Point, System.Drawing">
-    <value>126, 73</value>
+    <value>114, 79</value>
   </data>
   <data name="bt_4.Size" type="System.Drawing.Size, System.Drawing">
-    <value>57, 53</value>
+    <value>65, 60</value>
   </data>
   <data name="bt_4.TabIndex" type="System.Int32, mscorlib">
     <value>160</value>
@@ -547,10 +607,10 @@
     <value>NoControl</value>
   </data>
   <data name="bt_3.Location" type="System.Drawing.Point, System.Drawing">
-    <value>252, 14</value>
+    <value>264, 17</value>
   </data>
   <data name="bt_3.Size" type="System.Drawing.Size, System.Drawing">
-    <value>57, 53</value>
+    <value>65, 60</value>
   </data>
   <data name="bt_3.TabIndex" type="System.Int32, mscorlib">
     <value>159</value>
@@ -583,10 +643,10 @@
     <value>NoControl</value>
   </data>
   <data name="bt_2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>189, 14</value>
+    <value>189, 17</value>
   </data>
   <data name="bt_2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>57, 53</value>
+    <value>65, 60</value>
   </data>
   <data name="bt_2.TabIndex" type="System.Int32, mscorlib">
     <value>158</value>
@@ -619,10 +679,10 @@
     <value>NoControl</value>
   </data>
   <data name="bt_1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>126, 14</value>
+    <value>114, 17</value>
   </data>
   <data name="bt_1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>57, 53</value>
+    <value>65, 60</value>
   </data>
   <data name="bt_1.TabIndex" type="System.Int32, mscorlib">
     <value>157</value>
@@ -655,7 +715,7 @@
     <value>NoControl</value>
   </data>
   <data name="btValider.Location" type="System.Drawing.Point, System.Drawing">
-    <value>224, 364</value>
+    <value>329, 438</value>
   </data>
   <data name="btValider.Size" type="System.Drawing.Size, System.Drawing">
     <value>177, 61</value>
@@ -673,10 +733,10 @@
     <value>System.Windows.Forms.Button, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;btValider.Parent" xml:space="preserve">
-    <value>$this</value>
+    <value>panel1</value>
   </data>
   <data name="&gt;&gt;btValider.ZOrder" xml:space="preserve">
-    <value>4</value>
+    <value>5</value>
   </data>
   <data name="btAnnuler.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>None</value>
@@ -691,7 +751,7 @@
     <value>NoControl</value>
   </data>
   <data name="btAnnuler.Location" type="System.Drawing.Point, System.Drawing">
-    <value>491, 364</value>
+    <value>596, 438</value>
   </data>
   <data name="btAnnuler.Size" type="System.Drawing.Size, System.Drawing">
     <value>177, 61</value>
@@ -709,10 +769,10 @@
     <value>System.Windows.Forms.Button, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;btAnnuler.Parent" xml:space="preserve">
-    <value>$this</value>
+    <value>panel1</value>
   </data>
   <data name="&gt;&gt;btAnnuler.ZOrder" xml:space="preserve">
-    <value>3</value>
+    <value>6</value>
   </data>
   <data name="Spain_flag.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>None</value>
@@ -721,7 +781,7 @@
     <value>NoControl</value>
   </data>
   <data name="Spain_flag.Location" type="System.Drawing.Point, System.Drawing">
-    <value>902, 12</value>
+    <value>1059, 70</value>
   </data>
   <data name="Spain_flag.Size" type="System.Drawing.Size, System.Drawing">
     <value>24, 24</value>
@@ -739,10 +799,10 @@
     <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;Spain_flag.Parent" xml:space="preserve">
-    <value>$this</value>
+    <value>panel1</value>
   </data>
   <data name="&gt;&gt;Spain_flag.ZOrder" xml:space="preserve">
-    <value>0</value>
+    <value>1</value>
   </data>
   <data name="England_flag.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>None</value>
@@ -751,7 +811,7 @@
     <value>NoControl</value>
   </data>
   <data name="England_flag.Location" type="System.Drawing.Point, System.Drawing">
-    <value>902, 12</value>
+    <value>1059, 70</value>
   </data>
   <data name="England_flag.Size" type="System.Drawing.Size, System.Drawing">
     <value>24, 24</value>
@@ -769,10 +829,10 @@
     <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;England_flag.Parent" xml:space="preserve">
-    <value>$this</value>
+    <value>panel1</value>
   </data>
   <data name="&gt;&gt;England_flag.ZOrder" xml:space="preserve">
-    <value>1</value>
+    <value>2</value>
   </data>
   <data name="France_flag.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>None</value>
@@ -781,7 +841,7 @@
     <value>NoControl</value>
   </data>
   <data name="France_flag.Location" type="System.Drawing.Point, System.Drawing">
-    <value>902, 12</value>
+    <value>1059, 70</value>
   </data>
   <data name="France_flag.Size" type="System.Drawing.Size, System.Drawing">
     <value>24, 24</value>
@@ -799,10 +859,34 @@
     <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;France_flag.Parent" xml:space="preserve">
-    <value>$this</value>
+    <value>panel1</value>
   </data>
   <data name="&gt;&gt;France_flag.ZOrder" xml:space="preserve">
-    <value>2</value>
+    <value>4</value>
+  </data>
+  <data name="panel1.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>None</value>
+  </data>
+  <data name="panel1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 1</value>
+  </data>
+  <data name="panel1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1108, 559</value>
+  </data>
+  <data name="panel1.TabIndex" type="System.Int32, mscorlib">
+    <value>147</value>
+  </data>
+  <data name="&gt;&gt;panel1.Name" xml:space="preserve">
+    <value>panel1</value>
+  </data>
+  <data name="&gt;&gt;panel1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;panel1.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;panel1.ZOrder" xml:space="preserve">
+    <value>0</value>
   </data>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
@@ -811,7 +895,7 @@
     <value>7, 15</value>
   </data>
   <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
-    <value>929, 453</value>
+    <value>1113, 561</value>
   </data>
   <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>

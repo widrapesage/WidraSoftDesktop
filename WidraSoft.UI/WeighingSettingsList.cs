@@ -28,11 +28,12 @@ namespace WidraSoft.UI
         private void WeighingSettingsList_Load(object sender, EventArgs e)
         {
             this.CenterToScreen();
+            WindowState = FormWindowState.Maximized;
             Bind_Dgv();
             cbLang.DataSource = Language.Languages;
             cbLang.ValueMember = null;
             cbLang.DisplayMember = Language.Languages[0];
-            cbLang.SelectedIndex = 0;
+            cbLang.SelectedIndex = MenuGeneral.languuage_index;
         }
 
         private void Bind_Dgv()
@@ -130,6 +131,7 @@ namespace WidraSoft.UI
             DgvList.Columns["TITRE1"].Visible = false;
             DgvList.Columns["TITRE2"].Visible = false;
             DgvList.Columns["FOOTER"].Visible = false;
+            DgvList.Columns["WALTERRE"].Visible = false;
           
             DgvList.Columns["DATECREATION"].Visible = true;
 

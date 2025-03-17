@@ -88,6 +88,45 @@ namespace WidraSoft.BL
             }
         }
 
+        public string GetBadge(Int32 Id)
+        {
+            try
+            {
+                ClientDA client = new ClientDA();
+                return client.GetBadge(Id);
+            }
+            catch
+            {
+                throw;
+            }
+        }
+
+        public int GetIdByBadge(string Name)
+        {
+            try
+            {
+                ClientDA client = new ClientDA();
+                return client.GetIdByBadge(Name);
+            }
+            catch
+            {
+                throw;
+            }
+        }
+
+        public int CountByBadge(string Name)
+        {
+            try
+            {
+                ClientDA client = new ClientDA();
+                return client.CountByBadge(Name);
+            }
+            catch
+            {
+                throw;
+            }
+        }
+
         public void Add(String Badge, String Designation, Int32 TypeClientId, String Adresse, String CodePostal, String Localite,
             String Pays, String Telephone,
             String Email, String NumTVA, String SiteWeb_Url, String Observations, Int32 Valide, Int32 Bloque,

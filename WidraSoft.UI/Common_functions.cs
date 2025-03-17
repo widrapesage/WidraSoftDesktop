@@ -18,7 +18,7 @@ namespace WidraSoft.UI
             }
             else
             {
-                if (o.Text == "" || o.Text == "System.Data.DataRowView") 
+                if (o.Text == "" || o.Text == "System.Data.DataRowView")
                     return 0;
                 else
                     return (Int32)o.SelectedValue;
@@ -45,8 +45,8 @@ namespace WidraSoft.UI
         {
             try
             {
-                return  (Int32)d[0, d.CurrentCell.RowIndex].Value;
-                
+                return (Int32)d[0, d.CurrentCell.RowIndex].Value;
+
             }
             catch
             {

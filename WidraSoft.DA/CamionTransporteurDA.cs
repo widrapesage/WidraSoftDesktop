@@ -54,7 +54,7 @@ namespace WidraSoft.DA
 
         public DataTable FindByCamionId(Int32 Id)
         {
-            String sql = "SELECT  ct.TRANSPORTEURID, tr.NOM AS TRANSPORTEUR, ct.CAMIONID, ca.PLAQUE AS CAMION, ct.DATECREATION FROM CAMIONTRANSPORTEUR ct, CAMION ca, TRANSPORTEUR tr WHERE ct.CAMIONID = ca.CAMIONID AND ct.TRANSPORTEURID = tr.TRANSPORTEURID AND ct.CAMIONID=" + Id;
+            String sql = "SELECT  ct.TRANSPORTEURID, ct.CAMIONID, tr.NOM AS TRANSPORTEUR, ca.PLAQUE AS CAMION, ct.DATECREATION FROM CAMIONTRANSPORTEUR ct, CAMION ca, TRANSPORTEUR tr WHERE ct.CAMIONID = ca.CAMIONID AND ct.TRANSPORTEURID = tr.TRANSPORTEURID AND ct.CAMIONID=" + Id;
             conn.ConnectionString = connString;
             if (conn.State == ConnectionState.Closed)
                 conn.Open();
@@ -83,6 +83,44 @@ namespace WidraSoft.DA
                 SqlDataReader reader = cmd.ExecuteReader();
                 dt.Load(reader);
                 return dt;
+            }
+            catch
+            {
+                throw;
+            }
+        }
+
+        public int CountByCamionId(int Id)
+        {
+
+            String sql = "SELECT COUNT (*) FROM CAMIONTRANSPORTEUR WHERE CAMIONID = " + Id;
+            conn.ConnectionString = connString;
+            if (conn.State == ConnectionState.Closed)
+                conn.Open();
+            SqlCommand cmd = new SqlCommand(sql, conn);
+            try
+            {
+                int nb = (int)cmd.ExecuteScalar();
+                return nb;
+            }
+            catch
+            {
+                throw;
+            }
+        }
+
+        public int GetFirstTransporteurByCamionId(int Id)
+        {
+
+            String sql = "SELECT TOP 1 TRANSPORTEURID FROM CAMIONTRANSPORTEUR  WHERE CAMIONID  = " + Id;
+            conn.ConnectionString = connString;
+            if (conn.State == ConnectionState.Closed)
+                conn.Open();
+            SqlCommand cmd = new SqlCommand(sql, conn);
+            try
+            {
+                int nb = (int)cmd.ExecuteScalar();
+                return nb;
             }
             catch
             {

@@ -31,6 +31,8 @@ namespace WidraSoft.UI
         {
             this.CenterToScreen();
 
+            WindowState = FormWindowState.Maximized;
+
             if (vg_lang == "fr")
             {
                 France_flag.Visible = true;

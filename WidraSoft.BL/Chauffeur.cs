@@ -88,6 +88,45 @@ namespace WidraSoft.BL
             }
         }
 
+        public string GetBadge(Int32 Id)
+        {
+            try
+            {
+                ChauffeurDA chauffeur = new ChauffeurDA();
+                return chauffeur.GetBadge(Id);
+            }
+            catch
+            {
+                throw;
+            }
+        }
+
+        public int GetIdByBadge(string Name)
+        {
+            try
+            {
+                ChauffeurDA chauffeur = new ChauffeurDA();
+                return chauffeur.GetIdByBadge(Name);
+            }
+            catch
+            {
+                throw;
+            }
+        }
+
+        public int CountByBadge(string Name)
+        {
+            try
+            {
+                CamionDA camion = new CamionDA();
+                return camion.CountByBadge(Name);
+            }
+            catch
+            {
+                throw;
+            }
+        }
+
         public void Add(String Badge, String Nom, String NumeroNational, String NumeroPermis, String Adresse, String CodePostal, String Localite, String Pays,
            String Telephone, String Observations, Int32 Valide, Int32 Bloque, String TexteBloque, Int32 Attention, String TexteAttention)
         {

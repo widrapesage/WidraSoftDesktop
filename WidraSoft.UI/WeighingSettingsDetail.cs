@@ -32,7 +32,7 @@ namespace WidraSoft.UI
             cbLang.DataSource = Language.Languages;
             cbLang.ValueMember = null;
             cbLang.DisplayMember = Language.Languages[0];
-            cbLang.SelectedIndex = 0;
+            cbLang.SelectedIndex = MenuGeneral.languuage_index;
 
             cbFormat.DataSource = Values.FormatTicket;
             cbLang.ValueMember = null;
@@ -53,27 +53,27 @@ namespace WidraSoft.UI
 
 
             cbFirmeBorne.DataSource = FirmeBorne;
-            cbFirmeBorne.ValueMember = null; 
+            cbFirmeBorne.ValueMember = null;
             cbFirmeBorne.DisplayMember = FirmeBorne[0];
 
             cbCamionBorne.DataSource = CamionBorne;
-            cbCamionBorne.ValueMember = null; 
+            cbCamionBorne.ValueMember = null;
             cbCamionBorne.DisplayMember = CamionBorne[0];
 
             cbChauffeurBorne.DataSource = ChauffeurBorne;
-            cbChauffeurBorne.ValueMember = null; 
+            cbChauffeurBorne.ValueMember = null;
             cbChauffeurBorne.DisplayMember = ChauffeurBorne[0];
 
             cbTransporteurBorne.DataSource = TransporteurBorne;
-            cbTransporteurBorne.ValueMember = null; 
+            cbTransporteurBorne.ValueMember = null;
             cbTransporteurBorne.DisplayMember = TransporteurBorne[0];
 
             cbProduitBorne.DataSource = ProduitBorne;
-            cbProduitBorne.ValueMember = null; 
+            cbProduitBorne.ValueMember = null;
             cbProduitBorne.DisplayMember = ProduitBorne[0];
 
             cbClientBorne.DataSource = ClientBorne;
-            cbClientBorne.ValueMember = null; 
+            cbClientBorne.ValueMember = null;
             cbClientBorne.DisplayMember = ClientBorne[0];
 
             Tables table = new Tables();
@@ -190,7 +190,7 @@ namespace WidraSoft.UI
                 try
                 {
                     Clear();
-                    
+
                     Add_Item();
                 }
                 catch
@@ -213,32 +213,35 @@ namespace WidraSoft.UI
                 }
             }
 
-            
+
 
         }
 
         private void Add_Item()
         {
             if (txtId.Text == "" && txtDateCreation.Text == "" && txtDesignation.Text == "" && txtCamion.Text == "" && txtChauffeur.Text == "" && txtTransporteur.Text == ""
-                && txtProduit.Text == "" && txtClient.Text == "" && txtFirme.Text == "" && txtFirmeObligatoire.Text == "" && txtCamionObligatoire.Text == "" && txtChauffeurObligatoire.Text == "" 
+                && txtProduit.Text == "" && txtClient.Text == "" && txtFirme.Text == "" && txtFirmeObligatoire.Text == "" && txtCamionObligatoire.Text == "" && txtChauffeurObligatoire.Text == ""
                 && txtTransporteurObligatoire.Text == "" && txtProduitObligatoire.Text == "" && txtClientObligatoire.Text == "" && cbFirmeBorne.Text == "" && cbCamionBorne.Text == "" && cbChauffeurBorne.Text == ""
-                && cbTransporteurBorne.Text == "" && cbProduitBorne.Text == "" && cbClientBorne.Text == "" && txtAjoutFirme.Text == "" && txtAjoutCamion.Text == "" && txtAjoutChauffeur.Text == "" 
+                && cbTransporteurBorne.Text == "" && cbProduitBorne.Text == "" && cbClientBorne.Text == "" && txtAjoutFirme.Text == "" && txtAjoutCamion.Text == "" && txtAjoutChauffeur.Text == ""
                 && txtAjoutTransporteur.Text == "" && txtAjoutProduit.Text == "" && txtAjoutClient.Text == "" && txtPontFirme.Text == "" && txtCamionChauffeur.Text == "" && txtCamionTransporteur.Text == "" && cbChamp1.Text == ""
-                && cbChamp2.Text == "" && cbChamp3.Text == "" && cbChamp4.Text == "" && cbChamp5.Text == "" && cbChamp6.Text == "" && cbChamp7.Text == "" && txtObligatoire1.Text == "" && txtObligatoire2.Text == "" 
+                && cbChamp2.Text == "" && cbChamp3.Text == "" && cbChamp4.Text == "" && cbChamp5.Text == "" && cbChamp6.Text == "" && cbChamp7.Text == "" && txtObligatoire1.Text == "" && txtObligatoire2.Text == ""
                 && txtObligatoire3.Text == "" && txtObligatoire4.Text == "" && txtObligatoire5.Text == "" && txtObligatoire6.Text == "" && txtObligatoire7.Text == "" && txtAfficherCode1.Text == "" && txtAfficherCode2.Text == ""
-                && txtAfficherCode3.Text == "" && txtAfficherCode4.Text == "" && txtAfficherCode5.Text == "" && txtAfficherCode6.Text == "" && txtAfficherCode7.Text == "" && cbBorneChamp1.Text == "" && cbBorneChamp2.Text == "" 
-                && cbBorneChamp3.Text == "" && cbBorneChamp4.Text == "" && cbBorneChamp5.Text == "" && cbBorneChamp6.Text == "" && cbBorneChamp7.Text == "" && txtTicketChamp1.Text == "" && txtTicketChamp2.Text == "" 
+                && txtAfficherCode3.Text == "" && txtAfficherCode4.Text == "" && txtAfficherCode5.Text == "" && txtAfficherCode6.Text == "" && txtAfficherCode7.Text == "" && cbBorneChamp1.Text == "" && cbBorneChamp2.Text == ""
+                && cbBorneChamp3.Text == "" && cbBorneChamp4.Text == "" && cbBorneChamp5.Text == "" && cbBorneChamp6.Text == "" && cbBorneChamp7.Text == "" && txtTicketChamp1.Text == "" && txtTicketChamp2.Text == ""
                 && txtTicketChamp3.Text == "" && txtTicketChamp4.Text == "" && txtTicketChamp5.Text == "" && txtTicketChamp6.Text == "" && txtTicketChamp7.Text == "" && txtAjoutChamp1.Text == "" && txtAjoutChamp2.Text == ""
                 && txtAjoutChamp3.Text == "" && txtAjoutChamp4.Text == "" && txtAjoutChamp5.Text == "" && txtAjoutChamp6.Text == "" && txtAjoutChamp7.Text == "" && cbFormat.Text == "" && txtTitre1.Text == ""
                 && txtTitre2.Text == "" && txtFooter.Text == "" && txtChampLibre1.Text == "" && txtChampLibre2.Text == "" && txtChampLibre3.Text == "" && txtChampLibre4.Text == "" && txtLibreObligatoire1.Text == ""
                 && txtLibreObligatoire2.Text == "" && txtLibreObligatoire3.Text == "" && txtLibreObligatoire4.Text == "" && txtTicketChampLibre1.Text == "" && txtTicketChampLibre2.Text == "" && txtTicketChampLibre3.Text == ""
-                && txtTicketChampLibre4.Text == "" && cbBorneChampLibre1.Text == "" && cbBorneChampLibre2.Text == "" && cbBorneChampLibre3.Text == "" && cbBorneChampLibre4.Text == "")
+                && txtTicketChampLibre4.Text == "" && cbBorneChampLibre1.Text == "" && cbBorneChampLibre2.Text == "" && cbBorneChampLibre3.Text == "" && cbBorneChampLibre4.Text == "" && txtWalterre.Text == "")
             {
                 lbModifier.Enabled = false;
                 lbModifier.BackColor = Color.Transparent;
                 lbSupprimer.Enabled = false;
                 lbSupprimer.BackColor = Color.Transparent;
-                
+
+                txtWalterre.Text = "0";
+                chx_Walterre.Checked = false;
+
                 txtCamion.Text = "1";
                 chx_Camion.Checked = true;
                 txtChauffeur.Text = "1";
@@ -259,7 +262,7 @@ namespace WidraSoft.UI
                 txtChauffeurObligatoire.Text = "1";
                 chx_ChauffeurObligatoire.Checked = true;
                 txtTransporteurObligatoire.Text = "1";
-                chx_TransporteurObligatoire.Checked= true;
+                chx_TransporteurObligatoire.Checked = true;
                 txtProduitObligatoire.Text = "1";
                 chx_ProduitObligatoire.Checked = true;
                 txtClientObligatoire.Text = "1";
@@ -276,7 +279,7 @@ namespace WidraSoft.UI
                 txtAjoutFirme.Text = "0";
                 chx_AjoutFirme.Checked = false;
                 txtAjoutCamion.Text = "0";
-                chx_AjoutCamion.Checked= false;
+                chx_AjoutCamion.Checked = false;
                 txtAjoutChauffeur.Text = "0";
                 chx_AjoutChauffeur.Checked = false;
                 txtAjoutTransporteur.Text = "0";
@@ -421,7 +424,12 @@ namespace WidraSoft.UI
                 int Id = (int)row["WEIGHING_SETTINGSID"];
                 txtId.Text = Id.ToString();
                 txtDateCreation.Text = row["DATECREATION"].ToString();
-                txtDesignation.Text = row["DESIGNATION"].ToString();                
+                txtDesignation.Text = row["DESIGNATION"].ToString();
+                txtWalterre.Text = row["WALTERRE"].ToString();
+                if (txtWalterre.Text == "1")
+                    chx_Walterre.Checked = true;
+                else
+                    chx_Walterre.Checked = false;
                 txtCamion.Text = row["CAMION"].ToString();
                 if (txtCamion.Text == "1")
                     chx_Camion.Checked = true;
@@ -760,7 +768,7 @@ namespace WidraSoft.UI
                 else
                     chx_CamionTransporteur.Checked = false;
 
-                
+
 
                 cbFormat.Text = row["FORMAT"].ToString();
                 txtTitre1.Text = row["TITRE1"].ToString();
@@ -774,6 +782,7 @@ namespace WidraSoft.UI
         {
             txtDateCreation.Enabled = false;
             txtDesignation.Enabled = false;
+            chx_Walterre.Enabled = false;
             chx_Camion.Enabled = false;
             chx_Chauffeur.Enabled = false;
             chx_Transporteur.Enabled = false;
@@ -888,6 +897,7 @@ namespace WidraSoft.UI
         {
             txtDateCreation.Enabled = true;
             txtDesignation.Enabled = true;
+            chx_Walterre.Enabled = true;
             chx_Camion.Enabled = true;
             chx_Chauffeur.Enabled = true;
             chx_Transporteur.Enabled = true;
@@ -1002,6 +1012,7 @@ namespace WidraSoft.UI
             txtId.Text = "";
             txtDateCreation.Text = "";
             txtDesignation.Text = "";
+            txtWalterre.Text = "";
             chx_Camion.Checked = false;
             chx_Chauffeur.Checked = false;
             chx_Transporteur.Checked = false;
@@ -1568,7 +1579,7 @@ namespace WidraSoft.UI
             try
             {
                 if (txtId.Text == "" && txtDateCreation.Text == "" && txtDesignation.Text != "" && txtCamion.Text != "" && txtChauffeur.Text != "" && txtTransporteur.Text != ""
-                    && txtProduit.Text != "" && txtClient.Text != ""  && txtFirme.Text != "" && cbFormat.Text != "")
+                    && txtProduit.Text != "" && txtClient.Text != "" && txtFirme.Text != "" && cbFormat.Text != "" && txtWalterre.Text != "")
                 {
                     int Camion;
                     int Chauffeur;
@@ -1576,6 +1587,7 @@ namespace WidraSoft.UI
                     int Produit;
                     int Client;
                     int Firme;
+                    int Walterre;
                     int FirmeObligatoire;
                     int CamionObligatoire;
                     int ChauffeurObligatoire;
@@ -1609,18 +1621,18 @@ namespace WidraSoft.UI
                     int Ticket5;
                     int Ticket6;
                     int Ticket7;
-                    int AjoutChamp1;   
+                    int AjoutChamp1;
                     int AjoutChamp2;
-                    int AjoutChamp3;                        
-                    int AjoutChamp4;                       
+                    int AjoutChamp3;
+                    int AjoutChamp4;
                     int AjoutChamp5;
                     int AjoutChamp6;
                     int AjoutChamp7;
-                    int LibreObligatoire1; 
+                    int LibreObligatoire1;
                     int LibreObligatoire2;
                     int LibreObligatoire3;
                     int LibreObligatoire4;
-                    int LibreTicket1; 
+                    int LibreTicket1;
                     int LibreTicket2;
                     int LibreTicket3;
                     int LibreTicket4;
@@ -1634,6 +1646,7 @@ namespace WidraSoft.UI
                     bool IsParsableProduit;
                     bool IsParsableClient;
                     bool IsParsableFirme;
+                    bool IsParsableWalterre;
                     bool IsParsableFirmeObligatoire;
                     bool IsParsableCamionObligatoire;
                     bool IsParsableChauffeurObligatoire;
@@ -1693,6 +1706,7 @@ namespace WidraSoft.UI
                     IsParsableProduit = Int32.TryParse(txtProduit.Text, out Produit);
                     IsParsableClient = Int32.TryParse(txtClient.Text, out Client);
                     IsParsableFirme = Int32.TryParse(txtFirme.Text, out Firme);
+                    IsParsableWalterre = Int32.TryParse(txtWalterre.Text, out Walterre);
                     IsParsableFirmeObligatoire = Int32.TryParse(txtFirmeObligatoire.Text, out FirmeObligatoire);
                     IsParsableCamionObligatoire = Int32.TryParse(txtCamionObligatoire.Text, out CamionObligatoire);
                     IsParsableChauffeurObligatoire = Int32.TryParse(txtChauffeurObligatoire.Text, out ChauffeurObligatoire);
@@ -1750,26 +1764,26 @@ namespace WidraSoft.UI
 
                     try
                     {
-                        if (IsParsableCamion && IsParsableChauffeur && IsParsableTransporteur && IsParsableProduit && IsParsableClient && IsParsableFirme 
+                        if (IsParsableCamion && IsParsableChauffeur && IsParsableTransporteur && IsParsableProduit && IsParsableClient && IsParsableFirme
                             && IsParsableFirmeObligatoire && IsParsableCamionObligatoire && IsParsableChauffeurObligatoire && IsParsableTransporteurObligatoire && IsParsableProduitObligatoire && IsParsableClientObligatoire
                     && IsParsableAjoutFirme && IsParsableAjoutCamion && IsParsableAjoutChauffeur && IsParsableAjoutTransporteur && IsParsableAjoutProduit && IsParsableAjoutClient && IsParsableTableObligatoire1
-                    && IsParsableTableObligatoire2 && IsParsableTableObligatoire3 && IsParsableTableObligatoire4 && IsParsableTableObligatoire5 && IsParsableTableObligatoire6  && IsParsableTableObligatoire7
+                    && IsParsableTableObligatoire2 && IsParsableTableObligatoire3 && IsParsableTableObligatoire4 && IsParsableTableObligatoire5 && IsParsableTableObligatoire6 && IsParsableTableObligatoire7
                     && IsParsableAfficherCode1 && IsParsableAfficherCode2 && IsParsableAfficherCode3 && IsParsableAfficherCode4 && IsParsableAfficherCode5 && IsParsableAfficherCode6 && IsParsableAfficherCode7
                     && IsParsableTicket1 && IsParsableTicket2 && IsParsableTicket3 && IsParsableTicket4 && IsParsableTicket5 && IsParsableTicket6 && IsParsableTicket7 && IsParsableAjoutChamp1 && IsParsableAjoutChamp2
                     && IsParsableAjoutChamp3 && IsParsableAjoutChamp4 && IsParsableAjoutChamp5 && IsParsableAjoutChamp6 && IsParsableAjoutChamp7 && IsParsableLibreObligatoire1 && IsParsableLibreObligatoire2 && IsParsableLibreObligatoire3
-                    && IsParsableLibreObligatoire4 && IsParsableLibreTicket1 && IsParsableLibreTicket2 && IsParsableLibreTicket3 && IsParsableLibreTicket4 && IsParsablePontFirme && IsParsableCamionChauffeur && IsParsableCamionTransporteur)
+                    && IsParsableLibreObligatoire4 && IsParsableLibreTicket1 && IsParsableLibreTicket2 && IsParsableLibreTicket3 && IsParsableLibreTicket4 && IsParsablePontFirme && IsParsableCamionChauffeur && IsParsableCamionTransporteur && IsParsableWalterre)
                         {
                             WeighingSettings weighingSettings = new WeighingSettings();
                             weighingSettings.Add(txtDesignation.Text, Camion, Chauffeur, Transporteur, Produit, Client, Firme, CamionObligatoire, ChauffeurObligatoire, TransporteurObligatoire, ProduitObligatoire, ClientObligatoire
-                                , FirmeObligatoire, cbCamionBorne.Text, cbChauffeurBorne.Text, cbTransporteurBorne.Text, cbProduitBorne.Text, cbClientBorne.Text, cbFirmeBorne.Text, AjoutCamion, AjoutChauffeur, 
+                                , FirmeObligatoire, cbCamionBorne.Text, cbChauffeurBorne.Text, cbTransporteurBorne.Text, cbProduitBorne.Text, cbClientBorne.Text, cbFirmeBorne.Text, AjoutCamion, AjoutChauffeur,
                                 AjoutTransporteur, AjoutProduit, AjoutClient, AjoutFirme, Common_functions.CbSelectedValue_Convert_Int(cbChamp1), Common_functions.CbSelectedValue_Convert_Int(cbChamp2), Common_functions.CbSelectedValue_Convert_Int(cbChamp3),
                                 Common_functions.CbSelectedValue_Convert_Int(cbChamp4), Common_functions.CbSelectedValue_Convert_Int(cbChamp5), Common_functions.CbSelectedValue_Convert_Int(cbChamp6), Common_functions.CbSelectedValue_Convert_Int(cbChamp7),
-                                TableObligatoire1, TableObligatoire2, TableObligatoire3, TableObligatoire4, TableObligatoire5, TableObligatoire6, TableObligatoire7, AfficherCode1, AfficherCode2, AfficherCode3, AfficherCode4, AfficherCode5, AfficherCode6, 
-                                AfficherCode7, cbBorneChamp1.Text, cbBorneChamp2.Text, cbBorneChamp3.Text, cbBorneChamp4.Text, cbBorneChamp5.Text, cbBorneChamp6.Text, cbBorneChamp7.Text, Ticket1, Ticket2, Ticket3, Ticket4, Ticket5, Ticket6, Ticket7, 
+                                TableObligatoire1, TableObligatoire2, TableObligatoire3, TableObligatoire4, TableObligatoire5, TableObligatoire6, TableObligatoire7, AfficherCode1, AfficherCode2, AfficherCode3, AfficherCode4, AfficherCode5, AfficherCode6,
+                                AfficherCode7, cbBorneChamp1.Text, cbBorneChamp2.Text, cbBorneChamp3.Text, cbBorneChamp4.Text, cbBorneChamp5.Text, cbBorneChamp6.Text, cbBorneChamp7.Text, Ticket1, Ticket2, Ticket3, Ticket4, Ticket5, Ticket6, Ticket7,
                                 AjoutChamp1, AjoutChamp2, AjoutChamp3, AjoutChamp4, AjoutChamp5, AjoutChamp6, AjoutChamp7, txtChampLibre1.Text, txtChampLibre2.Text, txtChampLibre3.Text, txtChampLibre4.Text, LibreObligatoire1, LibreObligatoire2, LibreObligatoire3,
-                                LibreObligatoire4, LibreTicket1,LibreTicket2, LibreTicket3, LibreTicket4,  
+                                LibreObligatoire4, LibreTicket1, LibreTicket2, LibreTicket3, LibreTicket4,
                                 cbBorneChampLibre1.Text, cbBorneChampLibre2.Text, cbBorneChampLibre3.Text, cbBorneChampLibre4.Text,
-                                PontFirme, CamionChauffeur, CamionTransporteur, cbFormat.Text, txtTitre1.Text, txtTitre2.Text, txtFooter.Text);
+                                PontFirme, CamionChauffeur, CamionTransporteur, cbFormat.Text, txtTitre1.Text, txtTitre2.Text, txtFooter.Text, Walterre);
                             if (cbLang.Text == "FR")
                                 Custom_MessageBox.Show("FR", "Paramètre ajouté avec succès", "Paramètre de pesée", MessageBoxButtons.OK, MessageBoxIcon.Information);
                             else if (cbLang.Text == "EN")
@@ -1816,9 +1830,9 @@ namespace WidraSoft.UI
                     try
                     {
                         if (txtId.Text != "" && txtDateCreation.Text != "" && txtDesignation.Text != "" && txtCamion.Text != "" && txtChauffeur.Text != "" && txtTransporteur.Text != ""
-                            && txtProduit.Text != "" && txtClient.Text != "" && txtFirme.Text != "" && cbFormat.Text != "")
+                            && txtProduit.Text != "" && txtClient.Text != "" && txtFirme.Text != "" && cbFormat.Text != ""  && txtWalterre.Text != "")
                         {
-                            
+
                             int Id;
                             int Camion;
                             int Chauffeur;
@@ -1826,6 +1840,7 @@ namespace WidraSoft.UI
                             int Produit;
                             int Client;
                             int Firme;
+                            int Walterre;
                             int FirmeObligatoire;
                             int CamionObligatoire;
                             int ChauffeurObligatoire;
@@ -1885,6 +1900,7 @@ namespace WidraSoft.UI
                             bool IsParsableProduit;
                             bool IsParsableClient;
                             bool IsParsableFirme;
+                            bool IsParsableWalterre;
                             bool IsParsableFirmeObligatoire;
                             bool IsParsableCamionObligatoire;
                             bool IsParsableChauffeurObligatoire;
@@ -1944,6 +1960,7 @@ namespace WidraSoft.UI
                             IsParsableProduit = Int32.TryParse(txtProduit.Text, out Produit);
                             IsParsableClient = Int32.TryParse(txtClient.Text, out Client);
                             IsParsableFirme = Int32.TryParse(txtFirme.Text, out Firme);
+                            IsParsableWalterre = Int32.TryParse(txtWalterre.Text, out Walterre);
                             IsParsableFirmeObligatoire = Int32.TryParse(txtFirmeObligatoire.Text, out FirmeObligatoire);
                             IsParsableCamionObligatoire = Int32.TryParse(txtCamionObligatoire.Text, out CamionObligatoire);
                             IsParsableChauffeurObligatoire = Int32.TryParse(txtChauffeurObligatoire.Text, out ChauffeurObligatoire);
@@ -2005,7 +2022,7 @@ namespace WidraSoft.UI
                             && IsParsableAfficherCode1 && IsParsableAfficherCode2 && IsParsableAfficherCode3 && IsParsableAfficherCode4 && IsParsableAfficherCode5 && IsParsableAfficherCode6 && IsParsableAfficherCode7
                             && IsParsableTicket1 && IsParsableTicket2 && IsParsableTicket3 && IsParsableTicket4 && IsParsableTicket5 && IsParsableTicket6 && IsParsableTicket7 && IsParsableAjoutChamp1 && IsParsableAjoutChamp2
                             && IsParsableAjoutChamp3 && IsParsableAjoutChamp4 && IsParsableAjoutChamp5 && IsParsableAjoutChamp6 && IsParsableAjoutChamp7 && IsParsableLibreObligatoire1 && IsParsableLibreObligatoire2 && IsParsableLibreObligatoire3
-                            && IsParsableLibreObligatoire4 && IsParsableLibreTicket1 && IsParsableLibreTicket2 && IsParsableLibreTicket3 && IsParsableLibreTicket4 && IsParsablePontFirme && IsParsableCamionChauffeur && IsParsableCamionTransporteur)
+                            && IsParsableLibreObligatoire4 && IsParsableLibreTicket1 && IsParsableLibreTicket2 && IsParsableLibreTicket3 && IsParsableLibreTicket4 && IsParsablePontFirme && IsParsableCamionChauffeur && IsParsableCamionTransporteur && IsParsableWalterre)
                                 {
                                     WeighingSettings weighingSettings = new WeighingSettings();
                                     weighingSettings.Update(Id, txtDesignation.Text, Camion, Chauffeur, Transporteur, Produit, Client, Firme, CamionObligatoire, ChauffeurObligatoire, TransporteurObligatoire, ProduitObligatoire, ClientObligatoire
@@ -2016,7 +2033,7 @@ namespace WidraSoft.UI
                                 AfficherCode7, cbBorneChamp1.Text, cbBorneChamp2.Text, cbBorneChamp3.Text, cbBorneChamp4.Text, cbBorneChamp5.Text, cbBorneChamp6.Text, cbBorneChamp7.Text, Ticket1, Ticket2, Ticket3, Ticket4, Ticket5, Ticket6, Ticket7,
                                 AjoutChamp1, AjoutChamp2, AjoutChamp3, AjoutChamp4, AjoutChamp5, AjoutChamp6, AjoutChamp7, txtChampLibre1.Text, txtChampLibre2.Text, txtChampLibre3.Text, txtChampLibre4.Text, LibreObligatoire1, LibreObligatoire2, LibreObligatoire3,
                                 LibreObligatoire4, LibreTicket1, LibreTicket2, LibreTicket3, LibreTicket4,
-                                cbBorneChampLibre1.Text, cbBorneChampLibre2.Text, cbBorneChampLibre3.Text, cbBorneChampLibre4.Text, PontFirme, CamionChauffeur, CamionTransporteur, cbFormat.Text, txtTitre1.Text, txtTitre2.Text, txtFooter.Text);
+                                cbBorneChampLibre1.Text, cbBorneChampLibre2.Text, cbBorneChampLibre3.Text, cbBorneChampLibre4.Text, PontFirme, CamionChauffeur, CamionTransporteur, cbFormat.Text, txtTitre1.Text, txtTitre2.Text, txtFooter.Text, Walterre);
                                     if (cbLang.Text == "FR")
                                         Custom_MessageBox.Show("FR", "Paramètre modifié avec succès", "Paramètre de pesée", MessageBoxButtons.OK, MessageBoxIcon.Information);
                                     else if (cbLang.Text == "EN")
@@ -2154,6 +2171,12 @@ namespace WidraSoft.UI
             }
         }
 
-        
+        private void chx_Walterre_CheckedChanged(object sender, EventArgs e)
+        {
+            if (chx_Walterre.Checked)
+                txtWalterre.Text = "1";
+            else
+                txtWalterre.Text = "0";
+        }
     }
 }

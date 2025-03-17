@@ -114,6 +114,19 @@ namespace WidraSoft.BL
             }
         }
 
+        public string GetFluxDefault(Int32 Id)
+        {
+            try
+            {
+                PontDA pont = new PontDA();
+                return pont.GetFluxDefault(Id);
+            }
+            catch
+            {
+                throw;
+            }
+        }
+
         public Int32 GetWeightSettingsId(Int32 Id)
         {
             try
@@ -140,14 +153,54 @@ namespace WidraSoft.BL
             }
         }
 
+        public Boolean Borne_Autoriser_Premiere_Pesee(Int32 Id)
+        {
+            try
+            {
+                PontDA pont = new PontDA();
+                return pont.Borne_Autoriser_Premiere_Pesee(Id);
+            }
+            catch
+            {
+                throw;
+            }
+        }
+
+        public Boolean Borne_Autoriser_Deuxieme_Pesee(Int32 Id)
+        {
+            try
+            {
+                PontDA pont = new PontDA();
+                return pont.Borne_Autoriser_Deuxieme_Pesee(Id);
+            }
+            catch
+            {
+                throw;
+            }
+        }
+
+        public Boolean Borne_Autoriser_Tare_Manuelle(Int32 Id)
+        {
+            try
+            {
+                PontDA pont = new PontDA();
+                return pont.Borne_Autoriser_Tare_Manuelle(Id);
+            }
+            catch
+            {
+                throw;
+            }
+        }
+
         public void Add(String Designation, String NumPortCOM, Int32 Weight_SettingsId, Int32 Weighing_SettingsId, Int32 ActiverPoids, Int32 BaudRate,
-                        Int32 DataBits, String StopBits, String Handshake, Int32 ReadTimeOut,  String Machine, String Demarrage, Int32 UtilisateurId, Int32 ActiverMultipleParam, Int32 Poids_Detection)
+                        Int32 DataBits, String StopBits, String Handshake, Int32 ReadTimeOut,  String Machine, String Demarrage, Int32 UtilisateurId, Int32 ActiverMultipleParam, Int32 Poids_Detection,
+                        String BornePremierePesee, String BorneDeuxiemePesee, String BorneTareManuelle, String Flux_Default)
         {
             try
             {
                 PontDA pont = new PontDA();
                 pont.Add(Designation, NumPortCOM, Weight_SettingsId, Weighing_SettingsId, ActiverPoids, BaudRate,
-                         DataBits, StopBits, Handshake, ReadTimeOut, Machine, Demarrage, UtilisateurId, ActiverMultipleParam, Poids_Detection);
+                         DataBits, StopBits, Handshake, ReadTimeOut, Machine, Demarrage, UtilisateurId, ActiverMultipleParam, Poids_Detection, BornePremierePesee, BorneDeuxiemePesee, BorneTareManuelle, Flux_Default);
             }
             catch
             {
@@ -156,13 +209,14 @@ namespace WidraSoft.BL
         }
 
         public void Update(Int32 Id, String Designation, String NumPortCOM, Int32 Weight_SettingsId, Int32 Weighing_SettingsId, Int32 ActiverPoids, Int32 BaudRate,
-                        Int32 DataBits, String StopBits, String Handshake, Int32 ReadTimeOut, String Machine, String Demarrage, Int32 UtilisateurId, Int32 ActiverMultipleParam, Int32 Poids_Detection)
+                        Int32 DataBits, String StopBits, String Handshake, Int32 ReadTimeOut, String Machine, String Demarrage, Int32 UtilisateurId, Int32 ActiverMultipleParam, Int32 Poids_Detection,
+                        String BornePremierePesee, String BorneDeuxiemePesee, String BorneTareManuelle, String Flux_Default)
         {
             try
             {
                 PontDA pont = new PontDA();
                 pont.Update(Id, Designation, NumPortCOM, Weight_SettingsId, Weighing_SettingsId, ActiverPoids, BaudRate,
-                         DataBits, StopBits, Handshake, ReadTimeOut, Machine, Demarrage, UtilisateurId, ActiverMultipleParam, Poids_Detection);
+                         DataBits, StopBits, Handshake, ReadTimeOut, Machine, Demarrage, UtilisateurId, ActiverMultipleParam, Poids_Detection, BornePremierePesee, BorneDeuxiemePesee, BorneTareManuelle, Flux_Default);
             }
             catch
             {

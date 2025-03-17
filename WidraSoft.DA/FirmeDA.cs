@@ -111,6 +111,64 @@ namespace WidraSoft.DA
             }
         }
 
+        public string GetBadge(Int32 Id)
+        {
+
+            String sql = "SELECT BADGE FROM FIRME WHERE FIRMEID=" + Id;
+            conn.ConnectionString = connString;
+            if (conn.State == ConnectionState.Closed)
+                conn.Open();
+            SqlCommand cmd = new SqlCommand(sql, conn);
+            try
+            {
+                String name = (string)cmd.ExecuteScalar();
+                name = name.PadLeft(4, '0');
+                return name;
+            }
+            catch
+            {
+                throw;
+            }
+        }
+
+        public int GetIdByBadge(string Name)
+        {
+
+            String sql = "SELECT FIRMEID FROM FIRME WHERE BADGE='" + Name + "'";
+            conn.ConnectionString = connString;
+            if (conn.State == ConnectionState.Closed)
+                conn.Open();
+            SqlCommand cmd = new SqlCommand(sql, conn);
+            try
+            {
+                int id = (int)cmd.ExecuteScalar();
+                return id;
+            }
+            catch
+            {
+                throw;
+            }
+        }
+
+        public int CountByBadge(string Name)
+        {
+
+            String sql = "SELECT COUNT(*) FROM FIRME WHERE BADGE='" + Name + "'";
+            conn.ConnectionString = connString;
+            if (conn.State == ConnectionState.Closed)
+                conn.Open();
+            SqlCommand cmd = new SqlCommand(sql, conn);
+            try
+            {
+                int nb = (int)cmd.ExecuteScalar();
+                return nb;
+            }
+            catch
+            {
+                throw;
+            }
+        }
+
         public int GetMaxId()
         {
 

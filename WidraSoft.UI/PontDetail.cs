@@ -66,6 +66,22 @@ namespace WidraSoft.UI
             cbDemarrage.ValueMember = null;
             cbDemarrage.DisplayMember = Values.DemarrageType[0];
 
+            cbBornePremierePesee.DataSource = Values.YesNoBornePremierePesee;
+            cbBornePremierePesee.ValueMember = null;
+            cbBornePremierePesee.DisplayMember = Values.YesNoBornePremierePesee[0].ToString();
+
+            cbBorneDeuxiemePesee.DataSource = Values.YesNoBorneDeuxiemePesee;
+            cbBorneDeuxiemePesee.ValueMember = null;
+            cbBorneDeuxiemePesee.DisplayMember = Values.YesNoBorneDeuxiemePesee[0].ToString();
+
+            cbBorneTareManuelle.DataSource = Values.YesNoBorneTareManuelle;
+            cbBorneTareManuelle.ValueMember = null;
+            cbBorneTareManuelle.DisplayMember = Values.YesNoBorneTareManuelle[0].ToString();
+
+            cbFlux_Default.DataSource = Values.Flux_Default;
+            cbFlux_Default.ValueMember = null;
+            cbFlux_Default.DisplayMember = Values.Flux_Default[0].ToString();
+
             if (vg_Mode == "Add")
             {
                 try
@@ -97,14 +113,15 @@ namespace WidraSoft.UI
             cbLang.DataSource = Language.Languages;
             cbLang.ValueMember = null;
             cbLang.DisplayMember = Language.Languages[0];
-            cbLang.SelectedIndex = 0;
+            cbLang.SelectedIndex = MenuGeneral.languuage_index;
 
         }
 
         private void Add_Item()
         {
             if (txtId.Text == "" && txtDateCreation.Text == "" && txtDesignation.Text == "" && cbWeight_SettingsId.Text == "" && cbWeighing_SettingsId.Text == "" && txtCOM.Text == "" && txtActiverPoids.Text == "" && cbBaudRate.Text == "" && cbDataBits.Text == ""
-                && cbStopBits.Text == "" && cbHandshake.Text == "" && txtReadTimeOut.Text == "" && txtMachine.Text == ""  && cbDemarrage.Text == "" && cbUtilisateurId.Text == "" && txtActiverMultipleParam.Text == "")
+                && cbStopBits.Text == "" && cbHandshake.Text == "" && txtReadTimeOut.Text == "" && txtMachine.Text == ""  && cbDemarrage.Text == "" && cbUtilisateurId.Text == "" && txtActiverMultipleParam.Text == "" && cbBornePremierePesee.Text == "" && cbBorneDeuxiemePesee.Text == ""
+                && cbBorneTareManuelle.Text == "" && cbFlux_Default.Text == "")
             {
                 lbModifier.Enabled = false;
                 lbModifier.BackColor = Color.Transparent;
@@ -177,6 +194,10 @@ namespace WidraSoft.UI
                 else
                     chx_ActiverMultipleParam.Checked = false;
                 txtMin.Text = row["POIDS_DETECTION"].ToString();
+                cbBornePremierePesee.Text = row["BORNEPREMIEREPESEE"].ToString();
+                cbBorneDeuxiemePesee.Text = row["BORNEDEUXIEMEPESEE"].ToString();
+                cbBorneTareManuelle.Text = row["BORNETAREMANUELLE"].ToString();
+                cbFlux_Default.Text = row["FLUX_DEFAULT"].ToString();
             }
         }
 
@@ -203,6 +224,10 @@ namespace WidraSoft.UI
             lblAddDgvChauffeurs.Enabled = false;
             lbActualiserDgvChauffeurs.Enabled=false;
             lblRetirerDgvChauffeurs.Enabled = false;
+            cbBornePremierePesee.Enabled = false;
+            cbBorneDeuxiemePesee.Enabled = false;   
+            cbBorneTareManuelle.Enabled = false;
+            cbFlux_Default.Enabled = false;
             pbUpdating.Visible = false;
 
             vg_IsEnabled = false;
@@ -231,6 +256,10 @@ namespace WidraSoft.UI
             lblAddDgvChauffeurs.Enabled = true;
             lbActualiserDgvChauffeurs.Enabled = true;
             lblRetirerDgvChauffeurs.Enabled = true;
+            cbBornePremierePesee.Enabled = true;
+            cbBorneDeuxiemePesee.Enabled = true;
+            cbBorneTareManuelle.Enabled = true;
+            cbFlux_Default.Enabled = true;
             pbUpdating.Visible = true;
 
             vg_IsEnabled = true;
@@ -257,7 +286,10 @@ namespace WidraSoft.UI
             txtMachine.Text = "";
             cbDemarrage.Text = "";
             cbUtilisateurId.Text = "";
-
+            cbBornePremierePesee.Text = "";
+            cbBorneDeuxiemePesee.Text = "";
+            cbBorneTareManuelle.Text = "";
+            cbFlux_Default.Text = "";
         }
 
         private void Bind_DgvFirmes()
@@ -332,7 +364,8 @@ namespace WidraSoft.UI
             try
             {
                 if (txtId.Text == "" && txtDateCreation.Text == "" && txtDesignation.Text != "" && cbWeight_SettingsId.Text != "" && cbWeighing_SettingsId.Text != "" && txtCOM.Text != "" && txtActiverPoids.Text != ""
-                    && cbBaudRate.Text != "" && cbDataBits.Text != "" && cbStopBits.Text != "" && cbHandshake.Text != "" && txtReadTimeOut.Text != "" && txtActiverMultipleParam.Text != "" && txtMin.Text != "" && txtMachine.Text != "" && cbDemarrage.Text != "")
+                    && cbBaudRate.Text != "" && cbDataBits.Text != "" && cbStopBits.Text != "" && cbHandshake.Text != "" && txtReadTimeOut.Text != "" && txtActiverMultipleParam.Text != "" && txtMin.Text != "" && txtMachine.Text != "" && cbDemarrage.Text != ""
+                    )
                 {
                     int ActiverPoids;
                     int ActiverMultipleParam;
@@ -358,7 +391,8 @@ namespace WidraSoft.UI
                         {
                             Pont pont = new Pont();
                             pont.Add(txtDesignation.Text, txtCOM.Text, Common_functions.CbSelectedValue_Convert_Int(cbWeight_SettingsId), Common_functions.CbSelectedValue_Convert_Int(cbWeighing_SettingsId),ActiverPoids, BaudRate, DataBits, cbStopBits.Text,
-                                 cbHandshake.Text, ReadTimeOut, txtMachine.Text, cbDemarrage.Text, Common_functions.CbSelectedValue_Convert_Int(cbUtilisateurId), ActiverMultipleParam, PoidsDetection);
+                                 cbHandshake.Text, ReadTimeOut, txtMachine.Text, cbDemarrage.Text, Common_functions.CbSelectedValue_Convert_Int(cbUtilisateurId), ActiverMultipleParam, PoidsDetection, cbBornePremierePesee.Text, cbBorneDeuxiemePesee.Text
+                                 , cbBorneTareManuelle.Text, cbFlux_Default.Text);
                             if (cbLang.Text == "FR")
                                 Custom_MessageBox.Show("FR", "Pont ajouté avec succès", "Pont", MessageBoxButtons.OK, MessageBoxIcon.Information);
                             else if (cbLang.Text == "EN")
@@ -434,7 +468,8 @@ namespace WidraSoft.UI
                                 {
                                     Pont pont = new Pont();
                                     pont.Update(Id, txtDesignation.Text, txtCOM.Text, Common_functions.CbSelectedValue_Convert_Int(cbWeight_SettingsId), Common_functions.CbSelectedValue_Convert_Int(cbWeighing_SettingsId), ActiverPoids, BaudRate, DataBits, cbStopBits.Text,
-                                         cbHandshake.Text, ReadTimeOut, txtMachine.Text, cbDemarrage.Text, Common_functions.CbSelectedValue_Convert_Int(cbUtilisateurId), ActiverMultipleParam, PoidsDetection);
+                                         cbHandshake.Text, ReadTimeOut, txtMachine.Text, cbDemarrage.Text, Common_functions.CbSelectedValue_Convert_Int(cbUtilisateurId), ActiverMultipleParam, PoidsDetection, cbBornePremierePesee.Text, cbBorneDeuxiemePesee.Text
+                                 , cbBorneTareManuelle.Text, cbFlux_Default.Text);
                                     if (cbLang.Text == "FR")
                                         Custom_MessageBox.Show("FR", "Pont modifié avec succès", "Pont", MessageBoxButtons.OK, MessageBoxIcon.Information);
                                     else if (cbLang.Text == "EN")

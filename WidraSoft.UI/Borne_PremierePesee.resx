@@ -1,4 +1,64 @@
-﻿<root>
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!--
+    Microsoft ResX Schema
+
+    Version 2.0
+
+    The primary goals of this format is to allow a simple XML format
+    that is mostly human readable. The generation and parsing of the
+    various data types are done through the TypeConverter classes
+    associated with the data types.
+
+    Example:
+
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+
+    There are any number of "resheader" rows that contain simple
+    name/value pairs.
+
+    Each data row contains a name, and value. The row also contains a
+    type or mimetype. Type corresponds to a .NET class that support
+    text/value conversion through the TypeConverter architecture.
+    Classes that don't support this are serialized and stored with the
+    mimetype set.
+
+    The mimetype is used for serialized objects, and tells the
+    ResXResourceReader how to depersist the object. This is currently not
+    extensible. For a given mimetype the value must be set accordingly:
+
+    Note - application/x-microsoft.net.object.binary.base64 is the format
+    that the ResXResourceWriter will generate, however the reader can
+    read any of the formats listed below.
+
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
   <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
     <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
     <xsd:element name="root" msdata:IsDataSet="true">
@@ -58,415 +118,121 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="DgvList.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+  <data name="panel1.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>None</value>
+  </data>
+  <data name="btIgnorer.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>None</value>
+  </data>
+  <data name="btIgnorer.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>Flat</value>
   </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="DgvList.Location" type="System.Drawing.Point, System.Drawing">
-    <value>12, 86</value>
+  <data name="btIgnorer.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Corbel, 15pt, style=Bold</value>
+  </data>
+  <data name="btIgnorer.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="btIgnorer.Location" type="System.Drawing.Point, System.Drawing">
+    <value>856, 46</value>
+  </data>
+  <data name="btIgnorer.Size" type="System.Drawing.Size, System.Drawing">
+    <value>177, 61</value>
   </data>
   <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="DgvList.RowHeadersWidth" type="System.Int32, mscorlib">
-    <value>62</value>
+  <data name="btIgnorer.TabIndex" type="System.Int32, mscorlib">
+    <value>155</value>
   </data>
-  <data name="DgvList.Size" type="System.Drawing.Size, System.Drawing">
-    <value>648, 361</value>
+  <data name="btIgnorer.Text" xml:space="preserve">
+    <value>IGNORER</value>
   </data>
-  <data name="DgvList.TabIndex" type="System.Int32, mscorlib">
+  <data name="&gt;&gt;btIgnorer.Name" xml:space="preserve">
+    <value>btIgnorer</value>
+  </data>
+  <data name="&gt;&gt;btIgnorer.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btIgnorer.Parent" xml:space="preserve">
+    <value>panel1</value>
+  </data>
+  <data name="&gt;&gt;btIgnorer.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
-  <data name="&gt;&gt;DgvList.Name" xml:space="preserve">
-    <value>DgvList</value>
-  </data>
-  <data name="&gt;&gt;DgvList.Type" xml:space="preserve">
-    <value>System.Windows.Forms.DataGridView, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;DgvList.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;DgvList.ZOrder" xml:space="preserve">
-    <value>20</value>
-  </data>
-  <data name="lbTexte.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+  <data name="lbCount.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>None</value>
   </data>
-  <data name="lbTexte.AutoSize" type="System.Boolean, mscorlib">
+  <data name="lbCount.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
-  <data name="lbTexte.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Corbel, 22pt, style=Bold</value>
+  <data name="lbCount.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Corbel, 14pt, style=Bold</value>
   </data>
-  <data name="lbTexte.Location" type="System.Drawing.Point, System.Drawing">
-    <value>12, 7</value>
+  <data name="lbCount.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
   </data>
-  <data name="lbTexte.Size" type="System.Drawing.Size, System.Drawing">
-    <value>44, 37</value>
+  <data name="lbCount.Location" type="System.Drawing.Point, System.Drawing">
+    <value>767, 33</value>
   </data>
-  <data name="lbTexte.TabIndex" type="System.Int32, mscorlib">
-    <value>3</value>
+  <data name="lbCount.Size" type="System.Drawing.Size, System.Drawing">
+    <value>28, 23</value>
   </data>
-  <data name="lbTexte.Text" xml:space="preserve">
+  <data name="lbCount.TabIndex" type="System.Int32, mscorlib">
+    <value>154</value>
+  </data>
+  <data name="lbCount.Text" xml:space="preserve">
     <value>...</value>
   </data>
-  <data name="&gt;&gt;lbTexte.Name" xml:space="preserve">
-    <value>lbTexte</value>
+  <data name="lbCount.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>TopCenter</value>
   </data>
-  <data name="&gt;&gt;lbTexte.Type" xml:space="preserve">
+  <data name="&gt;&gt;lbCount.Name" xml:space="preserve">
+    <value>lbCount</value>
+  </data>
+  <data name="&gt;&gt;lbCount.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;lbTexte.Parent" xml:space="preserve">
-    <value>$this</value>
+  <data name="&gt;&gt;lbCount.Parent" xml:space="preserve">
+    <value>panel1</value>
   </data>
-  <data name="&gt;&gt;lbTexte.ZOrder" xml:space="preserve">
-    <value>19</value>
+  <data name="&gt;&gt;lbCount.ZOrder" xml:space="preserve">
+    <value>1</value>
   </data>
-  <data name="btValider.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+  <data name="btAnnulerRecherche.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>None</value>
   </data>
-  <data name="btValider.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+  <data name="btAnnulerRecherche.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
     <value>Flat</value>
   </data>
-  <data name="btValider.Font" type="System.Drawing.Font, System.Drawing">
+  <data name="btAnnulerRecherche.Font" type="System.Drawing.Font, System.Drawing">
     <value>Corbel, 15pt, style=Bold</value>
   </data>
-  <data name="btValider.Location" type="System.Drawing.Point, System.Drawing">
-    <value>746, 116</value>
-  </data>
-  <data name="btValider.Size" type="System.Drawing.Size, System.Drawing">
-    <value>177, 61</value>
-  </data>
-  <data name="btValider.TabIndex" type="System.Int32, mscorlib">
-    <value>119</value>
-  </data>
-  <data name="btValider.Text" xml:space="preserve">
-    <value>VALIDER</value>
-  </data>
-  <data name="&gt;&gt;btValider.Name" xml:space="preserve">
-    <value>btValider</value>
-  </data>
-  <data name="&gt;&gt;btValider.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;btValider.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;btValider.ZOrder" xml:space="preserve">
-    <value>18</value>
-  </data>
-  <data name="btAnnuler.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>None</value>
-  </data>
-  <data name="btAnnuler.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
-    <value>Flat</value>
-  </data>
-  <data name="btAnnuler.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Corbel, 15pt, style=Bold</value>
-  </data>
-  <data name="btAnnuler.Location" type="System.Drawing.Point, System.Drawing">
-    <value>746, 184</value>
-  </data>
-  <data name="btAnnuler.Size" type="System.Drawing.Size, System.Drawing">
-    <value>177, 61</value>
-  </data>
-  <data name="btAnnuler.TabIndex" type="System.Int32, mscorlib">
-    <value>120</value>
-  </data>
-  <data name="btAnnuler.Text" xml:space="preserve">
-    <value>ANNULER</value>
-  </data>
-  <data name="&gt;&gt;btAnnuler.Name" xml:space="preserve">
-    <value>btAnnuler</value>
-  </data>
-  <data name="&gt;&gt;btAnnuler.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;btAnnuler.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;btAnnuler.ZOrder" xml:space="preserve">
-    <value>17</value>
-  </data>
-  <data name="btRecherche.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>None</value>
-  </data>
-  <data name="btRecherche.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
-    <value>Flat</value>
-  </data>
-  <data name="btRecherche.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Corbel, 15pt, style=Bold</value>
-  </data>
-  <data name="btRecherche.Location" type="System.Drawing.Point, System.Drawing">
-    <value>746, 251</value>
-  </data>
-  <data name="btRecherche.Size" type="System.Drawing.Size, System.Drawing">
-    <value>177, 61</value>
-  </data>
-  <data name="btRecherche.TabIndex" type="System.Int32, mscorlib">
-    <value>121</value>
-  </data>
-  <data name="btRecherche.Text" xml:space="preserve">
-    <value>AFFICHER CLAVIER</value>
-  </data>
-  <data name="&gt;&gt;btRecherche.Name" xml:space="preserve">
-    <value>btRecherche</value>
-  </data>
-  <data name="&gt;&gt;btRecherche.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;btRecherche.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;btRecherche.ZOrder" xml:space="preserve">
-    <value>16</value>
-  </data>
-  <data name="btAjouter.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>None</value>
-  </data>
-  <data name="btAjouter.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
-    <value>Flat</value>
-  </data>
-  <data name="btAjouter.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Corbel, 15pt, style=Bold</value>
-  </data>
-  <data name="btAjouter.Location" type="System.Drawing.Point, System.Drawing">
-    <value>746, 386</value>
-  </data>
-  <data name="btAjouter.Size" type="System.Drawing.Size, System.Drawing">
-    <value>177, 61</value>
-  </data>
-  <data name="btAjouter.TabIndex" type="System.Int32, mscorlib">
-    <value>122</value>
-  </data>
-  <data name="btAjouter.Text" xml:space="preserve">
-    <value>AJOUTER</value>
-  </data>
-  <data name="&gt;&gt;btAjouter.Name" xml:space="preserve">
-    <value>btAjouter</value>
-  </data>
-  <data name="&gt;&gt;btAjouter.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;btAjouter.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;btAjouter.ZOrder" xml:space="preserve">
-    <value>15</value>
-  </data>
-  <data name="Spain_flag.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>None</value>
-  </data>
-  <data name="Spain_flag.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+  <data name="btAnnulerRecherche.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
-  <data name="Spain_flag.Location" type="System.Drawing.Point, System.Drawing">
-    <value>899, 12</value>
+  <data name="btAnnulerRecherche.Location" type="System.Drawing.Point, System.Drawing">
+    <value>856, 316</value>
   </data>
-  <data name="Spain_flag.Size" type="System.Drawing.Size, System.Drawing">
-    <value>24, 24</value>
+  <data name="btAnnulerRecherche.Size" type="System.Drawing.Size, System.Drawing">
+    <value>177, 61</value>
   </data>
-  <data name="Spain_flag.SizeMode" type="System.Windows.Forms.PictureBoxSizeMode, System.Windows.Forms">
-    <value>AutoSize</value>
+  <data name="btAnnulerRecherche.TabIndex" type="System.Int32, mscorlib">
+    <value>153</value>
   </data>
-  <data name="Spain_flag.TabIndex" type="System.Int32, mscorlib">
-    <value>125</value>
+  <data name="btAnnulerRecherche.Text" xml:space="preserve">
+    <value>ANNULER RECHERCHE</value>
   </data>
-  <data name="&gt;&gt;Spain_flag.Name" xml:space="preserve">
-    <value>Spain_flag</value>
+  <data name="&gt;&gt;btAnnulerRecherche.Name" xml:space="preserve">
+    <value>btAnnulerRecherche</value>
   </data>
-  <data name="&gt;&gt;Spain_flag.Type" xml:space="preserve">
-    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;Spain_flag.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;Spain_flag.ZOrder" xml:space="preserve">
-    <value>12</value>
-  </data>
-  <data name="England_flag.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>None</value>
-  </data>
-  <data name="England_flag.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="England_flag.Location" type="System.Drawing.Point, System.Drawing">
-    <value>899, 12</value>
-  </data>
-  <data name="England_flag.Size" type="System.Drawing.Size, System.Drawing">
-    <value>24, 24</value>
-  </data>
-  <data name="England_flag.SizeMode" type="System.Windows.Forms.PictureBoxSizeMode, System.Windows.Forms">
-    <value>AutoSize</value>
-  </data>
-  <data name="England_flag.TabIndex" type="System.Int32, mscorlib">
-    <value>124</value>
-  </data>
-  <data name="&gt;&gt;England_flag.Name" xml:space="preserve">
-    <value>England_flag</value>
-  </data>
-  <data name="&gt;&gt;England_flag.Type" xml:space="preserve">
-    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;England_flag.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;England_flag.ZOrder" xml:space="preserve">
-    <value>13</value>
-  </data>
-  <data name="France_flag.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>None</value>
-  </data>
-  <data name="France_flag.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="France_flag.Location" type="System.Drawing.Point, System.Drawing">
-    <value>899, 12</value>
-  </data>
-  <data name="France_flag.Size" type="System.Drawing.Size, System.Drawing">
-    <value>24, 24</value>
-  </data>
-  <data name="France_flag.SizeMode" type="System.Windows.Forms.PictureBoxSizeMode, System.Windows.Forms">
-    <value>AutoSize</value>
-  </data>
-  <data name="France_flag.TabIndex" type="System.Int32, mscorlib">
-    <value>123</value>
-  </data>
-  <data name="&gt;&gt;France_flag.Name" xml:space="preserve">
-    <value>France_flag</value>
-  </data>
-  <data name="&gt;&gt;France_flag.Type" xml:space="preserve">
-    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;France_flag.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;France_flag.ZOrder" xml:space="preserve">
-    <value>14</value>
-  </data>
-  <data name="btUp.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>None</value>
-  </data>
-  <data name="btUp.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
-    <value>Flat</value>
-  </data>
-  <data name="btUp.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Corbel, 15pt, style=Bold</value>
-  </data>
-  <data name="btUp.Location" type="System.Drawing.Point, System.Drawing">
-    <value>670, 195</value>
-  </data>
-  <data name="btUp.Size" type="System.Drawing.Size, System.Drawing">
-    <value>57, 65</value>
-  </data>
-  <data name="btUp.TabIndex" type="System.Int32, mscorlib">
-    <value>126</value>
-  </data>
-  <data name="&gt;&gt;btUp.Name" xml:space="preserve">
-    <value>btUp</value>
-  </data>
-  <data name="&gt;&gt;btUp.Type" xml:space="preserve">
+  <data name="&gt;&gt;btAnnulerRecherche.Type" xml:space="preserve">
     <value>System.Windows.Forms.Button, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;btUp.Parent" xml:space="preserve">
-    <value>$this</value>
+  <data name="&gt;&gt;btAnnulerRecherche.Parent" xml:space="preserve">
+    <value>panel1</value>
   </data>
-  <data name="&gt;&gt;btUp.ZOrder" xml:space="preserve">
-    <value>11</value>
-  </data>
-  <data name="btDown.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>None</value>
-  </data>
-  <data name="btDown.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
-    <value>Flat</value>
-  </data>
-  <data name="btDown.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Corbel, 15pt, style=Bold</value>
-  </data>
-  <data name="btDown.Location" type="System.Drawing.Point, System.Drawing">
-    <value>670, 274</value>
-  </data>
-  <data name="btDown.Size" type="System.Drawing.Size, System.Drawing">
-    <value>57, 65</value>
-  </data>
-  <data name="btDown.TabIndex" type="System.Int32, mscorlib">
-    <value>127</value>
-  </data>
-  <data name="&gt;&gt;btDown.Name" xml:space="preserve">
-    <value>btDown</value>
-  </data>
-  <data name="&gt;&gt;btDown.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;btDown.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;btDown.ZOrder" xml:space="preserve">
-    <value>10</value>
-  </data>
-  <data name="btDoubleUp.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>None</value>
-  </data>
-  <data name="btDoubleUp.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
-    <value>Flat</value>
-  </data>
-  <data name="btDoubleUp.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Corbel, 15pt, style=Bold</value>
-  </data>
-  <data name="btDoubleUp.Location" type="System.Drawing.Point, System.Drawing">
-    <value>670, 125</value>
-  </data>
-  <data name="btDoubleUp.Size" type="System.Drawing.Size, System.Drawing">
-    <value>57, 65</value>
-  </data>
-  <data name="btDoubleUp.TabIndex" type="System.Int32, mscorlib">
-    <value>128</value>
-  </data>
-  <data name="btDoubleUp.Visible" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="&gt;&gt;btDoubleUp.Name" xml:space="preserve">
-    <value>btDoubleUp</value>
-  </data>
-  <data name="&gt;&gt;btDoubleUp.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;btDoubleUp.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;btDoubleUp.ZOrder" xml:space="preserve">
-    <value>9</value>
-  </data>
-  <data name="btDoubleDown.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>None</value>
-  </data>
-  <data name="btDoubleDown.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
-    <value>Flat</value>
-  </data>
-  <data name="btDoubleDown.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Corbel, 15pt, style=Bold</value>
-  </data>
-  <data name="btDoubleDown.Location" type="System.Drawing.Point, System.Drawing">
-    <value>670, 343</value>
-  </data>
-  <data name="btDoubleDown.Size" type="System.Drawing.Size, System.Drawing">
-    <value>57, 65</value>
-  </data>
-  <data name="btDoubleDown.TabIndex" type="System.Int32, mscorlib">
-    <value>129</value>
-  </data>
-  <data name="btDoubleDown.Visible" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="&gt;&gt;btDoubleDown.Name" xml:space="preserve">
-    <value>btDoubleDown</value>
-  </data>
-  <data name="&gt;&gt;btDoubleDown.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;btDoubleDown.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;btDoubleDown.ZOrder" xml:space="preserve">
-    <value>8</value>
+  <data name="&gt;&gt;btAnnulerRecherche.ZOrder" xml:space="preserve">
+    <value>2</value>
   </data>
   <data name="panelClavier.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>None</value>
@@ -484,10 +250,10 @@
     <value>NoControl</value>
   </data>
   <data name="Space.Location" type="System.Drawing.Point, System.Drawing">
-    <value>578, 70</value>
+    <value>643, 71</value>
   </data>
   <data name="Space.Size" type="System.Drawing.Size, System.Drawing">
-    <value>57, 53</value>
+    <value>65, 60</value>
   </data>
   <data name="Space.TabIndex" type="System.Int32, mscorlib">
     <value>170</value>
@@ -513,11 +279,14 @@
   <data name="btEffacer.Font" type="System.Drawing.Font, System.Drawing">
     <value>Corbel, 16pt, style=Bold</value>
   </data>
+  <data name="btEffacer.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
   <data name="btEffacer.Location" type="System.Drawing.Point, System.Drawing">
-    <value>578, 13</value>
+    <value>643, 7</value>
   </data>
   <data name="btEffacer.Size" type="System.Drawing.Size, System.Drawing">
-    <value>57, 53</value>
+    <value>65, 60</value>
   </data>
   <data name="btEffacer.TabIndex" type="System.Int32, mscorlib">
     <value>169</value>
@@ -546,11 +315,14 @@
   <data name="Slash.Font" type="System.Drawing.Font, System.Drawing">
     <value>Corbel, 20pt, style=Bold</value>
   </data>
+  <data name="Slash.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
   <data name="Slash.Location" type="System.Drawing.Point, System.Drawing">
-    <value>578, 127</value>
+    <value>643, 135</value>
   </data>
   <data name="Slash.Size" type="System.Drawing.Size, System.Drawing">
-    <value>57, 53</value>
+    <value>65, 60</value>
   </data>
   <data name="Slash.TabIndex" type="System.Int32, mscorlib">
     <value>168</value>
@@ -579,11 +351,14 @@
   <data name="Tiret.Font" type="System.Drawing.Font, System.Drawing">
     <value>Corbel, 20pt, style=Bold</value>
   </data>
+  <data name="Tiret.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
   <data name="Tiret.Location" type="System.Drawing.Point, System.Drawing">
-    <value>515, 127</value>
+    <value>572, 135</value>
   </data>
   <data name="Tiret.Size" type="System.Drawing.Size, System.Drawing">
-    <value>57, 53</value>
+    <value>65, 60</value>
   </data>
   <data name="Tiret.TabIndex" type="System.Int32, mscorlib">
     <value>167</value>
@@ -612,11 +387,14 @@
   <data name="bt_0.Font" type="System.Drawing.Font, System.Drawing">
     <value>Corbel, 20pt, style=Bold</value>
   </data>
+  <data name="bt_0.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
   <data name="bt_0.Location" type="System.Drawing.Point, System.Drawing">
-    <value>578, 184</value>
+    <value>643, 199</value>
   </data>
   <data name="bt_0.Size" type="System.Drawing.Size, System.Drawing">
-    <value>57, 53</value>
+    <value>65, 60</value>
   </data>
   <data name="bt_0.TabIndex" type="System.Int32, mscorlib">
     <value>166</value>
@@ -645,11 +423,14 @@
   <data name="bt_9.Font" type="System.Drawing.Font, System.Drawing">
     <value>Corbel, 20pt, style=Bold</value>
   </data>
+  <data name="bt_9.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
   <data name="bt_9.Location" type="System.Drawing.Point, System.Drawing">
-    <value>515, 184</value>
+    <value>572, 199</value>
   </data>
   <data name="bt_9.Size" type="System.Drawing.Size, System.Drawing">
-    <value>57, 53</value>
+    <value>65, 60</value>
   </data>
   <data name="bt_9.TabIndex" type="System.Int32, mscorlib">
     <value>165</value>
@@ -678,11 +459,14 @@
   <data name="bt_8.Font" type="System.Drawing.Font, System.Drawing">
     <value>Corbel, 20pt, style=Bold</value>
   </data>
+  <data name="bt_8.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
   <data name="bt_8.Location" type="System.Drawing.Point, System.Drawing">
-    <value>452, 184</value>
+    <value>501, 199</value>
   </data>
   <data name="bt_8.Size" type="System.Drawing.Size, System.Drawing">
-    <value>57, 53</value>
+    <value>65, 60</value>
   </data>
   <data name="bt_8.TabIndex" type="System.Int32, mscorlib">
     <value>164</value>
@@ -711,11 +495,14 @@
   <data name="bt_7.Font" type="System.Drawing.Font, System.Drawing">
     <value>Corbel, 20pt, style=Bold</value>
   </data>
+  <data name="bt_7.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
   <data name="bt_7.Location" type="System.Drawing.Point, System.Drawing">
-    <value>389, 184</value>
+    <value>430, 199</value>
   </data>
   <data name="bt_7.Size" type="System.Drawing.Size, System.Drawing">
-    <value>57, 53</value>
+    <value>65, 60</value>
   </data>
   <data name="bt_7.TabIndex" type="System.Int32, mscorlib">
     <value>163</value>
@@ -744,11 +531,14 @@
   <data name="bt_6.Font" type="System.Drawing.Font, System.Drawing">
     <value>Corbel, 20pt, style=Bold</value>
   </data>
+  <data name="bt_6.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
   <data name="bt_6.Location" type="System.Drawing.Point, System.Drawing">
-    <value>326, 184</value>
+    <value>359, 199</value>
   </data>
   <data name="bt_6.Size" type="System.Drawing.Size, System.Drawing">
-    <value>57, 53</value>
+    <value>65, 60</value>
   </data>
   <data name="bt_6.TabIndex" type="System.Int32, mscorlib">
     <value>162</value>
@@ -777,11 +567,14 @@
   <data name="bt_5.Font" type="System.Drawing.Font, System.Drawing">
     <value>Corbel, 20pt, style=Bold</value>
   </data>
+  <data name="bt_5.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
   <data name="bt_5.Location" type="System.Drawing.Point, System.Drawing">
-    <value>263, 184</value>
+    <value>289, 199</value>
   </data>
   <data name="bt_5.Size" type="System.Drawing.Size, System.Drawing">
-    <value>57, 53</value>
+    <value>65, 60</value>
   </data>
   <data name="bt_5.TabIndex" type="System.Int32, mscorlib">
     <value>161</value>
@@ -810,11 +603,14 @@
   <data name="bt_4.Font" type="System.Drawing.Font, System.Drawing">
     <value>Corbel, 20pt, style=Bold</value>
   </data>
+  <data name="bt_4.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
   <data name="bt_4.Location" type="System.Drawing.Point, System.Drawing">
-    <value>200, 184</value>
+    <value>218, 199</value>
   </data>
   <data name="bt_4.Size" type="System.Drawing.Size, System.Drawing">
-    <value>57, 53</value>
+    <value>65, 60</value>
   </data>
   <data name="bt_4.TabIndex" type="System.Int32, mscorlib">
     <value>160</value>
@@ -843,11 +639,14 @@
   <data name="bt_3.Font" type="System.Drawing.Font, System.Drawing">
     <value>Corbel, 20pt, style=Bold</value>
   </data>
+  <data name="bt_3.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
   <data name="bt_3.Location" type="System.Drawing.Point, System.Drawing">
-    <value>137, 184</value>
+    <value>147, 199</value>
   </data>
   <data name="bt_3.Size" type="System.Drawing.Size, System.Drawing">
-    <value>57, 53</value>
+    <value>65, 60</value>
   </data>
   <data name="bt_3.TabIndex" type="System.Int32, mscorlib">
     <value>159</value>
@@ -876,11 +675,14 @@
   <data name="bt_2.Font" type="System.Drawing.Font, System.Drawing">
     <value>Corbel, 20pt, style=Bold</value>
   </data>
+  <data name="bt_2.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
   <data name="bt_2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>74, 184</value>
+    <value>76, 199</value>
   </data>
   <data name="bt_2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>57, 53</value>
+    <value>65, 60</value>
   </data>
   <data name="bt_2.TabIndex" type="System.Int32, mscorlib">
     <value>158</value>
@@ -909,11 +711,14 @@
   <data name="bt_1.Font" type="System.Drawing.Font, System.Drawing">
     <value>Corbel, 20pt, style=Bold</value>
   </data>
+  <data name="bt_1.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
   <data name="bt_1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>11, 184</value>
+    <value>5, 199</value>
   </data>
   <data name="bt_1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>57, 53</value>
+    <value>65, 60</value>
   </data>
   <data name="bt_1.TabIndex" type="System.Int32, mscorlib">
     <value>157</value>
@@ -942,11 +747,14 @@
   <data name="Z.Font" type="System.Drawing.Font, System.Drawing">
     <value>Corbel, 20pt, style=Bold</value>
   </data>
+  <data name="Z.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
   <data name="Z.Location" type="System.Drawing.Point, System.Drawing">
-    <value>452, 127</value>
+    <value>501, 135</value>
   </data>
   <data name="Z.Size" type="System.Drawing.Size, System.Drawing">
-    <value>57, 53</value>
+    <value>65, 60</value>
   </data>
   <data name="Z.TabIndex" type="System.Int32, mscorlib">
     <value>156</value>
@@ -975,11 +783,14 @@
   <data name="Y.Font" type="System.Drawing.Font, System.Drawing">
     <value>Corbel, 20pt, style=Bold</value>
   </data>
+  <data name="Y.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
   <data name="Y.Location" type="System.Drawing.Point, System.Drawing">
-    <value>389, 127</value>
+    <value>430, 135</value>
   </data>
   <data name="Y.Size" type="System.Drawing.Size, System.Drawing">
-    <value>57, 53</value>
+    <value>65, 60</value>
   </data>
   <data name="Y.TabIndex" type="System.Int32, mscorlib">
     <value>155</value>
@@ -1008,11 +819,14 @@
   <data name="X.Font" type="System.Drawing.Font, System.Drawing">
     <value>Corbel, 20pt, style=Bold</value>
   </data>
+  <data name="X.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
   <data name="X.Location" type="System.Drawing.Point, System.Drawing">
-    <value>326, 127</value>
+    <value>359, 135</value>
   </data>
   <data name="X.Size" type="System.Drawing.Size, System.Drawing">
-    <value>57, 53</value>
+    <value>65, 60</value>
   </data>
   <data name="X.TabIndex" type="System.Int32, mscorlib">
     <value>154</value>
@@ -1041,11 +855,14 @@
   <data name="W.Font" type="System.Drawing.Font, System.Drawing">
     <value>Corbel, 20pt, style=Bold</value>
   </data>
+  <data name="W.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
   <data name="W.Location" type="System.Drawing.Point, System.Drawing">
-    <value>263, 127</value>
+    <value>289, 135</value>
   </data>
   <data name="W.Size" type="System.Drawing.Size, System.Drawing">
-    <value>57, 53</value>
+    <value>65, 60</value>
   </data>
   <data name="W.TabIndex" type="System.Int32, mscorlib">
     <value>153</value>
@@ -1074,11 +891,14 @@
   <data name="V.Font" type="System.Drawing.Font, System.Drawing">
     <value>Corbel, 20pt, style=Bold</value>
   </data>
+  <data name="V.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
   <data name="V.Location" type="System.Drawing.Point, System.Drawing">
-    <value>200, 127</value>
+    <value>218, 135</value>
   </data>
   <data name="V.Size" type="System.Drawing.Size, System.Drawing">
-    <value>57, 53</value>
+    <value>65, 60</value>
   </data>
   <data name="V.TabIndex" type="System.Int32, mscorlib">
     <value>152</value>
@@ -1107,11 +927,14 @@
   <data name="U.Font" type="System.Drawing.Font, System.Drawing">
     <value>Corbel, 20pt, style=Bold</value>
   </data>
+  <data name="U.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
   <data name="U.Location" type="System.Drawing.Point, System.Drawing">
-    <value>137, 127</value>
+    <value>147, 135</value>
   </data>
   <data name="U.Size" type="System.Drawing.Size, System.Drawing">
-    <value>57, 53</value>
+    <value>65, 60</value>
   </data>
   <data name="U.TabIndex" type="System.Int32, mscorlib">
     <value>151</value>
@@ -1140,11 +963,14 @@
   <data name="T.Font" type="System.Drawing.Font, System.Drawing">
     <value>Corbel, 20pt, style=Bold</value>
   </data>
+  <data name="T.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
   <data name="T.Location" type="System.Drawing.Point, System.Drawing">
-    <value>74, 127</value>
+    <value>76, 135</value>
   </data>
   <data name="T.Size" type="System.Drawing.Size, System.Drawing">
-    <value>57, 53</value>
+    <value>65, 60</value>
   </data>
   <data name="T.TabIndex" type="System.Int32, mscorlib">
     <value>150</value>
@@ -1173,11 +999,14 @@
   <data name="S.Font" type="System.Drawing.Font, System.Drawing">
     <value>Corbel, 20pt, style=Bold</value>
   </data>
+  <data name="S.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
   <data name="S.Location" type="System.Drawing.Point, System.Drawing">
-    <value>11, 127</value>
+    <value>5, 135</value>
   </data>
   <data name="S.Size" type="System.Drawing.Size, System.Drawing">
-    <value>57, 53</value>
+    <value>65, 60</value>
   </data>
   <data name="S.TabIndex" type="System.Int32, mscorlib">
     <value>149</value>
@@ -1206,11 +1035,14 @@
   <data name="R.Font" type="System.Drawing.Font, System.Drawing">
     <value>Corbel, 20pt, style=Bold</value>
   </data>
+  <data name="R.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
   <data name="R.Location" type="System.Drawing.Point, System.Drawing">
-    <value>515, 70</value>
+    <value>572, 71</value>
   </data>
   <data name="R.Size" type="System.Drawing.Size, System.Drawing">
-    <value>57, 53</value>
+    <value>65, 60</value>
   </data>
   <data name="R.TabIndex" type="System.Int32, mscorlib">
     <value>148</value>
@@ -1239,11 +1071,14 @@
   <data name="Q.Font" type="System.Drawing.Font, System.Drawing">
     <value>Corbel, 20pt, style=Bold</value>
   </data>
+  <data name="Q.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
   <data name="Q.Location" type="System.Drawing.Point, System.Drawing">
-    <value>452, 70</value>
+    <value>501, 71</value>
   </data>
   <data name="Q.Size" type="System.Drawing.Size, System.Drawing">
-    <value>57, 53</value>
+    <value>65, 60</value>
   </data>
   <data name="Q.TabIndex" type="System.Int32, mscorlib">
     <value>147</value>
@@ -1272,11 +1107,14 @@
   <data name="P.Font" type="System.Drawing.Font, System.Drawing">
     <value>Corbel, 20pt, style=Bold</value>
   </data>
+  <data name="P.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
   <data name="P.Location" type="System.Drawing.Point, System.Drawing">
-    <value>389, 70</value>
+    <value>430, 71</value>
   </data>
   <data name="P.Size" type="System.Drawing.Size, System.Drawing">
-    <value>57, 53</value>
+    <value>65, 60</value>
   </data>
   <data name="P.TabIndex" type="System.Int32, mscorlib">
     <value>146</value>
@@ -1305,11 +1143,14 @@
   <data name="O.Font" type="System.Drawing.Font, System.Drawing">
     <value>Corbel, 20pt, style=Bold</value>
   </data>
+  <data name="O.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
   <data name="O.Location" type="System.Drawing.Point, System.Drawing">
-    <value>326, 70</value>
+    <value>359, 71</value>
   </data>
   <data name="O.Size" type="System.Drawing.Size, System.Drawing">
-    <value>57, 53</value>
+    <value>65, 60</value>
   </data>
   <data name="O.TabIndex" type="System.Int32, mscorlib">
     <value>145</value>
@@ -1338,11 +1179,14 @@
   <data name="N.Font" type="System.Drawing.Font, System.Drawing">
     <value>Corbel, 20pt, style=Bold</value>
   </data>
+  <data name="N.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
   <data name="N.Location" type="System.Drawing.Point, System.Drawing">
-    <value>263, 70</value>
+    <value>289, 71</value>
   </data>
   <data name="N.Size" type="System.Drawing.Size, System.Drawing">
-    <value>57, 53</value>
+    <value>65, 60</value>
   </data>
   <data name="N.TabIndex" type="System.Int32, mscorlib">
     <value>144</value>
@@ -1371,11 +1215,14 @@
   <data name="M.Font" type="System.Drawing.Font, System.Drawing">
     <value>Corbel, 20pt, style=Bold</value>
   </data>
+  <data name="M.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
   <data name="M.Location" type="System.Drawing.Point, System.Drawing">
-    <value>200, 70</value>
+    <value>218, 71</value>
   </data>
   <data name="M.Size" type="System.Drawing.Size, System.Drawing">
-    <value>57, 53</value>
+    <value>65, 60</value>
   </data>
   <data name="M.TabIndex" type="System.Int32, mscorlib">
     <value>143</value>
@@ -1404,11 +1251,14 @@
   <data name="L.Font" type="System.Drawing.Font, System.Drawing">
     <value>Corbel, 20pt, style=Bold</value>
   </data>
+  <data name="L.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
   <data name="L.Location" type="System.Drawing.Point, System.Drawing">
-    <value>137, 70</value>
+    <value>147, 71</value>
   </data>
   <data name="L.Size" type="System.Drawing.Size, System.Drawing">
-    <value>57, 53</value>
+    <value>65, 60</value>
   </data>
   <data name="L.TabIndex" type="System.Int32, mscorlib">
     <value>142</value>
@@ -1437,11 +1287,14 @@
   <data name="K.Font" type="System.Drawing.Font, System.Drawing">
     <value>Corbel, 20pt, style=Bold</value>
   </data>
+  <data name="K.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
   <data name="K.Location" type="System.Drawing.Point, System.Drawing">
-    <value>74, 70</value>
+    <value>76, 71</value>
   </data>
   <data name="K.Size" type="System.Drawing.Size, System.Drawing">
-    <value>57, 53</value>
+    <value>65, 60</value>
   </data>
   <data name="K.TabIndex" type="System.Int32, mscorlib">
     <value>141</value>
@@ -1470,11 +1323,14 @@
   <data name="J.Font" type="System.Drawing.Font, System.Drawing">
     <value>Corbel, 20pt, style=Bold</value>
   </data>
+  <data name="J.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
   <data name="J.Location" type="System.Drawing.Point, System.Drawing">
-    <value>11, 70</value>
+    <value>5, 71</value>
   </data>
   <data name="J.Size" type="System.Drawing.Size, System.Drawing">
-    <value>57, 53</value>
+    <value>65, 60</value>
   </data>
   <data name="J.TabIndex" type="System.Int32, mscorlib">
     <value>140</value>
@@ -1503,11 +1359,14 @@
   <data name="I.Font" type="System.Drawing.Font, System.Drawing">
     <value>Corbel, 20pt, style=Bold</value>
   </data>
+  <data name="I.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
   <data name="I.Location" type="System.Drawing.Point, System.Drawing">
-    <value>515, 13</value>
+    <value>572, 7</value>
   </data>
   <data name="I.Size" type="System.Drawing.Size, System.Drawing">
-    <value>57, 53</value>
+    <value>65, 60</value>
   </data>
   <data name="I.TabIndex" type="System.Int32, mscorlib">
     <value>139</value>
@@ -1536,11 +1395,14 @@
   <data name="G.Font" type="System.Drawing.Font, System.Drawing">
     <value>Corbel, 20pt, style=Bold</value>
   </data>
+  <data name="G.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
   <data name="G.Location" type="System.Drawing.Point, System.Drawing">
-    <value>389, 13</value>
+    <value>430, 7</value>
   </data>
   <data name="G.Size" type="System.Drawing.Size, System.Drawing">
-    <value>57, 53</value>
+    <value>65, 60</value>
   </data>
   <data name="G.TabIndex" type="System.Int32, mscorlib">
     <value>138</value>
@@ -1569,11 +1431,14 @@
   <data name="H.Font" type="System.Drawing.Font, System.Drawing">
     <value>Corbel, 20pt, style=Bold</value>
   </data>
+  <data name="H.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
   <data name="H.Location" type="System.Drawing.Point, System.Drawing">
-    <value>452, 13</value>
+    <value>501, 7</value>
   </data>
   <data name="H.Size" type="System.Drawing.Size, System.Drawing">
-    <value>57, 53</value>
+    <value>65, 60</value>
   </data>
   <data name="H.TabIndex" type="System.Int32, mscorlib">
     <value>137</value>
@@ -1602,11 +1467,14 @@
   <data name="F.Font" type="System.Drawing.Font, System.Drawing">
     <value>Corbel, 20pt, style=Bold</value>
   </data>
+  <data name="F.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
   <data name="F.Location" type="System.Drawing.Point, System.Drawing">
-    <value>326, 13</value>
+    <value>359, 7</value>
   </data>
   <data name="F.Size" type="System.Drawing.Size, System.Drawing">
-    <value>57, 53</value>
+    <value>65, 60</value>
   </data>
   <data name="F.TabIndex" type="System.Int32, mscorlib">
     <value>136</value>
@@ -1635,11 +1503,14 @@
   <data name="E.Font" type="System.Drawing.Font, System.Drawing">
     <value>Corbel, 20pt, style=Bold</value>
   </data>
+  <data name="E.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
   <data name="E.Location" type="System.Drawing.Point, System.Drawing">
-    <value>263, 13</value>
+    <value>289, 7</value>
   </data>
   <data name="E.Size" type="System.Drawing.Size, System.Drawing">
-    <value>57, 53</value>
+    <value>65, 60</value>
   </data>
   <data name="E.TabIndex" type="System.Int32, mscorlib">
     <value>135</value>
@@ -1668,11 +1539,14 @@
   <data name="D.Font" type="System.Drawing.Font, System.Drawing">
     <value>Corbel, 20pt, style=Bold</value>
   </data>
+  <data name="D.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
   <data name="D.Location" type="System.Drawing.Point, System.Drawing">
-    <value>200, 13</value>
+    <value>218, 7</value>
   </data>
   <data name="D.Size" type="System.Drawing.Size, System.Drawing">
-    <value>57, 53</value>
+    <value>65, 60</value>
   </data>
   <data name="D.TabIndex" type="System.Int32, mscorlib">
     <value>134</value>
@@ -1701,11 +1575,14 @@
   <data name="C.Font" type="System.Drawing.Font, System.Drawing">
     <value>Corbel, 20pt, style=Bold</value>
   </data>
+  <data name="C.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
   <data name="C.Location" type="System.Drawing.Point, System.Drawing">
-    <value>137, 13</value>
+    <value>147, 7</value>
   </data>
   <data name="C.Size" type="System.Drawing.Size, System.Drawing">
-    <value>57, 53</value>
+    <value>65, 60</value>
   </data>
   <data name="C.TabIndex" type="System.Int32, mscorlib">
     <value>133</value>
@@ -1734,11 +1611,14 @@
   <data name="A.Font" type="System.Drawing.Font, System.Drawing">
     <value>Corbel, 20pt, style=Bold</value>
   </data>
+  <data name="A.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
   <data name="A.Location" type="System.Drawing.Point, System.Drawing">
-    <value>11, 13</value>
+    <value>5, 7</value>
   </data>
   <data name="A.Size" type="System.Drawing.Size, System.Drawing">
-    <value>57, 53</value>
+    <value>65, 60</value>
   </data>
   <data name="A.TabIndex" type="System.Int32, mscorlib">
     <value>131</value>
@@ -1767,11 +1647,14 @@
   <data name="B.Font" type="System.Drawing.Font, System.Drawing">
     <value>Corbel, 20pt, style=Bold</value>
   </data>
+  <data name="B.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
   <data name="B.Location" type="System.Drawing.Point, System.Drawing">
-    <value>74, 13</value>
+    <value>76, 7</value>
   </data>
   <data name="B.Size" type="System.Drawing.Size, System.Drawing">
-    <value>57, 53</value>
+    <value>65, 60</value>
   </data>
   <data name="B.TabIndex" type="System.Int32, mscorlib">
     <value>132</value>
@@ -1792,13 +1675,13 @@
     <value>39</value>
   </data>
   <data name="panelClavier.Location" type="System.Drawing.Point, System.Drawing">
-    <value>13, 204</value>
+    <value>13, 184</value>
   </data>
   <data name="panelClavier.Size" type="System.Drawing.Size, System.Drawing">
-    <value>645, 243</value>
+    <value>724, 271</value>
   </data>
   <data name="panelClavier.TabIndex" type="System.Int32, mscorlib">
-    <value>130</value>
+    <value>151</value>
   </data>
   <data name="&gt;&gt;panelClavier.Name" xml:space="preserve">
     <value>panelClavier</value>
@@ -1807,228 +1690,339 @@
     <value>System.Windows.Forms.Panel, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;panelClavier.Parent" xml:space="preserve">
-    <value>$this</value>
+    <value>panel1</value>
   </data>
   <data name="&gt;&gt;panelClavier.ZOrder" xml:space="preserve">
-    <value>7</value>
-  </data>
-  <data name="lbMessage.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>None</value>
-  </data>
-  <data name="lbMessage.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="lbMessage.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Calibri, 18pt, style=Bold</value>
-  </data>
-  <data name="lbMessage.Location" type="System.Drawing.Point, System.Drawing">
-    <value>12, 52</value>
-  </data>
-  <data name="lbMessage.Size" type="System.Drawing.Size, System.Drawing">
-    <value>31, 29</value>
-  </data>
-  <data name="lbMessage.TabIndex" type="System.Int32, mscorlib">
-    <value>131</value>
-  </data>
-  <data name="lbMessage.Text" xml:space="preserve">
-    <value>...</value>
-  </data>
-  <data name="&gt;&gt;lbMessage.Name" xml:space="preserve">
-    <value>lbMessage</value>
-  </data>
-  <data name="&gt;&gt;lbMessage.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;lbMessage.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;lbMessage.ZOrder" xml:space="preserve">
-    <value>6</value>
-  </data>
-  <data name="btAnnulerRecherche.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>None</value>
-  </data>
-  <data name="btAnnulerRecherche.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
-    <value>Flat</value>
-  </data>
-  <data name="btAnnulerRecherche.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Corbel, 15pt, style=Bold</value>
-  </data>
-  <data name="btAnnulerRecherche.Location" type="System.Drawing.Point, System.Drawing">
-    <value>746, 319</value>
-  </data>
-  <data name="btAnnulerRecherche.Size" type="System.Drawing.Size, System.Drawing">
-    <value>177, 61</value>
-  </data>
-  <data name="btAnnulerRecherche.TabIndex" type="System.Int32, mscorlib">
-    <value>132</value>
-  </data>
-  <data name="btAnnulerRecherche.Text" xml:space="preserve">
-    <value>ANNULER RECHERCHE</value>
-  </data>
-  <data name="&gt;&gt;btAnnulerRecherche.Name" xml:space="preserve">
-    <value>btAnnulerRecherche</value>
-  </data>
-  <data name="&gt;&gt;btAnnulerRecherche.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;btAnnulerRecherche.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;btAnnulerRecherche.ZOrder" xml:space="preserve">
-    <value>5</value>
-  </data>
-  <data name="lbCount.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>None</value>
-  </data>
-  <data name="lbCount.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="lbCount.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Corbel, 14pt, style=Bold</value>
-  </data>
-  <data name="lbCount.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="lbCount.Location" type="System.Drawing.Point, System.Drawing">
-    <value>620, 57</value>
-  </data>
-  <data name="lbCount.Size" type="System.Drawing.Size, System.Drawing">
-    <value>28, 23</value>
-  </data>
-  <data name="lbCount.TabIndex" type="System.Int32, mscorlib">
-    <value>133</value>
-  </data>
-  <data name="lbCount.Text" xml:space="preserve">
-    <value>...</value>
-  </data>
-  <data name="lbCount.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>TopCenter</value>
-  </data>
-  <data name="&gt;&gt;lbCount.Name" xml:space="preserve">
-    <value>lbCount</value>
-  </data>
-  <data name="&gt;&gt;lbCount.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;lbCount.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;lbCount.ZOrder" xml:space="preserve">
-    <value>4</value>
-  </data>
-  <data name="btIgnorer.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>None</value>
-  </data>
-  <data name="btIgnorer.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
-    <value>Flat</value>
-  </data>
-  <data name="btIgnorer.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Corbel, 15pt, style=Bold</value>
-  </data>
-  <data name="btIgnorer.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="btIgnorer.Location" type="System.Drawing.Point, System.Drawing">
-    <value>746, 49</value>
-  </data>
-  <data name="btIgnorer.Size" type="System.Drawing.Size, System.Drawing">
-    <value>177, 61</value>
-  </data>
-  <data name="btIgnorer.TabIndex" type="System.Int32, mscorlib">
-    <value>134</value>
-  </data>
-  <data name="btIgnorer.Text" xml:space="preserve">
-    <value>IGNORER</value>
-  </data>
-  <data name="&gt;&gt;btIgnorer.Name" xml:space="preserve">
-    <value>btIgnorer</value>
-  </data>
-  <data name="&gt;&gt;btIgnorer.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;btIgnorer.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;btIgnorer.ZOrder" xml:space="preserve">
     <value>3</value>
   </data>
-  <data name="lbNotFound.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+  <data name="btDoubleDown.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>None</value>
   </data>
-  <data name="lbNotFound.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
+  <data name="btDoubleDown.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>Flat</value>
   </data>
-  <data name="lbNotFound.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Corbel, 14pt, style=Bold</value>
+  <data name="btDoubleDown.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Corbel, 15pt, style=Bold</value>
   </data>
-  <data name="lbNotFound.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+  <data name="btDoubleDown.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
-  <data name="lbNotFound.Location" type="System.Drawing.Point, System.Drawing">
-    <value>454, 57</value>
+  <data name="btDoubleDown.Location" type="System.Drawing.Point, System.Drawing">
+    <value>755, 360</value>
   </data>
-  <data name="lbNotFound.Size" type="System.Drawing.Size, System.Drawing">
-    <value>110, 23</value>
+  <data name="btDoubleDown.Size" type="System.Drawing.Size, System.Drawing">
+    <value>57, 63</value>
   </data>
-  <data name="lbNotFound.TabIndex" type="System.Int32, mscorlib">
-    <value>135</value>
+  <data name="btDoubleDown.TabIndex" type="System.Int32, mscorlib">
+    <value>150</value>
   </data>
-  <data name="lbNotFound.Text" xml:space="preserve">
-    <value>N'existe pas</value>
+  <data name="btDoubleDown.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
   </data>
-  <data name="lbNotFound.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>TopCenter</value>
+  <data name="&gt;&gt;btDoubleDown.Name" xml:space="preserve">
+    <value>btDoubleDown</value>
   </data>
-  <data name="&gt;&gt;lbNotFound.Name" xml:space="preserve">
-    <value>lbNotFound</value>
+  <data name="&gt;&gt;btDoubleDown.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;lbNotFound.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="&gt;&gt;btDoubleDown.Parent" xml:space="preserve">
+    <value>panel1</value>
   </data>
-  <data name="&gt;&gt;lbNotFound.Parent" xml:space="preserve">
-    <value>$this</value>
+  <data name="&gt;&gt;btDoubleDown.ZOrder" xml:space="preserve">
+    <value>4</value>
   </data>
-  <data name="&gt;&gt;lbNotFound.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="lbRequired.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+  <data name="btDoubleUp.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>None</value>
   </data>
-  <data name="lbRequired.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
+  <data name="btDoubleUp.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>Flat</value>
   </data>
-  <data name="lbRequired.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Corbel, 14pt, style=Bold</value>
+  <data name="btDoubleUp.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Corbel, 15pt, style=Bold</value>
   </data>
-  <data name="lbRequired.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+  <data name="btDoubleUp.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
-  <data name="lbRequired.Location" type="System.Drawing.Point, System.Drawing">
-    <value>454, 34</value>
+  <data name="btDoubleUp.Location" type="System.Drawing.Point, System.Drawing">
+    <value>755, 142</value>
   </data>
-  <data name="lbRequired.Size" type="System.Drawing.Size, System.Drawing">
-    <value>105, 23</value>
+  <data name="btDoubleUp.Size" type="System.Drawing.Size, System.Drawing">
+    <value>57, 63</value>
   </data>
-  <data name="lbRequired.TabIndex" type="System.Int32, mscorlib">
-    <value>136</value>
+  <data name="btDoubleUp.TabIndex" type="System.Int32, mscorlib">
+    <value>149</value>
   </data>
-  <data name="lbRequired.Text" xml:space="preserve">
-    <value>Obligatoire</value>
+  <data name="btDoubleUp.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
   </data>
-  <data name="lbRequired.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>TopCenter</value>
+  <data name="&gt;&gt;btDoubleUp.Name" xml:space="preserve">
+    <value>btDoubleUp</value>
   </data>
-  <data name="&gt;&gt;lbRequired.Name" xml:space="preserve">
-    <value>lbRequired</value>
+  <data name="&gt;&gt;btDoubleUp.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;lbRequired.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="&gt;&gt;btDoubleUp.Parent" xml:space="preserve">
+    <value>panel1</value>
   </data>
-  <data name="&gt;&gt;lbRequired.Parent" xml:space="preserve">
+  <data name="&gt;&gt;btDoubleUp.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="btDown.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>None</value>
+  </data>
+  <data name="btDown.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>Flat</value>
+  </data>
+  <data name="btDown.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Corbel, 15pt, style=Bold</value>
+  </data>
+  <data name="btDown.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="btDown.Location" type="System.Drawing.Point, System.Drawing">
+    <value>755, 291</value>
+  </data>
+  <data name="btDown.Size" type="System.Drawing.Size, System.Drawing">
+    <value>57, 63</value>
+  </data>
+  <data name="btDown.TabIndex" type="System.Int32, mscorlib">
+    <value>148</value>
+  </data>
+  <data name="&gt;&gt;btDown.Name" xml:space="preserve">
+    <value>btDown</value>
+  </data>
+  <data name="&gt;&gt;btDown.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btDown.Parent" xml:space="preserve">
+    <value>panel1</value>
+  </data>
+  <data name="&gt;&gt;btDown.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="btUp.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>None</value>
+  </data>
+  <data name="btUp.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>Flat</value>
+  </data>
+  <data name="btUp.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Corbel, 15pt, style=Bold</value>
+  </data>
+  <data name="btUp.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="btUp.Location" type="System.Drawing.Point, System.Drawing">
+    <value>755, 212</value>
+  </data>
+  <data name="btUp.Size" type="System.Drawing.Size, System.Drawing">
+    <value>57, 63</value>
+  </data>
+  <data name="btUp.TabIndex" type="System.Int32, mscorlib">
+    <value>147</value>
+  </data>
+  <data name="&gt;&gt;btUp.Name" xml:space="preserve">
+    <value>btUp</value>
+  </data>
+  <data name="&gt;&gt;btUp.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btUp.Parent" xml:space="preserve">
+    <value>panel1</value>
+  </data>
+  <data name="&gt;&gt;btUp.ZOrder" xml:space="preserve">
+    <value>7</value>
+  </data>
+  <data name="btAjouter.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>None</value>
+  </data>
+  <data name="btAjouter.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>Flat</value>
+  </data>
+  <data name="btAjouter.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Corbel, 15pt, style=Bold</value>
+  </data>
+  <data name="btAjouter.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="btAjouter.Location" type="System.Drawing.Point, System.Drawing">
+    <value>856, 383</value>
+  </data>
+  <data name="btAjouter.Size" type="System.Drawing.Size, System.Drawing">
+    <value>177, 61</value>
+  </data>
+  <data name="btAjouter.TabIndex" type="System.Int32, mscorlib">
+    <value>143</value>
+  </data>
+  <data name="btAjouter.Text" xml:space="preserve">
+    <value>AJOUTER</value>
+  </data>
+  <data name="&gt;&gt;btAjouter.Name" xml:space="preserve">
+    <value>btAjouter</value>
+  </data>
+  <data name="&gt;&gt;btAjouter.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btAjouter.Parent" xml:space="preserve">
+    <value>panel1</value>
+  </data>
+  <data name="&gt;&gt;btAjouter.ZOrder" xml:space="preserve">
+    <value>8</value>
+  </data>
+  <data name="btRecherche.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>None</value>
+  </data>
+  <data name="btRecherche.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>Flat</value>
+  </data>
+  <data name="btRecherche.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Corbel, 15pt, style=Bold</value>
+  </data>
+  <data name="btRecherche.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="btRecherche.Location" type="System.Drawing.Point, System.Drawing">
+    <value>856, 248</value>
+  </data>
+  <data name="btRecherche.Size" type="System.Drawing.Size, System.Drawing">
+    <value>177, 61</value>
+  </data>
+  <data name="btRecherche.TabIndex" type="System.Int32, mscorlib">
+    <value>142</value>
+  </data>
+  <data name="btRecherche.Text" xml:space="preserve">
+    <value>AFFICHER CLAVIER</value>
+  </data>
+  <data name="&gt;&gt;btRecherche.Name" xml:space="preserve">
+    <value>btRecherche</value>
+  </data>
+  <data name="&gt;&gt;btRecherche.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btRecherche.Parent" xml:space="preserve">
+    <value>panel1</value>
+  </data>
+  <data name="&gt;&gt;btRecherche.ZOrder" xml:space="preserve">
+    <value>9</value>
+  </data>
+  <data name="btAnnuler.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>None</value>
+  </data>
+  <data name="btAnnuler.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>Flat</value>
+  </data>
+  <data name="btAnnuler.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Corbel, 15pt, style=Bold</value>
+  </data>
+  <data name="btAnnuler.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="btAnnuler.Location" type="System.Drawing.Point, System.Drawing">
+    <value>856, 181</value>
+  </data>
+  <data name="btAnnuler.Size" type="System.Drawing.Size, System.Drawing">
+    <value>177, 61</value>
+  </data>
+  <data name="btAnnuler.TabIndex" type="System.Int32, mscorlib">
+    <value>141</value>
+  </data>
+  <data name="btAnnuler.Text" xml:space="preserve">
+    <value>ANNULER</value>
+  </data>
+  <data name="&gt;&gt;btAnnuler.Name" xml:space="preserve">
+    <value>btAnnuler</value>
+  </data>
+  <data name="&gt;&gt;btAnnuler.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btAnnuler.Parent" xml:space="preserve">
+    <value>panel1</value>
+  </data>
+  <data name="&gt;&gt;btAnnuler.ZOrder" xml:space="preserve">
+    <value>10</value>
+  </data>
+  <data name="btValider.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>None</value>
+  </data>
+  <data name="btValider.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>Flat</value>
+  </data>
+  <data name="btValider.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Corbel, 15pt, style=Bold</value>
+  </data>
+  <data name="btValider.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="btValider.Location" type="System.Drawing.Point, System.Drawing">
+    <value>856, 113</value>
+  </data>
+  <data name="btValider.Size" type="System.Drawing.Size, System.Drawing">
+    <value>177, 61</value>
+  </data>
+  <data name="btValider.TabIndex" type="System.Int32, mscorlib">
+    <value>140</value>
+  </data>
+  <data name="btValider.Text" xml:space="preserve">
+    <value>VALIDER</value>
+  </data>
+  <data name="&gt;&gt;btValider.Name" xml:space="preserve">
+    <value>btValider</value>
+  </data>
+  <data name="&gt;&gt;btValider.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btValider.Parent" xml:space="preserve">
+    <value>panel1</value>
+  </data>
+  <data name="&gt;&gt;btValider.ZOrder" xml:space="preserve">
+    <value>11</value>
+  </data>
+  <data name="DgvList.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>None</value>
+  </data>
+  <data name="DgvList.Location" type="System.Drawing.Point, System.Drawing">
+    <value>5, 10</value>
+  </data>
+  <data name="DgvList.RowHeadersWidth" type="System.Int32, mscorlib">
+    <value>62</value>
+  </data>
+  <data name="DgvList.Size" type="System.Drawing.Size, System.Drawing">
+    <value>738, 446</value>
+  </data>
+  <data name="DgvList.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;DgvList.Name" xml:space="preserve">
+    <value>DgvList</value>
+  </data>
+  <data name="&gt;&gt;DgvList.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridView, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;DgvList.Parent" xml:space="preserve">
+    <value>panel1</value>
+  </data>
+  <data name="&gt;&gt;DgvList.ZOrder" xml:space="preserve">
+    <value>12</value>
+  </data>
+  <data name="panel1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>33, 92</value>
+  </data>
+  <data name="panel1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1064, 465</value>
+  </data>
+  <data name="panel1.TabIndex" type="System.Int32, mscorlib">
+    <value>138</value>
+  </data>
+  <data name="&gt;&gt;panel1.Name" xml:space="preserve">
+    <value>panel1</value>
+  </data>
+  <data name="&gt;&gt;panel1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;panel1.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
-  <data name="&gt;&gt;lbRequired.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;panel1.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
   <data name="lbOptional.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
@@ -2038,19 +2032,19 @@
     <value>True</value>
   </data>
   <data name="lbOptional.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Corbel, 14pt, style=Bold</value>
+    <value>Corbel, 18pt, style=Bold</value>
   </data>
   <data name="lbOptional.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
   <data name="lbOptional.Location" type="System.Drawing.Point, System.Drawing">
-    <value>473, 34</value>
+    <value>624, 19</value>
   </data>
   <data name="lbOptional.Size" type="System.Drawing.Size, System.Drawing">
-    <value>94, 23</value>
+    <value>116, 29</value>
   </data>
   <data name="lbOptional.TabIndex" type="System.Int32, mscorlib">
-    <value>137</value>
+    <value>158</value>
   </data>
   <data name="lbOptional.Text" xml:space="preserve">
     <value>Optionnel</value>
@@ -2065,9 +2059,297 @@
     <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;lbOptional.Parent" xml:space="preserve">
-    <value>$this</value>
+    <value>panel3</value>
   </data>
   <data name="&gt;&gt;lbOptional.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="lbRequired.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>None</value>
+  </data>
+  <data name="lbRequired.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="lbRequired.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Corbel, 18pt, style=Bold</value>
+  </data>
+  <data name="lbRequired.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="lbRequired.Location" type="System.Drawing.Point, System.Drawing">
+    <value>601, 20</value>
+  </data>
+  <data name="lbRequired.Size" type="System.Drawing.Size, System.Drawing">
+    <value>129, 29</value>
+  </data>
+  <data name="lbRequired.TabIndex" type="System.Int32, mscorlib">
+    <value>157</value>
+  </data>
+  <data name="lbRequired.Text" xml:space="preserve">
+    <value>Obligatoire</value>
+  </data>
+  <data name="lbRequired.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>TopCenter</value>
+  </data>
+  <data name="&gt;&gt;lbRequired.Name" xml:space="preserve">
+    <value>lbRequired</value>
+  </data>
+  <data name="&gt;&gt;lbRequired.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lbRequired.Parent" xml:space="preserve">
+    <value>panel3</value>
+  </data>
+  <data name="&gt;&gt;lbRequired.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="lbNotFound.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>None</value>
+  </data>
+  <data name="lbNotFound.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="lbNotFound.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Corbel, 18pt, style=Bold</value>
+  </data>
+  <data name="lbNotFound.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="lbNotFound.Location" type="System.Drawing.Point, System.Drawing">
+    <value>601, 43</value>
+  </data>
+  <data name="lbNotFound.Size" type="System.Drawing.Size, System.Drawing">
+    <value>137, 29</value>
+  </data>
+  <data name="lbNotFound.TabIndex" type="System.Int32, mscorlib">
+    <value>156</value>
+  </data>
+  <data name="lbNotFound.Text" xml:space="preserve">
+    <value>N'existe pas</value>
+  </data>
+  <data name="lbNotFound.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>TopCenter</value>
+  </data>
+  <data name="&gt;&gt;lbNotFound.Name" xml:space="preserve">
+    <value>lbNotFound</value>
+  </data>
+  <data name="&gt;&gt;lbNotFound.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lbNotFound.Parent" xml:space="preserve">
+    <value>panel3</value>
+  </data>
+  <data name="&gt;&gt;lbNotFound.ZOrder" xml:space="preserve">
+    <value>7</value>
+  </data>
+  <data name="lbMessage.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>None</value>
+  </data>
+  <data name="lbMessage.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="lbMessage.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Calibri, 26pt, style=Bold</value>
+  </data>
+  <data name="lbMessage.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="lbMessage.Location" type="System.Drawing.Point, System.Drawing">
+    <value>8, 41</value>
+  </data>
+  <data name="lbMessage.Size" type="System.Drawing.Size, System.Drawing">
+    <value>45, 42</value>
+  </data>
+  <data name="lbMessage.TabIndex" type="System.Int32, mscorlib">
+    <value>152</value>
+  </data>
+  <data name="lbMessage.Text" xml:space="preserve">
+    <value>...</value>
+  </data>
+  <data name="&gt;&gt;lbMessage.Name" xml:space="preserve">
+    <value>lbMessage</value>
+  </data>
+  <data name="&gt;&gt;lbMessage.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lbMessage.Parent" xml:space="preserve">
+    <value>panel3</value>
+  </data>
+  <data name="&gt;&gt;lbMessage.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="Spain_flag.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>None</value>
+  </data>
+  <data name="Spain_flag.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="Spain_flag.Location" type="System.Drawing.Point, System.Drawing">
+    <value>1010, 25</value>
+  </data>
+  <data name="Spain_flag.Size" type="System.Drawing.Size, System.Drawing">
+    <value>24, 24</value>
+  </data>
+  <data name="Spain_flag.SizeMode" type="System.Windows.Forms.PictureBoxSizeMode, System.Windows.Forms">
+    <value>AutoSize</value>
+  </data>
+  <data name="Spain_flag.TabIndex" type="System.Int32, mscorlib">
+    <value>146</value>
+  </data>
+  <data name="&gt;&gt;Spain_flag.Name" xml:space="preserve">
+    <value>Spain_flag</value>
+  </data>
+  <data name="&gt;&gt;Spain_flag.Type" xml:space="preserve">
+    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Spain_flag.Parent" xml:space="preserve">
+    <value>panel3</value>
+  </data>
+  <data name="&gt;&gt;Spain_flag.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="England_flag.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>None</value>
+  </data>
+  <data name="England_flag.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="England_flag.Location" type="System.Drawing.Point, System.Drawing">
+    <value>1010, 25</value>
+  </data>
+  <data name="England_flag.Size" type="System.Drawing.Size, System.Drawing">
+    <value>24, 24</value>
+  </data>
+  <data name="England_flag.SizeMode" type="System.Windows.Forms.PictureBoxSizeMode, System.Windows.Forms">
+    <value>AutoSize</value>
+  </data>
+  <data name="England_flag.TabIndex" type="System.Int32, mscorlib">
+    <value>145</value>
+  </data>
+  <data name="&gt;&gt;England_flag.Name" xml:space="preserve">
+    <value>England_flag</value>
+  </data>
+  <data name="&gt;&gt;England_flag.Type" xml:space="preserve">
+    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;England_flag.Parent" xml:space="preserve">
+    <value>panel3</value>
+  </data>
+  <data name="&gt;&gt;England_flag.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="France_flag.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>None</value>
+  </data>
+  <data name="France_flag.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="France_flag.Location" type="System.Drawing.Point, System.Drawing">
+    <value>1010, 25</value>
+  </data>
+  <data name="France_flag.Size" type="System.Drawing.Size, System.Drawing">
+    <value>24, 24</value>
+  </data>
+  <data name="France_flag.SizeMode" type="System.Windows.Forms.PictureBoxSizeMode, System.Windows.Forms">
+    <value>AutoSize</value>
+  </data>
+  <data name="France_flag.TabIndex" type="System.Int32, mscorlib">
+    <value>144</value>
+  </data>
+  <data name="&gt;&gt;France_flag.Name" xml:space="preserve">
+    <value>France_flag</value>
+  </data>
+  <data name="&gt;&gt;France_flag.Type" xml:space="preserve">
+    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;France_flag.Parent" xml:space="preserve">
+    <value>panel3</value>
+  </data>
+  <data name="&gt;&gt;France_flag.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="lbTexte.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>None</value>
+  </data>
+  <data name="lbTexte.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="lbTexte.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Corbel, 20pt, style=Bold</value>
+  </data>
+  <data name="lbTexte.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="lbTexte.Location" type="System.Drawing.Point, System.Drawing">
+    <value>10, 4</value>
+  </data>
+  <data name="lbTexte.Size" type="System.Drawing.Size, System.Drawing">
+    <value>39, 33</value>
+  </data>
+  <data name="lbTexte.TabIndex" type="System.Int32, mscorlib">
+    <value>139</value>
+  </data>
+  <data name="lbTexte.Text" xml:space="preserve">
+    <value>...</value>
+  </data>
+  <data name="&gt;&gt;lbTexte.Name" xml:space="preserve">
+    <value>lbTexte</value>
+  </data>
+  <data name="&gt;&gt;lbTexte.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lbTexte.Parent" xml:space="preserve">
+    <value>panel3</value>
+  </data>
+  <data name="&gt;&gt;lbTexte.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="panel3.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>None</value>
+  </data>
+  <data name="panel3.Location" type="System.Drawing.Point, System.Drawing">
+    <value>33, 0</value>
+  </data>
+  <data name="panel3.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1064, 87</value>
+  </data>
+  <data name="panel3.TabIndex" type="System.Int32, mscorlib">
+    <value>159</value>
+  </data>
+  <data name="&gt;&gt;panel3.Name" xml:space="preserve">
+    <value>panel3</value>
+  </data>
+  <data name="&gt;&gt;panel3.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;panel3.Parent" xml:space="preserve">
+    <value>panel2</value>
+  </data>
+  <data name="&gt;&gt;panel3.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="panel2.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Top</value>
+  </data>
+  <data name="panel2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="panel2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1113, 90</value>
+  </data>
+  <data name="panel2.TabIndex" type="System.Int32, mscorlib">
+    <value>139</value>
+  </data>
+  <data name="&gt;&gt;panel2.Name" xml:space="preserve">
+    <value>panel2</value>
+  </data>
+  <data name="&gt;&gt;panel2.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;panel2.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;panel2.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
@@ -2077,7 +2359,7 @@
     <value>7, 15</value>
   </data>
   <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
-    <value>929, 453</value>
+    <value>1113, 561</value>
   </data>
   <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>

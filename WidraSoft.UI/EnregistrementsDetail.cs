@@ -88,7 +88,7 @@ namespace WidraSoft.UI
             cbLang.DataSource = Language.Languages;
             cbLang.ValueMember = null;
             cbLang.DisplayMember = Language.Languages[0];
-            cbLang.SelectedIndex = 0;
+            cbLang.SelectedIndex = MenuGeneral.languuage_index;
         }
 
         private void Add_Item()

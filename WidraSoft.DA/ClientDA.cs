@@ -130,6 +130,64 @@ namespace WidraSoft.DA
             }
         }
 
+        public string GetBadge(Int32 Id)
+        {
+
+            String sql = "SELECT BADGE FROM CLIENT WHERE CLIENTID=" + Id;
+            conn.ConnectionString = connString;
+            if (conn.State == ConnectionState.Closed)
+                conn.Open();
+            SqlCommand cmd = new SqlCommand(sql, conn);
+            try
+            {
+                String name = (string)cmd.ExecuteScalar();
+                name = name.PadLeft(6, '0');
+                return name;
+            }
+            catch
+            {
+                throw;
+            }
+        }
+
+        public int GetIdByBadge(string Name)
+        {
+
+            String sql = "SELECT CLIENTID FROM CLIENT WHERE BADGE='" + Name + "'";
+            conn.ConnectionString = connString;
+            if (conn.State == ConnectionState.Closed)
+                conn.Open();
+            SqlCommand cmd = new SqlCommand(sql, conn);
+            try
+            {
+                int id = (int)cmd.ExecuteScalar();
+                return id;
+            }
+            catch
+            {
+                throw;
+            }
+        }
+
+        public int CountByBadge(string Name)
+        {
+
+            String sql = "SELECT COUNT(*) FROM CLIENT WHERE BADGE='" + Name + "'";
+            conn.ConnectionString = connString;
+            if (conn.State == ConnectionState.Closed)
+                conn.Open();
+            SqlCommand cmd = new SqlCommand(sql, conn);
+            try
+            {
+                int nb = (int)cmd.ExecuteScalar();
+                return nb;
+            }
+            catch
+            {
+                throw;
+            }
+        }
+
         public void Add(String Badge, String Designation, Int32 TypeClientId, String Adresse, String CodePostal, String Localite, String Pays,
             String Telephone, String Email, String NumTVA, String SiteWeb_Url, String Observations,
             Int32 Valide, Int32 Bloque, String TexteBloque, Int32 Attention, String TexteAttention)

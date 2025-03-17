@@ -101,12 +101,26 @@ namespace WidraSoft.BL
                 throw;
             }
         }
-        public void Add(string Nom, string Prenom, string Login, string Password, Int32 GroupeId)
+
+        public int GetUserLanguageIndex(Int32 Id)
+        {
+            try
+            {
+                UtilisateurDA utilisateur = new UtilisateurDA();
+                Int32 index = utilisateur.GetUserLanguageIndex(Id);
+                return index;
+            }
+            catch
+            {
+                throw;
+            }
+        }
+        public void Add(string Nom, string Prenom, string Login, string Password, Int32 GroupeId, string Lang)
         {
             try
             {   
                 UtilisateurDA utilisateur = new UtilisateurDA();
-                utilisateur.Add(Nom, Prenom, Login, Password, GroupeId);
+                utilisateur.Add(Nom, Prenom, Login, Password, GroupeId, Lang);
             }
             catch
             {
@@ -114,12 +128,12 @@ namespace WidraSoft.BL
             }
 
         }
-        public void Update(Int32 Id,string Nom, string Prenom, string Login, string Password, Int32 GroupeId)
+        public void Update(Int32 Id,string Nom, string Prenom, string Login, string Password, Int32 GroupeId, string Lang)
         {
             try
             {
                 UtilisateurDA utilisateur = new UtilisateurDA();
-                utilisateur.Update(Id, Nom, Prenom, Login, Password, GroupeId);
+                utilisateur.Update(Id, Nom, Prenom, Login, Password, GroupeId, Lang);
             }
             catch
             {

@@ -29,116 +29,125 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Borne_ChoixFlux));
-            this.btChargement = new System.Windows.Forms.Button();
-            this.btDechargement = new System.Windows.Forms.Button();
-            this.Spain_flag = new System.Windows.Forms.PictureBox();
-            this.England_flag = new System.Windows.Forms.PictureBox();
-            this.France_flag = new System.Windows.Forms.PictureBox();
-            this.btAnnuler = new System.Windows.Forms.Button();
-            this.lbTexte = new System.Windows.Forms.Label();
-            this.lbMessage = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.Spain_flag)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.England_flag)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.France_flag)).BeginInit();
-            this.SuspendLayout();
+            btChargement = new System.Windows.Forms.Button();
+            btDechargement = new System.Windows.Forms.Button();
+            Spain_flag = new System.Windows.Forms.PictureBox();
+            England_flag = new System.Windows.Forms.PictureBox();
+            France_flag = new System.Windows.Forms.PictureBox();
+            btAnnuler = new System.Windows.Forms.Button();
+            lbTexte = new System.Windows.Forms.Label();
+            lbMessage = new System.Windows.Forms.Label();
+            panel1 = new System.Windows.Forms.Panel();
+            ((System.ComponentModel.ISupportInitialize)Spain_flag).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)England_flag).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)France_flag).BeginInit();
+            panel1.SuspendLayout();
+            SuspendLayout();
             // 
             // btChargement
             // 
-            resources.ApplyResources(this.btChargement, "btChargement");
-            this.btChargement.BackColor = System.Drawing.Color.Black;
-            this.btChargement.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btChargement.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(112)))), ((int)(((byte)(228)))), ((int)(((byte)(132)))));
-            this.btChargement.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(86)))), ((int)(((byte)(81)))));
-            this.btChargement.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(112)))), ((int)(((byte)(228)))), ((int)(((byte)(132)))));
-            this.btChargement.Image = global::WidraSoft.UI.Properties.Resources.Chargement;
-            this.btChargement.Name = "btChargement";
-            this.btChargement.UseVisualStyleBackColor = false;
-            this.btChargement.Click += new System.EventHandler(this.btChargement_Click);
+            resources.ApplyResources(btChargement, "btChargement");
+            btChargement.BackColor = System.Drawing.Color.Black;
+            btChargement.Cursor = System.Windows.Forms.Cursors.Hand;
+            btChargement.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(112, 228, 132);
+            btChargement.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(72, 86, 81);
+            btChargement.ForeColor = System.Drawing.Color.FromArgb(112, 228, 132);
+            btChargement.Image = Properties.Resources.Chargement;
+            btChargement.Name = "btChargement";
+            btChargement.UseVisualStyleBackColor = false;
+            btChargement.Click += btChargement_Click;
             // 
             // btDechargement
             // 
-            resources.ApplyResources(this.btDechargement, "btDechargement");
-            this.btDechargement.BackColor = System.Drawing.Color.Black;
-            this.btDechargement.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btDechargement.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(112)))), ((int)(((byte)(228)))), ((int)(((byte)(132)))));
-            this.btDechargement.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(86)))), ((int)(((byte)(81)))));
-            this.btDechargement.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(112)))), ((int)(((byte)(228)))), ((int)(((byte)(132)))));
-            this.btDechargement.Image = global::WidraSoft.UI.Properties.Resources.Dechargement;
-            this.btDechargement.Name = "btDechargement";
-            this.btDechargement.UseVisualStyleBackColor = false;
-            this.btDechargement.Click += new System.EventHandler(this.btDechargement_Click);
+            resources.ApplyResources(btDechargement, "btDechargement");
+            btDechargement.BackColor = System.Drawing.Color.Black;
+            btDechargement.Cursor = System.Windows.Forms.Cursors.Hand;
+            btDechargement.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(112, 228, 132);
+            btDechargement.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(72, 86, 81);
+            btDechargement.ForeColor = System.Drawing.Color.FromArgb(112, 228, 132);
+            btDechargement.Image = Properties.Resources.Dechargement;
+            btDechargement.Name = "btDechargement";
+            btDechargement.UseVisualStyleBackColor = false;
+            btDechargement.Click += btDechargement_Click;
             // 
             // Spain_flag
             // 
-            resources.ApplyResources(this.Spain_flag, "Spain_flag");
-            this.Spain_flag.BackColor = System.Drawing.Color.Transparent;
-            this.Spain_flag.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.Spain_flag.Image = global::WidraSoft.UI.Properties.Resources.spain;
-            this.Spain_flag.Name = "Spain_flag";
-            this.Spain_flag.TabStop = false;
+            resources.ApplyResources(Spain_flag, "Spain_flag");
+            Spain_flag.BackColor = System.Drawing.Color.Transparent;
+            Spain_flag.Cursor = System.Windows.Forms.Cursors.Hand;
+            Spain_flag.Image = Properties.Resources.spain;
+            Spain_flag.Name = "Spain_flag";
+            Spain_flag.TabStop = false;
             // 
             // England_flag
             // 
-            resources.ApplyResources(this.England_flag, "England_flag");
-            this.England_flag.BackColor = System.Drawing.Color.Transparent;
-            this.England_flag.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.England_flag.Image = global::WidraSoft.UI.Properties.Resources.united_kingdom;
-            this.England_flag.Name = "England_flag";
-            this.England_flag.TabStop = false;
+            resources.ApplyResources(England_flag, "England_flag");
+            England_flag.BackColor = System.Drawing.Color.Transparent;
+            England_flag.Cursor = System.Windows.Forms.Cursors.Hand;
+            England_flag.Image = Properties.Resources.united_kingdom;
+            England_flag.Name = "England_flag";
+            England_flag.TabStop = false;
             // 
             // France_flag
             // 
-            resources.ApplyResources(this.France_flag, "France_flag");
-            this.France_flag.BackColor = System.Drawing.Color.Transparent;
-            this.France_flag.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.France_flag.Image = global::WidraSoft.UI.Properties.Resources.france;
-            this.France_flag.Name = "France_flag";
-            this.France_flag.TabStop = false;
+            resources.ApplyResources(France_flag, "France_flag");
+            France_flag.BackColor = System.Drawing.Color.Transparent;
+            France_flag.Cursor = System.Windows.Forms.Cursors.Hand;
+            France_flag.Image = Properties.Resources.france;
+            France_flag.Name = "France_flag";
+            France_flag.TabStop = false;
             // 
             // btAnnuler
             // 
-            resources.ApplyResources(this.btAnnuler, "btAnnuler");
-            this.btAnnuler.BackColor = System.Drawing.Color.Black;
-            this.btAnnuler.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btAnnuler.FlatAppearance.BorderColor = System.Drawing.Color.Tomato;
-            this.btAnnuler.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(86)))), ((int)(((byte)(81)))));
-            this.btAnnuler.ForeColor = System.Drawing.Color.Tomato;
-            this.btAnnuler.Name = "btAnnuler";
-            this.btAnnuler.UseVisualStyleBackColor = false;
+            resources.ApplyResources(btAnnuler, "btAnnuler");
+            btAnnuler.BackColor = System.Drawing.Color.Black;
+            btAnnuler.Cursor = System.Windows.Forms.Cursors.Hand;
+            btAnnuler.FlatAppearance.BorderColor = System.Drawing.Color.Tomato;
+            btAnnuler.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(72, 86, 81);
+            btAnnuler.ForeColor = System.Drawing.Color.Tomato;
+            btAnnuler.Name = "btAnnuler";
+            btAnnuler.UseVisualStyleBackColor = false;
+            btAnnuler.Click += btAnnuler_Click;
             // 
             // lbTexte
             // 
-            resources.ApplyResources(this.lbTexte, "lbTexte");
-            this.lbTexte.ForeColor = System.Drawing.Color.White;
-            this.lbTexte.Name = "lbTexte";
+            resources.ApplyResources(lbTexte, "lbTexte");
+            lbTexte.ForeColor = System.Drawing.Color.White;
+            lbTexte.Name = "lbTexte";
             // 
             // lbMessage
             // 
-            resources.ApplyResources(this.lbMessage, "lbMessage");
-            this.lbMessage.ForeColor = System.Drawing.Color.White;
-            this.lbMessage.Name = "lbMessage";
+            resources.ApplyResources(lbMessage, "lbMessage");
+            lbMessage.ForeColor = System.Drawing.Color.White;
+            lbMessage.Name = "lbMessage";
+            // 
+            // panel1
+            // 
+            resources.ApplyResources(panel1, "panel1");
+            panel1.Controls.Add(btDechargement);
+            panel1.Controls.Add(lbMessage);
+            panel1.Controls.Add(btChargement);
+            panel1.Controls.Add(lbTexte);
+            panel1.Controls.Add(France_flag);
+            panel1.Controls.Add(btAnnuler);
+            panel1.Controls.Add(England_flag);
+            panel1.Controls.Add(Spain_flag);
+            panel1.Name = "panel1";
             // 
             // Borne_ChoixFlux
             // 
             resources.ApplyResources(this, "$this");
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(62)))), ((int)(((byte)(60)))));
-            this.Controls.Add(this.lbMessage);
-            this.Controls.Add(this.lbTexte);
-            this.Controls.Add(this.btAnnuler);
-            this.Controls.Add(this.Spain_flag);
-            this.Controls.Add(this.England_flag);
-            this.Controls.Add(this.France_flag);
-            this.Controls.Add(this.btDechargement);
-            this.Controls.Add(this.btChargement);
-            this.Name = "Borne_ChoixFlux";
-            this.Load += new System.EventHandler(this.Borne_ChoixFlux_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.Spain_flag)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.England_flag)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.France_flag)).EndInit();
-            this.ResumeLayout(false);
-            this.PerformLayout();
-
+            AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            BackColor = System.Drawing.Color.FromArgb(58, 62, 60);
+            Controls.Add(panel1);
+            Name = "Borne_ChoixFlux";
+            Load += Borne_ChoixFlux_Load;
+            ((System.ComponentModel.ISupportInitialize)Spain_flag).EndInit();
+            ((System.ComponentModel.ISupportInitialize)England_flag).EndInit();
+            ((System.ComponentModel.ISupportInitialize)France_flag).EndInit();
+            panel1.ResumeLayout(false);
+            panel1.PerformLayout();
+            ResumeLayout(false);
         }
 
         #endregion
@@ -151,5 +160,6 @@
         private System.Windows.Forms.Button btAnnuler;
         private System.Windows.Forms.Label lbTexte;
         private System.Windows.Forms.Label lbMessage;
+        private System.Windows.Forms.Panel panel1;
     }
 }

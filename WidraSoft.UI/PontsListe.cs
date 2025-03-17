@@ -28,11 +28,12 @@ namespace WidraSoft.UI
         private void PontsListe_Load(object sender, EventArgs e)
         {
             this.CenterToScreen();
+            WindowState = FormWindowState.Maximized;
             Bind_Dgv();
             cbLang.DataSource = Language.Languages;
             cbLang.ValueMember = null;
             cbLang.DisplayMember = Language.Languages[0];
-            cbLang.SelectedIndex = 0;
+            cbLang.SelectedIndex = MenuGeneral.languuage_index;
         }
 
         private void Bind_Dgv()
@@ -41,7 +42,7 @@ namespace WidraSoft.UI
             DgvList.DataSource = pont.List(vg_filter);
             DgvList.Columns[0].Visible = false;
             DgvList.Columns["DESIGNATION"].Visible = true;
-            DgvList.Columns["NUMPORTCOM"].Visible = true;
+            DgvList.Columns["NUMPORTCOM"].Visible = false;
             DgvList.Columns["WEIGHT_SETTINGSID"].Visible = false;
             DgvList.Columns["WEIGHING_SETTINGSID"].Visible = false;
             DgvList.Columns["ACTIVER_MULTIPLE_PARAM"].Visible = false;
@@ -56,6 +57,9 @@ namespace WidraSoft.UI
             DgvList.Columns["UTILISATEURID"].Visible = false;
             DgvList.Columns["POIDS_DETECTION"].Visible = false;
             DgvList.Columns["DATECREATION"].Visible = true;
+            DgvList.Columns["BORNEPREMIEREPESEE"].Visible = false;
+            DgvList.Columns["BORNEDEUXIEMEPESEE"].Visible = false;
+            DgvList.Columns["BORNETAREMANUELLE"].Visible = false;
 
             DgvList.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             DgvList.ReadOnly = true;

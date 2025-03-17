@@ -29,6 +29,7 @@ namespace WidraSoft.UI
         private void EnregistrementsListe_Load(object sender, EventArgs e)
         {
             this.CenterToScreen();
+            WindowState = FormWindowState.Maximized;
 
             //Tables 
             Tables tables = new Tables();
@@ -45,7 +46,7 @@ namespace WidraSoft.UI
             cbLang.DataSource = Language.Languages;
             cbLang.ValueMember = null;
             cbLang.DisplayMember = Language.Languages[0];
-            cbLang.SelectedIndex = 0;
+            cbLang.SelectedIndex = MenuGeneral.languuage_index;
         }
 
         private void Bind_Dgv()

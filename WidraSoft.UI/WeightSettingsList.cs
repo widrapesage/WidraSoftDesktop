@@ -28,11 +28,12 @@ namespace WidraSoft.UI
         private void WeightSettingsList_Load(object sender, EventArgs e)
         {
             this.CenterToScreen();
+            WindowState = FormWindowState.Maximized;
             Bind_Dgv();
             cbLang.DataSource = Language.Languages;
             cbLang.ValueMember = null;
             cbLang.DisplayMember = Language.Languages[0];
-            cbLang.SelectedIndex = 0;
+            cbLang.SelectedIndex = MenuGeneral.languuage_index;
         }
 
         private void Bind_Dgv()

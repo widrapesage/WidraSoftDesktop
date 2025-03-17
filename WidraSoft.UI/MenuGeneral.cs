@@ -11,6 +11,7 @@ using WidraSoft.BL;
 using System.Globalization;
 using System.Threading;
 using CustomMessageBox;
+using System.IO.Ports;
 
 namespace WidraSoft.UI
 {
@@ -18,6 +19,7 @@ namespace WidraSoft.UI
     {
         int vg_UtilisateurId;
         int vg_GroupeId;
+        public static int languuage_index;
         public MenuGeneral(Int32 UtilisateurId)
         {
             InitializeComponent();
@@ -36,12 +38,14 @@ namespace WidraSoft.UI
             this.CenterToScreen();
             WindowState = FormWindowState.Maximized;
             this.MaximizedBounds = Screen.FromHandle(this.Handle).WorkingArea;
+            Utilisateur utilisateur = new Utilisateur();
             cbLang.DataSource = Language.Languages;
             cbLang.ValueMember = null;
             cbLang.DisplayMember = Language.Languages[0];
-            cbLang.SelectedIndex = 0;
+            languuage_index = utilisateur.GetUserLanguageIndex(vg_UtilisateurId);
+            cbLang.SelectedIndex = languuage_index;
 
-            Utilisateur utilisateur = new Utilisateur();
+
             lblusername.Text = utilisateur.GetFullUsername(vg_UtilisateurId);
             vg_GroupeId = utilisateur.GetGroupeIdById(vg_UtilisateurId);
 
@@ -53,7 +57,7 @@ namespace WidraSoft.UI
         [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
         private extern static void ReleaseCapture();
         [DllImport("user32.DLL", EntryPoint = "SendMessage")]
-        private extern static void  SendMessage(System.IntPtr hWnd, int Msg, int wParam, int lParam);
+        private extern static void SendMessage(System.IntPtr hWnd, int Msg, int wParam, int lParam);
         private void quitterToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Application.Exit();
@@ -74,7 +78,7 @@ namespace WidraSoft.UI
                 else if (cbLang.Text == "EN")
                     Custom_MessageBox.Show("EN", "You d'ont have the permission to access this module.", "WidraSoft - Access manager", MessageBoxButtons.OK, MessageBoxIcon.Error);
 
-            }    
+            }
         }
 
         private void chauffeursToolStripMenuItem_Click(object sender, EventArgs e)
@@ -91,7 +95,7 @@ namespace WidraSoft.UI
                     Custom_MessageBox.Show("FR", "Vous n'avez pas les autorisations nécessaires pour accéder à ce module.", "WidraSoft - Gestionnaires d'accès", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 else if (cbLang.Text == "EN")
                     Custom_MessageBox.Show("EN", "You d'ont have the permission to access this module.", "WidraSoft - Access manager", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }    
+            }
         }
 
         private void btFirmes_Click(object sender, EventArgs e)
@@ -222,7 +226,7 @@ namespace WidraSoft.UI
 
         private void cbLang_SelectedIndexChanged(object sender, EventArgs e)
         {
-         
+
             if (cbLang.Text == "FR")
             {
                 France_flag.Visible = true;
@@ -231,7 +235,7 @@ namespace WidraSoft.UI
                 Language_Manager language_Manager = new Language_Manager();
                 language_Manager.ChangeLanguage("fr", this, typeof(MenuGeneral));
 
-             }
+            }
 
             if (cbLang.Text == "EN")
             {
@@ -342,7 +346,7 @@ namespace WidraSoft.UI
 
         private void reportingToolStripMenuItem_Click(object sender, EventArgs e)
         {
-           
+
         }
 
         private void tablesToolStripMenuItem_Click(object sender, EventArgs e)
@@ -406,6 +410,54 @@ namespace WidraSoft.UI
                 else if (cbLang.Text == "EN")
                     Custom_MessageBox.Show("EN", "You d'ont have the permission to access this module.", "WidraSoft - Access manager", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+        }
+
+        private void walterreToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (Common_functions.GetAccess(vg_GroupeId, "WAL"))
+            {
+                Form form = new WalterreList("1=1");
+                form.Show();
+            }
+            else
+            {
+                if (cbLang.Text == "FR")
+                    Custom_MessageBox.Show("FR", "Vous n'avez pas les autorisations nécessaires pour accéder à ce module.", "WidraSoft - Gestionnaires d'accès", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                else if (cbLang.Text == "EN")
+                    Custom_MessageBox.Show("EN", "You d'ont have the permission to access this module.", "WidraSoft - Access manager", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            SerialPort comBarriere = new SerialPort();
+
+            comBarriere.PortName = "COM8";
+            comBarriere.ReadTimeout = 1000;
+            comBarriere.BaudRate = 9600;
+            comBarriere.Parity = Parity.None;
+            comBarriere.StopBits = StopBits.One;
+            comBarriere.DataBits = 8;
+            comBarriere.Handshake = Handshake.None;
+
+
+            try
+            {
+                comBarriere.Open();
+            }
+            catch
+            {
+                throw;
+            }
+
+            try
+            {
+                comBarriere.Write("@01" + (char)13);
+            }
+            catch { throw; }
+
+            if (comBarriere.IsOpen)
+            { comBarriere.Close(); }
         }
     }
 }

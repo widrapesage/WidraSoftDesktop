@@ -16,6 +16,12 @@ namespace WidraSoft.UI
         public static List<String> Borne_Style = new List<String>();
         public static List<String> DemarrageType = new List<String>();
         public static List<String> FormatTicket = new List<String>();
+        public static List<String> YesNoBornePremierePesee = new List<String>();
+        public static List<String> YesNoBorneDeuxiemePesee = new List<String>();
+        public static List<String> YesNoBorneTareManuelle = new List<String>();
+        public static List<String> Langue_Utilisateur = new List<String>();
+        public static List<String> Regions_Belgique_Walterre = new List<String>();
+        public static List<String> Flux_Default = new List<String>();
 
         static Values()
         {
@@ -38,6 +44,7 @@ namespace WidraSoft.UI
             BaudRate.Add(57600);
             BaudRate.Add(115200);
             BaudRate.Add(128000);
+            BaudRate.Add(153605);
 
             //DataBits
             Databits.Add(4);
@@ -75,8 +82,55 @@ namespace WidraSoft.UI
             //Format_Ticket
             FormatTicket.Add("A5");
 
+            //YesNo Borne Premiere Pesee
+            YesNoBornePremierePesee.Add("Yes");
+            YesNoBornePremierePesee.Add("No");
+
+            //YesNo Borne Deuxieme Pesee
+            YesNoBorneDeuxiemePesee.Add("Yes");
+            YesNoBorneDeuxiemePesee.Add("No");
+
+            //YesNo Borne Tare Manuelle
+            YesNoBorneTareManuelle.Add("Yes");
+            YesNoBorneTareManuelle.Add("No");
+
+            //Langues Utilisateur
+            Langue_Utilisateur.Add("FR");
+            Langue_Utilisateur.Add("EN");
+            Langue_Utilisateur.Add("ES");
+
+            //Regions Belgique Walterre 
+            Regions_Belgique_Walterre.Add("Anvers");
+            Regions_Belgique_Walterre.Add("Gand");
+            Regions_Belgique_Walterre.Add("Charleroi");
+            Regions_Belgique_Walterre.Add("Ville de Bruxelles");
+            Regions_Belgique_Walterre.Add("Liège");
+            Regions_Belgique_Walterre.Add("Schaerbeek");
+            Regions_Belgique_Walterre.Add("Anderlecht");
+            Regions_Belgique_Walterre.Add("Bruges");
+            Regions_Belgique_Walterre.Add("Namur");
+            Regions_Belgique_Walterre.Add("Molenbeek-Saint-Jean");
+            Regions_Belgique_Walterre.Add("Mons");
+            Regions_Belgique_Walterre.Add("Alost");
+            Regions_Belgique_Walterre.Add("Hasselt");
+            Regions_Belgique_Walterre.Add("Ixelles");
+            Regions_Belgique_Walterre.Add("Beveren-Kruibeke-Zwijndrecht");
+            Regions_Belgique_Walterre.Add("Saint-Nicolas");
+            Regions_Belgique_Walterre.Add("La Louvière");
+            Regions_Belgique_Walterre.Add("Courtrai");
+            Regions_Belgique_Walterre.Add("Ostende");
+            Regions_Belgique_Walterre.Add("Genk");
+            Regions_Belgique_Walterre.Add("Roulers");
+            Regions_Belgique_Walterre.Add("Seraing");
+            Regions_Belgique_Walterre.Add("Woluwe-Saint-Lambert");
+            Regions_Belgique_Walterre.Add("Mouscron");
+            Regions_Belgique_Walterre.Add("Forest");
+            Regions_Belgique_Walterre.Add("Verviers");
 
 
+            //Flux_Default
+            Flux_Default.Add("In");
+            Flux_Default.Add("Out");
 
         }
     }

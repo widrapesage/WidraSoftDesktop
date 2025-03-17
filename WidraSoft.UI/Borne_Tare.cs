@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using WidraSoft.BL;
 
 namespace WidraSoft.UI
 {
@@ -16,6 +17,7 @@ namespace WidraSoft.UI
         int vg_PontId;
         bool vg_Demander_Parametre;
         int vg_P;
+        string Flux_Default;
         public Borne_Tare(string lang, int PontId, bool Demander_Paramatre, int P)
         {
             InitializeComponent();
@@ -98,6 +100,8 @@ namespace WidraSoft.UI
         {
             this.CenterToScreen();
 
+            WindowState = FormWindowState.Maximized;
+
             if (vg_Lang == "fr")
             {
                 France_flag.Visible = true;
@@ -125,6 +129,9 @@ namespace WidraSoft.UI
                 language_Manager.ChangeLanguage("es", this, typeof(Borne_Tare));
             }
 
+            Pont pont = new Pont();
+            Flux_Default = pont.GetFluxDefault(vg_PontId);
+
             txtPoids.Text = "";
         }
 
@@ -141,7 +148,7 @@ namespace WidraSoft.UI
                 bool IsParsablePoids = Int32.TryParse(txtPoids.Text, out Poids);
                 if (Poids > 0)
                 {
-                    Form form = new Borne_ChoixFlux(vg_Lang, vg_PontId, vg_Demander_Parametre, -1, vg_P, Poids);
+                    Form form = new Borne_ChoixFlux(vg_Lang, vg_PontId, vg_Demander_Parametre, -1, vg_P, Poids, Flux_Default, -1, -1);
                     form.Show();
                     Close();
                 }

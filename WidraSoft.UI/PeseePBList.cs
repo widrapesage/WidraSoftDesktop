@@ -36,7 +36,7 @@ namespace WidraSoft.UI
         private void PeseePBList_Load(object sender, EventArgs e)
         {
             this.CenterToScreen();
-
+            WindowState = FormWindowState.Maximized;
             Bind_Search_Fields();
 
             Clear();
@@ -46,7 +46,7 @@ namespace WidraSoft.UI
             cbLang.DataSource = Language.Languages;
             cbLang.ValueMember = null;
             cbLang.DisplayMember = Language.Languages[0];
-            cbLang.SelectedIndex = 0;
+            cbLang.SelectedIndex = MenuGeneral.languuage_index;
 
             lbNombre.Text = DgvList.Rows.Count.ToString();
         }
@@ -199,6 +199,8 @@ namespace WidraSoft.UI
             DgvList.Columns["TITRE2"].Visible = false;
             DgvList.Columns["FOOTER"].Visible = false;
             DgvList.Columns["DATECREATION"].Visible = false;
+            DgvList.Columns["WALTERREID"].Visible = false;
+            DgvList.Columns["CODEWALTERRE"].Visible = false;
 
 
             DgvList.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;

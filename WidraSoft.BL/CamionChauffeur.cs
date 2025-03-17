@@ -62,6 +62,32 @@ namespace WidraSoft.BL
             }
         }
 
+        public int CountByCamionId(int Id)
+        {
+            try
+            {
+                CamionChauffeurDA camionChauffeur = new CamionChauffeurDA();
+                return camionChauffeur.CountByCamionId(Id);
+            }
+            catch
+            {
+                throw;
+            }
+        }
+
+        public int GetFirstChauffeurByCamionId(int Id)
+        {
+            try
+            {
+                CamionChauffeurDA camionChauffeur = new CamionChauffeurDA();
+                return camionChauffeur.GetFirstChauffeurByCamionId(Id);
+            }
+            catch
+            {
+                throw;
+            }
+        }
+
         public void Add(Int32 CamionId, Int32 ChauffeurId)
         {
             try

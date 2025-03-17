@@ -31,7 +31,11 @@ namespace WidraSoft.UI
             cbGroupeId.DataSource = groupe.List("1=1");
             cbGroupeId.DisplayMember = "DESIGNATION";
             cbGroupeId.ValueMember = "GROUPEID";
-            
+
+            cbLanguage.DataSource = Values.Langue_Utilisateur;
+            cbLanguage.ValueMember = null;
+            cbLanguage.DisplayMember = Values.Langue_Utilisateur[0].ToString();
+
 
             if (vg_Mode == "Add")
             {
@@ -63,7 +67,7 @@ namespace WidraSoft.UI
             cbLang.DataSource = Language.Languages;
             cbLang.ValueMember = null;
             cbLang.DisplayMember = Language.Languages[0];
-            cbLang.SelectedIndex = 0;
+            cbLang.SelectedIndex = MenuGeneral.languuage_index;
         }
 
         private void Bind_DgvAuthorizationList()
@@ -113,7 +117,7 @@ namespace WidraSoft.UI
 
         private void Add_Item()
         {
-            if (txtId.Text == "" && txtDateCreation.Text == "" && txtNom.Text=="" && txtPrenom.Text=="" && txtLogin.Text == "" && txtPassword.Text == "" && cbGroupeId.Text == "")
+            if (txtId.Text == "" && txtDateCreation.Text == "" && txtNom.Text=="" && txtPrenom.Text=="" && txtLogin.Text == "" && txtPassword.Text == "" && cbGroupeId.Text == "" && cbLanguage.Text == "")
             {
                 lbModifier.Enabled = false;
                 lbModifier.BackColor = Color.Transparent;
@@ -147,6 +151,7 @@ namespace WidraSoft.UI
                     cbGroupeId.SelectedValue = 0;
                 else
                     cbGroupeId.SelectedValue = (int)row["GROUPEID"];
+                cbLanguage.Text = row["LANG"].ToString();
             }
         }
 
@@ -158,6 +163,7 @@ namespace WidraSoft.UI
             txtLogin.Enabled = false;
             txtPassword.Enabled = false;
             cbGroupeId.Enabled = false;
+            cbLanguage.Enabled = false;
             pbUpdating.Visible = false;
             DgvAuthorizationList.Enabled = false;
 
@@ -172,6 +178,7 @@ namespace WidraSoft.UI
             txtLogin.Enabled = true;
             txtPassword.Enabled = true;
             cbGroupeId.Enabled = true;
+            cbLanguage.Enabled = true;
             pbUpdating.Visible = true;
             DgvAuthorizationList.Enabled = true;
 
@@ -187,6 +194,7 @@ namespace WidraSoft.UI
             txtLogin.Text = "";
             txtPassword.Text = "";
             cbGroupeId.Text = "";
+            cbLanguage.Text = "";
         }
 
       
@@ -199,7 +207,7 @@ namespace WidraSoft.UI
                 if (txtId.Text == "" && txtDateCreation.Text == "" && txtNom.Text != "" && txtPrenom.Text != "" && txtLogin.Text != "" && txtPassword.Text != "")
                 {
                     Utilisateur utilisateur = new Utilisateur();
-                    utilisateur.Add(txtNom.Text, txtPrenom.Text, txtLogin.Text, txtPassword.Text, Common_functions.CbSelectedValue_Convert_Int(cbGroupeId));
+                    utilisateur.Add(txtNom.Text, txtPrenom.Text, txtLogin.Text, txtPassword.Text, Common_functions.CbSelectedValue_Convert_Int(cbGroupeId), cbLanguage.Text);
                     if (cbLang.Text == "FR")
                         Custom_MessageBox.Show("FR", "Utilisateur ajouté avec succès", "Utilisateur", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     else if (cbLang.Text == "EN")
@@ -246,7 +254,7 @@ namespace WidraSoft.UI
                             IsParsableId = Int32.TryParse(txtId.Text, out Id);
                             if (IsParsableId)
                             {
-                                utilisateur.Update(Id, txtNom.Text, txtPrenom.Text, txtLogin.Text, txtPassword.Text, Common_functions.CbSelectedValue_Convert_Int(cbGroupeId));
+                                utilisateur.Update(Id, txtNom.Text, txtPrenom.Text, txtLogin.Text, txtPassword.Text, Common_functions.CbSelectedValue_Convert_Int(cbGroupeId), cbLanguage.Text);
                                 if (cbLang.Text == "FR")
                                     Custom_MessageBox.Show("FR", "Utilisateur modifié avec succès", "Utilisateur", MessageBoxButtons.OK, MessageBoxIcon.Information);
                                 else if (cbLang.Text == "EN")

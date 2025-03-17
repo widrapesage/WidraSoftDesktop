@@ -45,6 +45,7 @@ namespace WidraSoft.UI
         int EnableProduit;
         int EnableClient;
         int EnableFirme;
+        int EnableWalterre;
         int Camion_Obl;
         int Chauffeur_Obl;
         int Transporteur_Obl;
@@ -57,7 +58,7 @@ namespace WidraSoft.UI
         int Produit_Ajout;
         int Client_Ajout;
         int Firme_Ajout;
-        int Table1Id; 
+        int Table1Id;
         int Table2Id;
         int Table3Id;
         int Table4Id;
@@ -130,7 +131,6 @@ namespace WidraSoft.UI
         {
             this.CenterToParent();
 
-
             //Pont 
             Pont pont = new Pont();
             DataTable dtPont = pont.FindByMachineName(System.Environment.MachineName);
@@ -156,12 +156,12 @@ namespace WidraSoft.UI
                     Custom_MessageBox.Show("ES", "Ningún registro seleccionado", "Pasaje", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 Close();
             }
-            else 
-            { 
+            else
+            {
                 if (dtPont.Rows.Count == 1)
                 {
                     foreach (DataRow row in dtPont.Rows)
-                    {                       
+                    {
                         try
                         {
                             pontId = (int)row["PONTID"];
@@ -174,14 +174,14 @@ namespace WidraSoft.UI
                 }
                 else
                 {
-                    cbPont.Enabled =true;
+                    cbPont.Enabled = true;
                 }
             }
 
             btSimulateur.Enabled = false;
 
             Initialize_WeighBridgeSettings(pontId);
-            
+
             Initialize_Data();
 
             init_WeighingSettings = true;
@@ -193,7 +193,7 @@ namespace WidraSoft.UI
             cbLang.DataSource = Language.Languages;
             cbLang.ValueMember = null;
             cbLang.DisplayMember = Language.Languages[0];
-            cbLang.SelectedIndex = 0;
+            cbLang.SelectedIndex = MenuGeneral.languuage_index;
 
         }
 
@@ -216,7 +216,7 @@ namespace WidraSoft.UI
                 ActiverPoids = (int)row["ACTIVERPOIDS"];
                 try
                 {
-                    if (ActiverPoids == 1) 
+                    if (ActiverPoids == 1)
                     {
                         com.Open();
                     }
@@ -232,7 +232,7 @@ namespace WidraSoft.UI
             Initialize_WeightSettings(PontId);
             InitializeWeighingSettings(PontId);
         }
-                
+
         private void Initialize_WeightSettings(Int32 PontId)
         {
             Pont pont = new Pont();
@@ -248,7 +248,7 @@ namespace WidraSoft.UI
                 if (ActiverPoids == 1)
                 {
                     Weight_Timer.Start();
-                    
+
                 }
                 JaugeTimer.Start();
                 LongueurMinChaine = (int)r["LONGUEURMINCHAINE"];
@@ -287,20 +287,21 @@ namespace WidraSoft.UI
 
                 }
             }
-            else           
+            else
             {
-                cbWeighingSettingsId.DataSource = weighingSettings.FindById(pont.GetWeighingSettingsId(PontId));
+                //cbWeighingSettingsId.DataSource = weighingSettings.FindById(pont.GetWeighingSettingsId(PontId));
                 cbWeighingSettingsId.Enabled = false;
-                cbWeighingSettingsId.SelectedItem = cbWeighingSettingsId.Items[0];
+                cbWeighingSettingsId.SelectedValue = pont.GetWeighingSettingsId(PontId);
             }
-            
+
         }
 
         private void Initialize_Data()
         {
-            
+
             rb2x1.Checked = true;
             lbStatus.Text = "Pending";
+            lbStatus.ForeColor = Color.OrangeRed;
 
             //Firme
             Firme firme = new Firme();
@@ -387,45 +388,13 @@ namespace WidraSoft.UI
             DgvList.Columns["TITRE2"].Visible = false;
             DgvList.Columns["FOOTER"].Visible = false;
             DgvList.Columns["DATECREATION"].Visible = false;
+            DgvList.Columns["PESEE_RESUME"].Visible = false;
+            DgvList.Columns["CODEWALTERRE"].Visible = false;
+            DgvList.Columns["WALTERREID"].Visible = false;
 
             DgvList.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             DgvList.RowHeadersWidthSizeMode = DataGridViewRowHeadersWidthSizeMode.AutoSizeToFirstHeader;
             DgvList.ReadOnly = true;
-
-        }
-
-        private void Localize_Dgv(string lang)
-        {
-            if (lang == "fr")
-            {
-                DgvList.Columns[0].HeaderText = "NUMERO";
-                DgvList.Columns["PONT"].HeaderText = "PONT";
-                DgvList.Columns["CAMION"].HeaderText = "CAMION";
-                DgvList.Columns["PRODUIT"].HeaderText = "PRODUIT";
-                DgvList.Columns["POIDS1"].HeaderText = "POIDS BRUT";
-                DgvList.Columns["DATEHEUREPOIDS1"].HeaderText = "DATE POIDS BRUT";
-                DgvList.Columns["POIDS2"].HeaderText = "TARE";
-                DgvList.Columns["DATEHEUREPOIDS2"].HeaderText = "DATE TARE";
-                DgvList.Columns["ETATPESEE"].HeaderText = "ETAT";
-            }
-            if (lang == "en")
-            {
-                DgvList.Columns["DESIGNATION"].HeaderText = "NAME";
-                DgvList.Columns["CODE"].HeaderText = "CODE";
-                DgvList.Columns["LIMITER"].HeaderText = "LIMIT";
-                DgvList.Columns["NBLIMITE"].HeaderText = "LIMIT NUMBER";
-                DgvList.Columns["DATECREATION"].HeaderText = "CREATION DATE";
-                DgvList.Columns["ETATPESEE"].HeaderText = "ETAT";
-            }
-            if (lang == "es")
-            {
-                DgvList.Columns["DESIGNATION"].HeaderText = "DESIGNACION";
-                DgvList.Columns["CODE"].HeaderText = "CODIGO";
-                DgvList.Columns["LIMITER"].HeaderText = "LÍMITE";
-                DgvList.Columns["NBLIMITE"].HeaderText = "NÚMERO LIMITADO";
-                DgvList.Columns["DATECREATION"].HeaderText = "FECHA DE CREACIÓN";
-                DgvList.Columns["ETATPESEE"].HeaderText = "ETAT";
-            }
 
         }
 
@@ -451,7 +420,7 @@ namespace WidraSoft.UI
                 {
                     Clear();
                     Enable();
-                    if (txtId.Text == ""  && cbFirme.Text == "" && cbCamion.Text == "" && cbChauffeur.Text == "" && cbTransporteur.Text == "" && cbProduit.Text == "" && cbClient.Text == "")
+                    if (txtId.Text == "" && cbFirme.Text == "" && cbCamion.Text == "" && cbChauffeur.Text == "" && cbTransporteur.Text == "" && cbProduit.Text == "" && cbClient.Text == "")
                     {
 
                         rbxEntrant.Checked = true;
@@ -461,7 +430,7 @@ namespace WidraSoft.UI
                         txtTareCamion.Text = "";
                         ApplyWeighingSettings(Common_functions.CbSelectedValue_Convert_Int(cbWeighingSettingsId), true);
                     }
-                } 
+                }
                 else
                 {
                     vg_Clearing = true;
@@ -472,7 +441,7 @@ namespace WidraSoft.UI
             {
                 Clear();
                 Enable();
-                if (txtId.Text == ""  && cbFirme.Text == "" && cbCamion.Text == "" && cbChauffeur.Text == "" && cbTransporteur.Text == "" && cbProduit.Text == "" && cbClient.Text == "")
+                if (txtId.Text == "" && cbFirme.Text == "" && cbCamion.Text == "" && cbChauffeur.Text == "" && cbTransporteur.Text == "" && cbProduit.Text == "" && cbClient.Text == "")
                 {
 
                     rbxEntrant.Checked = true;
@@ -483,7 +452,7 @@ namespace WidraSoft.UI
                     ApplyWeighingSettings(Common_functions.CbSelectedValue_Convert_Int(cbWeighingSettingsId), true);
                 }
             }
-            
+
         }
 
         private void Add_Item_2x1()
@@ -501,7 +470,7 @@ namespace WidraSoft.UI
                 {
                     Clear();
                     Enable();
-                    if (txtId.Text == ""  && cbFirme.Text == "" && cbCamion.Text == "" && cbChauffeur.Text == "" && cbTransporteur.Text == "" && cbProduit.Text == "" && cbClient.Text == "")
+                    if (txtId.Text == "" && cbFirme.Text == "" && cbCamion.Text == "" && cbChauffeur.Text == "" && cbTransporteur.Text == "" && cbProduit.Text == "" && cbClient.Text == "")
                     {
 
                         rbxEntrant.Checked = true;
@@ -522,7 +491,7 @@ namespace WidraSoft.UI
             {
                 Clear();
                 Enable();
-                if (txtId.Text == ""  && cbFirme.Text == "" && cbCamion.Text == "" && cbChauffeur.Text == "" && cbTransporteur.Text == "" && cbProduit.Text == "" && cbClient.Text == "")
+                if (txtId.Text == "" && cbFirme.Text == "" && cbCamion.Text == "" && cbChauffeur.Text == "" && cbTransporteur.Text == "" && cbProduit.Text == "" && cbClient.Text == "")
                 {
 
                     rbxEntrant.Checked = true;
@@ -532,23 +501,23 @@ namespace WidraSoft.UI
                     ApplyWeighingSettings(Common_functions.CbSelectedValue_Convert_Int(cbWeighingSettingsId), true);
                 }
             }
-            
+
         }
 
         private void Edit_Item_2x2()
-        {            
-            if (vg_Id > 0)            
+        {
+            if (vg_Id > 0)
             {
                 Clear();
                 rb2x1.Checked = true;
                 TypePesee = "2x2";
                 Enable();
                 txtTareCamion.Visible = false;
-                lbTareCamion.Visible = false;                
+                lbTareCamion.Visible = false;
                 Bind_Fields();
-                ApplyWeighingSettings(Common_functions.CbSelectedValue_Convert_Int(cbWeighingSettingsId), false);
-                
-            }           
+                ApplyWeighingSettings_2(Common_functions.CbSelectedValue_Convert_Int(cbWeighingSettingsId), false);
+
+            }
         }
 
         private void Bind_Fields()
@@ -605,41 +574,46 @@ namespace WidraSoft.UI
                 else
                     cbClient.SelectedValue = (int)row["CLIENTID"];
                 cbClient_Leave(this, EventArgs.Empty);
+                if (row["WALTERREID"] is System.DBNull)
+                    cbWalterre.SelectedValue = 0;
+                else
+                    cbWalterre.SelectedValue = (int)row["WALTERREID"];
+                cbWalterre_Leave(this, EventArgs.Empty);
                 if (row["ENREGISTREMENTSID1"] is System.DBNull)
                     cbChamp1.SelectedValue = 0;
                 else
                     cbChamp1.SelectedValue = (int)row["ENREGISTREMENTSID1"];
-                
+                cbChamp1_Leave(this, EventArgs.Empty);
                 if (row["ENREGISTREMENTSID2"] is System.DBNull)
                     cbChamp2.SelectedValue = 0;
                 else
                     cbChamp2.SelectedValue = (int)row["ENREGISTREMENTSID2"];
-               
+                cbChamp2_Leave(this, EventArgs.Empty);
                 if (row["ENREGISTREMENTSID3"] is System.DBNull)
                     cbChamp3.SelectedValue = 0;
                 else
                     cbChamp3.SelectedValue = (int)row["ENREGISTREMENTSID3"];
-                
+                cbChamp3_Leave(this, EventArgs.Empty);
                 if (row["ENREGISTREMENTSID4"] is System.DBNull)
                     cbChamp4.SelectedValue = 0;
                 else
                     cbChamp4.SelectedValue = (int)row["ENREGISTREMENTSID4"];
-                
+                cbChamp4_Leave(this, EventArgs.Empty);
                 if (row["ENREGISTREMENTSID5"] is System.DBNull)
                     cbChamp5.SelectedValue = 0;
                 else
                     cbChamp5.SelectedValue = (int)row["ENREGISTREMENTSID5"];
-                
+                cbChamp5_Leave(this, EventArgs.Empty);
                 if (row["ENREGISTREMENTSID6"] is System.DBNull)
                     cbChamp6.SelectedValue = 0;
                 else
                     cbChamp6.SelectedValue = (int)row["ENREGISTREMENTSID6"];
-                
+                cbChamp6_Leave(this, EventArgs.Empty);
                 if (row["ENREGISTREMENTSID7"] is System.DBNull)
                     cbChamp7.SelectedValue = 0;
                 else
                     cbChamp7.SelectedValue = (int)row["ENREGISTREMENTSID7"];
-
+                cbChamp7_Leave(this, EventArgs.Empty);
                 txtChampLibre1.Text = row["CHAMPLIBRE1"].ToString();
                 txtChampLibre2.Text = row["CHAMPLIBRE2"].ToString();
                 txtChampLibre3.Text = row["CHAMPLIBRE3"].ToString();
@@ -652,6 +626,10 @@ namespace WidraSoft.UI
                 lbDateHeurePoidsTare.Text = row["DATEHEUREPOIDS2"].ToString();
                 lbPoidsNet.Text = row["POIDSNET"].ToString();
                 lbStatus.Text = row["ETATPESEE"].ToString();
+                if (row["ETATPESEE"].ToString() == "Pending")
+                    lbStatus.ForeColor = Color.OrangeRed;
+                else
+                    lbStatus.ForeColor = Color.FromArgb(11, 228, 132);
             }
         }
 
@@ -672,6 +650,461 @@ namespace WidraSoft.UI
                 EnableProduit = (int)ro["PRODUIT"];
                 EnableClient = (int)ro["CLIENT"];
                 EnableFirme = (int)ro["FIRME"];
+                EnableWalterre = (int)ro["WALTERRE"];
+
+                Camion_Obl = (int)ro["CAMION_OBL"];
+                Chauffeur_Obl = (int)ro["CHAUFFEUR_OBL"];
+                Transporteur_Obl = (int)ro["TRANSPORTEUR_OBL"];
+                Produit_Obl = (int)ro["PRODUIT_OBL"];
+                Client_Obl = (int)ro["CLIENT_OBL"];
+                Firme_Obl = (int)ro["FIRME_OBL"];
+
+                Camion_Ajout = (int)ro["CAMION_AJOUT_F"];
+                Chauffeur_Ajout = (int)ro["CHAUFFEUR_AJOUT_F"];
+                Transporteur_Ajout = (int)ro["TRANSPORTEUR_AJOUT_F"];
+                Produit_Ajout = (int)ro["PRODUIT_AJOUT_F"];
+                Client_Ajout = (int)ro["CLIENT_AJOUT_F"];
+                Firme_Ajout = (int)ro["FIRME_AJOUT_F"];
+
+
+
+                Table1Id = (int)ro["TABLE1_ID"];
+                Table2Id = (int)ro["TABLE2_ID"];
+                Table3Id = (int)ro["TABLE3_ID"];
+                Table4Id = (int)ro["TABLE4_ID"];
+                Table5Id = (int)ro["TABLE5_ID"];
+                Table6Id = (int)ro["TABLE6_ID"];
+                Table7Id = (int)ro["TABLE7_ID"];
+
+                Table1_Obl = (int)ro["TABLE1_OBL"];
+                Table2_Obl = (int)ro["TABLE2_OBL"];
+                Table3_Obl = (int)ro["TABLE3_OBL"];
+                Table4_Obl = (int)ro["TABLE4_OBL"];
+                Table5_Obl = (int)ro["TABLE5_OBL"];
+                Table6_Obl = (int)ro["TABLE6_OBL"];
+                Table7_Obl = (int)ro["TABLE7_OBL"];
+
+                Table1_Code = (int)ro["TABLE1_CODE"];
+                Table2_Code = (int)ro["TABLE2_CODE"];
+                Table3_Code = (int)ro["TABLE3_CODE"];
+                Table4_Code = (int)ro["TABLE4_CODE"];
+                Table5_Code = (int)ro["TABLE5_CODE"];
+                Table6_Code = (int)ro["TABLE6_CODE"];
+                Table7_Code = (int)ro["TABLE7_CODE"];
+
+                Table1_Ajout = (int)ro["TABLE1_AJOUT_F"];
+                Table2_Ajout = (int)ro["TABLE2_AJOUT_F"];
+                Table3_Ajout = (int)ro["TABLE3_AJOUT_F"];
+                Table4_Ajout = (int)ro["TABLE4_AJOUT_F"];
+                Table5_Ajout = (int)ro["TABLE5_AJOUT_F"];
+                Table6_Ajout = (int)ro["TABLE6_AJOUT_F"];
+                Table7_Ajout = (int)ro["TABLE7_AJOUT_F"];
+
+                ChampLibre1_Obl = (int)ro["CHAMPLIBRE1_OBL"];
+                ChampLibre2_Obl = (int)ro["CHAMPLIBRE2_OBL"];
+                ChampLibre3_Obl = (int)ro["CHAMPLIBRE3_OBL"];
+                ChampLibre4_Obl = (int)ro["CHAMPLIBRE4_OBL"];
+
+                ChampLibre1_Ticket = (int)ro["CHAMPLIBRE1_TICKET"];
+                ChampLibre2_Ticket = (int)ro["CHAMPLIBRE2_TICKET"];
+                ChampLibre3_Ticket = (int)ro["CHAMPLIBRE3_TICKET"];
+                ChampLibre4_Ticket = (int)ro["CHAMPLIBRE4_TICKET"];
+
+                ChampLibre1Name = ro["CHAMPLIBRE1"].ToString();
+                ChampLibre2Name = ro["CHAMPLIBRE2"].ToString();
+                ChampLibre3Name = ro["CHAMPLIBRE3"].ToString();
+                ChampLibre4Name = ro["CHAMPLIBRE4"].ToString();
+
+                PontFirme = (int)ro["PONTFIRME"];
+                CamionChauffeur = (int)ro["CAMIONCHAUFFEUR"];
+                CamionTransporteur = (int)ro["CAMIONTRANSPORTEUR"];
+
+            }
+
+            if (EnableCamion == 0)
+            {
+                cbCamion.Enabled = false;
+                RqCamion.Visible = false;
+            }
+            else
+            {
+                cbCamion.Enabled = true;
+                if (Camion_Obl == 0)
+                    RqCamion.Visible = false;
+                else
+                    RqCamion.Visible = true;
+            }
+            if (EnableChauffeur == 0)
+            {
+                cbChauffeur.Enabled = false;
+                RqChauffeur.Visible = false;
+            }
+            else
+            {
+                cbChauffeur.Enabled = true;
+                if (Chauffeur_Obl == 0)
+                    RqChauffeur.Visible = false;
+                else
+                    RqChauffeur.Visible = true;
+            }
+            if (EnableTransporteur == 0)
+            {
+                cbTransporteur.Enabled = false;
+                RqTransporteur.Visible = false;
+            }
+            else
+            {
+                cbTransporteur.Enabled = true;
+                if (Transporteur_Obl == 0)
+                    RqTransporteur.Visible = false;
+                else
+                    RqTransporteur.Visible = true;
+            }
+            if (EnableProduit == 0)
+            {
+                cbProduit.Enabled = false;
+                RqProduit.Visible = false;
+            }
+            else
+            {
+                cbProduit.Enabled = true;
+                if (Produit_Obl == 0)
+                    RqProduit.Visible = false;
+                else
+                    RqProduit.Visible = true;
+            }
+            if (EnableClient == 0)
+            {
+                cbClient.Enabled = false;
+                RqClient.Visible = false;
+            }
+            else
+            {
+                cbClient.Enabled = true;
+                if (Client_Obl == 0)
+                    RqClient.Visible = false;
+                else
+                    RqClient.Visible = true;
+            }
+            if (EnableFirme == 0)
+            {
+                cbFirme.Enabled = false;
+                RqFirme.Visible = false;
+            }
+            else
+            {
+                cbFirme.Enabled = true;
+                if (Firme_Obl == 0)
+                    RqFirme.Visible = false;
+                else
+                    RqFirme.Visible = true;
+            }
+
+            if (EnableWalterre == 0)
+            {
+                cbWalterre.Visible = false;
+                lbWalterre.Visible = false;
+                RqWalterre.Visible = false;
+            }
+            else
+            {
+                Walterre walterre = new Walterre();
+                cbWalterre.Visible = true;
+                lbWalterre.Visible = true;
+                RqWalterre.Visible = true;
+                cbWalterre.DataSource = walterre.List("");
+                cbWalterre.DisplayMember = "CODE";
+                cbWalterre.ValueMember = "WALTERREID";
+                //cbChamp1_SelectedValueChanged(this, EventArgs.Empty);
+                cbWalterre_Leave(this, EventArgs.Empty);
+
+            }
+
+            if (Table1Id == 0)
+            {
+                cbChamp1.Visible = false;
+                lbChamp1.Visible = false;
+                RqChamp1.Visible = false;
+                btAddChamp1.Visible = false;
+            }
+            else
+            {
+                cbChamp1.Visible = true;
+                lbChamp1.Visible = true;
+                if (Table1_Obl == 0)
+                    RqChamp1.Visible = false;
+                else
+                    RqChamp1.Visible = true;
+                btAddChamp1.Visible = true;
+                string table_name = tables.GetName(Table1Id);
+                lbChamp1.Text = table_name;
+                Table1Name = table_name;
+                cbChamp1.DataSource = enregistrements.FindByTableId(Table1Id);
+                cbChamp1.DisplayMember = "NOM";
+                cbChamp1.ValueMember = "ENREGISTREMENTSID";
+                //cbChamp1_SelectedValueChanged(this, EventArgs.Empty);
+                cbChamp1_Leave(this, EventArgs.Empty);
+
+
+            }
+
+            if (Table2Id == 0)
+            {
+                cbChamp2.Visible = false;
+                lbChamp2.Visible = false;
+                RqChamp2.Visible = false;
+                btAddChamp2.Visible = false;
+            }
+            else
+            {
+                cbChamp2.Visible = true;
+                lbChamp2.Visible = true;
+                if (Table2_Obl == 0)
+                    RqChamp2.Visible = false;
+                else
+                    RqChamp2.Visible = true;
+                btAddChamp2.Visible = true;
+                string table_name = tables.GetName(Table2Id);
+                lbChamp2.Text = table_name;
+                Table2Name = table_name;
+                cbChamp2.DataSource = enregistrements.FindByTableId(Table2Id);
+                cbChamp2.DisplayMember = "NOM";
+                cbChamp2.ValueMember = "ENREGISTREMENTSID";
+                //cbChamp2_SelectedValueChanged(this, EventArgs.Empty);
+                cbChamp2_Leave(this, EventArgs.Empty);
+            }
+
+            if (Table3Id == 0)
+            {
+                cbChamp3.Visible = false;
+                lbChamp3.Visible = false;
+                RqChamp3.Visible = false;
+                btAddChamp3.Visible = false;
+            }
+            else
+            {
+                cbChamp3.Visible = true;
+                lbChamp3.Visible = true;
+                if (Table3_Obl == 0)
+                    RqChamp3.Visible = false;
+                else
+                    RqChamp3.Visible = true;
+                btAddChamp3.Visible = true;
+                string table_name = tables.GetName(Table3Id);
+                lbChamp3.Text = table_name;
+                Table3Name = table_name;
+                cbChamp3.DataSource = enregistrements.FindByTableId(Table3Id);
+                cbChamp3.DisplayMember = "NOM";
+                cbChamp3.ValueMember = "ENREGISTREMENTSID";
+                //cbChamp3_SelectedValueChanged(this, EventArgs.Empty);
+                cbChamp3_Leave(this, EventArgs.Empty);
+            }
+
+            if (Table4Id == 0)
+            {
+                cbChamp4.Visible = false;
+                lbChamp4.Visible = false;
+                RqChamp4.Visible = false;
+                btAddChamp4.Visible = false;
+            }
+            else
+            {
+                cbChamp4.Visible = true;
+                lbChamp4.Visible = true;
+                if (Table4_Obl == 0)
+                    RqChamp4.Visible = false;
+                else
+                    RqChamp4.Visible = true;
+                btAddChamp4.Visible = true;
+                string table_name = tables.GetName(Table4Id);
+                lbChamp4.Text = table_name;
+                Table4Name = table_name;
+                cbChamp4.DataSource = enregistrements.FindByTableId(Table4Id);
+                cbChamp4.DisplayMember = "NOM";
+                cbChamp4.ValueMember = "ENREGISTREMENTSID";
+                cbChamp4_Leave(this, EventArgs.Empty);
+            }
+
+            if (Table5Id == 0)
+            {
+                cbChamp5.Visible = false;
+                lbChamp5.Visible = false;
+                RqChamp5.Visible = false;
+                btAddChamp5.Visible = false;
+            }
+            else
+            {
+                cbChamp5.Visible = true;
+                lbChamp5.Visible = true;
+                if (Table5_Obl == 0)
+                    RqChamp5.Visible = false;
+                else
+                    RqChamp5.Visible = true;
+                btAddChamp5.Visible = true;
+                string table_name = tables.GetName(Table5Id);
+                lbChamp5.Text = table_name;
+                Table5Name = table_name;
+                cbChamp5.DataSource = enregistrements.FindByTableId(Table5Id);
+                cbChamp5.DisplayMember = "NOM";
+                cbChamp5.ValueMember = "ENREGISTREMENTSID";
+                cbChamp5_Leave(this, EventArgs.Empty);
+            }
+
+            if (Table6Id == 0)
+            {
+                cbChamp6.Visible = false;
+                lbChamp6.Visible = false;
+                RqChamp6.Visible = false;
+                btAddChamp6.Visible = false;
+            }
+            else
+            {
+                cbChamp6.Visible = true;
+                lbChamp6.Visible = true;
+                if (Table6_Obl == 0)
+                    RqChamp6.Visible = false;
+                else
+                    RqChamp6.Visible = true;
+                btAddChamp6.Visible = true;
+                string table_name = tables.GetName(Table6Id);
+                lbChamp6.Text = table_name;
+                Table6Name = table_name;
+                cbChamp6.DataSource = enregistrements.FindByTableId(Table6Id);
+                cbChamp6.DisplayMember = "NOM";
+                cbChamp6.ValueMember = "ENREGISTREMENTSID";
+                cbChamp6_Leave(this, EventArgs.Empty);
+            }
+
+            if (Table7Id == 0)
+            {
+                cbChamp7.Visible = false;
+                lbChamp7.Visible = false;
+                RqChamp7.Visible = false;
+                btAddChamp7.Visible = false;
+            }
+            else
+            {
+                cbChamp7.Visible = true;
+                lbChamp7.Visible = true;
+                if (Table7_Obl == 0)
+                    RqChamp7.Visible = false;
+                else
+                    RqChamp7.Visible = true;
+                btAddChamp7.Visible = true;
+                string table_name = tables.GetName(Table7Id);
+                lbChamp7.Text = table_name;
+                Table7Name = table_name;
+                cbChamp7.DataSource = enregistrements.FindByTableId(Table7Id);
+                cbChamp7.DisplayMember = "NOM";
+                cbChamp7.ValueMember = "ENREGISTREMENTSID";
+                cbChamp7_Leave(this, EventArgs.Empty);
+            }
+
+            if (ChampLibre1Name.Trim().Length > 2)
+            {
+                lbChampLibre1.Visible = true;
+                txtChampLibre1.Visible = true;
+                lbChampLibre1.Text = ChampLibre1Name;
+                if (ChampLibre1_Obl != 0)
+                    RqChampLibre1.Visible = true;
+                else
+                    RqChampLibre1.Visible = false;
+            }
+            else
+            {
+                lbChampLibre1.Visible = false;
+                txtChampLibre1.Visible = false;
+                RqChampLibre1.Visible = false;
+            }
+
+            if (ChampLibre2Name.Trim().Length > 2)
+            {
+                lbChampLibre2.Visible = true;
+                txtChampLibre2.Visible = true;
+                lbChampLibre2.Text = ChampLibre2Name;
+                if (ChampLibre2_Obl != 0)
+                    RqChampLibre2.Visible = true;
+                else
+                    RqChampLibre2.Visible = false;
+            }
+            else
+            {
+                lbChampLibre2.Visible = false;
+                txtChampLibre2.Visible = false;
+                RqChampLibre2.Visible = false;
+            }
+
+            if (ChampLibre3Name.Trim().Length > 2)
+            {
+                lbChampLibre3.Visible = true;
+                txtChampLibre3.Visible = true;
+                lbChampLibre3.Text = ChampLibre3Name;
+                if (ChampLibre3_Obl != 0)
+                    RqChampLibre3.Visible = true;
+                else
+                    RqChampLibre3.Visible = false;
+            }
+            else
+            {
+                lbChampLibre3.Visible = false;
+                txtChampLibre3.Visible = false;
+                RqChampLibre3.Visible = false;
+            }
+
+            if (ChampLibre4Name.Trim().Length > 2)
+            {
+                lbChampLibre4.Visible = true;
+                txtChampLibre4.Visible = true;
+                lbChampLibre4.Text = ChampLibre4Name;
+                if (ChampLibre4_Obl != 0)
+                    RqChampLibre4.Visible = true;
+                else
+                    RqChampLibre4.Visible = false;
+            }
+            else
+            {
+                lbChampLibre4.Visible = false;
+                txtChampLibre4.Visible = false;
+                RqChampLibre4.Visible = false;
+            }
+
+            //InitializeWeighingSettings(Common_functions.CbSelectedValue_Convert_Int(cbPont));
+
+            if (Clear_fields)
+                Clear();
+        }
+
+        private void ApplyWeighingSettings_2(Int32 WeighingSettingsId, bool Clear_fields)
+        {
+            WeighingSettings weighingSettings = new WeighingSettings();
+            Tables tables = new Tables();
+            Enregistrements enregistrements = new Enregistrements();
+            DataTable dtWeighingSettings = new DataTable();
+
+            DataTable dt = new DataTable();
+            DataTable dt2 = new DataTable();
+            PeseePB peseePB = new PeseePB();
+            dt = peseePB.FindById(vg_Id);
+            dt2 = peseePB.FindWeighingsInProgressById(vg_Id);
+            DgvList.DataSource = dt2;
+
+            foreach (DataRow row in dt.Rows)
+            {
+                //if ((int)row["WEIGHING_SETTINGSID"] == 1)
+                dtWeighingSettings = weighingSettings.FindById((int)row["WEIGHING_SETTINGSID"]);
+            }
+
+            foreach (DataRow ro in dtWeighingSettings.Rows)
+            {
+                lbWeighingSettings.Text = ro["DESIGNATION"].ToString();
+
+                EnableCamion = (int)ro["CAMION"];
+                EnableChauffeur = (int)ro["CHAUFFEUR"];
+                EnableTransporteur = (int)ro["TRANSPORTEUR"];
+                EnableProduit = (int)ro["PRODUIT"];
+                EnableClient = (int)ro["CLIENT"];
+                EnableFirme = (int)ro["FIRME"];
+                EnableWalterre = (int)ro["WALTERRE"];
 
                 Camion_Obl = (int)ro["CAMION_OBL"];
                 Chauffeur_Obl = (int)ro["CHAUFFEUR_OBL"];
@@ -750,7 +1183,7 @@ namespace WidraSoft.UI
                 cbCamion.Enabled = true;
                 if (Camion_Obl == 0)
                     RqCamion.Visible = false;
-                else 
+                else
                     RqCamion.Visible = true;
             }
             if (EnableChauffeur == 0)
@@ -818,6 +1251,27 @@ namespace WidraSoft.UI
                 else
                     RqFirme.Visible = true;
             }
+
+            if (EnableWalterre == 0)
+            {
+                cbWalterre.Visible = false;
+                lbWalterre.Visible = false;
+                RqWalterre.Visible = false;
+            }
+            else
+            {
+                Walterre walterre = new Walterre();
+                cbWalterre.Visible = true;
+                lbWalterre.Visible = true;
+                RqWalterre.Visible = true;
+                cbWalterre.DataSource = walterre.List("");
+                cbWalterre.DisplayMember = "CODE";
+                cbWalterre.ValueMember = "WALTERREID";
+                //cbChamp1_SelectedValueChanged(this, EventArgs.Empty);
+                cbWalterre_Leave(this, EventArgs.Empty);
+
+            }
+
             if (Table1Id == 0)
             {
                 cbChamp1.Visible = false;
@@ -836,10 +1290,10 @@ namespace WidraSoft.UI
                 btAddChamp1.Visible = true;
                 string table_name = tables.GetName(Table1Id);
                 lbChamp1.Text = table_name;
-                Table1Name = table_name;                              
+                Table1Name = table_name;
                 cbChamp1.DataSource = enregistrements.FindByTableId(Table1Id);
                 cbChamp1.DisplayMember = "NOM";
-                cbChamp1.ValueMember = "ENREGISTREMENTSID";              
+                cbChamp1.ValueMember = "ENREGISTREMENTSID";
                 //cbChamp1_SelectedValueChanged(this, EventArgs.Empty);
                 cbChamp1_Leave(this, EventArgs.Empty);
 
@@ -864,10 +1318,10 @@ namespace WidraSoft.UI
                 btAddChamp2.Visible = true;
                 string table_name = tables.GetName(Table2Id);
                 lbChamp2.Text = table_name;
-                Table2Name = table_name;                              
+                Table2Name = table_name;
                 cbChamp2.DataSource = enregistrements.FindByTableId(Table2Id);
                 cbChamp2.DisplayMember = "NOM";
-                cbChamp2.ValueMember = "ENREGISTREMENTSID";               
+                cbChamp2.ValueMember = "ENREGISTREMENTSID";
                 //cbChamp2_SelectedValueChanged(this, EventArgs.Empty);
                 cbChamp2_Leave(this, EventArgs.Empty);
             }
@@ -890,10 +1344,10 @@ namespace WidraSoft.UI
                 btAddChamp3.Visible = true;
                 string table_name = tables.GetName(Table3Id);
                 lbChamp3.Text = table_name;
-                Table3Name = table_name;                
+                Table3Name = table_name;
                 cbChamp3.DataSource = enregistrements.FindByTableId(Table3Id);
                 cbChamp3.DisplayMember = "NOM";
-                cbChamp3.ValueMember = "ENREGISTREMENTSID";               
+                cbChamp3.ValueMember = "ENREGISTREMENTSID";
                 //cbChamp3_SelectedValueChanged(this, EventArgs.Empty);
                 cbChamp3_Leave(this, EventArgs.Empty);
             }
@@ -916,10 +1370,10 @@ namespace WidraSoft.UI
                 btAddChamp4.Visible = true;
                 string table_name = tables.GetName(Table4Id);
                 lbChamp4.Text = table_name;
-                Table4Name = table_name;                
+                Table4Name = table_name;
                 cbChamp4.DataSource = enregistrements.FindByTableId(Table4Id);
                 cbChamp4.DisplayMember = "NOM";
-                cbChamp4.ValueMember = "ENREGISTREMENTSID";                
+                cbChamp4.ValueMember = "ENREGISTREMENTSID";
                 cbChamp4_Leave(this, EventArgs.Empty);
             }
 
@@ -941,10 +1395,10 @@ namespace WidraSoft.UI
                 btAddChamp5.Visible = true;
                 string table_name = tables.GetName(Table5Id);
                 lbChamp5.Text = table_name;
-                Table5Name = table_name;               
+                Table5Name = table_name;
                 cbChamp5.DataSource = enregistrements.FindByTableId(Table5Id);
                 cbChamp5.DisplayMember = "NOM";
-                cbChamp5.ValueMember = "ENREGISTREMENTSID";                
+                cbChamp5.ValueMember = "ENREGISTREMENTSID";
                 cbChamp5_Leave(this, EventArgs.Empty);
             }
 
@@ -969,7 +1423,7 @@ namespace WidraSoft.UI
                 Table6Name = table_name;
                 cbChamp6.DataSource = enregistrements.FindByTableId(Table6Id);
                 cbChamp6.DisplayMember = "NOM";
-                cbChamp6.ValueMember = "ENREGISTREMENTSID";               
+                cbChamp6.ValueMember = "ENREGISTREMENTSID";
                 cbChamp6_Leave(this, EventArgs.Empty);
             }
 
@@ -991,10 +1445,10 @@ namespace WidraSoft.UI
                 btAddChamp7.Visible = true;
                 string table_name = tables.GetName(Table7Id);
                 lbChamp7.Text = table_name;
-                Table7Name = table_name;                
+                Table7Name = table_name;
                 cbChamp7.DataSource = enregistrements.FindByTableId(Table7Id);
                 cbChamp7.DisplayMember = "NOM";
-                cbChamp7.ValueMember = "ENREGISTREMENTSID";               
+                cbChamp7.ValueMember = "ENREGISTREMENTSID";
                 cbChamp7_Leave(this, EventArgs.Empty);
             }
 
@@ -1006,9 +1460,9 @@ namespace WidraSoft.UI
                 if (ChampLibre1_Obl != 0)
                     RqChampLibre1.Visible = true;
                 else
-                    RqChampLibre1.Visible = false;               
+                    RqChampLibre1.Visible = false;
             }
-            else 
+            else
             {
                 lbChampLibre1.Visible = false;
                 txtChampLibre1.Visible = false;
@@ -1070,16 +1524,19 @@ namespace WidraSoft.UI
 
             if (Clear_fields)
                 Clear();
+
+
+
         }
 
         private bool check_fields_min()
         {
             bool vl_return;
-            if (txtId.Text != ""  || cbFirme.Text != "" || cbCamion.Text != "" || cbChauffeur.Text != "" || cbTransporteur.Text != "" || cbProduit.Text != "" || cbClient.Text != "" || cbChamp1.Text != ""
+            if (txtId.Text != "" || cbFirme.Text != "" || cbCamion.Text != "" || cbChauffeur.Text != "" || cbTransporteur.Text != "" || cbProduit.Text != "" || cbClient.Text != "" || cbWalterre.Text != "" || cbChamp1.Text != ""
                 || cbChamp2.Text != "" || cbChamp3.Text != "" || cbChamp4.Text != "" || cbChamp5.Text != "" || cbChamp6.Text != "" || cbChamp7.Text != "" || txtChampLibre1.Text != "" || txtChampLibre2.Text != ""
                 || txtChampLibre3.Text != "" || txtChampLibre4.Text != "")
                 vl_return = true;
-            else 
+            else
                 vl_return = false;
             return vl_return;
         }
@@ -1092,6 +1549,7 @@ namespace WidraSoft.UI
             bool vl_Produit;
             bool vl_Firme;
             bool vl_Client;
+            bool vl_Walterre;
             bool vl_Champ1;
             bool vl_Champ2;
             bool vl_Champ3;
@@ -1158,6 +1616,15 @@ namespace WidraSoft.UI
             }
             else
                 vl_Client = true;
+            if (EnableWalterre != 0)
+            {
+                if (cbWalterre.Text != "" && cbWalterre.SelectedIndex != -1)
+                    vl_Walterre = true;
+                else
+                    vl_Walterre = false;
+            }
+            else
+                vl_Walterre = true;
             if (Table1Id != 0 && Table1_Obl != 0)
             {
                 if (cbChamp1.Text != "" && cbChamp1.SelectedIndex != -1)
@@ -1259,8 +1726,8 @@ namespace WidraSoft.UI
                 vl_ChampLibre4 = true;
 
 
-            if (vl_Camion && vl_Chauffeur && vl_Transporteur && vl_Produit && vl_Firme && vl_Client 
-                && vl_Champ1 && vl_Champ2 && vl_Champ3 && vl_Champ4 && vl_Champ5 && vl_Champ6 && vl_Champ7
+            if (vl_Camion && vl_Chauffeur && vl_Transporteur && vl_Produit && vl_Firme && vl_Client
+                && vl_Walterre && vl_Champ1 && vl_Champ2 && vl_Champ3 && vl_Champ4 && vl_Champ5 && vl_Champ6 && vl_Champ7
                 && vl_ChampLibre1 && vl_ChampLibre2 && vl_ChampLibre3 && vl_ChampLibre4)
             {
                 if (TypePesee == "1x")
@@ -1281,7 +1748,7 @@ namespace WidraSoft.UI
 
         private void Clear()
         {
-            
+
             cbFirme.Text = "";
             cbFirme.SelectedIndex = -1;
             cbFirme.BackColor = Color.Honeydew;
@@ -1312,6 +1779,10 @@ namespace WidraSoft.UI
             cbClient.BackColor = Color.Honeydew;
             cbClient.ForeColor = Color.Black;
             btAddClient.Visible = false;
+            cbWalterre.Text = "";
+            cbWalterre.SelectedIndex = -1;
+            cbWalterre.BackColor = Color.Honeydew;
+            cbWalterre.ForeColor = Color.Black;
             cbChamp1.Text = "";
             cbChamp1.SelectedIndex = -1;
             cbChamp1.BackColor = Color.Honeydew;
@@ -1383,6 +1854,7 @@ namespace WidraSoft.UI
             cbTransporteur.Enabled = false;
             cbProduit.Enabled = false;
             cbClient.Enabled = false;
+            cbWalterre.Enabled = false;
             cbChamp1.Enabled = false;
             cbChamp2.Enabled = false;
             cbChamp3.Enabled = false;
@@ -1411,7 +1883,8 @@ namespace WidraSoft.UI
             cbChauffeur.Enabled = true;
             cbTransporteur.Enabled = true;
             cbProduit.Enabled = true;
-            cbClient.Enabled = true; 
+            cbClient.Enabled = true;
+            cbWalterre.Enabled = true;
             cbChamp1.Enabled = true;
             cbChamp2.Enabled = true;
             cbChamp3.Enabled = true;
@@ -1433,14 +1906,14 @@ namespace WidraSoft.UI
         private void Enable_Checked_rbxs_only()
         {
             if (rb1x.Checked)
-                rb2x1.Visible = false;           
+                rb2x1.Visible = false;
             if (rb2x1.Checked)
-                rb1x.Visible = false;                        
+                rb1x.Visible = false;
             if (rbxEntrant.Checked)
                 rbxSortant.Visible = false;
             if (rbxSortant.Checked)
                 rbxEntrant.Visible = false;
-           
+
         }
 
         private void Disable_Checked_rbxs_only()
@@ -1466,7 +1939,7 @@ namespace WidraSoft.UI
                 returnstr = returnstr.Substring(PositionDebut, LongueurChaine);
                 if (s == ValeurStable[0])
                 {
-                    txtPoids.ForeColor = Color.FromArgb(112, 228, 132) ;
+                    txtPoids.ForeColor = Color.FromArgb(112, 228, 132);
                     Stable = true;
                 }
                 else
@@ -1487,14 +1960,26 @@ namespace WidraSoft.UI
         public void ReceiveSerialData()
         {
             string s;
+            string result;
             byte[] trame = new byte[com.BytesToRead];
             com.Read(trame, 0, trame.Length);
             s = System.Text.Encoding.ASCII.GetString(trame);
+
             if (s.Length >= LongueurMinChaine)
-                txtPoids.Text = filtredataBilancia(s);
+            {
+                result = filtredataBilancia(s);
+                int Poids;
+                bool IsParsablePoids;
+                IsParsablePoids = Int32.TryParse(result, out Poids);
+                if (IsParsablePoids) { txtPoids.Text = Poids.ToString(); }
+                else { txtPoids.Text = "0"; }
+                //P = Poids;
+            }
+
             else
                 txtPoids.Text = "0";
-            
+
+
         }
 
         private void PeseePontBascule_FormClosing(object sender, FormClosingEventArgs e)
@@ -1520,9 +2005,9 @@ namespace WidraSoft.UI
             {
                 if (vg_Clearing == false)
                     Add_Item_1x();
-                else 
+                else
                     vg_Clearing = false;
-            }                      
+            }
         }
 
         private void rb2x1_CheckedChanged(object sender, EventArgs e)
@@ -1565,7 +2050,7 @@ namespace WidraSoft.UI
                         {
                             lbPoidsTare.Text = Tare.ToString();
                             DateHeurePoidsTare = DateTime.Now;
-                            lbDateHeurePoidsTare.Text = DateHeurePoidsTare.ToString();                            
+                            lbDateHeurePoidsTare.Text = DateHeurePoidsTare.ToString();
 
                             PoidsNet = Poids - Tare;
                             lbPoidsNet.Text = PoidsNet.ToString();
@@ -1575,11 +2060,11 @@ namespace WidraSoft.UI
                                 PeseePB peseePB = new PeseePB();
                                 peseePB.Add("1x", Flux, Common_functions.CbSelectedValue_Convert_Int(cbPont), Common_functions.CbSelectedValue_Convert_Int(cbWeighingSettingsId), Common_functions.CbSelectedValue_Convert_Int(cbFirme), Common_functions.CbSelectedValue_Convert_Int(cbCamion),
                                     Common_functions.CbSelectedValue_Convert_Int(cbChauffeur), Common_functions.CbSelectedValue_Convert_Int(cbTransporteur), Common_functions.CbSelectedValue_Convert_Int(cbProduit),
-                                    Common_functions.CbSelectedValue_Convert_Int(cbClient), Common_functions.CbSelectedValue_Convert_Int(cbChamp1), Table1Id, Table1Name, cbChamp1.Text,Common_functions.CbSelectedValue_Convert_Int(cbChamp2), Table2Id,  Table2Name, cbChamp2.Text,
+                                    Common_functions.CbSelectedValue_Convert_Int(cbClient), Common_functions.CbSelectedValue_Convert_Int(cbChamp1), Table1Id, Table1Name, cbChamp1.Text, Common_functions.CbSelectedValue_Convert_Int(cbChamp2), Table2Id, Table2Name, cbChamp2.Text,
                                     Common_functions.CbSelectedValue_Convert_Int(cbChamp3), Table3Id, Table3Name, cbChamp3.Text, Common_functions.CbSelectedValue_Convert_Int(cbChamp4), Table4Id, Table4Name, cbChamp4.Text, Common_functions.CbSelectedValue_Convert_Int(cbChamp5), Table5Id, Table5Name, cbChamp5.Text,
                                     Common_functions.CbSelectedValue_Convert_Int(cbChamp6), Table6Id, Table6Name, cbChamp6.Text, Common_functions.CbSelectedValue_Convert_Int(cbChamp7), Table7Id, Table7Name, cbChamp7.Text
-                                    , Poids, DateHeurePoidsBrut, Tare, DateHeurePoidsTare, PoidsNet, lblusername.Text, lbStatus.Text, ChampLibre1Name, txtChampLibre1.Text, ChampLibre2Name, txtChampLibre2.Text, ChampLibre3Name, txtChampLibre3.Text, ChampLibre4Name, txtChampLibre4.Text);
-                                
+                                    , Poids, DateHeurePoidsBrut, Tare, DateHeurePoidsTare, PoidsNet, lblusername.Text, lbStatus.Text, ChampLibre1Name, txtChampLibre1.Text, ChampLibre2Name, txtChampLibre2.Text, ChampLibre3Name, txtChampLibre3.Text, ChampLibre4Name, txtChampLibre4.Text, Common_functions.CbSelectedValue_Convert_Int(cbWalterre));
+
                                 getMaxId();
                                 int Id;
                                 bool IsParsableId;
@@ -1596,7 +2081,7 @@ namespace WidraSoft.UI
                                     Form form = new PeseePBTicketA5(Id);
                                     form.Show();
                                 }
-                                
+
                                 Clear();
                                 InitializeWeighingSettings(Common_functions.CbSelectedValue_Convert_Int(cbPont));
                                 Initialize_Data();
@@ -1666,10 +2151,10 @@ namespace WidraSoft.UI
                                     Common_functions.CbSelectedValue_Convert_Int(cbClient), Common_functions.CbSelectedValue_Convert_Int(cbChamp1), Table1Id, Table1Name, cbChamp1.Text, Common_functions.CbSelectedValue_Convert_Int(cbChamp2), Table2Id, Table2Name, cbChamp2.Text,
                                     Common_functions.CbSelectedValue_Convert_Int(cbChamp3), Table3Id, Table3Name, cbChamp3.Text, Common_functions.CbSelectedValue_Convert_Int(cbChamp4), Table4Id, Table4Name, cbChamp4.Text, Common_functions.CbSelectedValue_Convert_Int(cbChamp5), Table5Id, Table5Name, cbChamp5.Text,
                                     Common_functions.CbSelectedValue_Convert_Int(cbChamp6), Table6Id, Table6Name, cbChamp6.Text, Common_functions.CbSelectedValue_Convert_Int(cbChamp7), Table7Id, Table7Name, cbChamp7.Text
-                                    , 0, DateHeurePoidsTare, Tare, DateHeurePoidsTare, 0, lblusername.Text, lbStatus.Text, ChampLibre1Name, txtChampLibre1.Text, ChampLibre2Name, txtChampLibre2.Text, ChampLibre3Name, txtChampLibre3.Text, ChampLibre4Name, txtChampLibre4.Text);
-                                                              
-                                
-                                
+                                    , 0, DateHeurePoidsTare, Tare, DateHeurePoidsTare, 0, lblusername.Text, lbStatus.Text, ChampLibre1Name, txtChampLibre1.Text, ChampLibre2Name, txtChampLibre2.Text, ChampLibre3Name, txtChampLibre3.Text, ChampLibre4Name, txtChampLibre4.Text, Common_functions.CbSelectedValue_Convert_Int(cbWalterre));
+
+
+
                                 getMaxId();
                                 //Details de la pesée et impression
                                 if (cbLang.Text == "FR")
@@ -1681,12 +2166,12 @@ namespace WidraSoft.UI
                                 InitializeWeighingSettings(Common_functions.CbSelectedValue_Convert_Int(cbPont));
                                 Initialize_Data();
                             }
-                            
+
                         }
                         catch
                         {
                             throw;
-                        }               
+                        }
                     }
                     else
                     {
@@ -1746,9 +2231,9 @@ namespace WidraSoft.UI
                                     Common_functions.CbSelectedValue_Convert_Int(cbClient), Common_functions.CbSelectedValue_Convert_Int(cbChamp1), Table1Id, Table1Name, cbChamp1.Text, Common_functions.CbSelectedValue_Convert_Int(cbChamp2), Table2Id, Table2Name, cbChamp2.Text,
                                     Common_functions.CbSelectedValue_Convert_Int(cbChamp3), Table3Id, Table3Name, cbChamp3.Text, Common_functions.CbSelectedValue_Convert_Int(cbChamp4), Table4Id, Table4Name, cbChamp4.Text, Common_functions.CbSelectedValue_Convert_Int(cbChamp5), Table5Id, Table5Name, cbChamp5.Text,
                                     Common_functions.CbSelectedValue_Convert_Int(cbChamp6), Table6Id, Table6Name, cbChamp6.Text, Common_functions.CbSelectedValue_Convert_Int(cbChamp7), Table7Id, Table7Name, cbChamp7.Text
-                                    , Brut, DateHeurePoidsBrut, Tare, DateHeurePoidsTare, PoidsNet, lblusername.Text, lbStatus.Text, ChampLibre1Name, txtChampLibre1.Text, ChampLibre2Name, txtChampLibre2.Text, ChampLibre3Name, txtChampLibre3.Text, ChampLibre4Name, txtChampLibre4.Text);
-                                
-                                
+                                    , Brut, DateHeurePoidsBrut, Tare, DateHeurePoidsTare, PoidsNet, lblusername.Text, lbStatus.Text, ChampLibre1Name, txtChampLibre1.Text, ChampLibre2Name, txtChampLibre2.Text, ChampLibre3Name, txtChampLibre3.Text, ChampLibre4Name, txtChampLibre4.Text, Common_functions.CbSelectedValue_Convert_Int(cbWalterre));
+
+
                                 if (cbLang.Text == "FR")
                                     Custom_MessageBox.Show("FR", "Pesage Terminé, impression du ticket ...", "Pesée: " + txtId.Text, MessageBoxButtons.OK, MessageBoxIcon.Information);
                                 else if (cbLang.Text == "EN")
@@ -1819,13 +2304,13 @@ namespace WidraSoft.UI
                 if (pont.IfExists(cbPont.Text))
                 {
                     cbPont.BackColor = Color.FromArgb(58, 62, 60);
-                    cbPont.ForeColor = Color.White;                   
+                    cbPont.ForeColor = Color.White;
                     btAddPont.Visible = false;
                 }
                 else
                 {
                     cbPont.BackColor = Color.Honeydew;
-                    cbPont.ForeColor = Color.Black;                   
+                    cbPont.ForeColor = Color.Black;
                     btAddPont.Visible = true;
                 }
             }
@@ -1990,7 +2475,7 @@ namespace WidraSoft.UI
 
         private void btAddPont_Click(object sender, EventArgs e)
         {
-            
+
         }
 
         private void btAddFirme_Click(object sender, EventArgs e)
@@ -2071,7 +2556,7 @@ namespace WidraSoft.UI
                     try
                     {
                         Chauffeur chauffeur = new Chauffeur();
-                        chauffeur.Add("",cbChauffeur.Text,"","","","","","","","",1,0,"",0,"");
+                        chauffeur.Add("", cbChauffeur.Text, "", "", "", "", "", "", "", "", 1, 0, "", 0, "");
                         cbChauffeur.DataSource = chauffeur.List("1=1");
                         cbChauffeur.SelectedIndex = cbChauffeur.Items.Count - 1;
                         cbChauffeur.Focus();
@@ -2133,7 +2618,7 @@ namespace WidraSoft.UI
                     try
                     {
                         Produit produit = new Produit();
-                        produit.Add(cbProduit.Text, 0, 0,0,1,0,0,0,0,0,0,0);
+                        produit.Add(cbProduit.Text, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0);
                         cbProduit.DataSource = produit.List("1=1");
                         cbProduit.SelectedIndex = cbProduit.Items.Count - 1;
                         cbProduit.Focus();
@@ -2164,7 +2649,7 @@ namespace WidraSoft.UI
                     try
                     {
                         Client client = new Client();
-                        client.Add("",cbClient.Text,0,"","","","","","","","","",1,0,"",0,"");
+                        client.Add("", cbClient.Text, 0, "", "", "", "", "", "", "", "", "", 1, 0, "", 0, "");
                         cbClient.DataSource = client.List("1=1");
                         cbClient.SelectedIndex = cbClient.Items.Count - 1;
                         cbClient.Focus();
@@ -2179,20 +2664,20 @@ namespace WidraSoft.UI
             }
         }
 
-        
+
         private void rb2x2_CheckedChanged(object sender, EventArgs e)
         {
             //if (rb2x2.Checked)
             //{
-               // Edit_Item_2x2();
+            // Edit_Item_2x2();
             //}
         }
 
-     
+
 
         private void MenuItemNouveau_Click(object sender, EventArgs e)
         {
-                        
+
         }
 
         private void MenuItemTerminer_Click(object sender, EventArgs e)
@@ -2201,13 +2686,13 @@ namespace WidraSoft.UI
             {
                 DialogResult result;
                 if (cbLang.Text == "FR")
-                    result = Custom_MessageBox.Show("FR", "ATTENTION, les données non enregistrées seront perdues. Etes vous sur?", "Pesée", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) ;
+                    result = Custom_MessageBox.Show("FR", "ATTENTION, les données non enregistrées seront perdues. Etes vous sur?", "Pesée", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
                 else if (cbLang.Text == "EN")
                     result = Custom_MessageBox.Show("EN", "Are you sure you want to delete this record?", "Weighing", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
                 else
                     result = Custom_MessageBox.Show("ES", "¿Está seguro de que desea eliminar este registro?", "Camión", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
                 if (result == DialogResult.Yes)
-                {                    
+                {
                     vg_Id = Common_functions.GetDatagridViewSelectedId(DgvList);
                     Refresh_Dgv();
                     Edit_Item_2x2();
@@ -2225,7 +2710,7 @@ namespace WidraSoft.UI
                         rb2x1.Checked = true;
                     }
                 }
-            } 
+            }
             else
             {
                 Clear();
@@ -2234,7 +2719,7 @@ namespace WidraSoft.UI
                 Refresh_Dgv();
                 Edit_Item_2x2();
             }
-            
+
         }
 
         private void cbLang_SelectedIndexChanged(object sender, EventArgs e)
@@ -2245,8 +2730,8 @@ namespace WidraSoft.UI
                 England_flag.Visible = false;
                 Spain_flag.Visible = false;
                 Language_Manager language_Manager = new Language_Manager();
-                language_Manager.ChangeLanguage("fr", this, typeof( PeseePontBascule));
-               
+                language_Manager.ChangeLanguage("fr", this, typeof(PeseePontBascule));
+
             }
 
             if (cbLang.Text == "EN")
@@ -2256,7 +2741,7 @@ namespace WidraSoft.UI
                 Spain_flag.Visible = false;
                 //Language_Manager language_Manager = new Language_Manager();
                 //language_Manager.ChangeLanguage("en", this, typeof(TransporteurDetail));
-               
+
             }
 
             if (cbLang.Text == "ES")
@@ -2266,7 +2751,7 @@ namespace WidraSoft.UI
                 Spain_flag.Visible = true;
                 //Language_Manager language_Manager = new Language_Manager();
                 //language_Manager.ChangeLanguage("es", this, typeof(TransporteurDetail));
-               
+
             }
         }
 
@@ -2337,8 +2822,8 @@ namespace WidraSoft.UI
         }
 
         private void cbWeighingSettingsId_SelectedIndexChanged(object sender, EventArgs e)
-        {              
-                  
+        {
+
         }
 
         private void cbFirme_SelectedIndexChanged(object sender, EventArgs e)
@@ -2349,7 +2834,7 @@ namespace WidraSoft.UI
         private void cbWeighingSettingsId_SelectedValueChanged(object sender, EventArgs e)
         {
             if (init_WeighingSettings)
-                ApplyWeighingSettings(Common_functions.CbSelectedValue_Convert_Int(cbWeighingSettingsId), true);              
+                ApplyWeighingSettings(Common_functions.CbSelectedValue_Convert_Int(cbWeighingSettingsId), true);
         }
 
         private void cbChamp1_Leave(object sender, EventArgs e)
@@ -2389,10 +2874,10 @@ namespace WidraSoft.UI
                 if (Table2Id != 0 && tables.IsTableRelated(Table2Id))
                 {
                     if (tables.GetParentTableId(Table2Id) == Table1Id)
-                    {                        
+                    {
                         cbChamp2.DataSource = enregistrements.FindByTableIdAndParentId(Table2Id, Common_functions.CbSelectedValue_Convert_Int(cbChamp1));
                         cbChamp2.DisplayMember = "NOM";
-                        cbChamp2.ValueMember = "ENREGISTREMENTSID";                      
+                        cbChamp2.ValueMember = "ENREGISTREMENTSID";
                         cbChamp2.Text = "";
                         cbChamp2.SelectedIndex = -1;
                         cbChamp2.BackColor = Color.Honeydew;
@@ -2408,17 +2893,17 @@ namespace WidraSoft.UI
 
         private void cbChamp2_SelectedValueChanged(object sender, EventArgs e)
         {
-            if (init_WeighingSettings && Table2Id != 0  && cbChamp2.Text.Trim() != "")
+            if (init_WeighingSettings && Table2Id != 0 && cbChamp2.Text.Trim() != "")
             {
                 Tables tables = new Tables();
                 Enregistrements enregistrements = new Enregistrements();
                 if (Table3Id != 0 && tables.IsTableRelated(Table3Id))
                 {
                     if (tables.GetParentTableId(Table3Id) == Table2Id)
-                    {                      
+                    {
                         cbChamp3.DataSource = enregistrements.FindByTableIdAndParentId(Table3Id, Common_functions.CbSelectedValue_Convert_Int(cbChamp2));
                         cbChamp3.DisplayMember = "NOM";
-                        cbChamp3.ValueMember = "ENREGISTREMENTSID";                       
+                        cbChamp3.ValueMember = "ENREGISTREMENTSID";
                         cbChamp3.Text = "";
                         cbChamp3.SelectedIndex = -1;
                         cbChamp3.BackColor = Color.Honeydew;
@@ -2438,7 +2923,7 @@ namespace WidraSoft.UI
             {
                 Tables tables = new Tables();
                 Enregistrements enregistrements = new Enregistrements();
-                if(tables.IsTableRelated(Table2Id))
+                if (tables.IsTableRelated(Table2Id))
                 {
                     if (enregistrements.IfExists(cbChamp2.Text, Table2Id, Common_functions.CbSelectedValue_Convert_Int(cbChamp1)))
                     {
@@ -2452,7 +2937,7 @@ namespace WidraSoft.UI
                         cbChamp2.ForeColor = Color.Black;
                         if (Table2_Ajout != 0)
                             btAddChamp2.Visible = true;
-                    }                  
+                    }
                 }
                 else
                 {
@@ -2470,7 +2955,7 @@ namespace WidraSoft.UI
                             btAddChamp2.Visible = true;
                     }
                 }
-                
+
             }
             else
             {
@@ -2483,14 +2968,14 @@ namespace WidraSoft.UI
 
         private void cbChamp3_SelectedValueChanged(object sender, EventArgs e)
         {
-            if (init_WeighingSettings && Table3Id != 0  && cbChamp3.Text.Trim() != "")
+            if (init_WeighingSettings && Table3Id != 0 && cbChamp3.Text.Trim() != "")
             {
                 Tables tables = new Tables();
                 Enregistrements enregistrements = new Enregistrements();
                 if (Table4Id != 0 && tables.IsTableRelated(Table4Id))
                 {
                     if (tables.GetParentTableId(Table4Id) == Table3Id)
-                    {                      
+                    {
                         cbChamp4.DataSource = enregistrements.FindByTableIdAndParentId(Table4Id, Common_functions.CbSelectedValue_Convert_Int(cbChamp3));
                         cbChamp4.DisplayMember = "NOM";
                         cbChamp4.ValueMember = "ENREGISTREMENTSID";
@@ -2528,7 +3013,7 @@ namespace WidraSoft.UI
                         if (Table3_Ajout != 0)
                             btAddChamp3.Visible = true;
                     }
-                    
+
                 }
                 else
                 {
@@ -2558,17 +3043,17 @@ namespace WidraSoft.UI
 
         private void cbChamp4_SelectedValueChanged(object sender, EventArgs e)
         {
-            if (init_WeighingSettings && Table4Id != 0  && cbChamp4.Text.Trim() != "")
+            if (init_WeighingSettings && Table4Id != 0 && cbChamp4.Text.Trim() != "")
             {
                 Tables tables = new Tables();
                 Enregistrements enregistrements = new Enregistrements();
                 if (Table5Id != 0 && tables.IsTableRelated(Table5Id))
                 {
                     if (tables.GetParentTableId(Table5Id) == Table4Id)
-                    {                       
+                    {
                         cbChamp5.DataSource = enregistrements.FindByTableIdAndParentId(Table5Id, Common_functions.CbSelectedValue_Convert_Int(cbChamp4));
                         cbChamp5.DisplayMember = "NOM";
-                        cbChamp5.ValueMember = "ENREGISTREMENTSID";                       
+                        cbChamp5.ValueMember = "ENREGISTREMENTSID";
                         cbChamp5.Text = "";
                         cbChamp5.SelectedIndex = -1;
                         cbChamp5.BackColor = Color.Honeydew;
@@ -2632,17 +3117,17 @@ namespace WidraSoft.UI
 
         private void cbChamp5_SelectedValueChanged(object sender, EventArgs e)
         {
-            if (init_WeighingSettings && Table5Id != 0  && cbChamp5.Text.Trim() != "")
+            if (init_WeighingSettings && Table5Id != 0 && cbChamp5.Text.Trim() != "")
             {
                 Tables tables = new Tables();
                 Enregistrements enregistrements = new Enregistrements();
                 if (Table6Id != 0 && tables.IsTableRelated(Table6Id))
                 {
                     if (tables.GetParentTableId(Table6Id) == Table5Id)
-                    {                        
+                    {
                         cbChamp6.DataSource = enregistrements.FindByTableIdAndParentId(Table6Id, Common_functions.CbSelectedValue_Convert_Int(cbChamp5));
                         cbChamp6.DisplayMember = "NOM";
-                        cbChamp6.ValueMember = "ENREGISTREMENTSID";                       
+                        cbChamp6.ValueMember = "ENREGISTREMENTSID";
                         cbChamp6.Text = "";
                         cbChamp6.SelectedIndex = -1;
                         cbChamp6.BackColor = Color.Honeydew;
@@ -2706,17 +3191,17 @@ namespace WidraSoft.UI
 
         private void cbChamp6_SelectedValueChanged(object sender, EventArgs e)
         {
-            if (init_WeighingSettings && Table6Id != 0  && cbChamp6.Text.Trim() != "")
+            if (init_WeighingSettings && Table6Id != 0 && cbChamp6.Text.Trim() != "")
             {
                 Tables tables = new Tables();
                 Enregistrements enregistrements = new Enregistrements();
                 if (Table7Id != 0 && tables.IsTableRelated(Table7Id))
                 {
                     if (tables.GetParentTableId(Table7Id) == Table6Id)
-                    {                       
+                    {
                         cbChamp7.DataSource = enregistrements.FindByTableIdAndParentId(Table7Id, Common_functions.CbSelectedValue_Convert_Int(cbChamp6));
                         cbChamp7.DisplayMember = "NOM";
-                        cbChamp7.ValueMember = "ENREGISTREMENTSID";                        
+                        cbChamp7.ValueMember = "ENREGISTREMENTSID";
                         cbChamp7.Text = "";
                         cbChamp7.SelectedIndex = -1;
                         cbChamp7.BackColor = Color.Honeydew;
@@ -2866,7 +3351,7 @@ namespace WidraSoft.UI
                     Edit_Item_2x2();
                 }
             }
-                      
+
         }
 
         private void toolStripMenuItem4_Click(object sender, EventArgs e)
@@ -2885,7 +3370,7 @@ namespace WidraSoft.UI
                     InitializeWeighingSettings(Common_functions.CbSelectedValue_Convert_Int(cbPont));
                     Initialize_Data();
                 }
-            }                            
+            }
         }
 
         private void toolStripSearch_TextChanged(object sender, EventArgs e)
@@ -2914,11 +3399,11 @@ namespace WidraSoft.UI
             else
                 JaugeManager(0);
 
-        }   
-        
+        }
+
         private void JaugeManager(int Poids)
         {
-            if (Poids>=0 && Poids<2000)
+            if (Poids >= 0 && Poids < 2000)
             {
                 T0A2.Visible = true;
                 T2A5.Visible = false;
@@ -2931,7 +3416,7 @@ namespace WidraSoft.UI
                 T50PLUS.Visible = false;
             }
 
-            if (Poids>=2000 && Poids<5000)
+            if (Poids >= 2000 && Poids < 5000)
             {
                 T0A2.Visible = true;
                 T2A5.Visible = true;
@@ -2983,7 +3468,7 @@ namespace WidraSoft.UI
                 T50PLUS.Visible = false;
             }
 
-            if(Poids >= 13000 && Poids < 20000)
+            if (Poids >= 13000 && Poids < 20000)
             {
                 T0A2.Visible = true;
                 T2A5.Visible = true;
@@ -3036,10 +3521,10 @@ namespace WidraSoft.UI
             }
 
             if (Poids >= Poids_Detection)
-                pbOnScale.Visible = true;                
+                pbOnScale.Visible = true;
             else
                 pbOnScale.Visible = false;
-            
+
 
         }
 
@@ -3059,7 +3544,7 @@ namespace WidraSoft.UI
                     try
                     {
                         Enregistrements enregistrements = new Enregistrements();
-                        enregistrements.Add(Table1Id, cbChamp1.Text,"", "","", "", "", "", "", "", "", "", 0, "", 0, "", 0);                     
+                        enregistrements.Add(Table1Id, cbChamp1.Text, "", "", "", "", "", "", "", "", "", "", 0, "", 0, "", 0);
                         cbChamp1.DataSource = enregistrements.FindByTableId(Table1Id); ;
                         cbChamp1.DisplayMember = "NOM";
                         cbChamp1.ValueMember = "ENREGISTREMENTSID";
@@ -3094,7 +3579,7 @@ namespace WidraSoft.UI
                     if (tables.IsTableRelated(Table2Id))
                     {
                         try
-                        {   
+                        {
                             if (tables.GetParentTableId(Table2Id) == Table1Id)
                             {
                                 if (cbChamp1.Text != "" && cbChamp1.Text.Trim().Length > 1)
@@ -3116,18 +3601,18 @@ namespace WidraSoft.UI
                                     else
                                         Custom_MessageBox.Show("ES", "¿Está seguro de que desea eliminar este registro?", "Pesaje", MessageBoxButtons.OK, MessageBoxIcon.Error);
                                 }
-                                
+
                             }
                             else
                             {
                                 if (cbLang.Text == "FR")
-                                     Custom_MessageBox.Show("FR", "Il y'a une incoherence dans le parmétrage des liens entre les tables.", "Pesée", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                                    Custom_MessageBox.Show("FR", "Il y'a une incoherence dans le parmétrage des liens entre les tables.", "Pesée", MessageBoxButtons.OK, MessageBoxIcon.Error);
                                 else if (cbLang.Text == "EN")
-                                     Custom_MessageBox.Show("EN", "There is an error in the links between the tables", "Weighing", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                                    Custom_MessageBox.Show("EN", "There is an error in the links between the tables", "Weighing", MessageBoxButtons.OK, MessageBoxIcon.Error);
                                 else
                                     Custom_MessageBox.Show("ES", "¿Está seguro de que desea eliminar este registro?", "Pesaje", MessageBoxButtons.OK, MessageBoxIcon.Error);
                             }
-                            
+
                         }
                         catch
                         {
@@ -3137,7 +3622,7 @@ namespace WidraSoft.UI
                     else
                     {
                         try
-                        {                           
+                        {
                             enregistrements.Add(Table2Id, cbChamp2.Text, "", "", "", "", "", "", "", "", "", "", 0, "", 0, "", 0);
                             cbChamp2.DataSource = enregistrements.FindByTableId(Table2Id); ;
                             cbChamp2.DisplayMember = "NOM";
@@ -3150,7 +3635,7 @@ namespace WidraSoft.UI
                         {
                             throw;
                         }
-                    }                   
+                    }
                 }
             }
         }
@@ -3552,6 +4037,34 @@ namespace WidraSoft.UI
                         }
                     }
                 }
+            }
+        }
+
+        private void panelLang_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void cbWalterre_Leave(object sender, EventArgs e)
+        {
+            if (cbWalterre.Text != "")
+            {
+                Walterre walterre = new Walterre();
+                if (walterre.IfExists(cbWalterre.Text))
+                {
+                    cbWalterre.BackColor = Color.FromArgb(58, 62, 60);
+                    cbWalterre.ForeColor = Color.White;
+                }
+                else
+                {
+                    cbWalterre.BackColor = Color.Honeydew;
+                    cbWalterre.ForeColor = Color.Black;
+                }
+            }
+            else
+            {
+                cbWalterre.BackColor = Color.Honeydew;
+                cbWalterre.ForeColor = Color.Black;
             }
         }
     }

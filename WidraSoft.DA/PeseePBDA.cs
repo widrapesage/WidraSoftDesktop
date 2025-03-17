@@ -208,7 +208,7 @@ namespace WidraSoft.DA
             Int32 EnregistrementsId4, Int32 TablesId4, String TablesName4, String Enregistrements4, Int32 EnregistrementsId5, Int32 TablesId5, String TablesName5, String Enregistrements5, Int32 EnregistrementsId6, Int32 TablesId6, String TablesName6, String Enregistrements6,
             Int32 EnregistrementsId7, Int32 TablesId7, String TablesName7, String Enregistrements7,
             Int32 Poids1, DateTime DateHeurePoids1, Int32 Poids2, DateTime DateHeurePoids2, Int32 PoidsNet, String UserInfo, String EtatPesee, String ChampLibreName1, String ChampLibre1, String ChampLibreName2, String ChampLibre2, String ChampLibreName3, String ChampLibre3,
-            String ChampLibreName4, String ChampLibre4)
+            String ChampLibreName4, String ChampLibre4, Int32 WalterreId)
         {
             using (conn)
             {
@@ -270,6 +270,7 @@ namespace WidraSoft.DA
                 cmd.Parameters.Add("@CHAMPLIBRE3", SqlDbType.VarChar).Value = ChampLibre3;
                 cmd.Parameters.Add("@CHAMPLIBRENAME4", SqlDbType.VarChar).Value = ChampLibreName4;
                 cmd.Parameters.Add("@CHAMPLIBRE4", SqlDbType.VarChar).Value = ChampLibre4;
+                cmd.Parameters.Add("@WALTERREID", SqlDbType.Int).Value = WalterreId;
                 
                 try
                 {
@@ -287,7 +288,7 @@ namespace WidraSoft.DA
             Int32 EnregistrementsId4, Int32 TablesId4, String TablesName4, String Enregistrements4, Int32 EnregistrementsId5, Int32 TablesId5, String TablesName5, String Enregistrements5, Int32 EnregistrementsId6, Int32 TablesId6, String TablesName6, String Enregistrements6,
             Int32 EnregistrementsId7, Int32 TablesId7, String TablesName7, String Enregistrements7,
             Int32 Poids1, DateTime DateHeurePoids1, Int32 Poids2, DateTime DateHeurePoids2, Int32 PoidsNet, String UserInfo, String EtatPesee, String ChampLibreName1, String ChampLibre1, String ChampLibreName2, String ChampLibre2, String ChampLibreName3, String ChampLibre3,
-            String ChampLibreName4, String ChampLibre4)
+            String ChampLibreName4, String ChampLibre4, Int32 WalterreId)
         {
             using (conn)
             {
@@ -350,6 +351,7 @@ namespace WidraSoft.DA
                 cmd.Parameters.Add("@CHAMPLIBRE3", SqlDbType.VarChar).Value = ChampLibre3;
                 cmd.Parameters.Add("@CHAMPLIBRENAME4", SqlDbType.VarChar).Value = ChampLibreName4;
                 cmd.Parameters.Add("@CHAMPLIBRE4", SqlDbType.VarChar).Value = ChampLibre4;
+                cmd.Parameters.Add("@WALTERREID", SqlDbType.Int).Value = WalterreId;
                 try
                 {
                     cmd.ExecuteNonQuery();
@@ -391,7 +393,7 @@ namespace WidraSoft.DA
             Int32 TablesId1, String TablesName1, String Enregistrements1, Int32 EnregistrementsId2, Int32 TablesId2, String TablesName2, String Enregistrements2, Int32 EnregistrementsId3, Int32 TablesId3, String TablesName3, String Enregistrements3,
             Int32 EnregistrementsId4, Int32 TablesId4, String TablesName4, String Enregistrements4, Int32 EnregistrementsId5, Int32 TablesId5, String TablesName5, String Enregistrements5, Int32 EnregistrementsId6, Int32 TablesId6, String TablesName6, String Enregistrements6,
             Int32 EnregistrementsId7, Int32 TablesId7, String TablesName7, String Enregistrements7,
-            String ChampLibreName1, String ChampLibre1, String ChampLibreName2, String ChampLibre2, String ChampLibreName3, String ChampLibre3, String ChampLibreName4, String ChampLibre4)
+            String ChampLibreName1, String ChampLibre1, String ChampLibreName2, String ChampLibre2, String ChampLibreName3, String ChampLibre3, String ChampLibreName4, String ChampLibre4, Int32 WalterreId)
         {
             using (conn)
             {
@@ -444,6 +446,7 @@ namespace WidraSoft.DA
                 cmd.Parameters.Add("@CHAMPLIBRE3", SqlDbType.VarChar).Value = ChampLibre3;
                 cmd.Parameters.Add("@CHAMPLIBRENAME4", SqlDbType.VarChar).Value = ChampLibreName4;
                 cmd.Parameters.Add("@CHAMPLIBRE4", SqlDbType.VarChar).Value = ChampLibre4;
+                cmd.Parameters.Add("@WALTERREID", SqlDbType.Int).Value = WalterreId;
                 try
                 {
                     cmd.ExecuteNonQuery();

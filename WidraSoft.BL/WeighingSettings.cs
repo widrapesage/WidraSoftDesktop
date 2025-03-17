@@ -83,7 +83,7 @@ namespace WidraSoft.BL
             Int32 Table2_Ticket, Int32 Table3_Ticket, Int32 Table4_Ticket, Int32 Table5_Ticket, Int32 Table6_Ticket, Int32 Table7_Ticket, Int32 Table1_AjoutF, Int32 Table2_AjoutF, Int32 Table3_AjoutF, Int32 Table4_AjoutF, Int32 Table5_AjoutF,
             Int32 Table6_AjoutF, Int32 Table7_AjoutF, String ChampLibre1, String ChampLibre2, String ChampLibre3, String ChampLibre4, Int32 ChampLibre1_Obl, Int32 ChampLibre2_Obl, Int32 ChampLibre3_Obl, Int32 ChampLibre4_Obl,
             Int32 ChampLibre1_Ticket, Int32 ChampLibre2_Ticket, Int32 ChampLibre3_Ticket, Int32 ChampLibre4_Ticket, String ChampLibre1_Borne, String ChampLibre2_Borne, String ChampLibre3_Borne, String ChampLibre4_Borne,
-            Int32 PontFirme, Int32 CamionChauffeur, Int32 CamionTransporteur, String Format, String Titre1, String Titre2, String Footer)
+            Int32 PontFirme, Int32 CamionChauffeur, Int32 CamionTransporteur, String Format, String Titre1, String Titre2, String Footer, Int32 Walterre)
         {
             try
             {
@@ -95,7 +95,7 @@ namespace WidraSoft.BL
              Table5_Code,  Table6_Code,  Table7_Code,  Table1_Borne,  Table2_Borne,  Table3_Borne,  Table4_Borne,  Table5_Borne,  Table6_Borne,  Table7_Borne,  Table1_Ticket,
              Table2_Ticket,  Table3_Ticket,  Table4_Ticket,  Table5_Ticket,  Table6_Ticket,  Table7_Ticket,  Table1_AjoutF,  Table2_AjoutF,  Table3_AjoutF,  Table4_AjoutF,  Table5_AjoutF,
              Table6_AjoutF,  Table7_AjoutF, ChampLibre1, ChampLibre2, ChampLibre3, ChampLibre4, ChampLibre1_Obl, ChampLibre2_Obl, ChampLibre3_Obl, ChampLibre4_Obl, ChampLibre1_Ticket, 
-             ChampLibre2_Ticket, ChampLibre3_Ticket, ChampLibre4_Ticket, ChampLibre1_Borne, ChampLibre2_Borne, ChampLibre3_Borne, ChampLibre4_Borne,PontFirme, CamionChauffeur, CamionTransporteur, Format, Titre1, Titre2, Footer);
+             ChampLibre2_Ticket, ChampLibre3_Ticket, ChampLibre4_Ticket, ChampLibre1_Borne, ChampLibre2_Borne, ChampLibre3_Borne, ChampLibre4_Borne,PontFirme, CamionChauffeur, CamionTransporteur, Format, Titre1, Titre2, Footer, Walterre);
             }
             catch
             {
@@ -111,7 +111,7 @@ namespace WidraSoft.BL
             Int32 Table2_Ticket, Int32 Table3_Ticket, Int32 Table4_Ticket, Int32 Table5_Ticket, Int32 Table6_Ticket, Int32 Table7_Ticket, Int32 Table1_AjoutF, Int32 Table2_AjoutF, Int32 Table3_AjoutF, Int32 Table4_AjoutF, Int32 Table5_AjoutF,
             Int32 Table6_AjoutF, Int32 Table7_AjoutF, String ChampLibre1, String ChampLibre2, String ChampLibre3, String ChampLibre4, Int32 ChampLibre1_Obl, Int32 ChampLibre2_Obl, Int32 ChampLibre3_Obl, Int32 ChampLibre4_Obl,
             Int32 ChampLibre1_Ticket, Int32 ChampLibre2_Ticket, Int32 ChampLibre3_Ticket, Int32 ChampLibre4_Ticket, String ChampLibre1_Borne, String ChampLibre2_Borne, String ChampLibre3_Borne, String ChampLibre4_Borne,
-            Int32 PontFirme, Int32 CamionChauffeur, Int32 CamionTransporteur, String Format, String Titre1, String Titre2, String Footer)
+            Int32 PontFirme, Int32 CamionChauffeur, Int32 CamionTransporteur, String Format, String Titre1, String Titre2, String Footer, Int32 Walterre)
         {
             try
             {
@@ -124,7 +124,7 @@ namespace WidraSoft.BL
              Table2_Ticket, Table3_Ticket, Table4_Ticket, Table5_Ticket, Table6_Ticket, Table7_Ticket, Table1_AjoutF, Table2_AjoutF, Table3_AjoutF, Table4_AjoutF, Table5_AjoutF,
              Table6_AjoutF, Table7_AjoutF, ChampLibre1, ChampLibre2, ChampLibre3, ChampLibre4, ChampLibre1_Obl, ChampLibre2_Obl, ChampLibre3_Obl, ChampLibre4_Obl, ChampLibre1_Ticket,
              ChampLibre2_Ticket, ChampLibre3_Ticket, ChampLibre4_Ticket, ChampLibre1_Borne, ChampLibre2_Borne, ChampLibre3_Borne, ChampLibre4_Borne, PontFirme, CamionChauffeur, CamionTransporteur, 
-             Format, Titre1, Titre2, Footer);
+             Format, Titre1, Titre2, Footer, Walterre);
             }
             catch
             {

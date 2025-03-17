@@ -89,6 +89,45 @@ namespace WidraSoft.BL
             }
         }
 
+        public string GetBadge(Int32 Id)
+        {
+            try
+            {
+                FirmeDA firme = new FirmeDA();
+                return firme.GetBadge(Id);
+            }
+            catch
+            {
+                throw;
+            }
+        }
+
+        public int GetIdByBadge(string Name)
+        {
+            try
+            {
+                FirmeDA firme = new FirmeDA();
+                return firme.GetIdByBadge(Name);
+            }
+            catch
+            {
+                throw;
+            }
+        }
+
+        public int CountByBadge(string Name)
+        {
+            try
+            {
+                FirmeDA firme = new FirmeDA();
+                return firme.CountByBadge(Name);
+            }
+            catch
+            {
+                throw;
+            }
+        }
+
         public void Add(String Badge, String Designation, String Adresse, String CodePostal, String Localite, 
             String Pays, String Telephone,
             String Email, String NumTVA, String SiteWeb_Url, String Observations, Int32 Valide, Int32 Bloque, 

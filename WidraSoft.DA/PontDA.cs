@@ -170,6 +170,25 @@ namespace WidraSoft.DA
             }
         }
 
+        public string GetFluxDefault(Int32 Id)
+        {
+
+            String sql = "SELECT FLUX_DEFAULT FROM PONT WHERE PONTID=" + Id;
+            conn.ConnectionString = connString;
+            if (conn.State == ConnectionState.Closed)
+                conn.Open();
+            SqlCommand cmd = new SqlCommand(sql, conn);
+            try
+            {
+                String name = (string)cmd.ExecuteScalar();
+                return name;
+            }
+            catch
+            {
+                throw;
+            }
+        }
+
         public Int32 GetWeightSettingsId(Int32 Id)
         {
 
@@ -208,10 +227,76 @@ namespace WidraSoft.DA
             }
         }
 
-       
+        public Boolean Borne_Autoriser_Premiere_Pesee(Int32 Id)
+        {
+            String sql = "SELECT BORNEPREMIEREPESEE FROM PONT WHERE PONTID=" + Id;
+            conn.ConnectionString = connString;
+            if (conn.State == ConnectionState.Closed)
+                conn.Open();
+            SqlCommand cmd = new SqlCommand(sql, conn);
+            try
+            {
+                String result = (string)cmd.ExecuteScalar();
+                if (result == null || result == "")
+                    return false;
+                else if (result == "Yes")
+                    return true;
+                else return false;
+            }
+            catch
+            {
+                throw;
+            }
+        }
+
+        public Boolean Borne_Autoriser_Deuxieme_Pesee(Int32 Id)
+        {
+            String sql = "SELECT BORNEDEUXIEMEPESEE FROM PONT WHERE PONTID=" + Id;
+            conn.ConnectionString = connString;
+            if (conn.State == ConnectionState.Closed)
+                conn.Open();
+            SqlCommand cmd = new SqlCommand(sql, conn);
+            try
+            {
+                String result = (string)cmd.ExecuteScalar();
+                if (result == null || result == "")
+                    return false;
+                else if (result == "Yes")
+                    return true;
+                else return false;
+            }
+            catch
+            {
+                throw;
+            }
+        }
+
+        public Boolean Borne_Autoriser_Tare_Manuelle(Int32 Id)
+        {
+            String sql = "SELECT BORNETAREMANUELLE FROM PONT WHERE PONTID=" + Id;
+            conn.ConnectionString = connString;
+            if (conn.State == ConnectionState.Closed)
+                conn.Open();
+            SqlCommand cmd = new SqlCommand(sql, conn);
+            try
+            {
+                String result = (string)cmd.ExecuteScalar();
+                if (result == null || result == "")
+                    return false;
+                else if (result == "Yes")
+                    return true;
+                else return false;
+            }
+            catch
+            {
+                throw;
+            }
+        }
+
 
         public void Add(String Designation, String NumPortCOM, Int32 Weight_SettingsId, Int32 Weighing_SettingsId, Int32 ActiverPoids, Int32 BaudRate,
-                        Int32 DataBits, String StopBits, String Handshake, Int32 ReadTimeOut, String Machine, String Demarrage, Int32 UtilisateurId, Int32 ActiverMultipleParam, Int32 Poids_Detection)
+                        Int32 DataBits, String StopBits, String Handshake, Int32 ReadTimeOut, String Machine, String Demarrage, Int32 UtilisateurId, Int32 ActiverMultipleParam, Int32 Poids_Detection,
+                        String BornePremierePesee, String BorneDeuxiemePesee, String BorneTareManuelle, String Flux_Default)
         {
             using (conn)
             {
@@ -235,6 +320,10 @@ namespace WidraSoft.DA
                 cmd.Parameters.Add("@UTILISATEURID", SqlDbType.Int).Value = UtilisateurId;
                 cmd.Parameters.Add("@ACTIVER_MULTIPLE_PARAM", SqlDbType.Int).Value = ActiverMultipleParam;
                 cmd.Parameters.Add("@POIDS_DETECTION", SqlDbType.Int).Value = Poids_Detection;
+                cmd.Parameters.Add("@BORNEPREMIEREPESEE", SqlDbType.VarChar).Value = BornePremierePesee;
+                cmd.Parameters.Add("@BORNEDEUXIEMEPESEE", SqlDbType.VarChar).Value = BorneDeuxiemePesee;
+                cmd.Parameters.Add("@BORNETAREMANUELLE", SqlDbType.VarChar).Value = BorneTareManuelle;
+                cmd.Parameters.Add("@FLUX_DEFAULT", SqlDbType.VarChar).Value = Flux_Default;
                 try
                 {
                     cmd.ExecuteNonQuery();
@@ -247,7 +336,8 @@ namespace WidraSoft.DA
         }
 
         public void Update(Int32 Id, String Designation, String NumPortCOM, Int32 Weight_SettingsId, Int32 Weighing_SettingsId, Int32 ActiverPoids, Int32 BaudRate,
-                        Int32 DataBits, String StopBits, String Handshake, Int32 ReadTimeOut, String Machine, String Demarrage, Int32 UtilisateurId, Int32 ActiverMultipleParam, Int32 Poids_Detection)
+                        Int32 DataBits, String StopBits, String Handshake, Int32 ReadTimeOut, String Machine, String Demarrage, Int32 UtilisateurId, Int32 ActiverMultipleParam, Int32 Poids_Detection,
+                        String BornePremierePesee, String BorneDeuxiemePesee, String BorneTareManuelle, String Flux_Default)
         {
             using (conn)
             {
@@ -272,6 +362,10 @@ namespace WidraSoft.DA
                 cmd.Parameters.Add("@UTILISATEURID", SqlDbType.Int).Value = UtilisateurId;
                 cmd.Parameters.Add("@ACTIVER_MULTIPLE_PARAM", SqlDbType.Int).Value = ActiverMultipleParam;
                 cmd.Parameters.Add("@POIDS_DETECTION", SqlDbType.Int).Value = Poids_Detection;
+                cmd.Parameters.Add("@BORNEPREMIEREPESEE", SqlDbType.VarChar).Value = BornePremierePesee;
+                cmd.Parameters.Add("@BORNEDEUXIEMEPESEE", SqlDbType.VarChar).Value = BorneDeuxiemePesee;
+                cmd.Parameters.Add("@BORNETAREMANUELLE", SqlDbType.VarChar).Value = BorneTareManuelle;
+                cmd.Parameters.Add("@FLUX_DEFAULT", SqlDbType.VarChar).Value = Flux_Default;
                 try
                 {
                     cmd.ExecuteNonQuery();

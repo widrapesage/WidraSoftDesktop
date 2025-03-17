@@ -150,8 +150,8 @@ namespace WidraSoft.DA
         public string GetFullUsername(Int32 Id)
         {
      
-                String sql = "SELECT prenom + ' ' + nom FROM UTILISATEUR WHERE UtilisateurId=" + Id ;
-                conn.ConnectionString = connString;
+            String sql = "SELECT prenom + ' ' + nom FROM UTILISATEUR WHERE UtilisateurId=" + Id ;
+            conn.ConnectionString = connString;
             using (conn)
             {
                 if (conn.State == ConnectionState.Closed)
@@ -166,11 +166,39 @@ namespace WidraSoft.DA
                 {
                     throw;
                 }
-            }
-                
+            }               
         }
         
-        public void Add(string Nom, string Prenom, string Login, string Password, Int32 GroupeId)
+        public int GetUserLanguageIndex(Int32 Id)
+        {
+            String sql = "SELECT LANG FROM UTILISATEUR WHERE UTILISATEURID=" + Id;
+            conn.ConnectionString = connString;
+            using (conn)
+            {
+                if (conn.State == ConnectionState.Closed)
+                    conn.Open();
+                SqlCommand cmd = new SqlCommand(sql, conn);
+                try
+                {
+                    string lang = (string)cmd.ExecuteScalar();
+                    if (lang == null || lang == "")
+                        return 0;
+                    else if (lang == "FR")
+                        return 0;
+                    else if (lang == "EN")
+                        return 1;
+                    else if (lang == "ES")
+                        return 2;
+                    else 
+                        return 0;
+                }
+                catch
+                {
+                    throw;
+                }
+            }
+        }
+        public void Add(string Nom, string Prenom, string Login, string Password, Int32 GroupeId, string Lang)
         {
 
             using (conn)
@@ -185,6 +213,7 @@ namespace WidraSoft.DA
                 cmd.Parameters.Add("@LOGIN", SqlDbType.VarChar).Value = Login;
                 cmd.Parameters.Add("@PASSWORD", SqlDbType.VarChar).Value = Password;
                 cmd.Parameters.Add("@GROUPEID", SqlDbType.Int).Value = GroupeId;
+                cmd.Parameters.Add("@LANG", SqlDbType.VarChar).Value = Lang;
 
                 try
                 {
@@ -199,7 +228,7 @@ namespace WidraSoft.DA
             }
         }
 
-        public void Update(Int32 Id,string Nom, string Prenom, string Login, string Password, Int32 GroupeId)
+        public void Update(Int32 Id,string Nom, string Prenom, string Login, string Password, Int32 GroupeId, string Lang)
         {
 
             using (conn)
@@ -215,6 +244,7 @@ namespace WidraSoft.DA
                 cmd.Parameters.Add("@LOGIN", SqlDbType.VarChar).Value = Login;
                 cmd.Parameters.Add("@PASSWORD", SqlDbType.VarChar).Value = Password;
                 cmd.Parameters.Add("@GROUPEID", SqlDbType.Int).Value = GroupeId;
+                cmd.Parameters.Add("@LANG", SqlDbType.VarChar).Value = Lang;
 
                 try
                 {

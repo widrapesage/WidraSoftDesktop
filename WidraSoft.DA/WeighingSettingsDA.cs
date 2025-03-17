@@ -118,7 +118,7 @@ namespace WidraSoft.DA
             Int32 Table2_Ticket, Int32 Table3_Ticket, Int32 Table4_Ticket, Int32 Table5_Ticket, Int32 Table6_Ticket, Int32 Table7_Ticket, Int32 Table1_AjoutF, Int32 Table2_AjoutF, Int32 Table3_AjoutF, Int32 Table4_AjoutF, Int32 Table5_AjoutF,
             Int32 Table6_AjoutF, Int32 Table7_AjoutF, String ChampLibre1, String ChampLibre2, String ChampLibre3, String ChampLibre4, Int32 ChampLibre1_Obl, Int32 ChampLibre2_Obl, Int32 ChampLibre3_Obl, Int32 ChampLibre4_Obl,
             Int32 ChampLibre1_Ticket, Int32 ChampLibre2_Ticket, Int32 ChampLibre3_Ticket, Int32 ChampLibre4_Ticket, String ChampLibre1_Borne, String ChampLibre2_Borne, String ChampLibre3_Borne, String ChampLibre4_Borne,
-            Int32 PontFirme, Int32 CamionChauffeur, Int32 CamionTransporteur, String Format, String Titre1, String Titre2, String Footer)
+            Int32 PontFirme, Int32 CamionChauffeur, Int32 CamionTransporteur, String Format, String Titre1, String Titre2, String Footer, Int32 Walterre)
         {
             using (conn)
             {
@@ -217,6 +217,7 @@ namespace WidraSoft.DA
                 cmd.Parameters.Add("@TITRE1", SqlDbType.VarChar).Value = Titre1;
                 cmd.Parameters.Add("@TITRE2", SqlDbType.VarChar).Value = Titre2;
                 cmd.Parameters.Add("@FOOTER", SqlDbType.VarChar).Value = Footer;
+                cmd.Parameters.Add("@WALTERRE", SqlDbType.Int).Value = Walterre;
                 try
                 {
                     cmd.ExecuteNonQuery();
@@ -236,7 +237,7 @@ namespace WidraSoft.DA
             Int32 Table2_Ticket, Int32 Table3_Ticket, Int32 Table4_Ticket, Int32 Table5_Ticket, Int32 Table6_Ticket, Int32 Table7_Ticket, Int32 Table1_AjoutF, Int32 Table2_AjoutF, Int32 Table3_AjoutF, Int32 Table4_AjoutF, Int32 Table5_AjoutF,
             Int32 Table6_AjoutF, Int32 Table7_AjoutF, String ChampLibre1, String ChampLibre2, String ChampLibre3, String ChampLibre4, Int32 ChampLibre1_Obl, Int32 ChampLibre2_Obl, Int32 ChampLibre3_Obl, Int32 ChampLibre4_Obl,
             Int32 ChampLibre1_Ticket, Int32 ChampLibre2_Ticket, Int32 ChampLibre3_Ticket, Int32 ChampLibre4_Ticket, String ChampLibre1_Borne, String ChampLibre2_Borne, String ChampLibre3_Borne, String ChampLibre4_Borne, 
-            Int32 PontFirme, Int32 CamionChauffeur, Int32 CamionTransporteur, String Format, String Titre1, String Titre2, String Footer)
+            Int32 PontFirme, Int32 CamionChauffeur, Int32 CamionTransporteur, String Format, String Titre1, String Titre2, String Footer, Int32 Walterre)
         {
             using (conn)
             {
@@ -336,6 +337,7 @@ namespace WidraSoft.DA
                 cmd.Parameters.Add("@TITRE1", SqlDbType.VarChar).Value = Titre1;
                 cmd.Parameters.Add("@TITRE2", SqlDbType.VarChar).Value = Titre2;
                 cmd.Parameters.Add("@FOOTER", SqlDbType.VarChar).Value = Footer;
+                cmd.Parameters.Add("@WALTERRE", SqlDbType.VarChar).Value = Walterre;
                 try
                 {
                     cmd.ExecuteNonQuery();

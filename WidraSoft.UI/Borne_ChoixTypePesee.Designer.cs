@@ -28,218 +28,235 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
+            components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Borne_ChoixTypePesee));
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.button2 = new System.Windows.Forms.Button();
-            this.txtPoids = new System.Windows.Forms.TextBox();
-            this.select_ES = new System.Windows.Forms.PictureBox();
-            this.select_EN = new System.Windows.Forms.PictureBox();
-            this.select_FR = new System.Windows.Forms.PictureBox();
-            this.Spain_flag = new System.Windows.Forms.PictureBox();
-            this.England_flag = new System.Windows.Forms.PictureBox();
-            this.France_flag = new System.Windows.Forms.PictureBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.btPeser = new System.Windows.Forms.Button();
-            this.btTareManuelle = new System.Windows.Forms.Button();
-            this.lbBadge = new System.Windows.Forms.Label();
-            this.btReimpressionTicket = new System.Windows.Forms.Button();
-            this.timerHoneywell = new System.Windows.Forms.Timer(this.components);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.select_ES)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.select_EN)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.select_FR)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Spain_flag)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.England_flag)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.France_flag)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            this.SuspendLayout();
-            // 
-            // pictureBox1
-            // 
-            resources.ApplyResources(this.pictureBox1, "pictureBox1");
-            this.pictureBox1.BackColor = System.Drawing.Color.Black;
-            this.pictureBox1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pictureBox1.Image = global::WidraSoft.UI.Properties.Resources.logo_Widra_250;
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.TabStop = false;
-            // 
-            // button2
-            // 
-            resources.ApplyResources(this.button2, "button2");
-            this.button2.BackColor = System.Drawing.Color.Black;
-            this.button2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button2.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(112)))), ((int)(((byte)(228)))), ((int)(((byte)(132)))));
-            this.button2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(86)))), ((int)(((byte)(81)))));
-            this.button2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(112)))), ((int)(((byte)(228)))), ((int)(((byte)(132)))));
-            this.button2.Image = global::WidraSoft.UI.Properties.Resources.more;
-            this.button2.Name = "button2";
-            this.button2.UseVisualStyleBackColor = false;
+            txtPoids = new System.Windows.Forms.TextBox();
+            select_ES = new System.Windows.Forms.PictureBox();
+            select_EN = new System.Windows.Forms.PictureBox();
+            select_FR = new System.Windows.Forms.PictureBox();
+            Spain_flag = new System.Windows.Forms.PictureBox();
+            England_flag = new System.Windows.Forms.PictureBox();
+            France_flag = new System.Windows.Forms.PictureBox();
+            QrCode = new System.Windows.Forms.PictureBox();
+            btPeser = new System.Windows.Forms.Button();
+            btTareManuelle = new System.Windows.Forms.Button();
+            lbBadge = new System.Windows.Forms.Label();
+            timerHoneywell = new System.Windows.Forms.Timer(components);
+            btPeser2 = new System.Windows.Forms.Button();
+            fleche_Lecteur = new System.Windows.Forms.PictureBox();
+            panelWeight = new System.Windows.Forms.Panel();
+            panel1 = new System.Windows.Forms.Panel();
+            panel2 = new System.Windows.Forms.Panel();
+            Weight_Timer = new System.Windows.Forms.Timer(components);
+            ((System.ComponentModel.ISupportInitialize)select_ES).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)select_EN).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)select_FR).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)Spain_flag).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)England_flag).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)France_flag).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)QrCode).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)fleche_Lecteur).BeginInit();
+            panelWeight.SuspendLayout();
+            panel1.SuspendLayout();
+            panel2.SuspendLayout();
+            SuspendLayout();
             // 
             // txtPoids
             // 
-            resources.ApplyResources(this.txtPoids, "txtPoids");
-            this.txtPoids.BackColor = System.Drawing.Color.Black;
-            this.txtPoids.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtPoids.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(112)))), ((int)(((byte)(228)))), ((int)(((byte)(132)))));
-            this.txtPoids.Name = "txtPoids";
-            this.txtPoids.TabStop = false;
-            this.txtPoids.TextChanged += new System.EventHandler(this.txtPoids_TextChanged);
-            this.txtPoids.DoubleClick += new System.EventHandler(this.txtPoids_DoubleClick);
+            txtPoids.BackColor = System.Drawing.Color.Black;
+            txtPoids.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            resources.ApplyResources(txtPoids, "txtPoids");
+            txtPoids.ForeColor = System.Drawing.Color.FromArgb(112, 228, 132);
+            txtPoids.Name = "txtPoids";
+            txtPoids.TabStop = false;
+            txtPoids.TextChanged += txtPoids_TextChanged;
+            txtPoids.DoubleClick += txtPoids_DoubleClick;
             // 
             // select_ES
             // 
-            resources.ApplyResources(this.select_ES, "select_ES");
-            this.select_ES.BackColor = System.Drawing.Color.Transparent;
-            this.select_ES.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.select_ES.Image = global::WidraSoft.UI.Properties.Resources.down;
-            this.select_ES.Name = "select_ES";
-            this.select_ES.TabStop = false;
+            resources.ApplyResources(select_ES, "select_ES");
+            select_ES.BackColor = System.Drawing.Color.Transparent;
+            select_ES.Cursor = System.Windows.Forms.Cursors.Hand;
+            select_ES.Image = Properties.Resources.down;
+            select_ES.Name = "select_ES";
+            select_ES.TabStop = false;
             // 
             // select_EN
             // 
-            resources.ApplyResources(this.select_EN, "select_EN");
-            this.select_EN.BackColor = System.Drawing.Color.Transparent;
-            this.select_EN.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.select_EN.Image = global::WidraSoft.UI.Properties.Resources.down;
-            this.select_EN.Name = "select_EN";
-            this.select_EN.TabStop = false;
+            resources.ApplyResources(select_EN, "select_EN");
+            select_EN.BackColor = System.Drawing.Color.Transparent;
+            select_EN.Cursor = System.Windows.Forms.Cursors.Hand;
+            select_EN.Image = Properties.Resources.down;
+            select_EN.Name = "select_EN";
+            select_EN.TabStop = false;
             // 
             // select_FR
             // 
-            resources.ApplyResources(this.select_FR, "select_FR");
-            this.select_FR.BackColor = System.Drawing.Color.Transparent;
-            this.select_FR.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.select_FR.Image = global::WidraSoft.UI.Properties.Resources.down;
-            this.select_FR.Name = "select_FR";
-            this.select_FR.TabStop = false;
+            resources.ApplyResources(select_FR, "select_FR");
+            select_FR.BackColor = System.Drawing.Color.Transparent;
+            select_FR.Cursor = System.Windows.Forms.Cursors.Hand;
+            select_FR.Image = Properties.Resources.down;
+            select_FR.Name = "select_FR";
+            select_FR.TabStop = false;
             // 
             // Spain_flag
             // 
-            resources.ApplyResources(this.Spain_flag, "Spain_flag");
-            this.Spain_flag.BackColor = System.Drawing.Color.Transparent;
-            this.Spain_flag.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.Spain_flag.Image = global::WidraSoft.UI.Properties.Resources.spain_borne;
-            this.Spain_flag.Name = "Spain_flag";
-            this.Spain_flag.TabStop = false;
-            this.Spain_flag.Click += new System.EventHandler(this.Spain_flag_Click);
+            resources.ApplyResources(Spain_flag, "Spain_flag");
+            Spain_flag.BackColor = System.Drawing.Color.Transparent;
+            Spain_flag.Cursor = System.Windows.Forms.Cursors.Hand;
+            Spain_flag.Image = Properties.Resources.spain_borne;
+            Spain_flag.Name = "Spain_flag";
+            Spain_flag.TabStop = false;
+            Spain_flag.Click += Spain_flag_Click;
             // 
             // England_flag
             // 
-            resources.ApplyResources(this.England_flag, "England_flag");
-            this.England_flag.BackColor = System.Drawing.Color.Transparent;
-            this.England_flag.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.England_flag.Image = global::WidraSoft.UI.Properties.Resources.united_kingdom_borne;
-            this.England_flag.Name = "England_flag";
-            this.England_flag.TabStop = false;
-            this.England_flag.Click += new System.EventHandler(this.England_flag_Click);
+            resources.ApplyResources(England_flag, "England_flag");
+            England_flag.BackColor = System.Drawing.Color.Transparent;
+            England_flag.Cursor = System.Windows.Forms.Cursors.Hand;
+            England_flag.Image = Properties.Resources.united_kingdom_borne;
+            England_flag.Name = "England_flag";
+            England_flag.TabStop = false;
+            England_flag.Click += England_flag_Click;
             // 
             // France_flag
             // 
-            resources.ApplyResources(this.France_flag, "France_flag");
-            this.France_flag.BackColor = System.Drawing.Color.Transparent;
-            this.France_flag.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.France_flag.Image = global::WidraSoft.UI.Properties.Resources.france_borne;
-            this.France_flag.Name = "France_flag";
-            this.France_flag.TabStop = false;
-            this.France_flag.Click += new System.EventHandler(this.France_flag_Click);
+            resources.ApplyResources(France_flag, "France_flag");
+            France_flag.BackColor = System.Drawing.Color.Transparent;
+            France_flag.Cursor = System.Windows.Forms.Cursors.Hand;
+            France_flag.Image = Properties.Resources.france_borne;
+            France_flag.Name = "France_flag";
+            France_flag.TabStop = false;
+            France_flag.Click += France_flag_Click;
             // 
-            // pictureBox2
+            // QrCode
             // 
-            resources.ApplyResources(this.pictureBox2, "pictureBox2");
-            this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pictureBox2.Image = global::WidraSoft.UI.Properties.Resources.Scan;
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.TabStop = false;
+            resources.ApplyResources(QrCode, "QrCode");
+            QrCode.BackColor = System.Drawing.Color.Transparent;
+            QrCode.Cursor = System.Windows.Forms.Cursors.Hand;
+            QrCode.Image = Properties.Resources.qr_code;
+            QrCode.Name = "QrCode";
+            QrCode.TabStop = false;
             // 
             // btPeser
             // 
-            resources.ApplyResources(this.btPeser, "btPeser");
-            this.btPeser.BackColor = System.Drawing.Color.Black;
-            this.btPeser.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btPeser.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(112)))), ((int)(((byte)(228)))), ((int)(((byte)(132)))));
-            this.btPeser.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(86)))), ((int)(((byte)(81)))));
-            this.btPeser.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(112)))), ((int)(((byte)(228)))), ((int)(((byte)(132)))));
-            this.btPeser.Image = global::WidraSoft.UI.Properties.Resources.Peser_Borne;
-            this.btPeser.Name = "btPeser";
-            this.btPeser.UseVisualStyleBackColor = false;
-            this.btPeser.Click += new System.EventHandler(this.btPeser_Click);
+            resources.ApplyResources(btPeser, "btPeser");
+            btPeser.BackColor = System.Drawing.Color.Black;
+            btPeser.Cursor = System.Windows.Forms.Cursors.Hand;
+            btPeser.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(112, 228, 132);
+            btPeser.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(72, 86, 81);
+            btPeser.ForeColor = System.Drawing.Color.FromArgb(112, 228, 132);
+            btPeser.Image = Properties.Resources.Peser_Borne;
+            btPeser.Name = "btPeser";
+            btPeser.UseVisualStyleBackColor = false;
+            btPeser.Click += btPeser_Click;
             // 
             // btTareManuelle
             // 
-            resources.ApplyResources(this.btTareManuelle, "btTareManuelle");
-            this.btTareManuelle.BackColor = System.Drawing.Color.Black;
-            this.btTareManuelle.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btTareManuelle.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(112)))), ((int)(((byte)(228)))), ((int)(((byte)(132)))));
-            this.btTareManuelle.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(86)))), ((int)(((byte)(81)))));
-            this.btTareManuelle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(112)))), ((int)(((byte)(228)))), ((int)(((byte)(132)))));
-            this.btTareManuelle.Image = global::WidraSoft.UI.Properties.Resources.pave_numerique;
-            this.btTareManuelle.Name = "btTareManuelle";
-            this.btTareManuelle.UseVisualStyleBackColor = false;
-            this.btTareManuelle.Click += new System.EventHandler(this.btTareManuelle_Click);
+            resources.ApplyResources(btTareManuelle, "btTareManuelle");
+            btTareManuelle.BackColor = System.Drawing.Color.Black;
+            btTareManuelle.Cursor = System.Windows.Forms.Cursors.Hand;
+            btTareManuelle.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(112, 228, 132);
+            btTareManuelle.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(72, 86, 81);
+            btTareManuelle.ForeColor = System.Drawing.Color.FromArgb(112, 228, 132);
+            btTareManuelle.Image = Properties.Resources.pave_numerique;
+            btTareManuelle.Name = "btTareManuelle";
+            btTareManuelle.UseVisualStyleBackColor = false;
+            btTareManuelle.Click += btTareManuelle_Click;
             // 
             // lbBadge
             // 
-            resources.ApplyResources(this.lbBadge, "lbBadge");
-            this.lbBadge.BackColor = System.Drawing.Color.Transparent;
-            this.lbBadge.ForeColor = System.Drawing.Color.White;
-            this.lbBadge.Name = "lbBadge";
-            // 
-            // btReimpressionTicket
-            // 
-            resources.ApplyResources(this.btReimpressionTicket, "btReimpressionTicket");
-            this.btReimpressionTicket.BackColor = System.Drawing.Color.Black;
-            this.btReimpressionTicket.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btReimpressionTicket.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(112)))), ((int)(((byte)(228)))), ((int)(((byte)(132)))));
-            this.btReimpressionTicket.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(86)))), ((int)(((byte)(81)))));
-            this.btReimpressionTicket.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(112)))), ((int)(((byte)(228)))), ((int)(((byte)(132)))));
-            this.btReimpressionTicket.Image = global::WidraSoft.UI.Properties.Resources.imprimante_borne;
-            this.btReimpressionTicket.Name = "btReimpressionTicket";
-            this.btReimpressionTicket.UseVisualStyleBackColor = false;
+            resources.ApplyResources(lbBadge, "lbBadge");
+            lbBadge.BackColor = System.Drawing.Color.Transparent;
+            lbBadge.ForeColor = System.Drawing.Color.White;
+            lbBadge.Name = "lbBadge";
             // 
             // timerHoneywell
             // 
-            this.timerHoneywell.Tick += new System.EventHandler(this.timerHoneywell_Tick);
+            timerHoneywell.Tick += timerHoneywell_Tick;
+            // 
+            // btPeser2
+            // 
+            resources.ApplyResources(btPeser2, "btPeser2");
+            btPeser2.BackColor = System.Drawing.Color.Black;
+            btPeser2.Cursor = System.Windows.Forms.Cursors.Hand;
+            btPeser2.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(112, 228, 132);
+            btPeser2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(72, 86, 81);
+            btPeser2.ForeColor = System.Drawing.Color.FromArgb(112, 228, 132);
+            btPeser2.Image = Properties.Resources.Peser_Borne;
+            btPeser2.Name = "btPeser2";
+            btPeser2.UseVisualStyleBackColor = false;
+            btPeser2.Click += btPeser2_Click;
+            // 
+            // fleche_Lecteur
+            // 
+            resources.ApplyResources(fleche_Lecteur, "fleche_Lecteur");
+            fleche_Lecteur.BackColor = System.Drawing.Color.Transparent;
+            fleche_Lecteur.Cursor = System.Windows.Forms.Cursors.Hand;
+            fleche_Lecteur.Image = Properties.Resources.fleche_vers_le_bas_borne;
+            fleche_Lecteur.Name = "fleche_Lecteur";
+            fleche_Lecteur.TabStop = false;
+            // 
+            // panelWeight
+            // 
+            panelWeight.BackColor = System.Drawing.Color.Black;
+            panelWeight.Controls.Add(txtPoids);
+            resources.ApplyResources(panelWeight, "panelWeight");
+            panelWeight.Name = "panelWeight";
+            // 
+            // panel1
+            // 
+            resources.ApplyResources(panel1, "panel1");
+            panel1.Controls.Add(btPeser2);
+            panel1.Controls.Add(France_flag);
+            panel1.Controls.Add(fleche_Lecteur);
+            panel1.Controls.Add(England_flag);
+            panel1.Controls.Add(Spain_flag);
+            panel1.Controls.Add(lbBadge);
+            panel1.Controls.Add(select_FR);
+            panel1.Controls.Add(btTareManuelle);
+            panel1.Controls.Add(select_EN);
+            panel1.Controls.Add(btPeser);
+            panel1.Controls.Add(select_ES);
+            panel1.Controls.Add(QrCode);
+            panel1.Name = "panel1";
+            // 
+            // panel2
+            // 
+            panel2.Controls.Add(panel1);
+            resources.ApplyResources(panel2, "panel2");
+            panel2.Name = "panel2";
+            // 
+            // Weight_Timer
+            // 
+            Weight_Timer.Tick += Weight_Timer_Tick;
             // 
             // Borne_ChoixTypePesee
             // 
             resources.ApplyResources(this, "$this");
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(62)))), ((int)(((byte)(60)))));
-            this.Controls.Add(this.btReimpressionTicket);
-            this.Controls.Add(this.lbBadge);
-            this.Controls.Add(this.btTareManuelle);
-            this.Controls.Add(this.btPeser);
-            this.Controls.Add(this.pictureBox2);
-            this.Controls.Add(this.select_ES);
-            this.Controls.Add(this.select_EN);
-            this.Controls.Add(this.select_FR);
-            this.Controls.Add(this.Spain_flag);
-            this.Controls.Add(this.England_flag);
-            this.Controls.Add(this.France_flag);
-            this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.txtPoids);
-            this.Name = "Borne_ChoixTypePesee";
-            this.Load += new System.EventHandler(this.Borne_ChoixTypePesee_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.select_ES)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.select_EN)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.select_FR)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Spain_flag)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.England_flag)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.France_flag)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            this.ResumeLayout(false);
-            this.PerformLayout();
-
+            AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            BackColor = System.Drawing.Color.FromArgb(58, 62, 60);
+            Controls.Add(panel2);
+            Controls.Add(panelWeight);
+            Name = "Borne_ChoixTypePesee";
+            Load += Borne_ChoixTypePesee_Load;
+            ((System.ComponentModel.ISupportInitialize)select_ES).EndInit();
+            ((System.ComponentModel.ISupportInitialize)select_EN).EndInit();
+            ((System.ComponentModel.ISupportInitialize)select_FR).EndInit();
+            ((System.ComponentModel.ISupportInitialize)Spain_flag).EndInit();
+            ((System.ComponentModel.ISupportInitialize)England_flag).EndInit();
+            ((System.ComponentModel.ISupportInitialize)France_flag).EndInit();
+            ((System.ComponentModel.ISupportInitialize)QrCode).EndInit();
+            ((System.ComponentModel.ISupportInitialize)fleche_Lecteur).EndInit();
+            panelWeight.ResumeLayout(false);
+            panelWeight.PerformLayout();
+            panel1.ResumeLayout(false);
+            panel1.PerformLayout();
+            panel2.ResumeLayout(false);
+            ResumeLayout(false);
         }
 
         #endregion
-
-        private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Button button2;
         private System.Windows.Forms.TextBox txtPoids;
         private System.Windows.Forms.PictureBox select_ES;
         private System.Windows.Forms.PictureBox select_EN;
@@ -247,11 +264,16 @@
         private System.Windows.Forms.PictureBox Spain_flag;
         private System.Windows.Forms.PictureBox England_flag;
         private System.Windows.Forms.PictureBox France_flag;
-        private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.PictureBox QrCode;
         private System.Windows.Forms.Button btPeser;
         private System.Windows.Forms.Button btTareManuelle;
         private System.Windows.Forms.Label lbBadge;
-        private System.Windows.Forms.Button btReimpressionTicket;
         private System.Windows.Forms.Timer timerHoneywell;
+        private System.Windows.Forms.Button btPeser2;
+        private System.Windows.Forms.PictureBox fleche_Lecteur;
+        private System.Windows.Forms.Panel panelWeight;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Timer Weight_Timer;
     }
 }
