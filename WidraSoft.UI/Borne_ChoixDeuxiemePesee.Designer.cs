@@ -319,6 +319,7 @@
             AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             BackColor = System.Drawing.Color.FromArgb(58, 62, 60);
             ClientSize = new System.Drawing.Size(1113, 561);
+            ControlBox = false;
             Controls.Add(panel2);
             Controls.Add(panel1);
             Icon = (System.Drawing.Icon)resources.GetObject("$this.Icon");

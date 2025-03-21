@@ -10,6 +10,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using WidraSoft.BL;
+using WidraSoft.DA;
 
 namespace WidraSoft.UI
 {
@@ -248,7 +249,6 @@ namespace WidraSoft.UI
                 if (ActiverPoids == 1)
                 {
                     Weight_Timer.Start();
-
                 }
                 JaugeTimer.Start();
                 LongueurMinChaine = (int)r["LONGUEURMINCHAINE"];
@@ -516,7 +516,7 @@ namespace WidraSoft.UI
                 lbTareCamion.Visible = false;
                 Bind_Fields();
                 ApplyWeighingSettings_2(Common_functions.CbSelectedValue_Convert_Int(cbWeighingSettingsId), false);
-
+                Bind_Fields();
             }
         }
 
@@ -812,9 +812,10 @@ namespace WidraSoft.UI
                 cbWalterre.Visible = true;
                 lbWalterre.Visible = true;
                 RqWalterre.Visible = true;
-                cbWalterre.DataSource = walterre.List("");
+                cbWalterre.DataSource = walterre.List("1=1");
                 cbWalterre.DisplayMember = "CODE";
                 cbWalterre.ValueMember = "WALTERREID";
+
                 //cbChamp1_SelectedValueChanged(this, EventArgs.Empty);
                 cbWalterre_Leave(this, EventArgs.Empty);
 
@@ -1264,7 +1265,7 @@ namespace WidraSoft.UI
                 cbWalterre.Visible = true;
                 lbWalterre.Visible = true;
                 RqWalterre.Visible = true;
-                cbWalterre.DataSource = walterre.List("");
+                cbWalterre.DataSource = walterre.List("1=1");
                 cbWalterre.DisplayMember = "CODE";
                 cbWalterre.ValueMember = "WALTERREID";
                 //cbChamp1_SelectedValueChanged(this, EventArgs.Empty);
@@ -4065,6 +4066,62 @@ namespace WidraSoft.UI
             {
                 cbWalterre.BackColor = Color.Honeydew;
                 cbWalterre.ForeColor = Color.Black;
+            }
+        }
+
+        private void cbCamion_SelectedValueChanged(object sender, EventArgs e)
+        {
+            if (init_WeighingSettings  && cbCamion.Text.Trim() != "" && Common_functions.CbSelectedValue_Convert_Int(cbCamion) > 0)
+            {
+                Camion camion = new Camion();
+                Chauffeur chauffeur = new Chauffeur();
+                Transporteur transporteur = new Transporteur();
+                CamionChauffeur camionChauffeur = new CamionChauffeur();
+                CamionTransporteur camionTransporteur = new CamionTransporteur();
+
+
+
+                if (EnableChauffeur > 0)
+                {
+                    if (CamionChauffeur > 0)
+                    {
+                        if (camionChauffeur.CountByCamionId(Common_functions.CbSelectedValue_Convert_Int(cbCamion)) > 0)
+                        {
+                            cbChauffeur.DataSource = camionChauffeur.FindByCamionId(Common_functions.CbSelectedValue_Convert_Int(cbCamion));
+                            cbChauffeur.DisplayMember = "CHAUFFEUR";
+                            cbChauffeur.ValueMember = "CHAUFFEURID";
+                            cbChauffeur.Text = "";
+                            cbChauffeur.SelectedIndex = -1;
+                            cbChauffeur.BackColor = Color.Honeydew;
+                            cbChauffeur.ForeColor = Color.Black;
+                        }
+                        else
+                        {
+                            //Rien
+                        }
+                    }
+                }
+
+                if (EnableTransporteur > 0)
+                {
+                    if (CamionTransporteur > 0)
+                    {
+                        if (camionTransporteur.CountByCamionId(Common_functions.CbSelectedValue_Convert_Int(cbCamion)) > 0)
+                        {
+                            cbTransporteur.DataSource = camionTransporteur.FindByCamionId(Common_functions.CbSelectedValue_Convert_Int(cbCamion));
+                            cbTransporteur.DisplayMember = "TRANSPORTEUR";
+                            cbTransporteur.ValueMember = "TRANSPORTEURID";
+                            cbTransporteur.Text = "";
+                            cbTransporteur.SelectedIndex = -1;
+                            cbTransporteur.BackColor = Color.Honeydew;
+                            cbTransporteur.ForeColor = Color.Black;
+                        }
+                        else
+                        {
+                            //Rien
+                        }
+                    }
+                }  
             }
         }
     }

@@ -6,6 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
+using System.Xml.Linq;
 using WidraSoft.DA;
 
 namespace WidraSoft.BL
@@ -26,6 +27,18 @@ namespace WidraSoft.BL
 
         }
 
+        public DataTable List_Enlevements(string filter)
+        {
+            try
+            {
+                WalterreDA walterre = new WalterreDA();
+                return walterre.List_Enlevements(filter);
+            }
+            catch
+            {
+                throw;
+            }
+        }
         public DataTable SearchBox(string Filter)
         {
             try
@@ -45,6 +58,96 @@ namespace WidraSoft.BL
             {
                 WalterreDA walterre = new WalterreDA();
                 return walterre.FindById(Id);
+            }
+            catch
+            {
+                throw;
+            }
+        }
+
+        public bool IsDepassementSeuilMaxAutorise(Int32 Id)
+        {
+            try
+            {
+                WalterreDA walterre = new WalterreDA();
+                return walterre.IsDepassementSeuilMaxAutorise(Id);
+            }
+            catch
+            {
+                throw;
+            }
+        }
+
+        public bool IsDepassementVolumeAutorise(Int32 Id)
+        {
+            try
+            {
+                WalterreDA walterre = new WalterreDA();
+                return walterre.IsDepassementVolumeAutorise(Id);
+            }
+            catch
+            {
+                throw;
+            }
+        }
+        public DataTable FindEnlevementsById(Int32 Id)
+        {
+            try
+            {
+                WalterreDA walterre = new WalterreDA();
+                return walterre.FindEnlevementsById(Id);
+            }
+            catch
+            {
+                throw;
+            }
+        }
+
+        public decimal GetQteEnlevements(Int32 Id)
+        {
+            try
+            {
+                WalterreDA walterre = new WalterreDA();
+                return walterre.GetQteEnlevements(Id);
+            }
+            catch
+            {
+                throw;
+            }
+        }
+
+        public decimal GetSeuilMax(Int32 Id)
+        {
+            try
+            {
+                WalterreDA walterre = new WalterreDA();
+                return walterre.GetSeuilMax(Id);
+            }
+            catch
+            {
+                throw;
+            }
+        }
+
+        public decimal GetVolume(Int32 Id)
+        {
+            try
+            {
+                WalterreDA walterre = new WalterreDA();
+                return walterre.GetVolume(Id);
+            }
+            catch
+            {
+                throw;
+            }
+        }
+
+        public DataTable FindPeseePBById(Int32 Id)
+        {
+            try
+            {
+                WalterreDA walterre = new WalterreDA();
+                return walterre.FindPeseePBById(Id);
             }
             catch
             {
@@ -78,13 +181,25 @@ namespace WidraSoft.BL
             }
         }
 
-        public void Add(String Code, Int32 ProduitId, Int32 ClientId, Decimal Volume, Decimal Seuil_Max,
-           String Region, String Texte_Borne, String Observations, Int32 Depassement, Int32 Cloture, SqlDateTime DateCloture, String Status)
+        public int GetIdByName(string Name)
         {
             try
             {
                 WalterreDA walterre = new WalterreDA();
-                walterre.Add(Code, ProduitId, ClientId, Volume, Seuil_Max, Region, Texte_Borne , Observations , Depassement, Cloture, DateCloture, Status);
+                return walterre.GetIdByName(Name);
+            }
+            catch
+            {
+                throw;
+            }
+        }
+        public void Add(String Code, Int32 ProduitId, Int32 ClientId, Decimal Volume, Decimal Seuil_Max,
+           String Region, String Texte_Borne, String Observations, Int32 Depassement, Int32 Cloture, SqlDateTime DateCloture, String Status, Int32 Depassement_Seuil_Max, String Nom)
+        {
+            try
+            {
+                WalterreDA walterre = new WalterreDA();
+                walterre.Add(Code, ProduitId, ClientId, Volume, Seuil_Max, Region, Texte_Borne , Observations , Depassement, Cloture, DateCloture, Status, Depassement_Seuil_Max, Nom);
             }
             catch
             {
@@ -93,12 +208,12 @@ namespace WidraSoft.BL
         }
 
         public void Update(Int32 Id, String Code, Int32 ProduitId, Int32 ClientId, Decimal Volume, Decimal Seuil_Max,
-           String Region, String Texte_Borne, String Observations, Int32 Depassement, Int32 Cloture, SqlDateTime DateCloture, String Status)
+           String Region, String Texte_Borne, String Observations, Int32 Depassement, Int32 Cloture, SqlDateTime DateCloture, String Status, Int32 Depassement_Seuil_Max, String Nom)
         {
             try
             {
                 WalterreDA walterre = new WalterreDA();
-                walterre.Update(Id, Code, ProduitId, ClientId, Volume, Seuil_Max, Region, Texte_Borne, Observations, Depassement, Cloture, DateCloture, Status);
+                walterre.Update(Id, Code, ProduitId, ClientId, Volume, Seuil_Max, Region, Texte_Borne, Observations, Depassement, Cloture, DateCloture, Status, Depassement_Seuil_Max, Nom);
             }
             catch
             {

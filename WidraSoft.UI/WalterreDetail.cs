@@ -72,6 +72,8 @@ namespace WidraSoft.UI
                 }
             }
 
+            Bind_DgvList();
+            lbNb.Text = "(" + DgvList.RowCount.ToString() + ")";
 
 
             cbLang.DataSource = Language.Languages;
@@ -83,7 +85,8 @@ namespace WidraSoft.UI
         private void Add_Item()
         {
             if (txtId.Text == "" && txtDateCreation.Text == "" && txtCode.Text == "" && cbClientId.Text == "" && cbProduitId.Text == "" && cbRegion.Text == "" && txtVolume.Text == "" &&
-                txtSeuilMax.Text == "" && txtCloture.Text == "" && txtDateCloture.Text == "" && txtDepassement.Text == "" && txtBorne.Text == "" && txtObservations.Text == "" && txtStatus.Text == "")
+                txtSeuilMax.Text == "" && txtCloture.Text == "" && txtDateCloture.Text == "" && txtDepassement.Text == "" && txtBorne.Text == "" && txtObservations.Text == "" && txtStatus.Text == "" && txtDepassementSeuilMax.Text == ""
+                && txtNom.Text == "")
             {
                 lbModifier.Enabled = false;
                 lbModifier.BackColor = Color.Transparent;
@@ -95,6 +98,9 @@ namespace WidraSoft.UI
 
                 txtDepassement.Text = "0";
                 chx_Depassement.Checked = false;
+
+                txtDepassementSeuilMax.Text = "0";
+                chx_DepassementSeuilMax.Checked = false;
 
                 txtStatus.Text = "Pending";
 
@@ -112,8 +118,10 @@ namespace WidraSoft.UI
         private void Bind_Fields()
         {
             DataTable dt = new DataTable();
+            DataTable dt2 = new DataTable();
             Walterre walterre = new Walterre();
             dt = walterre.FindById(vg_Id);
+            dt2 = walterre.FindEnlevementsById(vg_Id);
             foreach (DataRow row in dt.Rows)
             {
                 int Id = (int)row["WALTERREID"];
@@ -144,6 +152,11 @@ namespace WidraSoft.UI
                     chx_Depassement.Checked = true;
                 else
                     chx_Depassement.Checked = false;
+                txtDepassementSeuilMax.Text = row["DEPASSEMENT_SEUIL_MAX"].ToString();
+                if (txtDepassementSeuilMax.Text == "1")
+                    chx_DepassementSeuilMax.Checked = true;
+                else
+                    chx_DepassementSeuilMax.Checked = false;
                 txtDateCloture.Text = row["DATECLOTURE"].ToString();
                 txtObservations.Text = row["OBSERVATIONS"].ToString();
                 txtBorne.Text = row["TEXTE_BORNE"].ToString();
@@ -154,13 +167,19 @@ namespace WidraSoft.UI
                     txtVolume.Enabled = false;
                     txtSeuilMax.Enabled = false;
                 }
-
                 else
                 {
                     txtStatus.ForeColor = Color.FromArgb(11, 228, 132);
-
                 }
-                    
+                txtNom.Text = row["NOM"].ToString();
+            }
+            foreach (DataRow row in dt2.Rows)
+            {
+                txtResteSeuilMax.Text = row["RESTE_SEUIL_MAX"].ToString();
+                txtResteVolume.Text = row["RESTE_VOLUME"].ToString();
+                lbPourcentageSeuilMax.Text = row["POURCENTAGE_SEUIL_MAX"].ToString() + "%";
+                lbPourcentageVolume.Text = row["POURCENTAGE_VOLUME"].ToString() + "%";
+                lbSomme.Text = row["QTE_ENLEVEMENTS"].ToString() + " (T)";
             }
         }
         private void Disable()
@@ -174,8 +193,10 @@ namespace WidraSoft.UI
             txtSeuilMax.Enabled = false;
             chx_Cloture.Enabled = false;
             chx_Depassement.Enabled = false;
+            chx_DepassementSeuilMax.Enabled = false;
             txtBorne.Enabled = false;
             txtObservations.Enabled = false;
+            txtNom.Enabled = false;
             pbUpdating.Visible = false;
 
             vg_IsEnabled = false;
@@ -192,8 +213,10 @@ namespace WidraSoft.UI
             txtSeuilMax.Enabled = true;
             chx_Cloture.Enabled = true;
             chx_Depassement.Enabled = true;
+            chx_DepassementSeuilMax.Enabled = true;
             txtBorne.Enabled = true;
             txtObservations.Enabled = true;
+            txtNom.Enabled=true;
             pbUpdating.Visible = true;
 
             vg_IsEnabled = true;
@@ -213,10 +236,82 @@ namespace WidraSoft.UI
             chx_Cloture.Checked = false;
             txtDepassement.Text = "";
             chx_Depassement.Checked = false;
+            txtDepassementSeuilMax.Text = "";
+            chx_DepassementSeuilMax.Checked = false;
             txtDateCloture.Text = "";
             txtBorne.Text = "";
             txtObservations.Text = "";
             txtStatus.Text = "";
+            txtNom.Text = "";
+
+        }
+
+        private void Bind_DgvList()
+        {
+            Walterre walterre = new Walterre();
+            if (txtId.Text == "")
+            {
+                DgvList.DataSource = walterre.FindPeseePBById(-1);
+            }
+            else
+            {
+                int Id;
+                bool IsParsableId;
+                IsParsableId = Int32.TryParse(txtId.Text, out Id);
+                DgvList.DataSource = walterre.FindPeseePBById(Id);
+            }
+
+            DgvList.Columns[0].Visible = true;
+            DgvList.Columns[0].HeaderText = "NUMERO";
+            DgvList.Columns["TYPEPESEE"].Visible = false;
+            DgvList.Columns["FLUX"].Visible = false;
+            DgvList.Columns["PONTID"].Visible = false;
+            DgvList.Columns["WEIGHING_SETTINGSID"].Visible = false;
+            DgvList.Columns["POIDS2"].Visible = false;
+            DgvList.Columns["DATEHEUREPOIDS2"].Visible = true;
+            DgvList.Columns["DATEHEUREPOIDS2"].HeaderText = "DATEHEURE";
+            DgvList.Columns["PONT"].Visible = false;
+            DgvList.Columns["FIRMEID"].Visible = false;
+            DgvList.Columns["FIRME"].Visible = false;
+            DgvList.Columns["CAMIONID"].Visible = false;
+            DgvList.Columns["CAMION"].Visible = true;
+            DgvList.Columns["CHAUFFEURID"].Visible = false;
+            DgvList.Columns["CHAUFFEUR"].Visible = false;
+            DgvList.Columns["TRANSPORTEURID"].Visible = false;
+            DgvList.Columns["TRANSPORTEUR"].Visible = false;
+            DgvList.Columns["PRODUITID"].Visible = false;
+            DgvList.Columns["PRODUIT"].Visible = true;
+            DgvList.Columns["CLIENTID"].Visible = false;
+            DgvList.Columns["CLIENT"].Visible = false;
+            DgvList.Columns["POIDS1"].Visible = false;
+            DgvList.Columns["DATEHEUREPOIDS1"].Visible = false;
+            DgvList.Columns["TABLES_SUPPLEMENTAIRES_STRING"].Visible = false;
+            DgvList.Columns["PARAMPESEE"].Visible = false;
+            DgvList.Columns["PARAMPESEE"].HeaderText = "PARAMETRE";
+            DgvList.Columns["POIDSNET"].Visible = true;
+            DgvList.Columns["USER_INFO"].Visible = false;
+            DgvList.Columns["ETATPESEE"].Visible = false;
+            DgvList.Columns["ETATPESEE"].HeaderText = "ETAT";
+            DgvList.Columns["ENREGISTREMENTSID1"].Visible = false;
+            DgvList.Columns["ENREGISTREMENTSID2"].Visible = false;
+            DgvList.Columns["ENREGISTREMENTSID3"].Visible = false;
+            DgvList.Columns["ENREGISTREMENTSID4"].Visible = false;
+            DgvList.Columns["ENREGISTREMENTSID5"].Visible = false;
+            DgvList.Columns["ENREGISTREMENTSID6"].Visible = false;
+            DgvList.Columns["ENREGISTREMENTSID7"].Visible = false;
+            DgvList.Columns["CHAMPLIBRE1"].Visible = false;
+            DgvList.Columns["CHAMPLIBRE2"].Visible = false;
+            DgvList.Columns["CHAMPLIBRE3"].Visible = false;
+            DgvList.Columns["CHAMPLIBRE4"].Visible = false;
+            DgvList.Columns["TITRE1"].Visible = false;
+            DgvList.Columns["TITRE2"].Visible = false;
+            DgvList.Columns["FOOTER"].Visible = false;
+            DgvList.Columns["DATECREATION"].Visible = false;
+            DgvList.Columns["CODEWALTERRE"].Visible = false;
+            DgvList.Columns["WALTERREID"].Visible = false;
+
+            DgvList.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            DgvList.ReadOnly = true;
 
         }
 
@@ -241,14 +336,12 @@ namespace WidraSoft.UI
             if (txtStatus.Text == "Pending")
             {
                 txtStatus.ForeColor = Color.OrangeRed;
-                txtVolume.Enabled = false;
-                txtSeuilMax.Enabled = false;
             }
-
             else
             {
                 txtStatus.ForeColor = Color.FromArgb(11, 228, 132);
-
+                txtVolume.Enabled = false;
+                txtSeuilMax.Enabled = false;
             }
         }
 
@@ -264,22 +357,25 @@ namespace WidraSoft.UI
         {
             try
             {
-                if (txtId.Text == "" && txtDateCreation.Text == "" && txtCode.Text != ""  && txtVolume.Text != "" && txtSeuilMax.Text != ""
-                    && txtCloture.Text != "" && txtDepassement.Text != "")
+                if (txtId.Text == "" && txtDateCreation.Text == "" && txtCode.Text != "" && txtVolume.Text != "" && txtSeuilMax.Text != ""
+                    && txtCloture.Text != "" && txtDepassement.Text != "" && txtDepassementSeuilMax.Text != "")
                 {
                     int Cloture;
                     int Depassement;
+                    int DepassementSeuilMax;
                     Decimal Volume;
                     Decimal Seuil_Max;
                     SqlDateTime DateCloture;
                     DateTime DateCloture2;
                     bool IsParsableCloture;
                     bool IsParsableDepassement;
+                    bool IsParsableDepassementSeuilMax;
                     bool IsParsableVolume;
                     bool IsParsableSeuil_Max;
                     bool IsParsableDateCloture;
                     IsParsableCloture = Int32.TryParse(txtCloture.Text, out Cloture);
                     IsParsableDepassement = Int32.TryParse(txtDepassement.Text, out Depassement);
+                    IsParsableDepassementSeuilMax = Int32.TryParse(txtDepassementSeuilMax.Text, out DepassementSeuilMax);
                     IsParsableVolume = Decimal.TryParse(txtVolume.Text, out Volume);
                     IsParsableSeuil_Max = Decimal.TryParse(txtSeuilMax.Text, out Seuil_Max);
                     //IsParsableDateCloture = SqlDateTime.TryParse(txtDateCloture.Text, out DateCloture);
@@ -288,12 +384,12 @@ namespace WidraSoft.UI
                     else
                     {
                         DateTime.TryParse(txtDateCloture.Text, out DateCloture2);
-                        DateCloture = (SqlDateTime) DateCloture2;
+                        DateCloture = (SqlDateTime)DateCloture2;
                     }
-                    
+
                     try
                     {
-                        if ( IsParsableCloture && IsParsableDepassement && IsParsableVolume && IsParsableSeuil_Max)
+                        if (IsParsableCloture && IsParsableDepassement && IsParsableDepassementSeuilMax && IsParsableVolume && IsParsableSeuil_Max)
                         {
                             if (Cloture == 1)
                             {
@@ -308,7 +404,7 @@ namespace WidraSoft.UI
                             {
                                 Walterre walterre = new Walterre();
                                 walterre.Add(txtCode.Text, Common_functions.CbSelectedValue_Convert_Int(cbProduitId), Common_functions.CbSelectedValue_Convert_Int(cbClientId), Volume, Seuil_Max, cbRegion.Text, txtBorne.Text,
-                                     txtObservations.Text, Depassement, Cloture, DateCloture, txtStatus.Text);
+                                     txtObservations.Text, Depassement, Cloture, DateCloture, txtStatus.Text, DepassementSeuilMax, txtNom.Text);
                                 if (cbLang.Text == "FR")
                                     Custom_MessageBox.Show("FR", "Contrat Walterre ajouté avec succès", "Walterre", MessageBoxButtons.OK, MessageBoxIcon.Information);
                                 else if (cbLang.Text == "EN")
@@ -317,7 +413,7 @@ namespace WidraSoft.UI
                                     Custom_MessageBox.Show("ES", "Puente agregado", "Puente", MessageBoxButtons.OK, MessageBoxIcon.Information);
                                 Close();
                             }
-                            
+
                         }
                     }
                     catch
@@ -368,12 +464,13 @@ namespace WidraSoft.UI
                 {
                     try
                     {
-                        if (txtId.Text != "" && txtDateCreation.Text != "" && txtCode.Text != ""  && txtVolume.Text != "" && txtSeuilMax.Text != ""
-                             && txtCloture.Text != "" && txtDepassement.Text != "")
+                        if (txtId.Text != "" && txtDateCreation.Text != "" && txtCode.Text != "" && txtVolume.Text != "" && txtSeuilMax.Text != ""
+                             && txtCloture.Text != "" && txtDepassement.Text != "" && txtDepassementSeuilMax.Text != "")
                         {
                             int Id;
                             int Cloture;
                             int Depassement;
+                            int DepassementSeuilMax;
                             Decimal Volume;
                             Decimal Seuil_Max;
                             SqlDateTime DateCloture;
@@ -381,12 +478,14 @@ namespace WidraSoft.UI
                             bool IsParsableId;
                             bool IsParsableCloture;
                             bool IsParsableDepassement;
+                            bool IsParsableDepassementSeuilMax;
                             bool IsParsableVolume;
                             bool IsParsableSeuil_Max;
                             bool IsParsableDateCloture;
                             IsParsableId = Int32.TryParse(txtId.Text, out Id);
                             IsParsableCloture = Int32.TryParse(txtCloture.Text, out Cloture);
                             IsParsableDepassement = Int32.TryParse(txtDepassement.Text, out Depassement);
+                            IsParsableDepassementSeuilMax = Int32.TryParse(txtDepassementSeuilMax.Text, out DepassementSeuilMax);
                             IsParsableVolume = Decimal.TryParse(txtVolume.Text, out Volume);
                             IsParsableSeuil_Max = Decimal.TryParse(txtSeuilMax.Text, out Seuil_Max);
                             //IsParsableDateCloture = SqlDateTime.TryParse(txtDateCloture.Text, out DateCloture);
@@ -399,11 +498,11 @@ namespace WidraSoft.UI
                             }
                             try
                             {
-                                if (IsParsableId && IsParsableCloture && IsParsableDepassement && IsParsableVolume && IsParsableSeuil_Max)
+                                if (IsParsableId && IsParsableCloture && IsParsableDepassement && IsParsableDepassementSeuilMax && IsParsableVolume && IsParsableSeuil_Max)
                                 {
                                     Walterre walterre = new Walterre();
                                     walterre.Update(Id, txtCode.Text, Common_functions.CbSelectedValue_Convert_Int(cbProduitId), Common_functions.CbSelectedValue_Convert_Int(cbClientId), Volume, Seuil_Max, cbRegion.Text, txtBorne.Text,
-                                 txtObservations.Text, Depassement, Cloture, DateCloture, txtStatus.Text);
+                                 txtObservations.Text, Depassement, Cloture, DateCloture, txtStatus.Text, DepassementSeuilMax, txtNom.Text);
                                     if (cbLang.Text == "FR")
                                         Custom_MessageBox.Show("FR", "Contrat Walterre modifié avec succès", "Walterre", MessageBoxButtons.OK, MessageBoxIcon.Information);
                                     else if (cbLang.Text == "EN")
@@ -414,7 +513,7 @@ namespace WidraSoft.UI
                                     vg_Update = false;
                                     Disable();
                                     Bind_Fields();
-                                    
+
                                 }
                             }
                             catch
@@ -540,6 +639,19 @@ namespace WidraSoft.UI
                 Language_Manager language_Manager = new Language_Manager();
                 //language_Manager.ChangeLanguage("es", this, typeof(WalterreDetail));
             }
+        }
+
+        private void chx_DepassementSeuilMax_CheckedChanged(object sender, EventArgs e)
+        {
+            if (chx_DepassementSeuilMax.Checked)
+                txtDepassementSeuilMax.Text = "1";
+            else
+                txtDepassementSeuilMax.Text = "0";
+        }
+
+        private void panelDetail_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

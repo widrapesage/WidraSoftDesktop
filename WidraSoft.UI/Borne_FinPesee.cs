@@ -1,13 +1,19 @@
-﻿using System;
+﻿using Microsoft.Reporting.Map.WebForms.BingMaps;
+using Microsoft.Reporting.WinForms;
+using Microsoft.VisualBasic;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.IO.Ports;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using WidraSoft.BL;
+using WidraSoft.DA;
 
 namespace WidraSoft.UI
 {
@@ -16,15 +22,22 @@ namespace WidraSoft.UI
         string vg_Lang;
         string vg_mode;
         int vg_Id;
+        int vg_WalterreId;
+        bool vg_IsWalterre;
         bool close = false;
+        int vg_PontId;
+        int vg_ActiverBarriere;
         SerialPort comBarriere = new SerialPort();
 
-        public Borne_FinPesee(string lang, string mode, int Id)
+        public Borne_FinPesee(string lang, string mode, int Id, bool isWalterre, int walterreid, int PontId)
         {
             InitializeComponent();
             vg_Lang = lang;
             vg_mode = mode;
             vg_Id = Id;
+            vg_IsWalterre = isWalterre;
+            vg_WalterreId = walterreid;
+            vg_PontId = PontId;
         }
 
         private void Borne_FinPesee_Load(object sender, EventArgs e)
@@ -54,7 +67,18 @@ namespace WidraSoft.UI
                 Spain_flag.Visible = true;
             }
 
-            comBarriere.PortName = "COM8";
+            Pont pont = new Pont();
+            DataTable dtPont = new DataTable();
+            dtPont = pont.FindById(vg_PontId);
+            string com_Barriere = "7";
+
+            foreach (DataRow row in dtPont.Rows)
+            {
+                com_Barriere = row["NUMPORTCOM_BARRIERE"].ToString();
+                vg_ActiverBarriere = (int)row["ACTIVER_BARRIERE"];
+            }
+
+            comBarriere.PortName = "COM" + com_Barriere;
             comBarriere.ReadTimeout = 1000;
             comBarriere.BaudRate = 9600;
             comBarriere.Parity = Parity.None;
@@ -62,26 +86,45 @@ namespace WidraSoft.UI
             comBarriere.DataBits = 8;
             comBarriere.Handshake = Handshake.None;
 
-
-            try
+            if (vg_ActiverBarriere == 1)
             {
-                // comBarriere.Open();
+                try
+                {
+                    comBarriere.Open();
+                }
+                catch
+                {
+                    throw;
+                }
             }
-            catch
-            {
-                throw;
-            }
-
-            Gestion_Modes(vg_mode);
 
 
-            Timer.Interval = 3000;
+            Gestion_Modes(vg_mode, vg_IsWalterre);
+
+
+            Timer.Interval = 5000;
 
             Timer.Start();
         }
 
-        private void Gestion_Modes(string mode)
+        private void Gestion_Modes(string mode, bool isWalterre)
         {
+            decimal reste = 0;
+            bool afficher_walterre = false;
+            Walterre walterre = new Walterre();
+
+            if (vg_ActiverBarriere == 1)
+            {
+                Fermer_Barriere();
+                System.Threading.Thread.Sleep(600);
+                Ouvrir_Barriere();
+            }
+
+            if (isWalterre && vg_WalterreId > 0)
+            {
+                reste = walterre.GetVolume(vg_WalterreId) - walterre.GetQteEnlevements(vg_WalterreId);
+                afficher_walterre = true;
+            }
             if (mode == "2x1")
             {
                 if (vg_Lang == "fr")
@@ -104,23 +147,33 @@ namespace WidraSoft.UI
             {
                 if (vg_Lang == "fr")
                 {
-                    lbTexte.Text = "Pesée terminée. Vous pouvez quitter la bascule.";
+                    if (afficher_walterre)
+                        lbTexte.Text = "Il reste " + reste.ToString() + " Tonnes sur un total de " + walterre.GetVolume(vg_WalterreId) + " Tonnes pour le contrat Walterre numéro " + walterre.GetName(vg_WalterreId) + ".";
+                    else
+                        lbTexte.Text = "Pesée terminée. Vous pouvez quitter la bascule.";
+
                 }
 
                 if (vg_Lang == "en")
                 {
-                    lbTexte.Text = "Weighing completed. You can leave the weighbridge.";
+                    if (afficher_walterre)
+                        lbTexte.Text = "There are" + reste.ToString() + " Tons remaining out of a total of " + walterre.GetVolume(vg_WalterreId) + " Tons for the Walterre contract number " + walterre.GetName(vg_WalterreId) + ".";
+                    else
+                        lbTexte.Text = "Weighing completed. You can leave the weighbridge.";
                 }
 
                 if (vg_Lang == "es")
                 {
-                    lbTexte.Text = "Pesaje completado. Puedes dejar la báscula.";
+                    if (afficher_walterre)
+                        lbTexte.Text = "";
+                    else
+                        lbTexte.Text = "Pesaje completado. Puedes dejar la báscula.";
                 }
 
-                //Ouvrir_Barriere();
 
-                Form form = new PeseePBTicketA5(vg_Id);
-                form.Show();
+
+                //Form form = new PeseePBTicketA5(vg_Id);
+                //form.Show();
             }
         }
 
@@ -131,12 +184,66 @@ namespace WidraSoft.UI
 
         private void Ouvrir_Barriere()
         {
+            
             try
             {
-                comBarriere.WriteLine("23 30 31 41 30 30 30 0D");
+                byte[] bytestosend0 = { 0x23, 0x30, 0x31, 0x41, 0x30, 0x30, 0x30, 0x0D };
+                comBarriere.Write(bytestosend0, 0, bytestosend0.Length);
+            }
+            catch { throw; }
+        }
+
+        private void Fermer_Barriere()
+        {
+            
+            try
+            {
+                byte[] bytestosend0 = { 0x23, 0x30, 0x31, 0x41, 0x30, 0x30, 0x31, 0x0D };
+                comBarriere.Write(bytestosend0, 0, bytestosend0.Length);
+            }
+            catch { throw; }
+        }
+
+        private void Relais_On()
+        {
+            try
+            {
+                string s = "0WDO0x0" + ((int)Math.Pow(2, (1 - 1))).ToString("X");
+                //string s = "0WDO0x00";
+                s = CT(s);
+                comBarriere.Write(s + "/r/n");
             }
             catch { throw; }
 
+
+        }
+
+        public string CT(string S)
+        {
+            int I;
+            int J;
+            string S2;
+            string SResult;
+
+            S2 = "<";
+
+            J = Convert.ToInt32("0xAA", 16);
+            for (I = 1; I <= S.Length; I++)
+            {
+                J = J + Strings.Asc(Strings.Mid(S, I, 1));
+                S2 = S2 + Strings.Mid(S, I, 1);
+            }
+            J = J % 256;
+
+            if (J.ToString("X").Length == 1)
+            {
+                SResult = S2 + "0" + J.ToString("X") + ">";
+            }
+            else
+            {
+                SResult = S2 + "" + J.ToString("X") + ">";
+            }
+            return SResult;
         }
 
         private void Borne_FinPesee_FormClosing(object sender, FormClosingEventArgs e)
@@ -144,6 +251,8 @@ namespace WidraSoft.UI
             if (comBarriere.IsOpen)
             { comBarriere.Close(); }
         }
+
+
 
         private void Timer_Tick(object sender, EventArgs e)
         {
@@ -165,7 +274,12 @@ namespace WidraSoft.UI
                 catch { throw; }
             }
             close = true;
-            
+
+        }
+
+        private void btOpen_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

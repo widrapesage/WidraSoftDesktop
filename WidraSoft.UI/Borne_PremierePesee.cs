@@ -148,6 +148,8 @@ namespace WidraSoft.UI
         int PontFirme;
         int CamionChauffeur;
         int CamionTransporteur;
+
+        bool IsNumeric = false;
         public Borne_PremierePesee(string Lang, int PontId, bool Demander_Paramatre, string Flux, int ScanCamionId, int P, int Tare, int ScanChauffeurId, int ScanClientId)
         {
             InitializeComponent();
@@ -300,6 +302,7 @@ namespace WidraSoft.UI
             lbNotFound.Visible = false;
             lbRequired.Visible = false;
             lbOptional.Visible = false;
+            IsNumeric = false;
         }
 
         private void Gestion_Etapes()
@@ -337,7 +340,7 @@ namespace WidraSoft.UI
                 {
                     if (EnableCamion > 0)
                     {
-                        lbTexte.Text = "Choisir le camion";
+                        lbTexte.Text = "Entrez la plaque du camion";
                         /*Camion camion = new Camion();
                         DataTable dt = new DataTable();
                         dt = camion.List("1=1");
@@ -368,7 +371,7 @@ namespace WidraSoft.UI
                     vg_CamionChauffeurId = 0;
                     vg_CamionTransporteurId = 0;
                     CamionChauffeur camionChauffeur = new CamionChauffeur();
-                    CamionTransporteur camionTransporteur = new CamionTransporteur(); 
+                    CamionTransporteur camionTransporteur = new CamionTransporteur();
                     if (CamionChauffeur > 0)
                     {
                         if (camionChauffeur.CountByCamionId(CamionId) > 0)
@@ -397,11 +400,13 @@ namespace WidraSoft.UI
                             vg_CamionTransporteurId = 0;
                         }
                     }
-                    
+
                     Etape = "Firme";
                     Gestion_Etapes();
+
+
                 }
-                
+
                 return;
             }
 
@@ -434,7 +439,7 @@ namespace WidraSoft.UI
                     Etape = "Chauffeur";
                     Gestion_Etapes();
                 }
-                
+
                 return;
             }
 
@@ -489,7 +494,7 @@ namespace WidraSoft.UI
                         Gestion_Etapes();
                     }
 
-                   
+
                 }
                 else
                 {
@@ -516,7 +521,7 @@ namespace WidraSoft.UI
                         Transporteur transporteur = new Transporteur();
                         CamionTransporteur camionTransporteur = new CamionTransporteur();
                         DataTable dt = new DataTable();
-                        if (vg_CamionChauffeurId == -1000)
+                        if (vg_CamionTransporteurId == -1000)
                         {
                             dt = camionTransporteur.FindByCamionId(CamionId);
                             DgvList.DataSource = dt;
@@ -528,7 +533,7 @@ namespace WidraSoft.UI
                             DgvList.DataSource = dt;
                             Bind_Transporteurs();
                         }
-                            
+
                         if (Transporteur_Obl > 0)
                         {
                             btIgnorer.Visible = false;
@@ -541,14 +546,14 @@ namespace WidraSoft.UI
                         }
                         Gestion_Navigation("Transporteur");
                     }
-                    
+
                 }
                 else
                 {
                     TransporteurId = 0;
                     Etape = "Walterre";
                     Gestion_Etapes();
-                    
+
                 }
 
                 return;
@@ -559,12 +564,12 @@ namespace WidraSoft.UI
 
                 if (EnableWalterre > 0)
                 {
-                    lbTexte.Text = "Choisir le code Walterre";
-                    Walterre walterre = new Walterre();
+                    lbTexte.Text = "Entrez le code Walterre";
+                    /*Walterre walterre = new Walterre();
                     DataTable dt = new DataTable();
                     dt = walterre.List("1=1");
                     DgvList.DataSource = dt;
-                    Bind_Walterre();
+                    Bind_Walterre();*/
                     btIgnorer.Visible = false;
                     lbRequired.Visible = true;
                     Gestion_Navigation("Walterre");
@@ -623,7 +628,7 @@ namespace WidraSoft.UI
                             lbOptional.Visible = true;
                         }
                         Gestion_Navigation("Produit");
-                    }       
+                    }
                 }
                 else
                 {
@@ -631,13 +636,13 @@ namespace WidraSoft.UI
                     Etape = "Client";
                     Gestion_Etapes();
                 }
-                     
-            return;
+
+                return;
             }
 
             if (Etape == "Client")
             {
-                if (vg_ScanClientId <= 0) 
+                if (vg_ScanClientId <= 0)
                 {
                     if (EnableClient > 0)
                     {
@@ -733,7 +738,7 @@ namespace WidraSoft.UI
                     Etape = "Table2";
                     Gestion_Etapes();
                 }
-                
+
                 return;
             }
 
@@ -779,7 +784,7 @@ namespace WidraSoft.UI
                     Etape = "Table3";
                     Gestion_Etapes();
                 }
-               
+
                 return;
             }
 
@@ -826,7 +831,7 @@ namespace WidraSoft.UI
                     Etape = "Table4";
                     Gestion_Etapes();
                 }
-                
+
                 return;
             }
 
@@ -873,7 +878,7 @@ namespace WidraSoft.UI
                     Etape = "Table5";
                     Gestion_Etapes();
                 }
-               
+
                 return;
             }
 
@@ -919,7 +924,7 @@ namespace WidraSoft.UI
                     Etape = "Table6";
                     Gestion_Etapes();
                 }
-                
+
                 return;
             }
 
@@ -965,7 +970,7 @@ namespace WidraSoft.UI
                     Etape = "Table7";
                     Gestion_Etapes();
                 }
-                
+
                 return;
             }
 
@@ -1011,7 +1016,7 @@ namespace WidraSoft.UI
                     Etape = "ChampLibre1";
                     Gestion_Etapes();
                 }
-                
+
                 return;
             }
 
@@ -1045,7 +1050,7 @@ namespace WidraSoft.UI
                     Etape = "ChampLibre2";
                     Gestion_Etapes();
                 }
-                
+
                 return;
             }
 
@@ -1079,7 +1084,7 @@ namespace WidraSoft.UI
                     Etape = "ChampLibre3";
                     Gestion_Etapes();
                 }
-                
+
                 return;
             }
 
@@ -1113,7 +1118,7 @@ namespace WidraSoft.UI
                     Etape = "ChampLibre4";
                     Gestion_Etapes();
                 }
-                
+
                 return;
             }
 
@@ -1138,7 +1143,7 @@ namespace WidraSoft.UI
                         btIgnorer.Visible = true;
                         lbOptional.Visible = true;
                     }
-                    Gestion_Navigation("ChampLibre4"); 
+                    Gestion_Navigation("ChampLibre4");
                 }
                 else
                 {
@@ -1147,7 +1152,7 @@ namespace WidraSoft.UI
                     Etape = "Fin";
                     Gestion_Etapes();
                 }
-                
+
                 return;
             }
 
@@ -1163,18 +1168,19 @@ namespace WidraSoft.UI
                             Enregistrement2Id, Tables2Id, Tables2Name, Enregistrement2, Enregistrement3Id, Table3Id, Tables3Name, Enregistrement3, Enregistrement4Id, Table4Id, Tables4Name, Enregistrement4,
                             Enregistrement5Id, Table5Id, Tables5Name, Enregistrement5, Enregistrement6Id, Table6Id, Tables6Name, Enregistrement6, Enregistrement7Id, Table7Id, Tables7Name, Enregistrement7, 0, DateTime.Now, vg_P,
                             DateTime.Now, 0, "Borne", "Pending", ChampLibreName1, ChampLibre1, ChampLibreName2, ChampLibre2, ChampLibreName3, ChampLibre3, ChampLibreName4, ChampLibre4, WalterreId);
-                        Form form = new Borne_FinPesee(vg_Lang, "2x1", pesee.GetMaxIdByPontId(vg_PontId));
+                        Form form = new Borne_FinPesee(vg_Lang, "2x1", pesee.GetMaxIdByPontId(vg_PontId), false, 0, vg_PontId);
                         form.Show(this);
                         //Close();
                     }
                     else
                     {
+                        // IL FAUT AUSSI GERER LES PESEES WALTERRE POUR LES PESEES EN UNE FOIS POUR L'INSTANT PAS PRIS EN COMPTE
                         PeseePB pesee = new PeseePB();
                         pesee.Add("1x", vg_Flux, vg_PontId, WeighingSettingsId, FirmeId, CamionId, ChauffeurId, TransporteurId, ProduitId, ClientId, Enregistrement1Id, Tables1Id, Tables1Name, Enregistrement1,
                             Enregistrement2Id, Tables2Id, Tables2Name, Enregistrement2, Enregistrement3Id, Table3Id, Tables3Name, Enregistrement3, Enregistrement4Id, Table4Id, Tables4Name, Enregistrement4,
                             Enregistrement5Id, Table5Id, Tables5Name, Enregistrement5, Enregistrement6Id, Table6Id, Tables6Name, Enregistrement6, Enregistrement7Id, Table7Id, Tables7Name, Enregistrement7, vg_P, DateTime.Now, vg_Tare,
                             DateTime.Now, Math.Abs(vg_P - vg_Tare), "Borne", "Complete", ChampLibreName1, ChampLibre1, ChampLibreName2, ChampLibre2, ChampLibreName3, ChampLibre3, ChampLibreName4, ChampLibre4, WalterreId);
-                        Form form = new Borne_FinPesee(vg_Lang, "2x2", pesee.GetMaxIdByPontId(vg_PontId));
+                        Form form = new Borne_FinPesee(vg_Lang, "2x2", pesee.GetMaxIdByPontId(vg_PontId), false, 0, vg_PontId);
                         form.Show(this);
                         //Close();
                     }
@@ -1187,7 +1193,7 @@ namespace WidraSoft.UI
             DgvList.Focus();
         }
 
-        
+
 
 
         private void Gestion_Navigation(string Etape)
@@ -1198,10 +1204,12 @@ namespace WidraSoft.UI
                 panelClavier.Visible = true;
                 btRecherche.Text = Language_Manager.Localize("MASQUER CLAVIER", vg_Lang);
             }
-            else if (Etape == "Camion")
+            else if (Etape == "Camion" || Etape == "Walterre")
             {
                 DgvList.Visible = false;
                 lbCount.Visible = false;
+                if (Etape == "Walterre")
+                    IsNumeric = true;
                 btClavier_Click(this, new EventArgs());
                 btRecherche.Visible = false;
                 btAnnulerRecherche.Visible = false;
@@ -1384,6 +1392,7 @@ namespace WidraSoft.UI
             DgvList.Columns["DATECLOTURE"].Visible = false;
             DgvList.Columns["DATECREATION"].Visible = false;
             DgvList.Columns["STATUS"].Visible = false;
+            DgvList.Columns["DEPASSEMENT_SEUIL_MAX"].Visible = false;
 
             DgvList.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             DgvList.ReadOnly = true;
@@ -1445,7 +1454,7 @@ namespace WidraSoft.UI
         private void Bind_CamionChauffeurs()
         {
             DgvList.Columns[0].Visible = false;
-            
+
             DgvList.Columns["CAMIONID"].Visible = false;
             DgvList.Columns["CHAUFFEUR"].Visible = true;
             DgvList.Columns["CAMION"].Visible = false;
@@ -1662,14 +1671,14 @@ namespace WidraSoft.UI
                             {
                                 throw;
                             }
-                            
+
                         }
                         else
                         {
                             lbNotFound.Visible = true;
                         }
                     }
-                   
+
                 }
                 return;
 
@@ -1710,11 +1719,20 @@ namespace WidraSoft.UI
 
             if (Etape == "Walterre")
             {
-                if (DgvList.RowCount > 0)
+                if (DgvList.RowCount >= 0)
                 {
-                    WalterreId = Common_functions.GetDatagridViewSelectedId(DgvList);
-                    Etape = "Produit";
-                    Gestion_Etapes();
+                    //WalterreId = Common_functions.GetDatagridViewSelectedId(DgvList);
+                    Walterre walterre = new Walterre();
+                    if (walterre.IfExists("WT" + lbMessage.Text))
+                    {
+                        WalterreId = walterre.GetIdByName("WT" + lbMessage.Text);
+                        Etape = "Produit";
+                        Gestion_Etapes();
+                    }
+                    else
+                    {
+                        lbNotFound.Visible = true;
+                    }
                 }
                 return;
             }
@@ -1994,7 +2012,74 @@ namespace WidraSoft.UI
                 panelClavier.Visible = true;
                 //lbMessage.Visible = true;
                 btRecherche.Text = Language_Manager.Localize("MASQUER CLAVIER", vg_Lang);
+                if (IsNumeric)
+                {
+                    A.Visible = false;
+                    B.Visible = false;
+                    C.Visible = false;
+                    D.Visible = false;
+                    E.Visible = false;
+                    F.Visible = false;
+                    G.Visible = false;
+                    H.Visible = false;
+                    I.Visible = false;
+                    J.Visible = false;
+                    K.Visible = false;
+                    L.Visible = false;
+                    M.Visible = false;
+                    N.Visible = false;
+                    O.Visible = false;
+                    P.Visible = false;
+                    Q.Visible = false;
+                    R.Visible = false;
+                    S.Visible = false;
+                    T.Visible = false;
+                    U.Visible = false;
+                    V.Visible = false;
+                    W.Visible = false;
+                    X.Visible = false;
+                    Y.Visible = false;
+                    Z.Visible = false;
+                    Tiret.Visible = false;
+                    Slash.Visible = false;
+                    Space.Visible = false;
+                }
+                else
+                {
+                    A.Visible = true;
+                    B.Visible = true;
+                    C.Visible = true;
+                    D.Visible = true;
+                    E.Visible = true;
+                    F.Visible = true;
+                    G.Visible = true;
+                    H.Visible = true;
+                    I.Visible = true;
+                    J.Visible = true;
+                    K.Visible = true;
+                    L.Visible = true;
+                    M.Visible = true;
+                    N.Visible = true;
+                    O.Visible = true;
+                    P.Visible = true;
+                    Q.Visible = true;
+                    R.Visible = true;
+                    S.Visible = true;
+                    T.Visible = true;
+                    U.Visible = true;
+                    V.Visible = true;
+                    W.Visible = true;
+                    X.Visible = true;
+                    Y.Visible = true;
+                    Z.Visible = true;
+                    Tiret.Visible = true;
+                    Slash.Visible = true;
+                    Space.Visible = true;
+                }
+
             }
+
+            IsNumeric = false;
         }
 
         private void Search(String text, string Etape)
@@ -2102,7 +2187,7 @@ namespace WidraSoft.UI
 
             if (Etape == "Walterre")
             {
-                Walterre walterre = new Walterre();
+                /*Walterre walterre = new Walterre();
                 DataTable dt = new DataTable();
                 dt = walterre.SearchBox(text);
                 DgvList.DataSource = dt;
@@ -2110,7 +2195,7 @@ namespace WidraSoft.UI
                 if (RowsCount <= 0)
                     lbNotFound.Visible = true;
                 else
-                    lbNotFound.Visible = false;
+                    lbNotFound.Visible = false;*/
             }
 
             if (Etape == "Produit")
@@ -2419,10 +2504,10 @@ namespace WidraSoft.UI
 
             if (Etape == "Walterre")
             {
-                Walterre walterre = new Walterre();
+                /*Walterre walterre = new Walterre();
                 DataTable dt = new DataTable();
                 dt = walterre.List("1=1");
-                DgvList.DataSource = dt;
+                DgvList.DataSource = dt;*/
             }
 
             if (Etape == "Produit")
@@ -2793,7 +2878,7 @@ namespace WidraSoft.UI
                     }
                     else
                     {
-                        if (Etape == "Camion")
+                        if (Etape == "Camion" || Etape == "Walterre")
                         {
 
                         }
@@ -2803,7 +2888,7 @@ namespace WidraSoft.UI
                             lbCount.Text = DgvList.RowCount.ToString();
                             Init_Keyboard();
                         }
-                        
+
                     }
 
                 }
@@ -2820,7 +2905,7 @@ namespace WidraSoft.UI
                 }
                 else
                 {
-                    if (Etape == "Camion")
+                    if (Etape == "Camion" || Etape == "Walterre")
                     {
 
                     }
@@ -2830,7 +2915,7 @@ namespace WidraSoft.UI
                         lbCount.Text = DgvList.RowCount.ToString();
                         btAnnulerRecherche.Visible = true;
                     }
-                    
+
                 }
 
             }
@@ -3357,6 +3442,9 @@ namespace WidraSoft.UI
             panelClavier.Visible = true;
         }
 
-        
+        private void Borne_PremierePesee_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Borne_Home.GetWeigh = true;
+        }
     }
 }

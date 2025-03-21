@@ -60,6 +60,12 @@ namespace WidraSoft.UI
             DgvList.Columns["BORNEPREMIEREPESEE"].Visible = false;
             DgvList.Columns["BORNEDEUXIEMEPESEE"].Visible = false;
             DgvList.Columns["BORNETAREMANUELLE"].Visible = false;
+            DgvList.Columns["FLUX_DEFAULT"].Visible = false;
+            DgvList.Columns["ACTIVER_SCANNER"].Visible = false;
+            DgvList.Columns["TYPESCANNER"].Visible = false;
+            DgvList.Columns["ACTIVER_BARRIERE"].Visible = false;
+            DgvList.Columns["NUMPORTCOM_BARRIERE"].Visible = false;
+            DgvList.Columns["NUMPORTCOM_SCANNER"].Visible = false;
 
             DgvList.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             DgvList.ReadOnly = true;

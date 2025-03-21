@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Borne_DeuxiemePesee));
             lbTexte = new System.Windows.Forms.Label();
             btAnnuler = new System.Windows.Forms.Button();
@@ -38,6 +39,7 @@
             England_flag = new System.Windows.Forms.PictureBox();
             France_flag = new System.Windows.Forms.PictureBox();
             panel1 = new System.Windows.Forms.Panel();
+            Weight_Timer = new System.Windows.Forms.Timer(components);
             ((System.ComponentModel.ISupportInitialize)Spain_flag).BeginInit();
             ((System.ComponentModel.ISupportInitialize)England_flag).BeginInit();
             ((System.ComponentModel.ISupportInitialize)France_flag).BeginInit();
@@ -49,6 +51,7 @@
             resources.ApplyResources(lbTexte, "lbTexte");
             lbTexte.ForeColor = System.Drawing.Color.White;
             lbTexte.Name = "lbTexte";
+            lbTexte.Click += lbTexte_Click;
             // 
             // btAnnuler
             // 
@@ -130,11 +133,16 @@
             panel1.Controls.Add(lbMessage);
             panel1.Name = "panel1";
             // 
+            // Weight_Timer
+            // 
+            Weight_Timer.Tick += Weight_Timer_Tick;
+            // 
             // Borne_DeuxiemePesee
             // 
             resources.ApplyResources(this, "$this");
             AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             BackColor = System.Drawing.Color.FromArgb(58, 62, 60);
+            ControlBox = false;
             Controls.Add(panel1);
             MaximizeBox = false;
             MinimizeBox = false;
@@ -159,5 +167,6 @@
         private System.Windows.Forms.PictureBox England_flag;
         private System.Windows.Forms.PictureBox France_flag;
         private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Timer Weight_Timer;
     }
 }

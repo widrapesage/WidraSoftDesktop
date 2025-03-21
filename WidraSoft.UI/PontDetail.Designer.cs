@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(PontDetail));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             panelLang = new System.Windows.Forms.Panel();
             pbUpdating = new System.Windows.Forms.PictureBox();
             Spain_flag = new System.Windows.Forms.PictureBox();
@@ -44,7 +44,21 @@
             lbAjouter = new System.Windows.Forms.LinkLabel();
             lbSupprimer = new System.Windows.Forms.LinkLabel();
             panelDetail = new System.Windows.Forms.Panel();
+            label23 = new System.Windows.Forms.Label();
+            cbFlux_Default = new System.Windows.Forms.ComboBox();
             groupBox1 = new System.Windows.Forms.GroupBox();
+            txtCOMScanner = new System.Windows.Forms.TextBox();
+            label28 = new System.Windows.Forms.Label();
+            label27 = new System.Windows.Forms.Label();
+            chx_ActiverBarriere = new System.Windows.Forms.CheckBox();
+            txtActiverBarriere = new System.Windows.Forms.TextBox();
+            txtCOMBarriere = new System.Windows.Forms.TextBox();
+            label26 = new System.Windows.Forms.Label();
+            label25 = new System.Windows.Forms.Label();
+            chx_ActiverScanner = new System.Windows.Forms.CheckBox();
+            label24 = new System.Windows.Forms.Label();
+            txtActiverScanner = new System.Windows.Forms.TextBox();
+            cbTypeScanner = new System.Windows.Forms.ComboBox();
             label22 = new System.Windows.Forms.Label();
             cbBorneTareManuelle = new System.Windows.Forms.ComboBox();
             label21 = new System.Windows.Forms.Label();
@@ -108,8 +122,6 @@
             txtDesignation = new System.Windows.Forms.TextBox();
             label1 = new System.Windows.Forms.Label();
             txtActiverPoids = new System.Windows.Forms.TextBox();
-            label23 = new System.Windows.Forms.Label();
-            cbFlux_Default = new System.Windows.Forms.ComboBox();
             panelLang.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pbUpdating).BeginInit();
             ((System.ComponentModel.ISupportInitialize)Spain_flag).BeginInit();
@@ -333,8 +345,33 @@
             resources.ApplyResources(panelDetail, "panelDetail");
             panelDetail.Name = "panelDetail";
             // 
+            // label23
+            // 
+            resources.ApplyResources(label23, "label23");
+            label23.ForeColor = System.Drawing.Color.White;
+            label23.Name = "label23";
+            // 
+            // cbFlux_Default
+            // 
+            cbFlux_Default.BackColor = System.Drawing.Color.Honeydew;
+            resources.ApplyResources(cbFlux_Default, "cbFlux_Default");
+            cbFlux_Default.FormattingEnabled = true;
+            cbFlux_Default.Name = "cbFlux_Default";
+            // 
             // groupBox1
             // 
+            groupBox1.Controls.Add(txtCOMScanner);
+            groupBox1.Controls.Add(label28);
+            groupBox1.Controls.Add(label27);
+            groupBox1.Controls.Add(chx_ActiverBarriere);
+            groupBox1.Controls.Add(txtActiverBarriere);
+            groupBox1.Controls.Add(txtCOMBarriere);
+            groupBox1.Controls.Add(label26);
+            groupBox1.Controls.Add(label25);
+            groupBox1.Controls.Add(chx_ActiverScanner);
+            groupBox1.Controls.Add(label24);
+            groupBox1.Controls.Add(txtActiverScanner);
+            groupBox1.Controls.Add(cbTypeScanner);
             groupBox1.Controls.Add(label22);
             groupBox1.Controls.Add(cbBorneTareManuelle);
             groupBox1.Controls.Add(label21);
@@ -345,6 +382,83 @@
             groupBox1.ForeColor = System.Drawing.Color.White;
             groupBox1.Name = "groupBox1";
             groupBox1.TabStop = false;
+            // 
+            // txtCOMScanner
+            // 
+            txtCOMScanner.BackColor = System.Drawing.Color.Honeydew;
+            resources.ApplyResources(txtCOMScanner, "txtCOMScanner");
+            txtCOMScanner.ForeColor = System.Drawing.Color.Black;
+            txtCOMScanner.Name = "txtCOMScanner";
+            // 
+            // label28
+            // 
+            resources.ApplyResources(label28, "label28");
+            label28.ForeColor = System.Drawing.Color.White;
+            label28.Name = "label28";
+            // 
+            // label27
+            // 
+            resources.ApplyResources(label27, "label27");
+            label27.ForeColor = System.Drawing.Color.White;
+            label27.Name = "label27";
+            // 
+            // chx_ActiverBarriere
+            // 
+            resources.ApplyResources(chx_ActiverBarriere, "chx_ActiverBarriere");
+            chx_ActiverBarriere.ForeColor = System.Drawing.Color.White;
+            chx_ActiverBarriere.Name = "chx_ActiverBarriere";
+            chx_ActiverBarriere.UseVisualStyleBackColor = true;
+            chx_ActiverBarriere.CheckedChanged += chx_ActiverBarriere_CheckedChanged;
+            // 
+            // txtActiverBarriere
+            // 
+            resources.ApplyResources(txtActiverBarriere, "txtActiverBarriere");
+            txtActiverBarriere.Name = "txtActiverBarriere";
+            // 
+            // txtCOMBarriere
+            // 
+            txtCOMBarriere.BackColor = System.Drawing.Color.Honeydew;
+            resources.ApplyResources(txtCOMBarriere, "txtCOMBarriere");
+            txtCOMBarriere.ForeColor = System.Drawing.Color.Black;
+            txtCOMBarriere.Name = "txtCOMBarriere";
+            // 
+            // label26
+            // 
+            resources.ApplyResources(label26, "label26");
+            label26.ForeColor = System.Drawing.Color.White;
+            label26.Name = "label26";
+            // 
+            // label25
+            // 
+            resources.ApplyResources(label25, "label25");
+            label25.ForeColor = System.Drawing.Color.White;
+            label25.Name = "label25";
+            // 
+            // chx_ActiverScanner
+            // 
+            resources.ApplyResources(chx_ActiverScanner, "chx_ActiverScanner");
+            chx_ActiverScanner.ForeColor = System.Drawing.Color.White;
+            chx_ActiverScanner.Name = "chx_ActiverScanner";
+            chx_ActiverScanner.UseVisualStyleBackColor = true;
+            chx_ActiverScanner.CheckedChanged += chx_ActiverScanner_CheckedChanged;
+            // 
+            // label24
+            // 
+            resources.ApplyResources(label24, "label24");
+            label24.ForeColor = System.Drawing.Color.White;
+            label24.Name = "label24";
+            // 
+            // txtActiverScanner
+            // 
+            resources.ApplyResources(txtActiverScanner, "txtActiverScanner");
+            txtActiverScanner.Name = "txtActiverScanner";
+            // 
+            // cbTypeScanner
+            // 
+            cbTypeScanner.BackColor = System.Drawing.Color.Honeydew;
+            resources.ApplyResources(cbTypeScanner, "cbTypeScanner");
+            cbTypeScanner.FormattingEnabled = true;
+            cbTypeScanner.Name = "cbTypeScanner";
             // 
             // label22
             // 
@@ -567,14 +681,14 @@
             dgvFirmes.BorderStyle = System.Windows.Forms.BorderStyle.None;
             dgvFirmes.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.Sunken;
             dgvFirmes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.Honeydew;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Calibri", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(72, 86, 81);
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            dgvFirmes.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.Honeydew;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Calibri", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(72, 86, 81);
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            dgvFirmes.DefaultCellStyle = dataGridViewCellStyle1;
             resources.ApplyResources(dgvFirmes, "dgvFirmes");
             dgvFirmes.Name = "dgvFirmes";
             dgvFirmes.RowTemplate.Height = 25;
@@ -795,19 +909,6 @@
             resources.ApplyResources(txtActiverPoids, "txtActiverPoids");
             txtActiverPoids.Name = "txtActiverPoids";
             // 
-            // label23
-            // 
-            resources.ApplyResources(label23, "label23");
-            label23.ForeColor = System.Drawing.Color.White;
-            label23.Name = "label23";
-            // 
-            // cbFlux_Default
-            // 
-            cbFlux_Default.BackColor = System.Drawing.Color.Honeydew;
-            resources.ApplyResources(cbFlux_Default, "cbFlux_Default");
-            cbFlux_Default.FormattingEnabled = true;
-            cbFlux_Default.Name = "cbFlux_Default";
-            // 
             // PontDetail
             // 
             resources.ApplyResources(this, "$this");
@@ -936,5 +1037,17 @@
         private System.Windows.Forms.ComboBox cbBornePremierePesee;
         private System.Windows.Forms.Label label23;
         private System.Windows.Forms.ComboBox cbFlux_Default;
+        private System.Windows.Forms.Label label25;
+        private System.Windows.Forms.CheckBox chx_ActiverScanner;
+        private System.Windows.Forms.Label label24;
+        private System.Windows.Forms.TextBox txtActiverScanner;
+        private System.Windows.Forms.ComboBox cbTypeScanner;
+        private System.Windows.Forms.TextBox txtCOMBarriere;
+        private System.Windows.Forms.Label label26;
+        private System.Windows.Forms.TextBox txtCOMScanner;
+        private System.Windows.Forms.Label label28;
+        private System.Windows.Forms.Label label27;
+        private System.Windows.Forms.CheckBox chx_ActiverBarriere;
+        private System.Windows.Forms.TextBox txtActiverBarriere;
     }
 }

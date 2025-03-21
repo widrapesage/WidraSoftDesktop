@@ -37,6 +37,9 @@ namespace WidraSoft.UI
         int vg_PontId;
         string Lang;
         public static int Poids_Public;
+        int ActiverScanner = 0;
+        string TypeScanner;
+        public static bool GetWeigh = true;
 
         public Borne_Home()
         {
@@ -149,6 +152,8 @@ namespace WidraSoft.UI
                 com.Handshake = Handshake.None;
                 Poids_Detection = (int)row["POIDS_DETECTION"];
                 ActiverPoids = (int)row["ACTIVERPOIDS"];
+                ActiverScanner = (int)row["ACTIVER_SCANNER"];
+                TypeScanner = row["TYPESCANNER"].ToString();
                 try
                 {
                     if (ActiverPoids == 1)
@@ -279,7 +284,8 @@ namespace WidraSoft.UI
                 if (P > 300)
                 {
                     Poids_Public = P;
-                    Form form = new Borne_ChoixTypePesee(Lang, GetPontId(), GetWeighingSettingsType(GetPontId()), P, TimerInterval);
+                    GetWeigh = false;
+                    Form form = new Borne_ChoixTypePesee(Lang, GetPontId(), GetWeighingSettingsType(GetPontId()), P, TimerInterval, TypeScanner, ActiverScanner);
                     //txtPoids.Text = "0";
                     form.Show(this);
                 }
@@ -320,7 +326,9 @@ namespace WidraSoft.UI
 
         private void Weight_Timer_Tick(object sender, EventArgs e)
         {
-            ReceiveSerialData();
+            if (GetWeigh)
+                ReceiveSerialData();
+
         }
 
         private void Borne_Home_FormClosing(object sender, FormClosingEventArgs e)

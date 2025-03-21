@@ -64,7 +64,6 @@ namespace WidraSoft.UI
             lblChangerMdp = new System.Windows.Forms.LinkLabel();
             lblMonCompte = new System.Windows.Forms.LinkLabel();
             panelUserInfo = new System.Windows.Forms.Panel();
-            button1 = new System.Windows.Forms.Button();
             panelLicenceInfo = new System.Windows.Forms.Panel();
             txtValidite = new System.Windows.Forms.TextBox();
             txtTypeAbonnement = new System.Windows.Forms.TextBox();
@@ -402,7 +401,6 @@ namespace WidraSoft.UI
             // 
             panelUserInfo.BackColor = System.Drawing.Color.FromArgb(58, 62, 60);
             panelUserInfo.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            panelUserInfo.Controls.Add(button1);
             panelUserInfo.Controls.Add(panelLicenceInfo);
             panelUserInfo.Controls.Add(Spain_flag);
             panelUserInfo.Controls.Add(England_flag);
@@ -415,13 +413,6 @@ namespace WidraSoft.UI
             resources.ApplyResources(panelUserInfo, "panelUserInfo");
             panelUserInfo.Name = "panelUserInfo";
             panelUserInfo.MouseDown += panelUserInfo_MouseDown;
-            // 
-            // button1
-            // 
-            resources.ApplyResources(button1, "button1");
-            button1.Name = "button1";
-            button1.UseVisualStyleBackColor = true;
-            button1.Click += button1_Click;
             // 
             // panelLicenceInfo
             // 
@@ -612,7 +603,6 @@ namespace WidraSoft.UI
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem2;
         private System.Windows.Forms.ToolStripMenuItem listePeseesToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem walterreToolStripMenuItem;
-        private System.Windows.Forms.Button button1;
         //private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

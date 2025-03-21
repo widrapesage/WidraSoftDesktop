@@ -428,6 +428,7 @@
             cbCamion.Name = "cbCamion";
             cbCamion.Size = new System.Drawing.Size(252, 26);
             cbCamion.TabIndex = 98;
+            cbCamion.SelectedValueChanged += cbCamion_SelectedValueChanged;
             cbCamion.Leave += cbCamion_Leave;
             // 
             // lbChauffeur

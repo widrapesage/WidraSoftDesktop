@@ -1,13 +1,16 @@
-﻿using Microsoft.Reporting.WinForms;
+﻿using Microsoft.Reporting.Map.WebForms.BingMaps;
+using Microsoft.Reporting.WinForms;
 using SkiaSharp;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Diagnostics;
 using System.Drawing;
 using System.IO;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using WidraSoft.BL;
@@ -46,6 +49,11 @@ namespace WidraSoft.UI
         string p_Footer;
         string p_ImageLogo;
         string p_qr_code;
+        string p_qteAutoriseWalterre;
+        string p_QteEnleveeWalterre;
+        string p_ResteWalterre;
+        string p_Walterre;
+
         System.Drawing.Imaging.ImageFormat f = System.Drawing.Imaging.ImageFormat.Png;
         
         public PeseePBTicketA5(int Id)
@@ -61,7 +69,8 @@ namespace WidraSoft.UI
             PeseePB peseePE = new PeseePB();
             DataTable dtpeseePE = new DataTable();
             dtpeseePE = peseePE.FindById(vg_Id);
-
+            Walterre walterre = new Walterre();
+            DataTable dtWalterre = new DataTable();
             foreach (DataRow r in dtpeseePE.Rows)
             {
                 p_Id = r["PESEEPBID"].ToString();
@@ -87,6 +96,7 @@ namespace WidraSoft.UI
                 p_Titre1 = r["TITRE1"].ToString();
                 p_Titre2 = r["TITRE2"].ToString();
                 p_Footer = r["FOOTER"].ToString();
+                p_Walterre = r["CODEWALTERRE"].ToString();
 
 
                 QrCodeEncodingOptions options = new()
@@ -119,7 +129,7 @@ namespace WidraSoft.UI
             }
 
 
-            ReportParameter[] parameters = new ReportParameter[22];
+            ReportParameter[] parameters = new ReportParameter[26];
 
             parameters[0] = new ReportParameter("Id", p_Id);
             parameters[1] = new ReportParameter("Flux", p_Flux);
@@ -143,13 +153,99 @@ namespace WidraSoft.UI
             parameters[19] = new ReportParameter("Titre1", p_Titre1);
             parameters[20] = new ReportParameter("Titre2", p_Titre2);
             parameters[21] = new ReportParameter("Footer", p_Footer);
+            parameters[22] = new ReportParameter("Walterre", p_Walterre);
+
+            foreach(DataRow r in dtWalterre.Rows)
+            {
+                p_qteAutoriseWalterre = r["VOLUME"].ToString();
+                p_QteEnleveeWalterre = r["QTE_ENLEVEMENTS"].ToString();
+                p_ResteWalterre = r["RESTE_VOLUME"].ToString();
+            }
+
+            parameters[23] = new ReportParameter("QteAutoriseWalterre", p_qteAutoriseWalterre);
+            parameters[24] = new ReportParameter("QteEnleveeWalterre", p_QteEnleveeWalterre);
+            parameters[25] = new ReportParameter("ResteWalterre", p_ResteWalterre);
 
             this.reportViewer.LocalReport.SetParameters(parameters);
 
             reportViewer.RefreshReport();
 
+            Export_Pdf();
+
+            SendToPrinter("~/output.pdf");
+
         }
 
+        private void SendToPrinter(string prepDok)
+        {
+            ProcessStartInfo info = new ProcessStartInfo();
+            info.Verb = "print";
+            info.FileName = prepDok;
+            info.CreateNoWindow = false;
+            info.WindowStyle = ProcessWindowStyle.Hidden;
+
+            System.Windows.Forms.PrintDialog pd = new System.Windows.Forms.PrintDialog();
+            pd.PrinterSettings.Copies = 1;
+            Process p = new Process();
+            p.StartInfo = info;
+            p.StartInfo.Arguments = pd.PrinterSettings.PrinterName;
+            p.Start();
+            p.CloseMainWindow();
+
+            Thread.Sleep(4000);
+            if (!p.WaitForExit(5000))
+            {
+                if (!p.HasExited)
+                {
+                    p.Kill();
+                }
+            }
+
+        }
+
+        private void Export_Pdf()
+        {
+            Microsoft.Reporting.WinForms.Warning[] warnings;
+            string[] streamids;
+            string mimeType;
+            string encoding;
+            string filenameExtension;
+
+            byte[] bytes = reportViewer.LocalReport.Render(
+                "PDF", null, out mimeType, out encoding, out filenameExtension,
+                out streamids, out warnings);
+
+            using (FileStream fs = new FileStream("/output.pdf", FileMode.Create))
+            {
+                fs.Write(bytes, 0, bytes.Length);
+            }
+        }
+
+        /*private void Print(object sender)
+        {
+            Microsoft.Reporting.Map.WebForms.BingMaps.Warning[] warnings;
+            string[] streamIds;
+            string mimeType = string.Empty;
+            string encoding = string.Empty;
+            string extension = string.Empty;
+            string deviceInfo = "<DeviceInfo>"
+                                + "<OutputFormat>EMF</OutputFormat>"
+                                + "<PageWidth>8.5in</PageWidth>"
+                                + "<PageHeight>11in</PageHeight>"
+                                + "<MarginTop>0.25in</MarginTop>"
+                                + "<MarginLeft>0.25in</MarginLeft>"
+                                + "<MarginRight>0.25in</MarginRight>"
+                                + "<MarginBottom>0.25in</MarginBottom>"
+                                + "</DeviceInfo>";
+            byte[] bytes = reportViewer.LocalReport.Render((sender as Button).CommandName, deviceInfo, out mimeType, out encoding, out extension, out streamIds, out warnings);
+            Response.Buffer = true;
+            Response.Clear();
+            Response.ContentType = mimeType;
+            Response.AddHeader("content-disposition", "attachment; filename=Customers." + extension);
+            Response.BinaryWrite(bytes);
+            Response.Flush();
+        }
+        */
         public string ImageToBase64(Image image, System.Drawing.Imaging.ImageFormat format)
         {
             using (MemoryStream ms = new MemoryStream())

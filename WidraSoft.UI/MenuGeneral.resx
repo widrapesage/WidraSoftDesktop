@@ -443,7 +443,7 @@
     <value>panelUserInfo</value>
   </data>
   <data name="&gt;&gt;lblusername.ZOrder" xml:space="preserve">
-    <value>8</value>
+    <value>7</value>
   </data>
   <data name="pictureBox1.Location" type="System.Drawing.Point, System.Drawing">
     <value>43, 17</value>
@@ -467,7 +467,7 @@
     <value>panelUserInfo</value>
   </data>
   <data name="&gt;&gt;pictureBox1.ZOrder" xml:space="preserve">
-    <value>6</value>
+    <value>5</value>
   </data>
   <data name="lblChangerMdp.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -497,7 +497,7 @@
     <value>panelUserInfo</value>
   </data>
   <data name="&gt;&gt;lblChangerMdp.ZOrder" xml:space="preserve">
-    <value>9</value>
+    <value>8</value>
   </data>
   <data name="lblMonCompte.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -527,31 +527,7 @@
     <value>panelUserInfo</value>
   </data>
   <data name="&gt;&gt;lblMonCompte.ZOrder" xml:space="preserve">
-    <value>7</value>
-  </data>
-  <data name="button1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>444, 26</value>
-  </data>
-  <data name="button1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>75, 23</value>
-  </data>
-  <data name="button1.TabIndex" type="System.Int32, mscorlib">
-    <value>23</value>
-  </data>
-  <data name="button1.Text" xml:space="preserve">
-    <value>Ouvrir</value>
-  </data>
-  <data name="&gt;&gt;button1.Name" xml:space="preserve">
-    <value>button1</value>
-  </data>
-  <data name="&gt;&gt;button1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;button1.Parent" xml:space="preserve">
-    <value>panelUserInfo</value>
-  </data>
-  <data name="&gt;&gt;button1.ZOrder" xml:space="preserve">
-    <value>0</value>
+    <value>6</value>
   </data>
   <data name="txtValidite.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Right</value>
@@ -770,7 +746,7 @@
     <value>panelUserInfo</value>
   </data>
   <data name="&gt;&gt;panelLicenceInfo.ZOrder" xml:space="preserve">
-    <value>1</value>
+    <value>0</value>
   </data>
   <data name="Spain_flag.Location" type="System.Drawing.Point, System.Drawing">
     <value>46, 109</value>
@@ -794,7 +770,7 @@
     <value>panelUserInfo</value>
   </data>
   <data name="&gt;&gt;Spain_flag.ZOrder" xml:space="preserve">
-    <value>2</value>
+    <value>1</value>
   </data>
   <data name="England_flag.Location" type="System.Drawing.Point, System.Drawing">
     <value>46, 109</value>
@@ -818,7 +794,7 @@
     <value>panelUserInfo</value>
   </data>
   <data name="&gt;&gt;England_flag.ZOrder" xml:space="preserve">
-    <value>3</value>
+    <value>2</value>
   </data>
   <data name="France_flag.Location" type="System.Drawing.Point, System.Drawing">
     <value>46, 109</value>
@@ -842,7 +818,7 @@
     <value>panelUserInfo</value>
   </data>
   <data name="&gt;&gt;France_flag.ZOrder" xml:space="preserve">
-    <value>4</value>
+    <value>3</value>
   </data>
   <data name="cbLang.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
     <value>Flat</value>
@@ -869,7 +845,7 @@
     <value>panelUserInfo</value>
   </data>
   <data name="&gt;&gt;cbLang.ZOrder" xml:space="preserve">
-    <value>5</value>
+    <value>4</value>
   </data>
   <data name="panelUserInfo.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Top</value>

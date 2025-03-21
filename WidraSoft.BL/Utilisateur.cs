@@ -102,6 +102,34 @@ namespace WidraSoft.BL
             }
         }
 
+        public string GetUsername(Int32 Id)
+        {
+            try
+            {
+                UtilisateurDA utilisateur = new UtilisateurDA();
+                string username = utilisateur.GetUsername(Id);
+                return username;
+            }
+            catch
+            {
+                throw;
+            }
+        }
+
+        public string GetPassword(Int32 Id)
+        {
+            try
+            {
+                UtilisateurDA utilisateur = new UtilisateurDA();
+                string pass = utilisateur.GetPassword(Id);
+                return pass;
+            }
+            catch
+            {
+                throw;
+            }
+        }
+
         public int GetUserLanguageIndex(Int32 Id)
         {
             try

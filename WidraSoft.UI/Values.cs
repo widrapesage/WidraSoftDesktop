@@ -22,7 +22,7 @@ namespace WidraSoft.UI
         public static List<String> Langue_Utilisateur = new List<String>();
         public static List<String> Regions_Belgique_Walterre = new List<String>();
         public static List<String> Flux_Default = new List<String>();
-
+        public static List<String> TypeScanner = new List<String>();
         static Values()
         {
             //BaudRate
@@ -131,6 +131,10 @@ namespace WidraSoft.UI
             //Flux_Default
             Flux_Default.Add("In");
             Flux_Default.Add("Out");
+
+            //Type Scanner 
+            TypeScanner.Add("Lecteur QR Code HoneyWell");
+            TypeScanner.Add("Lecteur badge RFID");
 
         }
     }

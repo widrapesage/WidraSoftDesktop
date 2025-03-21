@@ -140,6 +140,7 @@ namespace WidraSoft.UI
 
             init_WeighingSettings = true;
 
+            Bind_Fields();
 
             Disable();
 
@@ -512,7 +513,7 @@ namespace WidraSoft.UI
                 cbWalterre.Visible = true;
                 lbWalterre.Visible = true;
                 RqWalterre.Visible = true;
-                cbWalterre.DataSource = walterre.List("");
+                cbWalterre.DataSource = walterre.List("1=1");
                 cbWalterre.DisplayMember = "CODE";
                 cbWalterre.ValueMember = "WALTERREID";
                 //cbChamp1_SelectedValueChanged(this, EventArgs.Empty);
@@ -2075,7 +2076,7 @@ namespace WidraSoft.UI
             if (cbWalterre.Text != "")
             {
                 Walterre walterre = new Walterre();
-                if (walterre.IfExists(cbFirme.Text))
+                if (walterre.IfExists(cbWalterre.Text))
                 {
                     cbWalterre.BackColor = Color.FromArgb(58, 62, 60);
                     cbWalterre.ForeColor = Color.White;

@@ -185,6 +185,23 @@ namespace WidraSoft.DA
             }
         }
 
+        public Int32 GetWalterreIdById(Int32 Id)
+        {
+            String sql = "SELECT WALTERREID FROM PESEEPB WHERE PESEEPBID=" + Id;
+            conn.ConnectionString = connString;
+            if (conn.State == ConnectionState.Closed)
+                conn.Open();
+            SqlCommand cmd = new SqlCommand(sql, conn);
+            try
+            {
+                Int32 result = (Int32)cmd.ExecuteScalar();
+                return result;
+            }
+            catch
+            {
+                throw;
+            }
+        }
         public String GetShortResume(Int32 Id)
         {
             String sql = "SELECT CONCAT(CAMION, ' ', DATEHEUREPOIDS2, '  ', POIDS2 , ' Kg  ',  PRODUIT ) FROM VW_PESEEPB WHERE PESEEPBID=" + Id;

@@ -129,6 +129,19 @@ namespace WidraSoft.BL
             }
         }
 
+        public Int32 GetWalterreIdById(Int32 Id)
+        {
+            try
+            {
+                PeseePBDA peseePBDA = new PeseePBDA();
+                return peseePBDA.GetWalterreIdById(Id);
+            }
+            catch
+            {
+                throw;
+            }
+        }
+
         public String GetShortResume(Int32 Id)
         {
             try

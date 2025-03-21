@@ -186,6 +186,7 @@
             resources.ApplyResources(this, "$this");
             AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             BackColor = System.Drawing.Color.FromArgb(58, 62, 60);
+            ControlBox = false;
             Controls.Add(panelDetail);
             Controls.Add(panelWeight);
             Name = "Borne_Home";

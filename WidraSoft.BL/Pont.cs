@@ -153,6 +153,31 @@ namespace WidraSoft.BL
             }
         }
 
+        public String GetCOMBarriere(Int32 Id)
+        {
+            try
+            {
+                PontDA pont = new PontDA();
+                return pont.GetCOMBarriere(Id);
+            }
+            catch
+            {
+                throw;
+            }
+        }
+
+        public String GetCOMScanner(Int32 Id)
+        {
+            try
+            {
+                PontDA pont = new PontDA();
+                return pont.GetCOMScanner(Id);
+            }
+            catch
+            {
+                throw;
+            }
+        }
         public Boolean Borne_Autoriser_Premiere_Pesee(Int32 Id)
         {
             try
@@ -194,13 +219,15 @@ namespace WidraSoft.BL
 
         public void Add(String Designation, String NumPortCOM, Int32 Weight_SettingsId, Int32 Weighing_SettingsId, Int32 ActiverPoids, Int32 BaudRate,
                         Int32 DataBits, String StopBits, String Handshake, Int32 ReadTimeOut,  String Machine, String Demarrage, Int32 UtilisateurId, Int32 ActiverMultipleParam, Int32 Poids_Detection,
-                        String BornePremierePesee, String BorneDeuxiemePesee, String BorneTareManuelle, String Flux_Default)
+                        String BornePremierePesee, String BorneDeuxiemePesee, String BorneTareManuelle, String Flux_Default, Int32 Activer_Scanner, String TypeScanner, Int32 Activer_Barriere, String NumPortCom_Barriere,
+                        String NumPortCom_Scanner)
         {
             try
             {
                 PontDA pont = new PontDA();
                 pont.Add(Designation, NumPortCOM, Weight_SettingsId, Weighing_SettingsId, ActiverPoids, BaudRate,
-                         DataBits, StopBits, Handshake, ReadTimeOut, Machine, Demarrage, UtilisateurId, ActiverMultipleParam, Poids_Detection, BornePremierePesee, BorneDeuxiemePesee, BorneTareManuelle, Flux_Default);
+                         DataBits, StopBits, Handshake, ReadTimeOut, Machine, Demarrage, UtilisateurId, ActiverMultipleParam, Poids_Detection, BornePremierePesee, BorneDeuxiemePesee, 
+                         BorneTareManuelle, Flux_Default, Activer_Scanner, TypeScanner, Activer_Barriere, NumPortCom_Barriere, NumPortCom_Scanner);
             }
             catch
             {
@@ -210,13 +237,15 @@ namespace WidraSoft.BL
 
         public void Update(Int32 Id, String Designation, String NumPortCOM, Int32 Weight_SettingsId, Int32 Weighing_SettingsId, Int32 ActiverPoids, Int32 BaudRate,
                         Int32 DataBits, String StopBits, String Handshake, Int32 ReadTimeOut, String Machine, String Demarrage, Int32 UtilisateurId, Int32 ActiverMultipleParam, Int32 Poids_Detection,
-                        String BornePremierePesee, String BorneDeuxiemePesee, String BorneTareManuelle, String Flux_Default)
+                        String BornePremierePesee, String BorneDeuxiemePesee, String BorneTareManuelle, String Flux_Default, Int32 Activer_Scanner, String TypeScanner, Int32 Activer_Barriere, String NumPortCom_Barriere,
+                        String NumPortCom_Scanner)
         {
             try
             {
                 PontDA pont = new PontDA();
                 pont.Update(Id, Designation, NumPortCOM, Weight_SettingsId, Weighing_SettingsId, ActiverPoids, BaudRate,
-                         DataBits, StopBits, Handshake, ReadTimeOut, Machine, Demarrage, UtilisateurId, ActiverMultipleParam, Poids_Detection, BornePremierePesee, BorneDeuxiemePesee, BorneTareManuelle, Flux_Default);
+                         DataBits, StopBits, Handshake, ReadTimeOut, Machine, Demarrage, UtilisateurId, ActiverMultipleParam, Poids_Detection, BornePremierePesee, BorneDeuxiemePesee,
+                         BorneTareManuelle, Flux_Default, Activer_Scanner, TypeScanner, Activer_Barriere, NumPortCom_Barriere, NumPortCom_Scanner);
             }
             catch
             {

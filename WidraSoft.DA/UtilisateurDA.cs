@@ -168,10 +168,54 @@ namespace WidraSoft.DA
                 }
             }               
         }
-        
+
+        public string GetUsername(Int32 Id)
+        {
+
+            String sql = "SELECT LOGIN FROM UTILISATEUR WHERE UtilisateurId=" + Id;
+            conn.ConnectionString = connString;
+            using (conn)
+            {
+                if (conn.State == ConnectionState.Closed)
+                    conn.Open();
+                SqlCommand cmd = new SqlCommand(sql, conn);
+                try
+                {
+                    String username = (string)cmd.ExecuteScalar();
+                    return username;
+                }
+                catch
+                {
+                    throw;
+                }
+            }
+        }
+
+        public string GetPassword(Int32 Id)
+        {
+
+            String sql = "SELECT PASSWORD FROM UTILISATEUR WHERE UtilisateurId=" + Id;
+            conn.ConnectionString = connString;
+            using (conn)
+            {
+                if (conn.State == ConnectionState.Closed)
+                    conn.Open();
+                SqlCommand cmd = new SqlCommand(sql, conn);
+                try
+                {
+                    String username = (string)cmd.ExecuteScalar();
+                    return username;
+                }
+                catch
+                {
+                    throw;
+                }
+            }
+        }
+
         public int GetUserLanguageIndex(Int32 Id)
         {
-            String sql = "SELECT LANG FROM UTILISATEUR WHERE UTILISATEURID=" + Id;
+            String sql = "SELECT ISNUll(LANG,0) FROM UTILISATEUR WHERE UTILISATEURID=" + Id;
             conn.ConnectionString = connString;
             using (conn)
             {

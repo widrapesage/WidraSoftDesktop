@@ -53,6 +53,7 @@ namespace WidraSoft.UI
             DgvList.Columns["TEXTE_BORNE"].Visible = false;
             DgvList.Columns["OBSERVATIONS"].Visible = false;
             DgvList.Columns["DEPASSEMENT"].Visible = false;
+            DgvList.Columns["DEPASSEMENT_SEUIL_MAX"].Visible = false;
             DgvList.Columns["CLOTURE"].Visible = false;
             DgvList.Columns["DATECLOTURE"].Visible = true;
             DgvList.Columns["DATECREATION"].Visible = true;

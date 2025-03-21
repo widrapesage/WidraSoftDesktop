@@ -19,12 +19,14 @@ namespace WidraSoft.UI
     {
         int vg_UtilisateurId;
         int vg_GroupeId;
+        bool vg_IsTerminal;
         public static int languuage_index;
-        public MenuGeneral(Int32 UtilisateurId)
+        public MenuGeneral(Int32 UtilisateurId, bool IsTerminal)
         {
             InitializeComponent();
             menuStrip.Renderer = new MyRenderer();
             vg_UtilisateurId = UtilisateurId;
+            vg_IsTerminal = IsTerminal;
         }
 
 
@@ -52,6 +54,12 @@ namespace WidraSoft.UI
             txtEntreprise.Text = "WIDRA";
             txtTypeAbonnement.Text = "Demo";
             txtValidite.Text = "---";
+
+            if (vg_IsTerminal)
+            {
+                Form form = new Borne_Home();
+                form.ShowDialog();
+            }
 
         }
         [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
@@ -430,34 +438,7 @@ namespace WidraSoft.UI
 
         private void button1_Click(object sender, EventArgs e)
         {
-            SerialPort comBarriere = new SerialPort();
-
-            comBarriere.PortName = "COM8";
-            comBarriere.ReadTimeout = 1000;
-            comBarriere.BaudRate = 9600;
-            comBarriere.Parity = Parity.None;
-            comBarriere.StopBits = StopBits.One;
-            comBarriere.DataBits = 8;
-            comBarriere.Handshake = Handshake.None;
-
-
-            try
-            {
-                comBarriere.Open();
-            }
-            catch
-            {
-                throw;
-            }
-
-            try
-            {
-                comBarriere.Write("@01" + (char)13);
-            }
-            catch { throw; }
-
-            if (comBarriere.IsOpen)
-            { comBarriere.Close(); }
+            
         }
     }
 }

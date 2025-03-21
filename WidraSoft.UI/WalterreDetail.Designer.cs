@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(WalterreDetail));
             panelLang = new System.Windows.Forms.Panel();
             pbUpdating = new System.Windows.Forms.PictureBox();
@@ -43,6 +44,18 @@
             lbAjouter = new System.Windows.Forms.LinkLabel();
             lbSupprimer = new System.Windows.Forms.LinkLabel();
             panelDetail = new System.Windows.Forms.Panel();
+            lbSomme = new System.Windows.Forms.Label();
+            lbNb = new System.Windows.Forms.Label();
+            DgvList = new System.Windows.Forms.DataGridView();
+            label11 = new System.Windows.Forms.Label();
+            txtDepassementSeuilMax = new System.Windows.Forms.TextBox();
+            chx_DepassementSeuilMax = new System.Windows.Forms.CheckBox();
+            lbPourcentageSeuilMax = new System.Windows.Forms.Label();
+            lbPourcentageVolume = new System.Windows.Forms.Label();
+            label9 = new System.Windows.Forms.Label();
+            txtResteSeuilMax = new System.Windows.Forms.TextBox();
+            label8 = new System.Windows.Forms.Label();
+            txtResteVolume = new System.Windows.Forms.TextBox();
             txtStatus = new System.Windows.Forms.TextBox();
             pictureBox8 = new System.Windows.Forms.PictureBox();
             pictureBox7 = new System.Windows.Forms.PictureBox();
@@ -74,6 +87,8 @@
             txtBorne = new System.Windows.Forms.TextBox();
             chx_Depassement = new System.Windows.Forms.CheckBox();
             chx_Cloture = new System.Windows.Forms.CheckBox();
+            txtNom = new System.Windows.Forms.TextBox();
+            label12 = new System.Windows.Forms.Label();
             panelLang.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pbUpdating).BeginInit();
             ((System.ComponentModel.ISupportInitialize)Spain_flag).BeginInit();
@@ -84,6 +99,7 @@
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             panelDetail.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)DgvList).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox8).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox7).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox12).BeginInit();
@@ -280,6 +296,20 @@
             // panelDetail
             // 
             panelDetail.BackColor = System.Drawing.Color.FromArgb(72, 86, 81);
+            panelDetail.Controls.Add(txtNom);
+            panelDetail.Controls.Add(label12);
+            panelDetail.Controls.Add(lbSomme);
+            panelDetail.Controls.Add(lbNb);
+            panelDetail.Controls.Add(DgvList);
+            panelDetail.Controls.Add(label11);
+            panelDetail.Controls.Add(txtDepassementSeuilMax);
+            panelDetail.Controls.Add(chx_DepassementSeuilMax);
+            panelDetail.Controls.Add(lbPourcentageSeuilMax);
+            panelDetail.Controls.Add(lbPourcentageVolume);
+            panelDetail.Controls.Add(label9);
+            panelDetail.Controls.Add(txtResteSeuilMax);
+            panelDetail.Controls.Add(label8);
+            panelDetail.Controls.Add(txtResteVolume);
             panelDetail.Controls.Add(txtStatus);
             panelDetail.Controls.Add(pictureBox8);
             panelDetail.Controls.Add(pictureBox7);
@@ -316,6 +346,159 @@
             panelDetail.Name = "panelDetail";
             panelDetail.Size = new System.Drawing.Size(1066, 639);
             panelDetail.TabIndex = 86;
+            panelDetail.Paint += panelDetail_Paint;
+            // 
+            // lbSomme
+            // 
+            lbSomme.AutoSize = true;
+            lbSomme.Font = new System.Drawing.Font("Calibri", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            lbSomme.ForeColor = System.Drawing.Color.White;
+            lbSomme.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            lbSomme.Location = new System.Drawing.Point(583, 61);
+            lbSomme.Name = "lbSomme";
+            lbSomme.Size = new System.Drawing.Size(18, 17);
+            lbSomme.TabIndex = 169;
+            lbSomme.Text = "%";
+            // 
+            // lbNb
+            // 
+            lbNb.AutoSize = true;
+            lbNb.Font = new System.Drawing.Font("Calibri", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            lbNb.ForeColor = System.Drawing.Color.White;
+            lbNb.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            lbNb.Location = new System.Drawing.Point(511, 61);
+            lbNb.Name = "lbNb";
+            lbNb.Size = new System.Drawing.Size(18, 17);
+            lbNb.TabIndex = 168;
+            lbNb.Text = "%";
+            // 
+            // DgvList
+            // 
+            DgvList.AllowUserToAddRows = false;
+            DgvList.AllowUserToDeleteRows = false;
+            DgvList.BackgroundColor = System.Drawing.Color.FromArgb(72, 86, 81);
+            DgvList.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            DgvList.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.Sunken;
+            DgvList.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.Honeydew;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Calibri", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(72, 86, 81);
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            DgvList.DefaultCellStyle = dataGridViewCellStyle1;
+            DgvList.Location = new System.Drawing.Point(511, 90);
+            DgvList.Name = "DgvList";
+            DgvList.RowTemplate.Height = 25;
+            DgvList.Size = new System.Drawing.Size(507, 217);
+            DgvList.TabIndex = 167;
+            // 
+            // label11
+            // 
+            label11.AutoSize = true;
+            label11.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            label11.ForeColor = System.Drawing.Color.White;
+            label11.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            label11.Location = new System.Drawing.Point(547, 313);
+            label11.Name = "label11";
+            label11.Size = new System.Drawing.Size(159, 19);
+            label11.TabIndex = 166;
+            label11.Text = "Autoriser depassement";
+            // 
+            // txtDepassementSeuilMax
+            // 
+            txtDepassementSeuilMax.Enabled = false;
+            txtDepassementSeuilMax.Location = new System.Drawing.Point(709, 312);
+            txtDepassementSeuilMax.Margin = new System.Windows.Forms.Padding(2);
+            txtDepassementSeuilMax.Name = "txtDepassementSeuilMax";
+            txtDepassementSeuilMax.Size = new System.Drawing.Size(18, 23);
+            txtDepassementSeuilMax.TabIndex = 165;
+            txtDepassementSeuilMax.Visible = false;
+            // 
+            // chx_DepassementSeuilMax
+            // 
+            chx_DepassementSeuilMax.AutoSize = true;
+            chx_DepassementSeuilMax.Font = new System.Drawing.Font("Corbel", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            chx_DepassementSeuilMax.ForeColor = System.Drawing.Color.White;
+            chx_DepassementSeuilMax.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            chx_DepassementSeuilMax.Location = new System.Drawing.Point(530, 316);
+            chx_DepassementSeuilMax.Margin = new System.Windows.Forms.Padding(2);
+            chx_DepassementSeuilMax.Name = "chx_DepassementSeuilMax";
+            chx_DepassementSeuilMax.Size = new System.Drawing.Size(15, 14);
+            chx_DepassementSeuilMax.TabIndex = 164;
+            chx_DepassementSeuilMax.UseVisualStyleBackColor = true;
+            chx_DepassementSeuilMax.CheckedChanged += chx_DepassementSeuilMax_CheckedChanged;
+            // 
+            // lbPourcentageSeuilMax
+            // 
+            lbPourcentageSeuilMax.AutoSize = true;
+            lbPourcentageSeuilMax.Font = new System.Drawing.Font("Calibri", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            lbPourcentageSeuilMax.ForeColor = System.Drawing.Color.White;
+            lbPourcentageSeuilMax.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            lbPourcentageSeuilMax.Location = new System.Drawing.Point(476, 315);
+            lbPourcentageSeuilMax.Name = "lbPourcentageSeuilMax";
+            lbPourcentageSeuilMax.Size = new System.Drawing.Size(18, 17);
+            lbPourcentageSeuilMax.TabIndex = 163;
+            lbPourcentageSeuilMax.Text = "%";
+            // 
+            // lbPourcentageVolume
+            // 
+            lbPourcentageVolume.AutoSize = true;
+            lbPourcentageVolume.Font = new System.Drawing.Font("Calibri", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            lbPourcentageVolume.ForeColor = System.Drawing.Color.White;
+            lbPourcentageVolume.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            lbPourcentageVolume.Location = new System.Drawing.Point(476, 347);
+            lbPourcentageVolume.Name = "lbPourcentageVolume";
+            lbPourcentageVolume.Size = new System.Drawing.Size(18, 17);
+            lbPourcentageVolume.TabIndex = 162;
+            lbPourcentageVolume.Text = "%";
+            // 
+            // label9
+            // 
+            label9.AutoSize = true;
+            label9.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            label9.ForeColor = System.Drawing.Color.White;
+            label9.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            label9.Location = new System.Drawing.Point(313, 312);
+            label9.Name = "label9";
+            label9.Size = new System.Drawing.Size(68, 19);
+            label9.TabIndex = 161;
+            label9.Text = "Reste (T)";
+            // 
+            // txtResteSeuilMax
+            // 
+            txtResteSeuilMax.BackColor = System.Drawing.Color.Honeydew;
+            txtResteSeuilMax.Enabled = false;
+            txtResteSeuilMax.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            txtResteSeuilMax.ForeColor = System.Drawing.Color.Black;
+            txtResteSeuilMax.Location = new System.Drawing.Point(386, 308);
+            txtResteSeuilMax.Name = "txtResteSeuilMax";
+            txtResteSeuilMax.Size = new System.Drawing.Size(86, 27);
+            txtResteSeuilMax.TabIndex = 160;
+            // 
+            // label8
+            // 
+            label8.AutoSize = true;
+            label8.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            label8.ForeColor = System.Drawing.Color.White;
+            label8.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            label8.Location = new System.Drawing.Point(313, 345);
+            label8.Name = "label8";
+            label8.Size = new System.Drawing.Size(68, 19);
+            label8.TabIndex = 159;
+            label8.Text = "Reste (T)";
+            // 
+            // txtResteVolume
+            // 
+            txtResteVolume.BackColor = System.Drawing.Color.Honeydew;
+            txtResteVolume.Enabled = false;
+            txtResteVolume.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            txtResteVolume.ForeColor = System.Drawing.Color.Black;
+            txtResteVolume.Location = new System.Drawing.Point(386, 341);
+            txtResteVolume.Name = "txtResteVolume";
+            txtResteVolume.Size = new System.Drawing.Size(86, 27);
+            txtResteVolume.TabIndex = 158;
             // 
             // txtStatus
             // 
@@ -335,7 +518,7 @@
             // 
             pictureBox8.Image = Properties.Resources.asterisk;
             pictureBox8.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            pictureBox8.Location = new System.Drawing.Point(300, 312);
+            pictureBox8.Location = new System.Drawing.Point(280, 310);
             pictureBox8.Name = "pictureBox8";
             pictureBox8.Size = new System.Drawing.Size(28, 22);
             pictureBox8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
@@ -346,7 +529,7 @@
             // 
             pictureBox7.Image = Properties.Resources.asterisk;
             pictureBox7.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            pictureBox7.Location = new System.Drawing.Point(300, 277);
+            pictureBox7.Location = new System.Drawing.Point(280, 344);
             pictureBox7.Name = "pictureBox7";
             pictureBox7.Size = new System.Drawing.Size(28, 22);
             pictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
@@ -359,7 +542,7 @@
             label7.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             label7.ForeColor = System.Drawing.Color.White;
             label7.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            label7.Location = new System.Drawing.Point(60, 233);
+            label7.Location = new System.Drawing.Point(60, 268);
             label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             label7.Name = "label7";
             label7.Size = new System.Drawing.Size(54, 19);
@@ -371,7 +554,7 @@
             cbRegion.BackColor = System.Drawing.Color.Honeydew;
             cbRegion.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             cbRegion.FormattingEnabled = true;
-            cbRegion.Location = new System.Drawing.Point(177, 230);
+            cbRegion.Location = new System.Drawing.Point(177, 265);
             cbRegion.Margin = new System.Windows.Forms.Padding(2);
             cbRegion.Name = "cbRegion";
             cbRegion.Size = new System.Drawing.Size(296, 27);
@@ -393,9 +576,9 @@
             txtSeuilMax.BackColor = System.Drawing.Color.Honeydew;
             txtSeuilMax.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             txtSeuilMax.ForeColor = System.Drawing.Color.Black;
-            txtSeuilMax.Location = new System.Drawing.Point(177, 310);
+            txtSeuilMax.Location = new System.Drawing.Point(177, 308);
             txtSeuilMax.Name = "txtSeuilMax";
-            txtSeuilMax.Size = new System.Drawing.Size(120, 27);
+            txtSeuilMax.Size = new System.Drawing.Size(102, 27);
             txtSeuilMax.TabIndex = 149;
             // 
             // label6
@@ -404,7 +587,7 @@
             label6.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             label6.ForeColor = System.Drawing.Color.White;
             label6.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            label6.Location = new System.Drawing.Point(59, 313);
+            label6.Location = new System.Drawing.Point(59, 311);
             label6.Name = "label6";
             label6.Size = new System.Drawing.Size(94, 19);
             label6.TabIndex = 150;
@@ -415,9 +598,9 @@
             txtVolume.BackColor = System.Drawing.Color.Honeydew;
             txtVolume.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             txtVolume.ForeColor = System.Drawing.Color.Black;
-            txtVolume.Location = new System.Drawing.Point(177, 274);
+            txtVolume.Location = new System.Drawing.Point(177, 341);
             txtVolume.Name = "txtVolume";
-            txtVolume.Size = new System.Drawing.Size(120, 27);
+            txtVolume.Size = new System.Drawing.Size(102, 27);
             txtVolume.TabIndex = 147;
             // 
             // label5
@@ -426,7 +609,7 @@
             label5.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             label5.ForeColor = System.Drawing.Color.White;
             label5.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            label5.Location = new System.Drawing.Point(59, 277);
+            label5.Location = new System.Drawing.Point(59, 344);
             label5.Name = "label5";
             label5.Size = new System.Drawing.Size(79, 19);
             label5.TabIndex = 148;
@@ -438,7 +621,7 @@
             label3.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             label3.ForeColor = System.Drawing.Color.White;
             label3.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            label3.Location = new System.Drawing.Point(59, 197);
+            label3.Location = new System.Drawing.Point(59, 232);
             label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             label3.Name = "label3";
             label3.Size = new System.Drawing.Size(55, 19);
@@ -450,7 +633,7 @@
             cbProduitId.BackColor = System.Drawing.Color.Honeydew;
             cbProduitId.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             cbProduitId.FormattingEnabled = true;
-            cbProduitId.Location = new System.Drawing.Point(177, 195);
+            cbProduitId.Location = new System.Drawing.Point(177, 230);
             cbProduitId.Margin = new System.Windows.Forms.Padding(2);
             cbProduitId.Name = "cbProduitId";
             cbProduitId.Size = new System.Drawing.Size(296, 27);
@@ -462,7 +645,7 @@
             label10.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             label10.ForeColor = System.Drawing.Color.White;
             label10.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            label10.Location = new System.Drawing.Point(60, 162);
+            label10.Location = new System.Drawing.Point(60, 197);
             label10.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             label10.Name = "label10";
             label10.Size = new System.Drawing.Size(47, 19);
@@ -474,7 +657,7 @@
             cbClientId.BackColor = System.Drawing.Color.Honeydew;
             cbClientId.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             cbClientId.FormattingEnabled = true;
-            cbClientId.Location = new System.Drawing.Point(177, 160);
+            cbClientId.Location = new System.Drawing.Point(177, 195);
             cbClientId.Margin = new System.Windows.Forms.Padding(2);
             cbClientId.Name = "cbClientId";
             cbClientId.Size = new System.Drawing.Size(296, 27);
@@ -519,7 +702,7 @@
             label18.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             label18.ForeColor = System.Drawing.Color.White;
             label18.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            label18.Location = new System.Drawing.Point(678, 386);
+            label18.Location = new System.Drawing.Point(547, 346);
             label18.Name = "label18";
             label18.Size = new System.Drawing.Size(159, 19);
             label18.TabIndex = 75;
@@ -566,7 +749,7 @@
             // txtDepassement
             // 
             txtDepassement.Enabled = false;
-            txtDepassement.Location = new System.Drawing.Point(639, 385);
+            txtDepassement.Location = new System.Drawing.Point(709, 345);
             txtDepassement.Margin = new System.Windows.Forms.Padding(2);
             txtDepassement.Name = "txtDepassement";
             txtDepassement.Size = new System.Drawing.Size(18, 23);
@@ -636,7 +819,7 @@
             label14.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             label14.ForeColor = System.Drawing.Color.White;
             label14.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            label14.Location = new System.Drawing.Point(59, 443);
+            label14.Location = new System.Drawing.Point(59, 457);
             label14.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             label14.Name = "label14";
             label14.Size = new System.Drawing.Size(85, 19);
@@ -647,7 +830,7 @@
             // 
             txtBorne.BackColor = System.Drawing.Color.Honeydew;
             txtBorne.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            txtBorne.Location = new System.Drawing.Point(177, 443);
+            txtBorne.Location = new System.Drawing.Point(177, 457);
             txtBorne.Margin = new System.Windows.Forms.Padding(2);
             txtBorne.Multiline = true;
             txtBorne.Name = "txtBorne";
@@ -660,7 +843,7 @@
             chx_Depassement.Font = new System.Drawing.Font("Corbel", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             chx_Depassement.ForeColor = System.Drawing.Color.White;
             chx_Depassement.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            chx_Depassement.Location = new System.Drawing.Point(661, 388);
+            chx_Depassement.Location = new System.Drawing.Point(530, 349);
             chx_Depassement.Margin = new System.Windows.Forms.Padding(2);
             chx_Depassement.Name = "chx_Depassement";
             chx_Depassement.Size = new System.Drawing.Size(15, 14);
@@ -681,6 +864,29 @@
             chx_Cloture.TabIndex = 44;
             chx_Cloture.UseVisualStyleBackColor = true;
             chx_Cloture.CheckedChanged += chx_Cloture_CheckedChanged;
+            // 
+            // txtNom
+            // 
+            txtNom.BackColor = System.Drawing.Color.Honeydew;
+            txtNom.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            txtNom.Location = new System.Drawing.Point(177, 160);
+            txtNom.Margin = new System.Windows.Forms.Padding(2);
+            txtNom.Name = "txtNom";
+            txtNom.Size = new System.Drawing.Size(295, 27);
+            txtNom.TabIndex = 170;
+            // 
+            // label12
+            // 
+            label12.AutoSize = true;
+            label12.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            label12.ForeColor = System.Drawing.Color.White;
+            label12.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            label12.Location = new System.Drawing.Point(60, 163);
+            label12.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            label12.Name = "label12";
+            label12.Size = new System.Drawing.Size(39, 19);
+            label12.TabIndex = 171;
+            label12.Text = "Nom";
             // 
             // WalterreDetail
             // 
@@ -708,6 +914,7 @@
             ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
             panelDetail.ResumeLayout(false);
             panelDetail.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)DgvList).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox8).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox7).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox12).EndInit();
@@ -761,5 +968,20 @@
         private System.Windows.Forms.PictureBox pictureBox8;
         private System.Windows.Forms.PictureBox pictureBox7;
         private System.Windows.Forms.TextBox txtStatus;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.TextBox txtResteSeuilMax;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.TextBox txtResteVolume;
+        private System.Windows.Forms.Label lbPourcentageVolume;
+        private System.Windows.Forms.Label lbPourcentageSeuilMax;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.TextBox txtDepassementSeuilMax;
+        private System.Windows.Forms.CheckBox chx_DepassementSeuilMax;
+        private System.Windows.Forms.DataGridView DgvList;
+        private System.Windows.Forms.Label lbSomme;
+        private System.Windows.Forms.Label lbNb;
+        private System.Windows.Forms.PictureBox pictureBox4;
+        private System.Windows.Forms.TextBox txtNom;
+        private System.Windows.Forms.Label label12;
     }
 }

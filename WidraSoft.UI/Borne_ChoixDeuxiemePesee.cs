@@ -15,11 +15,13 @@ namespace WidraSoft.UI
     {
         String vg_lang;
         Int32 vg_P;
-        public Borne_ChoixDeuxiemePesee(string lang, int P)
+        Int32 vg_PontId;
+        public Borne_ChoixDeuxiemePesee(string lang, int P, int PontId)
         {
             InitializeComponent();
             vg_lang = lang;
             vg_P = P;
+            vg_PontId = PontId;
         }
 
         private void Borne_ChoixDeuxiemePesee_Load(object sender, EventArgs e)
@@ -107,6 +109,8 @@ namespace WidraSoft.UI
             DgvList.Columns["DATECREATION"].Visible = false;
             DgvList.Columns["PESEE_RESUME"].Visible = true;
             DgvList.Columns["PESEE_RESUME"].HeaderText = "PESEE";
+            DgvList.Columns["WALTERREID"].Visible = false;
+            DgvList.Columns["CODEWALTERRE"].Visible = false;
 
             DgvList.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             DgvList.RowHeadersWidthSizeMode = DataGridViewRowHeadersWidthSizeMode.AutoSizeToFirstHeader;
@@ -196,7 +200,7 @@ namespace WidraSoft.UI
         {
             try
             {
-                Form form = new Borne_DeuxiemePesee(vg_P, Common_functions.GetDatagridViewSelectedId(DgvList), "", vg_lang);
+                Form form = new Borne_DeuxiemePesee(vg_P, Common_functions.GetDatagridViewSelectedId(DgvList), "", vg_lang, vg_PontId);
                 form.Show();
                 Close();
             }

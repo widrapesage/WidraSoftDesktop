@@ -484,7 +484,7 @@
   <data name="&gt;&gt;lbBadge.ZOrder" xml:space="preserve">
     <value>5</value>
   </data>
-  <metadata name="timerHoneywell.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+  <metadata name="timerScanner.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 17</value>
   </metadata>
   <data name="btPeser2.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
@@ -1181,10 +1181,10 @@
         AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==
 </value>
   </data>
-  <data name="&gt;&gt;timerHoneywell.Name" xml:space="preserve">
-    <value>timerHoneywell</value>
+  <data name="&gt;&gt;timerScanner.Name" xml:space="preserve">
+    <value>timerScanner</value>
   </data>
-  <data name="&gt;&gt;timerHoneywell.Type" xml:space="preserve">
+  <data name="&gt;&gt;timerScanner.Type" xml:space="preserve">
     <value>System.Windows.Forms.Timer, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;Weight_Timer.Name" xml:space="preserve">

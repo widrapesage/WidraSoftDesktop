@@ -1,4 +1,5 @@
-﻿using System;
+﻿using CustomMessageBox;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -7,11 +8,13 @@ using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 using WidraSoft.BL;
+using static System.ComponentModel.Design.ObjectSelectorEditor;
 
 namespace WidraSoft.UI
 {
     public partial class Password : Form
     {
+        bool IsTerminal = false;
         public Password()
         {
             InitializeComponent();
@@ -24,6 +27,59 @@ namespace WidraSoft.UI
             cbLang.ValueMember = null;
             cbLang.DisplayMember = Language.Languages[0];
             cbLang.SelectedIndex = 0;
+
+            GetPontId();
+
+        }
+
+        private void GetPontId()
+        {
+            //Pont 
+            Pont pont = new Pont();
+            DataTable dtPont = pont.FindByMachineName(System.Environment.MachineName);
+            int pontId = 0;
+            string typeDemarrage = "";
+            int utilisateurId = 0;
+            if (dtPont.Rows.Count < 1)
+            {
+                if (cbLang.Text == "FR")
+                    Custom_MessageBox.Show("FR", "Aucun pont paramétré pour cette machine, impossible d'effectuer une pesée.", "Pesée", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                else if (cbLang.Text == "EN")
+                    Custom_MessageBox.Show("EN", "No weighbridge set for this computer", "Weighing", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                else
+                    Custom_MessageBox.Show("ES", "Ningún puente seleccionado", "Pasaje", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                Close();
+            }
+            else
+            {
+                if (dtPont.Rows.Count == 1)
+                {
+                    foreach (DataRow row in dtPont.Rows)
+                    {
+                        try
+                        {
+                            pontId = (int)row["PONTID"];
+                            typeDemarrage = row["DEMARRAGE"].ToString();
+                            utilisateurId = (int)row["UTILISATEURID"];
+                            Utilisateur utilisateur = new Utilisateur(); 
+                            if (typeDemarrage == "Terminal")
+                            {
+                                txtLogin.Text = utilisateur.GetUsername(utilisateurId);
+                                txtPassword.Text = utilisateur.GetPassword(utilisateurId);
+                                IsTerminal = true;
+                                btConnecter_Click(this, new EventArgs());
+                            }
+                            else
+                            {
+                                IsTerminal = false;
+                            }
+                        }
+                        catch { throw; }
+
+                    }
+                }
+
+            }
 
         }
 
@@ -40,8 +96,8 @@ namespace WidraSoft.UI
                     if (CanConnect == true)
                     {
                         UtilisateurId = utilisateur.GetUserIdByLoginAndPassword(txtLogin.Text, txtPassword.Text);
-                        MenuGeneral form = new MenuGeneral(UtilisateurId);
-                        form.Show();
+                        MenuGeneral form = new MenuGeneral(UtilisateurId, IsTerminal);
+                        form.ShowDialog();
 
                         cbLang.Enabled = false;
                         txtLogin.Text = "";

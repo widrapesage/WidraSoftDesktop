@@ -905,9 +905,11 @@
             resources.ApplyResources(this, "$this");
             AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             BackColor = System.Drawing.Color.FromArgb(58, 62, 60);
+            ControlBox = false;
             Controls.Add(panel2);
             Controls.Add(panel1);
             Name = "Borne_PremierePesee";
+            FormClosing += Borne_PremierePesee_FormClosing;
             Load += Borne_PremierePesee_Load;
             panel1.ResumeLayout(false);
             panel1.PerformLayout();

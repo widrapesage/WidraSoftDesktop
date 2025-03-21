@@ -130,16 +130,16 @@
     <value>Corbel, 20pt, style=Bold</value>
   </data>
   <data name="lbTexte.Location" type="System.Drawing.Point, System.Drawing">
-    <value>408, 315</value>
+    <value>348, 379</value>
   </data>
   <data name="lbTexte.Size" type="System.Drawing.Size, System.Drawing">
-    <value>246, 33</value>
+    <value>354, 33</value>
   </data>
   <data name="lbTexte.TabIndex" type="System.Int32, mscorlib">
     <value>4</value>
   </data>
   <data name="lbTexte.Text" xml:space="preserve">
-    <value>Confirmer le poids 2</value>
+    <value>Confirmer la deuxième pesée</value>
   </data>
   <data name="&gt;&gt;lbTexte.Name" xml:space="preserve">
     <value>lbTexte</value>
@@ -163,7 +163,7 @@
     <value>Corbel, 15pt, style=Bold</value>
   </data>
   <data name="btAnnuler.Location" type="System.Drawing.Point, System.Drawing">
-    <value>630, 373</value>
+    <value>630, 432</value>
   </data>
   <data name="btAnnuler.Size" type="System.Drawing.Size, System.Drawing">
     <value>177, 104</value>
@@ -196,7 +196,7 @@
     <value>Corbel, 15pt, style=Bold</value>
   </data>
   <data name="btValider.Location" type="System.Drawing.Point, System.Drawing">
-    <value>271, 373</value>
+    <value>271, 432</value>
   </data>
   <data name="btValider.Size" type="System.Drawing.Size, System.Drawing">
     <value>177, 104</value>
@@ -226,7 +226,7 @@
     <value>Calibri, 60pt, style=Bold, Italic</value>
   </data>
   <data name="txtPoids.Location" type="System.Drawing.Point, System.Drawing">
-    <value>271, 77</value>
+    <value>271, 24</value>
   </data>
   <data name="txtPoids.Size" type="System.Drawing.Size, System.Drawing">
     <value>536, 98</value>
@@ -256,10 +256,10 @@
     <value>Calibri, 20pt, style=Bold</value>
   </data>
   <data name="lbMessage.Location" type="System.Drawing.Point, System.Drawing">
-    <value>271, 182</value>
+    <value>271, 136</value>
   </data>
   <data name="lbMessage.Size" type="System.Drawing.Size, System.Drawing">
-    <value>536, 118</value>
+    <value>536, 226</value>
   </data>
   <data name="lbMessage.TabIndex" type="System.Int32, mscorlib">
     <value>140</value>
@@ -378,6 +378,9 @@
   <data name="&gt;&gt;panel1.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
+  <metadata name="Weight_Timer.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
@@ -924,6 +927,12 @@
         AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
         AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==
 </value>
+  </data>
+  <data name="&gt;&gt;Weight_Timer.Name" xml:space="preserve">
+    <value>Weight_Timer</value>
+  </data>
+  <data name="&gt;&gt;Weight_Timer.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Timer, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;$this.Name" xml:space="preserve">
     <value>Borne_DeuxiemePesee</value>

@@ -41,7 +41,7 @@
             btPeser = new System.Windows.Forms.Button();
             btTareManuelle = new System.Windows.Forms.Button();
             lbBadge = new System.Windows.Forms.Label();
-            timerHoneywell = new System.Windows.Forms.Timer(components);
+            timerScanner = new System.Windows.Forms.Timer(components);
             btPeser2 = new System.Windows.Forms.Button();
             fleche_Lecteur = new System.Windows.Forms.PictureBox();
             panelWeight = new System.Windows.Forms.Panel();
@@ -171,9 +171,9 @@
             lbBadge.ForeColor = System.Drawing.Color.White;
             lbBadge.Name = "lbBadge";
             // 
-            // timerHoneywell
+            // timerScanner
             // 
-            timerHoneywell.Tick += timerHoneywell_Tick;
+            timerScanner.Tick += timerHoneywell_Tick;
             // 
             // btPeser2
             // 
@@ -236,9 +236,11 @@
             resources.ApplyResources(this, "$this");
             AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             BackColor = System.Drawing.Color.FromArgb(58, 62, 60);
+            ControlBox = false;
             Controls.Add(panel2);
             Controls.Add(panelWeight);
             Name = "Borne_ChoixTypePesee";
+            FormClosing += Borne_ChoixTypePesee_FormClosing;
             Load += Borne_ChoixTypePesee_Load;
             ((System.ComponentModel.ISupportInitialize)select_ES).EndInit();
             ((System.ComponentModel.ISupportInitialize)select_EN).EndInit();
@@ -268,7 +270,7 @@
         private System.Windows.Forms.Button btPeser;
         private System.Windows.Forms.Button btTareManuelle;
         private System.Windows.Forms.Label lbBadge;
-        private System.Windows.Forms.Timer timerHoneywell;
+        private System.Windows.Forms.Timer timerScanner;
         private System.Windows.Forms.Button btPeser2;
         private System.Windows.Forms.PictureBox fleche_Lecteur;
         private System.Windows.Forms.Panel panelWeight;
