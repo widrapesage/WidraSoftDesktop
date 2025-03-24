@@ -3444,7 +3444,7 @@ namespace WidraSoft.UI
 
         private void Borne_PremierePesee_FormClosing(object sender, FormClosingEventArgs e)
         {
-            Borne_Home.GetWeigh = true;
+
         }
     }
 }

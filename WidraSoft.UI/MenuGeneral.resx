@@ -174,19 +174,19 @@
     <value>ImageAboveText</value>
   </data>
   <data name="toolStripMenuItem2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>312, 26</value>
+    <value>320, 30</value>
   </data>
   <data name="toolStripMenuItem2.Text" xml:space="preserve">
     <value>Tests relais</value>
   </data>
   <data name="toolStripMenuItem1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>312, 26</value>
+    <value>320, 30</value>
   </data>
   <data name="toolStripMenuItem1.Text" xml:space="preserve">
     <value>Caméra ANPR</value>
   </data>
   <data name="ParamPoidstoolStripMenuItem1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>312, 26</value>
+    <value>320, 30</value>
   </data>
   <data name="ParamPoidstoolStripMenuItem1.Text" xml:space="preserve">
     <value>Paramètres de lecture de poids</value>
@@ -282,7 +282,7 @@
     <value>ImageAboveText</value>
   </data>
   <data name="pamamètresDePeséeToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>249, 26</value>
+    <value>257, 30</value>
   </data>
   <data name="pamamètresDePeséeToolStripMenuItem.Text" xml:space="preserve">
     <value>Paramètres de pesée</value>
@@ -300,13 +300,13 @@
     <value>Enregistrements</value>
   </data>
   <data name="tablesSupplémentairesToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>249, 26</value>
+    <value>257, 30</value>
   </data>
   <data name="tablesSupplémentairesToolStripMenuItem.Text" xml:space="preserve">
     <value>Tables supplémentaire</value>
   </data>
   <data name="walterreToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>249, 26</value>
+    <value>257, 30</value>
   </data>
   <data name="walterreToolStripMenuItem.Text" xml:space="preserve">
     <value>Walterre</value>

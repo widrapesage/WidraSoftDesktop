@@ -156,6 +156,7 @@ namespace WidraSoft.UI
             toolStripMenuItem2.Image = Properties.Resources.Weighing_settings;
             toolStripMenuItem2.Name = "toolStripMenuItem2";
             resources.ApplyResources(toolStripMenuItem2, "toolStripMenuItem2");
+            toolStripMenuItem2.Click += toolStripMenuItem2_Click;
             // 
             // toolStripMenuItem1
             // 

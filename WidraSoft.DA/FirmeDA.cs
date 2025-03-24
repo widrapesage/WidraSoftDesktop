@@ -122,7 +122,6 @@ namespace WidraSoft.DA
             try
             {
                 String name = (string)cmd.ExecuteScalar();
-                name = name.PadLeft(4, '0');
                 return name;
             }
             catch

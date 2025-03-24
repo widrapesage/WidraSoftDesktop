@@ -598,6 +598,8 @@ namespace WidraSoft.UI
                                     vg_Update = false;
                                     Disable();
                                     Bind_Fields();
+                                    Bind_DgvChauffeurs();
+                                    Bind_DgvTransporteurs();
                                 }
                             }
                             catch

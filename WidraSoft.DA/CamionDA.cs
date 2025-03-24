@@ -220,7 +220,6 @@ namespace WidraSoft.DA
             try
             {
                 String name = (string)cmd.ExecuteScalar();
-                name = name.PadLeft(6, '0');
                 return name;
             }
             catch
@@ -232,7 +231,7 @@ namespace WidraSoft.DA
         public int GetIdByBadge(string Name)
         {
 
-            String sql = "SELECT CAMIONID FROM CAMION WHERE BADGE='" + Name.Trim('0') + "'";
+            String sql = "SELECT CAMIONID FROM CAMION WHERE BADGE='" + Name + "'";
             conn.ConnectionString = connString;
             if (conn.State == ConnectionState.Closed)
                 conn.Open();
@@ -251,7 +250,7 @@ namespace WidraSoft.DA
         public int CountByBadge(string Name)
         {
 
-            String sql = "SELECT COUNT(*) FROM CAMION WHERE BADGE='" + Name.Trim('0') + "'";
+            String sql = "SELECT COUNT(*) FROM CAMION WHERE BADGE='" + Name + "'";
             conn.ConnectionString = connString;
             if (conn.State == ConnectionState.Closed)
                 conn.Open();

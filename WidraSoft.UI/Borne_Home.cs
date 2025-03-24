@@ -281,17 +281,29 @@ namespace WidraSoft.UI
             IsParsableP = Int32.TryParse(txtPoids.Text, out P);
             if (IsParsableP)
             {
-                if (P > 300)
+                if (P > 500)
                 {
                     Poids_Public = P;
-                    GetWeigh = false;
-                    Form form = new Borne_ChoixTypePesee(Lang, GetPontId(), GetWeighingSettingsType(GetPontId()), P, TimerInterval, TypeScanner, ActiverScanner);
-                    //txtPoids.Text = "0";
-                    form.Show(this);
+                    FormCollection fc = Application.OpenForms;
+                    bool WeighingInProgress = false;
+                    foreach (Form frm in fc)
+                    {
+                        if (frm.Name == "Borne_ChoixTypePesee" || frm.Name == "Borne_PremierePesee" || frm.Name == "Borne_DeuxiemePesee" || frm.Name == "Borne_FinPesee" || frm.Name == "Borne_Tare"
+                            || frm.Name == "Borne_ChoixFlux" || frm.Name == "Borne_ChoixDeuxiemePesee")
+                        {
+                            WeighingInProgress = true;
+                            return;
+                        }
+                    }
+                    if (!WeighingInProgress)
+                    {
+                        Form form = new Borne_ChoixTypePesee(Lang, GetPontId(), GetWeighingSettingsType(GetPontId()), P, TimerInterval, TypeScanner, ActiverScanner);
+                        //txtPoids.Text = "0";
+                        form.Show(this); 
+                    }
+                                  
                 }
-            }
-            
-            
+            }                       
         }
 
         private void txtPoids_DoubleClick(object sender, EventArgs e)
@@ -326,9 +338,7 @@ namespace WidraSoft.UI
 
         private void Weight_Timer_Tick(object sender, EventArgs e)
         {
-            if (GetWeigh)
-                ReceiveSerialData();
-
+             ReceiveSerialData();
         }
 
         private void Borne_Home_FormClosing(object sender, FormClosingEventArgs e)

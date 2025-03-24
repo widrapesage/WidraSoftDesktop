@@ -115,9 +115,9 @@ namespace WidraSoft.UI
 
             if (vg_ActiverBarriere == 1)
             {
-                Fermer_Barriere();
+                Fermer_Relais_BrainBox(0);
                 System.Threading.Thread.Sleep(600);
-                Ouvrir_Barriere();
+                Ouvrir_Relais_BrainBox(0);
             }
 
             if (isWalterre && vg_WalterreId > 0)
@@ -182,33 +182,51 @@ namespace WidraSoft.UI
 
         }
 
-        private void Ouvrir_Barriere()
+        private void Ouvrir_Relais_BrainBox(int relais)
         {
-            
+            byte[] bytestosend0 = { 0x23, 0x30, 0x31, 0x41, 0x30, 0x30, 0x30, 0x0D };
+            byte[] bytestosend1 = { 0x23, 0x30, 0x31, 0x41, 0x31, 0x30, 0x30, 0x0D };
+            byte[] bytestosend2 = { 0x23, 0x30, 0x31, 0x41, 0x32, 0x30, 0x30, 0x0D };
+            byte[] bytestosend3 = { 0x23, 0x30, 0x31, 0x41, 0x33, 0x30, 0x30, 0x0D };
             try
             {
-                byte[] bytestosend0 = { 0x23, 0x30, 0x31, 0x41, 0x30, 0x30, 0x30, 0x0D };
-                comBarriere.Write(bytestosend0, 0, bytestosend0.Length);
+                if (relais  == 0) 
+                    comBarriere.Write(bytestosend0, 0, bytestosend0.Length);
+                if (relais == 1)
+                    comBarriere.Write(bytestosend1, 0, bytestosend0.Length);
+                if (relais == 2)
+                    comBarriere.Write(bytestosend2, 0, bytestosend0.Length);
+                if (relais == 3)
+                    comBarriere.Write(bytestosend3, 0, bytestosend0.Length);
             }
             catch { throw; }
         }
 
-        private void Fermer_Barriere()
+        private void Fermer_Relais_BrainBox(int relais)
         {
-            
+            byte[] bytestosend0 = { 0x23, 0x30, 0x31, 0x41, 0x30, 0x30, 0x31, 0x0D };
+            byte[] bytestosend1 = { 0x23, 0x30, 0x31, 0x41, 0x31, 0x30, 0x31, 0x0D };
+            byte[] bytestosend2 = { 0x23, 0x30, 0x31, 0x41, 0x32, 0x30, 0x31, 0x0D };
+            byte[] bytestosend3 = { 0x23, 0x30, 0x31, 0x41, 0x33, 0x30, 0x31, 0x0D };
             try
             {
-                byte[] bytestosend0 = { 0x23, 0x30, 0x31, 0x41, 0x30, 0x30, 0x31, 0x0D };
-                comBarriere.Write(bytestosend0, 0, bytestosend0.Length);
+                if (relais == 0)
+                    comBarriere.Write(bytestosend0, 0, bytestosend0.Length);
+                if (relais == 1)
+                    comBarriere.Write(bytestosend1, 0, bytestosend0.Length);
+                if (relais == 2)
+                    comBarriere.Write(bytestosend2, 0, bytestosend0.Length);
+                if (relais == 3)
+                    comBarriere.Write(bytestosend3, 0, bytestosend0.Length);
             }
             catch { throw; }
         }
 
-        private void Relais_On()
+        private void Relais_On_Arduino(int relais)
         {
             try
             {
-                string s = "0WDO0x0" + ((int)Math.Pow(2, (1 - 1))).ToString("X");
+                string s = "0WDO0x0" + ((int)Math.Pow(2, (relais - 1))).ToString("X");
                 //string s = "0WDO0x00";
                 s = CT(s);
                 comBarriere.Write(s + "/r/n");
@@ -251,8 +269,6 @@ namespace WidraSoft.UI
             if (comBarriere.IsOpen)
             { comBarriere.Close(); }
         }
-
-
 
         private void Timer_Tick(object sender, EventArgs e)
         {

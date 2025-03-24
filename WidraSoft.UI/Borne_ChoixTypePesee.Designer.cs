@@ -48,6 +48,7 @@
             panel1 = new System.Windows.Forms.Panel();
             panel2 = new System.Windows.Forms.Panel();
             Weight_Timer = new System.Windows.Forms.Timer(components);
+            lbNotFound = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)select_ES).BeginInit();
             ((System.ComponentModel.ISupportInitialize)select_EN).BeginInit();
             ((System.ComponentModel.ISupportInitialize)select_FR).BeginInit();
@@ -207,6 +208,7 @@
             // panel1
             // 
             resources.ApplyResources(panel1, "panel1");
+            panel1.Controls.Add(lbNotFound);
             panel1.Controls.Add(btPeser2);
             panel1.Controls.Add(France_flag);
             panel1.Controls.Add(fleche_Lecteur);
@@ -230,6 +232,12 @@
             // Weight_Timer
             // 
             Weight_Timer.Tick += Weight_Timer_Tick;
+            // 
+            // lbNotFound
+            // 
+            resources.ApplyResources(lbNotFound, "lbNotFound");
+            lbNotFound.ForeColor = System.Drawing.Color.Tomato;
+            lbNotFound.Name = "lbNotFound";
             // 
             // Borne_ChoixTypePesee
             // 
@@ -277,5 +285,6 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Timer Weight_Timer;
+        private System.Windows.Forms.Label lbNotFound;
     }
 }

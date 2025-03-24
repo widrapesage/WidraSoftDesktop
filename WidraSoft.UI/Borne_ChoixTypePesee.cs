@@ -10,6 +10,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using WidraSoft.BL;
 using WidraSoft.DA;
+using WeighBridge_Library.Clients;
 
 namespace WidraSoft.UI
 {
@@ -110,7 +111,8 @@ namespace WidraSoft.UI
 
                 try
                 {
-                    comScanner.Open();
+                    if (!comScanner.IsOpen) 
+                        comScanner.Open();
                 }
                 catch
                 {
@@ -175,7 +177,7 @@ namespace WidraSoft.UI
         {
             int P = 0;
             P = Convert.ToInt32(txtPoids.Text);
-            if (P < 50)
+            if (P < 500)
             {
                 Close();
             }
@@ -246,6 +248,7 @@ namespace WidraSoft.UI
 
             try
             {
+                WeighingApplicationClient weighingApplicationClient = new WeighingApplicationClient();
                 comScanner.Read(trame, 0, trame.Length);
                 s = System.Text.Encoding.ASCII.GetString(trame);
                 if (s.Length >= 10)
@@ -253,7 +256,7 @@ namespace WidraSoft.UI
                     s1 = s.Substring(1, 4);
                     s2 = s.Substring(5, 6);
                     //MessageBox.Show(s1 + " " + s2);
-
+                    lbNotFound.Visible = false;
                     Firme firme = new Firme();
                     if (firme.GetBadge(1).Trim() == s1)
                     {
@@ -267,13 +270,19 @@ namespace WidraSoft.UI
                                 {
                                     Form form = new Borne_DeuxiemePesee(Convert.ToInt32(txtPoids.Text), camion.GetPendingId(camion.GetName(ScanCamionId)), camion.GetName(ScanCamionId), vg_Lang, vg_PontId);
                                     form.Show();
+                                    Close();
                                 }
                                 else
                                 {
                                     Form form = new Borne_ChoixFlux(vg_Lang, vg_PontId, vg_Demander_Paramatre, ScanCamionId, Convert.ToInt32(txtPoids.Text), 0, Flux_Default, -1, -1);
                                     form.Show();
+                                    Close();
                                 }
                                 
+                            }
+                            else
+                            {
+                                lbNotFound.Visible = true;
                             }
                         }
 
@@ -285,6 +294,7 @@ namespace WidraSoft.UI
                                 ScanChauffeurId = chauffeur.GetIdByBadge(s2);
                                 Form form = new Borne_ChoixFlux(vg_Lang, vg_PontId, vg_Demander_Paramatre, -1, Convert.ToInt32(txtPoids.Text), 0, Flux_Default, ScanChauffeurId, -1);
                                 form.Show();
+                                Close();
                             }
                         }
 
@@ -296,6 +306,7 @@ namespace WidraSoft.UI
                                 ScanClientId = client.GetIdByBadge(s2);
                                 Form form = new Borne_ChoixFlux(vg_Lang, vg_PontId, vg_Demander_Paramatre, -1, Convert.ToInt32(txtPoids.Text), 0, Flux_Default, -1, ScanClientId);
                                 form.Show();
+                                Close();
                             }
                         }
                     }
@@ -355,7 +366,7 @@ namespace WidraSoft.UI
         {
             if (comScanner.IsOpen)
                 comScanner.Close();
-            Borne_Home.GetWeigh = true;
+            //Borne_Home.GetWeigh = true;
         }
     }
 }

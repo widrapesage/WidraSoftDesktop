@@ -61,4 +61,10 @@
     <PackageReference Include="ZXing.Net.Bindings.SkiaSharp" Version="0.16.14" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Reference Include="WeighBridge Library">
+      <HintPath>WeighBridgeLibrary\WeighBridge Library.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
 </Project>

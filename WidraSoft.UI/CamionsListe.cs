@@ -42,10 +42,10 @@ namespace WidraSoft.UI
             Camion camion = new Camion();
             DgvList.DataSource = camion.List(vg_filter);
             DgvList.Columns[0].Visible = false;
-            DgvList.Columns["CODE"].Visible = true ; 
+            DgvList.Columns["CODE"].Visible = false ; 
             DgvList.Columns["PLAQUE"].Visible = true; 
-            DgvList.Columns["BADGE"].Visible = false;
-            DgvList.Columns["TARE"].Visible = false;
+            DgvList.Columns["BADGE"].Visible = true;
+            DgvList.Columns["TARE"].Visible = true;
             DgvList.Columns["TARE"].HeaderText = "TARE (KG)";
             DgvList.Columns["VALIDE"].Visible = false;
             DgvList.Columns["BLOQUE"].Visible = false;
