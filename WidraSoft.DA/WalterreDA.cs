@@ -34,6 +34,25 @@ namespace WidraSoft.DA
             }
         }
 
+        public DataTable List_Valid(string filter)
+        {
+            String sql = "SELECT * FROM VW_WALTERRE WHERE " + filter + " AND CLOTURE = 0";
+            conn.ConnectionString = connString;
+            if (conn.State == ConnectionState.Closed)
+                conn.Open();
+            SqlCommand cmd = new SqlCommand(sql, conn);
+            try
+            {
+                SqlDataReader reader = cmd.ExecuteReader();
+                dt.Load(reader);
+                return dt;
+            }
+            catch
+            {
+                throw;
+            }
+        }
+
         public DataTable List_Enlevements(string filter)
         {
             String sql = "SELECT * FROM VW_WALTERRE_PESEEPB WHERE " + filter;
@@ -231,6 +250,27 @@ namespace WidraSoft.DA
         public bool IfExists(String Name)
         {
             String sql = "SELECT COUNT(*) FROM WALTERRE WHERE CODE='" + Name + "'";
+            conn.ConnectionString = connString;
+            if (conn.State == ConnectionState.Closed)
+                conn.Open();
+            SqlCommand cmd = new SqlCommand(sql, conn);
+            try
+            {
+                Int32 nb = (int)cmd.ExecuteScalar();
+                if (nb > 0)
+                    return true;
+                else
+                    return false;
+            }
+            catch
+            {
+                throw;
+            }
+        }
+
+        public bool IfExists_Valid(String Name)
+        {
+            String sql = "SELECT COUNT(*) FROM WALTERRE WHERE CODE='" + Name + "' AND CLOTURE = 0";
             conn.ConnectionString = connString;
             if (conn.State == ConnectionState.Closed)
                 conn.Open();

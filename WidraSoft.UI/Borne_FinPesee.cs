@@ -171,9 +171,13 @@ namespace WidraSoft.UI
                 }
 
 
-
-                //Form form = new PeseePBTicketA5(vg_Id);
-                //form.Show();
+                try
+                {
+                    Form form = new PeseePBTicketA5(vg_Id);
+                    form.Show();
+                }
+                catch { throw; }
+                
             }
         }
 

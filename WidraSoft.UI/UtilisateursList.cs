@@ -51,7 +51,7 @@ namespace WidraSoft.UI
             DgvList.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             DgvList.RowHeadersWidthSizeMode = DataGridViewRowHeadersWidthSizeMode.AutoSizeToFirstHeader;
             DgvList.ReadOnly = true;
-            
+
         }
 
         private void Localize_Dgv(string lang)
@@ -86,7 +86,7 @@ namespace WidraSoft.UI
 
 
 
-    
+
 
         private void ouvrirToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -135,7 +135,7 @@ namespace WidraSoft.UI
                     else
                         Custom_MessageBox.Show("ES ", Common_functions.GetDatagridViewSelectedRowsId(DgvList).Length + " usario(s) eliminado(s)", "Usuarios", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     Bind_Dgv();
-                }               
+                }
             }
             else
             {
@@ -146,7 +146,7 @@ namespace WidraSoft.UI
                 else
                     Custom_MessageBox.Show("ES", "Ningún registro seleccionado", "Usuarios", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-            
+
         }
 
         private void txtSearchBox_TextChanged(object sender, EventArgs e)
@@ -164,7 +164,7 @@ namespace WidraSoft.UI
                 Spain_flag.Visible = false;
                 Language_Manager language_Manager = new Language_Manager();
                 language_Manager.ChangeLanguage("fr", this, typeof(UtilisateursList));
-                Localize_Dgv("fr"); 
+                Localize_Dgv("fr");
             }
 
             if (cbLang.Text == "EN")
@@ -174,7 +174,7 @@ namespace WidraSoft.UI
                 Spain_flag.Visible = false;
                 Language_Manager language_Manager = new Language_Manager();
                 language_Manager.ChangeLanguage("en", this, typeof(UtilisateursList));
-                Localize_Dgv("en"); 
+                Localize_Dgv("en");
             }
 
             if (cbLang.Text == "ES")
@@ -186,6 +186,21 @@ namespace WidraSoft.UI
                 language_Manager.ChangeLanguage("es", this, typeof(UtilisateursList));
                 Localize_Dgv("es");
             }
+        }
+
+        private void DgvList_CellContentDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void DgvList_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            try
+            {
+                Form form = new UtilisateurDetail("Edit", Common_functions.GetDatagridViewSelectedId(DgvList));
+                form.Show();
+            }
+            catch { throw; }
         }
     }
 }

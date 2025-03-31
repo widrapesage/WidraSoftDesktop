@@ -164,8 +164,6 @@ namespace WidraSoft.UI
                 if (txtStatus.Text == "Pending")
                 {
                     txtStatus.ForeColor = Color.OrangeRed;
-                    txtVolume.Enabled = false;
-                    txtSeuilMax.Enabled = false;
                 }
                 else
                 {
@@ -216,7 +214,7 @@ namespace WidraSoft.UI
             chx_DepassementSeuilMax.Enabled = true;
             txtBorne.Enabled = true;
             txtObservations.Enabled = true;
-            txtNom.Enabled=true;
+            txtNom.Enabled = true;
             pbUpdating.Visible = true;
 
             vg_IsEnabled = true;
@@ -340,8 +338,7 @@ namespace WidraSoft.UI
             else
             {
                 txtStatus.ForeColor = Color.FromArgb(11, 228, 132);
-                txtVolume.Enabled = false;
-                txtSeuilMax.Enabled = false;
+                
             }
         }
 
@@ -448,8 +445,7 @@ namespace WidraSoft.UI
                     if (txtStatus.Text == "Pending")
                     {
                         txtStatus.ForeColor = Color.OrangeRed;
-                        txtVolume.Enabled = false;
-                        txtSeuilMax.Enabled = false;
+                        
                     }
 
                     else
@@ -652,6 +648,21 @@ namespace WidraSoft.UI
         private void panelDetail_Paint(object sender, PaintEventArgs e)
         {
 
+        }
+
+        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            try
+            {
+                if (txtId.Text != "")
+                {
+                    Form form = new ReportingWalterre(vg_Id, "1=1 AND WALTERREID = " + vg_Id.ToString());
+                    form.Show();
+                }
+                
+            }
+            catch { throw; }
+            
         }
     }
 }

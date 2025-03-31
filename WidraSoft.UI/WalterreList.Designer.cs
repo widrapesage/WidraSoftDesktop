@@ -290,6 +290,7 @@
             DgvList.RowTemplate.Height = 33;
             DgvList.Size = new System.Drawing.Size(1036, 493);
             DgvList.TabIndex = 1;
+            DgvList.CellDoubleClick += DgvList_CellDoubleClick;
             DgvList.CellFormatting += DgvList_CellFormatting;
             // 
             // WalterreList

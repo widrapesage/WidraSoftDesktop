@@ -66,6 +66,9 @@ namespace WidraSoft.UI
             DgvList.Columns["ACTIVER_BARRIERE"].Visible = false;
             DgvList.Columns["NUMPORTCOM_BARRIERE"].Visible = false;
             DgvList.Columns["NUMPORTCOM_SCANNER"].Visible = false;
+            DgvList.Columns["CONTACT1"].Visible = false;
+            DgvList.Columns["CONTACT2"].Visible = false;
+            DgvList.Columns["CONTACT3"].Visible = false;
 
             DgvList.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             DgvList.ReadOnly = true;
@@ -152,6 +155,16 @@ namespace WidraSoft.UI
                 language_Manager.ChangeLanguage("es", this, typeof(PontsListe));
                 Localize_Dgv("es");
             }
+        }
+
+        private void DgvList_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            try
+            {
+                Form form = new PontDetail("Edit", Common_functions.GetDatagridViewSelectedId(DgvList));
+                form.Show();
+            }
+            catch { throw; }
         }
     }
 }

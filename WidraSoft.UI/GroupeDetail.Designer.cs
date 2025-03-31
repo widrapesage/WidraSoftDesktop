@@ -36,222 +36,220 @@ namespace WidraSoft.UI
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
-            this.label2 = new System.Windows.Forms.Label();
-            this.txtDateCreation = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.txtId = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.txtDesignation = new System.Windows.Forms.TextBox();
-            this.label4 = new System.Windows.Forms.Label();
-            this.txtCode = new System.Windows.Forms.TextBox();
-            this.label7 = new System.Windows.Forms.Label();
-            this.cbLimite = new System.Windows.Forms.ComboBox();
-            this.label5 = new System.Windows.Forms.Label();
-            this.txtNbLimite = new System.Windows.Forms.TextBox();
-            this.panelLang = new System.Windows.Forms.Panel();
-            this.pbUpdating = new System.Windows.Forms.PictureBox();
-            this.Spain_flag = new System.Windows.Forms.PictureBox();
-            this.England_flag = new System.Windows.Forms.PictureBox();
-            this.France_flag = new System.Windows.Forms.PictureBox();
-            this.cbLang = new System.Windows.Forms.ComboBox();
-            this.dgvGroupeDroits = new System.Windows.Forms.DataGridView();
-            this.lblRetirerDgv = new System.Windows.Forms.LinkLabel();
-            this.lblAddDgv = new System.Windows.Forms.LinkLabel();
-            this.pbAddRow = new System.Windows.Forms.PictureBox();
-            this.pbRemoveRow = new System.Windows.Forms.PictureBox();
-            this.DgvUsersList = new System.Windows.Forms.DataGridView();
-            this.label6 = new System.Windows.Forms.Label();
-            this.panelNavigation = new System.Windows.Forms.Panel();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.lbModifier = new System.Windows.Forms.LinkLabel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.lbAjouter = new System.Windows.Forms.LinkLabel();
-            this.lbSupprimer = new System.Windows.Forms.LinkLabel();
-            this.pictureBox4 = new System.Windows.Forms.PictureBox();
-            this.lbActualiserDgv = new System.Windows.Forms.LinkLabel();
-            this.panelDetail = new System.Windows.Forms.Panel();
-            this.RqPont = new System.Windows.Forms.PictureBox();
-            this.pictureBox5 = new System.Windows.Forms.PictureBox();
-            this.pictureBox6 = new System.Windows.Forms.PictureBox();
-            this.panelLang.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pbUpdating)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Spain_flag)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.England_flag)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.France_flag)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvGroupeDroits)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbAddRow)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbRemoveRow)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.DgvUsersList)).BeginInit();
-            this.panelNavigation.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
-            this.panelDetail.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.RqPont)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
-            this.SuspendLayout();
+            label2 = new System.Windows.Forms.Label();
+            txtDateCreation = new System.Windows.Forms.TextBox();
+            label1 = new System.Windows.Forms.Label();
+            txtId = new System.Windows.Forms.TextBox();
+            label3 = new System.Windows.Forms.Label();
+            txtDesignation = new System.Windows.Forms.TextBox();
+            label4 = new System.Windows.Forms.Label();
+            txtCode = new System.Windows.Forms.TextBox();
+            label7 = new System.Windows.Forms.Label();
+            cbLimite = new System.Windows.Forms.ComboBox();
+            label5 = new System.Windows.Forms.Label();
+            txtNbLimite = new System.Windows.Forms.TextBox();
+            panelLang = new System.Windows.Forms.Panel();
+            pbUpdating = new System.Windows.Forms.PictureBox();
+            Spain_flag = new System.Windows.Forms.PictureBox();
+            England_flag = new System.Windows.Forms.PictureBox();
+            France_flag = new System.Windows.Forms.PictureBox();
+            cbLang = new System.Windows.Forms.ComboBox();
+            dgvGroupeDroits = new System.Windows.Forms.DataGridView();
+            lblRetirerDgv = new System.Windows.Forms.LinkLabel();
+            lblAddDgv = new System.Windows.Forms.LinkLabel();
+            pbAddRow = new System.Windows.Forms.PictureBox();
+            pbRemoveRow = new System.Windows.Forms.PictureBox();
+            DgvUsersList = new System.Windows.Forms.DataGridView();
+            label6 = new System.Windows.Forms.Label();
+            panelNavigation = new System.Windows.Forms.Panel();
+            pictureBox3 = new System.Windows.Forms.PictureBox();
+            lbModifier = new System.Windows.Forms.LinkLabel();
+            pictureBox1 = new System.Windows.Forms.PictureBox();
+            pictureBox2 = new System.Windows.Forms.PictureBox();
+            lbAjouter = new System.Windows.Forms.LinkLabel();
+            lbSupprimer = new System.Windows.Forms.LinkLabel();
+            pictureBox4 = new System.Windows.Forms.PictureBox();
+            lbActualiserDgv = new System.Windows.Forms.LinkLabel();
+            panelDetail = new System.Windows.Forms.Panel();
+            pictureBox6 = new System.Windows.Forms.PictureBox();
+            pictureBox5 = new System.Windows.Forms.PictureBox();
+            RqPont = new System.Windows.Forms.PictureBox();
+            panelLang.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)pbUpdating).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)Spain_flag).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)England_flag).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)France_flag).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)dgvGroupeDroits).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pbAddRow).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pbRemoveRow).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)DgvUsersList).BeginInit();
+            panelNavigation.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox4).BeginInit();
+            panelDetail.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox6).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox5).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)RqPont).BeginInit();
+            SuspendLayout();
             // 
             // label2
             // 
-            resources.ApplyResources(this.label2, "label2");
-            this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Name = "label2";
+            resources.ApplyResources(label2, "label2");
+            label2.ForeColor = System.Drawing.Color.White;
+            label2.Name = "label2";
             // 
             // txtDateCreation
             // 
-            this.txtDateCreation.BackColor = System.Drawing.Color.Honeydew;
-            resources.ApplyResources(this.txtDateCreation, "txtDateCreation");
-            this.txtDateCreation.Name = "txtDateCreation";
-            this.txtDateCreation.ReadOnly = true;
+            txtDateCreation.BackColor = System.Drawing.Color.Honeydew;
+            resources.ApplyResources(txtDateCreation, "txtDateCreation");
+            txtDateCreation.Name = "txtDateCreation";
+            txtDateCreation.ReadOnly = true;
             // 
             // label1
             // 
-            resources.ApplyResources(this.label1, "label1");
-            this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Name = "label1";
+            resources.ApplyResources(label1, "label1");
+            label1.ForeColor = System.Drawing.Color.White;
+            label1.Name = "label1";
             // 
             // txtId
             // 
-            this.txtId.BackColor = System.Drawing.Color.Honeydew;
-            resources.ApplyResources(this.txtId, "txtId");
-            this.txtId.Name = "txtId";
+            txtId.BackColor = System.Drawing.Color.Honeydew;
+            resources.ApplyResources(txtId, "txtId");
+            txtId.Name = "txtId";
             // 
             // label3
             // 
-            resources.ApplyResources(this.label3, "label3");
-            this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Name = "label3";
+            resources.ApplyResources(label3, "label3");
+            label3.ForeColor = System.Drawing.Color.White;
+            label3.Name = "label3";
             // 
             // txtDesignation
             // 
-            this.txtDesignation.BackColor = System.Drawing.Color.Honeydew;
-            resources.ApplyResources(this.txtDesignation, "txtDesignation");
-            this.txtDesignation.Name = "txtDesignation";
+            txtDesignation.BackColor = System.Drawing.Color.Honeydew;
+            resources.ApplyResources(txtDesignation, "txtDesignation");
+            txtDesignation.Name = "txtDesignation";
             // 
             // label4
             // 
-            resources.ApplyResources(this.label4, "label4");
-            this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Name = "label4";
+            resources.ApplyResources(label4, "label4");
+            label4.ForeColor = System.Drawing.Color.White;
+            label4.Name = "label4";
             // 
             // txtCode
             // 
-            this.txtCode.BackColor = System.Drawing.Color.Honeydew;
-            resources.ApplyResources(this.txtCode, "txtCode");
-            this.txtCode.Name = "txtCode";
+            txtCode.BackColor = System.Drawing.Color.Honeydew;
+            resources.ApplyResources(txtCode, "txtCode");
+            txtCode.Name = "txtCode";
             // 
             // label7
             // 
-            resources.ApplyResources(this.label7, "label7");
-            this.label7.ForeColor = System.Drawing.Color.White;
-            this.label7.Name = "label7";
+            resources.ApplyResources(label7, "label7");
+            label7.ForeColor = System.Drawing.Color.White;
+            label7.Name = "label7";
             // 
             // cbLimite
             // 
-            this.cbLimite.BackColor = System.Drawing.Color.Honeydew;
-            resources.ApplyResources(this.cbLimite, "cbLimite");
-            this.cbLimite.FormattingEnabled = true;
-            this.cbLimite.Items.AddRange(new object[] {
-            resources.GetString("cbLimite.Items"),
-            resources.GetString("cbLimite.Items1")});
-            this.cbLimite.Name = "cbLimite";
+            cbLimite.BackColor = System.Drawing.Color.Honeydew;
+            resources.ApplyResources(cbLimite, "cbLimite");
+            cbLimite.FormattingEnabled = true;
+            cbLimite.Items.AddRange(new object[] { resources.GetString("cbLimite.Items"), resources.GetString("cbLimite.Items1") });
+            cbLimite.Name = "cbLimite";
             // 
             // label5
             // 
-            resources.ApplyResources(this.label5, "label5");
-            this.label5.ForeColor = System.Drawing.Color.White;
-            this.label5.Name = "label5";
+            resources.ApplyResources(label5, "label5");
+            label5.ForeColor = System.Drawing.Color.White;
+            label5.Name = "label5";
             // 
             // txtNbLimite
             // 
-            this.txtNbLimite.BackColor = System.Drawing.Color.Honeydew;
-            resources.ApplyResources(this.txtNbLimite, "txtNbLimite");
-            this.txtNbLimite.Name = "txtNbLimite";
+            txtNbLimite.BackColor = System.Drawing.Color.Honeydew;
+            resources.ApplyResources(txtNbLimite, "txtNbLimite");
+            txtNbLimite.Name = "txtNbLimite";
             // 
             // panelLang
             // 
-            this.panelLang.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(86)))), ((int)(((byte)(81)))));
-            this.panelLang.Controls.Add(this.pbUpdating);
-            this.panelLang.Controls.Add(this.Spain_flag);
-            this.panelLang.Controls.Add(this.England_flag);
-            this.panelLang.Controls.Add(this.France_flag);
-            this.panelLang.Controls.Add(this.cbLang);
-            resources.ApplyResources(this.panelLang, "panelLang");
-            this.panelLang.Name = "panelLang";
+            panelLang.BackColor = System.Drawing.Color.FromArgb(72, 86, 81);
+            panelLang.Controls.Add(pbUpdating);
+            panelLang.Controls.Add(Spain_flag);
+            panelLang.Controls.Add(England_flag);
+            panelLang.Controls.Add(France_flag);
+            panelLang.Controls.Add(cbLang);
+            resources.ApplyResources(panelLang, "panelLang");
+            panelLang.Name = "panelLang";
             // 
             // pbUpdating
             // 
-            this.pbUpdating.Image = global::WidraSoft.UI.Properties.Resources.pencil;
-            resources.ApplyResources(this.pbUpdating, "pbUpdating");
-            this.pbUpdating.Name = "pbUpdating";
-            this.pbUpdating.TabStop = false;
+            pbUpdating.Image = Properties.Resources.pencil;
+            resources.ApplyResources(pbUpdating, "pbUpdating");
+            pbUpdating.Name = "pbUpdating";
+            pbUpdating.TabStop = false;
             // 
             // Spain_flag
             // 
-            this.Spain_flag.BackColor = System.Drawing.Color.Transparent;
-            this.Spain_flag.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.Spain_flag.Image = global::WidraSoft.UI.Properties.Resources.spain;
-            resources.ApplyResources(this.Spain_flag, "Spain_flag");
-            this.Spain_flag.Name = "Spain_flag";
-            this.Spain_flag.TabStop = false;
+            Spain_flag.BackColor = System.Drawing.Color.Transparent;
+            Spain_flag.Cursor = System.Windows.Forms.Cursors.Hand;
+            Spain_flag.Image = Properties.Resources.spain;
+            resources.ApplyResources(Spain_flag, "Spain_flag");
+            Spain_flag.Name = "Spain_flag";
+            Spain_flag.TabStop = false;
             // 
             // England_flag
             // 
-            this.England_flag.BackColor = System.Drawing.Color.Transparent;
-            this.England_flag.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.England_flag.Image = global::WidraSoft.UI.Properties.Resources.united_kingdom;
-            resources.ApplyResources(this.England_flag, "England_flag");
-            this.England_flag.Name = "England_flag";
-            this.England_flag.TabStop = false;
+            England_flag.BackColor = System.Drawing.Color.Transparent;
+            England_flag.Cursor = System.Windows.Forms.Cursors.Hand;
+            England_flag.Image = Properties.Resources.united_kingdom;
+            resources.ApplyResources(England_flag, "England_flag");
+            England_flag.Name = "England_flag";
+            England_flag.TabStop = false;
             // 
             // France_flag
             // 
-            this.France_flag.BackColor = System.Drawing.Color.Transparent;
-            this.France_flag.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.France_flag.Image = global::WidraSoft.UI.Properties.Resources.france;
-            resources.ApplyResources(this.France_flag, "France_flag");
-            this.France_flag.Name = "France_flag";
-            this.France_flag.TabStop = false;
+            France_flag.BackColor = System.Drawing.Color.Transparent;
+            France_flag.Cursor = System.Windows.Forms.Cursors.Hand;
+            France_flag.Image = Properties.Resources.france;
+            resources.ApplyResources(France_flag, "France_flag");
+            France_flag.Name = "France_flag";
+            France_flag.TabStop = false;
             // 
             // cbLang
             // 
-            this.cbLang.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(86)))), ((int)(((byte)(77)))));
-            this.cbLang.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            resources.ApplyResources(this.cbLang, "cbLang");
-            this.cbLang.ForeColor = System.Drawing.Color.White;
-            this.cbLang.FormattingEnabled = true;
-            this.cbLang.Name = "cbLang";
-            this.cbLang.SelectedIndexChanged += new System.EventHandler(this.cbLang_SelectedIndexChanged);
+            cbLang.BackColor = System.Drawing.Color.FromArgb(72, 86, 77);
+            cbLang.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            resources.ApplyResources(cbLang, "cbLang");
+            cbLang.ForeColor = System.Drawing.Color.White;
+            cbLang.FormattingEnabled = true;
+            cbLang.Name = "cbLang";
+            cbLang.SelectedIndexChanged += cbLang_SelectedIndexChanged;
             // 
             // dgvGroupeDroits
             // 
-            this.dgvGroupeDroits.AllowUserToAddRows = false;
-            this.dgvGroupeDroits.AllowUserToDeleteRows = false;
-            this.dgvGroupeDroits.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(86)))), ((int)(((byte)(81)))));
-            this.dgvGroupeDroits.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.dgvGroupeDroits.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.Sunken;
+            dgvGroupeDroits.AllowUserToAddRows = false;
+            dgvGroupeDroits.AllowUserToDeleteRows = false;
+            dgvGroupeDroits.BackgroundColor = System.Drawing.Color.FromArgb(72, 86, 81);
+            dgvGroupeDroits.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            dgvGroupeDroits.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.Sunken;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(86)))), ((int)(((byte)(77)))));
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(72, 86, 77);
             dataGridViewCellStyle1.Font = new System.Drawing.Font("Corbel", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(190)))), ((int)(((byte)(117)))));
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(72, 190, 117);
             dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvGroupeDroits.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
-            this.dgvGroupeDroits.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dgvGroupeDroits.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dgvGroupeDroits.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = System.Drawing.Color.Honeydew;
             dataGridViewCellStyle2.Font = new System.Drawing.Font("Calibri", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(86)))), ((int)(((byte)(81)))));
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(72, 86, 81);
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.White;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvGroupeDroits.DefaultCellStyle = dataGridViewCellStyle2;
-            resources.ApplyResources(this.dgvGroupeDroits, "dgvGroupeDroits");
-            this.dgvGroupeDroits.Name = "dgvGroupeDroits";
+            dgvGroupeDroits.DefaultCellStyle = dataGridViewCellStyle2;
+            resources.ApplyResources(dgvGroupeDroits, "dgvGroupeDroits");
+            dgvGroupeDroits.Name = "dgvGroupeDroits";
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle3.BackColor = System.Drawing.Color.Honeydew;
             dataGridViewCellStyle3.Font = new System.Drawing.Font("Corbel", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
@@ -259,77 +257,77 @@ namespace WidraSoft.UI
             dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.MediumSeaGreen;
             dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.Black;
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvGroupeDroits.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
-            this.dgvGroupeDroits.RowTemplate.Height = 33;
-            this.dgvGroupeDroits.CellEndEdit += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvGroupeDroits_CellEndEdit);
+            dgvGroupeDroits.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            dgvGroupeDroits.RowTemplate.Height = 33;
+            dgvGroupeDroits.CellEndEdit += dgvGroupeDroits_CellEndEdit;
             // 
             // lblRetirerDgv
             // 
-            this.lblRetirerDgv.ActiveLinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(190)))), ((int)(((byte)(117)))));
-            resources.ApplyResources(this.lblRetirerDgv, "lblRetirerDgv");
-            this.lblRetirerDgv.BackColor = System.Drawing.Color.Transparent;
-            this.lblRetirerDgv.ForeColor = System.Drawing.Color.White;
-            this.lblRetirerDgv.LinkColor = System.Drawing.Color.White;
-            this.lblRetirerDgv.Name = "lblRetirerDgv";
-            this.lblRetirerDgv.TabStop = true;
-            this.lblRetirerDgv.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lblRetirerDgv_LinkClicked);
+            lblRetirerDgv.ActiveLinkColor = System.Drawing.Color.FromArgb(72, 190, 117);
+            resources.ApplyResources(lblRetirerDgv, "lblRetirerDgv");
+            lblRetirerDgv.BackColor = System.Drawing.Color.Transparent;
+            lblRetirerDgv.ForeColor = System.Drawing.Color.White;
+            lblRetirerDgv.LinkColor = System.Drawing.Color.White;
+            lblRetirerDgv.Name = "lblRetirerDgv";
+            lblRetirerDgv.TabStop = true;
+            lblRetirerDgv.LinkClicked += lblRetirerDgv_LinkClicked;
             // 
             // lblAddDgv
             // 
-            this.lblAddDgv.ActiveLinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(190)))), ((int)(((byte)(117)))));
-            resources.ApplyResources(this.lblAddDgv, "lblAddDgv");
-            this.lblAddDgv.BackColor = System.Drawing.Color.Transparent;
-            this.lblAddDgv.ForeColor = System.Drawing.Color.White;
-            this.lblAddDgv.LinkColor = System.Drawing.Color.White;
-            this.lblAddDgv.Name = "lblAddDgv";
-            this.lblAddDgv.TabStop = true;
-            this.lblAddDgv.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lblEnregistrerDgv_LinkClicked);
+            lblAddDgv.ActiveLinkColor = System.Drawing.Color.FromArgb(72, 190, 117);
+            resources.ApplyResources(lblAddDgv, "lblAddDgv");
+            lblAddDgv.BackColor = System.Drawing.Color.Transparent;
+            lblAddDgv.ForeColor = System.Drawing.Color.White;
+            lblAddDgv.LinkColor = System.Drawing.Color.White;
+            lblAddDgv.Name = "lblAddDgv";
+            lblAddDgv.TabStop = true;
+            lblAddDgv.LinkClicked += lblEnregistrerDgv_LinkClicked;
             // 
             // pbAddRow
             // 
-            this.pbAddRow.BackColor = System.Drawing.Color.Transparent;
-            this.pbAddRow.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pbAddRow.Image = global::WidraSoft.UI.Properties.Resources.plus;
-            resources.ApplyResources(this.pbAddRow, "pbAddRow");
-            this.pbAddRow.Name = "pbAddRow";
-            this.pbAddRow.TabStop = false;
+            pbAddRow.BackColor = System.Drawing.Color.Transparent;
+            pbAddRow.Cursor = System.Windows.Forms.Cursors.Hand;
+            pbAddRow.Image = Properties.Resources.plus;
+            resources.ApplyResources(pbAddRow, "pbAddRow");
+            pbAddRow.Name = "pbAddRow";
+            pbAddRow.TabStop = false;
             // 
             // pbRemoveRow
             // 
-            this.pbRemoveRow.BackColor = System.Drawing.Color.Transparent;
-            this.pbRemoveRow.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pbRemoveRow.Image = global::WidraSoft.UI.Properties.Resources.remove;
-            resources.ApplyResources(this.pbRemoveRow, "pbRemoveRow");
-            this.pbRemoveRow.Name = "pbRemoveRow";
-            this.pbRemoveRow.TabStop = false;
+            pbRemoveRow.BackColor = System.Drawing.Color.Transparent;
+            pbRemoveRow.Cursor = System.Windows.Forms.Cursors.Hand;
+            pbRemoveRow.Image = Properties.Resources.remove;
+            resources.ApplyResources(pbRemoveRow, "pbRemoveRow");
+            pbRemoveRow.Name = "pbRemoveRow";
+            pbRemoveRow.TabStop = false;
             // 
             // DgvUsersList
             // 
-            this.DgvUsersList.AllowUserToAddRows = false;
-            this.DgvUsersList.AllowUserToDeleteRows = false;
-            this.DgvUsersList.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(86)))), ((int)(((byte)(81)))));
-            this.DgvUsersList.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.DgvUsersList.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.Sunken;
+            DgvUsersList.AllowUserToAddRows = false;
+            DgvUsersList.AllowUserToDeleteRows = false;
+            DgvUsersList.BackgroundColor = System.Drawing.Color.FromArgb(72, 86, 81);
+            DgvUsersList.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            DgvUsersList.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.Sunken;
             dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(86)))), ((int)(((byte)(77)))));
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(72, 86, 77);
             dataGridViewCellStyle4.Font = new System.Drawing.Font("Corbel", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             dataGridViewCellStyle4.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(190)))), ((int)(((byte)(117)))));
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.FromArgb(72, 190, 117);
             dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.DgvUsersList.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
-            this.DgvUsersList.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            DgvUsersList.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            DgvUsersList.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle5.BackColor = System.Drawing.Color.Honeydew;
             dataGridViewCellStyle5.Font = new System.Drawing.Font("Calibri", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(86)))), ((int)(((byte)(81)))));
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.FromArgb(72, 86, 81);
             dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.White;
             dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.DgvUsersList.DefaultCellStyle = dataGridViewCellStyle5;
-            resources.ApplyResources(this.DgvUsersList, "DgvUsersList");
-            this.DgvUsersList.Name = "DgvUsersList";
-            this.DgvUsersList.ReadOnly = true;
+            DgvUsersList.DefaultCellStyle = dataGridViewCellStyle5;
+            resources.ApplyResources(DgvUsersList, "DgvUsersList");
+            DgvUsersList.Name = "DgvUsersList";
+            DgvUsersList.ReadOnly = true;
             dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle6.BackColor = System.Drawing.Color.Honeydew;
             dataGridViewCellStyle6.Font = new System.Drawing.Font("Corbel", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
@@ -337,194 +335,193 @@ namespace WidraSoft.UI
             dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.MediumSeaGreen;
             dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.Black;
             dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.DgvUsersList.RowHeadersDefaultCellStyle = dataGridViewCellStyle6;
-            this.DgvUsersList.RowTemplate.Height = 33;
+            DgvUsersList.RowHeadersDefaultCellStyle = dataGridViewCellStyle6;
+            DgvUsersList.RowTemplate.Height = 33;
             // 
             // label6
             // 
-            resources.ApplyResources(this.label6, "label6");
-            this.label6.ForeColor = System.Drawing.Color.White;
-            this.label6.Name = "label6";
+            resources.ApplyResources(label6, "label6");
+            label6.ForeColor = System.Drawing.Color.White;
+            label6.Name = "label6";
             // 
             // panelNavigation
             // 
-            this.panelNavigation.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(62)))), ((int)(((byte)(60)))));
-            this.panelNavigation.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panelNavigation.Controls.Add(this.pictureBox3);
-            this.panelNavigation.Controls.Add(this.lbModifier);
-            this.panelNavigation.Controls.Add(this.pictureBox1);
-            this.panelNavigation.Controls.Add(this.pictureBox2);
-            this.panelNavigation.Controls.Add(this.lbAjouter);
-            this.panelNavigation.Controls.Add(this.lbSupprimer);
-            resources.ApplyResources(this.panelNavigation, "panelNavigation");
-            this.panelNavigation.Name = "panelNavigation";
+            panelNavigation.BackColor = System.Drawing.Color.FromArgb(58, 62, 60);
+            panelNavigation.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            panelNavigation.Controls.Add(pictureBox3);
+            panelNavigation.Controls.Add(lbModifier);
+            panelNavigation.Controls.Add(pictureBox1);
+            panelNavigation.Controls.Add(pictureBox2);
+            panelNavigation.Controls.Add(lbAjouter);
+            panelNavigation.Controls.Add(lbSupprimer);
+            resources.ApplyResources(panelNavigation, "panelNavigation");
+            panelNavigation.Name = "panelNavigation";
             // 
             // pictureBox3
             // 
-            this.pictureBox3.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox3.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pictureBox3.Image = global::WidraSoft.UI.Properties.Resources.update;
-            resources.ApplyResources(this.pictureBox3, "pictureBox3");
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.TabStop = false;
+            pictureBox3.BackColor = System.Drawing.Color.Transparent;
+            pictureBox3.Cursor = System.Windows.Forms.Cursors.Hand;
+            pictureBox3.Image = Properties.Resources.update;
+            resources.ApplyResources(pictureBox3, "pictureBox3");
+            pictureBox3.Name = "pictureBox3";
+            pictureBox3.TabStop = false;
             // 
             // lbModifier
             // 
-            this.lbModifier.ActiveLinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(190)))), ((int)(((byte)(117)))));
-            resources.ApplyResources(this.lbModifier, "lbModifier");
-            this.lbModifier.BackColor = System.Drawing.Color.Transparent;
-            this.lbModifier.ForeColor = System.Drawing.Color.White;
-            this.lbModifier.LinkColor = System.Drawing.Color.White;
-            this.lbModifier.Name = "lbModifier";
-            this.lbModifier.TabStop = true;
-            this.lbModifier.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lbModifier_LinkClicked);
+            lbModifier.ActiveLinkColor = System.Drawing.Color.FromArgb(72, 190, 117);
+            resources.ApplyResources(lbModifier, "lbModifier");
+            lbModifier.BackColor = System.Drawing.Color.Transparent;
+            lbModifier.ForeColor = System.Drawing.Color.White;
+            lbModifier.LinkColor = System.Drawing.Color.White;
+            lbModifier.Name = "lbModifier";
+            lbModifier.TabStop = true;
+            lbModifier.LinkClicked += lbModifier_LinkClicked;
             // 
             // pictureBox1
             // 
-            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pictureBox1.Image = global::WidraSoft.UI.Properties.Resources.remove;
-            resources.ApplyResources(this.pictureBox1, "pictureBox1");
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.TabStop = false;
+            pictureBox1.BackColor = System.Drawing.Color.Transparent;
+            pictureBox1.Cursor = System.Windows.Forms.Cursors.Hand;
+            pictureBox1.Image = Properties.Resources.remove;
+            resources.ApplyResources(pictureBox1, "pictureBox1");
+            pictureBox1.Name = "pictureBox1";
+            pictureBox1.TabStop = false;
             // 
             // pictureBox2
             // 
-            this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pictureBox2.Image = global::WidraSoft.UI.Properties.Resources.add;
-            resources.ApplyResources(this.pictureBox2, "pictureBox2");
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.TabStop = false;
+            pictureBox2.BackColor = System.Drawing.Color.Transparent;
+            pictureBox2.Cursor = System.Windows.Forms.Cursors.Hand;
+            pictureBox2.Image = Properties.Resources.add;
+            resources.ApplyResources(pictureBox2, "pictureBox2");
+            pictureBox2.Name = "pictureBox2";
+            pictureBox2.TabStop = false;
             // 
             // lbAjouter
             // 
-            this.lbAjouter.ActiveLinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(190)))), ((int)(((byte)(117)))));
-            resources.ApplyResources(this.lbAjouter, "lbAjouter");
-            this.lbAjouter.BackColor = System.Drawing.Color.Transparent;
-            this.lbAjouter.ForeColor = System.Drawing.Color.White;
-            this.lbAjouter.LinkColor = System.Drawing.Color.White;
-            this.lbAjouter.Name = "lbAjouter";
-            this.lbAjouter.TabStop = true;
-            this.lbAjouter.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lbAjouter_LinkClicked);
+            lbAjouter.ActiveLinkColor = System.Drawing.Color.FromArgb(72, 190, 117);
+            resources.ApplyResources(lbAjouter, "lbAjouter");
+            lbAjouter.BackColor = System.Drawing.Color.Transparent;
+            lbAjouter.ForeColor = System.Drawing.Color.White;
+            lbAjouter.LinkColor = System.Drawing.Color.White;
+            lbAjouter.Name = "lbAjouter";
+            lbAjouter.TabStop = true;
+            lbAjouter.LinkClicked += lbAjouter_LinkClicked;
             // 
             // lbSupprimer
             // 
-            this.lbSupprimer.ActiveLinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(190)))), ((int)(((byte)(117)))));
-            resources.ApplyResources(this.lbSupprimer, "lbSupprimer");
-            this.lbSupprimer.BackColor = System.Drawing.Color.Transparent;
-            this.lbSupprimer.ForeColor = System.Drawing.Color.White;
-            this.lbSupprimer.LinkColor = System.Drawing.Color.White;
-            this.lbSupprimer.Name = "lbSupprimer";
-            this.lbSupprimer.TabStop = true;
-            this.lbSupprimer.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lbSupprimer_LinkClicked);
+            lbSupprimer.ActiveLinkColor = System.Drawing.Color.FromArgb(72, 190, 117);
+            resources.ApplyResources(lbSupprimer, "lbSupprimer");
+            lbSupprimer.BackColor = System.Drawing.Color.Transparent;
+            lbSupprimer.ForeColor = System.Drawing.Color.White;
+            lbSupprimer.LinkColor = System.Drawing.Color.White;
+            lbSupprimer.Name = "lbSupprimer";
+            lbSupprimer.TabStop = true;
+            lbSupprimer.LinkClicked += lbSupprimer_LinkClicked;
             // 
             // pictureBox4
             // 
-            this.pictureBox4.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox4.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pictureBox4.Image = global::WidraSoft.UI.Properties.Resources.refresh;
-            resources.ApplyResources(this.pictureBox4, "pictureBox4");
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.TabStop = false;
+            pictureBox4.BackColor = System.Drawing.Color.Transparent;
+            pictureBox4.Cursor = System.Windows.Forms.Cursors.Hand;
+            pictureBox4.Image = Properties.Resources.refresh;
+            resources.ApplyResources(pictureBox4, "pictureBox4");
+            pictureBox4.Name = "pictureBox4";
+            pictureBox4.TabStop = false;
             // 
             // lbActualiserDgv
             // 
-            this.lbActualiserDgv.ActiveLinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(190)))), ((int)(((byte)(117)))));
-            resources.ApplyResources(this.lbActualiserDgv, "lbActualiserDgv");
-            this.lbActualiserDgv.BackColor = System.Drawing.Color.Transparent;
-            this.lbActualiserDgv.ForeColor = System.Drawing.Color.White;
-            this.lbActualiserDgv.LinkColor = System.Drawing.Color.White;
-            this.lbActualiserDgv.Name = "lbActualiserDgv";
-            this.lbActualiserDgv.TabStop = true;
-            this.lbActualiserDgv.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lbValiderDgv_LinkClicked);
+            lbActualiserDgv.ActiveLinkColor = System.Drawing.Color.FromArgb(72, 190, 117);
+            resources.ApplyResources(lbActualiserDgv, "lbActualiserDgv");
+            lbActualiserDgv.BackColor = System.Drawing.Color.Transparent;
+            lbActualiserDgv.ForeColor = System.Drawing.Color.White;
+            lbActualiserDgv.LinkColor = System.Drawing.Color.White;
+            lbActualiserDgv.Name = "lbActualiserDgv";
+            lbActualiserDgv.TabStop = true;
+            lbActualiserDgv.LinkClicked += lbValiderDgv_LinkClicked;
             // 
             // panelDetail
             // 
-            this.panelDetail.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(86)))), ((int)(((byte)(81)))));
-            this.panelDetail.Controls.Add(this.pictureBox6);
-            this.panelDetail.Controls.Add(this.pictureBox5);
-            this.panelDetail.Controls.Add(this.RqPont);
-            this.panelDetail.Controls.Add(this.txtId);
-            this.panelDetail.Controls.Add(this.pictureBox4);
-            this.panelDetail.Controls.Add(this.label1);
-            this.panelDetail.Controls.Add(this.lbActualiserDgv);
-            this.panelDetail.Controls.Add(this.txtDateCreation);
-            this.panelDetail.Controls.Add(this.label2);
-            this.panelDetail.Controls.Add(this.label6);
-            this.panelDetail.Controls.Add(this.txtDesignation);
-            this.panelDetail.Controls.Add(this.DgvUsersList);
-            this.panelDetail.Controls.Add(this.label3);
-            this.panelDetail.Controls.Add(this.pbRemoveRow);
-            this.panelDetail.Controls.Add(this.txtCode);
-            this.panelDetail.Controls.Add(this.pbAddRow);
-            this.panelDetail.Controls.Add(this.label4);
-            this.panelDetail.Controls.Add(this.lblAddDgv);
-            this.panelDetail.Controls.Add(this.cbLimite);
-            this.panelDetail.Controls.Add(this.lblRetirerDgv);
-            this.panelDetail.Controls.Add(this.label7);
-            this.panelDetail.Controls.Add(this.dgvGroupeDroits);
-            this.panelDetail.Controls.Add(this.txtNbLimite);
-            this.panelDetail.Controls.Add(this.label5);
-            resources.ApplyResources(this.panelDetail, "panelDetail");
-            this.panelDetail.Name = "panelDetail";
-            // 
-            // RqPont
-            // 
-            this.RqPont.Image = global::WidraSoft.UI.Properties.Resources.asterisk;
-            resources.ApplyResources(this.RqPont, "RqPont");
-            this.RqPont.Name = "RqPont";
-            this.RqPont.TabStop = false;
-            // 
-            // pictureBox5
-            // 
-            this.pictureBox5.Image = global::WidraSoft.UI.Properties.Resources.asterisk;
-            resources.ApplyResources(this.pictureBox5, "pictureBox5");
-            this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.TabStop = false;
+            panelDetail.BackColor = System.Drawing.Color.FromArgb(72, 86, 81);
+            panelDetail.Controls.Add(pictureBox6);
+            panelDetail.Controls.Add(pictureBox5);
+            panelDetail.Controls.Add(RqPont);
+            panelDetail.Controls.Add(txtId);
+            panelDetail.Controls.Add(pictureBox4);
+            panelDetail.Controls.Add(label1);
+            panelDetail.Controls.Add(lbActualiserDgv);
+            panelDetail.Controls.Add(txtDateCreation);
+            panelDetail.Controls.Add(label2);
+            panelDetail.Controls.Add(label6);
+            panelDetail.Controls.Add(txtDesignation);
+            panelDetail.Controls.Add(DgvUsersList);
+            panelDetail.Controls.Add(label3);
+            panelDetail.Controls.Add(pbRemoveRow);
+            panelDetail.Controls.Add(txtCode);
+            panelDetail.Controls.Add(pbAddRow);
+            panelDetail.Controls.Add(label4);
+            panelDetail.Controls.Add(lblAddDgv);
+            panelDetail.Controls.Add(cbLimite);
+            panelDetail.Controls.Add(lblRetirerDgv);
+            panelDetail.Controls.Add(label7);
+            panelDetail.Controls.Add(dgvGroupeDroits);
+            panelDetail.Controls.Add(txtNbLimite);
+            panelDetail.Controls.Add(label5);
+            resources.ApplyResources(panelDetail, "panelDetail");
+            panelDetail.Name = "panelDetail";
             // 
             // pictureBox6
             // 
-            this.pictureBox6.Image = global::WidraSoft.UI.Properties.Resources.asterisk;
-            resources.ApplyResources(this.pictureBox6, "pictureBox6");
-            this.pictureBox6.Name = "pictureBox6";
-            this.pictureBox6.TabStop = false;
+            pictureBox6.Image = Properties.Resources.asterisk;
+            resources.ApplyResources(pictureBox6, "pictureBox6");
+            pictureBox6.Name = "pictureBox6";
+            pictureBox6.TabStop = false;
+            // 
+            // pictureBox5
+            // 
+            pictureBox5.Image = Properties.Resources.asterisk;
+            resources.ApplyResources(pictureBox5, "pictureBox5");
+            pictureBox5.Name = "pictureBox5";
+            pictureBox5.TabStop = false;
+            // 
+            // RqPont
+            // 
+            RqPont.Image = Properties.Resources.asterisk;
+            resources.ApplyResources(RqPont, "RqPont");
+            RqPont.Name = "RqPont";
+            RqPont.TabStop = false;
             // 
             // GroupeDetail
             // 
             resources.ApplyResources(this, "$this");
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(62)))), ((int)(((byte)(60)))));
-            this.Controls.Add(this.panelDetail);
-            this.Controls.Add(this.panelNavigation);
-            this.Controls.Add(this.panelLang);
-            this.MaximizeBox = false;
-            this.Name = "GroupeDetail";
-            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.GroupeDetail_FormClosing);
-            this.Load += new System.EventHandler(this.GroupeDetail_Load);
-            this.panelLang.ResumeLayout(false);
-            this.panelLang.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pbUpdating)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Spain_flag)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.England_flag)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.France_flag)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvGroupeDroits)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbAddRow)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbRemoveRow)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.DgvUsersList)).EndInit();
-            this.panelNavigation.ResumeLayout(false);
-            this.panelNavigation.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
-            this.panelDetail.ResumeLayout(false);
-            this.panelDetail.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.RqPont)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
-            this.ResumeLayout(false);
-
+            AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            BackColor = System.Drawing.Color.FromArgb(58, 62, 60);
+            Controls.Add(panelDetail);
+            Controls.Add(panelNavigation);
+            Controls.Add(panelLang);
+            MaximizeBox = false;
+            Name = "GroupeDetail";
+            FormClosing += GroupeDetail_FormClosing;
+            Load += GroupeDetail_Load;
+            panelLang.ResumeLayout(false);
+            panelLang.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)pbUpdating).EndInit();
+            ((System.ComponentModel.ISupportInitialize)Spain_flag).EndInit();
+            ((System.ComponentModel.ISupportInitialize)England_flag).EndInit();
+            ((System.ComponentModel.ISupportInitialize)France_flag).EndInit();
+            ((System.ComponentModel.ISupportInitialize)dgvGroupeDroits).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pbAddRow).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pbRemoveRow).EndInit();
+            ((System.ComponentModel.ISupportInitialize)DgvUsersList).EndInit();
+            panelNavigation.ResumeLayout(false);
+            panelNavigation.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox3).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox4).EndInit();
+            panelDetail.ResumeLayout(false);
+            panelDetail.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox6).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox5).EndInit();
+            ((System.ComponentModel.ISupportInitialize)RqPont).EndInit();
+            ResumeLayout(false);
         }
 
         #endregion

@@ -167,6 +167,26 @@ namespace WidraSoft.DA
             }
         }
 
+        public bool IsPending(Int32 Id)
+        {
+            String sql = "SELECT ETATPESEE FROM PESEEPB WHERE PESEEPBID=" + Id;
+            conn.ConnectionString = connString;
+            if (conn.State == ConnectionState.Closed)
+                conn.Open();
+            SqlCommand cmd = new SqlCommand(sql, conn);
+            try
+            {
+                string etat = (string)cmd.ExecuteScalar();
+                if (etat == "Complete")
+                    return false;
+                else 
+                    return true;
+            }
+            catch
+            {
+                throw;
+            }
+        }
         public Int32 GetPoids2ById(Int32 Id)
         {
             String sql = "SELECT POIDS2 FROM PESEEPB WHERE PESEEPBID=" + Id;

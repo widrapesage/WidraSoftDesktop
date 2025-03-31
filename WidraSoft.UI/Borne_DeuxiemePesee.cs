@@ -36,6 +36,8 @@ namespace WidraSoft.UI
 
             WindowState = FormWindowState.Maximized;
 
+            this.TopMost = true;
+
             if (vg_lang == "fr")
             {
                 France_flag.Visible = true;

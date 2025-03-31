@@ -300,7 +300,7 @@ namespace WidraSoft.UI
             if (cbFirme.Text != "")
                 vl_Filter = vl_Filter + " AND FIRMEID=" + cbFirme.SelectedValue;
             if (cbClient.Text != "")
-                vl_Filter = vl_Filter + " AND CLIENTID=" + cbCamion.SelectedValue;
+                vl_Filter = vl_Filter + " AND CLIENTID=" + cbClient.SelectedValue;
             if (cbProduit.Text != "")
                 vl_Filter = vl_Filter + " AND PRODUITID=" + cbProduit.SelectedValue;
             if (cbType.Text != "")
@@ -337,8 +337,11 @@ namespace WidraSoft.UI
 
         private void DgvList_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
-            Form form = new PeseePBDetail(0, Common_functions.GetDatagridViewSelectedId(DgvList));
-            form.Show();
+            try
+            {
+                Form form = new PeseePBDetail(0, Common_functions.GetDatagridViewSelectedId(DgvList));
+                form.Show();
+            } catch { throw; }           
         }
 
         private void DgvList_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
@@ -372,8 +375,25 @@ namespace WidraSoft.UI
             if (DgvList.Rows.Count > 0)
             {
                 DgvList.Focus();
-                Form form = new PeseePBTicketA5(Common_functions.GetDatagridViewSelectedId(DgvList));
-                form.Show();
+                PeseePB peseePB = new PeseePB();
+                if (!peseePB.IsPending(Common_functions.GetDatagridViewSelectedId(DgvList))) 
+                {
+                    try
+                    {
+                        Form form = new PeseePBTicketA5(Common_functions.GetDatagridViewSelectedId(DgvList));
+                        form.Show();
+                    }
+                    catch { throw; }
+                }
+                else
+                {
+                    if (cbLang.Text == "FR")
+                        Custom_MessageBox.Show("FR", "Vous ne pouvez pas imprimer l'enregistrement tant que la pesée n'est pas completée.", "Liste des pesées", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    else if (cbLang.Text == "EN")
+                        Custom_MessageBox.Show("EN", "You can't print this record before the weighing is completed", "Weighing's list", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    else
+                        Custom_MessageBox.Show("ES", "No puede eliminar el registro hasta que se confirme el cambio", "Pesaje", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
             }
             else
             {

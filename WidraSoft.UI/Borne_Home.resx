@@ -181,7 +181,7 @@
     <value>panelDetailCentre</value>
   </data>
   <data name="&gt;&gt;Spain_flag.ZOrder" xml:space="preserve">
-    <value>8</value>
+    <value>14</value>
   </data>
   <data name="England_flag.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>None</value>
@@ -211,7 +211,7 @@
     <value>panelDetailCentre</value>
   </data>
   <data name="&gt;&gt;England_flag.ZOrder" xml:space="preserve">
-    <value>4</value>
+    <value>10</value>
   </data>
   <data name="France_flag.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>None</value>
@@ -241,7 +241,7 @@
     <value>panelDetailCentre</value>
   </data>
   <data name="&gt;&gt;France_flag.ZOrder" xml:space="preserve">
-    <value>2</value>
+    <value>8</value>
   </data>
   <metadata name="timer_Time.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 17</value>
@@ -284,7 +284,7 @@
     <value>panelDetailCentre</value>
   </data>
   <data name="&gt;&gt;lbDate.ZOrder" xml:space="preserve">
-    <value>5</value>
+    <value>11</value>
   </data>
   <data name="select_FR.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>None</value>
@@ -314,7 +314,7 @@
     <value>panelDetailCentre</value>
   </data>
   <data name="&gt;&gt;select_FR.ZOrder" xml:space="preserve">
-    <value>1</value>
+    <value>7</value>
   </data>
   <data name="select_EN.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>None</value>
@@ -344,7 +344,7 @@
     <value>panelDetailCentre</value>
   </data>
   <data name="&gt;&gt;select_EN.ZOrder" xml:space="preserve">
-    <value>3</value>
+    <value>9</value>
   </data>
   <data name="select_ES.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>None</value>
@@ -374,13 +374,13 @@
     <value>panelDetailCentre</value>
   </data>
   <data name="&gt;&gt;select_ES.ZOrder" xml:space="preserve">
-    <value>7</value>
+    <value>13</value>
   </data>
   <data name="lbMessage.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Bottom, Left, Right</value>
   </data>
   <data name="lbMessage.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Corbel, 22pt, style=Bold</value>
+    <value>Corbel, 20pt, style=Bold</value>
   </data>
   <data name="lbMessage.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
@@ -413,7 +413,7 @@
     <value>panelDetailCentre</value>
   </data>
   <data name="&gt;&gt;lbMessage.ZOrder" xml:space="preserve">
-    <value>6</value>
+    <value>12</value>
   </data>
   <data name="panelWeight.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Top</value>
@@ -464,10 +464,226 @@
     <value>panelDetailCentre</value>
   </data>
   <data name="&gt;&gt;pictureBox1.ZOrder" xml:space="preserve">
-    <value>0</value>
+    <value>6</value>
   </data>
   <data name="panelDetailCentre.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>None</value>
+  </data>
+  <data name="pbContact3.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>None</value>
+  </data>
+  <data name="pbContact3.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="pbContact3.Location" type="System.Drawing.Point, System.Drawing">
+    <value>86, 132</value>
+  </data>
+  <data name="pbContact3.Size" type="System.Drawing.Size, System.Drawing">
+    <value>32, 32</value>
+  </data>
+  <data name="pbContact3.SizeMode" type="System.Windows.Forms.PictureBoxSizeMode, System.Windows.Forms">
+    <value>AutoSize</value>
+  </data>
+  <data name="pbContact3.TabIndex" type="System.Int32, mscorlib">
+    <value>152</value>
+  </data>
+  <data name="&gt;&gt;pbContact3.Name" xml:space="preserve">
+    <value>pbContact3</value>
+  </data>
+  <data name="&gt;&gt;pbContact3.Type" xml:space="preserve">
+    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;pbContact3.Parent" xml:space="preserve">
+    <value>panelDetailCentre</value>
+  </data>
+  <data name="&gt;&gt;pbContact3.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="lbContact3.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>None</value>
+  </data>
+  <data name="lbContact3.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="lbContact3.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Calibri, 16pt, style=Bold</value>
+  </data>
+  <data name="lbContact3.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="lbContact3.Location" type="System.Drawing.Point, System.Drawing">
+    <value>123, 132</value>
+  </data>
+  <data name="lbContact3.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>2, 0, 2, 0</value>
+  </data>
+  <data name="lbContact3.Size" type="System.Drawing.Size, System.Drawing">
+    <value>30, 27</value>
+  </data>
+  <data name="lbContact3.TabIndex" type="System.Int32, mscorlib">
+    <value>151</value>
+  </data>
+  <data name="lbContact3.Text" xml:space="preserve">
+    <value>...</value>
+  </data>
+  <data name="lbContact3.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleCenter</value>
+  </data>
+  <data name="&gt;&gt;lbContact3.Name" xml:space="preserve">
+    <value>lbContact3</value>
+  </data>
+  <data name="&gt;&gt;lbContact3.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lbContact3.Parent" xml:space="preserve">
+    <value>panelDetailCentre</value>
+  </data>
+  <data name="&gt;&gt;lbContact3.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="pbContact2.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>None</value>
+  </data>
+  <data name="pbContact2.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="pbContact2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>86, 77</value>
+  </data>
+  <data name="pbContact2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>32, 32</value>
+  </data>
+  <data name="pbContact2.SizeMode" type="System.Windows.Forms.PictureBoxSizeMode, System.Windows.Forms">
+    <value>AutoSize</value>
+  </data>
+  <data name="pbContact2.TabIndex" type="System.Int32, mscorlib">
+    <value>150</value>
+  </data>
+  <data name="&gt;&gt;pbContact2.Name" xml:space="preserve">
+    <value>pbContact2</value>
+  </data>
+  <data name="&gt;&gt;pbContact2.Type" xml:space="preserve">
+    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;pbContact2.Parent" xml:space="preserve">
+    <value>panelDetailCentre</value>
+  </data>
+  <data name="&gt;&gt;pbContact2.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="lbContact2.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>None</value>
+  </data>
+  <data name="lbContact2.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="lbContact2.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Calibri, 16pt, style=Bold</value>
+  </data>
+  <data name="lbContact2.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="lbContact2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>123, 77</value>
+  </data>
+  <data name="lbContact2.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>2, 0, 2, 0</value>
+  </data>
+  <data name="lbContact2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>30, 27</value>
+  </data>
+  <data name="lbContact2.TabIndex" type="System.Int32, mscorlib">
+    <value>149</value>
+  </data>
+  <data name="lbContact2.Text" xml:space="preserve">
+    <value>...</value>
+  </data>
+  <data name="lbContact2.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleCenter</value>
+  </data>
+  <data name="&gt;&gt;lbContact2.Name" xml:space="preserve">
+    <value>lbContact2</value>
+  </data>
+  <data name="&gt;&gt;lbContact2.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lbContact2.Parent" xml:space="preserve">
+    <value>panelDetailCentre</value>
+  </data>
+  <data name="&gt;&gt;lbContact2.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="pbContact1.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>None</value>
+  </data>
+  <data name="pbContact1.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="pbContact1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>86, 22</value>
+  </data>
+  <data name="pbContact1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>32, 32</value>
+  </data>
+  <data name="pbContact1.SizeMode" type="System.Windows.Forms.PictureBoxSizeMode, System.Windows.Forms">
+    <value>AutoSize</value>
+  </data>
+  <data name="pbContact1.TabIndex" type="System.Int32, mscorlib">
+    <value>148</value>
+  </data>
+  <data name="&gt;&gt;pbContact1.Name" xml:space="preserve">
+    <value>pbContact1</value>
+  </data>
+  <data name="&gt;&gt;pbContact1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;pbContact1.Parent" xml:space="preserve">
+    <value>panelDetailCentre</value>
+  </data>
+  <data name="&gt;&gt;pbContact1.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="lbContact1.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>None</value>
+  </data>
+  <data name="lbContact1.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="lbContact1.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Calibri, 16pt, style=Bold</value>
+  </data>
+  <data name="lbContact1.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="lbContact1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>123, 22</value>
+  </data>
+  <data name="lbContact1.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>2, 0, 2, 0</value>
+  </data>
+  <data name="lbContact1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>30, 27</value>
+  </data>
+  <data name="lbContact1.TabIndex" type="System.Int32, mscorlib">
+    <value>147</value>
+  </data>
+  <data name="lbContact1.Text" xml:space="preserve">
+    <value>...</value>
+  </data>
+  <data name="lbContact1.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleCenter</value>
+  </data>
+  <data name="&gt;&gt;lbContact1.Name" xml:space="preserve">
+    <value>lbContact1</value>
+  </data>
+  <data name="&gt;&gt;lbContact1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lbContact1.Parent" xml:space="preserve">
+    <value>panelDetailCentre</value>
+  </data>
+  <data name="&gt;&gt;lbContact1.ZOrder" xml:space="preserve">
+    <value>5</value>
   </data>
   <data name="panelDetailCentre.Location" type="System.Drawing.Point, System.Drawing">
     <value>3, 3</value>
@@ -1063,9 +1279,6 @@
         AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
         AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==
 </value>
-  </data>
-  <data name="$this.Text" xml:space="preserve">
-    <value>Borne</value>
   </data>
   <data name="&gt;&gt;timer_Time.Name" xml:space="preserve">
     <value>timer_Time</value>

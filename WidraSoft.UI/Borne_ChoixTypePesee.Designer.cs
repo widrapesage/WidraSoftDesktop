@@ -46,9 +46,9 @@
             fleche_Lecteur = new System.Windows.Forms.PictureBox();
             panelWeight = new System.Windows.Forms.Panel();
             panel1 = new System.Windows.Forms.Panel();
+            lbNotFound = new System.Windows.Forms.Label();
             panel2 = new System.Windows.Forms.Panel();
             Weight_Timer = new System.Windows.Forms.Timer(components);
-            lbNotFound = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)select_ES).BeginInit();
             ((System.ComponentModel.ISupportInitialize)select_EN).BeginInit();
             ((System.ComponentModel.ISupportInitialize)select_FR).BeginInit();
@@ -64,9 +64,9 @@
             // 
             // txtPoids
             // 
+            resources.ApplyResources(txtPoids, "txtPoids");
             txtPoids.BackColor = System.Drawing.Color.Black;
             txtPoids.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            resources.ApplyResources(txtPoids, "txtPoids");
             txtPoids.ForeColor = System.Drawing.Color.FromArgb(112, 228, 132);
             txtPoids.Name = "txtPoids";
             txtPoids.TabStop = false;
@@ -135,7 +135,7 @@
             resources.ApplyResources(QrCode, "QrCode");
             QrCode.BackColor = System.Drawing.Color.Transparent;
             QrCode.Cursor = System.Windows.Forms.Cursors.Hand;
-            QrCode.Image = Properties.Resources.qr_code;
+            QrCode.Image = Properties.Resources.identifiant;
             QrCode.Name = "QrCode";
             QrCode.TabStop = false;
             // 
@@ -200,9 +200,9 @@
             // 
             // panelWeight
             // 
+            resources.ApplyResources(panelWeight, "panelWeight");
             panelWeight.BackColor = System.Drawing.Color.Black;
             panelWeight.Controls.Add(txtPoids);
-            resources.ApplyResources(panelWeight, "panelWeight");
             panelWeight.Name = "panelWeight";
             // 
             // panel1
@@ -223,21 +223,21 @@
             panel1.Controls.Add(QrCode);
             panel1.Name = "panel1";
             // 
-            // panel2
-            // 
-            panel2.Controls.Add(panel1);
-            resources.ApplyResources(panel2, "panel2");
-            panel2.Name = "panel2";
-            // 
-            // Weight_Timer
-            // 
-            Weight_Timer.Tick += Weight_Timer_Tick;
-            // 
             // lbNotFound
             // 
             resources.ApplyResources(lbNotFound, "lbNotFound");
             lbNotFound.ForeColor = System.Drawing.Color.Tomato;
             lbNotFound.Name = "lbNotFound";
+            // 
+            // panel2
+            // 
+            resources.ApplyResources(panel2, "panel2");
+            panel2.Controls.Add(panel1);
+            panel2.Name = "panel2";
+            // 
+            // Weight_Timer
+            // 
+            Weight_Timer.Tick += Weight_Timer_Tick;
             // 
             // Borne_ChoixTypePesee
             // 

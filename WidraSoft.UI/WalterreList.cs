@@ -49,12 +49,13 @@ namespace WidraSoft.UI
             DgvList.Columns["CLIENT"].Visible = true;
             DgvList.Columns["VOLUME"].Visible = false;
             DgvList.Columns["SEUIL_MAX"].Visible = false;
-            DgvList.Columns["REGION"].Visible = true;
+            DgvList.Columns["REGION"].Visible = false;
             DgvList.Columns["TEXTE_BORNE"].Visible = false;
             DgvList.Columns["OBSERVATIONS"].Visible = false;
             DgvList.Columns["DEPASSEMENT"].Visible = false;
             DgvList.Columns["DEPASSEMENT_SEUIL_MAX"].Visible = false;
             DgvList.Columns["CLOTURE"].Visible = false;
+            DgvList.Columns["NOM"].Visible = true;
             DgvList.Columns["DATECLOTURE"].Visible = true;
             DgvList.Columns["DATECREATION"].Visible = true;
 
@@ -170,6 +171,16 @@ namespace WidraSoft.UI
                 }
 
             }
+        }
+
+        private void DgvList_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            try
+            {
+                Form form = new WalterreDetail("Edit", Common_functions.GetDatagridViewSelectedId(DgvList));
+                form.Show();
+            }
+            catch { throw; }
         }
     }
 }

@@ -125,7 +125,8 @@ namespace WidraSoft.UI
         {
             if (txtId.Text == "" && txtDateCreation.Text == "" && txtDesignation.Text == "" && cbWeight_SettingsId.Text == "" && cbWeighing_SettingsId.Text == "" && txtCOM.Text == "" && txtActiverPoids.Text == "" && cbBaudRate.Text == "" && cbDataBits.Text == ""
                 && cbStopBits.Text == "" && cbHandshake.Text == "" && txtReadTimeOut.Text == "" && txtMachine.Text == "" && cbDemarrage.Text == "" && cbUtilisateurId.Text == "" && txtActiverMultipleParam.Text == "" && cbBornePremierePesee.Text == "" && cbBorneDeuxiemePesee.Text == ""
-                && cbBorneTareManuelle.Text == "" && cbFlux_Default.Text == "" && txtActiverScanner.Text == "" && cbTypeScanner.Text == "" && txtActiverBarriere.Text == "" && txtCOMBarriere.Text == "" && txtCOMScanner.Text == "")
+                && cbBorneTareManuelle.Text == "" && cbFlux_Default.Text == "" && txtActiverScanner.Text == "" && cbTypeScanner.Text == "" && txtActiverBarriere.Text == "" && txtCOMBarriere.Text == "" && txtCOMScanner.Text == ""
+                && txtContact1.Text == "" && txtContact2.Text == "" && txtContact3.Text == "")
             {
                 lbModifier.Enabled = false;
                 lbModifier.BackColor = Color.Transparent;
@@ -215,12 +216,15 @@ namespace WidraSoft.UI
                     chx_ActiverScanner.Checked = false;
                 cbTypeScanner.Text = row["TYPESCANNER"].ToString();
                 txtActiverBarriere.Text = row["ACTIVER_BARRIERE"].ToString();
-                if (txtActiverScanner.Text == "1")
+                if (txtActiverBarriere.Text == "1")
                     chx_ActiverBarriere.Checked = true;
                 else
                     chx_ActiverBarriere.Checked = false;
                 txtCOMBarriere.Text = row["NUMPORTCOM_BARRIERE"].ToString();
                 txtCOMScanner.Text = row["NUMPORTCOM_SCANNER"].ToString();
+                txtContact1.Text = row["CONTACT1"].ToString();
+                txtContact2.Text = row["CONTACT2"].ToString();
+                txtContact3.Text = row["CONTACT3"].ToString();
             }
         }
 
@@ -256,6 +260,9 @@ namespace WidraSoft.UI
             chx_ActiverBarriere.Enabled = false;
             txtCOMBarriere.Enabled = false;
             txtCOMScanner.Enabled = false;
+            txtContact1.Enabled = false;
+            txtContact2.Enabled = false;
+            txtContact3.Enabled = false;    
             pbUpdating.Visible = false;
 
             vg_IsEnabled = false;
@@ -293,6 +300,9 @@ namespace WidraSoft.UI
             chx_ActiverBarriere.Enabled = true;
             txtCOMBarriere.Enabled = true;
             txtCOMScanner.Enabled = true;
+            txtContact1.Enabled = true;
+            txtContact2.Enabled = true; 
+            txtContact3.Enabled = true;
             pbUpdating.Visible = true;
 
             vg_IsEnabled = true;
@@ -330,6 +340,9 @@ namespace WidraSoft.UI
             txtCOMBarriere.Text = "";
             txtCOMScanner.Text = "";
             cbTypeScanner.Text = "";
+            txtContact1.Text = "";
+            txtContact2.Text = "";
+            txtContact3.Text = "";
         }
 
         private void Bind_DgvFirmes()
@@ -438,7 +451,7 @@ namespace WidraSoft.UI
                             Pont pont = new Pont();
                             pont.Add(txtDesignation.Text, txtCOM.Text, Common_functions.CbSelectedValue_Convert_Int(cbWeight_SettingsId), Common_functions.CbSelectedValue_Convert_Int(cbWeighing_SettingsId), ActiverPoids, BaudRate, DataBits, cbStopBits.Text,
                                  cbHandshake.Text, ReadTimeOut, txtMachine.Text, cbDemarrage.Text, Common_functions.CbSelectedValue_Convert_Int(cbUtilisateurId), ActiverMultipleParam, PoidsDetection, cbBornePremierePesee.Text, cbBorneDeuxiemePesee.Text
-                                 , cbBorneTareManuelle.Text, cbFlux_Default.Text, ActiverScanner, cbTypeScanner.Text, ActiverBarriere, txtCOMBarriere.Text, txtCOMScanner.Text);
+                                 , cbBorneTareManuelle.Text, cbFlux_Default.Text, ActiverScanner, cbTypeScanner.Text, ActiverBarriere, txtCOMBarriere.Text, txtCOMScanner.Text, txtContact1.Text, txtContact2.Text, txtContact3.Text, 0);
                             if (cbLang.Text == "FR")
                                 Custom_MessageBox.Show("FR", "Pont ajouté avec succès", "Pont", MessageBoxButtons.OK, MessageBoxIcon.Information);
                             else if (cbLang.Text == "EN")
@@ -522,7 +535,7 @@ namespace WidraSoft.UI
                                     Pont pont = new Pont();
                                     pont.Update(Id, txtDesignation.Text, txtCOM.Text, Common_functions.CbSelectedValue_Convert_Int(cbWeight_SettingsId), Common_functions.CbSelectedValue_Convert_Int(cbWeighing_SettingsId), ActiverPoids, BaudRate, DataBits, cbStopBits.Text,
                                          cbHandshake.Text, ReadTimeOut, txtMachine.Text, cbDemarrage.Text, Common_functions.CbSelectedValue_Convert_Int(cbUtilisateurId), ActiverMultipleParam, PoidsDetection, cbBornePremierePesee.Text, cbBorneDeuxiemePesee.Text
-                                 , cbBorneTareManuelle.Text, cbFlux_Default.Text, ActiverScanner, cbTypeScanner.Text, ActiverBarriere, txtCOMBarriere.Text, txtCOMScanner.Text);
+                                 , cbBorneTareManuelle.Text, cbFlux_Default.Text, ActiverScanner, cbTypeScanner.Text, ActiverBarriere, txtCOMBarriere.Text, txtCOMScanner.Text, txtContact1.Text, txtContact2.Text, txtContact3.Text, 0);
                                     if (cbLang.Text == "FR")
                                         Custom_MessageBox.Show("FR", "Pont modifié avec succès", "Pont", MessageBoxButtons.OK, MessageBoxIcon.Information);
                                     else if (cbLang.Text == "EN")

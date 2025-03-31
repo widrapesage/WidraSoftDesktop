@@ -27,6 +27,19 @@ namespace WidraSoft.BL
 
         }
 
+        public DataTable List_Valid(string filter)
+        {
+            try
+            {
+                WalterreDA walterre = new WalterreDA();
+                return walterre.List_Valid(filter);
+            }
+            catch
+            {
+                throw;
+            }
+        }
+
         public DataTable List_Enlevements(string filter)
         {
             try
@@ -161,6 +174,19 @@ namespace WidraSoft.BL
             {
                 WalterreDA walterre = new WalterreDA();
                 return walterre.IfExists(Name);
+            }
+            catch
+            {
+                throw;
+            }
+        }
+
+        public bool IfExists_Valid(String Name)
+        {
+            try
+            {
+                WalterreDA walterre = new WalterreDA();
+                return walterre.IfExists_Valid(Name);
             }
             catch
             {

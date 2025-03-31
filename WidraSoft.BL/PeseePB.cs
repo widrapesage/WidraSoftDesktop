@@ -116,6 +116,19 @@ namespace WidraSoft.BL
             }
         }
 
+        public bool IsPending(Int32 Id)
+        {
+            try
+            {
+                PeseePBDA peseePBDA = new PeseePBDA();
+                return peseePBDA.IsPending(Id);
+            }
+            catch
+            {
+                throw;
+            }
+        }
+
         public Int32 GetPoids2ById(Int32 Id)
         {
             try

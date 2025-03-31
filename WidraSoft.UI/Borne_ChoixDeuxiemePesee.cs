@@ -27,6 +27,10 @@ namespace WidraSoft.UI
         private void Borne_ChoixDeuxiemePesee_Load(object sender, EventArgs e)
         {
             this.CenterToScreen();
+
+            this.TopMost = true;
+
+
             WindowState = FormWindowState.Maximized;
 
             if (vg_lang == "fr")
@@ -200,6 +204,7 @@ namespace WidraSoft.UI
         {
             try
             {
+                DgvList.Focus();
                 Form form = new Borne_DeuxiemePesee(vg_P, Common_functions.GetDatagridViewSelectedId(DgvList), "", vg_lang, vg_PontId);
                 form.Show();
                 Close();

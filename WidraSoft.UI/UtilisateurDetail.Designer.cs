@@ -30,9 +30,9 @@ namespace WidraSoft.UI
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UtilisateurDetail));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             txtId = new System.Windows.Forms.TextBox();
             label1 = new System.Windows.Forms.Label();
             txtNom = new System.Windows.Forms.TextBox();
@@ -63,12 +63,12 @@ namespace WidraSoft.UI
             label8 = new System.Windows.Forms.Label();
             DgvAuthorizationList = new System.Windows.Forms.DataGridView();
             panelDetail = new System.Windows.Forms.Panel();
+            label9 = new System.Windows.Forms.Label();
+            cbLanguage = new System.Windows.Forms.ComboBox();
             pictureBox6 = new System.Windows.Forms.PictureBox();
             pictureBox5 = new System.Windows.Forms.PictureBox();
             pictureBox4 = new System.Windows.Forms.PictureBox();
             pictureBox12 = new System.Windows.Forms.PictureBox();
-            label9 = new System.Windows.Forms.Label();
-            cbLanguage = new System.Windows.Forms.ComboBox();
             panelLang.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pbUpdating).BeginInit();
             ((System.ComponentModel.ISupportInitialize)Spain_flag).BeginInit();
@@ -313,34 +313,34 @@ namespace WidraSoft.UI
             DgvAuthorizationList.BackgroundColor = System.Drawing.Color.FromArgb(72, 86, 81);
             DgvAuthorizationList.BorderStyle = System.Windows.Forms.BorderStyle.None;
             DgvAuthorizationList.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.Sunken;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.Honeydew;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Corbel", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.FromArgb(72, 86, 81);
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            DgvAuthorizationList.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.Honeydew;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Corbel", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(72, 86, 81);
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            DgvAuthorizationList.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             DgvAuthorizationList.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle5.BackColor = System.Drawing.Color.Honeydew;
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Calibri", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.FromArgb(72, 86, 81);
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            DgvAuthorizationList.DefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.Honeydew;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Calibri", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(72, 86, 81);
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            DgvAuthorizationList.DefaultCellStyle = dataGridViewCellStyle2;
             resources.ApplyResources(DgvAuthorizationList, "DgvAuthorizationList");
             DgvAuthorizationList.Name = "DgvAuthorizationList";
             DgvAuthorizationList.ReadOnly = true;
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle6.BackColor = System.Drawing.Color.Honeydew;
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Corbel", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.MediumSeaGreen;
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            DgvAuthorizationList.RowHeadersDefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.Honeydew;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Corbel", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.MediumSeaGreen;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            DgvAuthorizationList.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
             DgvAuthorizationList.RowTemplate.Height = 33;
             // 
             // panelDetail
@@ -371,6 +371,19 @@ namespace WidraSoft.UI
             resources.ApplyResources(panelDetail, "panelDetail");
             panelDetail.Name = "panelDetail";
             // 
+            // label9
+            // 
+            resources.ApplyResources(label9, "label9");
+            label9.ForeColor = System.Drawing.Color.White;
+            label9.Name = "label9";
+            // 
+            // cbLanguage
+            // 
+            cbLanguage.BackColor = System.Drawing.Color.Honeydew;
+            resources.ApplyResources(cbLanguage, "cbLanguage");
+            cbLanguage.FormattingEnabled = true;
+            cbLanguage.Name = "cbLanguage";
+            // 
             // pictureBox6
             // 
             pictureBox6.Image = Properties.Resources.asterisk;
@@ -398,19 +411,6 @@ namespace WidraSoft.UI
             resources.ApplyResources(pictureBox12, "pictureBox12");
             pictureBox12.Name = "pictureBox12";
             pictureBox12.TabStop = false;
-            // 
-            // label9
-            // 
-            resources.ApplyResources(label9, "label9");
-            label9.ForeColor = System.Drawing.Color.White;
-            label9.Name = "label9";
-            // 
-            // cbLanguage
-            // 
-            cbLanguage.BackColor = System.Drawing.Color.Honeydew;
-            resources.ApplyResources(cbLanguage, "cbLanguage");
-            cbLanguage.FormattingEnabled = true;
-            cbLanguage.Name = "cbLanguage";
             // 
             // UtilisateurDetail
             // 

@@ -10,7 +10,6 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using WidraSoft.BL;
 using WidraSoft.DA;
-using WeighBridge_Library.Clients;
 
 namespace WidraSoft.UI
 {
@@ -59,6 +58,8 @@ namespace WidraSoft.UI
         private void Borne_ChoixTypePesee_Load(object sender, EventArgs e)
         {
             this.CenterToScreen();
+
+            //this.TopMost = true;
 
             WindowState = FormWindowState.Maximized;
 
@@ -111,7 +112,7 @@ namespace WidraSoft.UI
 
                 try
                 {
-                    if (!comScanner.IsOpen) 
+                    if (!comScanner.IsOpen)
                         comScanner.Open();
                 }
                 catch
@@ -248,7 +249,6 @@ namespace WidraSoft.UI
 
             try
             {
-                WeighingApplicationClient weighingApplicationClient = new WeighingApplicationClient();
                 comScanner.Read(trame, 0, trame.Length);
                 s = System.Text.Encoding.ASCII.GetString(trame);
                 if (s.Length >= 10)

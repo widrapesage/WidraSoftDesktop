@@ -34,11 +34,6 @@ namespace WidraSoft.UI
             homeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             camionsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             chauffeursToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            pontsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            pToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            toolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
-            toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            ParamPoidstoolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             gérerToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             camionsToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             produitsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -46,18 +41,22 @@ namespace WidraSoft.UI
             firmesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             transporteursToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             clientsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            BorneToolpStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             paramètresToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             pamamètresDePeséeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             tablesSupplémentairesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             tablesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             enregistrementsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             walterreToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            BorneToolpStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             reportingToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            ReportingWalterretoolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             listePeseesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            pontsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            pToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            toolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
+            toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            ParamPoidstoolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             synchronisationToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            aideToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            aIIIToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             quitterToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             lblusername = new System.Windows.Forms.Label();
             pictureBox1 = new System.Windows.Forms.PictureBox();
@@ -94,7 +93,7 @@ namespace WidraSoft.UI
             menuStrip.BackColor = System.Drawing.Color.FromArgb(58, 62, 60);
             resources.ApplyResources(menuStrip, "menuStrip");
             menuStrip.ImageScalingSize = new System.Drawing.Size(24, 24);
-            menuStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] { homeToolStripMenuItem, camionsToolStripMenuItem, chauffeursToolStripMenuItem, pontsToolStripMenuItem, pToolStripMenuItem, gérerToolStripMenuItem, BorneToolpStripMenuItem, paramètresToolStripMenuItem, reportingToolStripMenuItem, synchronisationToolStripMenuItem, aideToolStripMenuItem, quitterToolStripMenuItem });
+            menuStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] { homeToolStripMenuItem, camionsToolStripMenuItem, chauffeursToolStripMenuItem, gérerToolStripMenuItem, paramètresToolStripMenuItem, BorneToolpStripMenuItem, reportingToolStripMenuItem, pontsToolStripMenuItem, pToolStripMenuItem, synchronisationToolStripMenuItem, quitterToolStripMenuItem });
             menuStrip.Name = "menuStrip";
             menuStrip.RenderMode = System.Windows.Forms.ToolStripRenderMode.Professional;
             // 
@@ -128,53 +127,6 @@ namespace WidraSoft.UI
             chauffeursToolStripMenuItem.Name = "chauffeursToolStripMenuItem";
             chauffeursToolStripMenuItem.Padding = new System.Windows.Forms.Padding(4, 1, 4, 3);
             chauffeursToolStripMenuItem.Click += chauffeursToolStripMenuItem_Click;
-            // 
-            // pontsToolStripMenuItem
-            // 
-            resources.ApplyResources(pontsToolStripMenuItem, "pontsToolStripMenuItem");
-            pontsToolStripMenuItem.ForeColor = System.Drawing.Color.White;
-            pontsToolStripMenuItem.Image = Properties.Resources.scale;
-            pontsToolStripMenuItem.Margin = new System.Windows.Forms.Padding(0, 4, 0, 0);
-            pontsToolStripMenuItem.Name = "pontsToolStripMenuItem";
-            pontsToolStripMenuItem.Padding = new System.Windows.Forms.Padding(4, 1, 4, 3);
-            pontsToolStripMenuItem.Click += pontsToolStripMenuItem_Click;
-            // 
-            // pToolStripMenuItem
-            // 
-            pToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] { toolStripMenuItem2, toolStripMenuItem1, ParamPoidstoolStripMenuItem1 });
-            resources.ApplyResources(pToolStripMenuItem, "pToolStripMenuItem");
-            pToolStripMenuItem.ForeColor = System.Drawing.Color.White;
-            pToolStripMenuItem.Image = Properties.Resources.device;
-            pToolStripMenuItem.Margin = new System.Windows.Forms.Padding(0, 4, 0, 0);
-            pToolStripMenuItem.Name = "pToolStripMenuItem";
-            pToolStripMenuItem.Padding = new System.Windows.Forms.Padding(4, 1, 4, 3);
-            // 
-            // toolStripMenuItem2
-            // 
-            toolStripMenuItem2.BackColor = System.Drawing.Color.FromArgb(58, 62, 60);
-            toolStripMenuItem2.ForeColor = System.Drawing.Color.White;
-            toolStripMenuItem2.Image = Properties.Resources.Weighing_settings;
-            toolStripMenuItem2.Name = "toolStripMenuItem2";
-            resources.ApplyResources(toolStripMenuItem2, "toolStripMenuItem2");
-            toolStripMenuItem2.Click += toolStripMenuItem2_Click;
-            // 
-            // toolStripMenuItem1
-            // 
-            toolStripMenuItem1.BackColor = System.Drawing.Color.FromArgb(58, 62, 60);
-            toolStripMenuItem1.ForeColor = System.Drawing.Color.White;
-            toolStripMenuItem1.Image = Properties.Resources.Weighing_settings;
-            toolStripMenuItem1.Name = "toolStripMenuItem1";
-            resources.ApplyResources(toolStripMenuItem1, "toolStripMenuItem1");
-            toolStripMenuItem1.Click += toolStripMenuItem1_Click;
-            // 
-            // ParamPoidstoolStripMenuItem1
-            // 
-            ParamPoidstoolStripMenuItem1.BackColor = System.Drawing.Color.FromArgb(58, 62, 60);
-            ParamPoidstoolStripMenuItem1.ForeColor = System.Drawing.Color.White;
-            ParamPoidstoolStripMenuItem1.Image = Properties.Resources.Weighing_settings;
-            ParamPoidstoolStripMenuItem1.Name = "ParamPoidstoolStripMenuItem1";
-            resources.ApplyResources(ParamPoidstoolStripMenuItem1, "ParamPoidstoolStripMenuItem1");
-            ParamPoidstoolStripMenuItem1.Click += ParamPoidstoolStripMenuItem1_Click;
             // 
             // gérerToolStripMenuItem
             // 
@@ -240,17 +192,6 @@ namespace WidraSoft.UI
             resources.ApplyResources(clientsToolStripMenuItem, "clientsToolStripMenuItem");
             clientsToolStripMenuItem.Click += clientsToolStripMenuItem_Click;
             // 
-            // BorneToolpStripMenuItem
-            // 
-            BorneToolpStripMenuItem.BackColor = System.Drawing.Color.Transparent;
-            resources.ApplyResources(BorneToolpStripMenuItem, "BorneToolpStripMenuItem");
-            BorneToolpStripMenuItem.ForeColor = System.Drawing.Color.White;
-            BorneToolpStripMenuItem.Image = Properties.Resources.atm;
-            BorneToolpStripMenuItem.Margin = new System.Windows.Forms.Padding(0, 4, 0, 0);
-            BorneToolpStripMenuItem.Name = "BorneToolpStripMenuItem";
-            BorneToolpStripMenuItem.Padding = new System.Windows.Forms.Padding(4, 1, 4, 3);
-            BorneToolpStripMenuItem.Click += BorneToolpStripMenuItem_Click;
-            // 
             // paramètresToolStripMenuItem
             // 
             paramètresToolStripMenuItem.BackColor = System.Drawing.Color.Transparent;
@@ -307,10 +248,21 @@ namespace WidraSoft.UI
             resources.ApplyResources(walterreToolStripMenuItem, "walterreToolStripMenuItem");
             walterreToolStripMenuItem.Click += walterreToolStripMenuItem_Click;
             // 
+            // BorneToolpStripMenuItem
+            // 
+            BorneToolpStripMenuItem.BackColor = System.Drawing.Color.Transparent;
+            resources.ApplyResources(BorneToolpStripMenuItem, "BorneToolpStripMenuItem");
+            BorneToolpStripMenuItem.ForeColor = System.Drawing.Color.White;
+            BorneToolpStripMenuItem.Image = Properties.Resources.atm;
+            BorneToolpStripMenuItem.Margin = new System.Windows.Forms.Padding(0, 4, 0, 0);
+            BorneToolpStripMenuItem.Name = "BorneToolpStripMenuItem";
+            BorneToolpStripMenuItem.Padding = new System.Windows.Forms.Padding(4, 1, 4, 3);
+            BorneToolpStripMenuItem.Click += BorneToolpStripMenuItem_Click;
+            // 
             // reportingToolStripMenuItem
             // 
             reportingToolStripMenuItem.BackColor = System.Drawing.Color.Transparent;
-            reportingToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] { listePeseesToolStripMenuItem });
+            reportingToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] { ReportingWalterretoolStripMenuItem, listePeseesToolStripMenuItem });
             resources.ApplyResources(reportingToolStripMenuItem, "reportingToolStripMenuItem");
             reportingToolStripMenuItem.ForeColor = System.Drawing.Color.White;
             reportingToolStripMenuItem.Image = Properties.Resources.profit_report1;
@@ -318,6 +270,15 @@ namespace WidraSoft.UI
             reportingToolStripMenuItem.Name = "reportingToolStripMenuItem";
             reportingToolStripMenuItem.Padding = new System.Windows.Forms.Padding(4, 1, 4, 3);
             reportingToolStripMenuItem.Click += reportingToolStripMenuItem_Click;
+            // 
+            // ReportingWalterretoolStripMenuItem
+            // 
+            ReportingWalterretoolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(58, 62, 60);
+            ReportingWalterretoolStripMenuItem.ForeColor = System.Drawing.Color.White;
+            ReportingWalterretoolStripMenuItem.Image = Properties.Resources.lignes;
+            ReportingWalterretoolStripMenuItem.Name = "ReportingWalterretoolStripMenuItem";
+            resources.ApplyResources(ReportingWalterretoolStripMenuItem, "ReportingWalterretoolStripMenuItem");
+            ReportingWalterretoolStripMenuItem.Click += ReportingWalterretoolStripMenuItem_Click;
             // 
             // listePeseesToolStripMenuItem
             // 
@@ -328,28 +289,59 @@ namespace WidraSoft.UI
             resources.ApplyResources(listePeseesToolStripMenuItem, "listePeseesToolStripMenuItem");
             listePeseesToolStripMenuItem.Click += listePeseesToolStripMenuItem_Click;
             // 
+            // pontsToolStripMenuItem
+            // 
+            resources.ApplyResources(pontsToolStripMenuItem, "pontsToolStripMenuItem");
+            pontsToolStripMenuItem.ForeColor = System.Drawing.Color.White;
+            pontsToolStripMenuItem.Image = Properties.Resources.scale;
+            pontsToolStripMenuItem.Margin = new System.Windows.Forms.Padding(0, 4, 0, 0);
+            pontsToolStripMenuItem.Name = "pontsToolStripMenuItem";
+            pontsToolStripMenuItem.Padding = new System.Windows.Forms.Padding(4, 1, 4, 3);
+            pontsToolStripMenuItem.Click += pontsToolStripMenuItem_Click;
+            // 
+            // pToolStripMenuItem
+            // 
+            pToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] { toolStripMenuItem2, toolStripMenuItem1, ParamPoidstoolStripMenuItem1 });
+            resources.ApplyResources(pToolStripMenuItem, "pToolStripMenuItem");
+            pToolStripMenuItem.ForeColor = System.Drawing.Color.White;
+            pToolStripMenuItem.Image = Properties.Resources.device;
+            pToolStripMenuItem.Margin = new System.Windows.Forms.Padding(0, 4, 0, 0);
+            pToolStripMenuItem.Name = "pToolStripMenuItem";
+            pToolStripMenuItem.Padding = new System.Windows.Forms.Padding(4, 1, 4, 3);
+            // 
+            // toolStripMenuItem2
+            // 
+            toolStripMenuItem2.BackColor = System.Drawing.Color.FromArgb(58, 62, 60);
+            toolStripMenuItem2.ForeColor = System.Drawing.Color.White;
+            toolStripMenuItem2.Image = Properties.Resources.Weighing_settings;
+            toolStripMenuItem2.Name = "toolStripMenuItem2";
+            resources.ApplyResources(toolStripMenuItem2, "toolStripMenuItem2");
+            toolStripMenuItem2.Click += toolStripMenuItem2_Click;
+            // 
+            // toolStripMenuItem1
+            // 
+            toolStripMenuItem1.BackColor = System.Drawing.Color.FromArgb(58, 62, 60);
+            toolStripMenuItem1.ForeColor = System.Drawing.Color.White;
+            toolStripMenuItem1.Image = Properties.Resources.Weighing_settings;
+            toolStripMenuItem1.Name = "toolStripMenuItem1";
+            resources.ApplyResources(toolStripMenuItem1, "toolStripMenuItem1");
+            toolStripMenuItem1.Click += toolStripMenuItem1_Click;
+            // 
+            // ParamPoidstoolStripMenuItem1
+            // 
+            ParamPoidstoolStripMenuItem1.BackColor = System.Drawing.Color.FromArgb(58, 62, 60);
+            ParamPoidstoolStripMenuItem1.ForeColor = System.Drawing.Color.White;
+            ParamPoidstoolStripMenuItem1.Image = Properties.Resources.Weighing_settings;
+            ParamPoidstoolStripMenuItem1.Name = "ParamPoidstoolStripMenuItem1";
+            resources.ApplyResources(ParamPoidstoolStripMenuItem1, "ParamPoidstoolStripMenuItem1");
+            ParamPoidstoolStripMenuItem1.Click += ParamPoidstoolStripMenuItem1_Click;
+            // 
             // synchronisationToolStripMenuItem
             // 
             resources.ApplyResources(synchronisationToolStripMenuItem, "synchronisationToolStripMenuItem");
             synchronisationToolStripMenuItem.ForeColor = System.Drawing.Color.White;
             synchronisationToolStripMenuItem.Image = Properties.Resources.synchronize;
             synchronisationToolStripMenuItem.Name = "synchronisationToolStripMenuItem";
-            // 
-            // aideToolStripMenuItem
-            // 
-            aideToolStripMenuItem.BackColor = System.Drawing.Color.Transparent;
-            aideToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] { aIIIToolStripMenuItem });
-            resources.ApplyResources(aideToolStripMenuItem, "aideToolStripMenuItem");
-            aideToolStripMenuItem.ForeColor = System.Drawing.Color.White;
-            aideToolStripMenuItem.Image = Properties.Resources.help_web_button;
-            aideToolStripMenuItem.Margin = new System.Windows.Forms.Padding(0, 4, 0, 0);
-            aideToolStripMenuItem.Name = "aideToolStripMenuItem";
-            aideToolStripMenuItem.Padding = new System.Windows.Forms.Padding(4, 1, 4, 3);
-            // 
-            // aIIIToolStripMenuItem
-            // 
-            aIIIToolStripMenuItem.Name = "aIIIToolStripMenuItem";
-            resources.ApplyResources(aIIIToolStripMenuItem, "aIIIToolStripMenuItem");
             // 
             // quitterToolStripMenuItem
             // 
@@ -561,10 +553,8 @@ namespace WidraSoft.UI
         private System.Windows.Forms.ToolStripMenuItem chauffeursToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem paramètresToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem reportingToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem aideToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem quitterToolStripMenuItem;
         private System.Windows.Forms.Label lblusername;
-        private System.Windows.Forms.ToolStripMenuItem aIIIToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem gérerToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem pontsToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem camionsToolStripMenuItem1;
@@ -604,6 +594,7 @@ namespace WidraSoft.UI
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem2;
         private System.Windows.Forms.ToolStripMenuItem listePeseesToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem walterreToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem ReportingWalterretoolStripMenuItem;
         //private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

@@ -20,13 +20,15 @@ namespace WidraSoft.UI
         int vg_UtilisateurId;
         int vg_GroupeId;
         bool vg_IsTerminal;
+        bool vg_IsBorneLaunched;
         public static int languuage_index;
-        public MenuGeneral(Int32 UtilisateurId, bool IsTerminal)
+        public MenuGeneral(Int32 UtilisateurId, bool IsTerminal, bool IsBorneLaunched)
         {
             InitializeComponent();
             menuStrip.Renderer = new MyRenderer();
             vg_UtilisateurId = UtilisateurId;
             vg_IsTerminal = IsTerminal;
+            vg_IsBorneLaunched = IsBorneLaunched;
         }
 
 
@@ -51,11 +53,11 @@ namespace WidraSoft.UI
             lblusername.Text = utilisateur.GetFullUsername(vg_UtilisateurId);
             vg_GroupeId = utilisateur.GetGroupeIdById(vg_UtilisateurId);
 
-            txtEntreprise.Text = "WIDRA";
-            txtTypeAbonnement.Text = "Demo";
+            txtEntreprise.Text = "THOMASSEN";
+            txtTypeAbonnement.Text = "Classic";
             txtValidite.Text = "---";
 
-            if (vg_IsTerminal)
+            if (vg_IsTerminal && !vg_IsBorneLaunched)
             {
                 Form form = new Borne_Home();
                 form.ShowDialog();
@@ -393,7 +395,7 @@ namespace WidraSoft.UI
 
         private void toolStripMenuItem1_Click(object sender, EventArgs e)
         {
-            Form form = new TestANPR();
+            Form form = new ANPR();
             form.Show();
         }
 
@@ -444,6 +446,22 @@ namespace WidraSoft.UI
         private void toolStripMenuItem2_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void ReportingWalterretoolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (Common_functions.GetAccess(vg_GroupeId, "WAL"))
+            {
+                Form form = new ReportingWalterreParClient("1=1");
+                form.Show();
+            }
+            else
+            {
+                if (cbLang.Text == "FR")
+                    Custom_MessageBox.Show("FR", "Vous n'avez pas les autorisations nécessaires pour accéder à ce module.", "WidraSoft - Gestionnaires d'accès", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                else if (cbLang.Text == "EN")
+                    Custom_MessageBox.Show("EN", "You d'ont have the permission to access this module.", "WidraSoft - Access manager", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
     }
 }

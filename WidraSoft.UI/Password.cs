@@ -15,6 +15,7 @@ namespace WidraSoft.UI
     public partial class Password : Form
     {
         bool IsTerminal = false;
+        bool vg_IsBorneLaunched = false;
         public Password()
         {
             InitializeComponent();
@@ -39,6 +40,7 @@ namespace WidraSoft.UI
             DataTable dtPont = pont.FindByMachineName(System.Environment.MachineName);
             int pontId = 0;
             string typeDemarrage = "";
+            int IsBorneLaunched = 0;
             int utilisateurId = 0;
             if (dtPont.Rows.Count < 1)
             {
@@ -61,8 +63,13 @@ namespace WidraSoft.UI
                             pontId = (int)row["PONTID"];
                             typeDemarrage = row["DEMARRAGE"].ToString();
                             utilisateurId = (int)row["UTILISATEURID"];
+                            IsBorneLaunched = (int)row["IS_BORNE_LAUNCHED"];
+                            if (IsBorneLaunched == 0)
+                                vg_IsBorneLaunched = false;
+                            else
+                                vg_IsBorneLaunched = true;
                             Utilisateur utilisateur = new Utilisateur(); 
-                            if (typeDemarrage == "Terminal")
+                            if (typeDemarrage == "Terminal" && IsBorneLaunched == 0)
                             {
                                 txtLogin.Text = utilisateur.GetUsername(utilisateurId);
                                 txtPassword.Text = utilisateur.GetPassword(utilisateurId);
@@ -96,7 +103,7 @@ namespace WidraSoft.UI
                     if (CanConnect == true)
                     {
                         UtilisateurId = utilisateur.GetUserIdByLoginAndPassword(txtLogin.Text, txtPassword.Text);
-                        MenuGeneral form = new MenuGeneral(UtilisateurId, IsTerminal);
+                        MenuGeneral form = new MenuGeneral(UtilisateurId, IsTerminal, vg_IsBorneLaunched);
                         form.ShowDialog();
 
                         cbLang.Enabled = false;

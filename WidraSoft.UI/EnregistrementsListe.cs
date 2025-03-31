@@ -194,20 +194,30 @@ namespace WidraSoft.UI
                 if (cbTablesId.Items.Count > 0 && cbTablesId.SelectedIndex > -1)
                     Bind_Dgv();
             }
-            
-                
+
+
 
 
         }
 
         private void cbTablesId_SelectedValueChanged(object sender, EventArgs e)
         {
-           
+
         }
 
         private void supprimerToolStripMenuItem_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void DgvList_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            try
+            {
+                Form form = new EnregistrementsDetail("Edit", Common_functions.GetDatagridViewSelectedId(DgvList), Common_functions.CbSelectedValue_Convert_Int(cbTablesId));
+                form.Show();
+            }
+            catch { throw; }
         }
     }
 }

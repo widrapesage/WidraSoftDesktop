@@ -1747,6 +1747,7 @@
             // 
             AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            AutoScroll = true;
             ClientSize = new System.Drawing.Size(1020, 651);
             Controls.Add(panelData);
             Controls.Add(panelLang);

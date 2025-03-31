@@ -132,7 +132,7 @@ namespace WidraSoft.UI
             {
                 pictureBox_image.Image.Dispose();
             }
-            string path = "C:\'Users\'RYZEN7\'Pictures\'ANPR " + "image";
+            string path = "C:\'Users\'HP\'Pictures\'Dahua_pics";
             if (!Directory.Exists(path))
             {
                 Directory.CreateDirectory(path);
@@ -258,6 +258,29 @@ namespace WidraSoft.UI
             {
                 e.Handled = true;
             }
+        }
+
+        private void bt_Capture_Click(object sender, EventArgs e)
+        {
+            if (pictureBox_image.Image != null)
+            {
+                pictureBox_image.Image.Dispose();
+            }
+            string path = "C:\\Users\\HP\\Pictures\\Dahua_pics";
+            if (!Directory.Exists(path))
+            {
+                Directory.CreateDirectory(path);
+            }
+            DateTime now = DateTime.Now;
+            string filePath = path + "\\" + string.Format("{0}-{1}-{2}-{3}-{4}-{5}", now.Year, now.Month, now.Day, now.Hour, now.Minute, now.Second) + ".jpg";
+            bool ret = NETClient.CapturePicture(_PlayID, filePath, EM_NET_CAPTURE_FORMATS.JPEG);
+            if (!ret)
+            {
+                MessageBox.Show(NETClient.GetLastError());
+                return;
+            }
+            Image image = Image.FromFile(filePath);
+            pictureBox_image.Image = image;
         }
     }
 }

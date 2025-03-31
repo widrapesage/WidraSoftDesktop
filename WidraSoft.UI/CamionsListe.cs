@@ -42,8 +42,8 @@ namespace WidraSoft.UI
             Camion camion = new Camion();
             DgvList.DataSource = camion.List(vg_filter);
             DgvList.Columns[0].Visible = false;
-            DgvList.Columns["CODE"].Visible = false ; 
-            DgvList.Columns["PLAQUE"].Visible = true; 
+            DgvList.Columns["CODE"].Visible = false;
+            DgvList.Columns["PLAQUE"].Visible = true;
             DgvList.Columns["BADGE"].Visible = true;
             DgvList.Columns["TARE"].Visible = true;
             DgvList.Columns["TARE"].HeaderText = "TARE (KG)";
@@ -74,7 +74,7 @@ namespace WidraSoft.UI
                 DgvList.Columns["DATECREATION"].HeaderText = "DATE CREATION";
             }
 
-            if (lang== "en")
+            if (lang == "en")
             {
                 DgvList.Columns["CODE"].HeaderText = "CODE";
                 DgvList.Columns["PLAQUE"].HeaderText = "LICENSE PLATE";
@@ -85,8 +85,8 @@ namespace WidraSoft.UI
                 DgvList.Columns["ATTENTION"].HeaderText = "WARNING";
                 DgvList.Columns["DATECREATION"].HeaderText = "CREATION DATE";
             }
-            
-            if (lang== "es")
+
+            if (lang == "es")
             {
                 DgvList.Columns["CODE"].HeaderText = "CÓDIGO";
                 DgvList.Columns["PLAQUE"].HeaderText = "N° DE PLACA";
@@ -97,7 +97,7 @@ namespace WidraSoft.UI
                 DgvList.Columns["ATTENTION"].HeaderText = "ATENCIÓN";
                 DgvList.Columns["DATECREATION"].HeaderText = "FECHA DE CREACIÓN";
             }
-            
+
         }
 
 
@@ -177,6 +177,16 @@ namespace WidraSoft.UI
         {
             Camion camion = new Camion();
             DgvList.DataSource = camion.SearchBox(txtSearchBox.Text);
+        }
+
+        private void DgvList_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            try
+            {
+                Form form = new CamionDetail("Edit", Common_functions.GetDatagridViewSelectedId(DgvList));
+                form.Show();
+            }
+            catch { throw; }
         }
     }
 }

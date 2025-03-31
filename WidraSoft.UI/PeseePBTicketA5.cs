@@ -7,6 +7,8 @@ using System.ComponentModel;
 using System.Data;
 using System.Diagnostics;
 using System.Drawing;
+using System.Drawing.Imaging;
+using System.Drawing.Printing;
 using System.IO;
 using System.Linq;
 using System.Text;
@@ -54,6 +56,9 @@ namespace WidraSoft.UI
         string p_ResteWalterre;
         string p_Walterre;
 
+        private int m_currentPageIndex;
+        private IList<Stream> m_streams;
+
         System.Drawing.Imaging.ImageFormat f = System.Drawing.Imaging.ImageFormat.Png;
         
         public PeseePBTicketA5(int Id)
@@ -71,6 +76,7 @@ namespace WidraSoft.UI
             dtpeseePE = peseePE.FindById(vg_Id);
             Walterre walterre = new Walterre();
             DataTable dtWalterre = new DataTable();
+            
             foreach (DataRow r in dtpeseePE.Rows)
             {
                 p_Id = r["PESEEPBID"].ToString();
@@ -98,6 +104,7 @@ namespace WidraSoft.UI
                 p_Footer = r["FOOTER"].ToString();
                 p_Walterre = r["CODEWALTERRE"].ToString();
 
+                dtWalterre = walterre.FindEnlevementsById((int)r["WALTERREID"]);
 
                 QrCodeEncodingOptions options = new()
                 {
@@ -168,84 +175,18 @@ namespace WidraSoft.UI
 
             this.reportViewer.LocalReport.SetParameters(parameters);
 
-            reportViewer.RefreshReport();
+            //reportViewer.RefreshReport();
 
-            Export_Pdf();
-
-            SendToPrinter("~/output.pdf");
-
-        }
-
-        private void SendToPrinter(string prepDok)
-        {
-            ProcessStartInfo info = new ProcessStartInfo();
-            info.Verb = "print";
-            info.FileName = prepDok;
-            info.CreateNoWindow = false;
-            info.WindowStyle = ProcessWindowStyle.Hidden;
-
-            System.Windows.Forms.PrintDialog pd = new System.Windows.Forms.PrintDialog();
-            pd.PrinterSettings.Copies = 1;
-            Process p = new Process();
-            p.StartInfo = info;
-            p.StartInfo.Arguments = pd.PrinterSettings.PrinterName;
-            p.Start();
-            p.CloseMainWindow();
-
-            Thread.Sleep(4000);
-            if (!p.WaitForExit(5000))
-            {
-                if (!p.HasExited)
-                {
-                    p.Kill();
-                }
-            }
+            Run();
+            Close();
 
         }
 
-        private void Export_Pdf()
-        {
-            Microsoft.Reporting.WinForms.Warning[] warnings;
-            string[] streamids;
-            string mimeType;
-            string encoding;
-            string filenameExtension;
+        
 
-            byte[] bytes = reportViewer.LocalReport.Render(
-                "PDF", null, out mimeType, out encoding, out filenameExtension,
-                out streamids, out warnings);
+        
 
-            using (FileStream fs = new FileStream("/output.pdf", FileMode.Create))
-            {
-                fs.Write(bytes, 0, bytes.Length);
-            }
-        }
-
-        /*private void Print(object sender)
-        {
-            Microsoft.Reporting.Map.WebForms.BingMaps.Warning[] warnings;
-            string[] streamIds;
-            string mimeType = string.Empty;
-            string encoding = string.Empty;
-            string extension = string.Empty;
-            string deviceInfo = "<DeviceInfo>"
-                                + "<OutputFormat>EMF</OutputFormat>"
-                                + "<PageWidth>8.5in</PageWidth>"
-                                + "<PageHeight>11in</PageHeight>"
-                                + "<MarginTop>0.25in</MarginTop>"
-                                + "<MarginLeft>0.25in</MarginLeft>"
-                                + "<MarginRight>0.25in</MarginRight>"
-                                + "<MarginBottom>0.25in</MarginBottom>"
-                                + "</DeviceInfo>";
-            byte[] bytes = reportViewer.LocalReport.Render((sender as Button).CommandName, deviceInfo, out mimeType, out encoding, out extension, out streamIds, out warnings);
-            Response.Buffer = true;
-            Response.Clear();
-            Response.ContentType = mimeType;
-            Response.AddHeader("content-disposition", "attachment; filename=Customers." + extension);
-            Response.BinaryWrite(bytes);
-            Response.Flush();
-        }
-        */
+      
         public string ImageToBase64(Image image, System.Drawing.Imaging.ImageFormat format)
         {
             using (MemoryStream ms = new MemoryStream())
@@ -257,6 +198,95 @@ namespace WidraSoft.UI
                 // Convert byte[] to Base64 String
                 string base64String = Convert.ToBase64String(imageBytes);
                 return base64String;
+            }
+        }
+
+        private Stream CreateStream(string name,
+      string fileNameExtension, Encoding encoding,
+      string mimeType, bool willSeek)
+        {
+            Stream stream = new MemoryStream();
+            m_streams.Add(stream);
+            return stream;
+        }
+        // Export the given report as an EMF (Enhanced Metafile) file.
+        private void Export(LocalReport report)
+        {
+            string deviceInfo =
+              @"<DeviceInfo>
+                <OutputFormat>EMF</OutputFormat>
+                <PageWidth>3.2in</PageWidth>
+                <PageHeight>11in</PageHeight>
+                <MarginTop>0.25in</MarginTop>
+                <MarginLeft>0.25in</MarginLeft>
+                <MarginRight>0.25in</MarginRight>
+                <MarginBottom>0.25in</MarginBottom>
+            </DeviceInfo>";
+            Microsoft.Reporting.WinForms.Warning[] warnings;
+            m_streams = new List<Stream>();
+            report.Render("Image", deviceInfo, CreateStream,
+               out warnings);
+            foreach (Stream stream in m_streams)
+                stream.Position = 0;
+        }
+        // Handler for PrintPageEvents
+        private void PrintPage(object sender, PrintPageEventArgs ev)
+        {
+            Metafile pageImage = new
+               Metafile(m_streams[m_currentPageIndex]);
+
+            // Adjust rectangular area with printer margins.
+            Rectangle adjustedRect = new Rectangle(
+                ev.PageBounds.Left - (int)ev.PageSettings.HardMarginX,
+                ev.PageBounds.Top - (int)ev.PageSettings.HardMarginY,
+                ev.PageBounds.Width,
+                ev.PageBounds.Height);
+
+            // Draw a white background for the report
+            ev.Graphics.FillRectangle(Brushes.White, adjustedRect);
+
+            // Draw the report content
+            ev.Graphics.DrawImage(pageImage, adjustedRect);
+
+            // Prepare for the next page. Make sure we haven't hit the end.
+            m_currentPageIndex++;
+            ev.HasMorePages = (m_currentPageIndex < m_streams.Count);
+        }
+
+        private void Print()
+        {
+            if (m_streams == null || m_streams.Count == 0)
+                throw new Exception("Error: no stream to print.");
+            PrintDocument printDoc = new PrintDocument();
+            if (!printDoc.PrinterSettings.IsValid)
+            {
+                throw new Exception("Error: cannot find the default printer.");
+            }
+            else
+            {
+                printDoc.PrintPage += new PrintPageEventHandler(PrintPage);
+                m_currentPageIndex = 0;
+                printDoc.Print();
+            }
+        }
+        // Create a local report for Report.rdlc, load the data,
+        //    export the report to an .emf file, and print it.
+        private void Run()
+        {
+            /*LocalReport report = new LocalReport();
+            report.ReportPath = System.IO.Path.Combine(Application.StartupPath,  "PeseePBTicketA5.rdlc");*/
+            
+            Export(this.reportViewer.LocalReport);
+            Print();
+        }
+
+        public void Dispose()
+        {
+            if (m_streams != null)
+            {
+                foreach (Stream stream in m_streams)
+                    stream.Close();
+                m_streams = null;
             }
         }
 

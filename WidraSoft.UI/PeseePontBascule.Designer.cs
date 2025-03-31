@@ -2236,6 +2236,7 @@
             // 
             AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            AutoScroll = true;
             BackColor = System.Drawing.Color.FromArgb(58, 62, 60);
             ClientSize = new System.Drawing.Size(1271, 685);
             Controls.Add(panelLayout);

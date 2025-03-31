@@ -335,7 +335,7 @@ namespace WidraSoft.DA
         public void Add(String Designation, String NumPortCOM, Int32 Weight_SettingsId, Int32 Weighing_SettingsId, Int32 ActiverPoids, Int32 BaudRate,
                         Int32 DataBits, String StopBits, String Handshake, Int32 ReadTimeOut, String Machine, String Demarrage, Int32 UtilisateurId, Int32 ActiverMultipleParam, Int32 Poids_Detection,
                         String BornePremierePesee, String BorneDeuxiemePesee, String BorneTareManuelle, String Flux_Default, Int32 Activer_Scanner, String TypeScanner, Int32 Activer_Barriere, String NumPortCom_Barriere, 
-                        String NumPortCom_Scanner)
+                        String NumPortCom_Scanner, String Contact1, String Contact2, String Contact3, Int32 IsBorneLaunched)
         {
             using (conn)
             {
@@ -368,6 +368,10 @@ namespace WidraSoft.DA
                 cmd.Parameters.Add("@ACTIVER_BARRIERE", SqlDbType.Int).Value = Activer_Barriere;
                 cmd.Parameters.Add("@NUMPORTCOM_BARRIERE", SqlDbType.VarChar).Value = NumPortCom_Barriere;
                 cmd.Parameters.Add("@NUMPORTCOM_SCANNER", SqlDbType.VarChar).Value = NumPortCom_Scanner;
+                cmd.Parameters.Add("@CONTACT1", SqlDbType.VarChar).Value = Contact1;
+                cmd.Parameters.Add("@CONTACT2", SqlDbType.VarChar).Value = Contact2;
+                cmd.Parameters.Add("@CONTACT3", SqlDbType.VarChar).Value = Contact3;
+                cmd.Parameters.Add("@IS_BORNE_LAUNCHED", SqlDbType.Int).Value = IsBorneLaunched;
                 try
                 {
                     cmd.ExecuteNonQuery();
@@ -382,7 +386,7 @@ namespace WidraSoft.DA
         public void Update(Int32 Id, String Designation, String NumPortCOM, Int32 Weight_SettingsId, Int32 Weighing_SettingsId, Int32 ActiverPoids, Int32 BaudRate,
                         Int32 DataBits, String StopBits, String Handshake, Int32 ReadTimeOut, String Machine, String Demarrage, Int32 UtilisateurId, Int32 ActiverMultipleParam, Int32 Poids_Detection,
                         String BornePremierePesee, String BorneDeuxiemePesee, String BorneTareManuelle, String Flux_Default, Int32 Activer_Scanner, String TypeScanner, Int32 Activer_Barriere, String NumPortCom_Barriere,
-                        String NumPortCom_Scanner)
+                        String NumPortCom_Scanner, String Contact1, String Contact2, String Contact3, Int32 IsBorneLaunched)
         {
             using (conn)
             {
@@ -416,6 +420,10 @@ namespace WidraSoft.DA
                 cmd.Parameters.Add("@ACTIVER_BARRIERE", SqlDbType.Int).Value = Activer_Barriere;
                 cmd.Parameters.Add("@NUMPORTCOM_BARRIERE", SqlDbType.VarChar).Value = NumPortCom_Barriere;
                 cmd.Parameters.Add("@NUMPORTCOM_SCANNER", SqlDbType.VarChar).Value = NumPortCom_Scanner;
+                cmd.Parameters.Add("@CONTACT1", SqlDbType.VarChar).Value = Contact1;
+                cmd.Parameters.Add("@CONTACT2", SqlDbType.VarChar).Value = Contact2;
+                cmd.Parameters.Add("@CONTACT3", SqlDbType.VarChar).Value = Contact3;
+                cmd.Parameters.Add("@IS_BORNE_LAUNCHED", SqlDbType.Int).Value = IsBorneLaunched;
                 try
                 {
                     cmd.ExecuteNonQuery();

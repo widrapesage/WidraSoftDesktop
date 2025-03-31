@@ -175,6 +175,8 @@ namespace WidraSoft.UI
 
             WindowState = FormWindowState.Maximized;
 
+            this.TopMost = true;
+
             if (vg_Lang == "fr")
             {
                 France_flag.Visible = true;
@@ -302,6 +304,7 @@ namespace WidraSoft.UI
             lbNotFound.Visible = false;
             lbRequired.Visible = false;
             lbOptional.Visible = false;
+            lbInvalide.Visible = false;
             IsNumeric = false;
         }
 
@@ -1615,44 +1618,49 @@ namespace WidraSoft.UI
                     Camion camion = new Camion();
                     if (camion.IfExists(lbMessage.Text))
                     {
-                        CamionId = camion.GetIdByName(lbMessage.Text);
-
-                        vg_CamionChauffeurId = 0;
-                        vg_CamionTransporteurId = 0;
-                        CamionChauffeur camionChauffeur = new CamionChauffeur();
-                        CamionTransporteur camionTransporteur = new CamionTransporteur();
-                        if (CamionChauffeur > 0)
+                        if (camion.IfExists_Valid(lbMessage.Text))
                         {
-                            if (camionChauffeur.CountByCamionId(CamionId) > 0)
+                            CamionId = camion.GetIdByName(lbMessage.Text);
+                            vg_CamionChauffeurId = 0;
+                            vg_CamionTransporteurId = 0;
+                            CamionChauffeur camionChauffeur = new CamionChauffeur();
+                            CamionTransporteur camionTransporteur = new CamionTransporteur();
+                            if (CamionChauffeur > 0)
                             {
-                                if (camionChauffeur.CountByCamionId(CamionId) == 1)
-                                    vg_CamionChauffeurId = camionChauffeur.GetFirstChauffeurByCamionId(CamionId);
+                                if (camionChauffeur.CountByCamionId(CamionId) > 0)
+                                {
+                                    if (camionChauffeur.CountByCamionId(CamionId) == 1)
+                                        vg_CamionChauffeurId = camionChauffeur.GetFirstChauffeurByCamionId(CamionId);
+                                    else
+                                        vg_CamionChauffeurId = -1000;
+                                }
                                 else
-                                    vg_CamionChauffeurId = -1000;
+                                {
+                                    vg_CamionChauffeurId = 0;
+                                }
                             }
-                            else
+                            if (CamionTransporteur > 0)
                             {
-                                vg_CamionChauffeurId = 0;
+                                if (camionTransporteur.CountByCamionId(CamionId) > 0)
+                                {
+                                    if (camionTransporteur.CountByCamionId(CamionId) == 1)
+                                        vg_CamionTransporteurId = camionTransporteur.GetFirstTransporteurByCamionId(CamionId);
+                                    else
+                                        vg_CamionTransporteurId = -1000;
+                                }
+                                else
+                                {
+                                    vg_CamionTransporteurId = 0;
+                                }
                             }
+                            Etape = "Firme";
+                            Gestion_Etapes();
                         }
-                        if (CamionTransporteur > 0)
+                        else
                         {
-                            if (camionTransporteur.CountByCamionId(CamionId) > 0)
-                            {
-                                if (camionTransporteur.CountByCamionId(CamionId) == 1)
-                                    vg_CamionTransporteurId = camionTransporteur.GetFirstTransporteurByCamionId(CamionId);
-                                else
-                                    vg_CamionTransporteurId = -1000;
-                            }
-                            else
-                            {
-                                vg_CamionTransporteurId = 0;
-                            }
+                            lbInvalide.Visible = true; 
                         }
-
-
-                        Etape = "Firme";
-                        Gestion_Etapes();
+                        
                     }
                     else
                     {
@@ -1723,7 +1731,7 @@ namespace WidraSoft.UI
                 {
                     //WalterreId = Common_functions.GetDatagridViewSelectedId(DgvList);
                     Walterre walterre = new Walterre();
-                    if (walterre.IfExists("WT" + lbMessage.Text))
+                    if (walterre.IfExists_Valid("WT" + lbMessage.Text))
                     {
                         WalterreId = walterre.GetIdByName("WT" + lbMessage.Text);
                         Etape = "Produit";

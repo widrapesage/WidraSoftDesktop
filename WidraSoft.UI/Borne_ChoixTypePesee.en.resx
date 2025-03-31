@@ -125,7 +125,7 @@
   </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="lbBadge.Location" type="System.Drawing.Point, System.Drawing">
-    <value>321, 240</value>
+    <value>428, 236</value>
   </data>
   <data name="lbBadge.Size" type="System.Drawing.Size, System.Drawing">
     <value>254, 58</value>

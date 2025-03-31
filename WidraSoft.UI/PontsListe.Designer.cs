@@ -234,6 +234,7 @@
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             DgvList.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
             DgvList.RowTemplate.Height = 33;
+            DgvList.CellDoubleClick += DgvList_CellDoubleClick;
             // 
             // PontsListe
             // 

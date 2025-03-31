@@ -132,7 +132,7 @@ namespace WidraSoft.UI
             DgvList.Columns["TITRE2"].Visible = false;
             DgvList.Columns["FOOTER"].Visible = false;
             DgvList.Columns["WALTERRE"].Visible = false;
-          
+
             DgvList.Columns["DATECREATION"].Visible = true;
 
             DgvList.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
@@ -217,6 +217,16 @@ namespace WidraSoft.UI
                 language_Manager.ChangeLanguage("es", this, typeof(WeighingSettingsList));
                 Localize_Dgv("es");
             }
+        }
+
+        private void DgvList_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            try
+            {
+                Form form = new WeighingSettingsDetail("Edit", Common_functions.GetDatagridViewSelectedId(DgvList));
+                form.Show();
+            }
+            catch { throw; }
         }
     }
 }

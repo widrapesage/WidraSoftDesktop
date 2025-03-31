@@ -18,7 +18,7 @@ namespace WidraSoft.UI
         {
             InitializeComponent();
             menuStrip1.Renderer = new MyRenderer();
-            vg_filter = filter; 
+            vg_filter = filter;
         }
 
         private class MyRenderer : ToolStripProfessionalRenderer
@@ -57,7 +57,7 @@ namespace WidraSoft.UI
             DgvList.Columns["BLOQUE"].Visible = false;
             DgvList.Columns["TEXTEBLOQUE"].Visible = false;
             DgvList.Columns["ATTENTION"].Visible = false;
-            DgvList.Columns["TEXTEATTENTION"].Visible = false; 
+            DgvList.Columns["TEXTEATTENTION"].Visible = false;
             DgvList.Columns["DATECREATION"].Width = 200;
             DgvList.Columns["DATECREATION"].HeaderText = "DATE CREATION";
 
@@ -103,7 +103,7 @@ namespace WidraSoft.UI
                 DgvList.Columns["ATTENTION"].HeaderText = "WARNING";
                 DgvList.Columns["DATECREATION"].HeaderText = "CREATION DATE";
             }
-            
+
             if (lang == "es")
             {
                 DgvList.Columns["BADGE"].HeaderText = "N° INSIGNIA";
@@ -124,7 +124,7 @@ namespace WidraSoft.UI
 
         }
 
-       
+
 
         private void ActualiserToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -163,7 +163,7 @@ namespace WidraSoft.UI
             {
                 MessageBox.Show("Vous n'avez selectionné aucun enregistrement à supprimer");
             }
-        
+
         }
 
 
@@ -177,7 +177,7 @@ namespace WidraSoft.UI
                 Spain_flag.Visible = false;
                 Language_Manager language_Manager = new Language_Manager();
                 language_Manager.ChangeLanguage("fr", this, typeof(FirmesList));
-                Localize_Dgv("fr"); 
+                Localize_Dgv("fr");
             }
 
             if (cbLang.Text == "EN")
@@ -187,7 +187,7 @@ namespace WidraSoft.UI
                 Spain_flag.Visible = false;
                 Language_Manager language_Manager = new Language_Manager();
                 language_Manager.ChangeLanguage("en", this, typeof(FirmesList));
-                Localize_Dgv("en"); 
+                Localize_Dgv("en");
             }
 
             if (cbLang.Text == "ES")
@@ -205,6 +205,16 @@ namespace WidraSoft.UI
         {
             Firme firme = new Firme();
             DgvList.DataSource = firme.SearchBox(txtSearchBox.Text);
+        }
+
+        private void DgvList_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            try
+            {
+                Form form = new FirmeDetail("Edit", Common_functions.GetDatagridViewSelectedId(DgvList));
+                form.Show();
+            }
+            catch { throw; }
         }
     }
 }

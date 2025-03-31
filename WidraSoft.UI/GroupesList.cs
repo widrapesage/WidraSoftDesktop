@@ -44,7 +44,7 @@ namespace WidraSoft.UI
             DgvList.Columns["DESIGNATION"].Visible = true;
             DgvList.Columns["CODE"].Visible = true;
             DgvList.Columns["LIMITER"].Visible = true;
-            DgvList.Columns["NBLIMITE"].Visible= false;
+            DgvList.Columns["NBLIMITE"].Visible = false;
             DgvList.Columns["DATECREATION"].Visible = true;
 
             DgvList.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
@@ -81,13 +81,13 @@ namespace WidraSoft.UI
             }
 
         }
-        
+
 
         private void ouvrirToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            DgvList.Focus();          
+            DgvList.Focus();
             Form form = new GroupeDetail("Edit", Common_functions.GetDatagridViewSelectedId(DgvList));
-            form.Show();           
+            form.Show();
         }
 
         private void ActualiserToolStripMenuItem_Click(object sender, EventArgs e)
@@ -157,7 +157,7 @@ namespace WidraSoft.UI
                 Spain_flag.Visible = false;
                 Language_Manager language_Manager = new Language_Manager();
                 language_Manager.ChangeLanguage("fr", this, typeof(GroupesList));
-                Localize_Dgv("fr"); 
+                Localize_Dgv("fr");
             }
 
             if (cbLang.Text == "EN")
@@ -167,7 +167,7 @@ namespace WidraSoft.UI
                 Spain_flag.Visible = false;
                 Language_Manager language_Manager = new Language_Manager();
                 language_Manager.ChangeLanguage("en", this, typeof(GroupesList));
-                Localize_Dgv("en"); 
+                Localize_Dgv("en");
             }
 
             if (cbLang.Text == "ES")
@@ -179,6 +179,16 @@ namespace WidraSoft.UI
                 language_Manager.ChangeLanguage("es", this, typeof(GroupesList));
                 Localize_Dgv("es");
             }
-        }       
+        }
+
+        private void DgvList_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            try
+            {
+                Form form = new GroupeDetail("Edit", Common_functions.GetDatagridViewSelectedId(DgvList));
+                form.Show();
+            }
+            catch { throw; }
+        }
     }
 }

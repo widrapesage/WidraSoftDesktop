@@ -139,5 +139,15 @@ namespace WidraSoft.UI
                 Localize_Dgv("es");
             }
         }
+
+        private void DgvList_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            try
+            {
+                Form form = new WeightSettingsDetail("Edit", Common_functions.GetDatagridViewSelectedId(DgvList));
+                form.Show();
+            }
+            catch { throw; }
+        }
     }
 }

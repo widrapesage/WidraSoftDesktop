@@ -23,6 +23,18 @@ namespace WidraSoft.BL
             }
         }
 
+        public DataTable List_Valid(string filter)
+        {
+            try
+            {
+                CamionDA camion = new CamionDA();
+                return camion.List_Valid(filter);
+            }
+            catch
+            {
+                throw;
+            }
+        }
         public DataTable SearchBox(string Filter)
         {
             try
@@ -68,6 +80,19 @@ namespace WidraSoft.BL
             {
                 CamionDA camion = new CamionDA();
                 return camion.IfExists(Name);
+            }
+            catch
+            {
+                throw;
+            }
+        }
+
+        public bool IfExists_Valid(String Name)
+        {
+            try
+            {
+                CamionDA camion = new CamionDA();
+                return camion.IfExists_Valid(Name);
             }
             catch
             {

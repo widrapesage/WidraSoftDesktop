@@ -44,6 +44,12 @@
             pictureBox1 = new System.Windows.Forms.PictureBox();
             panelDetail = new System.Windows.Forms.Panel();
             panelDetailCentre = new System.Windows.Forms.Panel();
+            pbContact3 = new System.Windows.Forms.PictureBox();
+            lbContact3 = new System.Windows.Forms.Label();
+            pbContact2 = new System.Windows.Forms.PictureBox();
+            lbContact2 = new System.Windows.Forms.Label();
+            pbContact1 = new System.Windows.Forms.PictureBox();
+            lbContact1 = new System.Windows.Forms.Label();
             Weight_Timer = new System.Windows.Forms.Timer(components);
             ((System.ComponentModel.ISupportInitialize)Spain_flag).BeginInit();
             ((System.ComponentModel.ISupportInitialize)England_flag).BeginInit();
@@ -55,6 +61,9 @@
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             panelDetail.SuspendLayout();
             panelDetailCentre.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)pbContact3).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pbContact2).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pbContact1).BeginInit();
             SuspendLayout();
             // 
             // txtPoids
@@ -166,6 +175,12 @@
             // panelDetailCentre
             // 
             resources.ApplyResources(panelDetailCentre, "panelDetailCentre");
+            panelDetailCentre.Controls.Add(pbContact3);
+            panelDetailCentre.Controls.Add(lbContact3);
+            panelDetailCentre.Controls.Add(pbContact2);
+            panelDetailCentre.Controls.Add(lbContact2);
+            panelDetailCentre.Controls.Add(pbContact1);
+            panelDetailCentre.Controls.Add(lbContact1);
             panelDetailCentre.Controls.Add(pictureBox1);
             panelDetailCentre.Controls.Add(select_FR);
             panelDetailCentre.Controls.Add(France_flag);
@@ -176,6 +191,48 @@
             panelDetailCentre.Controls.Add(select_ES);
             panelDetailCentre.Controls.Add(Spain_flag);
             panelDetailCentre.Name = "panelDetailCentre";
+            // 
+            // pbContact3
+            // 
+            resources.ApplyResources(pbContact3, "pbContact3");
+            pbContact3.Image = Properties.Resources.telephoner;
+            pbContact3.Name = "pbContact3";
+            pbContact3.TabStop = false;
+            // 
+            // lbContact3
+            // 
+            resources.ApplyResources(lbContact3, "lbContact3");
+            lbContact3.BackColor = System.Drawing.Color.FromArgb(58, 62, 60);
+            lbContact3.ForeColor = System.Drawing.Color.White;
+            lbContact3.Name = "lbContact3";
+            // 
+            // pbContact2
+            // 
+            resources.ApplyResources(pbContact2, "pbContact2");
+            pbContact2.Image = Properties.Resources.telephoner;
+            pbContact2.Name = "pbContact2";
+            pbContact2.TabStop = false;
+            // 
+            // lbContact2
+            // 
+            resources.ApplyResources(lbContact2, "lbContact2");
+            lbContact2.BackColor = System.Drawing.Color.FromArgb(58, 62, 60);
+            lbContact2.ForeColor = System.Drawing.Color.White;
+            lbContact2.Name = "lbContact2";
+            // 
+            // pbContact1
+            // 
+            resources.ApplyResources(pbContact1, "pbContact1");
+            pbContact1.Image = Properties.Resources.telephoner;
+            pbContact1.Name = "pbContact1";
+            pbContact1.TabStop = false;
+            // 
+            // lbContact1
+            // 
+            resources.ApplyResources(lbContact1, "lbContact1");
+            lbContact1.BackColor = System.Drawing.Color.FromArgb(58, 62, 60);
+            lbContact1.ForeColor = System.Drawing.Color.White;
+            lbContact1.Name = "lbContact1";
             // 
             // Weight_Timer
             // 
@@ -189,6 +246,8 @@
             ControlBox = false;
             Controls.Add(panelDetail);
             Controls.Add(panelWeight);
+            MaximizeBox = false;
+            MinimizeBox = false;
             Name = "Borne_Home";
             FormClosing += Borne_Home_FormClosing;
             Load += Borne_Home_Load;
@@ -204,6 +263,9 @@
             panelDetail.ResumeLayout(false);
             panelDetailCentre.ResumeLayout(false);
             panelDetailCentre.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)pbContact3).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pbContact2).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pbContact1).EndInit();
             ResumeLayout(false);
         }
 
@@ -223,5 +285,11 @@
         private System.Windows.Forms.Panel panelDetail;
         private System.Windows.Forms.Panel panelDetailCentre;
         private System.Windows.Forms.Timer Weight_Timer;
+        private System.Windows.Forms.Label lbContact1;
+        private System.Windows.Forms.PictureBox pbContact1;
+        private System.Windows.Forms.PictureBox pbContact2;
+        private System.Windows.Forms.Label lbContact2;
+        private System.Windows.Forms.PictureBox pbContact3;
+        private System.Windows.Forms.Label lbContact3;
     }
 }

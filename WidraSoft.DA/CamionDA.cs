@@ -33,6 +33,25 @@ namespace WidraSoft.DA
             }
         }
 
+        public DataTable List_Valid(string filter)
+        {
+            String sql = "SELECT * FROM CAMION WHERE " + filter + " AND VALIDE = 1";
+            conn.ConnectionString = connString;
+            if (conn.State == ConnectionState.Closed)
+                conn.Open();
+            SqlCommand cmd = new SqlCommand(sql, conn);
+            try
+            {
+                SqlDataReader reader = cmd.ExecuteReader();
+                dt.Load(reader);
+                return dt;
+            }
+            catch
+            {
+                throw;
+            }
+        }
+
 
         public DataTable SearchBox(string filter)
         {
@@ -94,6 +113,27 @@ namespace WidraSoft.DA
         public bool IfExists(String Name)
         {
             String sql = "SELECT COUNT(*) FROM CAMION WHERE PLAQUE='" + Name + "'";
+            conn.ConnectionString = connString;
+            if (conn.State == ConnectionState.Closed)
+                conn.Open();
+            SqlCommand cmd = new SqlCommand(sql, conn);
+            try
+            {
+                Int32 nb = (int)cmd.ExecuteScalar();
+                if (nb > 0)
+                    return true;
+                else
+                    return false;
+            }
+            catch
+            {
+                throw;
+            }
+        }
+
+        public bool IfExists_Valid(String Name)
+        {
+            String sql = "SELECT COUNT(*) FROM CAMION WHERE PLAQUE='" + Name + "' AND VALIDE = 1";
             conn.ConnectionString = connString;
             if (conn.State == ConnectionState.Closed)
                 conn.Open();

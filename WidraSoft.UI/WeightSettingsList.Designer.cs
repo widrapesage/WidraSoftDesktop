@@ -29,245 +29,238 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(WeightSettingsList));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
-            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-            this.ouvrirToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.ajouterToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.supprimerToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.ActualiserToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.exporterVersToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.excelToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.pDFToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.panelTitleBar = new System.Windows.Forms.Panel();
-            this.txtSearchBox = new System.Windows.Forms.TextBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.Spain_flag = new System.Windows.Forms.PictureBox();
-            this.England_flag = new System.Windows.Forms.PictureBox();
-            this.France_flag = new System.Windows.Forms.PictureBox();
-            this.cbLang = new System.Windows.Forms.ComboBox();
-            this.panelList = new System.Windows.Forms.Panel();
-            this.DgvList = new System.Windows.Forms.DataGridView();
-            this.menuStrip1.SuspendLayout();
-            this.panelTitleBar.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.Spain_flag)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.England_flag)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.France_flag)).BeginInit();
-            this.panelList.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.DgvList)).BeginInit();
-            this.SuspendLayout();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            menuStrip1 = new System.Windows.Forms.MenuStrip();
+            ouvrirToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            ajouterToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            supprimerToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            ActualiserToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            exporterVersToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            excelToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            pDFToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            panelTitleBar = new System.Windows.Forms.Panel();
+            txtSearchBox = new System.Windows.Forms.TextBox();
+            pictureBox1 = new System.Windows.Forms.PictureBox();
+            panel1 = new System.Windows.Forms.Panel();
+            Spain_flag = new System.Windows.Forms.PictureBox();
+            England_flag = new System.Windows.Forms.PictureBox();
+            France_flag = new System.Windows.Forms.PictureBox();
+            cbLang = new System.Windows.Forms.ComboBox();
+            panelList = new System.Windows.Forms.Panel();
+            DgvList = new System.Windows.Forms.DataGridView();
+            menuStrip1.SuspendLayout();
+            panelTitleBar.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
+            panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)Spain_flag).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)England_flag).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)France_flag).BeginInit();
+            panelList.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)DgvList).BeginInit();
+            SuspendLayout();
             // 
             // menuStrip1
             // 
-            resources.ApplyResources(this.menuStrip1, "menuStrip1");
-            this.menuStrip1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(62)))), ((int)(((byte)(60)))));
-            this.menuStrip1.ImageScalingSize = new System.Drawing.Size(24, 24);
-            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.ouvrirToolStripMenuItem,
-            this.ajouterToolStripMenuItem,
-            this.supprimerToolStripMenuItem,
-            this.ActualiserToolStripMenuItem,
-            this.exporterVersToolStripMenuItem});
-            this.menuStrip1.Name = "menuStrip1";
+            menuStrip1.BackColor = System.Drawing.Color.FromArgb(58, 62, 60);
+            resources.ApplyResources(menuStrip1, "menuStrip1");
+            menuStrip1.ImageScalingSize = new System.Drawing.Size(24, 24);
+            menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] { ouvrirToolStripMenuItem, ajouterToolStripMenuItem, supprimerToolStripMenuItem, ActualiserToolStripMenuItem, exporterVersToolStripMenuItem });
+            menuStrip1.Name = "menuStrip1";
             // 
             // ouvrirToolStripMenuItem
             // 
-            resources.ApplyResources(this.ouvrirToolStripMenuItem, "ouvrirToolStripMenuItem");
-            this.ouvrirToolStripMenuItem.ForeColor = System.Drawing.Color.White;
-            this.ouvrirToolStripMenuItem.Image = global::WidraSoft.UI.Properties.Resources.open;
-            this.ouvrirToolStripMenuItem.Name = "ouvrirToolStripMenuItem";
-            this.ouvrirToolStripMenuItem.Click += new System.EventHandler(this.ouvrirToolStripMenuItem_Click);
+            resources.ApplyResources(ouvrirToolStripMenuItem, "ouvrirToolStripMenuItem");
+            ouvrirToolStripMenuItem.ForeColor = System.Drawing.Color.White;
+            ouvrirToolStripMenuItem.Image = Properties.Resources.open;
+            ouvrirToolStripMenuItem.Name = "ouvrirToolStripMenuItem";
+            ouvrirToolStripMenuItem.Click += ouvrirToolStripMenuItem_Click;
             // 
             // ajouterToolStripMenuItem
             // 
-            resources.ApplyResources(this.ajouterToolStripMenuItem, "ajouterToolStripMenuItem");
-            this.ajouterToolStripMenuItem.ForeColor = System.Drawing.Color.White;
-            this.ajouterToolStripMenuItem.Image = global::WidraSoft.UI.Properties.Resources.add;
-            this.ajouterToolStripMenuItem.Name = "ajouterToolStripMenuItem";
-            this.ajouterToolStripMenuItem.Click += new System.EventHandler(this.ajouterToolStripMenuItem_Click);
+            resources.ApplyResources(ajouterToolStripMenuItem, "ajouterToolStripMenuItem");
+            ajouterToolStripMenuItem.ForeColor = System.Drawing.Color.White;
+            ajouterToolStripMenuItem.Image = Properties.Resources.add;
+            ajouterToolStripMenuItem.Name = "ajouterToolStripMenuItem";
+            ajouterToolStripMenuItem.Click += ajouterToolStripMenuItem_Click;
             // 
             // supprimerToolStripMenuItem
             // 
-            resources.ApplyResources(this.supprimerToolStripMenuItem, "supprimerToolStripMenuItem");
-            this.supprimerToolStripMenuItem.ForeColor = System.Drawing.Color.White;
-            this.supprimerToolStripMenuItem.Image = global::WidraSoft.UI.Properties.Resources.remove;
-            this.supprimerToolStripMenuItem.Name = "supprimerToolStripMenuItem";
+            resources.ApplyResources(supprimerToolStripMenuItem, "supprimerToolStripMenuItem");
+            supprimerToolStripMenuItem.ForeColor = System.Drawing.Color.White;
+            supprimerToolStripMenuItem.Image = Properties.Resources.remove;
+            supprimerToolStripMenuItem.Name = "supprimerToolStripMenuItem";
             // 
             // ActualiserToolStripMenuItem
             // 
-            resources.ApplyResources(this.ActualiserToolStripMenuItem, "ActualiserToolStripMenuItem");
-            this.ActualiserToolStripMenuItem.ForeColor = System.Drawing.Color.White;
-            this.ActualiserToolStripMenuItem.Image = global::WidraSoft.UI.Properties.Resources.refresh;
-            this.ActualiserToolStripMenuItem.Name = "ActualiserToolStripMenuItem";
-            this.ActualiserToolStripMenuItem.Click += new System.EventHandler(this.ActualiserToolStripMenuItem_Click);
+            resources.ApplyResources(ActualiserToolStripMenuItem, "ActualiserToolStripMenuItem");
+            ActualiserToolStripMenuItem.ForeColor = System.Drawing.Color.White;
+            ActualiserToolStripMenuItem.Image = Properties.Resources.refresh;
+            ActualiserToolStripMenuItem.Name = "ActualiserToolStripMenuItem";
+            ActualiserToolStripMenuItem.Click += ActualiserToolStripMenuItem_Click;
             // 
             // exporterVersToolStripMenuItem
             // 
-            resources.ApplyResources(this.exporterVersToolStripMenuItem, "exporterVersToolStripMenuItem");
-            this.exporterVersToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.excelToolStripMenuItem,
-            this.pDFToolStripMenuItem});
-            this.exporterVersToolStripMenuItem.ForeColor = System.Drawing.Color.White;
-            this.exporterVersToolStripMenuItem.Image = global::WidraSoft.UI.Properties.Resources.export;
-            this.exporterVersToolStripMenuItem.Name = "exporterVersToolStripMenuItem";
+            exporterVersToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] { excelToolStripMenuItem, pDFToolStripMenuItem });
+            resources.ApplyResources(exporterVersToolStripMenuItem, "exporterVersToolStripMenuItem");
+            exporterVersToolStripMenuItem.ForeColor = System.Drawing.Color.White;
+            exporterVersToolStripMenuItem.Image = Properties.Resources.export;
+            exporterVersToolStripMenuItem.Name = "exporterVersToolStripMenuItem";
             // 
             // excelToolStripMenuItem
             // 
-            resources.ApplyResources(this.excelToolStripMenuItem, "excelToolStripMenuItem");
-            this.excelToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(62)))), ((int)(((byte)(60)))));
-            this.excelToolStripMenuItem.ForeColor = System.Drawing.Color.White;
-            this.excelToolStripMenuItem.Name = "excelToolStripMenuItem";
+            excelToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(58, 62, 60);
+            excelToolStripMenuItem.ForeColor = System.Drawing.Color.White;
+            excelToolStripMenuItem.Name = "excelToolStripMenuItem";
+            resources.ApplyResources(excelToolStripMenuItem, "excelToolStripMenuItem");
             // 
             // pDFToolStripMenuItem
             // 
-            resources.ApplyResources(this.pDFToolStripMenuItem, "pDFToolStripMenuItem");
-            this.pDFToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(62)))), ((int)(((byte)(60)))));
-            this.pDFToolStripMenuItem.ForeColor = System.Drawing.Color.White;
-            this.pDFToolStripMenuItem.Name = "pDFToolStripMenuItem";
+            pDFToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(58, 62, 60);
+            pDFToolStripMenuItem.ForeColor = System.Drawing.Color.White;
+            pDFToolStripMenuItem.Name = "pDFToolStripMenuItem";
+            resources.ApplyResources(pDFToolStripMenuItem, "pDFToolStripMenuItem");
             // 
             // panelTitleBar
             // 
-            resources.ApplyResources(this.panelTitleBar, "panelTitleBar");
-            this.panelTitleBar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(86)))), ((int)(((byte)(81)))));
-            this.panelTitleBar.Controls.Add(this.txtSearchBox);
-            this.panelTitleBar.Controls.Add(this.pictureBox1);
-            this.panelTitleBar.Controls.Add(this.panel1);
-            this.panelTitleBar.Name = "panelTitleBar";
+            panelTitleBar.BackColor = System.Drawing.Color.FromArgb(72, 86, 81);
+            panelTitleBar.Controls.Add(txtSearchBox);
+            panelTitleBar.Controls.Add(pictureBox1);
+            panelTitleBar.Controls.Add(panel1);
+            resources.ApplyResources(panelTitleBar, "panelTitleBar");
+            panelTitleBar.Name = "panelTitleBar";
             // 
             // txtSearchBox
             // 
-            resources.ApplyResources(this.txtSearchBox, "txtSearchBox");
-            this.txtSearchBox.BackColor = System.Drawing.Color.Honeydew;
-            this.txtSearchBox.ForeColor = System.Drawing.Color.Black;
-            this.txtSearchBox.Name = "txtSearchBox";
-            this.txtSearchBox.TextChanged += new System.EventHandler(this.txtSearchBox_TextChanged);
+            txtSearchBox.BackColor = System.Drawing.Color.Honeydew;
+            resources.ApplyResources(txtSearchBox, "txtSearchBox");
+            txtSearchBox.ForeColor = System.Drawing.Color.Black;
+            txtSearchBox.Name = "txtSearchBox";
+            txtSearchBox.TextChanged += txtSearchBox_TextChanged;
             // 
             // pictureBox1
             // 
-            resources.ApplyResources(this.pictureBox1, "pictureBox1");
-            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pictureBox1.Image = global::WidraSoft.UI.Properties.Resources.search;
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.TabStop = false;
+            pictureBox1.BackColor = System.Drawing.Color.Transparent;
+            pictureBox1.Cursor = System.Windows.Forms.Cursors.Hand;
+            pictureBox1.Image = Properties.Resources.search;
+            resources.ApplyResources(pictureBox1, "pictureBox1");
+            pictureBox1.Name = "pictureBox1";
+            pictureBox1.TabStop = false;
             // 
             // panel1
             // 
-            resources.ApplyResources(this.panel1, "panel1");
-            this.panel1.Controls.Add(this.Spain_flag);
-            this.panel1.Controls.Add(this.England_flag);
-            this.panel1.Controls.Add(this.France_flag);
-            this.panel1.Controls.Add(this.cbLang);
-            this.panel1.Name = "panel1";
+            panel1.Controls.Add(Spain_flag);
+            panel1.Controls.Add(England_flag);
+            panel1.Controls.Add(France_flag);
+            panel1.Controls.Add(cbLang);
+            resources.ApplyResources(panel1, "panel1");
+            panel1.Name = "panel1";
             // 
             // Spain_flag
             // 
-            resources.ApplyResources(this.Spain_flag, "Spain_flag");
-            this.Spain_flag.BackColor = System.Drawing.Color.Transparent;
-            this.Spain_flag.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.Spain_flag.Image = global::WidraSoft.UI.Properties.Resources.spain;
-            this.Spain_flag.Name = "Spain_flag";
-            this.Spain_flag.TabStop = false;
+            Spain_flag.BackColor = System.Drawing.Color.Transparent;
+            Spain_flag.Cursor = System.Windows.Forms.Cursors.Hand;
+            Spain_flag.Image = Properties.Resources.spain;
+            resources.ApplyResources(Spain_flag, "Spain_flag");
+            Spain_flag.Name = "Spain_flag";
+            Spain_flag.TabStop = false;
             // 
             // England_flag
             // 
-            resources.ApplyResources(this.England_flag, "England_flag");
-            this.England_flag.BackColor = System.Drawing.Color.Transparent;
-            this.England_flag.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.England_flag.Image = global::WidraSoft.UI.Properties.Resources.united_kingdom;
-            this.England_flag.Name = "England_flag";
-            this.England_flag.TabStop = false;
+            England_flag.BackColor = System.Drawing.Color.Transparent;
+            England_flag.Cursor = System.Windows.Forms.Cursors.Hand;
+            England_flag.Image = Properties.Resources.united_kingdom;
+            resources.ApplyResources(England_flag, "England_flag");
+            England_flag.Name = "England_flag";
+            England_flag.TabStop = false;
             // 
             // France_flag
             // 
-            resources.ApplyResources(this.France_flag, "France_flag");
-            this.France_flag.BackColor = System.Drawing.Color.Transparent;
-            this.France_flag.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.France_flag.Image = global::WidraSoft.UI.Properties.Resources.france;
-            this.France_flag.Name = "France_flag";
-            this.France_flag.TabStop = false;
+            France_flag.BackColor = System.Drawing.Color.Transparent;
+            France_flag.Cursor = System.Windows.Forms.Cursors.Hand;
+            France_flag.Image = Properties.Resources.france;
+            resources.ApplyResources(France_flag, "France_flag");
+            France_flag.Name = "France_flag";
+            France_flag.TabStop = false;
             // 
             // cbLang
             // 
-            resources.ApplyResources(this.cbLang, "cbLang");
-            this.cbLang.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(86)))), ((int)(((byte)(77)))));
-            this.cbLang.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbLang.ForeColor = System.Drawing.Color.White;
-            this.cbLang.FormattingEnabled = true;
-            this.cbLang.Name = "cbLang";
-            this.cbLang.SelectedIndexChanged += new System.EventHandler(this.cbLang_SelectedIndexChanged);
+            cbLang.BackColor = System.Drawing.Color.FromArgb(72, 86, 77);
+            cbLang.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            resources.ApplyResources(cbLang, "cbLang");
+            cbLang.ForeColor = System.Drawing.Color.White;
+            cbLang.FormattingEnabled = true;
+            cbLang.Name = "cbLang";
+            cbLang.SelectedIndexChanged += cbLang_SelectedIndexChanged;
             // 
             // panelList
             // 
-            resources.ApplyResources(this.panelList, "panelList");
-            this.panelList.Controls.Add(this.DgvList);
-            this.panelList.Name = "panelList";
+            panelList.Controls.Add(DgvList);
+            resources.ApplyResources(panelList, "panelList");
+            panelList.Name = "panelList";
             // 
             // DgvList
             // 
-            resources.ApplyResources(this.DgvList, "DgvList");
-            this.DgvList.AllowUserToAddRows = false;
-            this.DgvList.AllowUserToDeleteRows = false;
-            this.DgvList.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(86)))), ((int)(((byte)(81)))));
-            this.DgvList.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.Sunken;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.Honeydew;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Corbel", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(86)))), ((int)(((byte)(81)))));
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.DgvList.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
-            this.DgvList.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle5.BackColor = System.Drawing.Color.Honeydew;
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(86)))), ((int)(((byte)(81)))));
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.DgvList.DefaultCellStyle = dataGridViewCellStyle5;
-            this.DgvList.Name = "DgvList";
-            this.DgvList.ReadOnly = true;
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle6.BackColor = System.Drawing.Color.Honeydew;
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Corbel", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.MediumSeaGreen;
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.DgvList.RowHeadersDefaultCellStyle = dataGridViewCellStyle6;
-            this.DgvList.RowTemplate.Height = 33;
+            DgvList.AllowUserToAddRows = false;
+            DgvList.AllowUserToDeleteRows = false;
+            DgvList.BackgroundColor = System.Drawing.Color.FromArgb(72, 86, 81);
+            DgvList.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.Sunken;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.Honeydew;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Corbel", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(72, 86, 81);
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            DgvList.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            DgvList.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.Honeydew;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(72, 86, 81);
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            DgvList.DefaultCellStyle = dataGridViewCellStyle2;
+            resources.ApplyResources(DgvList, "DgvList");
+            DgvList.Name = "DgvList";
+            DgvList.ReadOnly = true;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.Honeydew;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Corbel", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.MediumSeaGreen;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            DgvList.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            DgvList.RowTemplate.Height = 33;
+            DgvList.CellDoubleClick += DgvList_CellDoubleClick;
             // 
             // WeightSettingsList
             // 
             resources.ApplyResources(this, "$this");
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(62)))), ((int)(((byte)(60)))));
-            this.Controls.Add(this.panelList);
-            this.Controls.Add(this.panelTitleBar);
-            this.Controls.Add(this.menuStrip1);
-            this.Name = "WeightSettingsList";
-            this.Load += new System.EventHandler(this.WeightSettingsList_Load);
-            this.menuStrip1.ResumeLayout(false);
-            this.menuStrip1.PerformLayout();
-            this.panelTitleBar.ResumeLayout(false);
-            this.panelTitleBar.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.Spain_flag)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.England_flag)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.France_flag)).EndInit();
-            this.panelList.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.DgvList)).EndInit();
-            this.ResumeLayout(false);
-            this.PerformLayout();
-
+            AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            BackColor = System.Drawing.Color.FromArgb(58, 62, 60);
+            Controls.Add(panelList);
+            Controls.Add(panelTitleBar);
+            Controls.Add(menuStrip1);
+            Name = "WeightSettingsList";
+            Load += WeightSettingsList_Load;
+            menuStrip1.ResumeLayout(false);
+            menuStrip1.PerformLayout();
+            panelTitleBar.ResumeLayout(false);
+            panelTitleBar.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
+            panel1.ResumeLayout(false);
+            panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)Spain_flag).EndInit();
+            ((System.ComponentModel.ISupportInitialize)England_flag).EndInit();
+            ((System.ComponentModel.ISupportInitialize)France_flag).EndInit();
+            panelList.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)DgvList).EndInit();
+            ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion

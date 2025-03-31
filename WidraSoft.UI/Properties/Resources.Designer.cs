@@ -663,6 +663,16 @@ namespace WidraSoft.UI.Properties {
         /// <summary>
         ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap identifiant {
+            get {
+                object obj = ResourceManager.GetObject("identifiant", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap imprimante {
             get {
                 object obj = ResourceManager.GetObject("imprimante", resourceCulture);
@@ -1176,6 +1186,16 @@ namespace WidraSoft.UI.Properties {
         internal static System.Drawing.Bitmap table {
             get {
                 object obj = ResourceManager.GetObject("table", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap telephoner {
+            get {
+                object obj = ResourceManager.GetObject("telephoner", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

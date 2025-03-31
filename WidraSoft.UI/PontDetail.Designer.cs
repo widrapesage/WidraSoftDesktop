@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(PontDetail));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             panelLang = new System.Windows.Forms.Panel();
             pbUpdating = new System.Windows.Forms.PictureBox();
             Spain_flag = new System.Windows.Forms.PictureBox();
@@ -122,6 +122,12 @@
             txtDesignation = new System.Windows.Forms.TextBox();
             label1 = new System.Windows.Forms.Label();
             txtActiverPoids = new System.Windows.Forms.TextBox();
+            txtContact1 = new System.Windows.Forms.TextBox();
+            label29 = new System.Windows.Forms.Label();
+            txtContact2 = new System.Windows.Forms.TextBox();
+            label30 = new System.Windows.Forms.Label();
+            txtContact3 = new System.Windows.Forms.TextBox();
+            label31 = new System.Windows.Forms.Label();
             panelLang.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pbUpdating).BeginInit();
             ((System.ComponentModel.ISupportInitialize)Spain_flag).BeginInit();
@@ -360,6 +366,12 @@
             // 
             // groupBox1
             // 
+            groupBox1.Controls.Add(txtContact3);
+            groupBox1.Controls.Add(label31);
+            groupBox1.Controls.Add(txtContact2);
+            groupBox1.Controls.Add(label30);
+            groupBox1.Controls.Add(txtContact1);
+            groupBox1.Controls.Add(label29);
             groupBox1.Controls.Add(txtCOMScanner);
             groupBox1.Controls.Add(label28);
             groupBox1.Controls.Add(label27);
@@ -681,14 +693,14 @@
             dgvFirmes.BorderStyle = System.Windows.Forms.BorderStyle.None;
             dgvFirmes.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.Sunken;
             dgvFirmes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.Honeydew;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Calibri", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(72, 86, 81);
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            dgvFirmes.DefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.Honeydew;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Calibri", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(72, 86, 81);
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            dgvFirmes.DefaultCellStyle = dataGridViewCellStyle2;
             resources.ApplyResources(dgvFirmes, "dgvFirmes");
             dgvFirmes.Name = "dgvFirmes";
             dgvFirmes.RowTemplate.Height = 25;
@@ -909,6 +921,45 @@
             resources.ApplyResources(txtActiverPoids, "txtActiverPoids");
             txtActiverPoids.Name = "txtActiverPoids";
             // 
+            // txtContact1
+            // 
+            txtContact1.BackColor = System.Drawing.Color.Honeydew;
+            resources.ApplyResources(txtContact1, "txtContact1");
+            txtContact1.ForeColor = System.Drawing.Color.Black;
+            txtContact1.Name = "txtContact1";
+            // 
+            // label29
+            // 
+            resources.ApplyResources(label29, "label29");
+            label29.ForeColor = System.Drawing.Color.White;
+            label29.Name = "label29";
+            // 
+            // txtContact2
+            // 
+            txtContact2.BackColor = System.Drawing.Color.Honeydew;
+            resources.ApplyResources(txtContact2, "txtContact2");
+            txtContact2.ForeColor = System.Drawing.Color.Black;
+            txtContact2.Name = "txtContact2";
+            // 
+            // label30
+            // 
+            resources.ApplyResources(label30, "label30");
+            label30.ForeColor = System.Drawing.Color.White;
+            label30.Name = "label30";
+            // 
+            // txtContact3
+            // 
+            txtContact3.BackColor = System.Drawing.Color.Honeydew;
+            resources.ApplyResources(txtContact3, "txtContact3");
+            txtContact3.ForeColor = System.Drawing.Color.Black;
+            txtContact3.Name = "txtContact3";
+            // 
+            // label31
+            // 
+            resources.ApplyResources(label31, "label31");
+            label31.ForeColor = System.Drawing.Color.White;
+            label31.Name = "label31";
+            // 
             // PontDetail
             // 
             resources.ApplyResources(this, "$this");
@@ -1049,5 +1100,11 @@
         private System.Windows.Forms.Label label27;
         private System.Windows.Forms.CheckBox chx_ActiverBarriere;
         private System.Windows.Forms.TextBox txtActiverBarriere;
+        private System.Windows.Forms.TextBox txtContact2;
+        private System.Windows.Forms.Label label30;
+        private System.Windows.Forms.TextBox txtContact1;
+        private System.Windows.Forms.Label label29;
+        private System.Windows.Forms.TextBox txtContact3;
+        private System.Windows.Forms.Label label31;
     }
 }

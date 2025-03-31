@@ -66,7 +66,7 @@ namespace WidraSoft.UI
             timer_Time.Start();
 
             Initialize_WeighBridgeSettings(vg_PontId);
-
+            Initialize_Contact();
 
         }
 
@@ -108,6 +108,48 @@ namespace WidraSoft.UI
             return pontId;
         }
 
+        private void Initialize_Contact()
+        {
+            Pont pont = new Pont();
+            DataTable dtPont = pont.FindById(vg_PontId);
+            foreach (DataRow ro in dtPont.Rows)
+            {
+                if (ro["CONTACT1"].ToString() != "")
+                {
+                    lbContact1.Text = ro["CONTACT1"].ToString();
+                    lbContact1.Visible = true;
+                    pbContact1.Visible = true;
+                }
+                else
+                {
+                    lbContact1.Visible = false;
+                    pbContact1.Visible = false;
+                }
+                if (ro["CONTACT2"].ToString() != "")
+                {
+                    lbContact2.Text = ro["CONTACT2"].ToString();
+                    lbContact2.Visible = true;
+                    pbContact2.Visible = true;
+                }
+                else
+                {
+                    lbContact2.Visible = false;
+                    pbContact2.Visible = false;
+                }
+                if (ro["CONTACT3"].ToString() != "")
+                {
+                    lbContact3.Text = ro["CONTACT3"].ToString();
+                    lbContact3.Visible = true;
+                    pbContact3.Visible = true;
+                }
+                else
+                {
+                    lbContact3.Visible = false;
+                    pbContact3.Visible = false;
+                }
+            }
+
+        }
         private bool GetWeighingSettingsType(Int32 PontId)
         {
             Pont pont = new Pont();
@@ -159,7 +201,8 @@ namespace WidraSoft.UI
                     if (ActiverPoids == 1)
                     {
                         txtPoids.ReadOnly = true;
-                        com.Open();
+                        if (!com.IsOpen)
+                            com.Open();
                     }
                     else
                     {
@@ -187,7 +230,6 @@ namespace WidraSoft.UI
                 if (ActiverPoids == 1)
                 {
                     Weight_Timer.Start();
-
                 }
                 LongueurMinChaine = (int)r["LONGUEURMINCHAINE"];
                 PositionDebut = (int)r["POSITIONDEBUT"];
@@ -237,7 +279,7 @@ namespace WidraSoft.UI
             byte[] trame = new byte[com.BytesToRead];
             com.Read(trame, 0, trame.Length);
             s = System.Text.Encoding.ASCII.GetString(trame);
-            
+
             if (s.Length >= LongueurMinChaine)
             {
                 result = filtredataBilancia(s);
@@ -248,10 +290,10 @@ namespace WidraSoft.UI
                 else { txtPoids.Text = "0"; }
                 Poids_Public = Poids;
             }
-                
+
             else
                 txtPoids.Text = "0";
-            
+
         }
 
 
@@ -271,6 +313,7 @@ namespace WidraSoft.UI
             language_Manager.ChangeLanguage(Lang, this, typeof(Borne_Home));
             lbDate.Text = DateTime.Now.ToShortDateString() + ' ' + DateTime.Now.ToShortTimeString();
             lbMessage.Text = "Bienvenue, prêt à peser ...";
+            Initialize_Contact();
         }
 
 
@@ -299,11 +342,11 @@ namespace WidraSoft.UI
                     {
                         Form form = new Borne_ChoixTypePesee(Lang, GetPontId(), GetWeighingSettingsType(GetPontId()), P, TimerInterval, TypeScanner, ActiverScanner);
                         //txtPoids.Text = "0";
-                        form.Show(this); 
+                        form.Show(this);
                     }
-                                  
+
                 }
-            }                       
+            }
         }
 
         private void txtPoids_DoubleClick(object sender, EventArgs e)
@@ -322,6 +365,7 @@ namespace WidraSoft.UI
             language_Manager.ChangeLanguage(Lang, this, typeof(Borne_Home));
             lbDate.Text = DateTime.Now.ToShortDateString() + ' ' + DateTime.Now.ToShortTimeString();
             lbMessage.Text = "Welcome, ready to weigh ...";
+            Initialize_Contact();
         }
 
         private void Spain_flag_Click(object sender, EventArgs e)
@@ -334,19 +378,24 @@ namespace WidraSoft.UI
             language_Manager.ChangeLanguage(Lang, this, typeof(Borne_Home));
             lbDate.Text = DateTime.Now.ToShortDateString() + ' ' + DateTime.Now.ToShortTimeString();
             lbMessage.Text = "Bienvenido, listo para pesar";
+            Initialize_Contact();
         }
 
         private void Weight_Timer_Tick(object sender, EventArgs e)
         {
-             ReceiveSerialData();
+            if (com.IsOpen)
+                ReceiveSerialData();
         }
 
         private void Borne_Home_FormClosing(object sender, FormClosingEventArgs e)
         {
             if (com.IsOpen)
             {
+                Weight_Timer.Stop();
                 com.Close();
             }
         }
+
+        
     }
 }
