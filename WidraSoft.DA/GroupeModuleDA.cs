@@ -31,65 +31,6 @@ namespace WidraSoft.DA
             }
         }
 
-        public DataTable FindAuthorizedModulesByGroupeId(Int32 Id)
-        {
-            String sql = "SELECT gm.MODULEID, m.DESIGNATION, gm.TYPEACESS FROM MODULE m, GROUPEMODULE gm WHERE gm.MODULEID = m.MODULEID AND gm.GROUPEID=" + Id ;
-            conn.ConnectionString = connString;
-            if (conn.State == ConnectionState.Closed)
-                conn.Open();
-            SqlCommand cmd = new SqlCommand(sql, conn);
-            try
-            {
-                SqlDataReader reader = cmd.ExecuteReader();
-                dt.Load(reader);
-                return dt;
-            }
-            catch
-            {
-                throw;
-            }
-        }
-
-        public DataTable FindNonAuthorizedModulesByGroupeId(Int32 Id)
-        {
-            String sql = "SELECT MODULEID,DESIGNATION FROM MODULE WHERE MODULEID NOT IN (SELECT MODULEID FROM GROUPEMODULE WHERE GROUPEID=" + Id + ")";
-            conn.ConnectionString = connString;
-            if (conn.State == ConnectionState.Closed)
-                conn.Open();
-            SqlCommand cmd = new SqlCommand(sql, conn);
-            try
-            {
-                SqlDataReader reader = cmd.ExecuteReader();
-                dt.Load(reader);
-                return dt;
-            }
-            catch
-            {
-                throw;
-            }
-        }
-
-        public bool IsAuthorized(Int32 GroupeId, Int32 ModuleId)
-        {
-            String sql = "SELECT COUNT(*) FROM GROUPEMODULE WHERE GROUPEID =" + GroupeId + " AND MODULEID =" + ModuleId;
-            conn.ConnectionString = connString;
-            if (conn.State == ConnectionState.Closed)
-                conn.Open();
-            SqlCommand cmd = new SqlCommand(sql, conn);
-            try
-            {
-                int Count = (int)cmd.ExecuteScalar();
-                if (Count > 0)
-                    return true;
-                else
-                    return false;
-            }
-            catch
-            {
-                throw;
-            }
-        }
-
         public DataTable FindByGroupeId(Int32 Id)
         {
             String sql = "SELECT * FROM GROUPEMODULE WHERE GROUPEID=" + Id;
@@ -146,9 +87,6 @@ namespace WidraSoft.DA
             }
             return max;
         }
-
-
-
         public void Add(Int32 GroupeId, Int32 ModuleId, Int32 Access, String TypeAcess)
         {
             using (conn)

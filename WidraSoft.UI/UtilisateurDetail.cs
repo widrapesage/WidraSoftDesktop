@@ -1,5 +1,4 @@
-﻿using CustomMessageBox;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -31,11 +30,7 @@ namespace WidraSoft.UI
             cbGroupeId.DataSource = groupe.List("1=1");
             cbGroupeId.DisplayMember = "DESIGNATION";
             cbGroupeId.ValueMember = "GROUPEID";
-
-            cbLanguage.DataSource = Values.Langue_Utilisateur;
-            cbLanguage.ValueMember = null;
-            cbLanguage.DisplayMember = Values.Langue_Utilisateur[0].ToString();
-
+            
 
             if (vg_Mode == "Add")
             {
@@ -63,75 +58,29 @@ namespace WidraSoft.UI
                     }
                 }
             }
-            Bind_DgvAuthorizationList();
-            cbLang.DataSource = Language.Languages;
-            cbLang.ValueMember = null;
-            cbLang.DisplayMember = Language.Languages[0];
-            cbLang.SelectedIndex = MenuGeneral.languuage_index;
-        }
-
-        private void Bind_DgvAuthorizationList()
-        {
-            GroupeModule groupemodule = new GroupeModule();
-            if (cbGroupeId.Text == "")
-            {
-                DgvAuthorizationList.DataSource = groupemodule.FindAuthorizedModulesByGroupeId(-1);
-            }
-            else
-            {
-                int Id;
-                Id= (Int32)cbGroupeId.SelectedValue;
-                DgvAuthorizationList.DataSource = groupemodule.FindAuthorizedModulesByGroupeId(Id);
-            }
-
-            DgvAuthorizationList.Columns[0].Visible = false;
-            DgvAuthorizationList.Columns["DESIGNATION"].Visible = true;
-            DgvAuthorizationList.Columns["TYPEACESS"].Visible = true;
-
-            DgvAuthorizationList.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
-            DgvAuthorizationList.ReadOnly = true;
-            DgvAuthorizationList.RowHeadersVisible = false;
-
-        }
-
-        private void Localize_DgvAuthorizationList(string lang)
-        {
-            if (lang == "fr")
-            {
-                DgvAuthorizationList.Columns["DESIGNATION"].HeaderText = "MODULE";
-                DgvAuthorizationList.Columns["TYPEACESS"].HeaderText = "TYPE ACCES";
-            }
-
-            if (lang == "en")
-            {
-                DgvAuthorizationList.Columns["DESIGNATION"].HeaderText = "MODULE";
-                DgvAuthorizationList.Columns["TYPEACESS"].HeaderText = "ACCESS TYPE";
-            }
-
-            if (lang == "es")
-            {
-                DgvAuthorizationList.Columns["DESIGNATION"].HeaderText = "MÓDULO";
-                DgvAuthorizationList.Columns["TYPEACESS"].HeaderText = "TYPO DE ACCESO";
-            }
         }
 
         private void Add_Item()
         {
-            if (txtId.Text == "" && txtDateCreation.Text == "" && txtNom.Text=="" && txtPrenom.Text=="" && txtLogin.Text == "" && txtPassword.Text == "" && cbGroupeId.Text == "" && cbLanguage.Text == "")
+            if (txtId.Text == "" && txtDateCreation.Text == "" && txtNom.Text=="" && txtPrenom.Text=="" && txtLogin.Text == "" && txtPassword.Text == "" && cbGroupeId.Text == "")
             {
-                lbModifier.Enabled = false;
-                lbModifier.BackColor = Color.Transparent;
-                lbSupprimer.Enabled = false;
-                lbSupprimer.BackColor = Color.Transparent;
-            }                       
+                btModifier.Enabled = false;
+                btModifier.BackColor = Color.Transparent;
+                btSupprimer.Enabled = false;
+                btSupprimer.BackColor = Color.Transparent;
+
+
+            }
+                        
         }
 
         private void Edit_Item()
         {
-                lbAjouter.Enabled = false;
-                lbAjouter.BackColor = Color.Transparent;
+                btAjouter.Enabled = false;
+                btAjouter.BackColor = Color.Transparent;
                 Disable();
-                Bind_Fields();           
+                Bind_Fields();
+           
         }
         private void Bind_Fields()
         {
@@ -151,7 +100,6 @@ namespace WidraSoft.UI
                     cbGroupeId.SelectedValue = 0;
                 else
                     cbGroupeId.SelectedValue = (int)row["GROUPEID"];
-                cbLanguage.Text = row["LANG"].ToString();
             }
         }
 
@@ -163,10 +111,7 @@ namespace WidraSoft.UI
             txtLogin.Enabled = false;
             txtPassword.Enabled = false;
             cbGroupeId.Enabled = false;
-            cbLanguage.Enabled = false;
-            pbUpdating.Visible = false;
-            DgvAuthorizationList.Enabled = false;
-
+            
             vg_IsEnabled = false;
         }
 
@@ -178,9 +123,6 @@ namespace WidraSoft.UI
             txtLogin.Enabled = true;
             txtPassword.Enabled = true;
             cbGroupeId.Enabled = true;
-            cbLanguage.Enabled = true;
-            pbUpdating.Visible = true;
-            DgvAuthorizationList.Enabled = true;
 
             vg_IsEnabled = true;
         }
@@ -194,36 +136,34 @@ namespace WidraSoft.UI
             txtLogin.Text = "";
             txtPassword.Text = "";
             cbGroupeId.Text = "";
-            cbLanguage.Text = "";
         }
 
-      
+        private Int32 CbSelectedValue_Convert_Int(ComboBox o)
+        {
+            if (o.SelectedValue == null)
+            {
+                return 0;
+            }
+            else
+            {
+                return (Int32)o.SelectedValue;
+            }
+        }
 
-
-        private void lbAjouter_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        private void btAjouter_Click(object sender, EventArgs e)
         {
             try
-            {
+            {                
                 if (txtId.Text == "" && txtDateCreation.Text == "" && txtNom.Text != "" && txtPrenom.Text != "" && txtLogin.Text != "" && txtPassword.Text != "")
                 {
                     Utilisateur utilisateur = new Utilisateur();
-                    utilisateur.Add(txtNom.Text, txtPrenom.Text, txtLogin.Text, txtPassword.Text, Common_functions.CbSelectedValue_Convert_Int(cbGroupeId), cbLanguage.Text);
-                    if (cbLang.Text == "FR")
-                        Custom_MessageBox.Show("FR", "Utilisateur ajouté avec succès", "Utilisateur", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    else if (cbLang.Text == "EN")
-                        Custom_MessageBox.Show("EN", "User added successfully", "User", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    else
-                        Custom_MessageBox.Show("ES", "Usuario agregado", "Usuario", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    utilisateur.Add(txtNom.Text, txtPrenom.Text, txtLogin.Text, txtPassword.Text, CbSelectedValue_Convert_Int(cbGroupeId));
+                    MessageBox.Show("Utilisateur ajouté avec succès");
                     Close();
                 }
                 else
-                {
-                    if (cbLang.Text == "FR")
-                        Custom_MessageBox.Show("FR", "Informations incomplètes", "Utilisateur", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    else if (cbLang.Text == "EN")
-                        Custom_MessageBox.Show("EN", "Incomplete informations", "User", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    else
-                        Custom_MessageBox.Show("ES", "Información incompleta", "Usuario", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                {   
+                    MessageBox.Show("Informations incomplètes");
                 }
             }
             catch
@@ -232,14 +172,50 @@ namespace WidraSoft.UI
             }
         }
 
-        private void lbModifier_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        private void btAjouter_MouseEnter(object sender, EventArgs e)
+        {
+            if (btAjouter.Enabled == true)
+                btAjouter.BackColor = Color.MintCream;
+        }
+
+        private void btAjouter_MouseLeave(object sender, EventArgs e)
+        {
+            if (btAjouter.Enabled == true)
+                btAjouter.BackColor = Color.MediumSeaGreen;
+        }
+
+        private void btModifier_MouseEnter(object sender, EventArgs e)
+        {
+            if (btModifier.Enabled == true)
+                btModifier.BackColor = Color.MintCream;
+        }
+
+        private void btModifier_MouseLeave(object sender, EventArgs e)
+        {
+            if (btModifier.Enabled == true)
+                btModifier.BackColor = Color.MediumSeaGreen;
+        }
+
+        private void btSupprimer_MouseEnter(object sender, EventArgs e)
+        {
+            if (btSupprimer.Enabled == true)
+                btSupprimer.BackColor = Color.MintCream;
+        }
+
+        private void btSupprimer_MouseLeave(object sender, EventArgs e)
+        {
+            if (btSupprimer.Enabled == true)
+                btSupprimer.BackColor = Color.MediumSeaGreen;
+        }
+
+        private void btModifier_Click(object sender, EventArgs e)
         {
             try
             {
                 if (vg_Update == false && vg_IsEnabled == false)
                 {
                     Enable();
-                    lbModifier.Text = Language_Manager.Localize("Valider", cbLang.Text);
+                    btModifier.Text = "Valider";
                     vg_Update = true;
                 }
                 else
@@ -254,35 +230,24 @@ namespace WidraSoft.UI
                             IsParsableId = Int32.TryParse(txtId.Text, out Id);
                             if (IsParsableId)
                             {
-                                utilisateur.Update(Id, txtNom.Text, txtPrenom.Text, txtLogin.Text, txtPassword.Text, Common_functions.CbSelectedValue_Convert_Int(cbGroupeId), cbLanguage.Text);
-                                if (cbLang.Text == "FR")
-                                    Custom_MessageBox.Show("FR", "Utilisateur modifié avec succès", "Utilisateur", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                                else if (cbLang.Text == "EN")
-                                    Custom_MessageBox.Show("EN", "User updated successfully", "User", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                                else
-                                    Custom_MessageBox.Show("ES", "Usuario alterado", "Usuario", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                                lbModifier.Text = Language_Manager.Localize("Modifier", cbLang.Text);
+                                utilisateur.Update(Id,txtNom.Text, txtPrenom.Text , txtLogin.Text, txtPassword.Text, CbSelectedValue_Convert_Int(cbGroupeId));
+                                MessageBox.Show("Utilisateur modifié avec succès");
+                                btModifier.Text = "Modifier";
                                 vg_Update = false;
                                 Disable();
                                 Bind_Fields();
-                                Bind_DgvAuthorizationList();
                             }
+
                         }
                         else
-                        {
-                            if (cbLang.Text == "FR")
-                                Custom_MessageBox.Show("FR", "Informations incomplètes", "Utilisateur", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                            else if (cbLang.Text == "EN")
-                                Custom_MessageBox.Show("EN", "Incomplete informations", "User", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                            else
-                                Custom_MessageBox.Show("ES", "Información incompleta", "Usuario", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        }
+                            MessageBox.Show("Informations incomplètes");
                     }
                     catch
                     {
                         throw;
                     }
                 }
+                
             }
             catch
             {
@@ -290,16 +255,11 @@ namespace WidraSoft.UI
             }
         }
 
-        private void lbSupprimer_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        private void btSupprimer_Click(object sender, EventArgs e)
         {
             if (vg_Update)
             {
-                if (cbLang.Text == "FR")
-                    Custom_MessageBox.Show("FR", "Vous ne pouvez pas supprimer l'enregistrement tant que la modification n'est pas validée", "Utilisateur", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                else if (cbLang.Text == "EN")
-                    Custom_MessageBox.Show("EN", "You can't delete this record before the update is completed", "User", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                else
-                    Custom_MessageBox.Show("ES", "No puede eliminar el registro hasta que se confirme el cambio", "Usuario", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Vous ne pouvez pas supprimer l'enregistrement terminez d'abord la modification");
             }
             else
             {
@@ -311,84 +271,17 @@ namespace WidraSoft.UI
                     IsParsableId = Int32.TryParse(txtId.Text, out Id);
                     if (IsParsableId)
                     {
-                        DialogResult result;
-                        if (cbLang.Text == "FR")
-                            result = Custom_MessageBox.Show("FR", "Etes vous sur de vouloir supprimer cet enregistrement?", "Utilisateur", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-                        else if (cbLang.Text == "EN")
-                            result = Custom_MessageBox.Show("EN", "Are you sure you want to delete this record?", "User", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-                        else
-                            result = Custom_MessageBox.Show("ES", "¿Está seguro de que desea eliminar este registro?", "Usuario", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-                        if (result == DialogResult.Yes)
-                        {
-                            utilisateur.Delete(Id);
-                            if (cbLang.Text == "FR")
-                                Custom_MessageBox.Show("FR", "Utilisateur supprimé avec succès", "Utilisateur", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                            else if (cbLang.Text == "EN")
-                                Custom_MessageBox.Show("EN", "User deleted successfully", "User", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                            else
-                                Custom_MessageBox.Show("ES", "Usuario eliminado", "Usuario", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                            Close();
-                        }                        
+                        utilisateur.Delete(Id);
+                        MessageBox.Show("Utilisateur supprimé avec succès");
+                        Close();
                     }
                 }
                 catch
                 {
                     throw;
                 }
-
-            }
-        }
-
-        private void UtilisateurDetail_FormClosing(object sender, FormClosingEventArgs e)
-        {
-            if (vg_Mode == "Edit")
-            {
-                if (pbUpdating.Visible)
-                {
-                    if (cbLang.Text == "FR")
-                        Custom_MessageBox.Show("FR", "Vous ne pouvez pas fermer la fenetre tant que la modification n'est pas validée", "Utilisateur", MessageBoxButtons.OK, MessageBoxIcon.Stop);
-                    else if (cbLang.Text == "EN")
-                        Custom_MessageBox.Show("EN", "You can't close this window before the update is completed", "User", MessageBoxButtons.OK, MessageBoxIcon.Stop);
-                    else
-                        Custom_MessageBox.Show("ES", "No puede cerrar la página hasta que se valide el cambio", "Usuario", MessageBoxButtons.OK, MessageBoxIcon.Stop);
-                    e.Cancel = true;
-                }
-            }
                
-        }
-
-        private void cbLang_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            if (cbLang.Text == "FR")
-            {
-                France_flag.Visible = true;
-                England_flag.Visible = false;
-                Spain_flag.Visible = false;
-                Language_Manager language_Manager = new Language_Manager();
-                language_Manager.ChangeLanguage("fr", this, typeof(UtilisateurDetail));
-                Localize_DgvAuthorizationList("fr");
-            }
-
-            if (cbLang.Text == "EN")
-            {
-                France_flag.Visible = false;
-                England_flag.Visible = true;
-                Spain_flag.Visible = false;
-                Language_Manager language_Manager = new Language_Manager();
-                language_Manager.ChangeLanguage("en", this, typeof(UtilisateurDetail));
-                Localize_DgvAuthorizationList("en");
-            }
-
-            if (cbLang.Text == "ES")
-            {
-                France_flag.Visible = false;
-                England_flag.Visible = false;
-                Spain_flag.Visible = true;
-                Language_Manager language_Manager = new Language_Manager();
-                language_Manager.ChangeLanguage("es", this, typeof(UtilisateurDetail));
-                Localize_DgvAuthorizationList("es");
             }
         }
-
     }
 }

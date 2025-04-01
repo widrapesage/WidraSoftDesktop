@@ -7,57 +7,14 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <None Remove="AccesCamionQR.rdlc" />
-    <None Remove="appsettings.json" />
-    <None Remove="PeseePBTicketA5.rdlc" />
-    <None Remove="ReportingWalterre.rdlc" />
-    <None Remove="ReportingWalterreGBClient.rdlc" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Content Include="appsettings.json">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-  </ItemGroup>
-
-  <ItemGroup>
-    <EmbeddedResource Include="AccesCamionQR.rdlc" />
-    <EmbeddedResource Include="PeseePBTicketA5.rdlc" />
-    <EmbeddedResource Include="ReportingWalterre.rdlc" />
-    <EmbeddedResource Include="ReportingWalterreGBClient.rdlc" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <ProjectReference Include="..\..\NetSDKCS\NetSDKCS.csproj" />
-    <ProjectReference Include="..\TunnelIntegration\TunnelIntegration.csproj" />
     <ProjectReference Include="..\WidraSoft.BL\WidraSoft.BL.csproj" />
   </ItemGroup>
 
   <ItemGroup>
-    <Compile Update="CustomMessageBox\Properties\Settings.Designer.cs">
-      <DesignTimeSharedInput>True</DesignTimeSharedInput>
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Settings.settings</DependentUpon>
-    </Compile>
     <Compile Update="Properties\Resources.Designer.cs">
       <DesignTime>True</DesignTime>
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
-    </Compile>
-    <Compile Update="Properties\Settings.Designer.cs">
-      <DesignTimeSharedInput>True</DesignTimeSharedInput>
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Settings.settings</DependentUpon>
-    </Compile>
-    <Compile Update="WIDRASOFT_ST_DBDataSet.Designer.cs">
-      <DesignTime>True</DesignTime>
-      <AutoGen>True</AutoGen>
-      <DependentUpon>WIDRASOFT_ST_DBDataSet.xsd</DependentUpon>
-    </Compile>
-    <Compile Update="WIDRASOFT_ST_DBDataSet1.Designer.cs">
-      <DesignTime>True</DesignTime>
-      <AutoGen>True</AutoGen>
-      <DependentUpon>WIDRASOFT_ST_DBDataSet1.xsd</DependentUpon>
     </Compile>
   </ItemGroup>
 
@@ -67,52 +24,5 @@
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
   </ItemGroup>
-
-  <ItemGroup>
-    <None Update="CustomMessageBox\Properties\Settings.settings">
-      <Generator>SettingsSingleFileGenerator</Generator>
-      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
-    </None>
-    <None Update="Properties\Settings.settings">
-      <Generator>SettingsSingleFileGenerator</Generator>
-      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
-    </None>
-    <None Update="WIDRASOFT_ST_DBDataSet.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>WIDRASOFT_ST_DBDataSet.Designer.cs</LastGenOutput>
-    </None>
-    <None Update="WIDRASOFT_ST_DBDataSet1.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>WIDRASOFT_ST_DBDataSet1.Designer.cs</LastGenOutput>
-    </None>
-  </ItemGroup>
-
-  <ItemGroup>
-    <Folder Include="CustomMessageBox\Test\" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <PackageReference Include="Microsoft.Data.SqlClient" Version="6.0.1">
-		<NoWarn>NU1701</NoWarn>
-	</PackageReference>
-    <PackageReference Include="Microsoft.Extensions.Configuration.Binder" Version="6.0.1" />
-    <PackageReference Include="Microsoft.Extensions.Configuration.Json" Version="6.0.1" />
-    <PackageReference Include="Microsoft.SqlServer.Types" Version="160.1000.6" />
-    <PackageReference Include="ReportViewerCore.WinForms" Version="15.1.21" />
-    <PackageReference Include="System.Data.SqlClient" Version="4.9.0" />
-    <PackageReference Include="System.IO.Ports" Version="7.0.0" />
-    <PackageReference Include="ZXing.Net" Version="0.16.9" />
-    <PackageReference Include="ZXing.Net.Bindings.SkiaSharp" Version="0.16.14" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Reference Include="Tunnel.Communication">
-      <HintPath>..\TunnelIntegration\DLL\Tunnel.Communication.dll</HintPath>
-    </Reference>
-  </ItemGroup>
-
-	<PropertyGroup>
-		<NoWarn>NU1701</NoWarn>
-	</PropertyGroup>
 
 </Project>

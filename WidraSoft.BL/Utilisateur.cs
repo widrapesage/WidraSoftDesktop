@@ -21,19 +21,6 @@ namespace WidraSoft.BL
             }
 
         }
-
-        public DataTable SearchBox(string Filter)
-        {
-            try
-            {
-                UtilisateurDA utilisateur = new UtilisateurDA();
-                return utilisateur.SearchBox(Filter);
-            }
-            catch
-            {
-                throw;
-            }
-        }
         public DataTable GetById(Int32 Id)
         {
             try
@@ -74,20 +61,6 @@ namespace WidraSoft.BL
             }
         }
 
-        public Int32 GetGroupeIdById(Int32 Id)
-        {
-            try
-            {
-                UtilisateurDA utilisateur = new UtilisateurDA();
-                Int32 GroupeId = utilisateur.GetGroupeIdById(Id);
-                return GroupeId;
-            }
-            catch
-            {
-                throw;
-            }
-        }
-
         public string GetFullUsername(Int32 Id)
         {
             try
@@ -101,54 +74,12 @@ namespace WidraSoft.BL
                 throw;
             }
         }
-
-        public string GetUsername(Int32 Id)
-        {
-            try
-            {
-                UtilisateurDA utilisateur = new UtilisateurDA();
-                string username = utilisateur.GetUsername(Id);
-                return username;
-            }
-            catch
-            {
-                throw;
-            }
-        }
-
-        public string GetPassword(Int32 Id)
-        {
-            try
-            {
-                UtilisateurDA utilisateur = new UtilisateurDA();
-                string pass = utilisateur.GetPassword(Id);
-                return pass;
-            }
-            catch
-            {
-                throw;
-            }
-        }
-
-        public int GetUserLanguageIndex(Int32 Id)
-        {
-            try
-            {
-                UtilisateurDA utilisateur = new UtilisateurDA();
-                Int32 index = utilisateur.GetUserLanguageIndex(Id);
-                return index;
-            }
-            catch
-            {
-                throw;
-            }
-        }
-        public void Add(string Nom, string Prenom, string Login, string Password, Int32 GroupeId, string Lang)
+        public void Add(string Nom, string Prenom, string Login, string Password, Int32 GroupeId)
         {
             try
             {   
                 UtilisateurDA utilisateur = new UtilisateurDA();
-                utilisateur.Add(Nom, Prenom, Login, Password, GroupeId, Lang);
+                utilisateur.Add(Nom, Prenom, Login, Password, GroupeId);
             }
             catch
             {
@@ -156,12 +87,12 @@ namespace WidraSoft.BL
             }
 
         }
-        public void Update(Int32 Id,string Nom, string Prenom, string Login, string Password, Int32 GroupeId, string Lang)
+        public void Update(Int32 Id,string Nom, string Prenom, string Login, string Password, Int32 GroupeId)
         {
             try
             {
                 UtilisateurDA utilisateur = new UtilisateurDA();
-                utilisateur.Update(Id, Nom, Prenom, Login, Password, GroupeId, Lang);
+                utilisateur.Update(Id, Nom, Prenom, Login, Password, GroupeId);
             }
             catch
             {

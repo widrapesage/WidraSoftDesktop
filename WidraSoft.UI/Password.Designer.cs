@@ -30,211 +30,196 @@ namespace WidraSoft.UI
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Password));
+            this.label1 = new System.Windows.Forms.Label();
+            this.txtLogin = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.txtPassword = new System.Windows.Forms.TextBox();
+            this.btConnecter = new System.Windows.Forms.Button();
+            this.btQuitter = new System.Windows.Forms.Button();
+            this.label4 = new System.Windows.Forms.Label();
             this.panelLogo = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.txtPassword = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.btConnecter = new System.Windows.Forms.Button();
-            this.txtLogin = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.PanelLayout = new System.Windows.Forms.Panel();
-            this.lbPont = new System.Windows.Forms.Label();
-            this.panelLang = new System.Windows.Forms.Panel();
-            this.Spain_flag = new System.Windows.Forms.PictureBox();
-            this.England_flag = new System.Windows.Forms.PictureBox();
-            this.France_flag = new System.Windows.Forms.PictureBox();
-            this.cbLang = new System.Windows.Forms.ComboBox();
             this.panelLogo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            this.PanelLayout.SuspendLayout();
-            this.panelLang.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.Spain_flag)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.England_flag)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.France_flag)).BeginInit();
             this.SuspendLayout();
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.Font = new System.Drawing.Font("Condiment", 65F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(190)))), ((int)(((byte)(117)))));
+            this.label1.Location = new System.Drawing.Point(586, 35);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(400, 133);
+            this.label1.TabIndex = 1;
+            this.label1.Text = "WidraSoft";
+            // 
+            // txtLogin
+            // 
+            this.txtLogin.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(62)))), ((int)(((byte)(60)))));
+            this.txtLogin.Font = new System.Drawing.Font("Corbel", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.txtLogin.ForeColor = System.Drawing.Color.White;
+            this.txtLogin.Location = new System.Drawing.Point(615, 192);
+            this.txtLogin.Name = "txtLogin";
+            this.txtLogin.Size = new System.Drawing.Size(339, 25);
+            this.txtLogin.TabIndex = 2;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.Color.Transparent;
+            this.label2.Font = new System.Drawing.Font("Corbel", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label2.ForeColor = System.Drawing.Color.White;
+            this.label2.Location = new System.Drawing.Point(499, 193);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(43, 18);
+            this.label2.TabIndex = 3;
+            this.label2.Text = "Login";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.BackColor = System.Drawing.Color.Transparent;
+            this.label3.Font = new System.Drawing.Font("Corbel", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label3.ForeColor = System.Drawing.Color.White;
+            this.label3.Location = new System.Drawing.Point(499, 230);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(88, 18);
+            this.label3.TabIndex = 5;
+            this.label3.Text = "Mot de passe";
+            // 
+            // txtPassword
+            // 
+            this.txtPassword.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(62)))), ((int)(((byte)(60)))));
+            this.txtPassword.Font = new System.Drawing.Font("Corbel", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.txtPassword.ForeColor = System.Drawing.Color.White;
+            this.txtPassword.Location = new System.Drawing.Point(615, 229);
+            this.txtPassword.Name = "txtPassword";
+            this.txtPassword.PasswordChar = '*';
+            this.txtPassword.Size = new System.Drawing.Size(339, 25);
+            this.txtPassword.TabIndex = 4;
+            // 
+            // btConnecter
+            // 
+            this.btConnecter.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(62)))), ((int)(((byte)(60)))));
+            this.btConnecter.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(190)))), ((int)(((byte)(117)))));
+            this.btConnecter.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btConnecter.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btConnecter.ForeColor = System.Drawing.Color.White;
+            this.btConnecter.Location = new System.Drawing.Point(615, 271);
+            this.btConnecter.Name = "btConnecter";
+            this.btConnecter.Size = new System.Drawing.Size(181, 45);
+            this.btConnecter.TabIndex = 7;
+            this.btConnecter.Text = "Se connecter";
+            this.btConnecter.UseVisualStyleBackColor = false;
+            this.btConnecter.Click += new System.EventHandler(this.btConnecter_Click);
+            // 
+            // btQuitter
+            // 
+            this.btQuitter.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(62)))), ((int)(((byte)(60)))));
+            this.btQuitter.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(190)))), ((int)(((byte)(117)))));
+            this.btQuitter.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btQuitter.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btQuitter.ForeColor = System.Drawing.Color.White;
+            this.btQuitter.Location = new System.Drawing.Point(801, 271);
+            this.btQuitter.Name = "btQuitter";
+            this.btQuitter.Size = new System.Drawing.Size(152, 45);
+            this.btQuitter.TabIndex = 8;
+            this.btQuitter.Text = "Quitter";
+            this.btQuitter.UseVisualStyleBackColor = false;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.BackColor = System.Drawing.Color.Transparent;
+            this.label4.Font = new System.Drawing.Font("Corbel", 10F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point);
+            this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(190)))), ((int)(((byte)(117)))));
+            this.label4.Location = new System.Drawing.Point(731, 451);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(80, 17);
+            this.label4.TabIndex = 9;
+            this.label4.Text = "Weigh Better";
             // 
             // panelLogo
             // 
             this.panelLogo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(62)))), ((int)(((byte)(60)))));
             this.panelLogo.Controls.Add(this.pictureBox1);
-            resources.ApplyResources(this.panelLogo, "panelLogo");
+            this.panelLogo.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panelLogo.Location = new System.Drawing.Point(0, 0);
+            this.panelLogo.Margin = new System.Windows.Forms.Padding(4);
             this.panelLogo.Name = "panelLogo";
+            this.panelLogo.Size = new System.Drawing.Size(464, 477);
+            this.panelLogo.TabIndex = 10;
             // 
             // pictureBox1
             // 
-            resources.ApplyResources(this.pictureBox1, "pictureBox1");
+            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pictureBox1.Image = global::WidraSoft.UI.Properties.Resources.logo_Widra_250;
+            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(464, 477);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
-            // 
-            // txtPassword
-            // 
-            this.txtPassword.BackColor = System.Drawing.Color.Honeydew;
-            resources.ApplyResources(this.txtPassword, "txtPassword");
-            this.txtPassword.ForeColor = System.Drawing.Color.Black;
-            this.txtPassword.Name = "txtPassword";
-            // 
-            // label3
-            // 
-            resources.ApplyResources(this.label3, "label3");
-            this.label3.BackColor = System.Drawing.Color.Transparent;
-            this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Name = "label3";
-            // 
-            // label2
-            // 
-            resources.ApplyResources(this.label2, "label2");
-            this.label2.BackColor = System.Drawing.Color.Transparent;
-            this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Name = "label2";
-            // 
-            // btConnecter
-            // 
-            this.btConnecter.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(110)))), ((int)(((byte)(230)))), ((int)(((byte)(130)))));
-            this.btConnecter.FlatAppearance.BorderColor = System.Drawing.Color.WhiteSmoke;
-            this.btConnecter.FlatAppearance.BorderSize = 0;
-            resources.ApplyResources(this.btConnecter, "btConnecter");
-            this.btConnecter.ForeColor = System.Drawing.Color.Black;
-            this.btConnecter.Name = "btConnecter";
-            this.btConnecter.UseVisualStyleBackColor = false;
-            this.btConnecter.Click += new System.EventHandler(this.btConnecter_Click);
-            this.btConnecter.MouseEnter += new System.EventHandler(this.btConnecter_MouseEnter);
-            this.btConnecter.MouseLeave += new System.EventHandler(this.btConnecter_MouseLeave);
-            // 
-            // txtLogin
-            // 
-            this.txtLogin.BackColor = System.Drawing.Color.Honeydew;
-            resources.ApplyResources(this.txtLogin, "txtLogin");
-            this.txtLogin.ForeColor = System.Drawing.Color.Black;
-            this.txtLogin.Name = "txtLogin";
-            // 
-            // label1
-            // 
-            resources.ApplyResources(this.label1, "label1");
-            this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(110)))), ((int)(((byte)(230)))), ((int)(((byte)(130)))));
-            this.label1.Name = "label1";
             // 
             // pictureBox2
             // 
             this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pictureBox2.Image = global::WidraSoft.UI.Properties.Resources.Balance1;
-            resources.ApplyResources(this.pictureBox2, "pictureBox2");
+            this.pictureBox2.Image = global::WidraSoft.UI.Properties.Resources.Balance;
+            this.pictureBox2.Location = new System.Drawing.Point(531, 49);
             this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(64, 64);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.pictureBox2.TabIndex = 17;
             this.pictureBox2.TabStop = false;
-            // 
-            // PanelLayout
-            // 
-            this.PanelLayout.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(86)))), ((int)(((byte)(81)))));
-            this.PanelLayout.Controls.Add(this.lbPont);
-            this.PanelLayout.Controls.Add(this.panelLang);
-            this.PanelLayout.Controls.Add(this.pictureBox2);
-            this.PanelLayout.Controls.Add(this.label1);
-            this.PanelLayout.Controls.Add(this.txtLogin);
-            this.PanelLayout.Controls.Add(this.btConnecter);
-            this.PanelLayout.Controls.Add(this.label2);
-            this.PanelLayout.Controls.Add(this.label3);
-            this.PanelLayout.Controls.Add(this.txtPassword);
-            resources.ApplyResources(this.PanelLayout, "PanelLayout");
-            this.PanelLayout.Name = "PanelLayout";
-            // 
-            // lbPont
-            // 
-            resources.ApplyResources(this.lbPont, "lbPont");
-            this.lbPont.ForeColor = System.Drawing.Color.White;
-            this.lbPont.Name = "lbPont";
-            this.lbPont.Click += new System.EventHandler(this.lbPont_Click);
-            // 
-            // panelLang
-            // 
-            this.panelLang.Controls.Add(this.Spain_flag);
-            this.panelLang.Controls.Add(this.England_flag);
-            this.panelLang.Controls.Add(this.France_flag);
-            this.panelLang.Controls.Add(this.cbLang);
-            resources.ApplyResources(this.panelLang, "panelLang");
-            this.panelLang.Name = "panelLang";
-            // 
-            // Spain_flag
-            // 
-            this.Spain_flag.BackColor = System.Drawing.Color.Transparent;
-            this.Spain_flag.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.Spain_flag.Image = global::WidraSoft.UI.Properties.Resources.spain;
-            resources.ApplyResources(this.Spain_flag, "Spain_flag");
-            this.Spain_flag.Name = "Spain_flag";
-            this.Spain_flag.TabStop = false;
-            // 
-            // England_flag
-            // 
-            this.England_flag.BackColor = System.Drawing.Color.Transparent;
-            this.England_flag.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.England_flag.Image = global::WidraSoft.UI.Properties.Resources.united_kingdom;
-            resources.ApplyResources(this.England_flag, "England_flag");
-            this.England_flag.Name = "England_flag";
-            this.England_flag.TabStop = false;
-            // 
-            // France_flag
-            // 
-            this.France_flag.BackColor = System.Drawing.Color.Transparent;
-            this.France_flag.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.France_flag.Image = global::WidraSoft.UI.Properties.Resources.france;
-            resources.ApplyResources(this.France_flag, "France_flag");
-            this.France_flag.Name = "France_flag";
-            this.France_flag.TabStop = false;
-            // 
-            // cbLang
-            // 
-            this.cbLang.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(86)))), ((int)(((byte)(77)))));
-            this.cbLang.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            resources.ApplyResources(this.cbLang, "cbLang");
-            this.cbLang.ForeColor = System.Drawing.Color.White;
-            this.cbLang.FormattingEnabled = true;
-            this.cbLang.Name = "cbLang";
-            this.cbLang.SelectedIndexChanged += new System.EventHandler(this.cbLang_SelectedIndexChanged);
             // 
             // Password
             // 
-            resources.ApplyResources(this, "$this");
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(86)))), ((int)(((byte)(77)))));
-            this.Controls.Add(this.PanelLayout);
+            this.ClientSize = new System.Drawing.Size(1055, 477);
+            this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.panelLogo);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.btQuitter);
+            this.Controls.Add(this.btConnecter);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.txtPassword);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.txtLogin);
+            this.Controls.Add(this.label1);
+            this.Font = new System.Drawing.Font("Corbel", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.Name = "Password";
+            this.Text = "Identification";
             this.Load += new System.EventHandler(this.Password_Load);
             this.panelLogo.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            this.PanelLayout.ResumeLayout(false);
-            this.PanelLayout.PerformLayout();
-            this.panelLang.ResumeLayout(false);
-            this.panelLang.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.Spain_flag)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.England_flag)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.France_flag)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
         #endregion
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox txtLogin;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.TextBox txtPassword;
+        private System.Windows.Forms.Button btConnecter;
+        private System.Windows.Forms.Button btQuitter;
+        private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Panel panelLogo;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.TextBox txtPassword;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Button btConnecter;
-        private System.Windows.Forms.TextBox txtLogin;
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.Panel PanelLayout;
-        private System.Windows.Forms.Panel panelLang;
-        private System.Windows.Forms.PictureBox Spain_flag;
-        private System.Windows.Forms.PictureBox England_flag;
-        private System.Windows.Forms.PictureBox France_flag;
-        private System.Windows.Forms.ComboBox cbLang;
-        private System.Windows.Forms.Label lbPont;
     }
 }

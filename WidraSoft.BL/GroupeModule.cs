@@ -21,44 +21,6 @@ namespace WidraSoft.BL
             }
         }
 
-        public DataTable FindAuthorizedModulesByGroupeId(Int32 Id)
-        {
-            try
-            {
-                GroupeModuleDA groupemodule = new GroupeModuleDA();
-                return groupemodule.FindAuthorizedModulesByGroupeId(Id);
-            }
-            catch
-            {
-                throw;
-            }
-        }
-        public DataTable FindNonAuthorizedModulesByGroupeId(Int32 Id)
-        {
-            try
-            {
-                GroupeModuleDA groupemodule = new GroupeModuleDA();
-                return groupemodule.FindNonAuthorizedModulesByGroupeId(Id);
-            }
-            catch
-            {
-                throw;
-            }
-        }
-
-        public bool IsAuthorized(Int32 GroupeId, Int32 ModuleId)
-        {
-            try
-            {
-                GroupeModuleDA groupemodule = new GroupeModuleDA();
-                return groupemodule.IsAuthorized(GroupeId, ModuleId);
-            }
-            catch
-            {
-                throw;
-            }
-        }
-
         public DataTable FindByGroupeId(Int32 Id)
         {
             try
