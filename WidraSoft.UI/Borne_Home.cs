@@ -83,7 +83,7 @@ namespace WidraSoft.UI
 
         private void TunnelCommunicationHelper_ReceivedWeightData(object sender, WeightData e)
         {
-            txtPoids.Invoke(new Action(() => txtPoids.Text = e.Weight.ToString()));
+            txtPoids.BeginInvoke(new Action(() => txtPoids.Text = e.Weight.ToString()));
             Poids_Public = e.Weight;
         }
 
@@ -411,6 +411,8 @@ namespace WidraSoft.UI
                 Weight_Timer.Stop();
                 com.Close();
             }
+
+            TunnelCommunicationHelper.ReceivedWeightData -= TunnelCommunicationHelper_ReceivedWeightData;
         }
 
         
