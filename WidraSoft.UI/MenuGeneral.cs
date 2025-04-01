@@ -12,6 +12,8 @@ using System.Globalization;
 using System.Threading;
 using CustomMessageBox;
 using System.IO.Ports;
+using Microsoft.Extensions.Configuration;
+using TunnelIntegration;
 
 namespace WidraSoft.UI
 {
@@ -30,14 +32,13 @@ namespace WidraSoft.UI
             vg_IsTerminal = IsTerminal;
             vg_IsBorneLaunched = IsBorneLaunched;
         }
-
-
+        
         private class MyRenderer : ToolStripProfessionalRenderer
         {
             public MyRenderer() : base(new MyMenuColors()) { }
         }
 
-        private void MenuGeneral_Load(object sender, EventArgs e)
+        private async void MenuGeneral_Load(object sender, EventArgs e)
         {
             this.CenterToScreen();
             WindowState = FormWindowState.Maximized;
@@ -48,14 +49,15 @@ namespace WidraSoft.UI
             cbLang.DisplayMember = Language.Languages[0];
             languuage_index = utilisateur.GetUserLanguageIndex(vg_UtilisateurId);
             cbLang.SelectedIndex = languuage_index;
-
-
+            
             lblusername.Text = utilisateur.GetFullUsername(vg_UtilisateurId);
             vg_GroupeId = utilisateur.GetGroupeIdById(vg_UtilisateurId);
 
             txtEntreprise.Text = "THOMASSEN";
             txtTypeAbonnement.Text = "Classic";
             txtValidite.Text = "---";
+
+            await TunnelCommunicationHelper.InitialiseAsync(Program.Configuration.GetSection("TunnelIntegrationSettings").Get<TunnelIntegrationSettings>());
 
             if (vg_IsTerminal && !vg_IsBorneLaunched)
             {
@@ -64,6 +66,7 @@ namespace WidraSoft.UI
             }
 
         }
+
         [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
         private extern static void ReleaseCapture();
         [DllImport("user32.DLL", EntryPoint = "SendMessage")]

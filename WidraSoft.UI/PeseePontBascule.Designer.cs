@@ -236,8 +236,9 @@
             panelLang.Controls.Add(cbLang);
             panelLang.Dock = System.Windows.Forms.DockStyle.Top;
             panelLang.Location = new System.Drawing.Point(0, 0);
+            panelLang.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             panelLang.Name = "panelLang";
-            panelLang.Size = new System.Drawing.Size(1271, 35);
+            panelLang.Size = new System.Drawing.Size(1453, 47);
             panelLang.TabIndex = 74;
             panelLang.Paint += panelLang_Paint;
             // 
@@ -249,10 +250,10 @@
             lblusername.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             lblusername.ForeColor = System.Drawing.Color.White;
             lblusername.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            lblusername.Location = new System.Drawing.Point(1243, 0);
+            lblusername.Location = new System.Drawing.Point(1419, 0);
             lblusername.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             lblusername.Name = "lblusername";
-            lblusername.Size = new System.Drawing.Size(28, 24);
+            lblusername.Size = new System.Drawing.Size(34, 29);
             lblusername.TabIndex = 131;
             lblusername.Text = "...";
             // 
@@ -262,8 +263,9 @@
             panel1.Controls.Add(txtId);
             panel1.Dock = System.Windows.Forms.DockStyle.Left;
             panel1.Location = new System.Drawing.Point(0, 0);
+            panel1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             panel1.Name = "panel1";
-            panel1.Size = new System.Drawing.Size(108, 35);
+            panel1.Size = new System.Drawing.Size(123, 47);
             panel1.TabIndex = 129;
             // 
             // txtId
@@ -272,11 +274,11 @@
             txtId.BorderStyle = System.Windows.Forms.BorderStyle.None;
             txtId.Font = new System.Drawing.Font("Calibri", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             txtId.ForeColor = System.Drawing.Color.FromArgb(112, 228, 132);
-            txtId.Location = new System.Drawing.Point(5, 5);
-            txtId.Margin = new System.Windows.Forms.Padding(2);
+            txtId.Location = new System.Drawing.Point(6, 7);
+            txtId.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             txtId.Name = "txtId";
             txtId.ReadOnly = true;
-            txtId.Size = new System.Drawing.Size(98, 25);
+            txtId.Size = new System.Drawing.Size(112, 31);
             txtId.TabIndex = 110;
             txtId.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -286,7 +288,8 @@
             Spain_flag.Cursor = System.Windows.Forms.Cursors.Hand;
             Spain_flag.Image = Properties.Resources.spain;
             Spain_flag.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            Spain_flag.Location = new System.Drawing.Point(147, 5);
+            Spain_flag.Location = new System.Drawing.Point(168, 7);
+            Spain_flag.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             Spain_flag.Name = "Spain_flag";
             Spain_flag.Size = new System.Drawing.Size(24, 24);
             Spain_flag.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -299,7 +302,8 @@
             England_flag.Cursor = System.Windows.Forms.Cursors.Hand;
             England_flag.Image = Properties.Resources.united_kingdom;
             England_flag.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            England_flag.Location = new System.Drawing.Point(147, 5);
+            England_flag.Location = new System.Drawing.Point(168, 7);
+            England_flag.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             England_flag.Name = "England_flag";
             England_flag.Size = new System.Drawing.Size(24, 24);
             England_flag.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -312,7 +316,8 @@
             France_flag.Cursor = System.Windows.Forms.Cursors.Hand;
             France_flag.Image = Properties.Resources.france;
             France_flag.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            France_flag.Location = new System.Drawing.Point(147, 5);
+            France_flag.Location = new System.Drawing.Point(168, 7);
+            France_flag.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             France_flag.Name = "France_flag";
             France_flag.Size = new System.Drawing.Size(24, 24);
             France_flag.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -327,9 +332,10 @@
             cbLang.Font = new System.Drawing.Font("Corbel", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             cbLang.ForeColor = System.Drawing.Color.White;
             cbLang.FormattingEnabled = true;
-            cbLang.Location = new System.Drawing.Point(177, 7);
+            cbLang.Location = new System.Drawing.Point(202, 9);
+            cbLang.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             cbLang.Name = "cbLang";
-            cbLang.Size = new System.Drawing.Size(158, 22);
+            cbLang.Size = new System.Drawing.Size(180, 26);
             cbLang.TabIndex = 23;
             cbLang.SelectedIndexChanged += cbLang_SelectedIndexChanged;
             // 
@@ -339,10 +345,10 @@
             lbPont.Font = new System.Drawing.Font("Calibri", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             lbPont.ForeColor = System.Drawing.Color.White;
             lbPont.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            lbPont.Location = new System.Drawing.Point(145, 135);
+            lbPont.Location = new System.Drawing.Point(166, 180);
             lbPont.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             lbPont.Name = "lbPont";
-            lbPont.Size = new System.Drawing.Size(37, 18);
+            lbPont.Size = new System.Drawing.Size(46, 23);
             lbPont.TabIndex = 86;
             lbPont.Text = "Pont";
             // 
@@ -353,10 +359,10 @@
             cbPont.BackColor = System.Drawing.Color.Honeydew;
             cbPont.Font = new System.Drawing.Font("Calibri", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             cbPont.FormattingEnabled = true;
-            cbPont.Location = new System.Drawing.Point(259, 132);
-            cbPont.Margin = new System.Windows.Forms.Padding(2);
+            cbPont.Location = new System.Drawing.Point(296, 176);
+            cbPont.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             cbPont.Name = "cbPont";
-            cbPont.Size = new System.Drawing.Size(252, 26);
+            cbPont.Size = new System.Drawing.Size(287, 30);
             cbPont.TabIndex = 85;
             cbPont.SelectedIndexChanged += cbPont_SelectedIndexChanged;
             cbPont.SelectedValueChanged += cbPont_SelectedValueChanged;
@@ -368,10 +374,10 @@
             lbFirme.Font = new System.Drawing.Font("Calibri", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             lbFirme.ForeColor = System.Drawing.Color.White;
             lbFirme.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            lbFirme.Location = new System.Drawing.Point(145, 167);
+            lbFirme.Location = new System.Drawing.Point(166, 223);
             lbFirme.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             lbFirme.Name = "lbFirme";
-            lbFirme.Size = new System.Drawing.Size(44, 18);
+            lbFirme.Size = new System.Drawing.Size(54, 23);
             lbFirme.TabIndex = 88;
             lbFirme.Text = "Firme";
             // 
@@ -382,10 +388,10 @@
             cbFirme.BackColor = System.Drawing.Color.Honeydew;
             cbFirme.Font = new System.Drawing.Font("Calibri", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             cbFirme.FormattingEnabled = true;
-            cbFirme.Location = new System.Drawing.Point(259, 164);
-            cbFirme.Margin = new System.Windows.Forms.Padding(2);
+            cbFirme.Location = new System.Drawing.Point(296, 219);
+            cbFirme.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             cbFirme.Name = "cbFirme";
-            cbFirme.Size = new System.Drawing.Size(252, 26);
+            cbFirme.Size = new System.Drawing.Size(287, 30);
             cbFirme.TabIndex = 87;
             cbFirme.SelectedIndexChanged += cbFirme_SelectedIndexChanged;
             cbFirme.Leave += cbFirme_Leave;
@@ -396,10 +402,10 @@
             lbCOM.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             lbCOM.ForeColor = System.Drawing.Color.FromArgb(112, 228, 132);
             lbCOM.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            lbCOM.Location = new System.Drawing.Point(54, 6);
+            lbCOM.Location = new System.Drawing.Point(62, 8);
             lbCOM.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             lbCOM.Name = "lbCOM";
-            lbCOM.Size = new System.Drawing.Size(42, 19);
+            lbCOM.Size = new System.Drawing.Size(51, 24);
             lbCOM.TabIndex = 95;
             lbCOM.Text = "COM";
             // 
@@ -409,10 +415,10 @@
             lbCamion.Font = new System.Drawing.Font("Calibri", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             lbCamion.ForeColor = System.Drawing.Color.White;
             lbCamion.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            lbCamion.Location = new System.Drawing.Point(145, 199);
+            lbCamion.Location = new System.Drawing.Point(166, 265);
             lbCamion.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             lbCamion.Name = "lbCamion";
-            lbCamion.Size = new System.Drawing.Size(55, 18);
+            lbCamion.Size = new System.Drawing.Size(68, 23);
             lbCamion.TabIndex = 99;
             lbCamion.Text = "Camion";
             // 
@@ -423,10 +429,10 @@
             cbCamion.BackColor = System.Drawing.Color.Honeydew;
             cbCamion.Font = new System.Drawing.Font("Calibri", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             cbCamion.FormattingEnabled = true;
-            cbCamion.Location = new System.Drawing.Point(259, 196);
-            cbCamion.Margin = new System.Windows.Forms.Padding(2);
+            cbCamion.Location = new System.Drawing.Point(296, 261);
+            cbCamion.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             cbCamion.Name = "cbCamion";
-            cbCamion.Size = new System.Drawing.Size(252, 26);
+            cbCamion.Size = new System.Drawing.Size(287, 30);
             cbCamion.TabIndex = 98;
             cbCamion.SelectedValueChanged += cbCamion_SelectedValueChanged;
             cbCamion.Leave += cbCamion_Leave;
@@ -437,10 +443,10 @@
             lbChauffeur.Font = new System.Drawing.Font("Calibri", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             lbChauffeur.ForeColor = System.Drawing.Color.White;
             lbChauffeur.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            lbChauffeur.Location = new System.Drawing.Point(145, 231);
+            lbChauffeur.Location = new System.Drawing.Point(166, 308);
             lbChauffeur.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             lbChauffeur.Name = "lbChauffeur";
-            lbChauffeur.Size = new System.Drawing.Size(69, 18);
+            lbChauffeur.Size = new System.Drawing.Size(86, 23);
             lbChauffeur.TabIndex = 101;
             lbChauffeur.Text = "Chauffeur";
             // 
@@ -451,10 +457,10 @@
             cbChauffeur.BackColor = System.Drawing.Color.Honeydew;
             cbChauffeur.Font = new System.Drawing.Font("Calibri", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             cbChauffeur.FormattingEnabled = true;
-            cbChauffeur.Location = new System.Drawing.Point(259, 228);
-            cbChauffeur.Margin = new System.Windows.Forms.Padding(2);
+            cbChauffeur.Location = new System.Drawing.Point(296, 304);
+            cbChauffeur.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             cbChauffeur.Name = "cbChauffeur";
-            cbChauffeur.Size = new System.Drawing.Size(252, 26);
+            cbChauffeur.Size = new System.Drawing.Size(287, 30);
             cbChauffeur.TabIndex = 100;
             cbChauffeur.Leave += cbChauffeur_Leave;
             // 
@@ -464,10 +470,10 @@
             lbTransporteur.Font = new System.Drawing.Font("Calibri", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             lbTransporteur.ForeColor = System.Drawing.Color.White;
             lbTransporteur.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            lbTransporteur.Location = new System.Drawing.Point(145, 263);
+            lbTransporteur.Location = new System.Drawing.Point(166, 351);
             lbTransporteur.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             lbTransporteur.Name = "lbTransporteur";
-            lbTransporteur.Size = new System.Drawing.Size(87, 18);
+            lbTransporteur.Size = new System.Drawing.Size(111, 23);
             lbTransporteur.TabIndex = 103;
             lbTransporteur.Text = "Transporteur";
             // 
@@ -478,10 +484,10 @@
             cbTransporteur.BackColor = System.Drawing.Color.Honeydew;
             cbTransporteur.Font = new System.Drawing.Font("Calibri", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             cbTransporteur.FormattingEnabled = true;
-            cbTransporteur.Location = new System.Drawing.Point(259, 260);
-            cbTransporteur.Margin = new System.Windows.Forms.Padding(2);
+            cbTransporteur.Location = new System.Drawing.Point(296, 347);
+            cbTransporteur.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             cbTransporteur.Name = "cbTransporteur";
-            cbTransporteur.Size = new System.Drawing.Size(252, 26);
+            cbTransporteur.Size = new System.Drawing.Size(287, 30);
             cbTransporteur.TabIndex = 102;
             cbTransporteur.Leave += cbTransporteur_Leave;
             // 
@@ -491,10 +497,10 @@
             lbProduit.Font = new System.Drawing.Font("Calibri", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             lbProduit.ForeColor = System.Drawing.Color.White;
             lbProduit.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            lbProduit.Location = new System.Drawing.Point(145, 295);
+            lbProduit.Location = new System.Drawing.Point(166, 393);
             lbProduit.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             lbProduit.Name = "lbProduit";
-            lbProduit.Size = new System.Drawing.Size(54, 18);
+            lbProduit.Size = new System.Drawing.Size(67, 23);
             lbProduit.TabIndex = 105;
             lbProduit.Text = "Produit";
             // 
@@ -505,10 +511,10 @@
             cbProduit.BackColor = System.Drawing.Color.Honeydew;
             cbProduit.Font = new System.Drawing.Font("Calibri", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             cbProduit.FormattingEnabled = true;
-            cbProduit.Location = new System.Drawing.Point(259, 292);
-            cbProduit.Margin = new System.Windows.Forms.Padding(2);
+            cbProduit.Location = new System.Drawing.Point(296, 389);
+            cbProduit.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             cbProduit.Name = "cbProduit";
-            cbProduit.Size = new System.Drawing.Size(252, 26);
+            cbProduit.Size = new System.Drawing.Size(287, 30);
             cbProduit.TabIndex = 104;
             cbProduit.Leave += cbProduit_Leave;
             // 
@@ -518,10 +524,10 @@
             lbClient.Font = new System.Drawing.Font("Calibri", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             lbClient.ForeColor = System.Drawing.Color.White;
             lbClient.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            lbClient.Location = new System.Drawing.Point(145, 327);
+            lbClient.Location = new System.Drawing.Point(166, 436);
             lbClient.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             lbClient.Name = "lbClient";
-            lbClient.Size = new System.Drawing.Size(45, 18);
+            lbClient.Size = new System.Drawing.Size(53, 23);
             lbClient.TabIndex = 107;
             lbClient.Text = "Client";
             // 
@@ -532,10 +538,10 @@
             cbClient.BackColor = System.Drawing.Color.Honeydew;
             cbClient.Font = new System.Drawing.Font("Calibri", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             cbClient.FormattingEnabled = true;
-            cbClient.Location = new System.Drawing.Point(259, 324);
-            cbClient.Margin = new System.Windows.Forms.Padding(2);
+            cbClient.Location = new System.Drawing.Point(296, 432);
+            cbClient.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             cbClient.Name = "cbClient";
-            cbClient.Size = new System.Drawing.Size(252, 26);
+            cbClient.Size = new System.Drawing.Size(287, 30);
             cbClient.TabIndex = 106;
             cbClient.Leave += cbClient_Leave;
             // 
@@ -545,9 +551,11 @@
             gbTypePesee.Controls.Add(rb1x);
             gbTypePesee.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             gbTypePesee.ForeColor = System.Drawing.Color.White;
-            gbTypePesee.Location = new System.Drawing.Point(259, 7);
+            gbTypePesee.Location = new System.Drawing.Point(296, 9);
+            gbTypePesee.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             gbTypePesee.Name = "gbTypePesee";
-            gbTypePesee.Size = new System.Drawing.Size(125, 72);
+            gbTypePesee.Padding = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            gbTypePesee.Size = new System.Drawing.Size(143, 96);
             gbTypePesee.TabIndex = 108;
             gbTypePesee.TabStop = false;
             gbTypePesee.Text = "Type";
@@ -556,9 +564,10 @@
             // 
             rb2x1.AutoSize = true;
             rb2x1.FlatAppearance.CheckedBackColor = System.Drawing.Color.FromArgb(72, 190, 117);
-            rb2x1.Location = new System.Drawing.Point(25, 42);
+            rb2x1.Location = new System.Drawing.Point(29, 56);
+            rb2x1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             rb2x1.Name = "rb2x1";
-            rb2x1.Size = new System.Drawing.Size(42, 23);
+            rb2x1.Size = new System.Drawing.Size(50, 28);
             rb2x1.TabIndex = 1;
             rb2x1.TabStop = true;
             rb2x1.Text = "2x";
@@ -569,9 +578,10 @@
             // 
             rb1x.AutoSize = true;
             rb1x.FlatAppearance.CheckedBackColor = System.Drawing.Color.FromArgb(72, 190, 117);
-            rb1x.Location = new System.Drawing.Point(25, 23);
+            rb1x.Location = new System.Drawing.Point(29, 31);
+            rb1x.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             rb1x.Name = "rb1x";
-            rb1x.Size = new System.Drawing.Size(42, 23);
+            rb1x.Size = new System.Drawing.Size(50, 28);
             rb1x.TabIndex = 0;
             rb1x.TabStop = true;
             rb1x.Text = "1x";
@@ -679,16 +689,18 @@
             panelData.Controls.Add(lbChauffeur);
             panelData.Dock = System.Windows.Forms.DockStyle.Left;
             panelData.Location = new System.Drawing.Point(0, 0);
+            panelData.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             panelData.Name = "panelData";
-            panelData.Size = new System.Drawing.Size(768, 650);
+            panelData.Size = new System.Drawing.Size(878, 866);
             panelData.TabIndex = 109;
             // 
             // RqWalterre
             // 
             RqWalterre.Image = Properties.Resources.asterisk;
-            RqWalterre.Location = new System.Drawing.Point(117, 357);
+            RqWalterre.Location = new System.Drawing.Point(134, 476);
+            RqWalterre.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             RqWalterre.Name = "RqWalterre";
-            RqWalterre.Size = new System.Drawing.Size(28, 22);
+            RqWalterre.Size = new System.Drawing.Size(32, 29);
             RqWalterre.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             RqWalterre.TabIndex = 203;
             RqWalterre.TabStop = false;
@@ -699,10 +711,10 @@
             lbWalterre.Font = new System.Drawing.Font("Calibri", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             lbWalterre.ForeColor = System.Drawing.Color.White;
             lbWalterre.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            lbWalterre.Location = new System.Drawing.Point(145, 359);
+            lbWalterre.Location = new System.Drawing.Point(166, 479);
             lbWalterre.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             lbWalterre.Name = "lbWalterre";
-            lbWalterre.Size = new System.Drawing.Size(62, 18);
+            lbWalterre.Size = new System.Drawing.Size(77, 23);
             lbWalterre.TabIndex = 201;
             lbWalterre.Text = "Walterre";
             // 
@@ -713,19 +725,20 @@
             cbWalterre.BackColor = System.Drawing.Color.Honeydew;
             cbWalterre.Font = new System.Drawing.Font("Calibri", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             cbWalterre.FormattingEnabled = true;
-            cbWalterre.Location = new System.Drawing.Point(259, 356);
-            cbWalterre.Margin = new System.Windows.Forms.Padding(2);
+            cbWalterre.Location = new System.Drawing.Point(296, 475);
+            cbWalterre.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             cbWalterre.Name = "cbWalterre";
-            cbWalterre.Size = new System.Drawing.Size(252, 26);
+            cbWalterre.Size = new System.Drawing.Size(287, 30);
             cbWalterre.TabIndex = 200;
             cbWalterre.Leave += cbWalterre_Leave;
             // 
             // RqChampLibre4
             // 
             RqChampLibre4.Image = Properties.Resources.asterisk;
-            RqChampLibre4.Location = new System.Drawing.Point(539, 332);
+            RqChampLibre4.Location = new System.Drawing.Point(616, 443);
+            RqChampLibre4.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             RqChampLibre4.Name = "RqChampLibre4";
-            RqChampLibre4.Size = new System.Drawing.Size(28, 22);
+            RqChampLibre4.Size = new System.Drawing.Size(32, 29);
             RqChampLibre4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             RqChampLibre4.TabIndex = 199;
             RqChampLibre4.TabStop = false;
@@ -733,9 +746,10 @@
             // RqChampLibre3
             // 
             RqChampLibre3.Image = Properties.Resources.asterisk;
-            RqChampLibre3.Location = new System.Drawing.Point(539, 269);
+            RqChampLibre3.Location = new System.Drawing.Point(616, 359);
+            RqChampLibre3.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             RqChampLibre3.Name = "RqChampLibre3";
-            RqChampLibre3.Size = new System.Drawing.Size(28, 22);
+            RqChampLibre3.Size = new System.Drawing.Size(32, 29);
             RqChampLibre3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             RqChampLibre3.TabIndex = 198;
             RqChampLibre3.TabStop = false;
@@ -743,9 +757,10 @@
             // RqChampLibre2
             // 
             RqChampLibre2.Image = Properties.Resources.asterisk;
-            RqChampLibre2.Location = new System.Drawing.Point(539, 205);
+            RqChampLibre2.Location = new System.Drawing.Point(616, 273);
+            RqChampLibre2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             RqChampLibre2.Name = "RqChampLibre2";
-            RqChampLibre2.Size = new System.Drawing.Size(28, 22);
+            RqChampLibre2.Size = new System.Drawing.Size(32, 29);
             RqChampLibre2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             RqChampLibre2.TabIndex = 197;
             RqChampLibre2.TabStop = false;
@@ -753,9 +768,10 @@
             // RqChampLibre1
             // 
             RqChampLibre1.Image = Properties.Resources.asterisk;
-            RqChampLibre1.Location = new System.Drawing.Point(539, 140);
+            RqChampLibre1.Location = new System.Drawing.Point(616, 187);
+            RqChampLibre1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             RqChampLibre1.Name = "RqChampLibre1";
-            RqChampLibre1.Size = new System.Drawing.Size(28, 22);
+            RqChampLibre1.Size = new System.Drawing.Size(32, 29);
             RqChampLibre1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             RqChampLibre1.TabIndex = 196;
             RqChampLibre1.TabStop = false;
@@ -766,10 +782,10 @@
             lbChampLibre4.Font = new System.Drawing.Font("Calibri", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             lbChampLibre4.ForeColor = System.Drawing.Color.White;
             lbChampLibre4.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            lbChampLibre4.Location = new System.Drawing.Point(567, 334);
+            lbChampLibre4.Location = new System.Drawing.Point(648, 445);
             lbChampLibre4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             lbChampLibre4.Name = "lbChampLibre4";
-            lbChampLibre4.Size = new System.Drawing.Size(93, 18);
+            lbChampLibre4.Size = new System.Drawing.Size(116, 23);
             lbChampLibre4.TabIndex = 195;
             lbChampLibre4.Text = "Champ libre 4";
             lbChampLibre4.Visible = false;
@@ -779,9 +795,10 @@
             txtChampLibre4.BackColor = System.Drawing.Color.Honeydew;
             txtChampLibre4.Font = new System.Drawing.Font("Calibri", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             txtChampLibre4.ForeColor = System.Drawing.Color.Black;
-            txtChampLibre4.Location = new System.Drawing.Point(543, 356);
+            txtChampLibre4.Location = new System.Drawing.Point(621, 475);
+            txtChampLibre4.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             txtChampLibre4.Name = "txtChampLibre4";
-            txtChampLibre4.Size = new System.Drawing.Size(204, 25);
+            txtChampLibre4.Size = new System.Drawing.Size(233, 30);
             txtChampLibre4.TabIndex = 194;
             txtChampLibre4.Visible = false;
             // 
@@ -791,10 +808,10 @@
             lbChampLibre3.Font = new System.Drawing.Font("Calibri", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             lbChampLibre3.ForeColor = System.Drawing.Color.White;
             lbChampLibre3.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            lbChampLibre3.Location = new System.Drawing.Point(567, 271);
+            lbChampLibre3.Location = new System.Drawing.Point(648, 361);
             lbChampLibre3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             lbChampLibre3.Name = "lbChampLibre3";
-            lbChampLibre3.Size = new System.Drawing.Size(93, 18);
+            lbChampLibre3.Size = new System.Drawing.Size(116, 23);
             lbChampLibre3.TabIndex = 193;
             lbChampLibre3.Text = "Champ libre 3";
             lbChampLibre3.Visible = false;
@@ -804,9 +821,10 @@
             txtChampLibre3.BackColor = System.Drawing.Color.Honeydew;
             txtChampLibre3.Font = new System.Drawing.Font("Calibri", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             txtChampLibre3.ForeColor = System.Drawing.Color.Black;
-            txtChampLibre3.Location = new System.Drawing.Point(543, 293);
+            txtChampLibre3.Location = new System.Drawing.Point(621, 391);
+            txtChampLibre3.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             txtChampLibre3.Name = "txtChampLibre3";
-            txtChampLibre3.Size = new System.Drawing.Size(204, 25);
+            txtChampLibre3.Size = new System.Drawing.Size(233, 30);
             txtChampLibre3.TabIndex = 192;
             txtChampLibre3.Visible = false;
             // 
@@ -816,10 +834,10 @@
             lbChampLibre2.Font = new System.Drawing.Font("Calibri", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             lbChampLibre2.ForeColor = System.Drawing.Color.White;
             lbChampLibre2.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            lbChampLibre2.Location = new System.Drawing.Point(567, 207);
+            lbChampLibre2.Location = new System.Drawing.Point(648, 276);
             lbChampLibre2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             lbChampLibre2.Name = "lbChampLibre2";
-            lbChampLibre2.Size = new System.Drawing.Size(93, 18);
+            lbChampLibre2.Size = new System.Drawing.Size(116, 23);
             lbChampLibre2.TabIndex = 191;
             lbChampLibre2.Text = "Champ libre 2";
             lbChampLibre2.Visible = false;
@@ -829,9 +847,10 @@
             txtChampLibre2.BackColor = System.Drawing.Color.Honeydew;
             txtChampLibre2.Font = new System.Drawing.Font("Calibri", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             txtChampLibre2.ForeColor = System.Drawing.Color.Black;
-            txtChampLibre2.Location = new System.Drawing.Point(543, 229);
+            txtChampLibre2.Location = new System.Drawing.Point(621, 305);
+            txtChampLibre2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             txtChampLibre2.Name = "txtChampLibre2";
-            txtChampLibre2.Size = new System.Drawing.Size(204, 25);
+            txtChampLibre2.Size = new System.Drawing.Size(233, 30);
             txtChampLibre2.TabIndex = 190;
             txtChampLibre2.Visible = false;
             // 
@@ -841,10 +860,10 @@
             lbChampLibre1.Font = new System.Drawing.Font("Calibri", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             lbChampLibre1.ForeColor = System.Drawing.Color.White;
             lbChampLibre1.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            lbChampLibre1.Location = new System.Drawing.Point(567, 142);
+            lbChampLibre1.Location = new System.Drawing.Point(648, 189);
             lbChampLibre1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             lbChampLibre1.Name = "lbChampLibre1";
-            lbChampLibre1.Size = new System.Drawing.Size(93, 18);
+            lbChampLibre1.Size = new System.Drawing.Size(116, 23);
             lbChampLibre1.TabIndex = 189;
             lbChampLibre1.Text = "Champ libre 1";
             lbChampLibre1.Visible = false;
@@ -854,18 +873,20 @@
             txtChampLibre1.BackColor = System.Drawing.Color.Honeydew;
             txtChampLibre1.Font = new System.Drawing.Font("Calibri", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             txtChampLibre1.ForeColor = System.Drawing.Color.Black;
-            txtChampLibre1.Location = new System.Drawing.Point(543, 164);
+            txtChampLibre1.Location = new System.Drawing.Point(621, 219);
+            txtChampLibre1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             txtChampLibre1.Name = "txtChampLibre1";
-            txtChampLibre1.Size = new System.Drawing.Size(204, 25);
+            txtChampLibre1.Size = new System.Drawing.Size(233, 30);
             txtChampLibre1.TabIndex = 188;
             txtChampLibre1.Visible = false;
             // 
             // pbOnScale
             // 
             pbOnScale.Image = Properties.Resources.TruckOnScale;
-            pbOnScale.Location = new System.Drawing.Point(114, 4);
+            pbOnScale.Location = new System.Drawing.Point(130, 5);
+            pbOnScale.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             pbOnScale.Name = "pbOnScale";
-            pbOnScale.Size = new System.Drawing.Size(142, 79);
+            pbOnScale.Size = new System.Drawing.Size(162, 105);
             pbOnScale.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             pbOnScale.TabIndex = 187;
             pbOnScale.TabStop = false;
@@ -876,10 +897,11 @@
             T50PLUS.BackColor = System.Drawing.Color.Red;
             T50PLUS.BorderStyle = System.Windows.Forms.BorderStyle.None;
             T50PLUS.Font = new System.Drawing.Font("Segoe UI", 3F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            T50PLUS.Location = new System.Drawing.Point(693, 8);
+            T50PLUS.Location = new System.Drawing.Point(792, 11);
+            T50PLUS.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             T50PLUS.Name = "T50PLUS";
             T50PLUS.ReadOnly = true;
-            T50PLUS.Size = new System.Drawing.Size(72, 6);
+            T50PLUS.Size = new System.Drawing.Size(82, 7);
             T50PLUS.TabIndex = 186;
             T50PLUS.TabStop = false;
             // 
@@ -888,10 +910,11 @@
             T30A50.BackColor = System.Drawing.Color.Tomato;
             T30A50.BorderStyle = System.Windows.Forms.BorderStyle.None;
             T30A50.Font = new System.Drawing.Font("Segoe UI", 3F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            T30A50.Location = new System.Drawing.Point(693, 27);
+            T30A50.Location = new System.Drawing.Point(792, 36);
+            T30A50.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             T30A50.Name = "T30A50";
             T30A50.ReadOnly = true;
-            T30A50.Size = new System.Drawing.Size(72, 6);
+            T30A50.Size = new System.Drawing.Size(82, 7);
             T30A50.TabIndex = 185;
             T30A50.TabStop = false;
             // 
@@ -900,10 +923,11 @@
             T20A30.BackColor = System.Drawing.Color.DarkOrange;
             T20A30.BorderStyle = System.Windows.Forms.BorderStyle.None;
             T20A30.Font = new System.Drawing.Font("Segoe UI", 3F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            T20A30.Location = new System.Drawing.Point(693, 47);
+            T20A30.Location = new System.Drawing.Point(792, 63);
+            T20A30.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             T20A30.Name = "T20A30";
             T20A30.ReadOnly = true;
-            T20A30.Size = new System.Drawing.Size(72, 6);
+            T20A30.Size = new System.Drawing.Size(82, 7);
             T20A30.TabIndex = 184;
             T20A30.TabStop = false;
             // 
@@ -912,10 +936,11 @@
             T13A20.BackColor = System.Drawing.Color.Orange;
             T13A20.BorderStyle = System.Windows.Forms.BorderStyle.None;
             T13A20.Font = new System.Drawing.Font("Segoe UI", 3F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            T13A20.Location = new System.Drawing.Point(711, 68);
+            T13A20.Location = new System.Drawing.Point(813, 91);
+            T13A20.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             T13A20.Name = "T13A20";
             T13A20.ReadOnly = true;
-            T13A20.Size = new System.Drawing.Size(54, 6);
+            T13A20.Size = new System.Drawing.Size(62, 7);
             T13A20.TabIndex = 183;
             T13A20.TabStop = false;
             T13A20.TextChanged += T50PLUS_TextChanged;
@@ -925,10 +950,11 @@
             T10A13.BackColor = System.Drawing.Color.Goldenrod;
             T10A13.BorderStyle = System.Windows.Forms.BorderStyle.None;
             T10A13.Font = new System.Drawing.Font("Segoe UI", 3F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            T10A13.Location = new System.Drawing.Point(728, 89);
+            T10A13.Location = new System.Drawing.Point(832, 119);
+            T10A13.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             T10A13.Name = "T10A13";
             T10A13.ReadOnly = true;
-            T10A13.Size = new System.Drawing.Size(37, 6);
+            T10A13.Size = new System.Drawing.Size(42, 7);
             T10A13.TabIndex = 182;
             T10A13.TabStop = false;
             // 
@@ -937,10 +963,11 @@
             T7A10.BackColor = System.Drawing.Color.Gold;
             T7A10.BorderStyle = System.Windows.Forms.BorderStyle.None;
             T7A10.Font = new System.Drawing.Font("Segoe UI", 3F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            T7A10.Location = new System.Drawing.Point(741, 110);
+            T7A10.Location = new System.Drawing.Point(847, 147);
+            T7A10.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             T7A10.Name = "T7A10";
             T7A10.ReadOnly = true;
-            T7A10.Size = new System.Drawing.Size(24, 6);
+            T7A10.Size = new System.Drawing.Size(27, 7);
             T7A10.TabIndex = 181;
             T7A10.TabStop = false;
             // 
@@ -949,10 +976,11 @@
             T5A7.BackColor = System.Drawing.Color.Khaki;
             T5A7.BorderStyle = System.Windows.Forms.BorderStyle.None;
             T5A7.Font = new System.Drawing.Font("Segoe UI", 3F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            T5A7.Location = new System.Drawing.Point(752, 133);
+            T5A7.Location = new System.Drawing.Point(859, 177);
+            T5A7.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             T5A7.Name = "T5A7";
             T5A7.ReadOnly = true;
-            T5A7.Size = new System.Drawing.Size(13, 6);
+            T5A7.Size = new System.Drawing.Size(15, 7);
             T5A7.TabIndex = 180;
             T5A7.TabStop = false;
             // 
@@ -961,10 +989,11 @@
             T2A5.BackColor = System.Drawing.Color.GreenYellow;
             T2A5.BorderStyle = System.Windows.Forms.BorderStyle.None;
             T2A5.Font = new System.Drawing.Font("Segoe UI", 3F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            T2A5.Location = new System.Drawing.Point(752, 156);
+            T2A5.Location = new System.Drawing.Point(859, 208);
+            T2A5.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             T2A5.Name = "T2A5";
             T2A5.ReadOnly = true;
-            T2A5.Size = new System.Drawing.Size(13, 6);
+            T2A5.Size = new System.Drawing.Size(15, 7);
             T2A5.TabIndex = 179;
             T2A5.TabStop = false;
             // 
@@ -973,19 +1002,21 @@
             T0A2.BackColor = System.Drawing.Color.FromArgb(112, 228, 132);
             T0A2.BorderStyle = System.Windows.Forms.BorderStyle.None;
             T0A2.Font = new System.Drawing.Font("Segoe UI", 3F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            T0A2.Location = new System.Drawing.Point(752, 178);
+            T0A2.Location = new System.Drawing.Point(859, 237);
+            T0A2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             T0A2.Name = "T0A2";
             T0A2.ReadOnly = true;
-            T0A2.Size = new System.Drawing.Size(13, 6);
+            T0A2.Size = new System.Drawing.Size(15, 7);
             T0A2.TabIndex = 178;
             T0A2.TabStop = false;
             // 
             // Filter7
             // 
             Filter7.Image = Properties.Resources.Filter;
-            Filter7.Location = new System.Drawing.Point(538, 582);
+            Filter7.Location = new System.Drawing.Point(615, 776);
+            Filter7.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             Filter7.Name = "Filter7";
-            Filter7.Size = new System.Drawing.Size(28, 22);
+            Filter7.Size = new System.Drawing.Size(32, 29);
             Filter7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             Filter7.TabIndex = 177;
             Filter7.TabStop = false;
@@ -993,9 +1024,10 @@
             // Filter6
             // 
             Filter6.Image = Properties.Resources.Filter;
-            Filter6.Location = new System.Drawing.Point(538, 550);
+            Filter6.Location = new System.Drawing.Point(615, 733);
+            Filter6.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             Filter6.Name = "Filter6";
-            Filter6.Size = new System.Drawing.Size(28, 22);
+            Filter6.Size = new System.Drawing.Size(32, 29);
             Filter6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             Filter6.TabIndex = 176;
             Filter6.TabStop = false;
@@ -1003,9 +1035,10 @@
             // Filter5
             // 
             Filter5.Image = Properties.Resources.Filter;
-            Filter5.Location = new System.Drawing.Point(538, 518);
+            Filter5.Location = new System.Drawing.Point(615, 691);
+            Filter5.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             Filter5.Name = "Filter5";
-            Filter5.Size = new System.Drawing.Size(28, 22);
+            Filter5.Size = new System.Drawing.Size(32, 29);
             Filter5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             Filter5.TabIndex = 175;
             Filter5.TabStop = false;
@@ -1013,9 +1046,10 @@
             // Filter4
             // 
             Filter4.Image = Properties.Resources.Filter;
-            Filter4.Location = new System.Drawing.Point(538, 486);
+            Filter4.Location = new System.Drawing.Point(615, 648);
+            Filter4.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             Filter4.Name = "Filter4";
-            Filter4.Size = new System.Drawing.Size(28, 22);
+            Filter4.Size = new System.Drawing.Size(32, 29);
             Filter4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             Filter4.TabIndex = 174;
             Filter4.TabStop = false;
@@ -1023,9 +1057,10 @@
             // Filter3
             // 
             Filter3.Image = Properties.Resources.Filter;
-            Filter3.Location = new System.Drawing.Point(538, 454);
+            Filter3.Location = new System.Drawing.Point(615, 605);
+            Filter3.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             Filter3.Name = "Filter3";
-            Filter3.Size = new System.Drawing.Size(28, 22);
+            Filter3.Size = new System.Drawing.Size(32, 29);
             Filter3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             Filter3.TabIndex = 173;
             Filter3.TabStop = false;
@@ -1033,9 +1068,10 @@
             // Filter2
             // 
             Filter2.Image = Properties.Resources.Filter;
-            Filter2.Location = new System.Drawing.Point(538, 422);
+            Filter2.Location = new System.Drawing.Point(615, 563);
+            Filter2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             Filter2.Name = "Filter2";
-            Filter2.Size = new System.Drawing.Size(28, 22);
+            Filter2.Size = new System.Drawing.Size(32, 29);
             Filter2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             Filter2.TabIndex = 172;
             Filter2.TabStop = false;
@@ -1043,9 +1079,10 @@
             // pictureBox8
             // 
             pictureBox8.Image = Properties.Resources.Settings;
-            pictureBox8.Location = new System.Drawing.Point(117, 104);
+            pictureBox8.Location = new System.Drawing.Point(134, 139);
+            pictureBox8.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             pictureBox8.Name = "pictureBox8";
-            pictureBox8.Size = new System.Drawing.Size(28, 22);
+            pictureBox8.Size = new System.Drawing.Size(32, 29);
             pictureBox8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             pictureBox8.TabIndex = 171;
             pictureBox8.TabStop = false;
@@ -1056,10 +1093,10 @@
             label11.Font = new System.Drawing.Font("Calibri", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             label11.ForeColor = System.Drawing.Color.White;
             label11.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            label11.Location = new System.Drawing.Point(145, 105);
+            label11.Location = new System.Drawing.Point(166, 140);
             label11.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             label11.Name = "label11";
-            label11.Size = new System.Drawing.Size(73, 18);
+            label11.Size = new System.Drawing.Size(91, 23);
             label11.TabIndex = 170;
             label11.Text = "Paramètre";
             // 
@@ -1071,9 +1108,10 @@
             btAddChamp7.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(72, 86, 81);
             btAddChamp7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             btAddChamp7.Image = Properties.Resources.plus_Weighing;
-            btAddChamp7.Location = new System.Drawing.Point(512, 581);
+            btAddChamp7.Location = new System.Drawing.Point(585, 775);
+            btAddChamp7.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             btAddChamp7.Name = "btAddChamp7";
-            btAddChamp7.Size = new System.Drawing.Size(25, 24);
+            btAddChamp7.Size = new System.Drawing.Size(29, 32);
             btAddChamp7.TabIndex = 169;
             btAddChamp7.UseVisualStyleBackColor = false;
             btAddChamp7.Visible = false;
@@ -1087,9 +1125,10 @@
             btAddChamp6.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(72, 86, 81);
             btAddChamp6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             btAddChamp6.Image = Properties.Resources.plus_Weighing;
-            btAddChamp6.Location = new System.Drawing.Point(512, 549);
+            btAddChamp6.Location = new System.Drawing.Point(585, 732);
+            btAddChamp6.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             btAddChamp6.Name = "btAddChamp6";
-            btAddChamp6.Size = new System.Drawing.Size(25, 24);
+            btAddChamp6.Size = new System.Drawing.Size(29, 32);
             btAddChamp6.TabIndex = 168;
             btAddChamp6.UseVisualStyleBackColor = false;
             btAddChamp6.Visible = false;
@@ -1103,9 +1142,10 @@
             btAddChamp5.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(72, 86, 81);
             btAddChamp5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             btAddChamp5.Image = Properties.Resources.plus_Weighing;
-            btAddChamp5.Location = new System.Drawing.Point(512, 517);
+            btAddChamp5.Location = new System.Drawing.Point(585, 689);
+            btAddChamp5.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             btAddChamp5.Name = "btAddChamp5";
-            btAddChamp5.Size = new System.Drawing.Size(25, 24);
+            btAddChamp5.Size = new System.Drawing.Size(29, 32);
             btAddChamp5.TabIndex = 167;
             btAddChamp5.UseVisualStyleBackColor = false;
             btAddChamp5.Visible = false;
@@ -1119,9 +1159,10 @@
             btAddChamp4.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(72, 86, 81);
             btAddChamp4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             btAddChamp4.Image = Properties.Resources.plus_Weighing;
-            btAddChamp4.Location = new System.Drawing.Point(512, 485);
+            btAddChamp4.Location = new System.Drawing.Point(585, 647);
+            btAddChamp4.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             btAddChamp4.Name = "btAddChamp4";
-            btAddChamp4.Size = new System.Drawing.Size(25, 24);
+            btAddChamp4.Size = new System.Drawing.Size(29, 32);
             btAddChamp4.TabIndex = 166;
             btAddChamp4.UseVisualStyleBackColor = false;
             btAddChamp4.Visible = false;
@@ -1135,9 +1176,10 @@
             btAddChamp3.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(72, 86, 81);
             btAddChamp3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             btAddChamp3.Image = Properties.Resources.plus_Weighing;
-            btAddChamp3.Location = new System.Drawing.Point(512, 453);
+            btAddChamp3.Location = new System.Drawing.Point(585, 604);
+            btAddChamp3.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             btAddChamp3.Name = "btAddChamp3";
-            btAddChamp3.Size = new System.Drawing.Size(25, 24);
+            btAddChamp3.Size = new System.Drawing.Size(29, 32);
             btAddChamp3.TabIndex = 165;
             btAddChamp3.UseVisualStyleBackColor = false;
             btAddChamp3.Visible = false;
@@ -1151,9 +1193,10 @@
             btAddChamp2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(72, 86, 81);
             btAddChamp2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             btAddChamp2.Image = Properties.Resources.plus_Weighing;
-            btAddChamp2.Location = new System.Drawing.Point(512, 421);
+            btAddChamp2.Location = new System.Drawing.Point(585, 561);
+            btAddChamp2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             btAddChamp2.Name = "btAddChamp2";
-            btAddChamp2.Size = new System.Drawing.Size(25, 24);
+            btAddChamp2.Size = new System.Drawing.Size(29, 32);
             btAddChamp2.TabIndex = 164;
             btAddChamp2.UseVisualStyleBackColor = false;
             btAddChamp2.Visible = false;
@@ -1167,9 +1210,10 @@
             cbWeighingSettingsId.Font = new System.Drawing.Font("Corbel", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             cbWeighingSettingsId.ForeColor = System.Drawing.Color.White;
             cbWeighingSettingsId.FormattingEnabled = true;
-            cbWeighingSettingsId.Location = new System.Drawing.Point(259, 102);
+            cbWeighingSettingsId.Location = new System.Drawing.Point(296, 136);
+            cbWeighingSettingsId.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             cbWeighingSettingsId.Name = "cbWeighingSettingsId";
-            cbWeighingSettingsId.Size = new System.Drawing.Size(252, 22);
+            cbWeighingSettingsId.Size = new System.Drawing.Size(287, 26);
             cbWeighingSettingsId.TabIndex = 130;
             cbWeighingSettingsId.SelectedIndexChanged += cbWeighingSettingsId_SelectedIndexChanged;
             cbWeighingSettingsId.SelectedValueChanged += cbWeighingSettingsId_SelectedValueChanged;
@@ -1177,9 +1221,10 @@
             // RqChamp7
             // 
             RqChamp7.Image = Properties.Resources.asterisk;
-            RqChamp7.Location = new System.Drawing.Point(117, 581);
+            RqChamp7.Location = new System.Drawing.Point(134, 775);
+            RqChamp7.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             RqChamp7.Name = "RqChamp7";
-            RqChamp7.Size = new System.Drawing.Size(28, 22);
+            RqChamp7.Size = new System.Drawing.Size(32, 29);
             RqChamp7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             RqChamp7.TabIndex = 163;
             RqChamp7.TabStop = false;
@@ -1187,9 +1232,10 @@
             // RqChamp6
             // 
             RqChamp6.Image = Properties.Resources.asterisk;
-            RqChamp6.Location = new System.Drawing.Point(117, 549);
+            RqChamp6.Location = new System.Drawing.Point(134, 732);
+            RqChamp6.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             RqChamp6.Name = "RqChamp6";
-            RqChamp6.Size = new System.Drawing.Size(28, 22);
+            RqChamp6.Size = new System.Drawing.Size(32, 29);
             RqChamp6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             RqChamp6.TabIndex = 162;
             RqChamp6.TabStop = false;
@@ -1197,9 +1243,10 @@
             // RqChamp5
             // 
             RqChamp5.Image = Properties.Resources.asterisk;
-            RqChamp5.Location = new System.Drawing.Point(117, 517);
+            RqChamp5.Location = new System.Drawing.Point(134, 689);
+            RqChamp5.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             RqChamp5.Name = "RqChamp5";
-            RqChamp5.Size = new System.Drawing.Size(28, 22);
+            RqChamp5.Size = new System.Drawing.Size(32, 29);
             RqChamp5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             RqChamp5.TabIndex = 161;
             RqChamp5.TabStop = false;
@@ -1207,9 +1254,10 @@
             // RqChamp4
             // 
             RqChamp4.Image = Properties.Resources.asterisk;
-            RqChamp4.Location = new System.Drawing.Point(117, 485);
+            RqChamp4.Location = new System.Drawing.Point(134, 647);
+            RqChamp4.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             RqChamp4.Name = "RqChamp4";
-            RqChamp4.Size = new System.Drawing.Size(28, 22);
+            RqChamp4.Size = new System.Drawing.Size(32, 29);
             RqChamp4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             RqChamp4.TabIndex = 160;
             RqChamp4.TabStop = false;
@@ -1217,9 +1265,10 @@
             // RqChamp3
             // 
             RqChamp3.Image = Properties.Resources.asterisk;
-            RqChamp3.Location = new System.Drawing.Point(117, 453);
+            RqChamp3.Location = new System.Drawing.Point(134, 604);
+            RqChamp3.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             RqChamp3.Name = "RqChamp3";
-            RqChamp3.Size = new System.Drawing.Size(28, 22);
+            RqChamp3.Size = new System.Drawing.Size(32, 29);
             RqChamp3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             RqChamp3.TabIndex = 159;
             RqChamp3.TabStop = false;
@@ -1227,9 +1276,10 @@
             // RqChamp2
             // 
             RqChamp2.Image = Properties.Resources.asterisk;
-            RqChamp2.Location = new System.Drawing.Point(117, 422);
+            RqChamp2.Location = new System.Drawing.Point(134, 563);
+            RqChamp2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             RqChamp2.Name = "RqChamp2";
-            RqChamp2.Size = new System.Drawing.Size(28, 22);
+            RqChamp2.Size = new System.Drawing.Size(32, 29);
             RqChamp2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             RqChamp2.TabIndex = 158;
             RqChamp2.TabStop = false;
@@ -1237,9 +1287,10 @@
             // RqChamp1
             // 
             RqChamp1.Image = Properties.Resources.asterisk;
-            RqChamp1.Location = new System.Drawing.Point(117, 390);
+            RqChamp1.Location = new System.Drawing.Point(134, 520);
+            RqChamp1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             RqChamp1.Name = "RqChamp1";
-            RqChamp1.Size = new System.Drawing.Size(28, 22);
+            RqChamp1.Size = new System.Drawing.Size(32, 29);
             RqChamp1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             RqChamp1.TabIndex = 157;
             RqChamp1.TabStop = false;
@@ -1252,9 +1303,10 @@
             btAddChamp1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(72, 86, 81);
             btAddChamp1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             btAddChamp1.Image = Properties.Resources.plus_Weighing;
-            btAddChamp1.Location = new System.Drawing.Point(512, 389);
+            btAddChamp1.Location = new System.Drawing.Point(585, 519);
+            btAddChamp1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             btAddChamp1.Name = "btAddChamp1";
-            btAddChamp1.Size = new System.Drawing.Size(25, 24);
+            btAddChamp1.Size = new System.Drawing.Size(29, 32);
             btAddChamp1.TabIndex = 150;
             btAddChamp1.UseVisualStyleBackColor = false;
             btAddChamp1.Visible = false;
@@ -1267,10 +1319,10 @@
             cbChamp3.BackColor = System.Drawing.Color.Honeydew;
             cbChamp3.Font = new System.Drawing.Font("Calibri", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             cbChamp3.FormattingEnabled = true;
-            cbChamp3.Location = new System.Drawing.Point(259, 452);
-            cbChamp3.Margin = new System.Windows.Forms.Padding(2);
+            cbChamp3.Location = new System.Drawing.Point(296, 603);
+            cbChamp3.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             cbChamp3.Name = "cbChamp3";
-            cbChamp3.Size = new System.Drawing.Size(252, 26);
+            cbChamp3.Size = new System.Drawing.Size(287, 30);
             cbChamp3.TabIndex = 140;
             cbChamp3.SelectedValueChanged += cbChamp3_SelectedValueChanged;
             cbChamp3.Leave += cbChamp3_Leave;
@@ -1282,10 +1334,10 @@
             cbChamp1.BackColor = System.Drawing.Color.Honeydew;
             cbChamp1.Font = new System.Drawing.Font("Calibri", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             cbChamp1.FormattingEnabled = true;
-            cbChamp1.Location = new System.Drawing.Point(259, 388);
-            cbChamp1.Margin = new System.Windows.Forms.Padding(2);
+            cbChamp1.Location = new System.Drawing.Point(296, 517);
+            cbChamp1.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             cbChamp1.Name = "cbChamp1";
-            cbChamp1.Size = new System.Drawing.Size(252, 26);
+            cbChamp1.Size = new System.Drawing.Size(287, 30);
             cbChamp1.TabIndex = 136;
             cbChamp1.SelectedValueChanged += cbChamp1_SelectedValueChanged;
             cbChamp1.Leave += cbChamp1_Leave;
@@ -1296,10 +1348,10 @@
             lbChamp7.Font = new System.Drawing.Font("Calibri", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             lbChamp7.ForeColor = System.Drawing.Color.White;
             lbChamp7.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            lbChamp7.Location = new System.Drawing.Point(145, 583);
+            lbChamp7.Location = new System.Drawing.Point(166, 777);
             lbChamp7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             lbChamp7.Name = "lbChamp7";
-            lbChamp7.Size = new System.Drawing.Size(61, 18);
+            lbChamp7.Size = new System.Drawing.Size(78, 23);
             lbChamp7.TabIndex = 149;
             lbChamp7.Text = "Champ 7";
             // 
@@ -1309,10 +1361,10 @@
             lbChamp1.Font = new System.Drawing.Font("Calibri", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             lbChamp1.ForeColor = System.Drawing.Color.White;
             lbChamp1.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            lbChamp1.Location = new System.Drawing.Point(145, 391);
+            lbChamp1.Location = new System.Drawing.Point(166, 521);
             lbChamp1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             lbChamp1.Name = "lbChamp1";
-            lbChamp1.Size = new System.Drawing.Size(61, 18);
+            lbChamp1.Size = new System.Drawing.Size(78, 23);
             lbChamp1.TabIndex = 137;
             lbChamp1.Text = "Champ 1";
             // 
@@ -1323,10 +1375,10 @@
             cbChamp7.BackColor = System.Drawing.Color.Honeydew;
             cbChamp7.Font = new System.Drawing.Font("Calibri", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             cbChamp7.FormattingEnabled = true;
-            cbChamp7.Location = new System.Drawing.Point(259, 580);
-            cbChamp7.Margin = new System.Windows.Forms.Padding(2);
+            cbChamp7.Location = new System.Drawing.Point(296, 773);
+            cbChamp7.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             cbChamp7.Name = "cbChamp7";
-            cbChamp7.Size = new System.Drawing.Size(252, 26);
+            cbChamp7.Size = new System.Drawing.Size(287, 30);
             cbChamp7.TabIndex = 148;
             cbChamp7.Leave += cbChamp7_Leave;
             // 
@@ -1337,10 +1389,10 @@
             cbChamp2.BackColor = System.Drawing.Color.Honeydew;
             cbChamp2.Font = new System.Drawing.Font("Calibri", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             cbChamp2.FormattingEnabled = true;
-            cbChamp2.Location = new System.Drawing.Point(259, 420);
-            cbChamp2.Margin = new System.Windows.Forms.Padding(2);
+            cbChamp2.Location = new System.Drawing.Point(296, 560);
+            cbChamp2.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             cbChamp2.Name = "cbChamp2";
-            cbChamp2.Size = new System.Drawing.Size(252, 26);
+            cbChamp2.Size = new System.Drawing.Size(287, 30);
             cbChamp2.TabIndex = 138;
             cbChamp2.SelectedValueChanged += cbChamp2_SelectedValueChanged;
             cbChamp2.Leave += cbChamp2_Leave;
@@ -1351,10 +1403,10 @@
             lbChamp6.Font = new System.Drawing.Font("Calibri", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             lbChamp6.ForeColor = System.Drawing.Color.White;
             lbChamp6.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            lbChamp6.Location = new System.Drawing.Point(145, 551);
+            lbChamp6.Location = new System.Drawing.Point(166, 735);
             lbChamp6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             lbChamp6.Name = "lbChamp6";
-            lbChamp6.Size = new System.Drawing.Size(61, 18);
+            lbChamp6.Size = new System.Drawing.Size(78, 23);
             lbChamp6.TabIndex = 147;
             lbChamp6.Text = "Champ 6";
             // 
@@ -1364,10 +1416,10 @@
             lbChamp2.Font = new System.Drawing.Font("Calibri", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             lbChamp2.ForeColor = System.Drawing.Color.White;
             lbChamp2.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            lbChamp2.Location = new System.Drawing.Point(145, 423);
+            lbChamp2.Location = new System.Drawing.Point(166, 564);
             lbChamp2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             lbChamp2.Name = "lbChamp2";
-            lbChamp2.Size = new System.Drawing.Size(61, 18);
+            lbChamp2.Size = new System.Drawing.Size(78, 23);
             lbChamp2.TabIndex = 139;
             lbChamp2.Text = "Champ 2";
             // 
@@ -1378,10 +1430,10 @@
             cbChamp6.BackColor = System.Drawing.Color.Honeydew;
             cbChamp6.Font = new System.Drawing.Font("Calibri", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             cbChamp6.FormattingEnabled = true;
-            cbChamp6.Location = new System.Drawing.Point(259, 548);
-            cbChamp6.Margin = new System.Windows.Forms.Padding(2);
+            cbChamp6.Location = new System.Drawing.Point(296, 731);
+            cbChamp6.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             cbChamp6.Name = "cbChamp6";
-            cbChamp6.Size = new System.Drawing.Size(252, 26);
+            cbChamp6.Size = new System.Drawing.Size(287, 30);
             cbChamp6.TabIndex = 146;
             cbChamp6.SelectedValueChanged += cbChamp6_SelectedValueChanged;
             cbChamp6.Leave += cbChamp6_Leave;
@@ -1392,10 +1444,10 @@
             lbChamp3.Font = new System.Drawing.Font("Calibri", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             lbChamp3.ForeColor = System.Drawing.Color.White;
             lbChamp3.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            lbChamp3.Location = new System.Drawing.Point(145, 455);
+            lbChamp3.Location = new System.Drawing.Point(166, 607);
             lbChamp3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             lbChamp3.Name = "lbChamp3";
-            lbChamp3.Size = new System.Drawing.Size(61, 18);
+            lbChamp3.Size = new System.Drawing.Size(78, 23);
             lbChamp3.TabIndex = 141;
             lbChamp3.Text = "Champ 3";
             // 
@@ -1405,10 +1457,10 @@
             lbChamp5.Font = new System.Drawing.Font("Calibri", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             lbChamp5.ForeColor = System.Drawing.Color.White;
             lbChamp5.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            lbChamp5.Location = new System.Drawing.Point(145, 519);
+            lbChamp5.Location = new System.Drawing.Point(166, 692);
             lbChamp5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             lbChamp5.Name = "lbChamp5";
-            lbChamp5.Size = new System.Drawing.Size(61, 18);
+            lbChamp5.Size = new System.Drawing.Size(78, 23);
             lbChamp5.TabIndex = 145;
             lbChamp5.Text = "Champ 5";
             // 
@@ -1419,10 +1471,10 @@
             cbChamp4.BackColor = System.Drawing.Color.Honeydew;
             cbChamp4.Font = new System.Drawing.Font("Calibri", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             cbChamp4.FormattingEnabled = true;
-            cbChamp4.Location = new System.Drawing.Point(259, 484);
-            cbChamp4.Margin = new System.Windows.Forms.Padding(2);
+            cbChamp4.Location = new System.Drawing.Point(296, 645);
+            cbChamp4.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             cbChamp4.Name = "cbChamp4";
-            cbChamp4.Size = new System.Drawing.Size(252, 26);
+            cbChamp4.Size = new System.Drawing.Size(287, 30);
             cbChamp4.TabIndex = 142;
             cbChamp4.SelectedValueChanged += cbChamp4_SelectedValueChanged;
             cbChamp4.Leave += cbChamp4_Leave;
@@ -1434,10 +1486,10 @@
             cbChamp5.BackColor = System.Drawing.Color.Honeydew;
             cbChamp5.Font = new System.Drawing.Font("Calibri", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             cbChamp5.FormattingEnabled = true;
-            cbChamp5.Location = new System.Drawing.Point(259, 516);
-            cbChamp5.Margin = new System.Windows.Forms.Padding(2);
+            cbChamp5.Location = new System.Drawing.Point(296, 688);
+            cbChamp5.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             cbChamp5.Name = "cbChamp5";
-            cbChamp5.Size = new System.Drawing.Size(252, 26);
+            cbChamp5.Size = new System.Drawing.Size(287, 30);
             cbChamp5.TabIndex = 144;
             cbChamp5.SelectedValueChanged += cbChamp5_SelectedValueChanged;
             cbChamp5.Leave += cbChamp5_Leave;
@@ -1448,19 +1500,20 @@
             lbChamp4.Font = new System.Drawing.Font("Calibri", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             lbChamp4.ForeColor = System.Drawing.Color.White;
             lbChamp4.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            lbChamp4.Location = new System.Drawing.Point(145, 487);
+            lbChamp4.Location = new System.Drawing.Point(166, 649);
             lbChamp4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             lbChamp4.Name = "lbChamp4";
-            lbChamp4.Size = new System.Drawing.Size(61, 18);
+            lbChamp4.Size = new System.Drawing.Size(78, 23);
             lbChamp4.TabIndex = 143;
             lbChamp4.Text = "Champ 4";
             // 
             // RqClient
             // 
             RqClient.Image = Properties.Resources.asterisk;
-            RqClient.Location = new System.Drawing.Point(117, 325);
+            RqClient.Location = new System.Drawing.Point(134, 433);
+            RqClient.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             RqClient.Name = "RqClient";
-            RqClient.Size = new System.Drawing.Size(28, 22);
+            RqClient.Size = new System.Drawing.Size(32, 29);
             RqClient.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             RqClient.TabIndex = 135;
             RqClient.TabStop = false;
@@ -1468,9 +1521,10 @@
             // RqProduit
             // 
             RqProduit.Image = Properties.Resources.asterisk;
-            RqProduit.Location = new System.Drawing.Point(117, 293);
+            RqProduit.Location = new System.Drawing.Point(134, 391);
+            RqProduit.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             RqProduit.Name = "RqProduit";
-            RqProduit.Size = new System.Drawing.Size(28, 22);
+            RqProduit.Size = new System.Drawing.Size(32, 29);
             RqProduit.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             RqProduit.TabIndex = 134;
             RqProduit.TabStop = false;
@@ -1478,9 +1532,10 @@
             // RqTransporteur
             // 
             RqTransporteur.Image = Properties.Resources.asterisk;
-            RqTransporteur.Location = new System.Drawing.Point(117, 261);
+            RqTransporteur.Location = new System.Drawing.Point(134, 348);
+            RqTransporteur.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             RqTransporteur.Name = "RqTransporteur";
-            RqTransporteur.Size = new System.Drawing.Size(28, 22);
+            RqTransporteur.Size = new System.Drawing.Size(32, 29);
             RqTransporteur.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             RqTransporteur.TabIndex = 133;
             RqTransporteur.TabStop = false;
@@ -1488,9 +1543,10 @@
             // RqChauffeur
             // 
             RqChauffeur.Image = Properties.Resources.asterisk;
-            RqChauffeur.Location = new System.Drawing.Point(117, 229);
+            RqChauffeur.Location = new System.Drawing.Point(134, 305);
+            RqChauffeur.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             RqChauffeur.Name = "RqChauffeur";
-            RqChauffeur.Size = new System.Drawing.Size(28, 22);
+            RqChauffeur.Size = new System.Drawing.Size(32, 29);
             RqChauffeur.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             RqChauffeur.TabIndex = 132;
             RqChauffeur.TabStop = false;
@@ -1498,9 +1554,10 @@
             // RqCamion
             // 
             RqCamion.Image = Properties.Resources.asterisk;
-            RqCamion.Location = new System.Drawing.Point(117, 197);
+            RqCamion.Location = new System.Drawing.Point(134, 263);
+            RqCamion.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             RqCamion.Name = "RqCamion";
-            RqCamion.Size = new System.Drawing.Size(28, 22);
+            RqCamion.Size = new System.Drawing.Size(32, 29);
             RqCamion.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             RqCamion.TabIndex = 131;
             RqCamion.TabStop = false;
@@ -1508,9 +1565,10 @@
             // RqFirme
             // 
             RqFirme.Image = Properties.Resources.asterisk;
-            RqFirme.Location = new System.Drawing.Point(117, 166);
+            RqFirme.Location = new System.Drawing.Point(134, 221);
+            RqFirme.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             RqFirme.Name = "RqFirme";
-            RqFirme.Size = new System.Drawing.Size(28, 22);
+            RqFirme.Size = new System.Drawing.Size(32, 29);
             RqFirme.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             RqFirme.TabIndex = 130;
             RqFirme.TabStop = false;
@@ -1518,9 +1576,10 @@
             // RqPont
             // 
             RqPont.Image = Properties.Resources.asterisk;
-            RqPont.Location = new System.Drawing.Point(117, 135);
+            RqPont.Location = new System.Drawing.Point(134, 180);
+            RqPont.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             RqPont.Name = "RqPont";
-            RqPont.Size = new System.Drawing.Size(28, 22);
+            RqPont.Size = new System.Drawing.Size(32, 29);
             RqPont.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             RqPont.TabIndex = 129;
             RqPont.TabStop = false;
@@ -1529,9 +1588,10 @@
             // 
             panel3.BackColor = System.Drawing.Color.FromArgb(58, 62, 60);
             panel3.Dock = System.Windows.Forms.DockStyle.Bottom;
-            panel3.Location = new System.Drawing.Point(108, 623);
+            panel3.Location = new System.Drawing.Point(130, 830);
+            panel3.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             panel3.Name = "panel3";
-            panel3.Size = new System.Drawing.Size(660, 27);
+            panel3.Size = new System.Drawing.Size(748, 36);
             panel3.TabIndex = 3;
             // 
             // menuStrip
@@ -1545,7 +1605,7 @@
             menuStrip.Name = "menuStrip";
             menuStrip.Padding = new System.Windows.Forms.Padding(0, 0, 0, 1);
             menuStrip.RenderMode = System.Windows.Forms.ToolStripRenderMode.Professional;
-            menuStrip.Size = new System.Drawing.Size(108, 650);
+            menuStrip.Size = new System.Drawing.Size(130, 866);
             menuStrip.TabIndex = 128;
             menuStrip.Text = "menuStrip1";
             // 
@@ -1557,7 +1617,7 @@
             toolStripMenuItem4.Margin = new System.Windows.Forms.Padding(0, 4, 0, 0);
             toolStripMenuItem4.Name = "toolStripMenuItem4";
             toolStripMenuItem4.Padding = new System.Windows.Forms.Padding(4, 1, 4, 3);
-            toolStripMenuItem4.Size = new System.Drawing.Size(107, 54);
+            toolStripMenuItem4.Size = new System.Drawing.Size(129, 59);
             toolStripMenuItem4.Text = "Annuler";
             toolStripMenuItem4.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             toolStripMenuItem4.Click += toolStripMenuItem4_Click;
@@ -1570,7 +1630,7 @@
             toolStripMenuItem2.Margin = new System.Windows.Forms.Padding(0, 4, 0, 0);
             toolStripMenuItem2.Name = "toolStripMenuItem2";
             toolStripMenuItem2.Padding = new System.Windows.Forms.Padding(4, 1, 4, 3);
-            toolStripMenuItem2.Size = new System.Drawing.Size(107, 54);
+            toolStripMenuItem2.Size = new System.Drawing.Size(129, 59);
             toolStripMenuItem2.Text = "Images";
             toolStripMenuItem2.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             // 
@@ -1582,7 +1642,7 @@
             ListePeséesToolStripMenuItem.Margin = new System.Windows.Forms.Padding(0, 80, 0, 0);
             ListePeséesToolStripMenuItem.Name = "ListePeséesToolStripMenuItem";
             ListePeséesToolStripMenuItem.Padding = new System.Windows.Forms.Padding(4, 1, 4, 3);
-            ListePeséesToolStripMenuItem.Size = new System.Drawing.Size(107, 54);
+            ListePeséesToolStripMenuItem.Size = new System.Drawing.Size(129, 59);
             ListePeséesToolStripMenuItem.Text = "Liste";
             ListePeséesToolStripMenuItem.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             ListePeséesToolStripMenuItem.Click += pontsToolStripMenuItem_Click;
@@ -1596,7 +1656,7 @@
             gérerToolStripMenuItem.Margin = new System.Windows.Forms.Padding(0, 4, 0, 0);
             gérerToolStripMenuItem.Name = "gérerToolStripMenuItem";
             gérerToolStripMenuItem.Padding = new System.Windows.Forms.Padding(4, 1, 4, 3);
-            gérerToolStripMenuItem.Size = new System.Drawing.Size(107, 54);
+            gérerToolStripMenuItem.Size = new System.Drawing.Size(129, 59);
             gérerToolStripMenuItem.Text = "Gérer";
             gérerToolStripMenuItem.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             // 
@@ -1606,7 +1666,7 @@
             camionsToolStripMenuItem1.ForeColor = System.Drawing.Color.White;
             camionsToolStripMenuItem1.Image = Properties.Resources.cargo_truck;
             camionsToolStripMenuItem1.Name = "camionsToolStripMenuItem1";
-            camionsToolStripMenuItem1.Size = new System.Drawing.Size(184, 26);
+            camionsToolStripMenuItem1.Size = new System.Drawing.Size(225, 32);
             camionsToolStripMenuItem1.Text = "Camions";
             camionsToolStripMenuItem1.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
             camionsToolStripMenuItem1.Click += camionsToolStripMenuItem1_Click;
@@ -1617,7 +1677,7 @@
             produitsToolStripMenuItem.ForeColor = System.Drawing.Color.White;
             produitsToolStripMenuItem.Image = Properties.Resources.cubes1;
             produitsToolStripMenuItem.Name = "produitsToolStripMenuItem";
-            produitsToolStripMenuItem.Size = new System.Drawing.Size(184, 26);
+            produitsToolStripMenuItem.Size = new System.Drawing.Size(225, 32);
             produitsToolStripMenuItem.Text = "Produits";
             produitsToolStripMenuItem.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
             produitsToolStripMenuItem.Click += produitsToolStripMenuItem_Click;
@@ -1628,7 +1688,7 @@
             chauffeursToolStripMenuItem1.ForeColor = System.Drawing.Color.White;
             chauffeursToolStripMenuItem1.Image = Properties.Resources.driver1;
             chauffeursToolStripMenuItem1.Name = "chauffeursToolStripMenuItem1";
-            chauffeursToolStripMenuItem1.Size = new System.Drawing.Size(184, 26);
+            chauffeursToolStripMenuItem1.Size = new System.Drawing.Size(225, 32);
             chauffeursToolStripMenuItem1.Text = "Chauffeurs";
             chauffeursToolStripMenuItem1.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
             chauffeursToolStripMenuItem1.Click += chauffeursToolStripMenuItem1_Click;
@@ -1639,7 +1699,7 @@
             firmesToolStripMenuItem.ForeColor = System.Drawing.Color.White;
             firmesToolStripMenuItem.Image = Properties.Resources.industry;
             firmesToolStripMenuItem.Name = "firmesToolStripMenuItem";
-            firmesToolStripMenuItem.Size = new System.Drawing.Size(184, 26);
+            firmesToolStripMenuItem.Size = new System.Drawing.Size(225, 32);
             firmesToolStripMenuItem.Text = "Firmes";
             firmesToolStripMenuItem.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
             firmesToolStripMenuItem.Click += firmesToolStripMenuItem_Click;
@@ -1650,7 +1710,7 @@
             transporteursToolStripMenuItem.ForeColor = System.Drawing.Color.White;
             transporteursToolStripMenuItem.Image = Properties.Resources.Carriers;
             transporteursToolStripMenuItem.Name = "transporteursToolStripMenuItem";
-            transporteursToolStripMenuItem.Size = new System.Drawing.Size(184, 26);
+            transporteursToolStripMenuItem.Size = new System.Drawing.Size(225, 32);
             transporteursToolStripMenuItem.Text = "Transporteurs";
             transporteursToolStripMenuItem.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
             transporteursToolStripMenuItem.Click += transporteursToolStripMenuItem_Click;
@@ -1661,7 +1721,7 @@
             clientsToolStripMenuItem.ForeColor = System.Drawing.Color.White;
             clientsToolStripMenuItem.Image = Properties.Resources.Customers;
             clientsToolStripMenuItem.Name = "clientsToolStripMenuItem";
-            clientsToolStripMenuItem.Size = new System.Drawing.Size(184, 26);
+            clientsToolStripMenuItem.Size = new System.Drawing.Size(225, 32);
             clientsToolStripMenuItem.Text = "Clients";
             clientsToolStripMenuItem.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
             clientsToolStripMenuItem.Click += clientsToolStripMenuItem_Click;
@@ -1676,7 +1736,7 @@
             paramètresToolStripMenuItem.Margin = new System.Windows.Forms.Padding(0, 4, 0, 0);
             paramètresToolStripMenuItem.Name = "paramètresToolStripMenuItem";
             paramètresToolStripMenuItem.Padding = new System.Windows.Forms.Padding(4, 1, 4, 3);
-            paramètresToolStripMenuItem.Size = new System.Drawing.Size(107, 54);
+            paramètresToolStripMenuItem.Size = new System.Drawing.Size(129, 59);
             paramètresToolStripMenuItem.Text = "Paramètres";
             paramètresToolStripMenuItem.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             // 
@@ -1686,7 +1746,7 @@
             pamamètresDePeséeToolStripMenuItem.ForeColor = System.Drawing.Color.White;
             pamamètresDePeséeToolStripMenuItem.Image = Properties.Resources.Weighing_settings;
             pamamètresDePeséeToolStripMenuItem.Name = "pamamètresDePeséeToolStripMenuItem";
-            pamamètresDePeséeToolStripMenuItem.Size = new System.Drawing.Size(249, 26);
+            pamamètresDePeséeToolStripMenuItem.Size = new System.Drawing.Size(303, 32);
             pamamètresDePeséeToolStripMenuItem.Text = "Paramètres de pesée";
             pamamètresDePeséeToolStripMenuItem.Click += pamamètresDePeséeToolStripMenuItem_Click;
             // 
@@ -1697,7 +1757,7 @@
             tablesSupplémentairesToolStripMenuItem.ForeColor = System.Drawing.Color.White;
             tablesSupplémentairesToolStripMenuItem.Image = Properties.Resources.table;
             tablesSupplémentairesToolStripMenuItem.Name = "tablesSupplémentairesToolStripMenuItem";
-            tablesSupplémentairesToolStripMenuItem.Size = new System.Drawing.Size(249, 26);
+            tablesSupplémentairesToolStripMenuItem.Size = new System.Drawing.Size(303, 32);
             tablesSupplémentairesToolStripMenuItem.Text = "Tables supplémentaire";
             // 
             // tablesToolStripMenuItem
@@ -1706,7 +1766,7 @@
             tablesToolStripMenuItem.ForeColor = System.Drawing.Color.White;
             tablesToolStripMenuItem.Image = Properties.Resources.table;
             tablesToolStripMenuItem.Name = "tablesToolStripMenuItem";
-            tablesToolStripMenuItem.Size = new System.Drawing.Size(204, 26);
+            tablesToolStripMenuItem.Size = new System.Drawing.Size(250, 32);
             tablesToolStripMenuItem.Text = "Tables";
             tablesToolStripMenuItem.Click += tablesToolStripMenuItem_Click;
             // 
@@ -1716,7 +1776,7 @@
             enregistrementsToolStripMenuItem.ForeColor = System.Drawing.Color.White;
             enregistrementsToolStripMenuItem.Image = Properties.Resources.lignes;
             enregistrementsToolStripMenuItem.Name = "enregistrementsToolStripMenuItem";
-            enregistrementsToolStripMenuItem.Size = new System.Drawing.Size(204, 26);
+            enregistrementsToolStripMenuItem.Size = new System.Drawing.Size(250, 32);
             enregistrementsToolStripMenuItem.Text = "Enregistrements";
             enregistrementsToolStripMenuItem.Click += enregistrementsToolStripMenuItem_Click;
             // 
@@ -1728,9 +1788,10 @@
             btAddClient.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(72, 86, 81);
             btAddClient.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             btAddClient.Image = Properties.Resources.plus_Weighing;
-            btAddClient.Location = new System.Drawing.Point(512, 325);
+            btAddClient.Location = new System.Drawing.Point(585, 433);
+            btAddClient.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             btAddClient.Name = "btAddClient";
-            btAddClient.Size = new System.Drawing.Size(25, 25);
+            btAddClient.Size = new System.Drawing.Size(29, 33);
             btAddClient.TabIndex = 127;
             btAddClient.UseVisualStyleBackColor = false;
             btAddClient.Visible = false;
@@ -1744,9 +1805,10 @@
             btAddProduit.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(72, 86, 81);
             btAddProduit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             btAddProduit.Image = Properties.Resources.plus_Weighing;
-            btAddProduit.Location = new System.Drawing.Point(512, 293);
+            btAddProduit.Location = new System.Drawing.Point(585, 391);
+            btAddProduit.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             btAddProduit.Name = "btAddProduit";
-            btAddProduit.Size = new System.Drawing.Size(25, 25);
+            btAddProduit.Size = new System.Drawing.Size(29, 33);
             btAddProduit.TabIndex = 126;
             btAddProduit.UseVisualStyleBackColor = false;
             btAddProduit.Visible = false;
@@ -1760,9 +1822,10 @@
             btAddTransporteur.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(72, 86, 81);
             btAddTransporteur.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             btAddTransporteur.Image = Properties.Resources.plus_Weighing;
-            btAddTransporteur.Location = new System.Drawing.Point(512, 261);
+            btAddTransporteur.Location = new System.Drawing.Point(585, 348);
+            btAddTransporteur.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             btAddTransporteur.Name = "btAddTransporteur";
-            btAddTransporteur.Size = new System.Drawing.Size(25, 25);
+            btAddTransporteur.Size = new System.Drawing.Size(29, 33);
             btAddTransporteur.TabIndex = 125;
             btAddTransporteur.UseVisualStyleBackColor = false;
             btAddTransporteur.Visible = false;
@@ -1776,9 +1839,10 @@
             btAddChauffeur.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(72, 86, 81);
             btAddChauffeur.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             btAddChauffeur.Image = Properties.Resources.plus_Weighing;
-            btAddChauffeur.Location = new System.Drawing.Point(512, 229);
+            btAddChauffeur.Location = new System.Drawing.Point(585, 305);
+            btAddChauffeur.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             btAddChauffeur.Name = "btAddChauffeur";
-            btAddChauffeur.Size = new System.Drawing.Size(25, 25);
+            btAddChauffeur.Size = new System.Drawing.Size(29, 33);
             btAddChauffeur.TabIndex = 124;
             btAddChauffeur.UseVisualStyleBackColor = false;
             btAddChauffeur.Visible = false;
@@ -1792,9 +1856,10 @@
             btAddCamion.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(72, 86, 81);
             btAddCamion.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             btAddCamion.Image = Properties.Resources.plus_Weighing;
-            btAddCamion.Location = new System.Drawing.Point(512, 197);
+            btAddCamion.Location = new System.Drawing.Point(585, 263);
+            btAddCamion.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             btAddCamion.Name = "btAddCamion";
-            btAddCamion.Size = new System.Drawing.Size(25, 25);
+            btAddCamion.Size = new System.Drawing.Size(29, 33);
             btAddCamion.TabIndex = 123;
             btAddCamion.UseVisualStyleBackColor = false;
             btAddCamion.Visible = false;
@@ -1808,9 +1873,10 @@
             btAddFirme.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(72, 86, 81);
             btAddFirme.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             btAddFirme.Image = Properties.Resources.plus_Weighing;
-            btAddFirme.Location = new System.Drawing.Point(512, 165);
+            btAddFirme.Location = new System.Drawing.Point(585, 220);
+            btAddFirme.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             btAddFirme.Name = "btAddFirme";
-            btAddFirme.Size = new System.Drawing.Size(25, 24);
+            btAddFirme.Size = new System.Drawing.Size(29, 32);
             btAddFirme.TabIndex = 122;
             btAddFirme.UseVisualStyleBackColor = false;
             btAddFirme.Visible = false;
@@ -1824,9 +1890,10 @@
             btAddPont.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(72, 86, 81);
             btAddPont.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             btAddPont.Image = Properties.Resources.plus_Weighing;
-            btAddPont.Location = new System.Drawing.Point(512, 133);
+            btAddPont.Location = new System.Drawing.Point(585, 177);
+            btAddPont.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             btAddPont.Name = "btAddPont";
-            btAddPont.Size = new System.Drawing.Size(25, 24);
+            btAddPont.Size = new System.Drawing.Size(29, 32);
             btAddPont.TabIndex = 121;
             btAddPont.UseVisualStyleBackColor = false;
             btAddPont.Visible = false;
@@ -1838,10 +1905,10 @@
             lbTareCamion.Font = new System.Drawing.Font("Calibri", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             lbTareCamion.ForeColor = System.Drawing.Color.White;
             lbTareCamion.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            lbTareCamion.Location = new System.Drawing.Point(543, 81);
+            lbTareCamion.Location = new System.Drawing.Point(621, 108);
             lbTareCamion.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             lbTareCamion.Name = "lbTareCamion";
-            lbTareCamion.Size = new System.Drawing.Size(62, 18);
+            lbTareCamion.Size = new System.Drawing.Size(78, 23);
             lbTareCamion.TabIndex = 112;
             lbTareCamion.Text = "Tare (Kg)";
             lbTareCamion.Visible = false;
@@ -1851,9 +1918,10 @@
             txtTareCamion.BackColor = System.Drawing.Color.Honeydew;
             txtTareCamion.Font = new System.Drawing.Font("Calibri", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             txtTareCamion.ForeColor = System.Drawing.Color.Black;
-            txtTareCamion.Location = new System.Drawing.Point(543, 102);
+            txtTareCamion.Location = new System.Drawing.Point(621, 136);
+            txtTareCamion.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             txtTareCamion.Name = "txtTareCamion";
-            txtTareCamion.Size = new System.Drawing.Size(91, 25);
+            txtTareCamion.Size = new System.Drawing.Size(103, 30);
             txtTareCamion.TabIndex = 111;
             txtTareCamion.Visible = false;
             // 
@@ -1863,9 +1931,11 @@
             gbFlux.Controls.Add(rbxEntrant);
             gbFlux.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             gbFlux.ForeColor = System.Drawing.Color.White;
-            gbFlux.Location = new System.Drawing.Point(388, 7);
+            gbFlux.Location = new System.Drawing.Point(443, 9);
+            gbFlux.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             gbFlux.Name = "gbFlux";
-            gbFlux.Size = new System.Drawing.Size(123, 72);
+            gbFlux.Padding = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            gbFlux.Size = new System.Drawing.Size(141, 96);
             gbFlux.TabIndex = 109;
             gbFlux.TabStop = false;
             gbFlux.Text = "Flux";
@@ -1874,9 +1944,10 @@
             // 
             rbxSortant.AutoSize = true;
             rbxSortant.FlatAppearance.CheckedBackColor = System.Drawing.Color.FromArgb(72, 190, 117);
-            rbxSortant.Location = new System.Drawing.Point(20, 42);
+            rbxSortant.Location = new System.Drawing.Point(23, 56);
+            rbxSortant.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             rbxSortant.Name = "rbxSortant";
-            rbxSortant.Size = new System.Drawing.Size(73, 23);
+            rbxSortant.Size = new System.Drawing.Size(93, 28);
             rbxSortant.TabIndex = 1;
             rbxSortant.TabStop = true;
             rbxSortant.Text = "Sortant";
@@ -1887,9 +1958,10 @@
             // 
             rbxEntrant.AutoSize = true;
             rbxEntrant.FlatAppearance.CheckedBackColor = System.Drawing.Color.FromArgb(72, 190, 117);
-            rbxEntrant.Location = new System.Drawing.Point(20, 23);
+            rbxEntrant.Location = new System.Drawing.Point(23, 31);
+            rbxEntrant.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             rbxEntrant.Name = "rbxEntrant";
-            rbxEntrant.Size = new System.Drawing.Size(74, 23);
+            rbxEntrant.Size = new System.Drawing.Size(94, 28);
             rbxEntrant.TabIndex = 0;
             rbxEntrant.TabStop = true;
             rbxEntrant.Text = "Entrant";
@@ -1905,9 +1977,10 @@
             panelLayout.Controls.Add(panelWeightDisplay);
             panelLayout.Controls.Add(panelData);
             panelLayout.Dock = System.Windows.Forms.DockStyle.Fill;
-            panelLayout.Location = new System.Drawing.Point(0, 35);
+            panelLayout.Location = new System.Drawing.Point(0, 47);
+            panelLayout.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             panelLayout.Name = "panelLayout";
-            panelLayout.Size = new System.Drawing.Size(1271, 650);
+            panelLayout.Size = new System.Drawing.Size(1453, 866);
             panelLayout.TabIndex = 110;
             // 
             // DgvList
@@ -1936,7 +2009,8 @@
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             DgvList.DefaultCellStyle = dataGridViewCellStyle2;
             DgvList.Dock = System.Windows.Forms.DockStyle.Fill;
-            DgvList.Location = new System.Drawing.Point(768, 233);
+            DgvList.Location = new System.Drawing.Point(878, 300);
+            DgvList.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             DgvList.Name = "DgvList";
             DgvList.ReadOnly = true;
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
@@ -1949,7 +2023,7 @@
             DgvList.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
             DgvList.RowHeadersWidth = 62;
             DgvList.RowTemplate.Height = 33;
-            DgvList.Size = new System.Drawing.Size(503, 390);
+            DgvList.Size = new System.Drawing.Size(575, 530);
             DgvList.TabIndex = 1;
             DgvList.CellDoubleClick += DgvList_CellDoubleClick;
             // 
@@ -1959,11 +2033,11 @@
             menuStrip1.Font = new System.Drawing.Font("Corbel", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             menuStrip1.ImageScalingSize = new System.Drawing.Size(24, 24);
             menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] { toolStripSearch });
-            menuStrip1.Location = new System.Drawing.Point(768, 189);
+            menuStrip1.Location = new System.Drawing.Point(878, 252);
             menuStrip1.Name = "menuStrip1";
             menuStrip1.Padding = new System.Windows.Forms.Padding(0, 0, 0, 1);
             menuStrip1.RenderMode = System.Windows.Forms.ToolStripRenderMode.Professional;
-            menuStrip1.Size = new System.Drawing.Size(503, 44);
+            menuStrip1.Size = new System.Drawing.Size(575, 48);
             menuStrip1.TabIndex = 129;
             menuStrip1.Text = "menuStripDgv";
             // 
@@ -1972,16 +2046,17 @@
             toolStripSearch.BackColor = System.Drawing.Color.MistyRose;
             toolStripSearch.Margin = new System.Windows.Forms.Padding(150, 10, 1, 10);
             toolStripSearch.Name = "toolStripSearch";
-            toolStripSearch.Size = new System.Drawing.Size(220, 23);
+            toolStripSearch.Size = new System.Drawing.Size(251, 27);
             toolStripSearch.Click += toolStripSearch_Click;
             toolStripSearch.TextChanged += toolStripSearch_TextChanged;
             // 
             // panel2
             // 
             panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
-            panel2.Location = new System.Drawing.Point(768, 623);
+            panel2.Location = new System.Drawing.Point(878, 830);
+            panel2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             panel2.Name = "panel2";
-            panel2.Size = new System.Drawing.Size(503, 27);
+            panel2.Size = new System.Drawing.Size(575, 36);
             panel2.TabIndex = 2;
             // 
             // panelWeightDetails
@@ -1997,9 +2072,10 @@
             panelWeightDetails.Controls.Add(label2);
             panelWeightDetails.Controls.Add(label1);
             panelWeightDetails.Dock = System.Windows.Forms.DockStyle.Top;
-            panelWeightDetails.Location = new System.Drawing.Point(768, 101);
+            panelWeightDetails.Location = new System.Drawing.Point(878, 135);
+            panelWeightDetails.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             panelWeightDetails.Name = "panelWeightDetails";
-            panelWeightDetails.Size = new System.Drawing.Size(503, 88);
+            panelWeightDetails.Size = new System.Drawing.Size(575, 117);
             panelWeightDetails.TabIndex = 112;
             // 
             // lbDateHeurePoidsTare
@@ -2008,10 +2084,10 @@
             lbDateHeurePoidsTare.Font = new System.Drawing.Font("Calibri", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             lbDateHeurePoidsTare.ForeColor = System.Drawing.Color.FromArgb(112, 228, 132);
             lbDateHeurePoidsTare.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            lbDateHeurePoidsTare.Location = new System.Drawing.Point(267, 31);
+            lbDateHeurePoidsTare.Location = new System.Drawing.Point(305, 41);
             lbDateHeurePoidsTare.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             lbDateHeurePoidsTare.Name = "lbDateHeurePoidsTare";
-            lbDateHeurePoidsTare.Size = new System.Drawing.Size(16, 22);
+            lbDateHeurePoidsTare.Size = new System.Drawing.Size(19, 27);
             lbDateHeurePoidsTare.TabIndex = 119;
             lbDateHeurePoidsTare.Text = "-";
             // 
@@ -2021,10 +2097,10 @@
             lbDateHeurePoidsBrut.Font = new System.Drawing.Font("Calibri", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             lbDateHeurePoidsBrut.ForeColor = System.Drawing.Color.FromArgb(112, 228, 132);
             lbDateHeurePoidsBrut.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            lbDateHeurePoidsBrut.Location = new System.Drawing.Point(267, 5);
+            lbDateHeurePoidsBrut.Location = new System.Drawing.Point(305, 7);
             lbDateHeurePoidsBrut.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             lbDateHeurePoidsBrut.Name = "lbDateHeurePoidsBrut";
-            lbDateHeurePoidsBrut.Size = new System.Drawing.Size(16, 22);
+            lbDateHeurePoidsBrut.Size = new System.Drawing.Size(19, 27);
             lbDateHeurePoidsBrut.TabIndex = 118;
             lbDateHeurePoidsBrut.Text = "-";
             // 
@@ -2038,8 +2114,9 @@
             btPeser.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             btPeser.Image = Properties.Resources.Peser;
             btPeser.Location = new System.Drawing.Point(0, 0);
+            btPeser.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             btPeser.Name = "btPeser";
-            btPeser.Size = new System.Drawing.Size(49, 88);
+            btPeser.Size = new System.Drawing.Size(56, 117);
             btPeser.TabIndex = 113;
             btPeser.UseVisualStyleBackColor = false;
             btPeser.Click += btPeser_Click;
@@ -2050,10 +2127,10 @@
             lbPoidsNet.Font = new System.Drawing.Font("Calibri", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             lbPoidsNet.ForeColor = System.Drawing.Color.FromArgb(112, 228, 132);
             lbPoidsNet.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            lbPoidsNet.Location = new System.Drawing.Point(195, 57);
+            lbPoidsNet.Location = new System.Drawing.Point(223, 76);
             lbPoidsNet.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             lbPoidsNet.Name = "lbPoidsNet";
-            lbPoidsNet.Size = new System.Drawing.Size(19, 22);
+            lbPoidsNet.Size = new System.Drawing.Size(23, 27);
             lbPoidsNet.TabIndex = 117;
             lbPoidsNet.Text = "0";
             // 
@@ -2063,10 +2140,10 @@
             lbPoidsTare.Font = new System.Drawing.Font("Calibri", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             lbPoidsTare.ForeColor = System.Drawing.Color.FromArgb(112, 228, 132);
             lbPoidsTare.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            lbPoidsTare.Location = new System.Drawing.Point(195, 31);
+            lbPoidsTare.Location = new System.Drawing.Point(223, 41);
             lbPoidsTare.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             lbPoidsTare.Name = "lbPoidsTare";
-            lbPoidsTare.Size = new System.Drawing.Size(19, 22);
+            lbPoidsTare.Size = new System.Drawing.Size(23, 27);
             lbPoidsTare.TabIndex = 116;
             lbPoidsTare.Text = "0";
             // 
@@ -2076,10 +2153,10 @@
             lbPoidsBrut.Font = new System.Drawing.Font("Calibri", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             lbPoidsBrut.ForeColor = System.Drawing.Color.FromArgb(112, 228, 132);
             lbPoidsBrut.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            lbPoidsBrut.Location = new System.Drawing.Point(195, 5);
+            lbPoidsBrut.Location = new System.Drawing.Point(223, 7);
             lbPoidsBrut.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             lbPoidsBrut.Name = "lbPoidsBrut";
-            lbPoidsBrut.Size = new System.Drawing.Size(19, 22);
+            lbPoidsBrut.Size = new System.Drawing.Size(23, 27);
             lbPoidsBrut.TabIndex = 115;
             lbPoidsBrut.Text = "0";
             // 
@@ -2089,10 +2166,10 @@
             label3.Font = new System.Drawing.Font("Calibri", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             label3.ForeColor = System.Drawing.Color.FromArgb(112, 228, 132);
             label3.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            label3.Location = new System.Drawing.Point(54, 57);
+            label3.Location = new System.Drawing.Point(62, 76);
             label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             label3.Name = "label3";
-            label3.Size = new System.Drawing.Size(115, 22);
+            label3.Size = new System.Drawing.Size(143, 27);
             label3.TabIndex = 114;
             label3.Text = "Poids Net (kg):";
             // 
@@ -2102,10 +2179,10 @@
             label2.Font = new System.Drawing.Font("Calibri", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             label2.ForeColor = System.Drawing.Color.FromArgb(112, 228, 132);
             label2.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            label2.Location = new System.Drawing.Point(54, 31);
+            label2.Location = new System.Drawing.Point(62, 41);
             label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             label2.Name = "label2";
-            label2.Size = new System.Drawing.Size(97, 22);
+            label2.Size = new System.Drawing.Size(122, 27);
             label2.TabIndex = 113;
             label2.Text = "Poids 1 (kg):";
             // 
@@ -2115,10 +2192,10 @@
             label1.Font = new System.Drawing.Font("Calibri", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             label1.ForeColor = System.Drawing.Color.FromArgb(112, 228, 132);
             label1.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            label1.Location = new System.Drawing.Point(54, 5);
+            label1.Location = new System.Drawing.Point(62, 7);
             label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             label1.Name = "label1";
-            label1.Size = new System.Drawing.Size(97, 22);
+            label1.Size = new System.Drawing.Size(122, 27);
             label1.TabIndex = 112;
             label1.Text = "Poids 2 (kg):";
             // 
@@ -2133,9 +2210,10 @@
             panelWeightDisplay.Controls.Add(lbCOM);
             panelWeightDisplay.Controls.Add(lbStatus);
             panelWeightDisplay.Dock = System.Windows.Forms.DockStyle.Top;
-            panelWeightDisplay.Location = new System.Drawing.Point(768, 0);
+            panelWeightDisplay.Location = new System.Drawing.Point(878, 0);
+            panelWeightDisplay.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             panelWeightDisplay.Name = "panelWeightDisplay";
-            panelWeightDisplay.Size = new System.Drawing.Size(503, 101);
+            panelWeightDisplay.Size = new System.Drawing.Size(575, 135);
             panelWeightDisplay.TabIndex = 111;
             // 
             // lbWeighingSettings
@@ -2144,10 +2222,10 @@
             lbWeighingSettings.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             lbWeighingSettings.ForeColor = System.Drawing.Color.FromArgb(112, 228, 132);
             lbWeighingSettings.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            lbWeighingSettings.Location = new System.Drawing.Point(54, 76);
+            lbWeighingSettings.Location = new System.Drawing.Point(62, 101);
             lbWeighingSettings.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             lbWeighingSettings.Name = "lbWeighingSettings";
-            lbWeighingSettings.Size = new System.Drawing.Size(42, 19);
+            lbWeighingSettings.Size = new System.Drawing.Size(51, 24);
             lbWeighingSettings.TabIndex = 120;
             lbWeighingSettings.Text = "COM";
             // 
@@ -2160,9 +2238,10 @@
             btParametrePoids.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(72, 86, 81);
             btParametrePoids.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             btParametrePoids.Image = Properties.Resources.expand_arrows;
-            btParametrePoids.Location = new System.Drawing.Point(0, 52);
+            btParametrePoids.Location = new System.Drawing.Point(0, 69);
+            btParametrePoids.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             btParametrePoids.Name = "btParametrePoids";
-            btParametrePoids.Size = new System.Drawing.Size(49, 48);
+            btParametrePoids.Size = new System.Drawing.Size(56, 64);
             btParametrePoids.TabIndex = 119;
             btParametrePoids.UseVisualStyleBackColor = false;
             btParametrePoids.Click += btSaisirPoids_Click;
@@ -2176,8 +2255,9 @@
             btSimulateur.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             btSimulateur.Image = Properties.Resources.pencil_update;
             btSimulateur.Location = new System.Drawing.Point(0, 1);
+            btSimulateur.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             btSimulateur.Name = "btSimulateur";
-            btSimulateur.Size = new System.Drawing.Size(49, 50);
+            btSimulateur.Size = new System.Drawing.Size(56, 67);
             btSimulateur.TabIndex = 118;
             btSimulateur.UseVisualStyleBackColor = false;
             btSimulateur.Click += btSimulateur_Click;
@@ -2189,10 +2269,11 @@
             txtPoids.Dock = System.Windows.Forms.DockStyle.Right;
             txtPoids.Font = new System.Drawing.Font("Calibri", 60F, System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point);
             txtPoids.ForeColor = System.Drawing.Color.FromArgb(112, 228, 132);
-            txtPoids.Location = new System.Drawing.Point(233, 0);
+            txtPoids.Location = new System.Drawing.Point(266, 0);
+            txtPoids.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             txtPoids.Name = "txtPoids";
             txtPoids.ReadOnly = true;
-            txtPoids.Size = new System.Drawing.Size(270, 98);
+            txtPoids.Size = new System.Drawing.Size(309, 123);
             txtPoids.TabIndex = 113;
             txtPoids.TabStop = false;
             txtPoids.Text = "00000";
@@ -2204,10 +2285,10 @@
             lbWeightSettings.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             lbWeightSettings.ForeColor = System.Drawing.Color.FromArgb(112, 228, 132);
             lbWeightSettings.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            lbWeightSettings.Location = new System.Drawing.Point(54, 53);
+            lbWeightSettings.Location = new System.Drawing.Point(62, 71);
             lbWeightSettings.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             lbWeightSettings.Name = "lbWeightSettings";
-            lbWeightSettings.Size = new System.Drawing.Size(42, 19);
+            lbWeightSettings.Size = new System.Drawing.Size(51, 24);
             lbWeightSettings.TabIndex = 111;
             lbWeightSettings.Text = "COM";
             // 
@@ -2217,10 +2298,10 @@
             lbStatus.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             lbStatus.ForeColor = System.Drawing.Color.FromArgb(112, 228, 132);
             lbStatus.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            lbStatus.Location = new System.Drawing.Point(54, 29);
+            lbStatus.Location = new System.Drawing.Point(62, 39);
             lbStatus.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             lbStatus.Name = "lbStatus";
-            lbStatus.Size = new System.Drawing.Size(42, 19);
+            lbStatus.Size = new System.Drawing.Size(51, 24);
             lbStatus.TabIndex = 110;
             lbStatus.Text = "COM";
             // 
@@ -2234,14 +2315,15 @@
             // 
             // PeseePontBascule
             // 
-            AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
+            AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             AutoScroll = true;
             BackColor = System.Drawing.Color.FromArgb(58, 62, 60);
-            ClientSize = new System.Drawing.Size(1271, 685);
+            ClientSize = new System.Drawing.Size(1453, 913);
             Controls.Add(panelLayout);
             Controls.Add(panelLang);
             Icon = (System.Drawing.Icon)resources.GetObject("$this.Icon");
+            Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             Name = "PeseePontBascule";
             Text = "Pesée pont bascule";
             FormClosing += PeseePontBascule_FormClosing;

@@ -9,6 +9,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Tunnel.Communication.Data;
+using TunnelIntegration;
 using WidraSoft.BL;
 using static System.Windows.Forms.AxHost;
 
@@ -65,9 +67,21 @@ namespace WidraSoft.UI
             timer_Time.Interval = 30000;
             timer_Time.Start();
 
+            TunnelCommunicationHelper.ReceivedWeightData += TunnelCommunicationHelper_ReceivedWeightData;
+
             Initialize_WeighBridgeSettings(vg_PontId);
             Initialize_Contact();
 
+        }
+
+        private static void TunnelCommunicationHelper_ReceivedWeightData(object sender, WeightData e)
+        {
+            Poids_Public = e.Weight;
+        }
+
+        private void UpdateWeight()
+        {
+            txtPoids.Text = Poids_Public.ToString();
         }
 
         private int GetPontId()
@@ -385,6 +399,8 @@ namespace WidraSoft.UI
         {
             if (com.IsOpen)
                 ReceiveSerialData();
+            else
+                UpdateWeight();
         }
 
         private void Borne_Home_FormClosing(object sender, FormClosingEventArgs e)

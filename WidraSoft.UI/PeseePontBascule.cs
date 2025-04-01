@@ -9,6 +9,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using TunnelIntegration;
 using WidraSoft.BL;
 using WidraSoft.DA;
 
@@ -1958,7 +1959,7 @@ namespace WidraSoft.UI
 
         }
 
-        public void ReceiveSerialData()
+        public async void ReceiveSerialData()
         {
             string s;
             string result;
@@ -1972,7 +1973,11 @@ namespace WidraSoft.UI
                 int Poids;
                 bool IsParsablePoids;
                 IsParsablePoids = Int32.TryParse(result, out Poids);
-                if (IsParsablePoids) { txtPoids.Text = Poids.ToString(); }
+                if (IsParsablePoids)
+                {
+                    txtPoids.Text = Poids.ToString();
+                    await TunnelCommunicationHelper.SendWeightMessageAsync(Poids, false);
+                }
                 else { txtPoids.Text = "0"; }
                 //P = Poids;
             }
@@ -2279,10 +2284,12 @@ namespace WidraSoft.UI
 
         }
 
-        private void btSimulateur_Click(object sender, EventArgs e)
+        private async void btSimulateur_Click(object sender, EventArgs e)
         {
             string input = Microsoft.VisualBasic.Interaction.InputBox("Entrez un poids", "Simulateur Poids");
             txtPoids.Text = input;
+
+            await TunnelCommunicationHelper.SendWeightMessageAsync(int.Parse(input), false);
         }
 
         private void rbxEntrant_CheckedChanged(object sender, EventArgs e)
