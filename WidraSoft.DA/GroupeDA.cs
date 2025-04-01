@@ -31,25 +31,6 @@ namespace WidraSoft.DA
             }
         }
 
-        public DataTable SearchBox(string filter)
-        {
-            String sql = "SELECT * FROM GROUPE WHERE DESIGNATION LIKE '%" + filter + "%'";
-            conn.ConnectionString = connString;
-            if (conn.State == ConnectionState.Closed)
-                conn.Open();
-            SqlCommand cmd = new SqlCommand(sql, conn);
-            try
-            {
-                SqlDataReader reader = cmd.ExecuteReader();
-                dt.Load(reader);
-                return dt;
-            }
-            catch
-            {
-                throw;
-            }
-        }
-
         public DataTable FindById(Int32 Id)
         {
             String sql = "SELECT * FROM GROUPE WHERE GROUPEID=" + Id;
@@ -69,24 +50,6 @@ namespace WidraSoft.DA
             }
         }
 
-        public DataTable FindUsersById(Int32 Id)
-        {
-            String sql = "SELECT * FROM VW_UTILISATEUR WHERE GROUPEID=" + Id;
-            conn.ConnectionString = connString;
-            if (conn.State == ConnectionState.Closed)
-                conn.Open();
-            SqlCommand cmd = new SqlCommand(sql, conn);
-            try
-            {
-                SqlDataReader reader = cmd.ExecuteReader();
-                dt.Load(reader);
-                return dt;
-            }
-            catch
-            {
-                throw;
-            }
-        }
         public string GetName(Int32 Id)
         {
 

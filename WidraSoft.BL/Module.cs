@@ -59,19 +59,6 @@ namespace WidraSoft.BL
             }
         }
 
-        public int GetIdByCode(String Code)
-        {
-            try
-            {
-                ModuleDA module = new ModuleDA();
-                return module.GetIdByCode(Code);
-            }
-            catch
-            {
-                throw;
-            }
-        }
-
         public void Add(String Designation, String Code)
         {
             try

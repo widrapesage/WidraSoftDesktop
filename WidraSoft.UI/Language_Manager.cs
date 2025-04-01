@@ -14,36 +14,16 @@ namespace WidraSoft.UI
   
         public void ChangeLanguage(string lang, Form form, Type typeOfForm)
         {
-            ComponentResourceManager resources = new ComponentResourceManager(typeOfForm);
-
-            resources.ApplyResources(form, form.Name, new CultureInfo(lang));
-
             foreach (Control c in form.Controls)
             {
                 Type controlType = c.GetType();
                 String controlName = controlType.Name;
-                
-                if (controlName == "Panel" || controlName == "GroupBox" || controlName == "TabControl" || controlName == "TabPage")
+                ComponentResourceManager resources = new ComponentResourceManager(typeOfForm);
+                if (controlName == "Panel")
                 {
                     foreach (Control cc in c.Controls)
                     {
-                        if (cc.GetType().Name == "Panel" || cc.GetType().Name == "GroupBox" || cc.GetType().Name == "TabControl" || cc.GetType().Name == "TabPage")
-                        {
-                            foreach (Control sc in cc.Controls)
-                            {
-                                if (sc.GetType().Name == "Panel" || sc.GetType().Name == "GroupBox" || sc.GetType().Name == "TabControl" || sc.GetType().Name == "TabPage")
-                                {
-                                    foreach (Control ssc in sc.Controls)
-                                    {
-                                        resources.ApplyResources(ssc, ssc.Name, new CultureInfo(lang));
-                                    }
-                                }
-                                
-                                resources.ApplyResources(sc, sc.Name, new CultureInfo(lang));
-                            }
-                        }
-                        else
-                            resources.ApplyResources(cc, cc.Name, new CultureInfo(lang));
+                        resources.ApplyResources(cc, cc.Name, new CultureInfo(lang));
                     }
                 }
                 else if (controlName == "MenuStrip")
@@ -75,92 +55,6 @@ namespace WidraSoft.UI
 
                 res.ApplyResources(item, item.Name, lang);
             }
-        }
-
-        public static String Localize(String text, string lang)
-        {
-            String return_Value = "";
-            if (text == "Valider")
-            {
-                if (lang == "FR") return_Value = "Valider";
-                else if (lang == "EN") return_Value = "Save";
-                else if (lang == "ES") return_Value = "Validar";
-                else return_Value = "Valider";
-            }
-            if (text == "Modifier")
-            {
-                if (lang == "FR") return_Value = "Modifier";
-                else if (lang == "EN") return_Value = "Edit";
-                else if (lang == "ES") return_Value = "Editar";
-                else return_Value = "Modifier";
-            }
-            if (text == "OK")
-            {
-                if (lang == "FR") return_Value = "OK";
-                else if (lang == "EN")  return_Value = "OK";
-                else if (lang == "ES") return_Value = "OK";
-                else return_Value = "OK";
-            }
-            if (text == "Annuler")
-            {
-                if (lang == "FR") return_Value = "Annuler";
-                else if (lang == "EN") return_Value = "Cancel";
-                else if (lang == "ES") return_Value = "Anular";
-                else return_Value = "Annuler";
-            }           
-            if (text == "Recommencer")
-            {
-                if (lang == "FR") return_Value = "Recommencer";
-                else if (lang == "EN") return_Value = "Retry";
-                else if (lang == "ES") return_Value = "Reiniciar";
-                else return_Value = "Recommencer";
-            }
-            if (text == "Oui")
-            {
-                if (lang == "FR") return_Value = "Oui";
-                else if (lang == "EN") return_Value = "Yes";
-                else if (lang == "ES") return_Value = "Sí";
-                else return_Value = "Oui";
-            }
-            if (text == "Non")
-            {
-                if (lang == "FR") return_Value = "Non";
-                else if (lang == "EN") return_Value = "No";
-                else if (lang == "ES") return_Value = "No";
-                else return_Value = "Non";
-            }
-            if (text == "Abandonner")
-            {
-                if (lang == "FR") return_Value = "Abandonner";
-                else if (lang == "EN") return_Value = "Abort";
-                else if (lang == "ES") return_Value = "Abandonar";
-                else return_Value = "Abandonner";
-            } 
-            if (text == "Ignorer")
-            {
-                if (lang == "FR") return_Value = "Ignorer";
-                else if (lang == "EN") return_Value = "Ignore";
-                else if (lang == "ES") return_Value = "Ignorar";
-                else return_Value = "Ignorer";
-            }
-
-            if (text == "MASQUER CLAVIER")
-            {
-                if (lang == "FR") return_Value = "MASQUER CLAVIER";
-                else if (lang == "EN") return_Value = "HIDE KEYBOARD";
-                else if (lang == "ES") return_Value = "OCULTAR TECLADO";
-                else return_Value = "MASQUER CLAVIER";
-            }
-
-            if (text == "AFFICHER CLAVIER")
-            {
-                if (lang == "FR") return_Value = "AFFICHER CLAVIER";
-                else if (lang == "EN") return_Value = "SHOW KEYBOARD";
-                else if (lang == "ES") return_Value = "MOSTRAR TECLADO";
-                else return_Value = "AFFICHER CLAVIER";
-            }
-
-            return return_Value;
         }
     }
 }

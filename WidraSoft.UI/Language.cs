@@ -12,9 +12,9 @@ namespace WidraSoft.UI
 
         static Language()
         {
-            Languages.Add("FR");
-            Languages.Add("EN");
-            Languages.Add("ES");
+            Languages.Add("Francais(FR)");
+            Languages.Add("Anglais(ANG)");
+            Languages.Add("Espagnol(ESP)");
         }
 
     }

@@ -21,44 +21,7 @@ namespace WidraSoft.BL
             {
                 throw;
             }
-        }
 
-        public DataTable List_Valid(string filter)
-        {
-            try
-            {
-                CamionDA camion = new CamionDA();
-                return camion.List_Valid(filter);
-            }
-            catch
-            {
-                throw;
-            }
-        }
-        public DataTable SearchBox(string Filter)
-        {
-            try
-            {
-                CamionDA camion = new CamionDA();
-                return camion.SearchBox(Filter);
-            } 
-            catch
-            {
-                throw;
-            }
-        }
-
-        public DataTable SearchBox_Terminal(string Filter)
-        {
-            try
-            {
-                CamionDA camion = new CamionDA();
-                return camion.SearchBox_Terminal(Filter);
-            }
-            catch
-            {
-                throw;
-            }
         }
 
         public DataTable FindById(Int32 Id)
@@ -74,129 +37,12 @@ namespace WidraSoft.BL
             }
         }
 
-        public bool IfExists(String Name)
-        {
-            try
-            {
-                CamionDA camion = new CamionDA();
-                return camion.IfExists(Name);
-            }
-            catch
-            {
-                throw;
-            }
-        }
-
-        public bool IfExists_Valid(String Name)
-        {
-            try
-            {
-                CamionDA camion = new CamionDA();
-                return camion.IfExists_Valid(Name);
-            }
-            catch
-            {
-                throw;
-            }
-        }
-
-        public bool IfIsPending(String Name)
-        {
-            try
-            {
-                CamionDA camion = new CamionDA();
-                return camion.IfIsPending(Name);
-            }
-            catch
-            {
-                throw;
-            }
-        }
-
-        public int GetPendingId(string Name)
-        {
-            try
-            {
-                CamionDA camion = new CamionDA();
-                return camion.GetPendingId(Name);
-            }
-            catch
-            {
-                throw;
-            }
-        }
-
         public string GetName(Int32 Id)
         {
             try
             {
                 CamionDA camion = new CamionDA();
                 return camion.GetName(Id);
-            }
-            catch
-            {
-                throw;
-            }
-        }
-
-        public int GetIdByName(string Name)
-        {
-            try
-            {
-                CamionDA camion = new CamionDA();
-                return camion.GetIdByName(Name);
-            }
-            catch
-            {
-                throw;
-            }
-        }
-
-        public int GetMaxId()
-        {
-            try
-            {
-                CamionDA camion = new CamionDA();
-                return camion.GetMaxId();
-            }
-            catch
-            {
-                throw;
-            }
-        }
-
-        public int GetIdByBadge(string Name)
-        {
-            try
-            {
-                CamionDA camion = new CamionDA();
-                return camion.GetIdByBadge(Name);
-            }
-            catch
-            {
-                throw;
-            }
-        }
-
-        public int CountByBadge(string Name)
-        {
-            try
-            {
-                CamionDA camion = new CamionDA();
-                return camion.CountByBadge(Name);
-            }
-            catch
-            {
-                throw;
-            }
-        }
-
-        public string GetBadge(Int32 Id)
-        {
-            try
-            {
-                CamionDA camion = new CamionDA();
-                return camion.GetBadge(Id);
             }
             catch
             {

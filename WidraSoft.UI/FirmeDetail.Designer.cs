@@ -29,523 +29,370 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FirmeDetail));
-            label3 = new System.Windows.Forms.Label();
-            label2 = new System.Windows.Forms.Label();
-            txtDateCreation = new System.Windows.Forms.TextBox();
-            txtBadge = new System.Windows.Forms.TextBox();
-            label1 = new System.Windows.Forms.Label();
-            txtId = new System.Windows.Forms.TextBox();
-            label4 = new System.Windows.Forms.Label();
-            txtDesignation = new System.Windows.Forms.TextBox();
-            label5 = new System.Windows.Forms.Label();
-            txtAdresse = new System.Windows.Forms.TextBox();
-            label6 = new System.Windows.Forms.Label();
-            txtCodePostal = new System.Windows.Forms.TextBox();
-            label7 = new System.Windows.Forms.Label();
-            txtLocalite = new System.Windows.Forms.TextBox();
-            label8 = new System.Windows.Forms.Label();
-            txtPays = new System.Windows.Forms.TextBox();
-            label9 = new System.Windows.Forms.Label();
-            txtTelephone = new System.Windows.Forms.TextBox();
-            label10 = new System.Windows.Forms.Label();
-            txtEmail = new System.Windows.Forms.TextBox();
-            label11 = new System.Windows.Forms.Label();
-            txtNumTVA = new System.Windows.Forms.TextBox();
-            label12 = new System.Windows.Forms.Label();
-            txtSiteWebUrl = new System.Windows.Forms.TextBox();
-            chx_Valide = new System.Windows.Forms.CheckBox();
-            chx_Bloque = new System.Windows.Forms.CheckBox();
-            txtBlocage = new System.Windows.Forms.TextBox();
-            label13 = new System.Windows.Forms.Label();
-            chx_Attention = new System.Windows.Forms.CheckBox();
-            label14 = new System.Windows.Forms.Label();
-            txtAlerte = new System.Windows.Forms.TextBox();
-            label15 = new System.Windows.Forms.Label();
-            txtObservations = new System.Windows.Forms.TextBox();
-            txtValide = new System.Windows.Forms.TextBox();
-            txtBloque = new System.Windows.Forms.TextBox();
-            txtAttention = new System.Windows.Forms.TextBox();
-            panelLang = new System.Windows.Forms.Panel();
-            pbUpdating = new System.Windows.Forms.PictureBox();
-            Spain_flag = new System.Windows.Forms.PictureBox();
-            England_flag = new System.Windows.Forms.PictureBox();
-            France_flag = new System.Windows.Forms.PictureBox();
-            cbLang = new System.Windows.Forms.ComboBox();
-            label16 = new System.Windows.Forms.Label();
-            label17 = new System.Windows.Forms.Label();
-            label18 = new System.Windows.Forms.Label();
-            panelNavigation = new System.Windows.Forms.Panel();
-            pictureBox3 = new System.Windows.Forms.PictureBox();
-            lbModifier = new System.Windows.Forms.LinkLabel();
-            pictureBox1 = new System.Windows.Forms.PictureBox();
-            pictureBox2 = new System.Windows.Forms.PictureBox();
-            lbAjouter = new System.Windows.Forms.LinkLabel();
-            lbSupprimer = new System.Windows.Forms.LinkLabel();
-            panelDetail = new System.Windows.Forms.Panel();
-            RqPont = new System.Windows.Forms.PictureBox();
-            panelLang.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)pbUpdating).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)Spain_flag).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)England_flag).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)France_flag).BeginInit();
-            panelNavigation.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
-            panelDetail.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)RqPont).BeginInit();
-            SuspendLayout();
+            this.splitter1 = new System.Windows.Forms.Splitter();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.btSupprimer = new System.Windows.Forms.Button();
+            this.btModifier = new System.Windows.Forms.Button();
+            this.btAjouter = new System.Windows.Forms.Button();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.txtDateCreation = new System.Windows.Forms.TextBox();
+            this.txtBadge = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.txtId = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.txtDesignation = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.txtAdresse = new System.Windows.Forms.TextBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.txtCodePostal = new System.Windows.Forms.TextBox();
+            this.label7 = new System.Windows.Forms.Label();
+            this.txtLocalite = new System.Windows.Forms.TextBox();
+            this.label8 = new System.Windows.Forms.Label();
+            this.txtPays = new System.Windows.Forms.TextBox();
+            this.label9 = new System.Windows.Forms.Label();
+            this.txtTelephone = new System.Windows.Forms.TextBox();
+            this.label10 = new System.Windows.Forms.Label();
+            this.txtEmail = new System.Windows.Forms.TextBox();
+            this.label11 = new System.Windows.Forms.Label();
+            this.txtNumTVA = new System.Windows.Forms.TextBox();
+            this.label12 = new System.Windows.Forms.Label();
+            this.txtSiteWebUrl = new System.Windows.Forms.TextBox();
+            this.chx_Valide = new System.Windows.Forms.CheckBox();
+            this.chx_Bloque = new System.Windows.Forms.CheckBox();
+            this.txtBlocage = new System.Windows.Forms.TextBox();
+            this.label13 = new System.Windows.Forms.Label();
+            this.chx_Attention = new System.Windows.Forms.CheckBox();
+            this.label14 = new System.Windows.Forms.Label();
+            this.txtAlerte = new System.Windows.Forms.TextBox();
+            this.label15 = new System.Windows.Forms.Label();
+            this.txtObservations = new System.Windows.Forms.TextBox();
+            this.txtValide = new System.Windows.Forms.TextBox();
+            this.txtBloque = new System.Windows.Forms.TextBox();
+            this.txtAttention = new System.Windows.Forms.TextBox();
+            this.groupBox1.SuspendLayout();
+            this.SuspendLayout();
+            // 
+            // splitter1
+            // 
+            this.splitter1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(190)))), ((int)(((byte)(117)))));
+            resources.ApplyResources(this.splitter1, "splitter1");
+            this.splitter1.Name = "splitter1";
+            this.splitter1.TabStop = false;
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.btSupprimer);
+            this.groupBox1.Controls.Add(this.btModifier);
+            this.groupBox1.Controls.Add(this.btAjouter);
+            resources.ApplyResources(this.groupBox1, "groupBox1");
+            this.groupBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(190)))), ((int)(((byte)(117)))));
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.TabStop = false;
+            // 
+            // btSupprimer
+            // 
+            this.btSupprimer.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(190)))), ((int)(((byte)(117)))));
+            this.btSupprimer.Cursor = System.Windows.Forms.Cursors.Hand;
+            resources.ApplyResources(this.btSupprimer, "btSupprimer");
+            this.btSupprimer.ForeColor = System.Drawing.Color.Black;
+            this.btSupprimer.Image = global::WidraSoft.UI.Properties.Resources.button_delete;
+            this.btSupprimer.Name = "btSupprimer";
+            this.btSupprimer.UseVisualStyleBackColor = false;
+            this.btSupprimer.Click += new System.EventHandler(this.btSupprimer_Click);
+            this.btSupprimer.MouseEnter += new System.EventHandler(this.btSupprimer_MouseEnter);
+            this.btSupprimer.MouseLeave += new System.EventHandler(this.btSupprimer_MouseLeave);
+            // 
+            // btModifier
+            // 
+            this.btModifier.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(190)))), ((int)(((byte)(117)))));
+            this.btModifier.Cursor = System.Windows.Forms.Cursors.Hand;
+            resources.ApplyResources(this.btModifier, "btModifier");
+            this.btModifier.ForeColor = System.Drawing.Color.Black;
+            this.btModifier.Image = global::WidraSoft.UI.Properties.Resources.button_edit;
+            this.btModifier.Name = "btModifier";
+            this.btModifier.UseVisualStyleBackColor = false;
+            this.btModifier.Click += new System.EventHandler(this.btModifier_Click);
+            this.btModifier.MouseEnter += new System.EventHandler(this.btModifier_MouseEnter);
+            this.btModifier.MouseLeave += new System.EventHandler(this.btModifier_MouseLeave);
+            // 
+            // btAjouter
+            // 
+            this.btAjouter.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(190)))), ((int)(((byte)(117)))));
+            this.btAjouter.Cursor = System.Windows.Forms.Cursors.Hand;
+            resources.ApplyResources(this.btAjouter, "btAjouter");
+            this.btAjouter.ForeColor = System.Drawing.Color.Black;
+            this.btAjouter.Image = global::WidraSoft.UI.Properties.Resources.button_add;
+            this.btAjouter.Name = "btAjouter";
+            this.btAjouter.UseVisualStyleBackColor = false;
+            this.btAjouter.Click += new System.EventHandler(this.btAjouter_Click);
+            this.btAjouter.MouseEnter += new System.EventHandler(this.btAjouter_MouseEnter);
+            this.btAjouter.MouseLeave += new System.EventHandler(this.btAjouter_MouseLeave);
             // 
             // label3
             // 
-            resources.ApplyResources(label3, "label3");
-            label3.ForeColor = System.Drawing.Color.White;
-            label3.Name = "label3";
+            resources.ApplyResources(this.label3, "label3");
+            this.label3.ForeColor = System.Drawing.Color.White;
+            this.label3.Name = "label3";
             // 
             // label2
             // 
-            resources.ApplyResources(label2, "label2");
-            label2.ForeColor = System.Drawing.Color.White;
-            label2.Name = "label2";
+            resources.ApplyResources(this.label2, "label2");
+            this.label2.ForeColor = System.Drawing.Color.White;
+            this.label2.Name = "label2";
             // 
             // txtDateCreation
             // 
-            txtDateCreation.BackColor = System.Drawing.Color.Honeydew;
-            resources.ApplyResources(txtDateCreation, "txtDateCreation");
-            txtDateCreation.Name = "txtDateCreation";
-            txtDateCreation.ReadOnly = true;
+            resources.ApplyResources(this.txtDateCreation, "txtDateCreation");
+            this.txtDateCreation.Name = "txtDateCreation";
+            this.txtDateCreation.ReadOnly = true;
             // 
             // txtBadge
             // 
-            txtBadge.BackColor = System.Drawing.Color.Honeydew;
-            resources.ApplyResources(txtBadge, "txtBadge");
-            txtBadge.Name = "txtBadge";
+            resources.ApplyResources(this.txtBadge, "txtBadge");
+            this.txtBadge.Name = "txtBadge";
             // 
             // label1
             // 
-            resources.ApplyResources(label1, "label1");
-            label1.ForeColor = System.Drawing.Color.White;
-            label1.Name = "label1";
+            resources.ApplyResources(this.label1, "label1");
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Name = "label1";
             // 
             // txtId
             // 
-            txtId.BackColor = System.Drawing.Color.Honeydew;
-            resources.ApplyResources(txtId, "txtId");
-            txtId.Name = "txtId";
+            resources.ApplyResources(this.txtId, "txtId");
+            this.txtId.Name = "txtId";
             // 
             // label4
             // 
-            resources.ApplyResources(label4, "label4");
-            label4.ForeColor = System.Drawing.Color.White;
-            label4.Name = "label4";
+            resources.ApplyResources(this.label4, "label4");
+            this.label4.ForeColor = System.Drawing.Color.White;
+            this.label4.Name = "label4";
             // 
             // txtDesignation
             // 
-            txtDesignation.BackColor = System.Drawing.Color.Honeydew;
-            resources.ApplyResources(txtDesignation, "txtDesignation");
-            txtDesignation.Name = "txtDesignation";
+            resources.ApplyResources(this.txtDesignation, "txtDesignation");
+            this.txtDesignation.Name = "txtDesignation";
             // 
             // label5
             // 
-            resources.ApplyResources(label5, "label5");
-            label5.ForeColor = System.Drawing.Color.White;
-            label5.Name = "label5";
+            resources.ApplyResources(this.label5, "label5");
+            this.label5.ForeColor = System.Drawing.Color.White;
+            this.label5.Name = "label5";
             // 
             // txtAdresse
             // 
-            txtAdresse.BackColor = System.Drawing.Color.Honeydew;
-            resources.ApplyResources(txtAdresse, "txtAdresse");
-            txtAdresse.Name = "txtAdresse";
+            resources.ApplyResources(this.txtAdresse, "txtAdresse");
+            this.txtAdresse.Name = "txtAdresse";
             // 
             // label6
             // 
-            resources.ApplyResources(label6, "label6");
-            label6.ForeColor = System.Drawing.Color.White;
-            label6.Name = "label6";
+            resources.ApplyResources(this.label6, "label6");
+            this.label6.ForeColor = System.Drawing.Color.White;
+            this.label6.Name = "label6";
             // 
             // txtCodePostal
             // 
-            txtCodePostal.BackColor = System.Drawing.Color.Honeydew;
-            resources.ApplyResources(txtCodePostal, "txtCodePostal");
-            txtCodePostal.Name = "txtCodePostal";
+            resources.ApplyResources(this.txtCodePostal, "txtCodePostal");
+            this.txtCodePostal.Name = "txtCodePostal";
             // 
             // label7
             // 
-            resources.ApplyResources(label7, "label7");
-            label7.ForeColor = System.Drawing.Color.White;
-            label7.Name = "label7";
+            resources.ApplyResources(this.label7, "label7");
+            this.label7.ForeColor = System.Drawing.Color.White;
+            this.label7.Name = "label7";
             // 
             // txtLocalite
             // 
-            txtLocalite.BackColor = System.Drawing.Color.Honeydew;
-            resources.ApplyResources(txtLocalite, "txtLocalite");
-            txtLocalite.Name = "txtLocalite";
+            resources.ApplyResources(this.txtLocalite, "txtLocalite");
+            this.txtLocalite.Name = "txtLocalite";
             // 
             // label8
             // 
-            resources.ApplyResources(label8, "label8");
-            label8.ForeColor = System.Drawing.Color.White;
-            label8.Name = "label8";
+            resources.ApplyResources(this.label8, "label8");
+            this.label8.ForeColor = System.Drawing.Color.White;
+            this.label8.Name = "label8";
             // 
             // txtPays
             // 
-            txtPays.BackColor = System.Drawing.Color.Honeydew;
-            resources.ApplyResources(txtPays, "txtPays");
-            txtPays.Name = "txtPays";
+            resources.ApplyResources(this.txtPays, "txtPays");
+            this.txtPays.Name = "txtPays";
             // 
             // label9
             // 
-            resources.ApplyResources(label9, "label9");
-            label9.ForeColor = System.Drawing.Color.White;
-            label9.Name = "label9";
+            resources.ApplyResources(this.label9, "label9");
+            this.label9.ForeColor = System.Drawing.Color.White;
+            this.label9.Name = "label9";
             // 
             // txtTelephone
             // 
-            txtTelephone.BackColor = System.Drawing.Color.Honeydew;
-            resources.ApplyResources(txtTelephone, "txtTelephone");
-            txtTelephone.Name = "txtTelephone";
+            resources.ApplyResources(this.txtTelephone, "txtTelephone");
+            this.txtTelephone.Name = "txtTelephone";
             // 
             // label10
             // 
-            resources.ApplyResources(label10, "label10");
-            label10.ForeColor = System.Drawing.Color.White;
-            label10.Name = "label10";
+            resources.ApplyResources(this.label10, "label10");
+            this.label10.ForeColor = System.Drawing.Color.White;
+            this.label10.Name = "label10";
             // 
             // txtEmail
             // 
-            txtEmail.BackColor = System.Drawing.Color.Honeydew;
-            resources.ApplyResources(txtEmail, "txtEmail");
-            txtEmail.Name = "txtEmail";
+            resources.ApplyResources(this.txtEmail, "txtEmail");
+            this.txtEmail.Name = "txtEmail";
             // 
             // label11
             // 
-            resources.ApplyResources(label11, "label11");
-            label11.ForeColor = System.Drawing.Color.White;
-            label11.Name = "label11";
+            resources.ApplyResources(this.label11, "label11");
+            this.label11.ForeColor = System.Drawing.Color.White;
+            this.label11.Name = "label11";
             // 
             // txtNumTVA
             // 
-            txtNumTVA.BackColor = System.Drawing.Color.Honeydew;
-            resources.ApplyResources(txtNumTVA, "txtNumTVA");
-            txtNumTVA.Name = "txtNumTVA";
+            resources.ApplyResources(this.txtNumTVA, "txtNumTVA");
+            this.txtNumTVA.Name = "txtNumTVA";
             // 
             // label12
             // 
-            resources.ApplyResources(label12, "label12");
-            label12.ForeColor = System.Drawing.Color.White;
-            label12.Name = "label12";
+            resources.ApplyResources(this.label12, "label12");
+            this.label12.ForeColor = System.Drawing.Color.White;
+            this.label12.Name = "label12";
             // 
             // txtSiteWebUrl
             // 
-            txtSiteWebUrl.BackColor = System.Drawing.Color.Honeydew;
-            resources.ApplyResources(txtSiteWebUrl, "txtSiteWebUrl");
-            txtSiteWebUrl.Name = "txtSiteWebUrl";
+            resources.ApplyResources(this.txtSiteWebUrl, "txtSiteWebUrl");
+            this.txtSiteWebUrl.Name = "txtSiteWebUrl";
             // 
             // chx_Valide
             // 
-            resources.ApplyResources(chx_Valide, "chx_Valide");
-            chx_Valide.ForeColor = System.Drawing.Color.White;
-            chx_Valide.Name = "chx_Valide";
-            chx_Valide.UseVisualStyleBackColor = true;
-            chx_Valide.CheckedChanged += chx_Valide_CheckedChanged;
+            resources.ApplyResources(this.chx_Valide, "chx_Valide");
+            this.chx_Valide.ForeColor = System.Drawing.Color.White;
+            this.chx_Valide.Name = "chx_Valide";
+            this.chx_Valide.UseVisualStyleBackColor = true;
+            this.chx_Valide.CheckedChanged += new System.EventHandler(this.chx_Valide_CheckedChanged);
             // 
             // chx_Bloque
             // 
-            resources.ApplyResources(chx_Bloque, "chx_Bloque");
-            chx_Bloque.ForeColor = System.Drawing.Color.White;
-            chx_Bloque.Name = "chx_Bloque";
-            chx_Bloque.UseVisualStyleBackColor = true;
-            chx_Bloque.CheckedChanged += chx_Bloque_CheckedChanged;
+            resources.ApplyResources(this.chx_Bloque, "chx_Bloque");
+            this.chx_Bloque.ForeColor = System.Drawing.Color.White;
+            this.chx_Bloque.Name = "chx_Bloque";
+            this.chx_Bloque.UseVisualStyleBackColor = true;
+            this.chx_Bloque.CheckedChanged += new System.EventHandler(this.chx_Bloque_CheckedChanged);
             // 
             // txtBlocage
             // 
-            txtBlocage.BackColor = System.Drawing.Color.Honeydew;
-            resources.ApplyResources(txtBlocage, "txtBlocage");
-            txtBlocage.Name = "txtBlocage";
+            resources.ApplyResources(this.txtBlocage, "txtBlocage");
+            this.txtBlocage.Name = "txtBlocage";
             // 
             // label13
             // 
-            resources.ApplyResources(label13, "label13");
-            label13.ForeColor = System.Drawing.Color.White;
-            label13.Name = "label13";
+            resources.ApplyResources(this.label13, "label13");
+            this.label13.ForeColor = System.Drawing.Color.White;
+            this.label13.Name = "label13";
             // 
             // chx_Attention
             // 
-            resources.ApplyResources(chx_Attention, "chx_Attention");
-            chx_Attention.ForeColor = System.Drawing.Color.White;
-            chx_Attention.Name = "chx_Attention";
-            chx_Attention.UseVisualStyleBackColor = true;
-            chx_Attention.CheckedChanged += chx_Attention_CheckedChanged;
+            resources.ApplyResources(this.chx_Attention, "chx_Attention");
+            this.chx_Attention.ForeColor = System.Drawing.Color.White;
+            this.chx_Attention.Name = "chx_Attention";
+            this.chx_Attention.UseVisualStyleBackColor = true;
+            this.chx_Attention.CheckedChanged += new System.EventHandler(this.chx_Attention_CheckedChanged);
             // 
             // label14
             // 
-            resources.ApplyResources(label14, "label14");
-            label14.ForeColor = System.Drawing.Color.White;
-            label14.Name = "label14";
+            resources.ApplyResources(this.label14, "label14");
+            this.label14.ForeColor = System.Drawing.Color.White;
+            this.label14.Name = "label14";
             // 
             // txtAlerte
             // 
-            txtAlerte.BackColor = System.Drawing.Color.Honeydew;
-            resources.ApplyResources(txtAlerte, "txtAlerte");
-            txtAlerte.Name = "txtAlerte";
+            resources.ApplyResources(this.txtAlerte, "txtAlerte");
+            this.txtAlerte.Name = "txtAlerte";
             // 
             // label15
             // 
-            resources.ApplyResources(label15, "label15");
-            label15.ForeColor = System.Drawing.Color.White;
-            label15.Name = "label15";
+            resources.ApplyResources(this.label15, "label15");
+            this.label15.ForeColor = System.Drawing.Color.White;
+            this.label15.Name = "label15";
             // 
             // txtObservations
             // 
-            txtObservations.BackColor = System.Drawing.Color.Honeydew;
-            resources.ApplyResources(txtObservations, "txtObservations");
-            txtObservations.Name = "txtObservations";
+            resources.ApplyResources(this.txtObservations, "txtObservations");
+            this.txtObservations.Name = "txtObservations";
             // 
             // txtValide
             // 
-            resources.ApplyResources(txtValide, "txtValide");
-            txtValide.Name = "txtValide";
+            resources.ApplyResources(this.txtValide, "txtValide");
+            this.txtValide.Name = "txtValide";
             // 
             // txtBloque
             // 
-            resources.ApplyResources(txtBloque, "txtBloque");
-            txtBloque.Name = "txtBloque";
+            resources.ApplyResources(this.txtBloque, "txtBloque");
+            this.txtBloque.Name = "txtBloque";
             // 
             // txtAttention
             // 
-            resources.ApplyResources(txtAttention, "txtAttention");
-            txtAttention.Name = "txtAttention";
-            // 
-            // panelLang
-            // 
-            panelLang.BackColor = System.Drawing.Color.FromArgb(72, 86, 81);
-            panelLang.Controls.Add(pbUpdating);
-            panelLang.Controls.Add(Spain_flag);
-            panelLang.Controls.Add(England_flag);
-            panelLang.Controls.Add(France_flag);
-            panelLang.Controls.Add(cbLang);
-            resources.ApplyResources(panelLang, "panelLang");
-            panelLang.Name = "panelLang";
-            // 
-            // pbUpdating
-            // 
-            pbUpdating.Image = Properties.Resources.pencil;
-            resources.ApplyResources(pbUpdating, "pbUpdating");
-            pbUpdating.Name = "pbUpdating";
-            pbUpdating.TabStop = false;
-            // 
-            // Spain_flag
-            // 
-            Spain_flag.BackColor = System.Drawing.Color.Transparent;
-            Spain_flag.Cursor = System.Windows.Forms.Cursors.Hand;
-            Spain_flag.Image = Properties.Resources.spain;
-            resources.ApplyResources(Spain_flag, "Spain_flag");
-            Spain_flag.Name = "Spain_flag";
-            Spain_flag.TabStop = false;
-            // 
-            // England_flag
-            // 
-            England_flag.BackColor = System.Drawing.Color.Transparent;
-            England_flag.Cursor = System.Windows.Forms.Cursors.Hand;
-            England_flag.Image = Properties.Resources.united_kingdom;
-            resources.ApplyResources(England_flag, "England_flag");
-            England_flag.Name = "England_flag";
-            England_flag.TabStop = false;
-            // 
-            // France_flag
-            // 
-            France_flag.BackColor = System.Drawing.Color.Transparent;
-            France_flag.Cursor = System.Windows.Forms.Cursors.Hand;
-            France_flag.Image = Properties.Resources.france;
-            resources.ApplyResources(France_flag, "France_flag");
-            France_flag.Name = "France_flag";
-            France_flag.TabStop = false;
-            // 
-            // cbLang
-            // 
-            cbLang.BackColor = System.Drawing.Color.FromArgb(72, 86, 77);
-            cbLang.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            resources.ApplyResources(cbLang, "cbLang");
-            cbLang.ForeColor = System.Drawing.Color.White;
-            cbLang.FormattingEnabled = true;
-            cbLang.Name = "cbLang";
-            cbLang.SelectedIndexChanged += cbLang_SelectedIndexChanged;
-            // 
-            // label16
-            // 
-            resources.ApplyResources(label16, "label16");
-            label16.ForeColor = System.Drawing.Color.White;
-            label16.Name = "label16";
-            // 
-            // label17
-            // 
-            resources.ApplyResources(label17, "label17");
-            label17.ForeColor = System.Drawing.Color.White;
-            label17.Name = "label17";
-            // 
-            // label18
-            // 
-            resources.ApplyResources(label18, "label18");
-            label18.ForeColor = System.Drawing.Color.White;
-            label18.Name = "label18";
-            // 
-            // panelNavigation
-            // 
-            panelNavigation.BackColor = System.Drawing.Color.FromArgb(58, 62, 60);
-            panelNavigation.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            panelNavigation.Controls.Add(pictureBox3);
-            panelNavigation.Controls.Add(lbModifier);
-            panelNavigation.Controls.Add(pictureBox1);
-            panelNavigation.Controls.Add(pictureBox2);
-            panelNavigation.Controls.Add(lbAjouter);
-            panelNavigation.Controls.Add(lbSupprimer);
-            resources.ApplyResources(panelNavigation, "panelNavigation");
-            panelNavigation.Name = "panelNavigation";
-            // 
-            // pictureBox3
-            // 
-            pictureBox3.BackColor = System.Drawing.Color.Transparent;
-            pictureBox3.Cursor = System.Windows.Forms.Cursors.Hand;
-            pictureBox3.Image = Properties.Resources.update;
-            resources.ApplyResources(pictureBox3, "pictureBox3");
-            pictureBox3.Name = "pictureBox3";
-            pictureBox3.TabStop = false;
-            // 
-            // lbModifier
-            // 
-            lbModifier.ActiveLinkColor = System.Drawing.Color.FromArgb(72, 190, 117);
-            resources.ApplyResources(lbModifier, "lbModifier");
-            lbModifier.BackColor = System.Drawing.Color.Transparent;
-            lbModifier.ForeColor = System.Drawing.Color.White;
-            lbModifier.LinkColor = System.Drawing.Color.White;
-            lbModifier.Name = "lbModifier";
-            lbModifier.TabStop = true;
-            lbModifier.LinkClicked += lbModifier_LinkClicked;
-            // 
-            // pictureBox1
-            // 
-            pictureBox1.BackColor = System.Drawing.Color.Transparent;
-            pictureBox1.Cursor = System.Windows.Forms.Cursors.Hand;
-            pictureBox1.Image = Properties.Resources.remove;
-            resources.ApplyResources(pictureBox1, "pictureBox1");
-            pictureBox1.Name = "pictureBox1";
-            pictureBox1.TabStop = false;
-            // 
-            // pictureBox2
-            // 
-            pictureBox2.BackColor = System.Drawing.Color.Transparent;
-            pictureBox2.Cursor = System.Windows.Forms.Cursors.Hand;
-            pictureBox2.Image = Properties.Resources.add;
-            resources.ApplyResources(pictureBox2, "pictureBox2");
-            pictureBox2.Name = "pictureBox2";
-            pictureBox2.TabStop = false;
-            // 
-            // lbAjouter
-            // 
-            lbAjouter.ActiveLinkColor = System.Drawing.Color.FromArgb(72, 190, 117);
-            resources.ApplyResources(lbAjouter, "lbAjouter");
-            lbAjouter.BackColor = System.Drawing.Color.Transparent;
-            lbAjouter.ForeColor = System.Drawing.Color.White;
-            lbAjouter.LinkColor = System.Drawing.Color.White;
-            lbAjouter.Name = "lbAjouter";
-            lbAjouter.TabStop = true;
-            lbAjouter.LinkClicked += lbAjouter_LinkClicked;
-            // 
-            // lbSupprimer
-            // 
-            lbSupprimer.ActiveLinkColor = System.Drawing.Color.FromArgb(72, 190, 117);
-            resources.ApplyResources(lbSupprimer, "lbSupprimer");
-            lbSupprimer.BackColor = System.Drawing.Color.Transparent;
-            lbSupprimer.ForeColor = System.Drawing.Color.White;
-            lbSupprimer.LinkColor = System.Drawing.Color.White;
-            lbSupprimer.Name = "lbSupprimer";
-            lbSupprimer.TabStop = true;
-            lbSupprimer.LinkClicked += lbSupprimer_LinkClicked;
-            // 
-            // panelDetail
-            // 
-            panelDetail.BackColor = System.Drawing.Color.FromArgb(72, 86, 81);
-            panelDetail.Controls.Add(RqPont);
-            panelDetail.Controls.Add(txtDateCreation);
-            panelDetail.Controls.Add(txtId);
-            panelDetail.Controls.Add(label18);
-            panelDetail.Controls.Add(label1);
-            panelDetail.Controls.Add(label17);
-            panelDetail.Controls.Add(txtBadge);
-            panelDetail.Controls.Add(label16);
-            panelDetail.Controls.Add(label2);
-            panelDetail.Controls.Add(label3);
-            panelDetail.Controls.Add(txtAttention);
-            panelDetail.Controls.Add(txtDesignation);
-            panelDetail.Controls.Add(txtBloque);
-            panelDetail.Controls.Add(label4);
-            panelDetail.Controls.Add(txtValide);
-            panelDetail.Controls.Add(txtAdresse);
-            panelDetail.Controls.Add(label15);
-            panelDetail.Controls.Add(label5);
-            panelDetail.Controls.Add(txtObservations);
-            panelDetail.Controls.Add(txtCodePostal);
-            panelDetail.Controls.Add(label14);
-            panelDetail.Controls.Add(label6);
-            panelDetail.Controls.Add(txtAlerte);
-            panelDetail.Controls.Add(txtLocalite);
-            panelDetail.Controls.Add(chx_Attention);
-            panelDetail.Controls.Add(label7);
-            panelDetail.Controls.Add(label13);
-            panelDetail.Controls.Add(txtTelephone);
-            panelDetail.Controls.Add(txtBlocage);
-            panelDetail.Controls.Add(label9);
-            panelDetail.Controls.Add(chx_Bloque);
-            panelDetail.Controls.Add(txtEmail);
-            panelDetail.Controls.Add(chx_Valide);
-            panelDetail.Controls.Add(label10);
-            panelDetail.Controls.Add(label12);
-            panelDetail.Controls.Add(txtNumTVA);
-            panelDetail.Controls.Add(txtSiteWebUrl);
-            panelDetail.Controls.Add(label11);
-            panelDetail.Controls.Add(label8);
-            panelDetail.Controls.Add(txtPays);
-            resources.ApplyResources(panelDetail, "panelDetail");
-            panelDetail.Name = "panelDetail";
-            // 
-            // RqPont
-            // 
-            RqPont.Image = Properties.Resources.asterisk;
-            resources.ApplyResources(RqPont, "RqPont");
-            RqPont.Name = "RqPont";
-            RqPont.TabStop = false;
+            resources.ApplyResources(this.txtAttention, "txtAttention");
+            this.txtAttention.Name = "txtAttention";
             // 
             // FirmeDetail
             // 
             resources.ApplyResources(this, "$this");
-            AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            BackColor = System.Drawing.Color.FromArgb(58, 62, 60);
-            Controls.Add(panelDetail);
-            Controls.Add(panelNavigation);
-            Controls.Add(panelLang);
-            ForeColor = System.Drawing.Color.White;
-            MaximizeBox = false;
-            Name = "FirmeDetail";
-            FormClosing += FirmeDetail_FormClosing;
-            Load += FirmeDetail_Load;
-            panelLang.ResumeLayout(false);
-            panelLang.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)pbUpdating).EndInit();
-            ((System.ComponentModel.ISupportInitialize)Spain_flag).EndInit();
-            ((System.ComponentModel.ISupportInitialize)England_flag).EndInit();
-            ((System.ComponentModel.ISupportInitialize)France_flag).EndInit();
-            panelNavigation.ResumeLayout(false);
-            panelNavigation.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureBox3).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
-            panelDetail.ResumeLayout(false);
-            panelDetail.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)RqPont).EndInit();
-            ResumeLayout(false);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(86)))), ((int)(((byte)(77)))));
+            this.Controls.Add(this.txtAttention);
+            this.Controls.Add(this.txtBloque);
+            this.Controls.Add(this.txtValide);
+            this.Controls.Add(this.label15);
+            this.Controls.Add(this.txtObservations);
+            this.Controls.Add(this.label14);
+            this.Controls.Add(this.txtAlerte);
+            this.Controls.Add(this.chx_Attention);
+            this.Controls.Add(this.label13);
+            this.Controls.Add(this.txtBlocage);
+            this.Controls.Add(this.chx_Bloque);
+            this.Controls.Add(this.chx_Valide);
+            this.Controls.Add(this.label12);
+            this.Controls.Add(this.txtSiteWebUrl);
+            this.Controls.Add(this.label11);
+            this.Controls.Add(this.txtNumTVA);
+            this.Controls.Add(this.label10);
+            this.Controls.Add(this.txtEmail);
+            this.Controls.Add(this.label9);
+            this.Controls.Add(this.txtTelephone);
+            this.Controls.Add(this.label8);
+            this.Controls.Add(this.txtPays);
+            this.Controls.Add(this.label7);
+            this.Controls.Add(this.txtLocalite);
+            this.Controls.Add(this.label6);
+            this.Controls.Add(this.txtCodePostal);
+            this.Controls.Add(this.label5);
+            this.Controls.Add(this.txtAdresse);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.txtDesignation);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.txtDateCreation);
+            this.Controls.Add(this.txtBadge);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.txtId);
+            this.Controls.Add(this.groupBox1);
+            this.Controls.Add(this.splitter1);
+            this.ForeColor = System.Drawing.Color.White;
+            this.MaximizeBox = false;
+            this.Name = "FirmeDetail";
+            this.Load += new System.EventHandler(this.FirmeDetail_Load);
+            this.groupBox1.ResumeLayout(false);
+            this.ResumeLayout(false);
+            this.PerformLayout();
+
         }
 
         #endregion
+        private System.Windows.Forms.Splitter splitter1;
+        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.Button btSupprimer;
+        private System.Windows.Forms.Button btModifier;
+        private System.Windows.Forms.Button btAjouter;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox txtDateCreation;
@@ -582,23 +429,5 @@
         private System.Windows.Forms.TextBox txtValide;
         private System.Windows.Forms.TextBox txtBloque;
         private System.Windows.Forms.TextBox txtAttention;
-        private System.Windows.Forms.Panel panelLang;
-        private System.Windows.Forms.PictureBox Spain_flag;
-        private System.Windows.Forms.PictureBox England_flag;
-        private System.Windows.Forms.PictureBox France_flag;
-        private System.Windows.Forms.ComboBox cbLang;
-        private System.Windows.Forms.Label label16;
-        private System.Windows.Forms.Label label17;
-        private System.Windows.Forms.Label label18;
-        private System.Windows.Forms.Panel panelNavigation;
-        private System.Windows.Forms.PictureBox pictureBox3;
-        private System.Windows.Forms.LinkLabel lbModifier;
-        private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.LinkLabel lbAjouter;
-        private System.Windows.Forms.LinkLabel lbSupprimer;
-        private System.Windows.Forms.PictureBox pbUpdating;
-        private System.Windows.Forms.Panel panelDetail;
-        private System.Windows.Forms.PictureBox RqPont;
     }
 }
