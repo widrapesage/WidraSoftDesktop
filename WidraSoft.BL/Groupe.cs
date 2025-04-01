@@ -22,12 +22,38 @@ namespace WidraSoft.BL
             
         }
 
+        public DataTable SearchBox(string Filter)
+        {
+            try
+            {
+                GroupeDA groupe = new GroupeDA();
+                return groupe.SearchBox(Filter);
+            }
+            catch
+            {
+                throw;
+            }
+        }
+
         public DataTable FindById(Int32 Id)
         {
             try
             {
                 GroupeDA groupe = new GroupeDA();
                 return groupe.FindById(Id);
+            }
+            catch
+            {
+                throw;
+            }
+        }
+
+        public DataTable FindUsersById(Int32 Id)
+        {
+            try
+            {
+                GroupeDA groupe = new GroupeDA();
+                return groupe.FindUsersById(Id);
             }
             catch
             {

@@ -86,6 +86,24 @@ namespace WidraSoft.DA
             }
         }
 
+        public int GetIdByCode(String Code)
+        {
+            String sql = "SELECT MODULEID FROM MODULE WHERE CODE='" + Code + "'";
+            conn.ConnectionString = connString;
+            if (conn.State == ConnectionState.Closed)
+                conn.Open();
+            SqlCommand cmd = new SqlCommand(sql, conn);
+            try
+            {
+                int Id = (int)cmd.ExecuteScalar();
+                return Id;
+            }
+            catch
+            {
+                throw;
+            }
+        }
+
         public void Add(String Designation, String Code)
         {
             using (conn)

@@ -33,6 +33,25 @@ namespace WidraSoft.DA
             }
         }
 
+        public DataTable SearchBox(string filter)
+        {
+            String sql = "SELECT * FROM FIRME WHERE DESIGNATION LIKE '%" + filter + "%'";
+            conn.ConnectionString = connString;
+            if (conn.State == ConnectionState.Closed)
+                conn.Open();
+            SqlCommand cmd = new SqlCommand(sql, conn);
+            try
+            {
+                SqlDataReader reader = cmd.ExecuteReader();
+                dt.Load(reader);
+                return dt;
+            }
+            catch
+            {
+                throw;
+            }
+        }
+
         public DataTable FindById(Int32 Id)
         {
             String sql = "SELECT * FROM FIRME WHERE FIRMEID=" + Id;
@@ -52,6 +71,27 @@ namespace WidraSoft.DA
             }
         }
 
+        public bool IfExists(String Name)
+        {
+            String sql = "SELECT COUNT(*) FROM FIRME WHERE DESIGNATION='" + Name + "'";
+            conn.ConnectionString = connString;
+            if (conn.State == ConnectionState.Closed)
+                conn.Open();
+            SqlCommand cmd = new SqlCommand(sql, conn);
+            try
+            {
+                Int32 nb = (int)cmd.ExecuteScalar();
+                if (nb > 0)
+                    return true;
+                else
+                    return false;
+            }
+            catch
+            {
+                throw;
+            }
+        }
+
         public string GetName(Int32 Id)
         {
 
@@ -64,6 +104,82 @@ namespace WidraSoft.DA
             {
                 String name = (string)cmd.ExecuteScalar();
                 return name;
+            }
+            catch
+            {
+                throw;
+            }
+        }
+
+        public string GetBadge(Int32 Id)
+        {
+
+            String sql = "SELECT BADGE FROM FIRME WHERE FIRMEID=" + Id;
+            conn.ConnectionString = connString;
+            if (conn.State == ConnectionState.Closed)
+                conn.Open();
+            SqlCommand cmd = new SqlCommand(sql, conn);
+            try
+            {
+                String name = (string)cmd.ExecuteScalar();
+                return name;
+            }
+            catch
+            {
+                throw;
+            }
+        }
+
+        public int GetIdByBadge(string Name)
+        {
+
+            String sql = "SELECT FIRMEID FROM FIRME WHERE BADGE='" + Name + "'";
+            conn.ConnectionString = connString;
+            if (conn.State == ConnectionState.Closed)
+                conn.Open();
+            SqlCommand cmd = new SqlCommand(sql, conn);
+            try
+            {
+                int id = (int)cmd.ExecuteScalar();
+                return id;
+            }
+            catch
+            {
+                throw;
+            }
+        }
+
+        public int CountByBadge(string Name)
+        {
+
+            String sql = "SELECT COUNT(*) FROM FIRME WHERE BADGE='" + Name + "'";
+            conn.ConnectionString = connString;
+            if (conn.State == ConnectionState.Closed)
+                conn.Open();
+            SqlCommand cmd = new SqlCommand(sql, conn);
+            try
+            {
+                int nb = (int)cmd.ExecuteScalar();
+                return nb;
+            }
+            catch
+            {
+                throw;
+            }
+        }
+
+        public int GetMaxId()
+        {
+
+            String sql = "SELECT MAX(FIRMEID) FROM FIRME";
+            conn.ConnectionString = connString;
+            if (conn.State == ConnectionState.Closed)
+                conn.Open();
+            SqlCommand cmd = new SqlCommand(sql, conn);
+            try
+            {
+                int id = (int)cmd.ExecuteScalar();
+                return id;
             }
             catch
             {

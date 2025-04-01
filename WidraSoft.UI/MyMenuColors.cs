@@ -38,5 +38,6 @@ namespace WidraSoft.UI
         {
             get { return Color.MediumSeaGreen; }
         }
+        
     }
 }

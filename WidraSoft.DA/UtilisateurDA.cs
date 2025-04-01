@@ -35,7 +35,24 @@ namespace WidraSoft.DA
             }
            
         }
-
+       public DataTable SearchBox(string filter)
+        {
+            String sql = "SELECT * FROM VW_UTILISATEUR WHERE NOM LIKE '%" + filter + "%' OR PRENOM LIKE '%" + filter + "%' OR GROUPE LIKE '%" + filter + "%'";
+            conn.ConnectionString = connString;
+            if (conn.State == ConnectionState.Closed)
+                conn.Open();
+            SqlCommand cmd = new SqlCommand(sql, conn);
+            try
+            {
+                SqlDataReader reader = cmd.ExecuteReader();
+                dt.Load(reader);
+                return dt;
+            }
+            catch
+            {
+                throw;
+            }
+        }
         public DataTable FindById(Int32 Id)
         {
             String sql = "SELECT * FROM UTILISATEUR WHERE UTILISATEURID=" + Id;
@@ -107,11 +124,56 @@ namespace WidraSoft.DA
             }
  
         }
+
+        public Int32 GetGroupeIdById(Int32 Id)
+        {
+            String sql = "SELECT GROUPEID FROM UTILISATEUR WHERE UTILISATEURID=" + Id;
+            conn.ConnectionString = connString;
+            using (conn)
+            {
+                if (conn.State == ConnectionState.Closed)
+                    conn.Open();
+                SqlCommand cmd = new SqlCommand(sql, conn);
+                try
+                {
+                    Int32 GroupeId = (Int32)cmd.ExecuteScalar();
+                    return GroupeId;
+                }
+                catch
+                {
+                    throw;
+                }
+            }
+
+        }
+
         public string GetFullUsername(Int32 Id)
         {
      
-                String sql = "SELECT prenom + ' ' + nom FROM UTILISATEUR WHERE UtilisateurId=" + Id ;
-                conn.ConnectionString = connString;
+            String sql = "SELECT prenom + ' ' + nom FROM UTILISATEUR WHERE UtilisateurId=" + Id ;
+            conn.ConnectionString = connString;
+            using (conn)
+            {
+                if (conn.State == ConnectionState.Closed)
+                    conn.Open();
+                SqlCommand cmd = new SqlCommand(sql, conn);
+                try
+                {
+                    String username = (string)cmd.ExecuteScalar();
+                    return username;
+                }
+                catch
+                {
+                    throw;
+                }
+            }               
+        }
+
+        public string GetUsername(Int32 Id)
+        {
+
+            String sql = "SELECT LOGIN FROM UTILISATEUR WHERE UtilisateurId=" + Id;
+            conn.ConnectionString = connString;
             using (conn)
             {
                 if (conn.State == ConnectionState.Closed)
@@ -127,10 +189,60 @@ namespace WidraSoft.DA
                     throw;
                 }
             }
-                
         }
-        
-        public void Add(string Nom, string Prenom, string Login, string Password, Int32 GroupeId)
+
+        public string GetPassword(Int32 Id)
+        {
+
+            String sql = "SELECT PASSWORD FROM UTILISATEUR WHERE UtilisateurId=" + Id;
+            conn.ConnectionString = connString;
+            using (conn)
+            {
+                if (conn.State == ConnectionState.Closed)
+                    conn.Open();
+                SqlCommand cmd = new SqlCommand(sql, conn);
+                try
+                {
+                    String username = (string)cmd.ExecuteScalar();
+                    return username;
+                }
+                catch
+                {
+                    throw;
+                }
+            }
+        }
+
+        public int GetUserLanguageIndex(Int32 Id)
+        {
+            String sql = "SELECT ISNUll(LANG,0) FROM UTILISATEUR WHERE UTILISATEURID=" + Id;
+            conn.ConnectionString = connString;
+            using (conn)
+            {
+                if (conn.State == ConnectionState.Closed)
+                    conn.Open();
+                SqlCommand cmd = new SqlCommand(sql, conn);
+                try
+                {
+                    string lang = (string)cmd.ExecuteScalar();
+                    if (lang == null || lang == "")
+                        return 0;
+                    else if (lang == "FR")
+                        return 0;
+                    else if (lang == "EN")
+                        return 1;
+                    else if (lang == "ES")
+                        return 2;
+                    else 
+                        return 0;
+                }
+                catch
+                {
+                    throw;
+                }
+            }
+        }
+        public void Add(string Nom, string Prenom, string Login, string Password, Int32 GroupeId, string Lang)
         {
 
             using (conn)
@@ -145,6 +257,7 @@ namespace WidraSoft.DA
                 cmd.Parameters.Add("@LOGIN", SqlDbType.VarChar).Value = Login;
                 cmd.Parameters.Add("@PASSWORD", SqlDbType.VarChar).Value = Password;
                 cmd.Parameters.Add("@GROUPEID", SqlDbType.Int).Value = GroupeId;
+                cmd.Parameters.Add("@LANG", SqlDbType.VarChar).Value = Lang;
 
                 try
                 {
@@ -159,7 +272,7 @@ namespace WidraSoft.DA
             }
         }
 
-        public void Update(Int32 Id,string Nom, string Prenom, string Login, string Password, Int32 GroupeId)
+        public void Update(Int32 Id,string Nom, string Prenom, string Login, string Password, Int32 GroupeId, string Lang)
         {
 
             using (conn)
@@ -175,6 +288,7 @@ namespace WidraSoft.DA
                 cmd.Parameters.Add("@LOGIN", SqlDbType.VarChar).Value = Login;
                 cmd.Parameters.Add("@PASSWORD", SqlDbType.VarChar).Value = Password;
                 cmd.Parameters.Add("@GROUPEID", SqlDbType.Int).Value = GroupeId;
+                cmd.Parameters.Add("@LANG", SqlDbType.VarChar).Value = Lang;
 
                 try
                 {

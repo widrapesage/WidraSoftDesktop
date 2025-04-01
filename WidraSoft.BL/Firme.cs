@@ -24,6 +24,19 @@ namespace WidraSoft.BL
            
         }
 
+        public DataTable SearchBox(string Filter)
+        {
+            try
+            {
+                FirmeDA firme = new FirmeDA();
+                return firme.SearchBox(Filter);
+            }
+            catch
+            {
+                throw;
+            }
+        }
+
         public DataTable FindById(Int32 Id)
         {
             try
@@ -37,12 +50,77 @@ namespace WidraSoft.BL
             }
         }
 
+        public bool IfExists(String Name)
+        {
+            try
+            {
+                FirmeDA firme = new FirmeDA();
+                return firme.IfExists(Name);
+            }
+            catch
+            {
+                throw;
+            }
+        }
+
         public string GetName(Int32 Id)
         {
             try
             {
                 FirmeDA firme = new FirmeDA();
                 return firme.GetName(Id);
+            }
+            catch
+            {
+                throw;
+            }
+        }
+
+        public int GetMaxId()
+        {
+            try
+            {
+                FirmeDA firme = new FirmeDA();
+                return firme.GetMaxId();
+            }
+            catch
+            {
+                throw;
+            }
+        }
+
+        public string GetBadge(Int32 Id)
+        {
+            try
+            {
+                FirmeDA firme = new FirmeDA();
+                return firme.GetBadge(Id);
+            }
+            catch
+            {
+                throw;
+            }
+        }
+
+        public int GetIdByBadge(string Name)
+        {
+            try
+            {
+                FirmeDA firme = new FirmeDA();
+                return firme.GetIdByBadge(Name);
+            }
+            catch
+            {
+                throw;
+            }
+        }
+
+        public int CountByBadge(string Name)
+        {
+            try
+            {
+                FirmeDA firme = new FirmeDA();
+                return firme.CountByBadge(Name);
             }
             catch
             {

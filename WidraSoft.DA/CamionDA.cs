@@ -33,6 +33,64 @@ namespace WidraSoft.DA
             }
         }
 
+        public DataTable List_Valid(string filter)
+        {
+            String sql = "SELECT * FROM CAMION WHERE " + filter + " AND VALIDE = 1";
+            conn.ConnectionString = connString;
+            if (conn.State == ConnectionState.Closed)
+                conn.Open();
+            SqlCommand cmd = new SqlCommand(sql, conn);
+            try
+            {
+                SqlDataReader reader = cmd.ExecuteReader();
+                dt.Load(reader);
+                return dt;
+            }
+            catch
+            {
+                throw;
+            }
+        }
+
+
+        public DataTable SearchBox(string filter)
+        {
+            String sql = "SELECT * FROM CAMION WHERE PLAQUE LIKE '%" + filter + "%' OR CODE LIKE '%" + filter + "%'";
+            conn.ConnectionString = connString;
+            if (conn.State == ConnectionState.Closed)
+                conn.Open();
+            SqlCommand cmd = new SqlCommand(sql, conn);
+            try
+            {
+                SqlDataReader reader = cmd.ExecuteReader();
+                dt.Load(reader);
+                return dt;
+            }
+            catch
+            {
+                throw;
+            }
+        }
+
+        public DataTable SearchBox_Terminal(string filter)
+        {
+            String sql = "SELECT * FROM CAMION WHERE PLAQUE LIKE '%" + filter + "%'";
+            conn.ConnectionString = connString;
+            if (conn.State == ConnectionState.Closed)
+                conn.Open();
+            SqlCommand cmd = new SqlCommand(sql, conn);
+            try
+            {
+                SqlDataReader reader = cmd.ExecuteReader();
+                dt.Load(reader);
+                return dt;
+            }
+            catch
+            {
+                throw;
+            }
+        }
+
         public DataTable FindById(Int32 Id)
         {
             String sql = "SELECT * FROM CAMION WHERE CAMIONID=" + Id;
@@ -52,6 +110,88 @@ namespace WidraSoft.DA
             }
         }
 
+        public bool IfExists(String Name)
+        {
+            String sql = "SELECT COUNT(*) FROM CAMION WHERE PLAQUE='" + Name + "'";
+            conn.ConnectionString = connString;
+            if (conn.State == ConnectionState.Closed)
+                conn.Open();
+            SqlCommand cmd = new SqlCommand(sql, conn);
+            try
+            {
+                Int32 nb = (int)cmd.ExecuteScalar();
+                if (nb > 0)
+                    return true;
+                else
+                    return false;
+            }
+            catch
+            {
+                throw;
+            }
+        }
+
+        public bool IfExists_Valid(String Name)
+        {
+            String sql = "SELECT COUNT(*) FROM CAMION WHERE PLAQUE='" + Name + "' AND VALIDE = 1";
+            conn.ConnectionString = connString;
+            if (conn.State == ConnectionState.Closed)
+                conn.Open();
+            SqlCommand cmd = new SqlCommand(sql, conn);
+            try
+            {
+                Int32 nb = (int)cmd.ExecuteScalar();
+                if (nb > 0)
+                    return true;
+                else
+                    return false;
+            }
+            catch
+            {
+                throw;
+            }
+        }
+
+        public bool IfIsPending(String Name)
+        {
+            String sql = "SELECT COUNT(*) FROM VW_PESEEPB WHERE CAMION='" + Name + "' AND ETATPESEE='Pending'";
+            conn.ConnectionString = connString;
+            if (conn.State == ConnectionState.Closed)
+                conn.Open();
+            SqlCommand cmd = new SqlCommand(sql, conn);
+            try
+            {
+                Int32 nb = (int)cmd.ExecuteScalar();
+                if (nb > 0)
+                    return true;
+                else
+                    return false;
+            }
+            catch
+            {
+                throw;
+            }
+        }
+
+        public int GetPendingId(string Name)
+        {
+
+            String sql = "SELECT TOP(1) PESEEPBID FROM VW_PESEEPB WHERE CAMION='" + Name + "' AND ETATPESEE='Pending'";
+            conn.ConnectionString = connString;
+            if (conn.State == ConnectionState.Closed)
+                conn.Open();
+            SqlCommand cmd = new SqlCommand(sql, conn);
+            try
+            {
+                int id = (int)cmd.ExecuteScalar();
+                return id;
+            }
+            catch
+            {
+                throw;
+            }
+        }
+
         public string GetName(Int32 Id)
         {
 
@@ -64,6 +204,101 @@ namespace WidraSoft.DA
             {
                 String name = (string)cmd.ExecuteScalar();
                 return name;
+            }
+            catch
+            {
+                throw;
+            }
+        }
+
+        public int GetIdByName(string Name)
+        {
+
+            String sql = "SELECT CAMIONID FROM CAMION WHERE PLAQUE='" + Name + "'";
+            conn.ConnectionString = connString;
+            if (conn.State == ConnectionState.Closed)
+                conn.Open();
+            SqlCommand cmd = new SqlCommand(sql, conn);
+            try
+            {
+                int id = (int)cmd.ExecuteScalar();
+                return id;
+            }
+            catch
+            {
+                throw;
+            }
+        }
+
+        public int GetMaxId()
+        {
+
+            String sql = "SELECT MAX(CAMIONID) FROM CAMION";
+            conn.ConnectionString = connString;
+            if (conn.State == ConnectionState.Closed)
+                conn.Open();
+            SqlCommand cmd = new SqlCommand(sql, conn);
+            try
+            {
+                int id = (int)cmd.ExecuteScalar();
+                return id;
+            }
+            catch
+            {
+                throw;
+            }
+        }
+
+        public string GetBadge(Int32 Id)
+        {
+
+            String sql = "SELECT BADGE FROM CAMION WHERE CAMIONID=" + Id;
+            conn.ConnectionString = connString;
+            if (conn.State == ConnectionState.Closed)
+                conn.Open();
+            SqlCommand cmd = new SqlCommand(sql, conn);
+            try
+            {
+                String name = (string)cmd.ExecuteScalar();
+                return name;
+            }
+            catch
+            {
+                throw;
+            }
+        }
+
+        public int GetIdByBadge(string Name)
+        {
+
+            String sql = "SELECT CAMIONID FROM CAMION WHERE BADGE='" + Name + "'";
+            conn.ConnectionString = connString;
+            if (conn.State == ConnectionState.Closed)
+                conn.Open();
+            SqlCommand cmd = new SqlCommand(sql, conn);
+            try
+            {
+                int id = (int)cmd.ExecuteScalar();
+                return id;
+            }
+            catch
+            {
+                throw;
+            }
+        }
+
+        public int CountByBadge(string Name)
+        {
+
+            String sql = "SELECT COUNT(*) FROM CAMION WHERE BADGE='" + Name + "'";
+            conn.ConnectionString = connString;
+            if (conn.State == ConnectionState.Closed)
+                conn.Open();
+            SqlCommand cmd = new SqlCommand(sql, conn);
+            try
+            {
+                int nb = (int)cmd.ExecuteScalar();
+                return nb;
             }
             catch
             {
@@ -102,8 +337,8 @@ namespace WidraSoft.DA
             }
         }
 
-        public void Update(Int32 Id,String Code, String Plaque, String Badge, Int32 Tare, Int32 Valide,
-   Int32 Bloque, String TexteBloque, Int32 Attention, String TexteAttention, String Observations)
+        public void Update(Int32 Id, String Code, String Plaque, String Badge, Int32 Tare, Int32 Valide,
+                           Int32 Bloque, String TexteBloque, Int32 Attention, String TexteAttention, String Observations)
         {
             using (conn)
             {

@@ -29,451 +29,684 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CamionDetail));
-            this.btSupprimer = new System.Windows.Forms.Button();
-            this.btModifier = new System.Windows.Forms.Button();
-            this.btAjouter = new System.Windows.Forms.Button();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.label4 = new System.Windows.Forms.Label();
-            this.txtPlaque = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.txtDateCreation = new System.Windows.Forms.TextBox();
-            this.txtBadge = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.txtId = new System.Windows.Forms.TextBox();
-            this.label5 = new System.Windows.Forms.Label();
-            this.txtCode = new System.Windows.Forms.TextBox();
-            this.label6 = new System.Windows.Forms.Label();
-            this.txtTare = new System.Windows.Forms.TextBox();
-            this.txtAttention = new System.Windows.Forms.TextBox();
-            this.txtBloque = new System.Windows.Forms.TextBox();
-            this.txtValide = new System.Windows.Forms.TextBox();
-            this.label15 = new System.Windows.Forms.Label();
-            this.txtObservations = new System.Windows.Forms.TextBox();
-            this.label14 = new System.Windows.Forms.Label();
-            this.txtAlerte = new System.Windows.Forms.TextBox();
-            this.chx_Attention = new System.Windows.Forms.CheckBox();
-            this.label13 = new System.Windows.Forms.Label();
-            this.txtBlocage = new System.Windows.Forms.TextBox();
-            this.chx_Bloque = new System.Windows.Forms.CheckBox();
-            this.chx_Valide = new System.Windows.Forms.CheckBox();
-            this.splitter1 = new System.Windows.Forms.Splitter();
-            this.groupBox1.SuspendLayout();
-            this.SuspendLayout();
-            // 
-            // btSupprimer
-            // 
-            this.btSupprimer.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(62)))), ((int)(((byte)(60)))));
-            this.btSupprimer.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btSupprimer.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(190)))), ((int)(((byte)(117)))));
-            this.btSupprimer.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btSupprimer.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btSupprimer.ForeColor = System.Drawing.Color.White;
-            this.btSupprimer.Image = global::WidraSoft.UI.Properties.Resources.button_delete;
-            this.btSupprimer.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btSupprimer.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.btSupprimer.Location = new System.Drawing.Point(565, 21);
-            this.btSupprimer.Name = "btSupprimer";
-            this.btSupprimer.Padding = new System.Windows.Forms.Padding(0, 13, 0, 5);
-            this.btSupprimer.Size = new System.Drawing.Size(89, 80);
-            this.btSupprimer.TabIndex = 2;
-            this.btSupprimer.Text = "Supprimer";
-            this.btSupprimer.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.btSupprimer.UseVisualStyleBackColor = false;
-            this.btSupprimer.Click += new System.EventHandler(this.btSupprimer_Click);
-            this.btSupprimer.MouseEnter += new System.EventHandler(this.btSupprimer_MouseEnter);
-            this.btSupprimer.MouseLeave += new System.EventHandler(this.btSupprimer_MouseLeave);
-            // 
-            // btModifier
-            // 
-            this.btModifier.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(62)))), ((int)(((byte)(60)))));
-            this.btModifier.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btModifier.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(190)))), ((int)(((byte)(117)))));
-            this.btModifier.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btModifier.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btModifier.ForeColor = System.Drawing.Color.White;
-            this.btModifier.Image = global::WidraSoft.UI.Properties.Resources.button_edit;
-            this.btModifier.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btModifier.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.btModifier.Location = new System.Drawing.Point(419, 21);
-            this.btModifier.Name = "btModifier";
-            this.btModifier.Padding = new System.Windows.Forms.Padding(0, 13, 0, 5);
-            this.btModifier.Size = new System.Drawing.Size(89, 80);
-            this.btModifier.TabIndex = 1;
-            this.btModifier.Text = "Modifier";
-            this.btModifier.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.btModifier.UseVisualStyleBackColor = false;
-            this.btModifier.Click += new System.EventHandler(this.btModifier_Click);
-            this.btModifier.MouseEnter += new System.EventHandler(this.btModifier_MouseEnter);
-            this.btModifier.MouseLeave += new System.EventHandler(this.btModifier_MouseLeave);
-            // 
-            // btAjouter
-            // 
-            this.btAjouter.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(62)))), ((int)(((byte)(60)))));
-            this.btAjouter.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btAjouter.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(190)))), ((int)(((byte)(117)))));
-            this.btAjouter.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btAjouter.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btAjouter.ForeColor = System.Drawing.Color.White;
-            this.btAjouter.Image = global::WidraSoft.UI.Properties.Resources.button_add;
-            this.btAjouter.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btAjouter.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.btAjouter.Location = new System.Drawing.Point(269, 21);
-            this.btAjouter.Name = "btAjouter";
-            this.btAjouter.Padding = new System.Windows.Forms.Padding(0, 13, 0, 5);
-            this.btAjouter.Size = new System.Drawing.Size(89, 80);
-            this.btAjouter.TabIndex = 0;
-            this.btAjouter.Text = "Ajouter";
-            this.btAjouter.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.btAjouter.UseVisualStyleBackColor = false;
-            this.btAjouter.Click += new System.EventHandler(this.btAjouter_Click);
-            this.btAjouter.MouseEnter += new System.EventHandler(this.btAjouter_MouseEnter);
-            this.btAjouter.MouseLeave += new System.EventHandler(this.btAjouter_MouseLeave);
-            // 
-            // groupBox1
-            // 
-            this.groupBox1.Controls.Add(this.btSupprimer);
-            this.groupBox1.Controls.Add(this.btModifier);
-            this.groupBox1.Controls.Add(this.btAjouter);
-            this.groupBox1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.groupBox1.Font = new System.Drawing.Font("Corbel", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.groupBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(190)))), ((int)(((byte)(117)))));
-            this.groupBox1.Location = new System.Drawing.Point(36, 9);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(909, 116);
-            this.groupBox1.TabIndex = 20;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Actions";
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            label4 = new System.Windows.Forms.Label();
+            txtPlaque = new System.Windows.Forms.TextBox();
+            label3 = new System.Windows.Forms.Label();
+            label2 = new System.Windows.Forms.Label();
+            txtDateCreation = new System.Windows.Forms.TextBox();
+            txtBadge = new System.Windows.Forms.TextBox();
+            label1 = new System.Windows.Forms.Label();
+            txtId = new System.Windows.Forms.TextBox();
+            label5 = new System.Windows.Forms.Label();
+            txtCode = new System.Windows.Forms.TextBox();
+            label6 = new System.Windows.Forms.Label();
+            txtTare = new System.Windows.Forms.TextBox();
+            txtAttention = new System.Windows.Forms.TextBox();
+            txtBloque = new System.Windows.Forms.TextBox();
+            txtValide = new System.Windows.Forms.TextBox();
+            label15 = new System.Windows.Forms.Label();
+            txtObservations = new System.Windows.Forms.TextBox();
+            label14 = new System.Windows.Forms.Label();
+            txtAlerte = new System.Windows.Forms.TextBox();
+            chx_Attention = new System.Windows.Forms.CheckBox();
+            label13 = new System.Windows.Forms.Label();
+            txtBlocage = new System.Windows.Forms.TextBox();
+            chx_Bloque = new System.Windows.Forms.CheckBox();
+            chx_Valide = new System.Windows.Forms.CheckBox();
+            label7 = new System.Windows.Forms.Label();
+            label8 = new System.Windows.Forms.Label();
+            label9 = new System.Windows.Forms.Label();
+            panelLang = new System.Windows.Forms.Panel();
+            pbUpdating = new System.Windows.Forms.PictureBox();
+            Spain_flag = new System.Windows.Forms.PictureBox();
+            England_flag = new System.Windows.Forms.PictureBox();
+            France_flag = new System.Windows.Forms.PictureBox();
+            cbLang = new System.Windows.Forms.ComboBox();
+            panelNavigation = new System.Windows.Forms.Panel();
+            pictureBox8 = new System.Windows.Forms.PictureBox();
+            linkLabel1 = new System.Windows.Forms.LinkLabel();
+            pictureBox3 = new System.Windows.Forms.PictureBox();
+            lbModifier = new System.Windows.Forms.LinkLabel();
+            pictureBox1 = new System.Windows.Forms.PictureBox();
+            pictureBox2 = new System.Windows.Forms.PictureBox();
+            lbAjouter = new System.Windows.Forms.LinkLabel();
+            lbSupprimer = new System.Windows.Forms.LinkLabel();
+            panelDetail = new System.Windows.Forms.Panel();
+            RqPont = new System.Windows.Forms.PictureBox();
+            dgvTransporteurs = new System.Windows.Forms.DataGridView();
+            dgvChauffeurs = new System.Windows.Forms.DataGridView();
+            label11 = new System.Windows.Forms.Label();
+            label10 = new System.Windows.Forms.Label();
+            pictureBox5 = new System.Windows.Forms.PictureBox();
+            lbActualiserDgvTransporteurs = new System.Windows.Forms.LinkLabel();
+            pictureBox6 = new System.Windows.Forms.PictureBox();
+            pictureBox7 = new System.Windows.Forms.PictureBox();
+            lblAddDgvTransporteurs = new System.Windows.Forms.LinkLabel();
+            lblRetirerDgvTransporteurs = new System.Windows.Forms.LinkLabel();
+            pictureBox4 = new System.Windows.Forms.PictureBox();
+            lbActualiserDgvChauffeurs = new System.Windows.Forms.LinkLabel();
+            pbRemoveRow = new System.Windows.Forms.PictureBox();
+            pbAddRow = new System.Windows.Forms.PictureBox();
+            lblAddDgvChauffeurs = new System.Windows.Forms.LinkLabel();
+            lblRetirerDgvChauffeurs = new System.Windows.Forms.LinkLabel();
+            panelLang.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)pbUpdating).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)Spain_flag).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)England_flag).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)France_flag).BeginInit();
+            panelNavigation.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox8).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
+            panelDetail.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)RqPont).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)dgvTransporteurs).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)dgvChauffeurs).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox5).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox6).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox7).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox4).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pbRemoveRow).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pbAddRow).BeginInit();
+            SuspendLayout();
             // 
             // label4
             // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Corbel", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label4.Location = new System.Drawing.Point(52, 244);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(69, 18);
-            this.label4.TabIndex = 34;
-            this.label4.Text = "N° Plaque";
+            resources.ApplyResources(label4, "label4");
+            label4.ForeColor = System.Drawing.Color.White;
+            label4.Name = "label4";
             // 
             // txtPlaque
             // 
-            this.txtPlaque.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(62)))), ((int)(((byte)(60)))));
-            this.txtPlaque.Font = new System.Drawing.Font("Corbel", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.txtPlaque.ForeColor = System.Drawing.Color.White;
-            this.txtPlaque.Location = new System.Drawing.Point(169, 243);
-            this.txtPlaque.Name = "txtPlaque";
-            this.txtPlaque.Size = new System.Drawing.Size(296, 25);
-            this.txtPlaque.TabIndex = 33;
+            txtPlaque.BackColor = System.Drawing.Color.Honeydew;
+            resources.ApplyResources(txtPlaque, "txtPlaque");
+            txtPlaque.ForeColor = System.Drawing.Color.Black;
+            txtPlaque.Name = "txtPlaque";
             // 
             // label3
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Corbel", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label3.Location = new System.Drawing.Point(52, 213);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(66, 18);
-            this.label3.TabIndex = 32;
-            this.label3.Text = "N° Badge";
+            resources.ApplyResources(label3, "label3");
+            label3.ForeColor = System.Drawing.Color.White;
+            label3.Name = "label3";
             // 
             // label2
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Corbel", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label2.Location = new System.Drawing.Point(52, 181);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(90, 18);
-            this.label2.TabIndex = 31;
-            this.label2.Text = "Date création";
+            resources.ApplyResources(label2, "label2");
+            label2.ForeColor = System.Drawing.Color.White;
+            label2.Name = "label2";
             // 
             // txtDateCreation
             // 
-            this.txtDateCreation.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(62)))), ((int)(((byte)(60)))));
-            this.txtDateCreation.Font = new System.Drawing.Font("Corbel", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.txtDateCreation.ForeColor = System.Drawing.Color.White;
-            this.txtDateCreation.Location = new System.Drawing.Point(169, 180);
-            this.txtDateCreation.Name = "txtDateCreation";
-            this.txtDateCreation.ReadOnly = true;
-            this.txtDateCreation.Size = new System.Drawing.Size(296, 25);
-            this.txtDateCreation.TabIndex = 30;
+            txtDateCreation.BackColor = System.Drawing.Color.Honeydew;
+            resources.ApplyResources(txtDateCreation, "txtDateCreation");
+            txtDateCreation.ForeColor = System.Drawing.Color.Black;
+            txtDateCreation.Name = "txtDateCreation";
+            txtDateCreation.ReadOnly = true;
             // 
             // txtBadge
             // 
-            this.txtBadge.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(62)))), ((int)(((byte)(60)))));
-            this.txtBadge.Font = new System.Drawing.Font("Corbel", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.txtBadge.ForeColor = System.Drawing.Color.White;
-            this.txtBadge.Location = new System.Drawing.Point(169, 211);
-            this.txtBadge.Name = "txtBadge";
-            this.txtBadge.Size = new System.Drawing.Size(296, 25);
-            this.txtBadge.TabIndex = 29;
+            txtBadge.BackColor = System.Drawing.Color.Honeydew;
+            resources.ApplyResources(txtBadge, "txtBadge");
+            txtBadge.ForeColor = System.Drawing.Color.Black;
+            txtBadge.Name = "txtBadge";
             // 
             // label1
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Corbel", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label1.Location = new System.Drawing.Point(52, 148);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(20, 18);
-            this.label1.TabIndex = 28;
-            this.label1.Text = "Id";
+            resources.ApplyResources(label1, "label1");
+            label1.ForeColor = System.Drawing.Color.White;
+            label1.Name = "label1";
             // 
             // txtId
             // 
-            this.txtId.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(62)))), ((int)(((byte)(60)))));
-            this.txtId.Enabled = false;
-            this.txtId.Font = new System.Drawing.Font("Corbel", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.txtId.ForeColor = System.Drawing.Color.White;
-            this.txtId.Location = new System.Drawing.Point(169, 145);
-            this.txtId.Name = "txtId";
-            this.txtId.Size = new System.Drawing.Size(120, 25);
-            this.txtId.TabIndex = 27;
+            txtId.BackColor = System.Drawing.Color.Honeydew;
+            resources.ApplyResources(txtId, "txtId");
+            txtId.ForeColor = System.Drawing.Color.Black;
+            txtId.Name = "txtId";
             // 
             // label5
             // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Corbel", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label5.ForeColor = System.Drawing.Color.White;
-            this.label5.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label5.Location = new System.Drawing.Point(52, 278);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(40, 18);
-            this.label5.TabIndex = 36;
-            this.label5.Text = "Code";
+            resources.ApplyResources(label5, "label5");
+            label5.ForeColor = System.Drawing.Color.White;
+            label5.Name = "label5";
             // 
             // txtCode
             // 
-            this.txtCode.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(62)))), ((int)(((byte)(60)))));
-            this.txtCode.Font = new System.Drawing.Font("Corbel", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.txtCode.ForeColor = System.Drawing.Color.White;
-            this.txtCode.Location = new System.Drawing.Point(169, 275);
-            this.txtCode.Name = "txtCode";
-            this.txtCode.Size = new System.Drawing.Size(296, 25);
-            this.txtCode.TabIndex = 35;
+            txtCode.BackColor = System.Drawing.Color.Honeydew;
+            resources.ApplyResources(txtCode, "txtCode");
+            txtCode.ForeColor = System.Drawing.Color.Black;
+            txtCode.Name = "txtCode";
             // 
             // label6
             // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Corbel", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label6.ForeColor = System.Drawing.Color.White;
-            this.label6.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label6.Location = new System.Drawing.Point(52, 311);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(64, 18);
-            this.label6.TabIndex = 38;
-            this.label6.Text = "Tare (Kg)";
+            resources.ApplyResources(label6, "label6");
+            label6.ForeColor = System.Drawing.Color.White;
+            label6.Name = "label6";
             // 
             // txtTare
             // 
-            this.txtTare.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(62)))), ((int)(((byte)(60)))));
-            this.txtTare.Font = new System.Drawing.Font("Corbel", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.txtTare.ForeColor = System.Drawing.Color.White;
-            this.txtTare.Location = new System.Drawing.Point(169, 309);
-            this.txtTare.Name = "txtTare";
-            this.txtTare.Size = new System.Drawing.Size(120, 25);
-            this.txtTare.TabIndex = 37;
+            txtTare.BackColor = System.Drawing.Color.Honeydew;
+            resources.ApplyResources(txtTare, "txtTare");
+            txtTare.ForeColor = System.Drawing.Color.Black;
+            txtTare.Name = "txtTare";
             // 
             // txtAttention
             // 
-            this.txtAttention.Enabled = false;
-            this.txtAttention.Location = new System.Drawing.Point(627, 387);
-            this.txtAttention.Name = "txtAttention";
-            this.txtAttention.Size = new System.Drawing.Size(17, 25);
-            this.txtAttention.TabIndex = 66;
+            resources.ApplyResources(txtAttention, "txtAttention");
+            txtAttention.Name = "txtAttention";
             // 
             // txtBloque
             // 
-            this.txtBloque.Enabled = false;
-            this.txtBloque.Location = new System.Drawing.Point(148, 387);
-            this.txtBloque.Name = "txtBloque";
-            this.txtBloque.Size = new System.Drawing.Size(17, 25);
-            this.txtBloque.TabIndex = 65;
+            resources.ApplyResources(txtBloque, "txtBloque");
+            txtBloque.Name = "txtBloque";
             // 
             // txtValide
             // 
-            this.txtValide.Enabled = false;
-            this.txtValide.Location = new System.Drawing.Point(148, 347);
-            this.txtValide.Name = "txtValide";
-            this.txtValide.Size = new System.Drawing.Size(17, 25);
-            this.txtValide.TabIndex = 64;
+            resources.ApplyResources(txtValide, "txtValide");
+            txtValide.Name = "txtValide";
             // 
             // label15
             // 
-            this.label15.AutoSize = true;
-            this.label15.Font = new System.Drawing.Font("Corbel", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label15.ForeColor = System.Drawing.Color.White;
-            this.label15.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label15.Location = new System.Drawing.Point(49, 495);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(89, 18);
-            this.label15.TabIndex = 63;
-            this.label15.Text = "Observations";
+            resources.ApplyResources(label15, "label15");
+            label15.ForeColor = System.Drawing.Color.White;
+            label15.Name = "label15";
             // 
             // txtObservations
             // 
-            this.txtObservations.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(62)))), ((int)(((byte)(60)))));
-            this.txtObservations.Font = new System.Drawing.Font("Corbel", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.txtObservations.ForeColor = System.Drawing.Color.White;
-            this.txtObservations.Location = new System.Drawing.Point(169, 495);
-            this.txtObservations.Multiline = true;
-            this.txtObservations.Name = "txtObservations";
-            this.txtObservations.Size = new System.Drawing.Size(776, 67);
-            this.txtObservations.TabIndex = 62;
+            txtObservations.BackColor = System.Drawing.Color.Honeydew;
+            resources.ApplyResources(txtObservations, "txtObservations");
+            txtObservations.ForeColor = System.Drawing.Color.Black;
+            txtObservations.Name = "txtObservations";
             // 
             // label14
             // 
-            this.label14.AutoSize = true;
-            this.label14.Font = new System.Drawing.Font("Corbel", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label14.ForeColor = System.Drawing.Color.White;
-            this.label14.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label14.Location = new System.Drawing.Point(549, 414);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(78, 18);
-            this.label14.TabIndex = 61;
-            this.label14.Text = "Texte alerte";
+            resources.ApplyResources(label14, "label14");
+            label14.ForeColor = System.Drawing.Color.White;
+            label14.Name = "label14";
             // 
             // txtAlerte
             // 
-            this.txtAlerte.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(62)))), ((int)(((byte)(60)))));
-            this.txtAlerte.Font = new System.Drawing.Font("Corbel", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.txtAlerte.ForeColor = System.Drawing.Color.White;
-            this.txtAlerte.Location = new System.Drawing.Point(648, 414);
-            this.txtAlerte.Multiline = true;
-            this.txtAlerte.Name = "txtAlerte";
-            this.txtAlerte.Size = new System.Drawing.Size(296, 61);
-            this.txtAlerte.TabIndex = 60;
+            txtAlerte.BackColor = System.Drawing.Color.Honeydew;
+            resources.ApplyResources(txtAlerte, "txtAlerte");
+            txtAlerte.ForeColor = System.Drawing.Color.Black;
+            txtAlerte.Name = "txtAlerte";
             // 
             // chx_Attention
             // 
-            this.chx_Attention.AutoSize = true;
-            this.chx_Attention.Font = new System.Drawing.Font("Corbel", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.chx_Attention.ForeColor = System.Drawing.Color.White;
-            this.chx_Attention.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.chx_Attention.Location = new System.Drawing.Point(648, 388);
-            this.chx_Attention.Name = "chx_Attention";
-            this.chx_Attention.Size = new System.Drawing.Size(86, 22);
-            this.chx_Attention.TabIndex = 59;
-            this.chx_Attention.Text = "Attention";
-            this.chx_Attention.UseVisualStyleBackColor = true;
-            this.chx_Attention.CheckedChanged += new System.EventHandler(this.chx_Attention_CheckedChanged);
+            resources.ApplyResources(chx_Attention, "chx_Attention");
+            chx_Attention.ForeColor = System.Drawing.Color.White;
+            chx_Attention.Name = "chx_Attention";
+            chx_Attention.UseVisualStyleBackColor = true;
+            chx_Attention.CheckedChanged += chx_Attention_CheckedChanged;
             // 
             // label13
             // 
-            this.label13.AutoSize = true;
-            this.label13.Font = new System.Drawing.Font("Corbel", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label13.ForeColor = System.Drawing.Color.White;
-            this.label13.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label13.Location = new System.Drawing.Point(49, 414);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(92, 18);
-            this.label13.TabIndex = 58;
-            this.label13.Text = "Texte blocage";
+            resources.ApplyResources(label13, "label13");
+            label13.ForeColor = System.Drawing.Color.White;
+            label13.Name = "label13";
             // 
             // txtBlocage
             // 
-            this.txtBlocage.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(62)))), ((int)(((byte)(60)))));
-            this.txtBlocage.Font = new System.Drawing.Font("Corbel", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.txtBlocage.ForeColor = System.Drawing.Color.White;
-            this.txtBlocage.Location = new System.Drawing.Point(169, 414);
-            this.txtBlocage.Multiline = true;
-            this.txtBlocage.Name = "txtBlocage";
-            this.txtBlocage.Size = new System.Drawing.Size(296, 61);
-            this.txtBlocage.TabIndex = 57;
+            txtBlocage.BackColor = System.Drawing.Color.Honeydew;
+            resources.ApplyResources(txtBlocage, "txtBlocage");
+            txtBlocage.ForeColor = System.Drawing.Color.Black;
+            txtBlocage.Name = "txtBlocage";
             // 
             // chx_Bloque
             // 
-            this.chx_Bloque.AutoSize = true;
-            this.chx_Bloque.Font = new System.Drawing.Font("Corbel", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.chx_Bloque.ForeColor = System.Drawing.Color.White;
-            this.chx_Bloque.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.chx_Bloque.Location = new System.Drawing.Point(169, 388);
-            this.chx_Bloque.Name = "chx_Bloque";
-            this.chx_Bloque.Size = new System.Drawing.Size(70, 22);
-            this.chx_Bloque.TabIndex = 56;
-            this.chx_Bloque.Text = "Bloqué";
-            this.chx_Bloque.UseVisualStyleBackColor = true;
-            this.chx_Bloque.CheckedChanged += new System.EventHandler(this.chx_Bloque_CheckedChanged);
+            resources.ApplyResources(chx_Bloque, "chx_Bloque");
+            chx_Bloque.ForeColor = System.Drawing.Color.White;
+            chx_Bloque.Name = "chx_Bloque";
+            chx_Bloque.UseVisualStyleBackColor = true;
+            chx_Bloque.CheckedChanged += chx_Bloque_CheckedChanged;
             // 
             // chx_Valide
             // 
-            this.chx_Valide.AutoSize = true;
-            this.chx_Valide.Font = new System.Drawing.Font("Corbel", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.chx_Valide.ForeColor = System.Drawing.Color.White;
-            this.chx_Valide.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.chx_Valide.Location = new System.Drawing.Point(169, 350);
-            this.chx_Valide.Name = "chx_Valide";
-            this.chx_Valide.Size = new System.Drawing.Size(64, 22);
-            this.chx_Valide.TabIndex = 55;
-            this.chx_Valide.Text = "Valide";
-            this.chx_Valide.UseVisualStyleBackColor = true;
-            this.chx_Valide.CheckedChanged += new System.EventHandler(this.chx_Valide_CheckedChanged);
+            resources.ApplyResources(chx_Valide, "chx_Valide");
+            chx_Valide.ForeColor = System.Drawing.Color.White;
+            chx_Valide.Name = "chx_Valide";
+            chx_Valide.UseVisualStyleBackColor = true;
+            chx_Valide.CheckedChanged += chx_Valide_CheckedChanged;
             // 
-            // splitter1
+            // label7
             // 
-            this.splitter1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(190)))), ((int)(((byte)(117)))));
-            this.splitter1.Enabled = false;
-            this.splitter1.Location = new System.Drawing.Point(0, 0);
-            this.splitter1.Name = "splitter1";
-            this.splitter1.Size = new System.Drawing.Size(10, 653);
-            this.splitter1.TabIndex = 67;
-            this.splitter1.TabStop = false;
+            resources.ApplyResources(label7, "label7");
+            label7.ForeColor = System.Drawing.Color.White;
+            label7.Name = "label7";
+            // 
+            // label8
+            // 
+            resources.ApplyResources(label8, "label8");
+            label8.ForeColor = System.Drawing.Color.White;
+            label8.Name = "label8";
+            // 
+            // label9
+            // 
+            resources.ApplyResources(label9, "label9");
+            label9.ForeColor = System.Drawing.Color.White;
+            label9.Name = "label9";
+            // 
+            // panelLang
+            // 
+            panelLang.BackColor = System.Drawing.Color.FromArgb(72, 86, 81);
+            panelLang.Controls.Add(pbUpdating);
+            panelLang.Controls.Add(Spain_flag);
+            panelLang.Controls.Add(England_flag);
+            panelLang.Controls.Add(France_flag);
+            panelLang.Controls.Add(cbLang);
+            resources.ApplyResources(panelLang, "panelLang");
+            panelLang.Name = "panelLang";
+            // 
+            // pbUpdating
+            // 
+            pbUpdating.Image = Properties.Resources.pencil;
+            resources.ApplyResources(pbUpdating, "pbUpdating");
+            pbUpdating.Name = "pbUpdating";
+            pbUpdating.TabStop = false;
+            // 
+            // Spain_flag
+            // 
+            Spain_flag.BackColor = System.Drawing.Color.Transparent;
+            Spain_flag.Cursor = System.Windows.Forms.Cursors.Hand;
+            Spain_flag.Image = Properties.Resources.spain;
+            resources.ApplyResources(Spain_flag, "Spain_flag");
+            Spain_flag.Name = "Spain_flag";
+            Spain_flag.TabStop = false;
+            // 
+            // England_flag
+            // 
+            England_flag.BackColor = System.Drawing.Color.Transparent;
+            England_flag.Cursor = System.Windows.Forms.Cursors.Hand;
+            England_flag.Image = Properties.Resources.united_kingdom;
+            resources.ApplyResources(England_flag, "England_flag");
+            England_flag.Name = "England_flag";
+            England_flag.TabStop = false;
+            // 
+            // France_flag
+            // 
+            France_flag.BackColor = System.Drawing.Color.Transparent;
+            France_flag.Cursor = System.Windows.Forms.Cursors.Hand;
+            France_flag.Image = Properties.Resources.france;
+            resources.ApplyResources(France_flag, "France_flag");
+            France_flag.Name = "France_flag";
+            France_flag.TabStop = false;
+            // 
+            // cbLang
+            // 
+            cbLang.BackColor = System.Drawing.Color.FromArgb(72, 86, 77);
+            cbLang.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            resources.ApplyResources(cbLang, "cbLang");
+            cbLang.ForeColor = System.Drawing.Color.White;
+            cbLang.FormattingEnabled = true;
+            cbLang.Name = "cbLang";
+            cbLang.SelectedIndexChanged += cbLang_SelectedIndexChanged;
+            // 
+            // panelNavigation
+            // 
+            panelNavigation.BackColor = System.Drawing.Color.FromArgb(58, 62, 60);
+            panelNavigation.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            panelNavigation.Controls.Add(pictureBox8);
+            panelNavigation.Controls.Add(linkLabel1);
+            panelNavigation.Controls.Add(pictureBox3);
+            panelNavigation.Controls.Add(lbModifier);
+            panelNavigation.Controls.Add(pictureBox1);
+            panelNavigation.Controls.Add(pictureBox2);
+            panelNavigation.Controls.Add(lbAjouter);
+            panelNavigation.Controls.Add(lbSupprimer);
+            resources.ApplyResources(panelNavigation, "panelNavigation");
+            panelNavigation.Name = "panelNavigation";
+            // 
+            // pictureBox8
+            // 
+            pictureBox8.BackColor = System.Drawing.Color.Transparent;
+            pictureBox8.Cursor = System.Windows.Forms.Cursors.Hand;
+            pictureBox8.Image = Properties.Resources.printer;
+            resources.ApplyResources(pictureBox8, "pictureBox8");
+            pictureBox8.Name = "pictureBox8";
+            pictureBox8.TabStop = false;
+            // 
+            // linkLabel1
+            // 
+            linkLabel1.ActiveLinkColor = System.Drawing.Color.FromArgb(72, 190, 117);
+            resources.ApplyResources(linkLabel1, "linkLabel1");
+            linkLabel1.BackColor = System.Drawing.Color.Transparent;
+            linkLabel1.ForeColor = System.Drawing.Color.White;
+            linkLabel1.LinkColor = System.Drawing.Color.White;
+            linkLabel1.Name = "linkLabel1";
+            linkLabel1.TabStop = true;
+            linkLabel1.LinkClicked += linkLabel1_LinkClicked;
+            // 
+            // pictureBox3
+            // 
+            pictureBox3.BackColor = System.Drawing.Color.Transparent;
+            pictureBox3.Cursor = System.Windows.Forms.Cursors.Hand;
+            pictureBox3.Image = Properties.Resources.update;
+            resources.ApplyResources(pictureBox3, "pictureBox3");
+            pictureBox3.Name = "pictureBox3";
+            pictureBox3.TabStop = false;
+            // 
+            // lbModifier
+            // 
+            lbModifier.ActiveLinkColor = System.Drawing.Color.FromArgb(72, 190, 117);
+            resources.ApplyResources(lbModifier, "lbModifier");
+            lbModifier.BackColor = System.Drawing.Color.Transparent;
+            lbModifier.ForeColor = System.Drawing.Color.White;
+            lbModifier.LinkColor = System.Drawing.Color.White;
+            lbModifier.Name = "lbModifier";
+            lbModifier.TabStop = true;
+            lbModifier.LinkClicked += lbModifier_LinkClicked;
+            // 
+            // pictureBox1
+            // 
+            pictureBox1.BackColor = System.Drawing.Color.Transparent;
+            pictureBox1.Cursor = System.Windows.Forms.Cursors.Hand;
+            pictureBox1.Image = Properties.Resources.remove;
+            resources.ApplyResources(pictureBox1, "pictureBox1");
+            pictureBox1.Name = "pictureBox1";
+            pictureBox1.TabStop = false;
+            // 
+            // pictureBox2
+            // 
+            pictureBox2.BackColor = System.Drawing.Color.Transparent;
+            pictureBox2.Cursor = System.Windows.Forms.Cursors.Hand;
+            pictureBox2.Image = Properties.Resources.add;
+            resources.ApplyResources(pictureBox2, "pictureBox2");
+            pictureBox2.Name = "pictureBox2";
+            pictureBox2.TabStop = false;
+            // 
+            // lbAjouter
+            // 
+            lbAjouter.ActiveLinkColor = System.Drawing.Color.FromArgb(72, 190, 117);
+            resources.ApplyResources(lbAjouter, "lbAjouter");
+            lbAjouter.BackColor = System.Drawing.Color.Transparent;
+            lbAjouter.ForeColor = System.Drawing.Color.White;
+            lbAjouter.LinkColor = System.Drawing.Color.White;
+            lbAjouter.Name = "lbAjouter";
+            lbAjouter.TabStop = true;
+            lbAjouter.LinkClicked += lbAjouter_LinkClicked;
+            // 
+            // lbSupprimer
+            // 
+            lbSupprimer.ActiveLinkColor = System.Drawing.Color.FromArgb(72, 190, 117);
+            resources.ApplyResources(lbSupprimer, "lbSupprimer");
+            lbSupprimer.BackColor = System.Drawing.Color.Transparent;
+            lbSupprimer.ForeColor = System.Drawing.Color.White;
+            lbSupprimer.LinkColor = System.Drawing.Color.White;
+            lbSupprimer.Name = "lbSupprimer";
+            lbSupprimer.TabStop = true;
+            lbSupprimer.LinkClicked += lbSupprimer_LinkClicked;
+            // 
+            // panelDetail
+            // 
+            panelDetail.BackColor = System.Drawing.Color.FromArgb(72, 86, 81);
+            panelDetail.Controls.Add(RqPont);
+            panelDetail.Controls.Add(dgvTransporteurs);
+            panelDetail.Controls.Add(dgvChauffeurs);
+            panelDetail.Controls.Add(label11);
+            panelDetail.Controls.Add(label10);
+            panelDetail.Controls.Add(pictureBox5);
+            panelDetail.Controls.Add(lbActualiserDgvTransporteurs);
+            panelDetail.Controls.Add(pictureBox6);
+            panelDetail.Controls.Add(pictureBox7);
+            panelDetail.Controls.Add(lblAddDgvTransporteurs);
+            panelDetail.Controls.Add(lblRetirerDgvTransporteurs);
+            panelDetail.Controls.Add(pictureBox4);
+            panelDetail.Controls.Add(lbActualiserDgvChauffeurs);
+            panelDetail.Controls.Add(pbRemoveRow);
+            panelDetail.Controls.Add(pbAddRow);
+            panelDetail.Controls.Add(lblAddDgvChauffeurs);
+            panelDetail.Controls.Add(lblRetirerDgvChauffeurs);
+            panelDetail.Controls.Add(txtDateCreation);
+            panelDetail.Controls.Add(txtCode);
+            panelDetail.Controls.Add(txtPlaque);
+            panelDetail.Controls.Add(label15);
+            panelDetail.Controls.Add(txtObservations);
+            panelDetail.Controls.Add(txtAlerte);
+            panelDetail.Controls.Add(label9);
+            panelDetail.Controls.Add(txtBlocage);
+            panelDetail.Controls.Add(label13);
+            panelDetail.Controls.Add(label4);
+            panelDetail.Controls.Add(label14);
+            panelDetail.Controls.Add(label5);
+            panelDetail.Controls.Add(label8);
+            panelDetail.Controls.Add(label3);
+            panelDetail.Controls.Add(txtId);
+            panelDetail.Controls.Add(chx_Bloque);
+            panelDetail.Controls.Add(txtTare);
+            panelDetail.Controls.Add(label7);
+            panelDetail.Controls.Add(label2);
+            panelDetail.Controls.Add(chx_Valide);
+            panelDetail.Controls.Add(label6);
+            panelDetail.Controls.Add(chx_Attention);
+            panelDetail.Controls.Add(txtBadge);
+            panelDetail.Controls.Add(txtAttention);
+            panelDetail.Controls.Add(label1);
+            panelDetail.Controls.Add(txtBloque);
+            panelDetail.Controls.Add(txtValide);
+            resources.ApplyResources(panelDetail, "panelDetail");
+            panelDetail.Name = "panelDetail";
+            // 
+            // RqPont
+            // 
+            RqPont.Image = Properties.Resources.asterisk;
+            resources.ApplyResources(RqPont, "RqPont");
+            RqPont.Name = "RqPont";
+            RqPont.TabStop = false;
+            // 
+            // dgvTransporteurs
+            // 
+            dgvTransporteurs.AllowUserToAddRows = false;
+            dgvTransporteurs.AllowUserToDeleteRows = false;
+            dgvTransporteurs.BackgroundColor = System.Drawing.Color.FromArgb(72, 86, 81);
+            dgvTransporteurs.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            dgvTransporteurs.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.Sunken;
+            dgvTransporteurs.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.Honeydew;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Calibri", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(72, 86, 81);
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            dgvTransporteurs.DefaultCellStyle = dataGridViewCellStyle1;
+            resources.ApplyResources(dgvTransporteurs, "dgvTransporteurs");
+            dgvTransporteurs.Name = "dgvTransporteurs";
+            dgvTransporteurs.RowTemplate.Height = 25;
+            // 
+            // dgvChauffeurs
+            // 
+            dgvChauffeurs.AllowUserToAddRows = false;
+            dgvChauffeurs.AllowUserToDeleteRows = false;
+            dgvChauffeurs.BackgroundColor = System.Drawing.Color.FromArgb(72, 86, 81);
+            dgvChauffeurs.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            dgvChauffeurs.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.Sunken;
+            dgvChauffeurs.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.Honeydew;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Calibri", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(72, 86, 81);
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            dgvChauffeurs.DefaultCellStyle = dataGridViewCellStyle2;
+            resources.ApplyResources(dgvChauffeurs, "dgvChauffeurs");
+            dgvChauffeurs.Name = "dgvChauffeurs";
+            dgvChauffeurs.RowTemplate.Height = 25;
+            // 
+            // label11
+            // 
+            resources.ApplyResources(label11, "label11");
+            label11.ForeColor = System.Drawing.Color.White;
+            label11.Name = "label11";
+            // 
+            // label10
+            // 
+            resources.ApplyResources(label10, "label10");
+            label10.ForeColor = System.Drawing.Color.White;
+            label10.Name = "label10";
+            // 
+            // pictureBox5
+            // 
+            pictureBox5.BackColor = System.Drawing.Color.Transparent;
+            pictureBox5.Cursor = System.Windows.Forms.Cursors.Hand;
+            pictureBox5.Image = Properties.Resources.refresh;
+            resources.ApplyResources(pictureBox5, "pictureBox5");
+            pictureBox5.Name = "pictureBox5";
+            pictureBox5.TabStop = false;
+            // 
+            // lbActualiserDgvTransporteurs
+            // 
+            lbActualiserDgvTransporteurs.ActiveLinkColor = System.Drawing.Color.FromArgb(72, 190, 117);
+            resources.ApplyResources(lbActualiserDgvTransporteurs, "lbActualiserDgvTransporteurs");
+            lbActualiserDgvTransporteurs.BackColor = System.Drawing.Color.Transparent;
+            lbActualiserDgvTransporteurs.ForeColor = System.Drawing.Color.White;
+            lbActualiserDgvTransporteurs.LinkColor = System.Drawing.Color.White;
+            lbActualiserDgvTransporteurs.Name = "lbActualiserDgvTransporteurs";
+            lbActualiserDgvTransporteurs.TabStop = true;
+            lbActualiserDgvTransporteurs.LinkClicked += lbActualiserDgvTransporteurs_LinkClicked;
+            // 
+            // pictureBox6
+            // 
+            pictureBox6.BackColor = System.Drawing.Color.Transparent;
+            pictureBox6.Cursor = System.Windows.Forms.Cursors.Hand;
+            pictureBox6.Image = Properties.Resources.remove;
+            resources.ApplyResources(pictureBox6, "pictureBox6");
+            pictureBox6.Name = "pictureBox6";
+            pictureBox6.TabStop = false;
+            // 
+            // pictureBox7
+            // 
+            pictureBox7.BackColor = System.Drawing.Color.Transparent;
+            pictureBox7.Cursor = System.Windows.Forms.Cursors.Hand;
+            pictureBox7.Image = Properties.Resources.plus;
+            resources.ApplyResources(pictureBox7, "pictureBox7");
+            pictureBox7.Name = "pictureBox7";
+            pictureBox7.TabStop = false;
+            // 
+            // lblAddDgvTransporteurs
+            // 
+            lblAddDgvTransporteurs.ActiveLinkColor = System.Drawing.Color.FromArgb(72, 190, 117);
+            resources.ApplyResources(lblAddDgvTransporteurs, "lblAddDgvTransporteurs");
+            lblAddDgvTransporteurs.BackColor = System.Drawing.Color.Transparent;
+            lblAddDgvTransporteurs.ForeColor = System.Drawing.Color.White;
+            lblAddDgvTransporteurs.LinkColor = System.Drawing.Color.White;
+            lblAddDgvTransporteurs.Name = "lblAddDgvTransporteurs";
+            lblAddDgvTransporteurs.TabStop = true;
+            lblAddDgvTransporteurs.LinkClicked += lblAddDgvTransporteurs_LinkClicked;
+            // 
+            // lblRetirerDgvTransporteurs
+            // 
+            lblRetirerDgvTransporteurs.ActiveLinkColor = System.Drawing.Color.FromArgb(72, 190, 117);
+            resources.ApplyResources(lblRetirerDgvTransporteurs, "lblRetirerDgvTransporteurs");
+            lblRetirerDgvTransporteurs.BackColor = System.Drawing.Color.Transparent;
+            lblRetirerDgvTransporteurs.ForeColor = System.Drawing.Color.White;
+            lblRetirerDgvTransporteurs.LinkColor = System.Drawing.Color.White;
+            lblRetirerDgvTransporteurs.Name = "lblRetirerDgvTransporteurs";
+            lblRetirerDgvTransporteurs.TabStop = true;
+            lblRetirerDgvTransporteurs.LinkClicked += lblRetirerDgvTransporteurs_LinkClicked;
+            // 
+            // pictureBox4
+            // 
+            pictureBox4.BackColor = System.Drawing.Color.Transparent;
+            pictureBox4.Cursor = System.Windows.Forms.Cursors.Hand;
+            pictureBox4.Image = Properties.Resources.refresh;
+            resources.ApplyResources(pictureBox4, "pictureBox4");
+            pictureBox4.Name = "pictureBox4";
+            pictureBox4.TabStop = false;
+            // 
+            // lbActualiserDgvChauffeurs
+            // 
+            lbActualiserDgvChauffeurs.ActiveLinkColor = System.Drawing.Color.FromArgb(72, 190, 117);
+            resources.ApplyResources(lbActualiserDgvChauffeurs, "lbActualiserDgvChauffeurs");
+            lbActualiserDgvChauffeurs.BackColor = System.Drawing.Color.Transparent;
+            lbActualiserDgvChauffeurs.ForeColor = System.Drawing.Color.White;
+            lbActualiserDgvChauffeurs.LinkColor = System.Drawing.Color.White;
+            lbActualiserDgvChauffeurs.Name = "lbActualiserDgvChauffeurs";
+            lbActualiserDgvChauffeurs.TabStop = true;
+            lbActualiserDgvChauffeurs.LinkClicked += lbActualiserDgvChauffeurs_LinkClicked;
+            // 
+            // pbRemoveRow
+            // 
+            pbRemoveRow.BackColor = System.Drawing.Color.Transparent;
+            pbRemoveRow.Cursor = System.Windows.Forms.Cursors.Hand;
+            pbRemoveRow.Image = Properties.Resources.remove;
+            resources.ApplyResources(pbRemoveRow, "pbRemoveRow");
+            pbRemoveRow.Name = "pbRemoveRow";
+            pbRemoveRow.TabStop = false;
+            // 
+            // pbAddRow
+            // 
+            pbAddRow.BackColor = System.Drawing.Color.Transparent;
+            pbAddRow.Cursor = System.Windows.Forms.Cursors.Hand;
+            pbAddRow.Image = Properties.Resources.plus;
+            resources.ApplyResources(pbAddRow, "pbAddRow");
+            pbAddRow.Name = "pbAddRow";
+            pbAddRow.TabStop = false;
+            // 
+            // lblAddDgvChauffeurs
+            // 
+            lblAddDgvChauffeurs.ActiveLinkColor = System.Drawing.Color.FromArgb(72, 190, 117);
+            resources.ApplyResources(lblAddDgvChauffeurs, "lblAddDgvChauffeurs");
+            lblAddDgvChauffeurs.BackColor = System.Drawing.Color.Transparent;
+            lblAddDgvChauffeurs.ForeColor = System.Drawing.Color.White;
+            lblAddDgvChauffeurs.LinkColor = System.Drawing.Color.White;
+            lblAddDgvChauffeurs.Name = "lblAddDgvChauffeurs";
+            lblAddDgvChauffeurs.TabStop = true;
+            lblAddDgvChauffeurs.LinkClicked += lblAddDgvChauffeurs_LinkClicked;
+            // 
+            // lblRetirerDgvChauffeurs
+            // 
+            lblRetirerDgvChauffeurs.ActiveLinkColor = System.Drawing.Color.FromArgb(72, 190, 117);
+            resources.ApplyResources(lblRetirerDgvChauffeurs, "lblRetirerDgvChauffeurs");
+            lblRetirerDgvChauffeurs.BackColor = System.Drawing.Color.Transparent;
+            lblRetirerDgvChauffeurs.ForeColor = System.Drawing.Color.White;
+            lblRetirerDgvChauffeurs.LinkColor = System.Drawing.Color.White;
+            lblRetirerDgvChauffeurs.Name = "lblRetirerDgvChauffeurs";
+            lblRetirerDgvChauffeurs.TabStop = true;
+            lblRetirerDgvChauffeurs.LinkClicked += lblRetirerDgvChauffeurs_LinkClicked;
             // 
             // CamionDetail
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 18F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(86)))), ((int)(((byte)(77)))));
-            this.ClientSize = new System.Drawing.Size(979, 653);
-            this.Controls.Add(this.splitter1);
-            this.Controls.Add(this.txtAttention);
-            this.Controls.Add(this.txtBloque);
-            this.Controls.Add(this.txtValide);
-            this.Controls.Add(this.label15);
-            this.Controls.Add(this.txtObservations);
-            this.Controls.Add(this.label14);
-            this.Controls.Add(this.txtAlerte);
-            this.Controls.Add(this.chx_Attention);
-            this.Controls.Add(this.label13);
-            this.Controls.Add(this.txtBlocage);
-            this.Controls.Add(this.chx_Bloque);
-            this.Controls.Add(this.chx_Valide);
-            this.Controls.Add(this.label6);
-            this.Controls.Add(this.txtTare);
-            this.Controls.Add(this.label5);
-            this.Controls.Add(this.txtCode);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.txtPlaque);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.txtDateCreation);
-            this.Controls.Add(this.txtBadge);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.txtId);
-            this.Controls.Add(this.groupBox1);
-            this.Font = new System.Drawing.Font("Corbel", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.ForeColor = System.Drawing.Color.White;
-            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.MaximizeBox = false;
-            this.Name = "CamionDetail";
-            this.Text = "Camion";
-            this.Load += new System.EventHandler(this.CamionDetail_Load);
-            this.groupBox1.ResumeLayout(false);
-            this.ResumeLayout(false);
-            this.PerformLayout();
-
+            resources.ApplyResources(this, "$this");
+            AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            BackColor = System.Drawing.Color.FromArgb(58, 62, 60);
+            Controls.Add(panelDetail);
+            Controls.Add(panelNavigation);
+            Controls.Add(panelLang);
+            ForeColor = System.Drawing.SystemColors.ControlText;
+            MaximizeBox = false;
+            Name = "CamionDetail";
+            FormClosing += CamionDetail_FormClosing;
+            Load += CamionDetail_Load;
+            panelLang.ResumeLayout(false);
+            panelLang.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)pbUpdating).EndInit();
+            ((System.ComponentModel.ISupportInitialize)Spain_flag).EndInit();
+            ((System.ComponentModel.ISupportInitialize)England_flag).EndInit();
+            ((System.ComponentModel.ISupportInitialize)France_flag).EndInit();
+            panelNavigation.ResumeLayout(false);
+            panelNavigation.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox8).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox3).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
+            panelDetail.ResumeLayout(false);
+            panelDetail.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)RqPont).EndInit();
+            ((System.ComponentModel.ISupportInitialize)dgvTransporteurs).EndInit();
+            ((System.ComponentModel.ISupportInitialize)dgvChauffeurs).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox5).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox6).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox7).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox4).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pbRemoveRow).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pbAddRow).EndInit();
+            ResumeLayout(false);
         }
 
         #endregion
-        private System.Windows.Forms.Button btSupprimer;
-        private System.Windows.Forms.Button btModifier;
-        private System.Windows.Forms.Button btAjouter;
-        private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox txtPlaque;
         private System.Windows.Forms.Label label3;
@@ -498,6 +731,41 @@
         private System.Windows.Forms.TextBox txtBlocage;
         private System.Windows.Forms.CheckBox chx_Bloque;
         private System.Windows.Forms.CheckBox chx_Valide;
-        private System.Windows.Forms.Splitter splitter1;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Panel panelLang;
+        private System.Windows.Forms.PictureBox Spain_flag;
+        private System.Windows.Forms.PictureBox England_flag;
+        private System.Windows.Forms.PictureBox France_flag;
+        private System.Windows.Forms.ComboBox cbLang;
+        private System.Windows.Forms.PictureBox pbUpdating;
+        private System.Windows.Forms.Panel panelNavigation;
+        private System.Windows.Forms.PictureBox pictureBox3;
+        private System.Windows.Forms.LinkLabel lbModifier;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.LinkLabel lbAjouter;
+        private System.Windows.Forms.LinkLabel lbSupprimer;
+        private System.Windows.Forms.Panel panelDetail;
+        private System.Windows.Forms.PictureBox pictureBox4;
+        private System.Windows.Forms.LinkLabel lbActualiserDgvChauffeurs;
+        private System.Windows.Forms.PictureBox pbRemoveRow;
+        private System.Windows.Forms.PictureBox pbAddRow;
+        private System.Windows.Forms.LinkLabel lblAddDgvChauffeurs;
+        private System.Windows.Forms.LinkLabel lblRetirerDgvChauffeurs;
+        private System.Windows.Forms.PictureBox pictureBox5;
+        private System.Windows.Forms.LinkLabel lbActualiserDgvTransporteurs;
+        private System.Windows.Forms.PictureBox pictureBox6;
+        private System.Windows.Forms.PictureBox pictureBox7;
+        private System.Windows.Forms.LinkLabel lblAddDgvTransporteurs;
+        private System.Windows.Forms.LinkLabel lblRetirerDgvTransporteurs;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.DataGridView dgvChauffeurs;
+        private System.Windows.Forms.DataGridView dgvTransporteurs;
+        private System.Windows.Forms.PictureBox RqPont;
+        private System.Windows.Forms.PictureBox pictureBox8;
+        private System.Windows.Forms.LinkLabel linkLabel1;
     }
 }

@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using WidraSoft.BL;
+using CustomMessageBox;
 
 namespace WidraSoft.UI
 {
@@ -27,7 +28,7 @@ namespace WidraSoft.UI
         private void FirmeDetail_Load(object sender, EventArgs e)
         {
             this.CenterToParent();
-
+          
             if (vg_Mode == "Add")
             {
                 try
@@ -55,18 +56,23 @@ namespace WidraSoft.UI
                 }
             }
 
+            cbLang.DataSource = Language.Languages;
+            cbLang.ValueMember = null;
+            cbLang.DisplayMember = Language.Languages[0];
+            cbLang.SelectedIndex = MenuGeneral.languuage_index;
+
         }
 
         private void Add_Item()
         {
             if (txtId.Text == "" && txtDateCreation.Text == "" && txtBadge.Text == "" && txtDesignation.Text == "" && txtAdresse.Text == "" && txtCodePostal.Text == "" && txtLocalite.Text == ""
                 && txtPays.Text == "" && txtTelephone.Text == "" && txtEmail.Text == "" && txtNumTVA.Text == "" && txtSiteWebUrl.Text == ""
-                && txtValide.Text == "" && txtBloque.Text == "" && txtBlocage.Text == "" && txtAttention.Text == "" && txtAlerte.Text == "")
+                && txtValide.Text == "" && txtBloque.Text == "" && txtBlocage.Text == "" && txtAttention.Text == "" && txtAlerte.Text == "" && txtObservations.Text== "")
             {
-                btModifier.Enabled = false;
-                btModifier.BackColor = Color.Transparent;
-                btSupprimer.Enabled = false;
-                btSupprimer.BackColor = Color.Transparent;
+                lbModifier.Enabled = false;
+                lbModifier.BackColor = Color.Transparent;
+                lbSupprimer.Enabled = false;
+                lbSupprimer.BackColor = Color.Transparent;
 
                 txtValide.Text = "1";
                 chx_Valide.Checked = true;
@@ -80,8 +86,8 @@ namespace WidraSoft.UI
 
         private void Edit_Item()
         {
-            btAjouter.Enabled = false;
-            btAjouter.BackColor = Color.Transparent;
+            lbAjouter.Enabled = false;
+            lbAjouter.BackColor = Color.Transparent;
             Disable();
             Bind_Fields();
         }
@@ -149,6 +155,7 @@ namespace WidraSoft.UI
             chx_Attention.Enabled = false;
             txtAlerte.Enabled = false;
             txtObservations.Enabled = false;
+            pbUpdating.Visible = false;
 
             vg_IsEnabled = false;
         }
@@ -172,6 +179,7 @@ namespace WidraSoft.UI
             chx_Attention.Enabled = true;
             txtAlerte.Enabled = true;
             txtObservations.Enabled = true;
+            pbUpdating.Visible = true;
 
             vg_IsEnabled = true;
         }
@@ -198,55 +206,7 @@ namespace WidraSoft.UI
             chx_Attention.Checked = false;
         }
 
-        private Int32 CbSelectedValue_Convert_Int(ComboBox o)
-        {
-            if (o.SelectedValue == null)
-            {
-                return 0;
-            }
-            else
-            {
-                return (Int32)o.SelectedValue;
-            }
-        }
 
-        private void btAjouter_MouseEnter(object sender, EventArgs e)
-        {
-            if (btAjouter.Enabled == true)
-                btAjouter.BackColor = Color.MintCream;
-        }
-
-        private void btAjouter_MouseLeave(object sender, EventArgs e)
-        {
-            if (btAjouter.Enabled == true)
-                btAjouter.BackColor = Color.MediumSeaGreen;
-        }
-
-        private void btModifier_MouseEnter(object sender, EventArgs e)
-        {
-            if (btModifier.Enabled == true)
-                btModifier.BackColor = Color.MintCream;
-        }
-
-        private void btModifier_MouseLeave(object sender, EventArgs e)
-        {
-            if (btModifier.Enabled == true)
-                btModifier.BackColor = Color.MediumSeaGreen;
-        }
-
-        private void btSupprimer_MouseEnter(object sender, EventArgs e)
-        {
-            if (btSupprimer.Enabled == true)
-                btSupprimer.BackColor = Color.MintCream;
-        }
-
-        private void btSupprimer_MouseLeave(object sender, EventArgs e)
-        {
-            if (btSupprimer.Enabled == true)
-                btSupprimer.BackColor = Color.MediumSeaGreen;
-        }
-
-       
         private void chx_Valide_CheckedChanged(object sender, EventArgs e)
         {
             if (chx_Valide.Checked)
@@ -271,7 +231,38 @@ namespace WidraSoft.UI
                 txtAttention.Text = "0";
         }
 
-        private void btAjouter_Click(object sender, EventArgs e)
+        private void cbLang_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (cbLang.Text == "FR")
+            {
+                France_flag.Visible = true;
+                England_flag.Visible = false;
+                Spain_flag.Visible = false;
+                Language_Manager language_Manager = new Language_Manager();
+                language_Manager.ChangeLanguage("fr", this, typeof(FirmeDetail));
+
+            }
+
+            if (cbLang.Text == "EN")
+            {
+                France_flag.Visible = false;
+                England_flag.Visible = true;
+                Spain_flag.Visible = false;
+                Language_Manager language_Manager = new Language_Manager();
+                language_Manager.ChangeLanguage("en", this, typeof(FirmeDetail));
+            }
+
+            if (cbLang.Text == "ES")
+            {
+                France_flag.Visible = false;
+                England_flag.Visible = false;
+                Spain_flag.Visible = true;
+                Language_Manager language_Manager = new Language_Manager();
+                language_Manager.ChangeLanguage("es", this, typeof(FirmeDetail));
+            }
+        }
+
+        private void lbAjouter_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             try
             {
@@ -294,7 +285,12 @@ namespace WidraSoft.UI
                             Firme firme = new Firme();
                             firme.Add(txtBadge.Text, txtDesignation.Text, txtAdresse.Text, txtCodePostal.Text, txtLocalite.Text, txtPays.Text, txtTelephone.Text, txtEmail.Text,
                                     txtNumTVA.Text, txtSiteWebUrl.Text, txtObservations.Text, Valide, Bloque, txtBlocage.Text, Attention, txtAlerte.Text);
-                            MessageBox.Show("Firme ajoutée avec succès");
+                            if (cbLang.Text == "FR")
+                                Custom_MessageBox.Show("FR", "Firme ajoutée avec succès", "Firme", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            else if (cbLang.Text == "EN")
+                                Custom_MessageBox.Show("EN", "Firm added successfully", "Firm", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            else
+                                Custom_MessageBox.Show("ES", "Firma agregado", "Firma", MessageBoxButtons.OK, MessageBoxIcon.Information);
                             Close();
                         }
                     }
@@ -306,7 +302,12 @@ namespace WidraSoft.UI
                 }
                 else
                 {
-                    MessageBox.Show("Informations incomplètes");
+                    if (cbLang.Text == "FR")
+                        Custom_MessageBox.Show("FR", "Informations incomplètes", "Firme", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    else if (cbLang.Text == "EN")
+                        Custom_MessageBox.Show("EN", "Incomplete informations", "Firm", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    else
+                        Custom_MessageBox.Show("ES", "Información incompleta", "Firma", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
             }
             catch
@@ -315,22 +316,22 @@ namespace WidraSoft.UI
             }
         }
 
-        private void btModifier_Click(object sender, EventArgs e)
+        private void lbModifier_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             try
             {
                 if (vg_Update == false && vg_IsEnabled == false)
                 {
                     Enable();
-                    btModifier.Text = "Valider";
+                    lbModifier.Text = Language_Manager.Localize("Valider", cbLang.Text);
                     vg_Update = true;
                 }
                 else
                 {
                     try
                     {
-                        if (txtId.Text != "" && txtDateCreation.Text != "" && txtDesignation.Text != "" 
-                            && txtValide.Text != "" && txtBloque.Text != "" && txtAttention.Text != "") 
+                        if (txtId.Text != "" && txtDateCreation.Text != "" && txtDesignation.Text != ""
+                            && txtValide.Text != "" && txtBloque.Text != "" && txtAttention.Text != "")
                         {
                             int Id;
                             int Valide;
@@ -351,8 +352,13 @@ namespace WidraSoft.UI
                                     Firme firme = new Firme();
                                     firme.Update(Id, txtBadge.Text, txtDesignation.Text, txtAdresse.Text, txtCodePostal.Text, txtLocalite.Text, txtPays.Text, txtTelephone.Text, txtEmail.Text,
                                             txtNumTVA.Text, txtSiteWebUrl.Text, txtObservations.Text, Valide, Bloque, txtBlocage.Text, Attention, txtAlerte.Text);
-                                    MessageBox.Show("Firme modifiée avec succès");
-                                    btModifier.Text = "Modifier";
+                                    if (cbLang.Text == "FR")
+                                        Custom_MessageBox.Show("FR", "Firme modifiée avec succès", "Firme", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                    else if (cbLang.Text == "EN")
+                                        Custom_MessageBox.Show("EN", "Firm updated successfully", "Firm", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                    else
+                                        Custom_MessageBox.Show("ES", "Firma alterado", "Firma", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                    lbModifier.Text = Language_Manager.Localize("Modifier", cbLang.Text);
                                     vg_Update = false;
                                     Disable();
                                     Bind_Fields();
@@ -363,11 +369,15 @@ namespace WidraSoft.UI
                             {
                                 throw;
                             }
-
                         }
                         else
                         {
-                            MessageBox.Show("Informations incomplètes");
+                            if (cbLang.Text == "FR")
+                                Custom_MessageBox.Show("FR", "Informations incomplètes", "Firme", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            else if (cbLang.Text == "EN")
+                                Custom_MessageBox.Show("EN", "Incomplete informations", "Firm", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            else
+                                Custom_MessageBox.Show("ES", "Información incompleta", "Firma", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         }
                     }
                     catch
@@ -382,11 +392,16 @@ namespace WidraSoft.UI
             }
         }
 
-        private void btSupprimer_Click(object sender, EventArgs e)
+        private void lbSupprimer_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             if (vg_Update)
             {
-                MessageBox.Show("Vous ne pouvez pas supprimer l'enregistrement terminez d'abord la modification");
+                if (cbLang.Text == "FR")
+                    Custom_MessageBox.Show("FR", "Vous ne pouvez pas supprimer l'enregistrement tant que la modification n'est pas validée", "Firme", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                else if (cbLang.Text == "EN")
+                    Custom_MessageBox.Show("EN", "You can't delete this record before the update is completed", "Firm", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                else
+                    Custom_MessageBox.Show("ES", "No puede eliminar el registro hasta que se confirme el cambio", "Firma", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             else
             {
@@ -398,18 +413,52 @@ namespace WidraSoft.UI
                     IsParsableId = Int32.TryParse(txtId.Text, out Id);
                     if (IsParsableId)
                     {
-                        firme.Delete(Id);
-                        MessageBox.Show("Firme supprimée avec succès");
-                        Close();
+                        DialogResult result;
+                        if (cbLang.Text == "FR")
+                            result = Custom_MessageBox.Show("FR", "Etes vous sur de vouloir supprimer cet enregistrement?", "Firme", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                        else if (cbLang.Text == "EN")
+                            result = Custom_MessageBox.Show("EN", "Are you sure you want to delete this record?", "Firm", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                        else
+                            result = Custom_MessageBox.Show("ES", "¿Está seguro de que desea eliminar este registro?", "Firma", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+                        if (result == DialogResult.Yes)
+                        {
+                            firme.Delete(Id);
+                            if (cbLang.Text == "FR")
+                                Custom_MessageBox.Show("FR", "Firme supprimée avec succès", "Firme", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            else if (cbLang.Text == "EN")
+                                Custom_MessageBox.Show("EN", "Firm deleted successfully", "Firm", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            else
+                                Custom_MessageBox.Show("ES", "Firma eliminado", "Firma", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            Close();
+                        }
                     }
                 }
                 catch
                 {
                     throw;
                 }
-                
 
             }
         }
+
+        private void FirmeDetail_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            if (vg_Mode == "Edit")
+            {
+                if (pbUpdating.Visible)
+                {
+                    if (cbLang.Text == "FR")
+                        Custom_MessageBox.Show("FR", "Vous ne pouvez pas fermer la fenetre tant que la modification n'est pas validée", "Firme", MessageBoxButtons.OK, MessageBoxIcon.Stop);
+                    else if (cbLang.Text == "EN")
+                        Custom_MessageBox.Show("EN", "You can't close this window before the update is completed", "Firm", MessageBoxButtons.OK, MessageBoxIcon.Stop);
+                    else
+                        Custom_MessageBox.Show("ES", "No puede cerrar la página hasta que se valide el cambio", "Firma", MessageBoxButtons.OK, MessageBoxIcon.Stop);
+                    e.Cancel = true;
+                }
+            }
+        }
+
+
     }
 }
