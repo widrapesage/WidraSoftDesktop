@@ -57,7 +57,14 @@ namespace WidraSoft.UI
             txtTypeAbonnement.Text = "Classic";
             txtValidite.Text = "---";
 
-            await TunnelCommunicationHelper.InitialiseAsync(Program.Configuration.GetSection("TunnelIntegrationSettings").Get<TunnelIntegrationSettings>());
+            try
+            {
+                await TunnelCommunicationHelper.InitialiseAsync(Program.Configuration.GetSection("TunnelIntegrationSettings").Get<TunnelIntegrationSettings>());
+            }
+            catch
+            {
+
+            }
 
             if (vg_IsTerminal && !vg_IsBorneLaunched)
             {

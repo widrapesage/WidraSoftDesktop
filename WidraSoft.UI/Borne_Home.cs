@@ -67,21 +67,24 @@ namespace WidraSoft.UI
             timer_Time.Interval = 30000;
             timer_Time.Start();
 
-            TunnelCommunicationHelper.ReceivedWeightData += TunnelCommunicationHelper_ReceivedWeightData;
+            try
+            {
+                TunnelCommunicationHelper.ReceivedWeightData += TunnelCommunicationHelper_ReceivedWeightData;
+            }
+            catch
+            {
+
+            }
 
             Initialize_WeighBridgeSettings(vg_PontId);
             Initialize_Contact();
 
         }
 
-        private static void TunnelCommunicationHelper_ReceivedWeightData(object sender, WeightData e)
+        private void TunnelCommunicationHelper_ReceivedWeightData(object sender, WeightData e)
         {
+            txtPoids.Invoke(new Action(() => txtPoids.Text = e.Weight.ToString()));
             Poids_Public = e.Weight;
-        }
-
-        private void UpdateWeight()
-        {
-            txtPoids.Text = Poids_Public.ToString();
         }
 
         private int GetPontId()
@@ -399,8 +402,6 @@ namespace WidraSoft.UI
         {
             if (com.IsOpen)
                 ReceiveSerialData();
-            else
-                UpdateWeight();
         }
 
         private void Borne_Home_FormClosing(object sender, FormClosingEventArgs e)

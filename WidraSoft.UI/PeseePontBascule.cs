@@ -1976,7 +1976,15 @@ namespace WidraSoft.UI
                 if (IsParsablePoids)
                 {
                     txtPoids.Text = Poids.ToString();
-                    await TunnelCommunicationHelper.SendWeightMessageAsync(Poids, false);
+
+                    try
+                    {
+                        await TunnelCommunicationHelper.SendWeightMessageAsync(Poids, false);
+                    }
+                    catch
+                    {
+
+                    }
                 }
                 else { txtPoids.Text = "0"; }
                 //P = Poids;
@@ -2289,7 +2297,14 @@ namespace WidraSoft.UI
             string input = Microsoft.VisualBasic.Interaction.InputBox("Entrez un poids", "Simulateur Poids");
             txtPoids.Text = input;
 
-            await TunnelCommunicationHelper.SendWeightMessageAsync(int.Parse(input), false);
+            try
+            {
+                await TunnelCommunicationHelper.SendWeightMessageAsync(int.Parse(input), false);
+            }
+            catch
+            {
+
+            }
         }
 
         private void rbxEntrant_CheckedChanged(object sender, EventArgs e)
