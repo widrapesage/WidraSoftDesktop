@@ -189,6 +189,44 @@ namespace WidraSoft.DA
             }
         }
 
+        public string GetTypeScanner2(Int32 Id)
+        {
+
+            String sql = "SELECT TYPESCANNER2 FROM PONT WHERE PONTID=" + Id;
+            conn.ConnectionString = connString;
+            if (conn.State == ConnectionState.Closed)
+                conn.Open();
+            SqlCommand cmd = new SqlCommand(sql, conn);
+            try
+            {
+                String name = (string)cmd.ExecuteScalar();
+                return name;
+            }
+            catch
+            {
+                throw;
+            }
+        }
+
+        public int GetActiverScanner2(Int32 Id)
+        {
+
+            String sql = "SELECT ACTIVER_SCANNER2 FROM PONT WHERE PONTID=" + Id;
+            conn.ConnectionString = connString;
+            if (conn.State == ConnectionState.Closed)
+                conn.Open();
+            SqlCommand cmd = new SqlCommand(sql, conn);
+            try
+            {
+                int result = (int)cmd.ExecuteScalar();
+                return result;
+            }
+            catch
+            {
+                throw;
+            }
+        }
+
         public Int32 GetWeightSettingsId(Int32 Id)
         {
 
@@ -335,7 +373,9 @@ namespace WidraSoft.DA
         public void Add(String Designation, String NumPortCOM, Int32 Weight_SettingsId, Int32 Weighing_SettingsId, Int32 ActiverPoids, Int32 BaudRate,
                         Int32 DataBits, String StopBits, String Handshake, Int32 ReadTimeOut, String Machine, String Demarrage, Int32 UtilisateurId, Int32 ActiverMultipleParam, Int32 Poids_Detection,
                         String BornePremierePesee, String BorneDeuxiemePesee, String BorneTareManuelle, String Flux_Default, Int32 Activer_Scanner, String TypeScanner, Int32 Activer_Barriere, String NumPortCom_Barriere, 
-                        String NumPortCom_Scanner, String Contact1, String Contact2, String Contact3, Int32 IsBorneLaunched)
+                        String NumPortCom_Scanner, String Contact1, String Contact2, String Contact3, Int32 IsBorneLaunched, Int32 ActiverCamera1, String AdresseIp1, String Port1, String Login1,
+                        String Password1, Int32 ActiverCamera2, String AdresseIp2, String Port2, String Login2, String Password2, Int32 ActiverCamera3, String AdresseIp3, String Port3, String Login3,
+                        String Password3, Int32 ActiverScanner2, String TypeScanner2)
         {
             using (conn)
             {
@@ -372,6 +412,23 @@ namespace WidraSoft.DA
                 cmd.Parameters.Add("@CONTACT2", SqlDbType.VarChar).Value = Contact2;
                 cmd.Parameters.Add("@CONTACT3", SqlDbType.VarChar).Value = Contact3;
                 cmd.Parameters.Add("@IS_BORNE_LAUNCHED", SqlDbType.Int).Value = IsBorneLaunched;
+                cmd.Parameters.Add("@ACTIVER_CAMERA1", SqlDbType.Int).Value = ActiverCamera1;
+                cmd.Parameters.Add("@ADRESSEIP_1", SqlDbType.VarChar).Value = AdresseIp1;
+                cmd.Parameters.Add("@PORT_1", SqlDbType.VarChar).Value = Port1;
+                cmd.Parameters.Add("@LOGIN_1", SqlDbType.VarChar).Value = Login1;
+                cmd.Parameters.Add("@PASSWORD_1", SqlDbType.VarChar).Value = Password1;
+                cmd.Parameters.Add("@ACTIVER_CAMERA2", SqlDbType.Int).Value = ActiverCamera2;
+                cmd.Parameters.Add("@ADRESSEIP_2", SqlDbType.VarChar).Value = AdresseIp2;
+                cmd.Parameters.Add("@PORT_2", SqlDbType.VarChar).Value = Port2;
+                cmd.Parameters.Add("@LOGIN_2", SqlDbType.VarChar).Value = Login2;
+                cmd.Parameters.Add("@PASSWORD_2", SqlDbType.VarChar).Value = Password2;
+                cmd.Parameters.Add("@ACTIVER_CAMERA3", SqlDbType.Int).Value = ActiverCamera3;
+                cmd.Parameters.Add("@ADRESSEIP_3", SqlDbType.VarChar).Value = AdresseIp3;
+                cmd.Parameters.Add("@PORT_3", SqlDbType.VarChar).Value = Port3;
+                cmd.Parameters.Add("@LOGIN_3", SqlDbType.VarChar).Value = Login3;
+                cmd.Parameters.Add("@PASSWORD_3", SqlDbType.VarChar).Value = Password3;
+                cmd.Parameters.Add("@ACTIVER_SCANNER2", SqlDbType.Int).Value = ActiverScanner2;
+                cmd.Parameters.Add("@TYPESCANNER2", SqlDbType.VarChar).Value = TypeScanner2;
                 try
                 {
                     cmd.ExecuteNonQuery();
@@ -386,7 +443,9 @@ namespace WidraSoft.DA
         public void Update(Int32 Id, String Designation, String NumPortCOM, Int32 Weight_SettingsId, Int32 Weighing_SettingsId, Int32 ActiverPoids, Int32 BaudRate,
                         Int32 DataBits, String StopBits, String Handshake, Int32 ReadTimeOut, String Machine, String Demarrage, Int32 UtilisateurId, Int32 ActiverMultipleParam, Int32 Poids_Detection,
                         String BornePremierePesee, String BorneDeuxiemePesee, String BorneTareManuelle, String Flux_Default, Int32 Activer_Scanner, String TypeScanner, Int32 Activer_Barriere, String NumPortCom_Barriere,
-                        String NumPortCom_Scanner, String Contact1, String Contact2, String Contact3, Int32 IsBorneLaunched)
+                        String NumPortCom_Scanner, String Contact1, String Contact2, String Contact3, Int32 IsBorneLaunched, Int32 ActiverCamera1, String AdresseIp1, String Port1, String Login1,
+                        String Password1, Int32 ActiverCamera2, String AdresseIp2, String Port2, String Login2, String Password2, Int32 ActiverCamera3, String AdresseIp3, String Port3, String Login3,
+                        String Password3, Int32 ActiverScanner2, String TypeScanner2)
         {
             using (conn)
             {
@@ -424,6 +483,23 @@ namespace WidraSoft.DA
                 cmd.Parameters.Add("@CONTACT2", SqlDbType.VarChar).Value = Contact2;
                 cmd.Parameters.Add("@CONTACT3", SqlDbType.VarChar).Value = Contact3;
                 cmd.Parameters.Add("@IS_BORNE_LAUNCHED", SqlDbType.Int).Value = IsBorneLaunched;
+                cmd.Parameters.Add("@ACTIVER_CAMERA1", SqlDbType.Int).Value = ActiverCamera1;
+                cmd.Parameters.Add("@ADRESSEIP_1", SqlDbType.VarChar).Value = AdresseIp1;
+                cmd.Parameters.Add("@PORT_1", SqlDbType.VarChar).Value = Port1;
+                cmd.Parameters.Add("@LOGIN_1", SqlDbType.VarChar).Value = Login1;
+                cmd.Parameters.Add("@PASSWORD_1", SqlDbType.VarChar).Value = Password1;
+                cmd.Parameters.Add("@ACTIVER_CAMERA2", SqlDbType.Int).Value = ActiverCamera2;
+                cmd.Parameters.Add("@ADRESSEIP_2", SqlDbType.VarChar).Value = AdresseIp2;
+                cmd.Parameters.Add("@PORT_2", SqlDbType.VarChar).Value = Port2;
+                cmd.Parameters.Add("@LOGIN_2", SqlDbType.VarChar).Value = Login2;
+                cmd.Parameters.Add("@PASSWORD_2", SqlDbType.VarChar).Value = Password2;
+                cmd.Parameters.Add("@ACTIVER_CAMERA3", SqlDbType.Int).Value = ActiverCamera3;
+                cmd.Parameters.Add("@ADRESSEIP_3", SqlDbType.VarChar).Value = AdresseIp3;
+                cmd.Parameters.Add("@PORT_3", SqlDbType.VarChar).Value = Port3;
+                cmd.Parameters.Add("@LOGIN_3", SqlDbType.VarChar).Value = Login3;
+                cmd.Parameters.Add("@PASSWORD_3", SqlDbType.VarChar).Value = Password3;
+                cmd.Parameters.Add("@ACTIVER_SCANNER2", SqlDbType.Int).Value = ActiverScanner2;
+                cmd.Parameters.Add("@TYPESCANNER2", SqlDbType.VarChar).Value = TypeScanner2;
                 try
                 {
                     cmd.ExecuteNonQuery();

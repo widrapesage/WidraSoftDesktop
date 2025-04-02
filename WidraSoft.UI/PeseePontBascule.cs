@@ -2619,7 +2619,7 @@ namespace WidraSoft.UI
                     try
                     {
                         Produit produit = new Produit();
-                        produit.Add(cbProduit.Text, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0);
+                        produit.Add(cbProduit.Text, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0);
                         cbProduit.DataSource = produit.List("1=1");
                         cbProduit.SelectedIndex = cbProduit.Items.Count - 1;
                         cbProduit.Focus();

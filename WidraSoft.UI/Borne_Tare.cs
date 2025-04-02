@@ -148,7 +148,7 @@ namespace WidraSoft.UI
                 bool IsParsablePoids = Int32.TryParse(txtPoids.Text, out Poids);
                 if (Poids > 0)
                 {
-                    Form form = new Borne_ChoixFlux(vg_Lang, vg_PontId, vg_Demander_Parametre, -1, vg_P, Poids, Flux_Default, -1, -1);
+                    Form form = new Borne_ChoixFlux(vg_Lang, vg_PontId, vg_Demander_Parametre, -1, vg_P, Poids, Flux_Default, -1, -1, -1);
                     form.Show();
                     Close();
                 }

@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            components = new System.ComponentModel.Container();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
@@ -47,6 +48,7 @@
             lbCount = new System.Windows.Forms.Label();
             panel1 = new System.Windows.Forms.Panel();
             panel2 = new System.Windows.Forms.Panel();
+            timerScanner = new System.Windows.Forms.Timer(components);
             ((System.ComponentModel.ISupportInitialize)DgvList).BeginInit();
             ((System.ComponentModel.ISupportInitialize)Spain_flag).BeginInit();
             ((System.ComponentModel.ISupportInitialize)England_flag).BeginInit();
@@ -313,6 +315,10 @@
             panel2.Size = new System.Drawing.Size(1061, 452);
             panel2.TabIndex = 143;
             // 
+            // timerScanner
+            // 
+            timerScanner.Tick += timerScanner_Tick;
+            // 
             // Borne_ChoixDeuxiemePesee
             // 
             AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -326,6 +332,7 @@
             MaximizeBox = false;
             MinimizeBox = false;
             Name = "Borne_ChoixDeuxiemePesee";
+            FormClosing += Borne_ChoixDeuxiemePesee_FormClosing;
             Load += Borne_ChoixDeuxiemePesee_Load;
             ((System.ComponentModel.ISupportInitialize)DgvList).EndInit();
             ((System.ComponentModel.ISupportInitialize)Spain_flag).EndInit();
@@ -354,5 +361,6 @@
         private System.Windows.Forms.Label lbCount;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Timer timerScanner;
     }
 }

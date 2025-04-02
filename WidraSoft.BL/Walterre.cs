@@ -181,12 +181,38 @@ namespace WidraSoft.BL
             }
         }
 
+        public bool IfExistsByIdString(String Name)
+        {
+            try
+            {
+                WalterreDA walterre = new WalterreDA();
+                return walterre.IfExistsByIdString(Name);
+            }
+            catch
+            {
+                throw;
+            }
+        }
+
         public bool IfExists_Valid(String Name)
         {
             try
             {
                 WalterreDA walterre = new WalterreDA();
                 return walterre.IfExists_Valid(Name);
+            }
+            catch
+            {
+                throw;
+            }
+        }
+
+        public bool IfExists_Valid_ByIdString(String Name)
+        {
+            try
+            {
+                WalterreDA walterre = new WalterreDA();
+                return walterre.IfExists_Valid_ByIdString(Name);
             }
             catch
             {

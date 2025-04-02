@@ -125,16 +125,22 @@
   </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="lbBadge.Location" type="System.Drawing.Point, System.Drawing">
-    <value>428, 236</value>
+    <value>403, 236</value>
   </data>
   <data name="lbBadge.Size" type="System.Drawing.Size, System.Drawing">
-    <value>254, 58</value>
+    <value>289, 58</value>
   </data>
   <data name="lbBadge.Text" xml:space="preserve">
-    <value> Present your badge</value>
+    <value> Present your QR Code</value>
   </data>
   <data name="btPeser2.Text" xml:space="preserve">
     <value>2nd Weighing</value>
+  </data>
+  <data name="lbNotFound.Size" type="System.Drawing.Size, System.Drawing">
+    <value>122, 29</value>
+  </data>
+  <data name="lbNotFound.Text" xml:space="preserve">
+    <value>Not Found</value>
   </data>
   <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>

@@ -29,29 +29,30 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AccesCamionQr));
-            this.reportViewer = new Microsoft.Reporting.WinForms.ReportViewer();
-            this.SuspendLayout();
+            reportViewer = new Microsoft.Reporting.WinForms.ReportViewer();
+            SuspendLayout();
             // 
             // reportViewer
             // 
-            this.reportViewer.Location = new System.Drawing.Point(0, 0);
-            this.reportViewer.Name = "ReportViewer";
-            this.reportViewer.ServerReport.BearerToken = null;
-            this.reportViewer.Size = new System.Drawing.Size(396, 300);
-            this.reportViewer.TabIndex = 0;
+            reportViewer.Dock = System.Windows.Forms.DockStyle.Fill;
+            reportViewer.Location = new System.Drawing.Point(0, 0);
+            reportViewer.Name = "ReportViewer";
+            reportViewer.ServerReport.BearerToken = null;
+            reportViewer.Size = new System.Drawing.Size(511, 465);
+            reportViewer.TabIndex = 0;
             // 
             // AccesCamionQr
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(398, 302);
-            this.Controls.Add(this.reportViewer);
-            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Name = "AccesCamionQr";
-            this.Text = "Acces Camion Qr";
-            this.Load += new System.EventHandler(this.AccesCamionQr_Load);
-            this.ResumeLayout(false);
-
+            AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
+            AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            ClientSize = new System.Drawing.Size(511, 465);
+            Controls.Add(reportViewer);
+            Icon = (System.Drawing.Icon)resources.GetObject("$this.Icon");
+            MinimizeBox = false;
+            Name = "AccesCamionQr";
+            Text = "Qr Walterre";
+            Load += AccesCamionQr_Load;
+            ResumeLayout(false);
         }
 
         #endregion

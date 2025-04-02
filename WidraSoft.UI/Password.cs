@@ -69,7 +69,7 @@ namespace WidraSoft.UI
                             else
                                 vg_IsBorneLaunched = true;
                             Utilisateur utilisateur = new Utilisateur(); 
-                            if (typeDemarrage == "Terminal" && IsBorneLaunched == 0)
+                            if (typeDemarrage == "Terminal")
                             {
                                 txtLogin.Text = utilisateur.GetUsername(utilisateurId);
                                 txtPassword.Text = utilisateur.GetPassword(utilisateurId);

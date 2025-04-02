@@ -57,7 +57,7 @@ namespace WidraSoft.UI
             txtTypeAbonnement.Text = "Classic";
             txtValidite.Text = "---";
 
-            if (vg_IsTerminal && !vg_IsBorneLaunched)
+            if (vg_IsTerminal)
             {
                 Form form = new Borne_Home();
                 form.ShowDialog();
@@ -395,8 +395,8 @@ namespace WidraSoft.UI
 
         private void toolStripMenuItem1_Click(object sender, EventArgs e)
         {
-            Form form = new ANPR();
-            form.Show();
+            //Form form = new ANPR("192.168.1.108", "37777", "admin", "widra7760");
+            //form.Show();
         }
 
         private void BorneToolpStripMenuItem_Click(object sender, EventArgs e)

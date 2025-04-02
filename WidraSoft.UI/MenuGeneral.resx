@@ -318,19 +318,19 @@
     <value>ImageAboveText</value>
   </data>
   <data name="toolStripMenuItem2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>263, 22</value>
+    <value>271, 30</value>
   </data>
   <data name="toolStripMenuItem2.Text" xml:space="preserve">
     <value>Tests relais</value>
   </data>
   <data name="toolStripMenuItem1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>263, 22</value>
+    <value>271, 30</value>
   </data>
   <data name="toolStripMenuItem1.Text" xml:space="preserve">
     <value>Caméra ANPR</value>
   </data>
   <data name="ParamPoidstoolStripMenuItem1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>263, 22</value>
+    <value>271, 30</value>
   </data>
   <data name="ParamPoidstoolStripMenuItem1.Text" xml:space="preserve">
     <value>Paramètres de lecture de poids</value>

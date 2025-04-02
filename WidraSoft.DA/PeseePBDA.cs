@@ -149,6 +149,25 @@ namespace WidraSoft.DA
             }
         }
 
+        public DataTable FindWeighingsInProgressByWalterreId(Int32 Id)
+        {
+            String sql = "SELECT * FROM VW_PESEEPB_PENDING WHERE WALTERREID=" + Id;
+            conn.ConnectionString = connString;
+            if (conn.State == ConnectionState.Closed)
+                conn.Open();
+            SqlCommand cmd = new SqlCommand(sql, conn);
+            try
+            {
+                SqlDataReader reader = cmd.ExecuteReader();
+                dt.Load(reader);
+                return dt;
+            }
+            catch
+            {
+                throw;
+            }
+        }
+
         public Int32 GetMaxIdByPontId(Int32 Id)
         {
             String sql = "SELECT MAX(PESEEPBID) FROM PESEEPB WHERE PONTID=" + Id;

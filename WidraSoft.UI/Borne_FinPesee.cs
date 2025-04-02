@@ -46,6 +46,8 @@ namespace WidraSoft.UI
 
             WindowState = FormWindowState.Maximized;
 
+            lbCamera.Visible = false;
+
             if (vg_Lang == "fr")
             {
                 France_flag.Visible = true;
@@ -101,6 +103,7 @@ namespace WidraSoft.UI
 
             Gestion_Modes(vg_mode, vg_IsWalterre);
 
+            
 
             Timer.Interval = 5000;
 
@@ -127,6 +130,8 @@ namespace WidraSoft.UI
             }
             if (mode == "2x1")
             {
+
+                Captures_Images("1x");
                 if (vg_Lang == "fr")
                 {
                     lbTexte.Text = "Première pesée terminée. Vous pouvez quitter la bascule.";
@@ -141,10 +146,14 @@ namespace WidraSoft.UI
                 {
                     lbTexte.Text = "Primer pesaje completado. Puedes dejar la báscula.";
                 }
+
+                
             }
 
             if (mode == "2x2")
+
             {
+                Captures_Images("2x");
                 if (vg_Lang == "fr")
                 {
                     if (afficher_walterre)
@@ -170,12 +179,16 @@ namespace WidraSoft.UI
                         lbTexte.Text = "Pesaje completado. Puedes dejar la báscula.";
                 }
 
+                
+
 
                 try
                 {
                     Form form = new PeseePBTicketA5(vg_Id);
                     form.Show();
                 }
+
+
                 catch { throw; }
                 
             }
@@ -183,6 +196,89 @@ namespace WidraSoft.UI
 
         private void panel1_Paint(object sender, PaintEventArgs e)
         {
+
+        }
+
+        private void Captures_Images(string type)
+        {
+            Pont pont = new Pont(); 
+            DataTable dt = new DataTable();
+            dt = pont.FindById(vg_PontId);
+            foreach (DataRow row in dt.Rows)
+            {
+                int Camera1;
+                int Camera2;
+                int Camera3;
+                string IpCamera1;
+                string IpCamera2;
+                string IpCamera3;
+                string Port1;
+                string Port2;
+                string Port3;
+                string Login1;
+                string Login2;
+                string Login3;
+                string Password1;
+                string Password2;
+                string Password3;
+
+                Camera1 = (int)row["ACTIVER_CAMERA1"];
+                Camera2 = (int)row["ACTIVER_CAMERA2"];
+                Camera3 = (int)row["ACTIVER_CAMERA3"];
+                IpCamera1 = row["ADRESSEIP_1"].ToString();
+                IpCamera2 = row["ADRESSEIP_2"].ToString();
+                IpCamera3 = row["ADRESSEIP_3"].ToString();
+                Port1 = row["PORT_1"].ToString();
+                Port2 = row["PORT_2"].ToString();
+                Port3 = row["PORT_3"].ToString();
+                Login1 = row["LOGIN_1"].ToString();
+                Login2 = row["LOGIN_2"].ToString();
+                Login3 = row["LOGIN_3"].ToString();
+                Password1 = row["PASSWORD_1"].ToString();
+                Password2 = row["PASSWORD_2"].ToString();
+                Password3 = row["PASSWORD_3"].ToString();
+
+                if (Camera1 == 1 )
+
+                {
+                    try
+                    {
+                        Form form1 = new ANPR(IpCamera1, Port1, Login1, Password1, vg_Id.ToString(), type, "1");
+                        form1.Show();
+                        lbCamera.Visible = true;
+                    }
+                    catch { throw; }
+                }
+
+                System.Threading.Thread.Sleep(800);
+
+                if (Camera2 == 1  )
+
+                {
+                    try
+                    {
+                        Form form1 = new ANPR2(IpCamera2, Port2, Login2, Password2, vg_Id.ToString(), type, "2");
+                        form1.Show();
+                        lbCamera.Visible = true;
+                    }
+                    catch { throw; }
+                   
+                }
+
+                System.Threading.Thread.Sleep(800);
+                
+                if (Camera3 == 1)
+
+                {
+                    try
+                    {
+                        Form form1 = new ANPR3(IpCamera3, Port3, Login3, Password3, vg_Id.ToString(), type, "3");
+                        form1.Show();
+                        lbCamera.Visible = true;
+                    }
+                    catch { throw;}
+                }
+            }
 
         }
 

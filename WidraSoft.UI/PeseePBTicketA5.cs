@@ -181,12 +181,6 @@ namespace WidraSoft.UI
             Close();
 
         }
-
-        
-
-        
-
-      
         public string ImageToBase64(Image image, System.Drawing.Imaging.ImageFormat format)
         {
             using (MemoryStream ms = new MemoryStream())
@@ -216,11 +210,11 @@ namespace WidraSoft.UI
               @"<DeviceInfo>
                 <OutputFormat>EMF</OutputFormat>
                 <PageWidth>3.2in</PageWidth>
-                <PageHeight>11in</PageHeight>
-                <MarginTop>0.25in</MarginTop>
-                <MarginLeft>0.25in</MarginLeft>
-                <MarginRight>0.25in</MarginRight>
-                <MarginBottom>0.25in</MarginBottom>
+                <PageHeight>26in</PageHeight>
+                <MarginTop>0.15in</MarginTop>
+                <MarginLeft>0.15in</MarginLeft>
+                <MarginRight>0.15in</MarginRight>
+                <MarginBottom>0.15in</MarginBottom>
             </DeviceInfo>";
             Microsoft.Reporting.WinForms.Warning[] warnings;
             m_streams = new List<Stream>();

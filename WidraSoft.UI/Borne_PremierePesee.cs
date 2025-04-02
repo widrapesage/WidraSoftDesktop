@@ -28,6 +28,7 @@ namespace WidraSoft.UI
         int vg_ScanClientId;
         int vg_CamionChauffeurId;
         int vg_CamionTransporteurId;
+        int vg_ScanWalterreId;
         string vg_Flux;
         int vg_P;
         string vg_Lang;
@@ -150,7 +151,7 @@ namespace WidraSoft.UI
         int CamionTransporteur;
 
         bool IsNumeric = false;
-        public Borne_PremierePesee(string Lang, int PontId, bool Demander_Paramatre, string Flux, int ScanCamionId, int P, int Tare, int ScanChauffeurId, int ScanClientId)
+        public Borne_PremierePesee(string Lang, int PontId, bool Demander_Paramatre, string Flux, int ScanCamionId, int P, int Tare, int ScanChauffeurId, int ScanClientId, int ScanWalterreId)
         {
             InitializeComponent();
             vg_PontId = PontId;
@@ -162,6 +163,7 @@ namespace WidraSoft.UI
             vg_Tare = Tare;
             vg_ScanClientId = ScanClientId;
             vg_ScanChauffeurId = ScanChauffeurId;
+            vg_ScanWalterreId = ScanWalterreId;
         }
 
         private void radioButton1_CheckedChanged(object sender, EventArgs e)
@@ -567,15 +569,25 @@ namespace WidraSoft.UI
 
                 if (EnableWalterre > 0)
                 {
-                    lbTexte.Text = "Entrez le code Walterre";
-                    /*Walterre walterre = new Walterre();
-                    DataTable dt = new DataTable();
-                    dt = walterre.List("1=1");
-                    DgvList.DataSource = dt;
-                    Bind_Walterre();*/
-                    btIgnorer.Visible = false;
-                    lbRequired.Visible = true;
-                    Gestion_Navigation("Walterre");
+                    if (vg_ScanWalterreId > 0)
+                    {
+                        WalterreId = vg_ScanWalterreId;
+                        Etape = "Produit";
+                        Gestion_Etapes();
+                    }
+                    else
+                    {
+                        lbTexte.Text = "Entrez le code Walterre";
+                        /*Walterre walterre = new Walterre();
+                        DataTable dt = new DataTable();
+                        dt = walterre.List("1=1");
+                        DgvList.DataSource = dt;
+                        Bind_Walterre();*/
+                        btIgnorer.Visible = false;
+                        lbRequired.Visible = true;
+                        Gestion_Navigation("Walterre");
+                    }
+                    
                 }
                 else
                 {
@@ -1529,6 +1541,8 @@ namespace WidraSoft.UI
             DgvList.Columns["EMPECHERTICKETSIALERTE"].Visible = false;
             DgvList.Columns["DECHET"].Visible = false;
             DgvList.Columns["TYPEDECHETID"].Visible = false;
+            DgvList.Columns["PRIXUNITAIRE"].Visible = false;
+            DgvList.Columns["TVA"].Visible = false;
             DgvList.Columns["DATECREATION"].Visible = false;
 
             DgvList.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
@@ -3037,7 +3051,7 @@ namespace WidraSoft.UI
                 int maxid = 0;
                 try
                 {
-                    produit.Add(lbMessage.Text, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0);
+                    produit.Add(lbMessage.Text, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0);
                     maxid = produit.GetMaxId();
                 }
                 catch

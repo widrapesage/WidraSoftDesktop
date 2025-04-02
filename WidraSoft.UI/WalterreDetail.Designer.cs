@@ -37,6 +37,8 @@
             France_flag = new System.Windows.Forms.PictureBox();
             cbLang = new System.Windows.Forms.ComboBox();
             panelNavigation = new System.Windows.Forms.Panel();
+            pictureBox5 = new System.Windows.Forms.PictureBox();
+            linkLabel2 = new System.Windows.Forms.LinkLabel();
             pictureBox4 = new System.Windows.Forms.PictureBox();
             linkLabel1 = new System.Windows.Forms.LinkLabel();
             pictureBox3 = new System.Windows.Forms.PictureBox();
@@ -97,6 +99,7 @@
             ((System.ComponentModel.ISupportInitialize)England_flag).BeginInit();
             ((System.ComponentModel.ISupportInitialize)France_flag).BeginInit();
             panelNavigation.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox5).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox4).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
@@ -190,6 +193,8 @@
             // 
             panelNavigation.BackColor = System.Drawing.Color.FromArgb(58, 62, 60);
             panelNavigation.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            panelNavigation.Controls.Add(pictureBox5);
+            panelNavigation.Controls.Add(linkLabel2);
             panelNavigation.Controls.Add(pictureBox4);
             panelNavigation.Controls.Add(linkLabel1);
             panelNavigation.Controls.Add(pictureBox3);
@@ -203,6 +208,36 @@
             panelNavigation.Name = "panelNavigation";
             panelNavigation.Size = new System.Drawing.Size(1066, 35);
             panelNavigation.TabIndex = 85;
+            // 
+            // pictureBox5
+            // 
+            pictureBox5.BackColor = System.Drawing.Color.Transparent;
+            pictureBox5.Cursor = System.Windows.Forms.Cursors.Hand;
+            pictureBox5.Image = Properties.Resources.printer;
+            pictureBox5.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            pictureBox5.Location = new System.Drawing.Point(523, 8);
+            pictureBox5.Name = "pictureBox5";
+            pictureBox5.Size = new System.Drawing.Size(21, 22);
+            pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            pictureBox5.TabIndex = 87;
+            pictureBox5.TabStop = false;
+            // 
+            // linkLabel2
+            // 
+            linkLabel2.ActiveLinkColor = System.Drawing.Color.FromArgb(72, 190, 117);
+            linkLabel2.AutoSize = true;
+            linkLabel2.BackColor = System.Drawing.Color.Transparent;
+            linkLabel2.Font = new System.Drawing.Font("Calibri", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            linkLabel2.ForeColor = System.Drawing.Color.White;
+            linkLabel2.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            linkLabel2.LinkColor = System.Drawing.Color.White;
+            linkLabel2.Location = new System.Drawing.Point(547, 8);
+            linkLabel2.Name = "linkLabel2";
+            linkLabel2.Size = new System.Drawing.Size(123, 18);
+            linkLabel2.TabIndex = 86;
+            linkLabel2.TabStop = true;
+            linkLabel2.Text = "Imprimer acces QR";
+            linkLabel2.LinkClicked += linkLabel2_LinkClicked;
             // 
             // pictureBox4
             // 
@@ -946,6 +981,7 @@
             ((System.ComponentModel.ISupportInitialize)France_flag).EndInit();
             panelNavigation.ResumeLayout(false);
             panelNavigation.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox5).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox4).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox3).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
@@ -1022,5 +1058,7 @@
         private System.Windows.Forms.TextBox txtNom;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.LinkLabel linkLabel1;
+        private System.Windows.Forms.PictureBox pictureBox5;
+        private System.Windows.Forms.LinkLabel linkLabel2;
     }
 }

@@ -338,7 +338,7 @@ namespace WidraSoft.UI
             else
             {
                 txtStatus.ForeColor = Color.FromArgb(11, 228, 132);
-                
+
             }
         }
 
@@ -445,7 +445,7 @@ namespace WidraSoft.UI
                     if (txtStatus.Text == "Pending")
                     {
                         txtStatus.ForeColor = Color.OrangeRed;
-                        
+
                     }
 
                     else
@@ -659,10 +659,28 @@ namespace WidraSoft.UI
                     Form form = new ReportingWalterre(vg_Id, "1=1 AND WALTERREID = " + vg_Id.ToString());
                     form.Show();
                 }
-                
+
             }
             catch { throw; }
-            
+
+        }
+
+        private void linkLabel2_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            if (txtId.Text != "" && txtCode.Text != "" && cbClientId.Text != "")
+            {
+                Form form = new AccesCamionQr(txtCode.Text, txtId.Text, cbClientId.Text);
+                form.Show();
+            }
+            else
+            {
+                if (cbLang.Text == "FR")
+                    Custom_MessageBox.Show("FR", "Informations incomplètes", "Walterre", MessageBoxButtons.OK, MessageBoxIcon.Stop);
+                else if (cbLang.Text == "EN")
+                    Custom_MessageBox.Show("EN", "Informations incomplètes", "Walterre", MessageBoxButtons.OK, MessageBoxIcon.Stop);
+                else
+                    Custom_MessageBox.Show("ES", "No puede cerrar la página hasta que se valide el cambio", "Puente", MessageBoxButtons.OK, MessageBoxIcon.Stop);
+            }
         }
     }
 }

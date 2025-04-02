@@ -19,13 +19,17 @@ namespace WidraSoft.UI
 {
     public partial class AccesCamionQr : Form
     {
-        string vg_Plaque;
+        string vg_Name;
+        string vg_Id;
         string qr_code;
+        string vg_Client;
         System.Drawing.Imaging.ImageFormat f = System.Drawing.Imaging.ImageFormat.Png;
-        public AccesCamionQr(string Plaque)
+        public AccesCamionQr(string Plaque, String Id, String Client)
         {
             InitializeComponent();
-            vg_Plaque = Plaque;
+            vg_Name = Plaque;
+            vg_Id = Id;
+            vg_Client = Client;
         }
 
         private void AccesCamionQr_Load(object sender, EventArgs e)
@@ -52,16 +56,17 @@ namespace WidraSoft.UI
 
             };
 
-            using var bitmap = writer.Write(vg_Plaque);
+            using var bitmap = writer.Write(vg_Id);
             using var stream = new MemoryStream();
             bitmap.Encode(stream, SKEncodedImageFormat.Png, 200);
             Image img_qrcode = System.Drawing.Image.FromStream(stream);
             qr_code = ImageToBase64(img_qrcode, f);
 
-            ReportParameter[] parameters = new ReportParameter[2];
+            ReportParameter[] parameters = new ReportParameter[3];
 
-            parameters[0] = new ReportParameter("Name", vg_Plaque);
-            parameters[1] = new ReportParameter("Qr", qr_code);
+            parameters[0] = new ReportParameter("Name", vg_Name);
+            parameters[1] = new ReportParameter("Client", vg_Client);
+            parameters[2] = new ReportParameter("Qr", qr_code);
 
             this.reportViewer.LocalReport.SetParameters(parameters);
 

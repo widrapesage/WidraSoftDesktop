@@ -343,7 +343,7 @@
             Controls.Add(label3);
             Icon = (System.Drawing.Icon)resources.GetObject("$this.Icon");
             Name = "ANPR";
-            Text = "ANPR";
+            Text = "Camera";
             Load += ANPR_Load;
             ((System.ComponentModel.ISupportInitialize)pictureBox_preview).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox_image).EndInit();

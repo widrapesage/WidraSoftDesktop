@@ -86,6 +86,10 @@ namespace WidraSoft.UI
             cbTypeScanner.ValueMember = null;
             cbTypeScanner.DisplayMember = Values.TypeScanner[0].ToString();
 
+            cbTypeScanner2.DataSource = Values.TypeScanner2;
+            cbTypeScanner2.ValueMember = null;
+            cbTypeScanner2.DisplayMember = Values.TypeScanner2[0].ToString();
+
             if (vg_Mode == "Add")
             {
                 try
@@ -126,7 +130,9 @@ namespace WidraSoft.UI
             if (txtId.Text == "" && txtDateCreation.Text == "" && txtDesignation.Text == "" && cbWeight_SettingsId.Text == "" && cbWeighing_SettingsId.Text == "" && txtCOM.Text == "" && txtActiverPoids.Text == "" && cbBaudRate.Text == "" && cbDataBits.Text == ""
                 && cbStopBits.Text == "" && cbHandshake.Text == "" && txtReadTimeOut.Text == "" && txtMachine.Text == "" && cbDemarrage.Text == "" && cbUtilisateurId.Text == "" && txtActiverMultipleParam.Text == "" && cbBornePremierePesee.Text == "" && cbBorneDeuxiemePesee.Text == ""
                 && cbBorneTareManuelle.Text == "" && cbFlux_Default.Text == "" && txtActiverScanner.Text == "" && cbTypeScanner.Text == "" && txtActiverBarriere.Text == "" && txtCOMBarriere.Text == "" && txtCOMScanner.Text == ""
-                && txtContact1.Text == "" && txtContact2.Text == "" && txtContact3.Text == "")
+                && txtContact1.Text == "" && txtContact2.Text == "" && txtContact3.Text == "" && txtCamera1.Text == "" && ip_textBox1.Text == "" && port_textBox1.Text == "" && name_textBox1.Text == ""
+                && pwd_textBox1.Text == "" && txtCamera2.Text == "" && ip_textBox2.Text == "" && port_textBox2.Text == "" && name_textBox2.Text == "" && pwd_textBox2.Text == "" && txtCamera3.Text == "" && ip_textBox3.Text == "" && port_textBox3.Text == "" && name_textBox3.Text == ""
+                && pwd_textBox3.Text == "" && txtActiverScanner2.Text == "" && cbTypeScanner2.Text == "")
             {
                 lbModifier.Enabled = false;
                 lbModifier.BackColor = Color.Transparent;
@@ -144,6 +150,18 @@ namespace WidraSoft.UI
 
                 txtActiverBarriere.Text = "0";
                 chx_ActiverBarriere.Checked = false;
+
+                txtCamera1.Text = "0";
+                chx_Camera1.Checked = false;
+
+                txtCamera2.Text = "0";
+                chx_Camera2.Checked = false;
+
+                txtCamera3.Text = "0";
+                chx_Camera3.Checked = false;
+
+                txtActiverScanner2.Text = "0";
+                chx_ActiverScanner2.Checked = false;
 
                 txtMin.Text = "0";
             }
@@ -225,6 +243,39 @@ namespace WidraSoft.UI
                 txtContact1.Text = row["CONTACT1"].ToString();
                 txtContact2.Text = row["CONTACT2"].ToString();
                 txtContact3.Text = row["CONTACT3"].ToString();
+                txtCamera1.Text = row["ACTIVER_CAMERA1"].ToString();
+                if (txtCamera1.Text == "1")
+                    chx_Camera1.Checked = true;
+                else
+                    chx_Camera1.Checked = false;
+                ip_textBox1.Text = row["ADRESSEIP_1"].ToString();
+                port_textBox1.Text = row["PORT_1"].ToString();
+                name_textBox1.Text = row["LOGIN_1"].ToString();
+                pwd_textBox1.Text = row["PASSWORD_1"].ToString();
+                txtCamera2.Text = row["ACTIVER_CAMERA2"].ToString();
+                if (txtCamera2.Text == "1")
+                    chx_Camera2.Checked = true;
+                else
+                    chx_Camera2.Checked = false;
+                ip_textBox2.Text = row["ADRESSEIP_2"].ToString();
+                port_textBox2.Text = row["PORT_2"].ToString();
+                name_textBox2.Text = row["LOGIN_2"].ToString();
+                pwd_textBox2.Text = row["PASSWORD_2"].ToString();
+                txtCamera3.Text = row["ACTIVER_CAMERA3"].ToString();
+                if (txtCamera3.Text == "1")
+                    chx_Camera3.Checked = true;
+                else
+                    chx_Camera3.Checked = false;
+                ip_textBox3.Text = row["ADRESSEIP_3"].ToString();
+                port_textBox3.Text = row["PORT_3"].ToString();
+                name_textBox3.Text = row["LOGIN_3"].ToString();
+                pwd_textBox3.Text = row["PASSWORD_3"].ToString();
+                txtActiverScanner2.Text = row["ACTIVER_SCANNER2"].ToString();
+                if (txtActiverScanner2.Text == "1")
+                    chx_ActiverScanner2.Checked = true;
+                else
+                    chx_ActiverScanner2.Checked = false;
+                cbTypeScanner2.Text = row["TYPESCANNER2"].ToString();
             }
         }
 
@@ -262,8 +313,26 @@ namespace WidraSoft.UI
             txtCOMScanner.Enabled = false;
             txtContact1.Enabled = false;
             txtContact2.Enabled = false;
-            txtContact3.Enabled = false;    
+            txtContact3.Enabled = false;
+            chx_Camera1.Enabled = false;
+            ip_textBox1.Enabled = false;
+            port_textBox1.Enabled = false;
+            name_textBox1.Enabled = false;
+            pwd_textBox1.Enabled = false;
+            chx_Camera2.Enabled = false;
+            ip_textBox2.Enabled = false;
+            port_textBox2.Enabled = false;
+            name_textBox2.Enabled = false;
+            pwd_textBox2.Enabled = false;
+            chx_Camera3.Enabled = false;
+            ip_textBox3.Enabled = false;
+            port_textBox3.Enabled = false;
+            name_textBox3.Enabled = false;
+            pwd_textBox3.Enabled = false;
+            chx_ActiverScanner2.Enabled = false;
+            cbTypeScanner2.Enabled = false;
             pbUpdating.Visible = false;
+
 
             vg_IsEnabled = false;
         }
@@ -301,8 +370,25 @@ namespace WidraSoft.UI
             txtCOMBarriere.Enabled = true;
             txtCOMScanner.Enabled = true;
             txtContact1.Enabled = true;
-            txtContact2.Enabled = true; 
+            txtContact2.Enabled = true;
             txtContact3.Enabled = true;
+            chx_Camera1.Enabled = true;
+            ip_textBox1.Enabled = true;
+            port_textBox1.Enabled = true;
+            name_textBox1.Enabled = true;
+            pwd_textBox1.Enabled = true;
+            chx_Camera2.Enabled = true;
+            ip_textBox2.Enabled = true;
+            port_textBox2.Enabled = true;
+            name_textBox2.Enabled = true;
+            pwd_textBox2.Enabled = true;
+            chx_Camera3.Enabled = true;
+            ip_textBox3.Enabled = true;
+            port_textBox3.Enabled = true;
+            name_textBox3.Enabled = true;
+            pwd_textBox3.Enabled = true;
+            chx_ActiverScanner2.Enabled = true;
+            cbTypeScanner2.Enabled = true;
             pbUpdating.Visible = true;
 
             vg_IsEnabled = true;
@@ -343,6 +429,27 @@ namespace WidraSoft.UI
             txtContact1.Text = "";
             txtContact2.Text = "";
             txtContact3.Text = "";
+            txtCamera1.Text = "";
+            chx_Camera1.Enabled = false;
+            ip_textBox1.Text = "";
+            port_textBox1.Text = "";
+            name_textBox1.Text = "";
+            pwd_textBox1.Text = "";
+            txtCamera2.Text = "";
+            chx_Camera2.Enabled = false;
+            ip_textBox2.Text = "";
+            port_textBox2.Text = "";
+            name_textBox2.Text = "";
+            pwd_textBox2.Text = "";
+            txtCamera3.Text = "";
+            chx_Camera3.Enabled = false;
+            ip_textBox3.Text = "";
+            port_textBox3.Text = "";
+            name_textBox3.Text = "";
+            pwd_textBox3.Text = "";
+            txtActiverScanner2.Text = "";
+            chx_ActiverScanner2.Enabled = false;
+            cbTypeScanner2.Text = "";
         }
 
         private void Bind_DgvFirmes()
@@ -418,7 +525,7 @@ namespace WidraSoft.UI
             {
                 if (txtId.Text == "" && txtDateCreation.Text == "" && txtDesignation.Text != "" && cbWeight_SettingsId.Text != "" && cbWeighing_SettingsId.Text != "" && txtCOM.Text != "" && txtActiverPoids.Text != ""
                     && cbBaudRate.Text != "" && cbDataBits.Text != "" && cbStopBits.Text != "" && cbHandshake.Text != "" && txtReadTimeOut.Text != "" && txtActiverMultipleParam.Text != "" && txtMin.Text != "" && txtMachine.Text != "" && cbDemarrage.Text != ""
-                    && txtActiverScanner.Text != "" && txtActiverBarriere.Text != "")
+                    && txtActiverScanner.Text != "" && txtActiverBarriere.Text != "" && txtCamera1.Text != "" && txtCamera2.Text != "" && txtCamera3.Text != "" && txtActiverScanner2.Text != "")
                 {
                     int ActiverPoids;
                     int ActiverMultipleParam;
@@ -428,6 +535,10 @@ namespace WidraSoft.UI
                     int PoidsDetection;
                     int ActiverScanner;
                     int ActiverBarriere;
+                    int Camera1;
+                    int Camera2;
+                    int Camera3;
+                    int ActiverScanner2;
                     bool IsParsableActiverPoids;
                     bool IsParsableBaudRate;
                     bool IsParsableDataBits;
@@ -436,6 +547,10 @@ namespace WidraSoft.UI
                     bool IsParsablePoidsDetection;
                     bool IsParsableActiverScanner;
                     bool IsParsableActiverBarriere;
+                    bool IsParsableCamera1;
+                    bool IsParsableCamera2;
+                    bool IsParsableCamera3;
+                    bool IsParsableActiverScanner2;
                     IsParsableActiverPoids = Int32.TryParse(txtActiverPoids.Text, out ActiverPoids);
                     IsParsableBaudRate = Int32.TryParse(cbBaudRate.Text, out BaudRate);
                     IsParsableDataBits = Int32.TryParse(cbDataBits.Text, out DataBits);
@@ -444,14 +559,22 @@ namespace WidraSoft.UI
                     IsParsablePoidsDetection = Int32.TryParse(txtMin.Text, out PoidsDetection);
                     IsParsableActiverScanner = Int32.TryParse(txtActiverScanner.Text, out ActiverScanner);
                     IsParsableActiverBarriere = Int32.TryParse(txtActiverBarriere.Text, out ActiverBarriere);
+                    IsParsableCamera1 = Int32.TryParse(txtCamera1.Text, out Camera1);
+                    IsParsableCamera2 = Int32.TryParse(txtCamera2.Text, out Camera2);
+                    IsParsableCamera3 = Int32.TryParse(txtCamera3.Text, out Camera3);
+                    IsParsableActiverScanner2 = Int32.TryParse(txtActiverScanner2.Text, out ActiverScanner2);
+
                     try
                     {
-                        if (IsParsableActiverPoids && IsParsableBaudRate && IsParsableDataBits && IsParsableReadTimeOut && IsParsableActiverMultipleParam && IsParsablePoidsDetection && IsParsableActiverScanner && IsParsableActiverBarriere)
+                        if (IsParsableActiverPoids && IsParsableBaudRate && IsParsableDataBits && IsParsableReadTimeOut && IsParsableActiverMultipleParam && IsParsablePoidsDetection && IsParsableActiverScanner && IsParsableActiverBarriere
+                            && IsParsableCamera1 && IsParsableCamera2 && IsParsableCamera3 && IsParsableActiverScanner2)
                         {
                             Pont pont = new Pont();
                             pont.Add(txtDesignation.Text, txtCOM.Text, Common_functions.CbSelectedValue_Convert_Int(cbWeight_SettingsId), Common_functions.CbSelectedValue_Convert_Int(cbWeighing_SettingsId), ActiverPoids, BaudRate, DataBits, cbStopBits.Text,
                                  cbHandshake.Text, ReadTimeOut, txtMachine.Text, cbDemarrage.Text, Common_functions.CbSelectedValue_Convert_Int(cbUtilisateurId), ActiverMultipleParam, PoidsDetection, cbBornePremierePesee.Text, cbBorneDeuxiemePesee.Text
-                                 , cbBorneTareManuelle.Text, cbFlux_Default.Text, ActiverScanner, cbTypeScanner.Text, ActiverBarriere, txtCOMBarriere.Text, txtCOMScanner.Text, txtContact1.Text, txtContact2.Text, txtContact3.Text, 0);
+                                 , cbBorneTareManuelle.Text, cbFlux_Default.Text, ActiverScanner, cbTypeScanner.Text, ActiverBarriere, txtCOMBarriere.Text, txtCOMScanner.Text, txtContact1.Text, txtContact2.Text, txtContact3.Text, 0, Camera1, ip_textBox1.Text,
+                                 port_textBox1.Text, name_textBox1.Text, pwd_textBox1.Text, Camera2, ip_textBox2.Text, port_textBox2.Text, name_textBox2.Text, pwd_textBox2.Text, Camera3, ip_textBox3.Text,
+                                 port_textBox3.Text, name_textBox3.Text, pwd_textBox3.Text, ActiverScanner2, cbTypeScanner2.Text);
                             if (cbLang.Text == "FR")
                                 Custom_MessageBox.Show("FR", "Pont ajouté avec succès", "Pont", MessageBoxButtons.OK, MessageBoxIcon.Information);
                             else if (cbLang.Text == "EN")
@@ -499,7 +622,7 @@ namespace WidraSoft.UI
                     {
                         if (txtId.Text != "" && txtDateCreation.Text != "" && txtDesignation.Text != "" && cbWeight_SettingsId.Text != "" && cbWeighing_SettingsId.Text != "" && txtCOM.Text != "" && txtActiverPoids.Text != ""
                              && cbBaudRate.Text != "" && cbDataBits.Text != "" && cbStopBits.Text != "" && cbHandshake.Text != "" && txtReadTimeOut.Text != "" && txtActiverMultipleParam.Text != "" && txtMin.Text != "" && txtMachine.Text != "" && cbDemarrage.Text != ""
-                             && txtActiverScanner.Text != "" && txtActiverBarriere.Text != "")
+                             && txtActiverScanner.Text != "" && txtActiverBarriere.Text != "" && txtCamera1.Text != "" && txtCamera2.Text != "" && txtCamera3.Text != "" && txtActiverScanner2.Text != "")
                         {
                             int Id;
                             int ActiverPoids;
@@ -510,6 +633,10 @@ namespace WidraSoft.UI
                             int PoidsDetection;
                             int ActiverScanner;
                             int ActiverBarriere;
+                            int Camera1;
+                            int Camera2;
+                            int Camera3;
+                            int ActiverScanner2;
                             bool IsParsableId;
                             bool IsParsableActiverPoids;
                             bool IsParsableBaudRate;
@@ -519,6 +646,10 @@ namespace WidraSoft.UI
                             bool IsParsablePoidsDetection;
                             bool IsParsableActiverScanner;
                             bool IsParsableActiverBarriere;
+                            bool IsParsableCamera1;
+                            bool IsParsableCamera2;
+                            bool IsParsableCamera3;
+                            bool IsParsableActiverScanner2;
                             IsParsableId = Int32.TryParse(txtId.Text, out Id);
                             IsParsableActiverPoids = Int32.TryParse(txtActiverPoids.Text, out ActiverPoids);
                             IsParsableBaudRate = Int32.TryParse(cbBaudRate.Text, out BaudRate);
@@ -528,14 +659,21 @@ namespace WidraSoft.UI
                             IsParsablePoidsDetection = Int32.TryParse(txtMin.Text, out PoidsDetection);
                             IsParsableActiverScanner = Int32.TryParse(txtActiverScanner.Text, out ActiverScanner);
                             IsParsableActiverBarriere = Int32.TryParse(txtActiverBarriere.Text, out ActiverBarriere);
+                            IsParsableCamera1 = Int32.TryParse(txtCamera1.Text, out Camera1);
+                            IsParsableCamera2 = Int32.TryParse(txtCamera2.Text, out Camera2);
+                            IsParsableCamera3 = Int32.TryParse(txtCamera3.Text, out Camera3);
+                            IsParsableActiverScanner2 = Int32.TryParse(txtActiverScanner2.Text, out ActiverScanner2);
                             try
                             {
-                                if (IsParsableActiverPoids && IsParsableBaudRate && IsParsableDataBits && IsParsableReadTimeOut && IsParsableActiverMultipleParam && IsParsablePoidsDetection && IsParsableActiverScanner && IsParsableActiverBarriere)
+                                if (IsParsableActiverPoids && IsParsableBaudRate && IsParsableDataBits && IsParsableReadTimeOut && IsParsableActiverMultipleParam && IsParsablePoidsDetection && IsParsableActiverScanner && IsParsableActiverBarriere
+                                    && IsParsableCamera1 && IsParsableCamera2 && IsParsableCamera3)
                                 {
                                     Pont pont = new Pont();
                                     pont.Update(Id, txtDesignation.Text, txtCOM.Text, Common_functions.CbSelectedValue_Convert_Int(cbWeight_SettingsId), Common_functions.CbSelectedValue_Convert_Int(cbWeighing_SettingsId), ActiverPoids, BaudRate, DataBits, cbStopBits.Text,
                                          cbHandshake.Text, ReadTimeOut, txtMachine.Text, cbDemarrage.Text, Common_functions.CbSelectedValue_Convert_Int(cbUtilisateurId), ActiverMultipleParam, PoidsDetection, cbBornePremierePesee.Text, cbBorneDeuxiemePesee.Text
-                                 , cbBorneTareManuelle.Text, cbFlux_Default.Text, ActiverScanner, cbTypeScanner.Text, ActiverBarriere, txtCOMBarriere.Text, txtCOMScanner.Text, txtContact1.Text, txtContact2.Text, txtContact3.Text, 0);
+                                 , cbBorneTareManuelle.Text, cbFlux_Default.Text, ActiverScanner, cbTypeScanner.Text, ActiverBarriere, txtCOMBarriere.Text, txtCOMScanner.Text, txtContact1.Text, txtContact2.Text, txtContact3.Text, 0, Camera1, ip_textBox1.Text,
+                                 port_textBox1.Text, name_textBox1.Text, pwd_textBox1.Text, Camera2, ip_textBox2.Text, port_textBox2.Text, name_textBox2.Text, pwd_textBox2.Text, Camera3, ip_textBox3.Text,
+                                 port_textBox3.Text, name_textBox3.Text, pwd_textBox3.Text, ActiverScanner2, cbTypeScanner2.Text);
                                     if (cbLang.Text == "FR")
                                         Custom_MessageBox.Show("FR", "Pont modifié avec succès", "Pont", MessageBoxButtons.OK, MessageBoxIcon.Information);
                                     else if (cbLang.Text == "EN")
@@ -753,6 +891,38 @@ namespace WidraSoft.UI
                 txtActiverBarriere.Text = "1";
             else
                 txtActiverBarriere.Text = "0";
+        }
+
+        private void chx_Camera1_CheckedChanged(object sender, EventArgs e)
+        {
+            if (chx_Camera1.Checked)
+                txtCamera1.Text = "1";
+            else
+                txtCamera1.Text = "0";
+        }
+
+        private void chx_Camera2_CheckedChanged(object sender, EventArgs e)
+        {
+            if (chx_Camera2.Checked)
+                txtCamera2.Text = "1";
+            else
+                txtCamera2.Text = "0";
+        }
+
+        private void chx_Camera3_CheckedChanged(object sender, EventArgs e)
+        {
+            if (chx_Camera3.Checked)
+                txtCamera3.Text = "1";
+            else
+                txtCamera3.Text = "0";
+        }
+
+        private void chx_ActiverScanner2_CheckedChanged(object sender, EventArgs e)
+        {
+            if (chx_ActiverScanner2.Checked)
+                txtActiverScanner2.Text = "1";
+            else
+                txtActiverScanner2.Text = "0";
         }
     }
 }

@@ -22,7 +22,8 @@ namespace WidraSoft.UI
         string vg_FluxDefault;
         int vg_ScanChauffeurId;
         int vg_ScanClientId;
-        public Borne_ChoixFlux(string Lang, int PontId, bool Demander_Paramatre, int ScanCamionId, int P, int Tare, string Flux_default, int ScanChauffeurId, int ScanClientId)
+        int vg_ScanWalterreId;
+        public Borne_ChoixFlux(string Lang, int PontId, bool Demander_Paramatre, int ScanCamionId, int P, int Tare, string Flux_default, int ScanChauffeurId, int ScanClientId, int ScanWalterreId)
         {
             InitializeComponent();
             vg_Lang = Lang;
@@ -34,6 +35,7 @@ namespace WidraSoft.UI
             vg_FluxDefault = Flux_default;  
             vg_ScanChauffeurId = ScanChauffeurId;
             vg_ScanClientId = ScanClientId; 
+            vg_ScanWalterreId = ScanWalterreId;
         }
 
         private void Borne_ChoixFlux_Load(object sender, EventArgs e)
@@ -49,6 +51,7 @@ namespace WidraSoft.UI
                 Camion camion = new Camion();
                 Chauffeur chauffeur = new Chauffeur();
                 Client client = new Client();
+                Walterre walterre = new Walterre(); 
                 if (vg_ScanCamionId > 0)
                 {
                     if (vg_Lang == "fr")
@@ -221,20 +224,78 @@ namespace WidraSoft.UI
                         Spain_flag.Visible = true;
                     }
                 }
+
+                if (vg_ScanWalterreId > 0)
+                {
+                    if (vg_Lang == "fr")
+                    {
+
+                        Language_Manager language_Manager = new Language_Manager();
+                        language_Manager.ChangeLanguage("fr", this, typeof(Borne_ChoixFlux));
+                        lbTexte.Text = "Choisir le flux";
+                        if (walterre.IfExists(walterre.GetName(vg_ScanWalterreId)))
+                        {
+                            lbMessage.Text = "Scan du chantier Walterre " + walterre.GetName(vg_ScanClientId) + " validé";
+                        }
+                        else
+                        {
+                            lbMessage.Text = "";
+                        }
+                        France_flag.Visible = true;
+                        England_flag.Visible = false;
+                        Spain_flag.Visible = false;
+                    }
+                    else if (vg_Lang == "en")
+                    {
+
+                        Language_Manager language_Manager = new Language_Manager();
+                        language_Manager.ChangeLanguage("en", this, typeof(Borne_ChoixFlux));
+                        lbTexte.Text = "Choose the flow";
+                        if (walterre.IfExists(walterre.GetName(vg_ScanWalterreId)))
+                        {
+                            lbMessage.Text = "Walterre " + walterre.GetName(vg_ScanWalterreId) + " scan passed";
+                        }
+                        else
+                        {
+                            lbMessage.Text = "";
+                        }
+                        France_flag.Visible = false;
+                        England_flag.Visible = true;
+                        Spain_flag.Visible = false;
+                    }
+                    else
+                    {
+
+                        Language_Manager language_Manager = new Language_Manager();
+                        language_Manager.ChangeLanguage("es", this, typeof(Borne_ChoixFlux));
+                        lbTexte.Text = "Elegir flujo";
+                        if (walterre.IfExists(walterre.GetName(vg_ScanWalterreId)))
+                        {
+                            lbMessage.Text = "Escaneo de walterre " + walterre.GetName(vg_ScanWalterreId) + " aprobado";
+                        }
+                        else
+                        {
+                            lbMessage.Text = "";
+                        }
+                        France_flag.Visible = false;
+                        England_flag.Visible = false;
+                        Spain_flag.Visible = true;
+                    }
+                }
             }
             
         }
 
         private void btChargement_Click(object sender, EventArgs e)
         {
-            Form form = new Borne_PremierePesee(vg_Lang, vg_PontId, vg_DemanderParametre, "Out", vg_ScanCamionId, vg_P, vg_Tare, vg_ScanChauffeurId, vg_ScanClientId); 
+            Form form = new Borne_PremierePesee(vg_Lang, vg_PontId, vg_DemanderParametre, "Out", vg_ScanCamionId, vg_P, vg_Tare, vg_ScanChauffeurId, vg_ScanClientId, vg_ScanWalterreId); 
             form.Show();
             Close();
         }
 
         private void btDechargement_Click(object sender, EventArgs e)
         {
-            Form form = new Borne_PremierePesee(vg_Lang, vg_PontId, vg_DemanderParametre, "In", vg_ScanCamionId, vg_P, vg_Tare, vg_ScanChauffeurId, vg_ScanClientId);
+            Form form = new Borne_PremierePesee(vg_Lang, vg_PontId, vg_DemanderParametre, "In", vg_ScanCamionId, vg_P, vg_Tare, vg_ScanChauffeurId, vg_ScanClientId, vg_ScanWalterreId);
             form.Show();
             Close();
         }

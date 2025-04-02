@@ -38,6 +38,7 @@
             France_flag = new System.Windows.Forms.PictureBox();
             panel1 = new System.Windows.Forms.Panel();
             Timer = new System.Windows.Forms.Timer(components);
+            lbCamera = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)Spain_flag).BeginInit();
@@ -100,6 +101,7 @@
             // panel1
             // 
             resources.ApplyResources(panel1, "panel1");
+            panel1.Controls.Add(lbCamera);
             panel1.Controls.Add(pictureBox2);
             panel1.Controls.Add(Spain_flag);
             panel1.Controls.Add(England_flag);
@@ -112,6 +114,12 @@
             // Timer
             // 
             Timer.Tick += Timer_Tick;
+            // 
+            // lbCamera
+            // 
+            resources.ApplyResources(lbCamera, "lbCamera");
+            lbCamera.ForeColor = System.Drawing.Color.Orange;
+            lbCamera.Name = "lbCamera";
             // 
             // Borne_FinPesee
             // 
@@ -145,5 +153,6 @@
         private System.Windows.Forms.PictureBox France_flag;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Timer Timer;
+        private System.Windows.Forms.Label lbCamera;
     }
 }

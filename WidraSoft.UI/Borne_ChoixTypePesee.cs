@@ -23,6 +23,7 @@ namespace WidraSoft.UI
         int ScanCamionId = -1;
         int ScanChauffeurId = -1;
         int ScanClientId = -1;
+        int ScanWalterreId = -1;
         string Flux_Default;
 
         SerialPort comScanner = new SerialPort();
@@ -166,7 +167,7 @@ namespace WidraSoft.UI
         {
             try
             {
-                Form form = new Borne_ChoixFlux(vg_Lang, vg_PontId, vg_Demander_Paramatre, -1, Convert.ToInt32(txtPoids.Text), 0, Flux_Default, -1, -1);
+                Form form = new Borne_ChoixFlux(vg_Lang, vg_PontId, vg_Demander_Paramatre, -1, Convert.ToInt32(txtPoids.Text), 0, Flux_Default, -1, -1, -1);
                 form.Show();
                 Close();
             }
@@ -196,36 +197,48 @@ namespace WidraSoft.UI
             {
                 Read_Badge();
             }
+            if (vg_TypeScanner == "Lecteur QR Code HoneyWell")
+            {
+                Read_QrCode_HoneyWell();
+            }
             
-            /* string s;
-             byte[] trame = new byte[comHoneywell.BytesToRead];
+        }
+
+        private void Read_QrCode_HoneyWell()
+        {
+             string s;
+             byte[] trame = new byte[comScanner.BytesToRead];
              try
              {
-                 comHoneywell.Read(trame, 0, trame.Length);
+                 comScanner.Read(trame, 0, trame.Length);
                  s = System.Text.Encoding.ASCII.GetString(trame);
 
-                 if (s.Length > 5)
+                 if (s.Length >= 1)
                  {
-                     Camion camion = new Camion();
-                     if (camion.IfExists(s))
+                     Walterre walterre = new Walterre();
+                     if (walterre.IfExistsByIdString(s))
                      {
-                         if (camion.IfIsPending(s))
+                         if (walterre.IfExists_Valid_ByIdString(s))
                          {
-                             Form form = new Borne_DeuxiemePesee(Convert.ToInt32(txtPoids.Text), camion.GetPendingId(s), s, vg_Lang);
-                             form.Show();
+                            int Id;
+                            bool IsParsableId;
+                            IsParsableId = int.TryParse(s, out Id);
+                             ScanWalterreId= Id;
+                            Form form = new Borne_ChoixFlux(vg_Lang, vg_PontId, vg_Demander_Paramatre, ScanCamionId, Convert.ToInt32(txtPoids.Text), 0, Flux_Default, ScanChauffeurId, ScanClientId, ScanWalterreId);
+                            form.Show();
+                            Close();
+                            
                          }
                          else
                          {
-                             ScanCamionId = camion.GetIdByName(s);
-                             Form form = new Borne_ChoixFlux(vg_Lang, vg_PontId, vg_Demander_Paramatre, ScanCamionId, Convert.ToInt32(txtPoids.Text), 0);
-                             form.Show();
+                            lbNotFound.Visible = true;
                          }
 
 
                      }
                      else
                      {
-                         //ScanCamionId = -1;
+                          lbNotFound.Visible = true;
                      }
                  }
 
@@ -234,10 +247,8 @@ namespace WidraSoft.UI
              catch
              {
                  throw;
-             }*/
+             }
         }
-
-        
         private void Read_Badge()
         {
             String s;
@@ -274,7 +285,7 @@ namespace WidraSoft.UI
                                 }
                                 else
                                 {
-                                    Form form = new Borne_ChoixFlux(vg_Lang, vg_PontId, vg_Demander_Paramatre, ScanCamionId, Convert.ToInt32(txtPoids.Text), 0, Flux_Default, -1, -1);
+                                    Form form = new Borne_ChoixFlux(vg_Lang, vg_PontId, vg_Demander_Paramatre, ScanCamionId, Convert.ToInt32(txtPoids.Text), 0, Flux_Default, -1, -1, -1);
                                     form.Show();
                                     Close();
                                 }
@@ -292,7 +303,7 @@ namespace WidraSoft.UI
                             if (chauffeur.CountByBadge(s2) > 0)
                             {
                                 ScanChauffeurId = chauffeur.GetIdByBadge(s2);
-                                Form form = new Borne_ChoixFlux(vg_Lang, vg_PontId, vg_Demander_Paramatre, -1, Convert.ToInt32(txtPoids.Text), 0, Flux_Default, ScanChauffeurId, -1);
+                                Form form = new Borne_ChoixFlux(vg_Lang, vg_PontId, vg_Demander_Paramatre, -1, Convert.ToInt32(txtPoids.Text), 0, Flux_Default, ScanChauffeurId, -1, -1);
                                 form.Show();
                                 Close();
                             }
@@ -304,7 +315,7 @@ namespace WidraSoft.UI
                             if (client.CountByBadge(s2) > 0)
                             {
                                 ScanClientId = client.GetIdByBadge(s2);
-                                Form form = new Borne_ChoixFlux(vg_Lang, vg_PontId, vg_Demander_Paramatre, -1, Convert.ToInt32(txtPoids.Text), 0, Flux_Default, -1, ScanClientId);
+                                Form form = new Borne_ChoixFlux(vg_Lang, vg_PontId, vg_Demander_Paramatre, -1, Convert.ToInt32(txtPoids.Text), 0, Flux_Default, -1, ScanClientId, -1);
                                 form.Show();
                                 Close();
                             }
@@ -321,9 +332,11 @@ namespace WidraSoft.UI
         {
             try
             {
-                Form form = new Borne_ChoixDeuxiemePesee(vg_Lang, vg_P, vg_PontId);
-                form.Show();
+                Pont pont = new Pont();
+                Form form = new Borne_ChoixDeuxiemePesee(vg_Lang, vg_P, vg_PontId, pont.GetTypeScanner2(vg_PontId), pont.GetActiverScanner2(vg_PontId));
                 Close();
+                form.Show();
+                
             }
             catch { throw; }
         }
