@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(PontDetail));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             panelLang = new System.Windows.Forms.Panel();
             pbUpdating = new System.Windows.Forms.PictureBox();
             Spain_flag = new System.Windows.Forms.PictureBox();
@@ -47,6 +47,17 @@
             label23 = new System.Windows.Forms.Label();
             cbFlux_Default = new System.Windows.Forms.ComboBox();
             groupBox1 = new System.Windows.Forms.GroupBox();
+            label48 = new System.Windows.Forms.Label();
+            cbTypeScanner2 = new System.Windows.Forms.ComboBox();
+            label47 = new System.Windows.Forms.Label();
+            chx_ActiverScanner2 = new System.Windows.Forms.CheckBox();
+            txtActiverScanner2 = new System.Windows.Forms.TextBox();
+            txtContact3 = new System.Windows.Forms.TextBox();
+            label31 = new System.Windows.Forms.Label();
+            txtContact2 = new System.Windows.Forms.TextBox();
+            label30 = new System.Windows.Forms.Label();
+            txtContact1 = new System.Windows.Forms.TextBox();
+            label29 = new System.Windows.Forms.Label();
             txtCOMScanner = new System.Windows.Forms.TextBox();
             label28 = new System.Windows.Forms.Label();
             label27 = new System.Windows.Forms.Label();
@@ -122,12 +133,42 @@
             txtDesignation = new System.Windows.Forms.TextBox();
             label1 = new System.Windows.Forms.Label();
             txtActiverPoids = new System.Windows.Forms.TextBox();
-            txtContact1 = new System.Windows.Forms.TextBox();
-            label29 = new System.Windows.Forms.Label();
-            txtContact2 = new System.Windows.Forms.TextBox();
-            label30 = new System.Windows.Forms.Label();
-            txtContact3 = new System.Windows.Forms.TextBox();
-            label31 = new System.Windows.Forms.Label();
+            tabControl1 = new System.Windows.Forms.TabControl();
+            General = new System.Windows.Forms.TabPage();
+            Cameras = new System.Windows.Forms.TabPage();
+            label46 = new System.Windows.Forms.Label();
+            label45 = new System.Windows.Forms.Label();
+            label44 = new System.Windows.Forms.Label();
+            txtCamera3 = new System.Windows.Forms.TextBox();
+            chx_Camera3 = new System.Windows.Forms.CheckBox();
+            pwd_textBox3 = new System.Windows.Forms.TextBox();
+            label40 = new System.Windows.Forms.Label();
+            name_textBox3 = new System.Windows.Forms.TextBox();
+            label41 = new System.Windows.Forms.Label();
+            port_textBox3 = new System.Windows.Forms.TextBox();
+            label42 = new System.Windows.Forms.Label();
+            ip_textBox3 = new System.Windows.Forms.TextBox();
+            label43 = new System.Windows.Forms.Label();
+            txtCamera2 = new System.Windows.Forms.TextBox();
+            chx_Camera2 = new System.Windows.Forms.CheckBox();
+            pwd_textBox2 = new System.Windows.Forms.TextBox();
+            label36 = new System.Windows.Forms.Label();
+            name_textBox2 = new System.Windows.Forms.TextBox();
+            label37 = new System.Windows.Forms.Label();
+            port_textBox2 = new System.Windows.Forms.TextBox();
+            label38 = new System.Windows.Forms.Label();
+            ip_textBox2 = new System.Windows.Forms.TextBox();
+            label39 = new System.Windows.Forms.Label();
+            txtCamera1 = new System.Windows.Forms.TextBox();
+            chx_Camera1 = new System.Windows.Forms.CheckBox();
+            pwd_textBox1 = new System.Windows.Forms.TextBox();
+            label32 = new System.Windows.Forms.Label();
+            name_textBox1 = new System.Windows.Forms.TextBox();
+            label33 = new System.Windows.Forms.Label();
+            port_textBox1 = new System.Windows.Forms.TextBox();
+            label34 = new System.Windows.Forms.Label();
+            ip_textBox1 = new System.Windows.Forms.TextBox();
+            label35 = new System.Windows.Forms.Label();
             panelLang.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pbUpdating).BeginInit();
             ((System.ComponentModel.ISupportInitialize)Spain_flag).BeginInit();
@@ -155,6 +196,9 @@
             ((System.ComponentModel.ISupportInitialize)pictureBox4).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pbRemoveRow).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pbAddRow).BeginInit();
+            tabControl1.SuspendLayout();
+            General.SuspendLayout();
+            Cameras.SuspendLayout();
             SuspendLayout();
             // 
             // panelLang
@@ -287,6 +331,7 @@
             // 
             // panelDetail
             // 
+            resources.ApplyResources(panelDetail, "panelDetail");
             panelDetail.BackColor = System.Drawing.Color.FromArgb(72, 86, 81);
             panelDetail.Controls.Add(label23);
             panelDetail.Controls.Add(cbFlux_Default);
@@ -348,7 +393,6 @@
             panelDetail.Controls.Add(txtDesignation);
             panelDetail.Controls.Add(label1);
             panelDetail.Controls.Add(txtActiverPoids);
-            resources.ApplyResources(panelDetail, "panelDetail");
             panelDetail.Name = "panelDetail";
             // 
             // label23
@@ -366,6 +410,11 @@
             // 
             // groupBox1
             // 
+            groupBox1.Controls.Add(label48);
+            groupBox1.Controls.Add(cbTypeScanner2);
+            groupBox1.Controls.Add(label47);
+            groupBox1.Controls.Add(chx_ActiverScanner2);
+            groupBox1.Controls.Add(txtActiverScanner2);
             groupBox1.Controls.Add(txtContact3);
             groupBox1.Controls.Add(label31);
             groupBox1.Controls.Add(txtContact2);
@@ -394,6 +443,77 @@
             groupBox1.ForeColor = System.Drawing.Color.White;
             groupBox1.Name = "groupBox1";
             groupBox1.TabStop = false;
+            // 
+            // label48
+            // 
+            resources.ApplyResources(label48, "label48");
+            label48.ForeColor = System.Drawing.Color.White;
+            label48.Name = "label48";
+            // 
+            // cbTypeScanner2
+            // 
+            cbTypeScanner2.BackColor = System.Drawing.Color.Honeydew;
+            resources.ApplyResources(cbTypeScanner2, "cbTypeScanner2");
+            cbTypeScanner2.FormattingEnabled = true;
+            cbTypeScanner2.Name = "cbTypeScanner2";
+            // 
+            // label47
+            // 
+            resources.ApplyResources(label47, "label47");
+            label47.ForeColor = System.Drawing.Color.White;
+            label47.Name = "label47";
+            // 
+            // chx_ActiverScanner2
+            // 
+            resources.ApplyResources(chx_ActiverScanner2, "chx_ActiverScanner2");
+            chx_ActiverScanner2.ForeColor = System.Drawing.Color.White;
+            chx_ActiverScanner2.Name = "chx_ActiverScanner2";
+            chx_ActiverScanner2.UseVisualStyleBackColor = true;
+            chx_ActiverScanner2.CheckedChanged += chx_ActiverScanner2_CheckedChanged;
+            // 
+            // txtActiverScanner2
+            // 
+            resources.ApplyResources(txtActiverScanner2, "txtActiverScanner2");
+            txtActiverScanner2.Name = "txtActiverScanner2";
+            // 
+            // txtContact3
+            // 
+            txtContact3.BackColor = System.Drawing.Color.Honeydew;
+            resources.ApplyResources(txtContact3, "txtContact3");
+            txtContact3.ForeColor = System.Drawing.Color.Black;
+            txtContact3.Name = "txtContact3";
+            // 
+            // label31
+            // 
+            resources.ApplyResources(label31, "label31");
+            label31.ForeColor = System.Drawing.Color.White;
+            label31.Name = "label31";
+            // 
+            // txtContact2
+            // 
+            txtContact2.BackColor = System.Drawing.Color.Honeydew;
+            resources.ApplyResources(txtContact2, "txtContact2");
+            txtContact2.ForeColor = System.Drawing.Color.Black;
+            txtContact2.Name = "txtContact2";
+            // 
+            // label30
+            // 
+            resources.ApplyResources(label30, "label30");
+            label30.ForeColor = System.Drawing.Color.White;
+            label30.Name = "label30";
+            // 
+            // txtContact1
+            // 
+            txtContact1.BackColor = System.Drawing.Color.Honeydew;
+            resources.ApplyResources(txtContact1, "txtContact1");
+            txtContact1.ForeColor = System.Drawing.Color.Black;
+            txtContact1.Name = "txtContact1";
+            // 
+            // label29
+            // 
+            resources.ApplyResources(label29, "label29");
+            label29.ForeColor = System.Drawing.Color.White;
+            label29.Name = "label29";
             // 
             // txtCOMScanner
             // 
@@ -693,14 +813,14 @@
             dgvFirmes.BorderStyle = System.Windows.Forms.BorderStyle.None;
             dgvFirmes.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.Sunken;
             dgvFirmes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.Honeydew;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Calibri", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(72, 86, 81);
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            dgvFirmes.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.Honeydew;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Calibri", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(72, 86, 81);
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            dgvFirmes.DefaultCellStyle = dataGridViewCellStyle1;
             resources.ApplyResources(dgvFirmes, "dgvFirmes");
             dgvFirmes.Name = "dgvFirmes";
             dgvFirmes.RowTemplate.Height = 25;
@@ -921,51 +1041,267 @@
             resources.ApplyResources(txtActiverPoids, "txtActiverPoids");
             txtActiverPoids.Name = "txtActiverPoids";
             // 
-            // txtContact1
+            // tabControl1
             // 
-            txtContact1.BackColor = System.Drawing.Color.Honeydew;
-            resources.ApplyResources(txtContact1, "txtContact1");
-            txtContact1.ForeColor = System.Drawing.Color.Black;
-            txtContact1.Name = "txtContact1";
+            tabControl1.Controls.Add(General);
+            tabControl1.Controls.Add(Cameras);
+            resources.ApplyResources(tabControl1, "tabControl1");
+            tabControl1.Name = "tabControl1";
+            tabControl1.SelectedIndex = 0;
             // 
-            // label29
+            // General
             // 
-            resources.ApplyResources(label29, "label29");
-            label29.ForeColor = System.Drawing.Color.White;
-            label29.Name = "label29";
+            General.BackColor = System.Drawing.Color.FromArgb(72, 86, 81);
+            General.Controls.Add(panelDetail);
+            resources.ApplyResources(General, "General");
+            General.Name = "General";
             // 
-            // txtContact2
+            // Cameras
             // 
-            txtContact2.BackColor = System.Drawing.Color.Honeydew;
-            resources.ApplyResources(txtContact2, "txtContact2");
-            txtContact2.ForeColor = System.Drawing.Color.Black;
-            txtContact2.Name = "txtContact2";
+            resources.ApplyResources(Cameras, "Cameras");
+            Cameras.BackColor = System.Drawing.Color.FromArgb(72, 86, 81);
+            Cameras.Controls.Add(label46);
+            Cameras.Controls.Add(label45);
+            Cameras.Controls.Add(label44);
+            Cameras.Controls.Add(txtCamera3);
+            Cameras.Controls.Add(chx_Camera3);
+            Cameras.Controls.Add(pwd_textBox3);
+            Cameras.Controls.Add(label40);
+            Cameras.Controls.Add(name_textBox3);
+            Cameras.Controls.Add(label41);
+            Cameras.Controls.Add(port_textBox3);
+            Cameras.Controls.Add(label42);
+            Cameras.Controls.Add(ip_textBox3);
+            Cameras.Controls.Add(label43);
+            Cameras.Controls.Add(txtCamera2);
+            Cameras.Controls.Add(chx_Camera2);
+            Cameras.Controls.Add(pwd_textBox2);
+            Cameras.Controls.Add(label36);
+            Cameras.Controls.Add(name_textBox2);
+            Cameras.Controls.Add(label37);
+            Cameras.Controls.Add(port_textBox2);
+            Cameras.Controls.Add(label38);
+            Cameras.Controls.Add(ip_textBox2);
+            Cameras.Controls.Add(label39);
+            Cameras.Controls.Add(txtCamera1);
+            Cameras.Controls.Add(chx_Camera1);
+            Cameras.Controls.Add(pwd_textBox1);
+            Cameras.Controls.Add(label32);
+            Cameras.Controls.Add(name_textBox1);
+            Cameras.Controls.Add(label33);
+            Cameras.Controls.Add(port_textBox1);
+            Cameras.Controls.Add(label34);
+            Cameras.Controls.Add(ip_textBox1);
+            Cameras.Controls.Add(label35);
+            Cameras.Name = "Cameras";
             // 
-            // label30
+            // label46
             // 
-            resources.ApplyResources(label30, "label30");
-            label30.ForeColor = System.Drawing.Color.White;
-            label30.Name = "label30";
+            resources.ApplyResources(label46, "label46");
+            label46.ForeColor = System.Drawing.Color.White;
+            label46.Name = "label46";
             // 
-            // txtContact3
+            // label45
             // 
-            txtContact3.BackColor = System.Drawing.Color.Honeydew;
-            resources.ApplyResources(txtContact3, "txtContact3");
-            txtContact3.ForeColor = System.Drawing.Color.Black;
-            txtContact3.Name = "txtContact3";
+            resources.ApplyResources(label45, "label45");
+            label45.ForeColor = System.Drawing.Color.White;
+            label45.Name = "label45";
             // 
-            // label31
+            // label44
             // 
-            resources.ApplyResources(label31, "label31");
-            label31.ForeColor = System.Drawing.Color.White;
-            label31.Name = "label31";
+            resources.ApplyResources(label44, "label44");
+            label44.ForeColor = System.Drawing.Color.White;
+            label44.Name = "label44";
+            // 
+            // txtCamera3
+            // 
+            resources.ApplyResources(txtCamera3, "txtCamera3");
+            txtCamera3.Name = "txtCamera3";
+            // 
+            // chx_Camera3
+            // 
+            resources.ApplyResources(chx_Camera3, "chx_Camera3");
+            chx_Camera3.ForeColor = System.Drawing.Color.White;
+            chx_Camera3.Name = "chx_Camera3";
+            chx_Camera3.UseVisualStyleBackColor = true;
+            chx_Camera3.CheckedChanged += chx_Camera3_CheckedChanged;
+            // 
+            // pwd_textBox3
+            // 
+            pwd_textBox3.BackColor = System.Drawing.Color.Honeydew;
+            resources.ApplyResources(pwd_textBox3, "pwd_textBox3");
+            pwd_textBox3.Name = "pwd_textBox3";
+            // 
+            // label40
+            // 
+            resources.ApplyResources(label40, "label40");
+            label40.ForeColor = System.Drawing.Color.White;
+            label40.Name = "label40";
+            // 
+            // name_textBox3
+            // 
+            name_textBox3.BackColor = System.Drawing.Color.Honeydew;
+            resources.ApplyResources(name_textBox3, "name_textBox3");
+            name_textBox3.Name = "name_textBox3";
+            // 
+            // label41
+            // 
+            resources.ApplyResources(label41, "label41");
+            label41.ForeColor = System.Drawing.Color.White;
+            label41.Name = "label41";
+            // 
+            // port_textBox3
+            // 
+            port_textBox3.BackColor = System.Drawing.Color.Honeydew;
+            resources.ApplyResources(port_textBox3, "port_textBox3");
+            port_textBox3.Name = "port_textBox3";
+            // 
+            // label42
+            // 
+            resources.ApplyResources(label42, "label42");
+            label42.ForeColor = System.Drawing.Color.White;
+            label42.Name = "label42";
+            // 
+            // ip_textBox3
+            // 
+            ip_textBox3.BackColor = System.Drawing.Color.Honeydew;
+            resources.ApplyResources(ip_textBox3, "ip_textBox3");
+            ip_textBox3.Name = "ip_textBox3";
+            // 
+            // label43
+            // 
+            resources.ApplyResources(label43, "label43");
+            label43.ForeColor = System.Drawing.Color.White;
+            label43.Name = "label43";
+            // 
+            // txtCamera2
+            // 
+            resources.ApplyResources(txtCamera2, "txtCamera2");
+            txtCamera2.Name = "txtCamera2";
+            // 
+            // chx_Camera2
+            // 
+            resources.ApplyResources(chx_Camera2, "chx_Camera2");
+            chx_Camera2.ForeColor = System.Drawing.Color.White;
+            chx_Camera2.Name = "chx_Camera2";
+            chx_Camera2.UseVisualStyleBackColor = true;
+            chx_Camera2.CheckedChanged += chx_Camera2_CheckedChanged;
+            // 
+            // pwd_textBox2
+            // 
+            pwd_textBox2.BackColor = System.Drawing.Color.Honeydew;
+            resources.ApplyResources(pwd_textBox2, "pwd_textBox2");
+            pwd_textBox2.Name = "pwd_textBox2";
+            // 
+            // label36
+            // 
+            resources.ApplyResources(label36, "label36");
+            label36.ForeColor = System.Drawing.Color.White;
+            label36.Name = "label36";
+            // 
+            // name_textBox2
+            // 
+            name_textBox2.BackColor = System.Drawing.Color.Honeydew;
+            resources.ApplyResources(name_textBox2, "name_textBox2");
+            name_textBox2.Name = "name_textBox2";
+            // 
+            // label37
+            // 
+            resources.ApplyResources(label37, "label37");
+            label37.ForeColor = System.Drawing.Color.White;
+            label37.Name = "label37";
+            // 
+            // port_textBox2
+            // 
+            port_textBox2.BackColor = System.Drawing.Color.Honeydew;
+            resources.ApplyResources(port_textBox2, "port_textBox2");
+            port_textBox2.Name = "port_textBox2";
+            // 
+            // label38
+            // 
+            resources.ApplyResources(label38, "label38");
+            label38.ForeColor = System.Drawing.Color.White;
+            label38.Name = "label38";
+            // 
+            // ip_textBox2
+            // 
+            ip_textBox2.BackColor = System.Drawing.Color.Honeydew;
+            resources.ApplyResources(ip_textBox2, "ip_textBox2");
+            ip_textBox2.Name = "ip_textBox2";
+            // 
+            // label39
+            // 
+            resources.ApplyResources(label39, "label39");
+            label39.ForeColor = System.Drawing.Color.White;
+            label39.Name = "label39";
+            // 
+            // txtCamera1
+            // 
+            resources.ApplyResources(txtCamera1, "txtCamera1");
+            txtCamera1.Name = "txtCamera1";
+            // 
+            // chx_Camera1
+            // 
+            resources.ApplyResources(chx_Camera1, "chx_Camera1");
+            chx_Camera1.ForeColor = System.Drawing.Color.White;
+            chx_Camera1.Name = "chx_Camera1";
+            chx_Camera1.UseVisualStyleBackColor = true;
+            chx_Camera1.CheckedChanged += chx_Camera1_CheckedChanged;
+            // 
+            // pwd_textBox1
+            // 
+            pwd_textBox1.BackColor = System.Drawing.Color.Honeydew;
+            resources.ApplyResources(pwd_textBox1, "pwd_textBox1");
+            pwd_textBox1.Name = "pwd_textBox1";
+            // 
+            // label32
+            // 
+            resources.ApplyResources(label32, "label32");
+            label32.ForeColor = System.Drawing.Color.White;
+            label32.Name = "label32";
+            // 
+            // name_textBox1
+            // 
+            name_textBox1.BackColor = System.Drawing.Color.Honeydew;
+            resources.ApplyResources(name_textBox1, "name_textBox1");
+            name_textBox1.Name = "name_textBox1";
+            // 
+            // label33
+            // 
+            resources.ApplyResources(label33, "label33");
+            label33.ForeColor = System.Drawing.Color.White;
+            label33.Name = "label33";
+            // 
+            // port_textBox1
+            // 
+            port_textBox1.BackColor = System.Drawing.Color.Honeydew;
+            resources.ApplyResources(port_textBox1, "port_textBox1");
+            port_textBox1.Name = "port_textBox1";
+            // 
+            // label34
+            // 
+            resources.ApplyResources(label34, "label34");
+            label34.ForeColor = System.Drawing.Color.White;
+            label34.Name = "label34";
+            // 
+            // ip_textBox1
+            // 
+            ip_textBox1.BackColor = System.Drawing.Color.Honeydew;
+            resources.ApplyResources(ip_textBox1, "ip_textBox1");
+            ip_textBox1.Name = "ip_textBox1";
+            // 
+            // label35
+            // 
+            resources.ApplyResources(label35, "label35");
+            label35.ForeColor = System.Drawing.Color.White;
+            label35.Name = "label35";
             // 
             // PontDetail
             // 
             resources.ApplyResources(this, "$this");
             AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            BackColor = System.Drawing.Color.FromArgb(58, 62, 60);
-            Controls.Add(panelDetail);
+            BackColor = System.Drawing.Color.FromArgb(72, 86, 81);
+            Controls.Add(tabControl1);
             Controls.Add(panelNavigation);
             Controls.Add(panelLang);
             MaximizeBox = false;
@@ -1003,6 +1339,10 @@
             ((System.ComponentModel.ISupportInitialize)pictureBox4).EndInit();
             ((System.ComponentModel.ISupportInitialize)pbRemoveRow).EndInit();
             ((System.ComponentModel.ISupportInitialize)pbAddRow).EndInit();
+            tabControl1.ResumeLayout(false);
+            General.ResumeLayout(false);
+            Cameras.ResumeLayout(false);
+            Cameras.PerformLayout();
             ResumeLayout(false);
         }
 
@@ -1106,5 +1446,46 @@
         private System.Windows.Forms.Label label29;
         private System.Windows.Forms.TextBox txtContact3;
         private System.Windows.Forms.Label label31;
+        private System.Windows.Forms.TabControl tabControl1;
+        private System.Windows.Forms.TabPage General;
+        private System.Windows.Forms.TabPage Cameras;
+        private System.Windows.Forms.TextBox pwd_textBox1;
+        private System.Windows.Forms.Label label32;
+        private System.Windows.Forms.TextBox name_textBox1;
+        private System.Windows.Forms.Label label33;
+        private System.Windows.Forms.TextBox port_textBox1;
+        private System.Windows.Forms.Label label34;
+        private System.Windows.Forms.TextBox ip_textBox1;
+        private System.Windows.Forms.Label label35;
+        private System.Windows.Forms.TextBox txtCamera1;
+        private System.Windows.Forms.CheckBox chx_Camera1;
+        private System.Windows.Forms.TextBox txtCamera2;
+        private System.Windows.Forms.CheckBox chx_Camera2;
+        private System.Windows.Forms.TextBox pwd_textBox2;
+        private System.Windows.Forms.Label label36;
+        private System.Windows.Forms.TextBox name_textBox2;
+        private System.Windows.Forms.Label label37;
+        private System.Windows.Forms.TextBox port_textBox2;
+        private System.Windows.Forms.Label label38;
+        private System.Windows.Forms.TextBox ip_textBox2;
+        private System.Windows.Forms.Label label39;
+        private System.Windows.Forms.TextBox txtCamera3;
+        private System.Windows.Forms.CheckBox chx_Camera3;
+        private System.Windows.Forms.TextBox pwd_textBox3;
+        private System.Windows.Forms.Label label40;
+        private System.Windows.Forms.TextBox name_textBox3;
+        private System.Windows.Forms.Label label41;
+        private System.Windows.Forms.TextBox port_textBox3;
+        private System.Windows.Forms.Label label42;
+        private System.Windows.Forms.TextBox ip_textBox3;
+        private System.Windows.Forms.Label label43;
+        private System.Windows.Forms.Label label46;
+        private System.Windows.Forms.Label label45;
+        private System.Windows.Forms.Label label44;
+        private System.Windows.Forms.Label label47;
+        private System.Windows.Forms.CheckBox chx_ActiverScanner2;
+        private System.Windows.Forms.TextBox txtActiverScanner2;
+        private System.Windows.Forms.Label label48;
+        private System.Windows.Forms.ComboBox cbTypeScanner2;
     }
 }

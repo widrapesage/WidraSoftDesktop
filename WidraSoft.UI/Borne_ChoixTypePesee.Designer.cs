@@ -135,7 +135,7 @@
             resources.ApplyResources(QrCode, "QrCode");
             QrCode.BackColor = System.Drawing.Color.Transparent;
             QrCode.Cursor = System.Windows.Forms.Cursors.Hand;
-            QrCode.Image = Properties.Resources.identifiant;
+            QrCode.Image = Properties.Resources.qr_code;
             QrCode.Name = "QrCode";
             QrCode.TabStop = false;
             // 

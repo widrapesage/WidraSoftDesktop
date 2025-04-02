@@ -11,16 +11,18 @@ using NetSDKCS;
 using System.Diagnostics;
 using System.IO;
 using System.Runtime.InteropServices;
+using Microsoft.VisualBasic.Logging;
+using WidraSoft.BL;
 
 
 namespace WidraSoft.UI
 {
-    public partial class ANPR : Form
+    public partial class ANPR2 : Form
     {
         private IntPtr _LoginID = IntPtr.Zero;
         private IntPtr _PlayID = IntPtr.Zero;
         private fSnapRevCallBack _SnapRevCallBack;
-        private NET_DEVICEINFO_Ex _DeviceInfo = new NET_DEVICEINFO_Ex();  
+        private NET_DEVICEINFO_Ex _DeviceInfo = new NET_DEVICEINFO_Ex();
         private bool _IsSpanCapture = false;
         string vg_ip;
         string vg_port;
@@ -29,7 +31,7 @@ namespace WidraSoft.UI
         string vg_peseeId;
         string vg_type;
         string vg_num;
-        public ANPR(string ip, string port, string login, string pwd, string peseeId, string type, string num)
+        public ANPR2(string ip, string port, string login, string pwd, string peseeId, string type, string num)
         {
             InitializeComponent();
             vg_ip = ip;
@@ -51,11 +53,9 @@ namespace WidraSoft.UI
                 Process.GetCurrentProcess().Kill();
             }
             //this.Load += new EventHandler(ANPR_Load);
-
-            
         }
 
-        private void ANPR_Load(object sender, EventArgs e)
+        private void ANPR2_Load(object sender, EventArgs e)
         {
             this.Visible = false;
 
@@ -70,7 +70,7 @@ namespace WidraSoft.UI
             this.button_remote.Enabled = false;
             this.button_span.Enabled = false;
 
-            
+
 
 
             button_login_Click(this, new EventArgs());
@@ -85,12 +85,13 @@ namespace WidraSoft.UI
             }
 
             
+
             string path = "C:\\Users\\HP\\Pictures\\Dahua_pics";
             if (!Directory.Exists(path))
             {
                 Directory.CreateDirectory(path);
             }
-            
+
             string filePath = path + "\\" + vg_peseeId + "_" + vg_num + "_" + vg_type + ".jpg";
             bool ret = NETClient.CapturePicture(_PlayID, filePath, EM_NET_CAPTURE_FORMATS.JPEG);
             if (!ret)
@@ -100,7 +101,6 @@ namespace WidraSoft.UI
             }
             Image image = Image.FromFile(filePath);
             pictureBox_image.Image = image;
-
             //NETClient.Cleanup();
             System.Threading.Thread.Sleep(700);
 
@@ -162,109 +162,6 @@ namespace WidraSoft.UI
             }
         }
 
-        private void button_realplay_Click(object sender, EventArgs e)
-        {
-            if (IntPtr.Zero == _PlayID)
-            {
-                _PlayID = NETClient.RealPlay(_LoginID, comboBox_channel.SelectedIndex, this.pictureBox_preview.Handle);
-                if (IntPtr.Zero == _PlayID)
-                {
-                    MessageBox.Show(NETClient.GetLastError());
-                    return;
-                }
-                this.button_local.Enabled = true;
-                this.button_realplay.Text = "StopRealPlay";
-            }
-            else
-            {
-                NETClient.StopRealPlay(_PlayID);
-                _PlayID = IntPtr.Zero;
-                this.button_local.Enabled = false;
-                this.button_realplay.Text = "RealPlay";
-                this.pictureBox_preview.Refresh();
-            }
-        }
-
-        private void button_local_Click(object sender, EventArgs e)
-        {
-            if (pictureBox_image.Image != null)
-            {
-                pictureBox_image.Image.Dispose();
-            }
-            string path = "C:\'Users\'HP\'Pictures\'Dahua_pics";
-            if (!Directory.Exists(path))
-            {
-                Directory.CreateDirectory(path);
-            }
-            DateTime now = DateTime.Now;
-            string filePath = path + "\\" + string.Format("{0}-{1}-{2}-{3}-{4}-{5}", now.Year, now.Month, now.Day, now.Hour, now.Minute, now.Second) + ".jpg";
-            bool ret = NETClient.CapturePicture(_PlayID, filePath, EM_NET_CAPTURE_FORMATS.JPEG);
-            if (!ret)
-            {
-                MessageBox.Show(NETClient.GetLastError());
-                return;
-            }
-            Image image = Image.FromFile(filePath);
-            pictureBox_image.Image = image;
-        }
-
-        private void button_remote_Click(object sender, EventArgs e)
-        {
-            NET_SNAP_PARAMS asyncSnap = new NET_SNAP_PARAMS();
-            asyncSnap.Channel = (uint)this.comboBox_channel.SelectedIndex;
-            asyncSnap.Quality = 6;
-            asyncSnap.ImageSize = 2;
-            asyncSnap.mode = 0;
-            asyncSnap.InterSnap = 0;
-            bool ret = NETClient.SnapPictureEx(_LoginID, asyncSnap, IntPtr.Zero);
-            if (!ret)
-            {
-                MessageBox.Show(this, NETClient.GetLastError());
-                return;
-            }
-        }
-
-        private void button_span_Click(object sender, EventArgs e)
-        {
-            if (!_IsSpanCapture)
-            {
-                NET_SNAP_PARAMS asyncSnap = new NET_SNAP_PARAMS();
-                asyncSnap.Channel = (uint)this.comboBox_channel.SelectedIndex;
-                asyncSnap.Quality = 6;
-                asyncSnap.ImageSize = 2;
-                asyncSnap.mode = 1;
-                bool ret = NETClient.SnapPictureEx(_LoginID, asyncSnap, IntPtr.Zero);
-                if (!ret)
-                {
-                    MessageBox.Show(this, NETClient.GetLastError());
-                    return;
-                }
-                _IsSpanCapture = true;
-                this.comboBox_channel.Enabled = false;
-                this.button_remote.Enabled = false;
-                this.button_span.Text = "Stop Span Capture";
-            }
-            else
-            {
-                NET_SNAP_PARAMS asyncSnap = new NET_SNAP_PARAMS();
-                asyncSnap.Channel = (uint)this.comboBox_channel.SelectedIndex;
-                asyncSnap.Quality = 6;
-                asyncSnap.ImageSize = 2;
-                asyncSnap.mode = 0xFFFFFFFF;
-                asyncSnap.InterSnap = 0;
-                bool ret = NETClient.SnapPictureEx(_LoginID, asyncSnap, IntPtr.Zero);
-                if (!ret)
-                {
-                    MessageBox.Show(this, NETClient.GetLastError());
-                    return;
-                }
-                _IsSpanCapture = false;
-                this.comboBox_channel.Enabled = true;
-                this.button_remote.Enabled = true;
-                this.button_span.Text = "Span Capture";
-            }
-        }
-
         private void SnapRevCallBack(IntPtr lLoginID, IntPtr pBuf, uint RevLen, uint EncodeType, uint CmdSerial, IntPtr dwUser)
         {
             string path = "C:\'Users\'RYZEN7\'Pictures\'ANPR " + "image";
@@ -311,35 +208,27 @@ namespace WidraSoft.UI
             NETClient.Cleanup();
         }
 
-        private void textBox_port_KeyPress(object sender, KeyPressEventArgs e)
+        private void button_realplay_Click(object sender, EventArgs e)
         {
-            if (e.KeyChar != 8 && !Char.IsDigit(e.KeyChar))
+            if (IntPtr.Zero == _PlayID)
             {
-                e.Handled = true;
+                _PlayID = NETClient.RealPlay(_LoginID, comboBox_channel.SelectedIndex, this.pictureBox_preview.Handle);
+                if (IntPtr.Zero == _PlayID)
+                {
+                    MessageBox.Show(NETClient.GetLastError());
+                    return;
+                }
+                this.button_local.Enabled = true;
+                this.button_realplay.Text = "StopRealPlay";
             }
-        }
-
-        private void bt_Capture_Click(object sender, EventArgs e)
-        {
-            if (pictureBox_image.Image != null)
+            else
             {
-                pictureBox_image.Image.Dispose();
+                NETClient.StopRealPlay(_PlayID);
+                _PlayID = IntPtr.Zero;
+                this.button_local.Enabled = false;
+                this.button_realplay.Text = "RealPlay";
+                this.pictureBox_preview.Refresh();
             }
-            string path = "C:\\Users\\HP\\Pictures\\Dahua_pics";
-            if (!Directory.Exists(path))
-            {
-                Directory.CreateDirectory(path);
-            }
-            DateTime now = DateTime.Now;
-            string filePath = path + "\\" + string.Format("{0}-{1}-{2}-{3}-{4}-{5}", now.Year, now.Month, now.Day, now.Hour, now.Minute, now.Second) + ".jpg";
-            bool ret = NETClient.CapturePicture(_PlayID, filePath, EM_NET_CAPTURE_FORMATS.JPEG);
-            if (!ret)
-            {
-                MessageBox.Show(NETClient.GetLastError());
-                return;
-            }
-            Image image = Image.FromFile(filePath);
-            pictureBox_image.Image = image;
         }
     }
 }

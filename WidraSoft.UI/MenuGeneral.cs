@@ -405,8 +405,8 @@ namespace WidraSoft.UI
 
         private void toolStripMenuItem1_Click(object sender, EventArgs e)
         {
-            Form form = new ANPR();
-            form.Show();
+            //Form form = new ANPR("192.168.1.108", "37777", "admin", "widra7760");
+            //form.Show();
         }
 
         private void BorneToolpStripMenuItem_Click(object sender, EventArgs e)

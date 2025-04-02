@@ -65,8 +65,6 @@
             France_flag = new System.Windows.Forms.PictureBox();
             cbLang = new System.Windows.Forms.ComboBox();
             panelNavigation = new System.Windows.Forms.Panel();
-            pictureBox8 = new System.Windows.Forms.PictureBox();
-            linkLabel1 = new System.Windows.Forms.LinkLabel();
             pictureBox3 = new System.Windows.Forms.PictureBox();
             lbModifier = new System.Windows.Forms.LinkLabel();
             pictureBox1 = new System.Windows.Forms.PictureBox();
@@ -97,7 +95,6 @@
             ((System.ComponentModel.ISupportInitialize)England_flag).BeginInit();
             ((System.ComponentModel.ISupportInitialize)France_flag).BeginInit();
             panelNavigation.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureBox8).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
@@ -347,8 +344,6 @@
             // 
             panelNavigation.BackColor = System.Drawing.Color.FromArgb(58, 62, 60);
             panelNavigation.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            panelNavigation.Controls.Add(pictureBox8);
-            panelNavigation.Controls.Add(linkLabel1);
             panelNavigation.Controls.Add(pictureBox3);
             panelNavigation.Controls.Add(lbModifier);
             panelNavigation.Controls.Add(pictureBox1);
@@ -357,26 +352,6 @@
             panelNavigation.Controls.Add(lbSupprimer);
             resources.ApplyResources(panelNavigation, "panelNavigation");
             panelNavigation.Name = "panelNavigation";
-            // 
-            // pictureBox8
-            // 
-            pictureBox8.BackColor = System.Drawing.Color.Transparent;
-            pictureBox8.Cursor = System.Windows.Forms.Cursors.Hand;
-            pictureBox8.Image = Properties.Resources.printer;
-            resources.ApplyResources(pictureBox8, "pictureBox8");
-            pictureBox8.Name = "pictureBox8";
-            pictureBox8.TabStop = false;
-            // 
-            // linkLabel1
-            // 
-            linkLabel1.ActiveLinkColor = System.Drawing.Color.FromArgb(72, 190, 117);
-            resources.ApplyResources(linkLabel1, "linkLabel1");
-            linkLabel1.BackColor = System.Drawing.Color.Transparent;
-            linkLabel1.ForeColor = System.Drawing.Color.White;
-            linkLabel1.LinkColor = System.Drawing.Color.White;
-            linkLabel1.Name = "linkLabel1";
-            linkLabel1.TabStop = true;
-            linkLabel1.LinkClicked += linkLabel1_LinkClicked;
             // 
             // pictureBox3
             // 
@@ -688,7 +663,6 @@
             ((System.ComponentModel.ISupportInitialize)France_flag).EndInit();
             panelNavigation.ResumeLayout(false);
             panelNavigation.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureBox8).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox3).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
@@ -765,7 +739,5 @@
         private System.Windows.Forms.DataGridView dgvChauffeurs;
         private System.Windows.Forms.DataGridView dgvTransporteurs;
         private System.Windows.Forms.PictureBox RqPont;
-        private System.Windows.Forms.PictureBox pictureBox8;
-        private System.Windows.Forms.LinkLabel linkLabel1;
     }
 }

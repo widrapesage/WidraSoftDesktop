@@ -91,14 +91,14 @@ namespace WidraSoft.BL
 
         public void Add(String Designation, Int32 GroupeProduitId, Int32 EstEntrant, Int32 EstSortant, Int32 Valide,
            Int32 PoidsAlerteMin, Int32 ActiverAlerteMin, Int32 PoidsAlerteMax, Int32 ActiverAlerteMax, Int32 EmpecherTicketSiAlerte,
-           Int32 Dechet, Int32 TypeDechetId)
+           Int32 Dechet, Int32 TypeDechetId, Decimal PrixUnitaire, Int32 Tva)
         {
             try
             {
                 ProduitDA produit = new ProduitDA();
                 produit.Add(Designation, GroupeProduitId, EstEntrant, EstSortant, Valide,
                         PoidsAlerteMin, ActiverAlerteMin, PoidsAlerteMax, ActiverAlerteMax, EmpecherTicketSiAlerte,
-                        Dechet, TypeDechetId);
+                        Dechet, TypeDechetId, PrixUnitaire, Tva);
             }
             catch
             {
@@ -108,14 +108,14 @@ namespace WidraSoft.BL
 
         public void Update(Int32 Id, String Designation, Int32 GroupeProduitId, Int32 EstEntrant, Int32 EstSortant, Int32 Valide,
            Int32 PoidsAlerteMin, Int32 ActiverAlerteMin, Int32 PoidsAlerteMax, Int32 ActiverAlerteMax, Int32 EmpecherTicketSiAlerte,
-           Int32 Dechet, Int32 TypeDechetId)
+           Int32 Dechet, Int32 TypeDechetId, Decimal PrixUnitaire, Int32 Tva)
         {
             try
             {
                 ProduitDA produit = new ProduitDA();
                 produit.Update(Id, Designation, GroupeProduitId, EstEntrant, EstSortant, Valide,
                         PoidsAlerteMin, ActiverAlerteMin, PoidsAlerteMax, ActiverAlerteMax, EmpecherTicketSiAlerte,
-                        Dechet, TypeDechetId);
+                        Dechet, TypeDechetId, PrixUnitaire, Tva);
             }
             catch
             {

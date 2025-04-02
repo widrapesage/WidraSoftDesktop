@@ -69,6 +69,24 @@ namespace WidraSoft.UI
             DgvList.Columns["CONTACT1"].Visible = false;
             DgvList.Columns["CONTACT2"].Visible = false;
             DgvList.Columns["CONTACT3"].Visible = false;
+            DgvList.Columns["IS_BORNE_LAUNCHED"].Visible = false;
+            DgvList.Columns["ACTIVER_CAMERA1"].Visible = false;
+            DgvList.Columns["ADRESSEIP_1"].Visible = false;
+            DgvList.Columns["PORT_1"].Visible = false;
+            DgvList.Columns["LOGIN_1"].Visible = false;
+            DgvList.Columns["PASSWORD_1"].Visible = false;
+            DgvList.Columns["ACTIVER_CAMERA2"].Visible = false;
+            DgvList.Columns["ADRESSEIP_2"].Visible = false;
+            DgvList.Columns["PORT_2"].Visible = false;
+            DgvList.Columns["LOGIN_2"].Visible = false;
+            DgvList.Columns["PASSWORD_2"].Visible = false;
+            DgvList.Columns["ACTIVER_CAMERA3"].Visible = false;
+            DgvList.Columns["ADRESSEIP_3"].Visible = false;
+            DgvList.Columns["PORT_3"].Visible = false;
+            DgvList.Columns["LOGIN_3"].Visible = false;
+            DgvList.Columns["PASSWORD_3"].Visible = false;
+            DgvList.Columns["ACTIVER_SCANNER2"].Visible = false;
+            DgvList.Columns["TYPESCANNER2"].Visible = false;
 
             DgvList.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             DgvList.ReadOnly = true;

@@ -79,6 +79,10 @@
             label14 = new System.Windows.Forms.Label();
             panelDetail = new System.Windows.Forms.Panel();
             pictureBox12 = new System.Windows.Forms.PictureBox();
+            label16 = new System.Windows.Forms.Label();
+            txtTVA = new System.Windows.Forms.TextBox();
+            txtPrixnitaire = new System.Windows.Forms.TextBox();
+            label15 = new System.Windows.Forms.Label();
             panelLang.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pbUpdating).BeginInit();
             ((System.ComponentModel.ISupportInitialize)Spain_flag).BeginInit();
@@ -448,6 +452,10 @@
             // panelDetail
             // 
             panelDetail.BackColor = System.Drawing.Color.FromArgb(72, 86, 81);
+            panelDetail.Controls.Add(label15);
+            panelDetail.Controls.Add(label16);
+            panelDetail.Controls.Add(txtTVA);
+            panelDetail.Controls.Add(txtPrixnitaire);
             panelDetail.Controls.Add(pictureBox12);
             panelDetail.Controls.Add(txtId);
             panelDetail.Controls.Add(label14);
@@ -493,6 +501,32 @@
             resources.ApplyResources(pictureBox12, "pictureBox12");
             pictureBox12.Name = "pictureBox12";
             pictureBox12.TabStop = false;
+            // 
+            // label16
+            // 
+            resources.ApplyResources(label16, "label16");
+            label16.ForeColor = System.Drawing.Color.White;
+            label16.Name = "label16";
+            // 
+            // txtTVA
+            // 
+            txtTVA.BackColor = System.Drawing.Color.Honeydew;
+            resources.ApplyResources(txtTVA, "txtTVA");
+            txtTVA.ForeColor = System.Drawing.Color.Black;
+            txtTVA.Name = "txtTVA";
+            // 
+            // txtPrixnitaire
+            // 
+            txtPrixnitaire.BackColor = System.Drawing.Color.Honeydew;
+            resources.ApplyResources(txtPrixnitaire, "txtPrixnitaire");
+            txtPrixnitaire.ForeColor = System.Drawing.Color.Black;
+            txtPrixnitaire.Name = "txtPrixnitaire";
+            // 
+            // label15
+            // 
+            resources.ApplyResources(label15, "label15");
+            label15.ForeColor = System.Drawing.Color.White;
+            label15.Name = "label15";
             // 
             // ProduitDetail
             // 
@@ -575,5 +609,9 @@
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Panel panelDetail;
         private System.Windows.Forms.PictureBox pictureBox12;
+        private System.Windows.Forms.Label label16;
+        private System.Windows.Forms.TextBox txtTVA;
+        private System.Windows.Forms.TextBox txtPrixnitaire;
+        private System.Windows.Forms.Label label15;
     }
 }

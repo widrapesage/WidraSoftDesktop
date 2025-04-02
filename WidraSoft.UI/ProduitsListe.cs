@@ -54,6 +54,8 @@ namespace WidraSoft.UI
             DgvList.Columns["EMPECHERTICKETSIALERTE"].Visible = false;
             DgvList.Columns["DECHET"].Visible = false;
             DgvList.Columns["TYPEDECHETID"].Visible = false;
+            DgvList.Columns["PRIXUNITAIRE"].Visible = false;
+            DgvList.Columns["TVA"].Visible = false;
 
             DgvList.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             DgvList.ReadOnly = true;

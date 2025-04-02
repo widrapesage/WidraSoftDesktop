@@ -103,6 +103,19 @@ namespace WidraSoft.BL
             }
         }
 
+        public DataTable FindWeighingsInProgressByWalterreId(Int32 Id)
+        {
+            try
+            {
+                PeseePBDA peseePBDA = new PeseePBDA();
+                return peseePBDA.FindWeighingsInProgressByWalterreId(Id);
+            }
+            catch
+            {
+                throw;
+            }
+        }
+
         public Int32 GetMaxIdByPontId(Int32 Id)
         {
             try

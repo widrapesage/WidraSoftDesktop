@@ -268,6 +268,54 @@ namespace WidraSoft.DA
             }
         }
 
+        public bool IfExistsByIdString(String Name)
+        {
+            int Id;
+            bool IsParsableId;
+            IsParsableId = int.TryParse(Name, out Id);
+            String sql = "SELECT COUNT(*) FROM WALTERRE WHERE WALTERREID=" + Id ;
+            conn.ConnectionString = connString;
+            if (conn.State == ConnectionState.Closed)
+                conn.Open();
+            SqlCommand cmd = new SqlCommand(sql, conn);
+            try
+            {
+                Int32 nb = (int)cmd.ExecuteScalar();
+                if (nb > 0)
+                    return true;
+                else
+                    return false;
+            }
+            catch
+            {
+                throw;
+            }
+        }
+
+        public bool IfExists_Valid_ByIdString(String Name)
+        {
+            int Id;
+            bool IsParsableId;
+            IsParsableId = int.TryParse(Name, out Id);
+            String sql = "SELECT COUNT(*) FROM WALTERRE WHERE WALTERREID=" + Id + " AND CLOTURE = 0";
+            conn.ConnectionString = connString;
+            if (conn.State == ConnectionState.Closed)
+                conn.Open();
+            SqlCommand cmd = new SqlCommand(sql, conn);
+            try
+            {
+                Int32 nb = (int)cmd.ExecuteScalar();
+                if (nb > 0)
+                    return true;
+                else
+                    return false;
+            }
+            catch
+            {
+                throw;
+            }
+        }
+
         public bool IfExists_Valid(String Name)
         {
             String sql = "SELECT COUNT(*) FROM WALTERRE WHERE CODE='" + Name + "' AND CLOTURE = 0";

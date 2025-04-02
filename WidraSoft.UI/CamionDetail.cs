@@ -698,11 +698,7 @@ namespace WidraSoft.UI
 
         private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            if (txtPlaque.Text != "")
-            {
-                Form form = new AccesCamionQr(txtPlaque.Text);
-                form.Show();
-            }
+            
             
         }
     }

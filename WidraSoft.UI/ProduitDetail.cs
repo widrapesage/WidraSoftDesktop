@@ -67,7 +67,7 @@ namespace WidraSoft.UI
             if (txtId.Text == "" && txtDateCreation.Text == "" && txtDesignation.Text == "" && cbGroupeProduitId.Text == "" 
                 && txtValide.Text == "" && txtEstEntrant.Text == "" && txtEstSortant.Text == "" && txtActiverAlerteMin.Text == "" 
                 && txtActiverAlerteMax.Text == "" && txtPoidsAlerteMin.Text == "" && txtPoidsAlerteMax.Text == "" && txtEmpecherTicketSiAlerte.Text == ""
-                && txtDechet.Text == "" && cbTypeDechetId.Text=="")
+                && txtDechet.Text == "" && cbTypeDechetId.Text=="" && txtPrixnitaire.Text == "" && txtTVA.Text == "")
             {
                 lbModifier.Enabled = false;
                 lbModifier.BackColor = Color.Transparent;
@@ -84,6 +84,8 @@ namespace WidraSoft.UI
 
                 txtPoidsAlerteMin.Text = "0";
                 txtPoidsAlerteMax.Text = "0";
+                txtPrixnitaire.Text = "0";
+                txtTVA.Text = "0";
             }
         }
 
@@ -151,6 +153,8 @@ namespace WidraSoft.UI
                     cbTypeDechetId.SelectedValue = 0;
                 else
                     cbTypeDechetId.SelectedValue = (int)row["TYPEDECHETID"];
+                txtPrixnitaire.Text = row["PRIXUNITAIRE"].ToString();
+                txtTVA.Text = row["TVA"].ToString();
             }
         }
 
@@ -169,6 +173,8 @@ namespace WidraSoft.UI
             chx_EmpecherTicketSiAlerte.Enabled = false;
             txtDechet.Enabled = false;
             cbTypeDechetId.Enabled = false;
+            txtPrixnitaire.Enabled = false;
+            txtTVA.Enabled = false;
             pbUpdating.Visible = false;
 
             vg_IsEnabled = false;
@@ -189,6 +195,8 @@ namespace WidraSoft.UI
             chx_EmpecherTicketSiAlerte.Enabled = true;
             txtDechet.Enabled = true;
             cbTypeDechetId.Enabled = true;
+            txtPrixnitaire.Enabled=true;
+            txtTVA.Enabled = true;
             pbUpdating.Visible = true;
             
 
@@ -211,6 +219,8 @@ namespace WidraSoft.UI
             chx_ActiverAlerteMax.Checked = false;
             chx_EmpecherTicketSiAlerte.Checked = false; 
             chx_Dechet.Checked = false;
+            txtPrixnitaire.Text = "";
+            txtTVA.Text = "";
         }
 
         private void chx_Valide_CheckedChanged(object sender, EventArgs e)
@@ -288,6 +298,8 @@ namespace WidraSoft.UI
                     int PoidsAlerteMax;
                     int EmpecherTicketSiAlerte;
                     int Dechet;
+                    int Tva;
+                    decimal PrixUnitaire;
 
                     bool IsParsableValide;
                     bool IsParsableEstEntrant;
@@ -298,6 +310,8 @@ namespace WidraSoft.UI
                     bool IsParsablePoidsAlerteMax;
                     bool IsParsableEmpecherTicketSiAlerte;
                     bool IsParsableDechet;
+                    bool IsParsableTva;
+                    bool IsParsablePrixUnitaire;
 
                     IsParsableValide = Int32.TryParse(txtValide.Text, out Valide);
                     IsParsableEstEntrant = Int32.TryParse(txtEstEntrant.Text, out EstEntrant);
@@ -308,15 +322,17 @@ namespace WidraSoft.UI
                     IsParsablePoidsAlerteMax = Int32.TryParse(txtPoidsAlerteMax.Text, out PoidsAlerteMax);
                     IsParsableEmpecherTicketSiAlerte = Int32.TryParse(txtEmpecherTicketSiAlerte.Text, out EmpecherTicketSiAlerte);
                     IsParsableDechet = Int32.TryParse(txtDechet.Text, out Dechet);
+                    IsParsableTva = Int32.TryParse(txtTVA.Text, out Tva);
+                    IsParsablePrixUnitaire = Decimal.TryParse(txtPrixnitaire.Text, out PrixUnitaire);
 
                     try
                     {
                         if (IsParsableValide && IsParsableEstEntrant && IsParsableEstSortant && IsParsableActiverAlerteMin && IsParsableActiverAlerteMax
-                            && IsParsablePoidsAlerteMin && IsParsablePoidsAlerteMax && IsParsableEmpecherTicketSiAlerte && IsParsableDechet)
+                            && IsParsablePoidsAlerteMin && IsParsablePoidsAlerteMax && IsParsableEmpecherTicketSiAlerte && IsParsableDechet && IsParsablePrixUnitaire && IsParsableTva)
                         {
                             Produit produit = new Produit();
                             produit.Add(txtDesignation.Text, Common_functions.CbSelectedValue_Convert_Int(cbGroupeProduitId), EstEntrant, EstSortant, Valide, PoidsAlerteMin, ActiverAlerteMin,
-                                PoidsAlerteMax, ActiverAlerteMax, EmpecherTicketSiAlerte, Dechet, Common_functions.CbSelectedValue_Convert_Int(cbTypeDechetId)) ;
+                                PoidsAlerteMax, ActiverAlerteMax, EmpecherTicketSiAlerte, Dechet, Common_functions.CbSelectedValue_Convert_Int(cbTypeDechetId), PrixUnitaire, Tva) ;
                             if (cbLang.Text == "FR")
                                 Custom_MessageBox.Show("FR", "Produit ajouté avec succès", "Produit", MessageBoxButtons.OK, MessageBoxIcon.Information);
                             else if (cbLang.Text == "EN")
@@ -376,6 +392,8 @@ namespace WidraSoft.UI
                             int PoidsAlerteMax;
                             int EmpecherTicketSiAlerte;
                             int Dechet;
+                            int Tva;
+                            decimal PrixUnitaire;
 
                             bool IsParsableId;
                             bool IsParsableValide;
@@ -387,6 +405,8 @@ namespace WidraSoft.UI
                             bool IsParsablePoidsAlerteMax;
                             bool IsParsableEmpecherTicketSiAlerte;
                             bool IsParsableDechet;
+                            bool IsParsableTva;
+                            bool IsParsablePrixUnitaire;
 
                             IsParsableId = Int32.TryParse(txtId.Text, out Id);
                             IsParsableValide = Int32.TryParse(txtValide.Text, out Valide);
@@ -398,15 +418,17 @@ namespace WidraSoft.UI
                             IsParsablePoidsAlerteMax = Int32.TryParse(txtPoidsAlerteMax.Text, out PoidsAlerteMax);
                             IsParsableEmpecherTicketSiAlerte = Int32.TryParse(txtEmpecherTicketSiAlerte.Text, out EmpecherTicketSiAlerte);
                             IsParsableDechet = Int32.TryParse(txtDechet.Text, out Dechet);
+                            IsParsableTva = Int32.TryParse(txtTVA.Text, out Tva);
+                            IsParsablePrixUnitaire = Decimal.TryParse(txtPrixnitaire.Text, out PrixUnitaire);
 
                             try
                             {
                                 if (IsParsableValide && IsParsableEstEntrant && IsParsableEstSortant && IsParsableActiverAlerteMin && IsParsableActiverAlerteMax
-                                    && IsParsablePoidsAlerteMin && IsParsablePoidsAlerteMax && IsParsableEmpecherTicketSiAlerte && IsParsableDechet)
+                                    && IsParsablePoidsAlerteMin && IsParsablePoidsAlerteMax && IsParsableEmpecherTicketSiAlerte && IsParsableDechet && IsParsablePrixUnitaire && IsParsableTva)
                                 {
                                     Produit produit = new Produit();
                                     produit.Update(Id, txtDesignation.Text, Common_functions.CbSelectedValue_Convert_Int(cbGroupeProduitId), EstEntrant, EstSortant, Valide, PoidsAlerteMin, ActiverAlerteMin,
-                                    PoidsAlerteMax, ActiverAlerteMax, EmpecherTicketSiAlerte, Dechet, Common_functions.CbSelectedValue_Convert_Int(cbTypeDechetId));
+                                    PoidsAlerteMax, ActiverAlerteMax, EmpecherTicketSiAlerte, Dechet, Common_functions.CbSelectedValue_Convert_Int(cbTypeDechetId), PrixUnitaire, Tva);
                                     if (cbLang.Text == "FR")
                                         Custom_MessageBox.Show("FR", "Produit modifié avec succès", "Produit", MessageBoxButtons.OK, MessageBoxIcon.Information);
                                     else if (cbLang.Text == "EN")
