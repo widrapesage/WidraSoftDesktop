@@ -1,4 +1,5 @@
 ﻿using CustomMessageBox;
+using Microsoft.Extensions.Configuration;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -198,37 +199,38 @@ namespace WidraSoft.UI
             Pont pont = new Pont();
             String NumCom;
             NumCom = "COM" + pont.GetCOM(PontId);
-            com.PortName = NumCom;
-            DataTable dtPont = new DataTable();
-            dtPont = pont.FindById(PontId);
-            foreach (DataRow row in dtPont.Rows)
-            {
-                com.ReadTimeout = (int)row["READTIMEOUT"];
-                com.BaudRate = (int)row["BAUDRATE"];
-                com.Parity = Parity.None;
-                com.StopBits = StopBits.One;
-                com.DataBits = (int)row["DATABITS"];
-                com.Handshake = Handshake.None;
-                Poids_Detection = (int)row["POIDS_DETECTION"];
-                ActiverPoids = (int)row["ACTIVERPOIDS"];
-                ActiverScanner = (int)row["ACTIVER_SCANNER"];
-                TypeScanner = row["TYPESCANNER"].ToString();
-                try
-                {
-                    if (ActiverPoids == 1)
-                    {
-                        txtPoids.ReadOnly = true;
-                        if (!com.IsOpen)
-                            com.Open();
-                    }
-                    else
-                    {
-                        txtPoids.ReadOnly = false;
-                    }
-                }
-                catch { throw; }
 
+            try
+            {
+                com.PortName = NumCom;
+                DataTable dtPont = new DataTable();
+                dtPont = pont.FindById(PontId);
+                foreach (DataRow row in dtPont.Rows)
+                {
+                    com.ReadTimeout = (int)row["READTIMEOUT"];
+                    com.BaudRate = (int)row["BAUDRATE"];
+                    com.Parity = Parity.None;
+                    com.StopBits = StopBits.One;
+                    com.DataBits = (int)row["DATABITS"];
+                    com.Handshake = Handshake.None;
+                    Poids_Detection = (int)row["POIDS_DETECTION"];
+                    ActiverPoids = (int)row["ACTIVERPOIDS"];
+                    ActiverScanner = (int)row["ACTIVER_SCANNER"];
+                    TypeScanner = row["TYPESCANNER"].ToString();
+                
+                        if (ActiverPoids == 1)
+                        {
+                            txtPoids.ReadOnly = true;
+                            if (!com.IsOpen)
+                                com.Open();
+                        }
+                        else
+                        {
+                            txtPoids.ReadOnly = false;
+                        }
+                }
             }
+            catch { throw; }
 
             Initialize_WeightSettings(PontId);
         }
@@ -400,7 +402,7 @@ namespace WidraSoft.UI
 
         private void Weight_Timer_Tick(object sender, EventArgs e)
         {
-            if (com.IsOpen)
+            if (!TunnelCommunicationHelper.IsWeightReceiver() && com.IsOpen)
                 ReceiveSerialData();
         }
 

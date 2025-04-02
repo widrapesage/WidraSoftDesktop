@@ -67,6 +67,11 @@ namespace TunnelIntegration
             }
         }
 
+        public static bool IsWeightReceiver()
+        {
+            return _clientType == _weightReceiverType;
+        }
+
         private static void TunnelClientReceivedWeightData(object? sender, WeightData e)
         {
             ReceivedWeightData?.Invoke(null, e);
